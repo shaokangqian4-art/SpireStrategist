@@ -1,0 +1,943 @@
+{
+  "unrestState": {
+    "character": "Ironclad",
+    "playerCount": 1,
+    "hp": 56,
+    "maxHp": 87,
+    "gold": 3,
+    "energy": 3,
+    "act": 1,
+    "floor": 14,
+    "ascension": 10,
+    "room": "EventRoom",
+    "deck": [
+      {
+        "id": "CARD.STRIKE_IRONCLAD",
+        "className": "StrikeIronclad",
+        "name": "StrikeIronclad",
+        "type": "Attack",
+        "rarity": "Basic",
+        "description": "",
+        "cost": 1,
+        "costsX": false,
+        "upgradeLevel": 0,
+        "canUpgrade": true,
+        "modified": false,
+        "enchantment": null,
+        "enchantmentAmount": 0,
+        "affliction": null,
+        "keywords": [],
+        "variables": {
+          "Damage": 6
+        }
+      },
+      {
+        "id": "CARD.STRIKE_IRONCLAD",
+        "className": "StrikeIronclad",
+        "name": "StrikeIronclad",
+        "type": "Attack",
+        "rarity": "Basic",
+        "description": "",
+        "cost": 1,
+        "costsX": false,
+        "upgradeLevel": 0,
+        "canUpgrade": true,
+        "modified": false,
+        "enchantment": null,
+        "enchantmentAmount": 0,
+        "affliction": null,
+        "keywords": [],
+        "variables": {
+          "Damage": 6
+        }
+      },
+      {
+        "id": "CARD.STRIKE_IRONCLAD",
+        "className": "StrikeIronclad",
+        "name": "StrikeIronclad",
+        "type": "Attack",
+        "rarity": "Basic",
+        "description": "",
+        "cost": 1,
+        "costsX": false,
+        "upgradeLevel": 0,
+        "canUpgrade": true,
+        "modified": false,
+        "enchantment": null,
+        "enchantmentAmount": 0,
+        "affliction": null,
+        "keywords": [],
+        "variables": {
+          "Damage": 6
+        }
+      },
+      {
+        "id": "CARD.STRIKE_IRONCLAD",
+        "className": "StrikeIronclad",
+        "name": "StrikeIronclad",
+        "type": "Attack",
+        "rarity": "Basic",
+        "description": "",
+        "cost": 1,
+        "costsX": false,
+        "upgradeLevel": 0,
+        "canUpgrade": true,
+        "modified": false,
+        "enchantment": null,
+        "enchantmentAmount": 0,
+        "affliction": null,
+        "keywords": [],
+        "variables": {
+          "Damage": 6
+        }
+      },
+      {
+        "id": "CARD.DEFEND_IRONCLAD",
+        "className": "DefendIronclad",
+        "name": "DefendIronclad",
+        "type": "Skill",
+        "rarity": "Basic",
+        "description": "",
+        "cost": 1,
+        "costsX": false,
+        "upgradeLevel": 0,
+        "canUpgrade": true,
+        "modified": false,
+        "enchantment": null,
+        "enchantmentAmount": 0,
+        "affliction": null,
+        "keywords": [],
+        "variables": {
+          "Block": 5
+        }
+      },
+      {
+        "id": "CARD.DEFEND_IRONCLAD",
+        "className": "DefendIronclad",
+        "name": "DefendIronclad",
+        "type": "Skill",
+        "rarity": "Basic",
+        "description": "",
+        "cost": 1,
+        "costsX": false,
+        "upgradeLevel": 0,
+        "canUpgrade": true,
+        "modified": false,
+        "enchantment": null,
+        "enchantmentAmount": 0,
+        "affliction": null,
+        "keywords": [],
+        "variables": {
+          "Block": 5
+        }
+      },
+      {
+        "id": "CARD.DEFEND_IRONCLAD",
+        "className": "DefendIronclad",
+        "name": "DefendIronclad",
+        "type": "Skill",
+        "rarity": "Basic",
+        "description": "",
+        "cost": 1,
+        "costsX": false,
+        "upgradeLevel": 0,
+        "canUpgrade": true,
+        "modified": false,
+        "enchantment": null,
+        "enchantmentAmount": 0,
+        "affliction": null,
+        "keywords": [],
+        "variables": {
+          "Block": 5
+        }
+      },
+      {
+        "id": "CARD.DEFEND_IRONCLAD",
+        "className": "DefendIronclad",
+        "name": "DefendIronclad",
+        "type": "Skill",
+        "rarity": "Basic",
+        "description": "",
+        "cost": 1,
+        "costsX": false,
+        "upgradeLevel": 0,
+        "canUpgrade": true,
+        "modified": false,
+        "enchantment": null,
+        "enchantmentAmount": 0,
+        "affliction": null,
+        "keywords": [],
+        "variables": {
+          "Block": 5
+        }
+      },
+      {
+        "id": "CARD.BASH",
+        "className": "Bash",
+        "name": "Bash",
+        "type": "Attack",
+        "rarity": "Basic",
+        "description": "",
+        "cost": 2,
+        "costsX": false,
+        "upgradeLevel": 1,
+        "canUpgrade": false,
+        "modified": false,
+        "enchantment": null,
+        "enchantmentAmount": 0,
+        "affliction": null,
+        "keywords": [],
+        "variables": {
+          "Damage": 10,
+          "VulnerablePower": 3
+        }
+      },
+      {
+        "id": "CARD.ASCENDERS_BANE",
+        "className": "AscendersBane",
+        "name": "AscendersBane",
+        "type": "Curse",
+        "rarity": "Curse",
+        "description": "",
+        "cost": -1,
+        "costsX": false,
+        "upgradeLevel": 0,
+        "canUpgrade": false,
+        "modified": false,
+        "enchantment": null,
+        "enchantmentAmount": 0,
+        "affliction": null,
+        "keywords": [
+          "Eternal",
+          "Ethereal",
+          "Unplayable"
+        ],
+        "variables": {}
+      },
+      {
+        "id": "CARD.THUNDERCLAP",
+        "className": "Thunderclap",
+        "name": "Thunderclap",
+        "type": "Attack",
+        "rarity": "Common",
+        "description": "",
+        "cost": 1,
+        "costsX": false,
+        "upgradeLevel": 0,
+        "canUpgrade": true,
+        "modified": false,
+        "enchantment": null,
+        "enchantmentAmount": 0,
+        "affliction": null,
+        "keywords": [],
+        "variables": {
+          "Damage": 4,
+          "VulnerablePower": 1
+        }
+      },
+      {
+        "id": "CARD.TWIN_STRIKE",
+        "className": "TwinStrike",
+        "name": "TwinStrike",
+        "type": "Attack",
+        "rarity": "Common",
+        "description": "",
+        "cost": 1,
+        "costsX": false,
+        "upgradeLevel": 0,
+        "canUpgrade": true,
+        "modified": false,
+        "enchantment": null,
+        "enchantmentAmount": 0,
+        "affliction": null,
+        "keywords": [],
+        "variables": {
+          "Damage": 5
+        }
+      },
+      {
+        "id": "CARD.FLAME_BARRIER",
+        "className": "FlameBarrier",
+        "name": "FlameBarrier",
+        "type": "Skill",
+        "rarity": "Uncommon",
+        "description": "",
+        "cost": 2,
+        "costsX": false,
+        "upgradeLevel": 0,
+        "canUpgrade": true,
+        "modified": false,
+        "enchantment": null,
+        "enchantmentAmount": 0,
+        "affliction": null,
+        "keywords": [],
+        "variables": {
+          "Block": 12,
+          "DamageBack": 4
+        }
+      },
+      {
+        "id": "CARD.ANGER",
+        "className": "Anger",
+        "name": "Anger",
+        "type": "Attack",
+        "rarity": "Common",
+        "description": "",
+        "cost": 0,
+        "costsX": false,
+        "upgradeLevel": 0,
+        "canUpgrade": true,
+        "modified": false,
+        "enchantment": null,
+        "enchantmentAmount": 0,
+        "affliction": null,
+        "keywords": [],
+        "variables": {
+          "Damage": 6
+        }
+      },
+      {
+        "id": "CARD.CLUMSY",
+        "className": "Clumsy",
+        "name": "Clumsy",
+        "type": "Curse",
+        "rarity": "Curse",
+        "description": "",
+        "cost": -1,
+        "costsX": false,
+        "upgradeLevel": 0,
+        "canUpgrade": false,
+        "modified": false,
+        "enchantment": null,
+        "enchantmentAmount": 0,
+        "affliction": null,
+        "keywords": [
+          "Ethereal",
+          "Unplayable"
+        ],
+        "variables": {}
+      },
+      {
+        "id": "CARD.SHRUG_IT_OFF",
+        "className": "ShrugItOff",
+        "name": "ShrugItOff",
+        "type": "Skill",
+        "rarity": "Common",
+        "description": "",
+        "cost": 1,
+        "costsX": false,
+        "upgradeLevel": 0,
+        "canUpgrade": true,
+        "modified": false,
+        "enchantment": null,
+        "enchantmentAmount": 0,
+        "affliction": null,
+        "keywords": [],
+        "variables": {
+          "Block": 8,
+          "Cards": 1
+        }
+      },
+      {
+        "id": "CARD.TRUE_GRIT",
+        "className": "TrueGrit",
+        "name": "TrueGrit",
+        "type": "Skill",
+        "rarity": "Common",
+        "description": "",
+        "cost": 1,
+        "costsX": false,
+        "upgradeLevel": 0,
+        "canUpgrade": true,
+        "modified": false,
+        "enchantment": null,
+        "enchantmentAmount": 0,
+        "affliction": null,
+        "keywords": [],
+        "variables": {
+          "Block": 7
+        }
+      }
+    ],
+    "relics": [
+      "RELIC.BURNING_BLOOD",
+      "RELIC.GOLDEN_PEARL",
+      "RELIC.SWORD_OF_STONE",
+      "RELIC.BOOK_OF_FIVE_RINGS",
+      "RELIC.SPARKLING_ROUGE",
+      "RELIC.STRAWBERRY",
+      "RELIC.GHOST_SEED"
+    ],
+    "potionSlots": [
+      null,
+      null
+    ],
+    "nextNodeTypes": [
+      "Elite"
+    ],
+    "map": {
+      "totalActs": 3,
+      "rows": 16,
+      "currentRow": 13,
+      "bossRow": 16,
+      "mapType": "MegaCrit.Sts2.Core.Map.SavedActMap",
+      "longMap": true,
+      "extraLayers": 0,
+      "extraActs": 0,
+      "contentAct": 1,
+      "enemyHpScale": 1,
+      "enemyDamageScale": 1,
+      "combatGoldScale": 1,
+      "error": null
+    },
+    "recentBattles": [
+      {
+        "act": 1,
+        "room": "Elite",
+        "encounter": "ENCOUNTER.BYRDONIS_ELITE",
+        "damageTaken": 22,
+        "healing": 13,
+        "potionsUsed": 1,
+        "maxHp": 87
+      }
+    ]
+  },
+  "seed": "regression-case-1",
+  "stoke": {
+    "id": "80ab450a4bb04f67b282d064befcab56",
+    "kind": "cards",
+    "state": {
+      "character": "Ironclad",
+      "playerCount": 1,
+      "hp": 12,
+      "maxHp": 79,
+      "gold": 105,
+      "energy": 3,
+      "act": 1,
+      "floor": 17,
+      "ascension": 10,
+      "room": "CombatRoom",
+      "deck": [
+        {
+          "id": "CARD.STRIKE_IRONCLAD",
+          "className": "StrikeIronclad",
+          "name": "StrikeIronclad",
+          "type": "Attack",
+          "rarity": "Basic",
+          "description": "",
+          "cost": 1,
+          "costsX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {
+            "Damage": 6
+          }
+        },
+        {
+          "id": "CARD.STRIKE_IRONCLAD",
+          "className": "StrikeIronclad",
+          "name": "StrikeIronclad",
+          "type": "Attack",
+          "rarity": "Basic",
+          "description": "",
+          "cost": 1,
+          "costsX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {
+            "Damage": 6
+          }
+        },
+        {
+          "id": "CARD.STRIKE_IRONCLAD",
+          "className": "StrikeIronclad",
+          "name": "StrikeIronclad",
+          "type": "Attack",
+          "rarity": "Basic",
+          "description": "",
+          "cost": 1,
+          "costsX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {
+            "Damage": 6
+          }
+        },
+        {
+          "id": "CARD.STRIKE_IRONCLAD",
+          "className": "StrikeIronclad",
+          "name": "StrikeIronclad",
+          "type": "Attack",
+          "rarity": "Basic",
+          "description": "",
+          "cost": 1,
+          "costsX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {
+            "Damage": 6
+          }
+        },
+        {
+          "id": "CARD.DEFEND_IRONCLAD",
+          "className": "DefendIronclad",
+          "name": "DefendIronclad",
+          "type": "Skill",
+          "rarity": "Basic",
+          "description": "",
+          "cost": 1,
+          "costsX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {
+            "Block": 5
+          }
+        },
+        {
+          "id": "CARD.DEFEND_IRONCLAD",
+          "className": "DefendIronclad",
+          "name": "DefendIronclad",
+          "type": "Skill",
+          "rarity": "Basic",
+          "description": "",
+          "cost": 1,
+          "costsX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {
+            "Block": 5
+          }
+        },
+        {
+          "id": "CARD.DEFEND_IRONCLAD",
+          "className": "DefendIronclad",
+          "name": "DefendIronclad",
+          "type": "Skill",
+          "rarity": "Basic",
+          "description": "",
+          "cost": 1,
+          "costsX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {
+            "Block": 5
+          }
+        },
+        {
+          "id": "CARD.DEFEND_IRONCLAD",
+          "className": "DefendIronclad",
+          "name": "DefendIronclad",
+          "type": "Skill",
+          "rarity": "Basic",
+          "description": "",
+          "cost": 1,
+          "costsX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {
+            "Block": 5
+          }
+        },
+        {
+          "id": "CARD.BASH",
+          "className": "Bash",
+          "name": "Bash",
+          "type": "Attack",
+          "rarity": "Basic",
+          "description": "",
+          "cost": 2,
+          "costsX": false,
+          "upgradeLevel": 1,
+          "canUpgrade": false,
+          "modified": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {
+            "Damage": 10,
+            "VulnerablePower": 3
+          }
+        },
+        {
+          "id": "CARD.ASCENDERS_BANE",
+          "className": "AscendersBane",
+          "name": "AscendersBane",
+          "type": "Curse",
+          "rarity": "Curse",
+          "description": "",
+          "cost": -1,
+          "costsX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": false,
+          "modified": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [
+            "Eternal",
+            "Ethereal",
+            "Unplayable"
+          ],
+          "variables": {}
+        },
+        {
+          "id": "CARD.THUNDERCLAP",
+          "className": "Thunderclap",
+          "name": "Thunderclap",
+          "type": "Attack",
+          "rarity": "Common",
+          "description": "",
+          "cost": 1,
+          "costsX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {
+            "Damage": 4,
+            "VulnerablePower": 1
+          }
+        },
+        {
+          "id": "CARD.TWIN_STRIKE",
+          "className": "TwinStrike",
+          "name": "TwinStrike",
+          "type": "Attack",
+          "rarity": "Common",
+          "description": "",
+          "cost": 1,
+          "costsX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {
+            "Damage": 5
+          }
+        },
+        {
+          "id": "CARD.FLAME_BARRIER",
+          "className": "FlameBarrier",
+          "name": "FlameBarrier",
+          "type": "Skill",
+          "rarity": "Uncommon",
+          "description": "",
+          "cost": 2,
+          "costsX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {
+            "Block": 12,
+            "DamageBack": 4
+          }
+        },
+        {
+          "id": "CARD.ANGER",
+          "className": "Anger",
+          "name": "Anger",
+          "type": "Attack",
+          "rarity": "Common",
+          "description": "",
+          "cost": 0,
+          "costsX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {
+            "Damage": 6
+          }
+        },
+        {
+          "id": "CARD.CLUMSY",
+          "className": "Clumsy",
+          "name": "Clumsy",
+          "type": "Curse",
+          "rarity": "Curse",
+          "description": "",
+          "cost": -1,
+          "costsX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": false,
+          "modified": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [
+            "Ethereal",
+            "Unplayable"
+          ],
+          "variables": {}
+        },
+        {
+          "id": "CARD.SHRUG_IT_OFF",
+          "className": "ShrugItOff",
+          "name": "ShrugItOff",
+          "type": "Skill",
+          "rarity": "Common",
+          "description": "",
+          "cost": 1,
+          "costsX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {
+            "Block": 8,
+            "Cards": 1
+          }
+        },
+        {
+          "id": "CARD.TRUE_GRIT",
+          "className": "TrueGrit",
+          "name": "TrueGrit",
+          "type": "Skill",
+          "rarity": "Common",
+          "description": "",
+          "cost": 1,
+          "costsX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {
+            "Block": 7
+          }
+        },
+        {
+          "id": "CARD.POMMEL_STRIKE",
+          "className": "PommelStrike",
+          "name": "PommelStrike",
+          "type": "Attack",
+          "rarity": "Common",
+          "description": "",
+          "cost": 1,
+          "costsX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {
+            "Cards": 1,
+            "Damage": 9
+          }
+        }
+      ],
+      "relics": [
+        "RELIC.BURNING_BLOOD",
+        "RELIC.GOLDEN_PEARL",
+        "RELIC.SWORD_OF_STONE",
+        "RELIC.BOOK_OF_FIVE_RINGS",
+        "RELIC.SPARKLING_ROUGE",
+        "RELIC.STRAWBERRY",
+        "RELIC.GHOST_SEED",
+        "RELIC.VENERABLE_TEA_SET",
+        "RELIC.PEN_NIB"
+      ],
+      "potionSlots": [
+        "POTION.WEAK_POTION",
+        "POTION.WEAK_POTION"
+      ],
+      "nextNodeTypes": [],
+      "map": {
+        "totalActs": 3,
+        "rows": 16,
+        "currentRow": 16,
+        "bossRow": 16,
+        "mapType": "MegaCrit.Sts2.Core.Map.SavedActMap",
+        "longMap": true,
+        "extraLayers": 0,
+        "extraActs": 0,
+        "contentAct": 1,
+        "enemyHpScale": 1,
+        "enemyDamageScale": 1,
+        "combatGoldScale": 1,
+        "error": null
+      },
+      "recentBattles": [
+        {
+          "act": 1,
+          "room": "Elite",
+          "encounter": "ENCOUNTER.BYRDONIS_ELITE",
+          "damageTaken": 22,
+          "healing": 13,
+          "potionsUsed": 1,
+          "maxHp": 87
+        },
+        {
+          "act": 1,
+          "room": "Elite",
+          "encounter": "ENCOUNTER.BYGONE_EFFIGY_ELITE",
+          "damageTaken": 28,
+          "healing": 6,
+          "potionsUsed": 0,
+          "maxHp": 79
+        }
+      ],
+      "combatSolverAvailable": true
+    },
+    "options": [
+      {
+        "key": "card:0",
+        "name": "card",
+        "kind": "card",
+        "enabled": true,
+        "card": {
+          "id": "CARD.STOKE",
+          "className": "Stoke",
+          "name": "Stoke",
+          "type": "Skill",
+          "rarity": "Rare",
+          "description": "",
+          "cost": 1,
+          "costsX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {}
+        },
+        "healAmount": 0,
+        "smithCount": 1,
+        "effectValue": null
+      },
+      {
+        "key": "card:1",
+        "name": "card",
+        "kind": "card",
+        "enabled": true,
+        "card": {
+          "id": "CARD.MANGLE",
+          "className": "Mangle",
+          "name": "Mangle",
+          "type": "Attack",
+          "rarity": "Rare",
+          "description": "",
+          "cost": 3,
+          "costsX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {
+            "Damage": 20,
+            "StrengthLoss": 10
+          }
+        },
+        "healAmount": 0,
+        "smithCount": 1,
+        "effectValue": null
+      },
+      {
+        "key": "card:2",
+        "name": "card",
+        "kind": "card",
+        "enabled": true,
+        "card": {
+          "id": "CARD.BRAND",
+          "className": "Brand",
+          "name": "Brand",
+          "type": "Skill",
+          "rarity": "Rare",
+          "description": "",
+          "cost": 0,
+          "costsX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {
+            "HpLoss": 1,
+            "StrengthPower": 1
+          }
+        },
+        "healAmount": 0,
+        "smithCount": 1,
+        "effectValue": null
+      },
+      {
+        "key": "alternative:0",
+        "name": "skip",
+        "kind": "skip",
+        "enabled": true,
+        "card": null,
+        "healAmount": 0,
+        "smithCount": 1,
+        "effectValue": null
+      }
+    ]
+  }
+}

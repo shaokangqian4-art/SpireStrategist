@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <AssemblyName>SpireStrategist</AssemblyName>
+    <GameDir Condition="'$(GameDir)' == ''">C:/Program Files (x86)/Steam/steamapps/common/Slay the Spire 2</GameDir>
+    <GameData>$(GameDir)/data_sts2_windows_x86_64</GameData>
+    <EnableDynamicLoading>true</EnableDynamicLoading>
+  </PropertyGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="../../localization/en.json" LogicalName="SpireStrategist.English.json" />
+    <EmbeddedResource Include="../../data/cards-v0.111.0.json" LogicalName="SpireStrategist.Cards.json" />
+    <EmbeddedResource Include="../../data/event-cards-v0.111.0.json" LogicalName="SpireStrategist.EventCards.json" />
+    <Compile Include="../SpireStrategist.Core/*.cs" Link="Core/%(Filename)%(Extension)" />
+    <Reference Include="sts2" HintPath="$(GameData)/sts2.dll" Private="false" />
+    <Reference Include="GodotSharp" HintPath="$(GameData)/GodotSharp.dll" Private="false" />
+    <Reference Include="0Harmony" HintPath="$(GameData)/0Harmony.dll" Private="false" />
+  </ItemGroup>
+  <Target Name="CheckGame" BeforeTargets="ResolveReferences">
+    <Error Condition="!Exists('$(GameData)/sts2.dll')" Text="Game assemblies not found. Set GameDir in local.props or pass -p:GameDir=... ." />
+  </Target>
+</Project>

@@ -1,0 +1,12 @@
+{
+  "id": "SpireStrategist",
+  "name": "全局战略助手 / Global Strategy Assistant",
+  "author": "穷仔",
+  "description": "单人铁甲战士本地战略助手，支持中英文。 Local, explainable Ironclad strategy: cards, routes, events, Ancients, rest sites and shops. Optional CombatSolver 0.50.1 integration enables combat and continuous runs. No online AI required. Experimental; partial hidden-information previews.",
+  "version": "0.6.22",
+  "has_pck": false,
+  "has_dll": true,
+  "affects_gameplay": true,
+  "min_game_version": "0.111.0",
+  "dependencies": []
+}

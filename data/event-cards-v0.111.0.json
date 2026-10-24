@@ -1,0 +1,430 @@
+[
+  {
+    "pool": "EventLegacy",
+    "basic": {
+      "id": "CARD.CALTROPS",
+      "className": "Caltrops",
+      "name": "Caltrops",
+      "type": "Power",
+      "rarity": "Event",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "ThornsPower": 3
+      }
+    },
+    "upgraded": {
+      "id": "CARD.CALTROPS",
+      "className": "Caltrops",
+      "name": "Caltrops",
+      "type": "Power",
+      "rarity": "Event",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "ThornsPower": 5
+      }
+    }
+  },
+  {
+    "pool": "EventLegacy",
+    "basic": {
+      "id": "CARD.CLASH",
+      "className": "Clash",
+      "name": "Clash",
+      "type": "Attack",
+      "rarity": "Event",
+      "description": "",
+      "cost": 0,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "Damage": 14
+      }
+    },
+    "upgraded": {
+      "id": "CARD.CLASH",
+      "className": "Clash",
+      "name": "Clash",
+      "type": "Attack",
+      "rarity": "Event",
+      "description": "",
+      "cost": 0,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "Damage": 18
+      }
+    }
+  },
+  {
+    "pool": "EventLegacy",
+    "basic": {
+      "id": "CARD.DISTRACTION",
+      "className": "Distraction",
+      "name": "Distraction",
+      "type": "Skill",
+      "rarity": "Event",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [
+        "Exhaust"
+      ],
+      "variables": {}
+    },
+    "upgraded": {
+      "id": "CARD.DISTRACTION",
+      "className": "Distraction",
+      "name": "Distraction",
+      "type": "Skill",
+      "rarity": "Event",
+      "description": "",
+      "cost": 0,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [
+        "Exhaust"
+      ],
+      "variables": {}
+    }
+  },
+  {
+    "pool": "EventLegacy",
+    "basic": {
+      "id": "CARD.DUAL_WIELD",
+      "className": "DualWield",
+      "name": "DualWield",
+      "type": "Skill",
+      "rarity": "Event",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "Cards": 1
+      }
+    },
+    "upgraded": {
+      "id": "CARD.DUAL_WIELD",
+      "className": "DualWield",
+      "name": "DualWield",
+      "type": "Skill",
+      "rarity": "Event",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "Cards": 2
+      }
+    }
+  },
+  {
+    "pool": "EventLegacy",
+    "basic": {
+      "id": "CARD.ENTRENCH",
+      "className": "Entrench",
+      "name": "Entrench",
+      "type": "Skill",
+      "rarity": "Event",
+      "description": "",
+      "cost": 2,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {}
+    },
+    "upgraded": {
+      "id": "CARD.ENTRENCH",
+      "className": "Entrench",
+      "name": "Entrench",
+      "type": "Skill",
+      "rarity": "Event",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {}
+    }
+  },
+  {
+    "pool": "EventLegacy",
+    "basic": {
+      "id": "CARD.HELLO_WORLD",
+      "className": "HelloWorld",
+      "name": "HelloWorld",
+      "type": "Power",
+      "rarity": "Event",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {}
+    },
+    "upgraded": {
+      "id": "CARD.HELLO_WORLD",
+      "className": "HelloWorld",
+      "name": "HelloWorld",
+      "type": "Power",
+      "rarity": "Event",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [
+        "Innate"
+      ],
+      "variables": {}
+    }
+  },
+  {
+    "pool": "EventLegacy",
+    "basic": {
+      "id": "CARD.OUTMANEUVER",
+      "className": "Outmaneuver",
+      "name": "Outmaneuver",
+      "type": "Skill",
+      "rarity": "Event",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "Energy": 2
+      }
+    },
+    "upgraded": {
+      "id": "CARD.OUTMANEUVER",
+      "className": "Outmaneuver",
+      "name": "Outmaneuver",
+      "type": "Skill",
+      "rarity": "Event",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "Energy": 3
+      }
+    }
+  },
+  {
+    "pool": "EventLegacy",
+    "basic": {
+      "id": "CARD.REBOUND",
+      "className": "Rebound",
+      "name": "Rebound",
+      "type": "Attack",
+      "rarity": "Event",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "Damage": 9
+      }
+    },
+    "upgraded": {
+      "id": "CARD.REBOUND",
+      "className": "Rebound",
+      "name": "Rebound",
+      "type": "Attack",
+      "rarity": "Event",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "Damage": 12
+      }
+    }
+  },
+  {
+    "pool": "EventLegacy",
+    "basic": {
+      "id": "CARD.RIP_AND_TEAR",
+      "className": "RipAndTear",
+      "name": "RipAndTear",
+      "type": "Attack",
+      "rarity": "Event",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "Damage": 7
+      }
+    },
+    "upgraded": {
+      "id": "CARD.RIP_AND_TEAR",
+      "className": "RipAndTear",
+      "name": "RipAndTear",
+      "type": "Attack",
+      "rarity": "Event",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "Damage": 9
+      }
+    }
+  },
+  {
+    "pool": "EventLegacy",
+    "basic": {
+      "id": "CARD.STACK",
+      "className": "Stack",
+      "name": "Stack",
+      "type": "Skill",
+      "rarity": "Event",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "CalculationBase": 0,
+        "CalculationExtra": 1,
+        "CalculatedBlock": 0
+      }
+    },
+    "upgraded": {
+      "id": "CARD.STACK",
+      "className": "Stack",
+      "name": "Stack",
+      "type": "Skill",
+      "rarity": "Event",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "CalculationBase": 3,
+        "CalculationExtra": 1,
+        "CalculatedBlock": 3
+      }
+    }
+  }
+]

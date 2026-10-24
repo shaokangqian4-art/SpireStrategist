@@ -1,0 +1,15 @@
+**/bin/
+**/obj/
+.tools/
+.local/
+artifacts/
+dist/
+local.props
+*.user
+*.log
+*.jsonl
+*.zip
+*.dll
+*.pck
+.env
+.env.*

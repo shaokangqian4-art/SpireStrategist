@@ -1,0 +1,479 @@
+{
+  "state": {
+    "character": "Ironclad",
+    "playerCount": 1,
+    "hp": 61,
+    "maxHp": 80,
+    "gold": 256,
+    "energy": 3,
+    "combatSolverAvailable": true,
+    "act": 2,
+    "floor": 20,
+    "ascension": 10,
+    "room": "CombatRoom",
+    "deck": [
+      {
+        "id": "CARD.STRIKE_IRONCLAD",
+        "className": "StrikeIronclad",
+        "name": "StrikeIronclad",
+        "type": "Attack",
+        "rarity": "Basic",
+        "description": "",
+        "cost": 1,
+        "costsX": false,
+        "upgradeLevel": 0,
+        "canUpgrade": true,
+        "modified": false,
+        "enchantment": null,
+        "enchantmentAmount": 0,
+        "affliction": null,
+        "keywords": [],
+        "variables": {
+          "Damage": 6
+        }
+      },
+      {
+        "id": "CARD.STRIKE_IRONCLAD",
+        "className": "StrikeIronclad",
+        "name": "StrikeIronclad",
+        "type": "Attack",
+        "rarity": "Basic",
+        "description": "",
+        "cost": 1,
+        "costsX": false,
+        "upgradeLevel": 0,
+        "canUpgrade": true,
+        "modified": false,
+        "enchantment": null,
+        "enchantmentAmount": 0,
+        "affliction": null,
+        "keywords": [],
+        "variables": {
+          "Damage": 6
+        }
+      },
+      {
+        "id": "CARD.STRIKE_IRONCLAD",
+        "className": "StrikeIronclad",
+        "name": "StrikeIronclad",
+        "type": "Attack",
+        "rarity": "Basic",
+        "description": "",
+        "cost": 1,
+        "costsX": false,
+        "upgradeLevel": 0,
+        "canUpgrade": true,
+        "modified": false,
+        "enchantment": null,
+        "enchantmentAmount": 0,
+        "affliction": null,
+        "keywords": [],
+        "variables": {
+          "Damage": 6
+        }
+      },
+      {
+        "id": "CARD.DEFEND_IRONCLAD",
+        "className": "DefendIronclad",
+        "name": "DefendIronclad",
+        "type": "Skill",
+        "rarity": "Basic",
+        "description": "",
+        "cost": 1,
+        "costsX": false,
+        "upgradeLevel": 0,
+        "canUpgrade": true,
+        "modified": true,
+        "enchantment": "ENCHANTMENT.GOOPY",
+        "enchantmentAmount": 3,
+        "affliction": null,
+        "keywords": [
+          "Exhaust"
+        ],
+        "variables": {
+          "Block": 5
+        }
+      },
+      {
+        "id": "CARD.DEFEND_IRONCLAD",
+        "className": "DefendIronclad",
+        "name": "DefendIronclad",
+        "type": "Skill",
+        "rarity": "Basic",
+        "description": "",
+        "cost": 1,
+        "costsX": false,
+        "upgradeLevel": 0,
+        "canUpgrade": true,
+        "modified": true,
+        "enchantment": "ENCHANTMENT.GOOPY",
+        "enchantmentAmount": 3,
+        "affliction": null,
+        "keywords": [
+          "Exhaust"
+        ],
+        "variables": {
+          "Block": 5
+        }
+      },
+      {
+        "id": "CARD.DEFEND_IRONCLAD",
+        "className": "DefendIronclad",
+        "name": "DefendIronclad",
+        "type": "Skill",
+        "rarity": "Basic",
+        "description": "",
+        "cost": 1,
+        "costsX": false,
+        "upgradeLevel": 0,
+        "canUpgrade": true,
+        "modified": true,
+        "enchantment": "ENCHANTMENT.GOOPY",
+        "enchantmentAmount": 3,
+        "affliction": null,
+        "keywords": [
+          "Exhaust"
+        ],
+        "variables": {
+          "Block": 5
+        }
+      },
+      {
+        "id": "CARD.DEFEND_IRONCLAD",
+        "className": "DefendIronclad",
+        "name": "DefendIronclad",
+        "type": "Skill",
+        "rarity": "Basic",
+        "description": "",
+        "cost": 1,
+        "costsX": false,
+        "upgradeLevel": 0,
+        "canUpgrade": true,
+        "modified": true,
+        "enchantment": "ENCHANTMENT.GOOPY",
+        "enchantmentAmount": 3,
+        "affliction": null,
+        "keywords": [
+          "Exhaust"
+        ],
+        "variables": {
+          "Block": 5
+        }
+      },
+      {
+        "id": "CARD.BASH",
+        "className": "Bash",
+        "name": "Bash",
+        "type": "Attack",
+        "rarity": "Basic",
+        "description": "",
+        "cost": 2,
+        "costsX": false,
+        "upgradeLevel": 1,
+        "canUpgrade": false,
+        "modified": false,
+        "enchantment": null,
+        "enchantmentAmount": 0,
+        "affliction": null,
+        "keywords": [],
+        "variables": {
+          "Damage": 10,
+          "VulnerablePower": 3
+        }
+      },
+      {
+        "id": "CARD.ASCENDERS_BANE",
+        "className": "AscendersBane",
+        "name": "AscendersBane",
+        "type": "Curse",
+        "rarity": "Curse",
+        "description": "",
+        "cost": -1,
+        "costsX": false,
+        "upgradeLevel": 0,
+        "canUpgrade": false,
+        "modified": false,
+        "enchantment": null,
+        "enchantmentAmount": 0,
+        "affliction": null,
+        "keywords": [
+          "Eternal",
+          "Ethereal",
+          "Unplayable"
+        ],
+        "variables": {}
+      },
+      {
+        "id": "CARD.FLASH_OF_STEEL",
+        "className": "FlashOfSteel",
+        "name": "FlashOfSteel",
+        "type": "Attack",
+        "rarity": "Uncommon",
+        "description": "",
+        "cost": 0,
+        "costsX": false,
+        "upgradeLevel": 0,
+        "canUpgrade": true,
+        "modified": false,
+        "enchantment": null,
+        "enchantmentAmount": 0,
+        "affliction": null,
+        "keywords": [],
+        "variables": {
+          "Cards": 1,
+          "Damage": 5
+        }
+      },
+      {
+        "id": "CARD.BLOOD_WALL",
+        "className": "BloodWall",
+        "name": "BloodWall",
+        "type": "Skill",
+        "rarity": "Common",
+        "description": "",
+        "cost": 2,
+        "costsX": false,
+        "upgradeLevel": 0,
+        "canUpgrade": true,
+        "modified": false,
+        "enchantment": null,
+        "enchantmentAmount": 0,
+        "affliction": null,
+        "keywords": [],
+        "variables": {
+          "Block": 16,
+          "HpLoss": 2
+        }
+      },
+      {
+        "id": "CARD.SWORD_BOOMERANG",
+        "className": "SwordBoomerang",
+        "name": "SwordBoomerang",
+        "type": "Attack",
+        "rarity": "Common",
+        "description": "",
+        "cost": 1,
+        "costsX": false,
+        "upgradeLevel": 1,
+        "canUpgrade": false,
+        "modified": false,
+        "enchantment": null,
+        "enchantmentAmount": 0,
+        "affliction": null,
+        "keywords": [],
+        "variables": {
+          "Damage": 3,
+          "Repeat": 4
+        }
+      },
+      {
+        "id": "CARD.DISMANTLE",
+        "className": "Dismantle",
+        "name": "Dismantle",
+        "type": "Attack",
+        "rarity": "Uncommon",
+        "description": "",
+        "cost": 1,
+        "costsX": false,
+        "upgradeLevel": 0,
+        "canUpgrade": true,
+        "modified": false,
+        "enchantment": null,
+        "enchantmentAmount": 0,
+        "affliction": null,
+        "keywords": [],
+        "variables": {
+          "Damage": 8
+        }
+      },
+      {
+        "id": "CARD.MOLTEN_FIST",
+        "className": "MoltenFist",
+        "name": "MoltenFist",
+        "type": "Attack",
+        "rarity": "Common",
+        "description": "",
+        "cost": 1,
+        "costsX": false,
+        "upgradeLevel": 0,
+        "canUpgrade": true,
+        "modified": false,
+        "enchantment": null,
+        "enchantmentAmount": 0,
+        "affliction": null,
+        "keywords": [
+          "Exhaust"
+        ],
+        "variables": {
+          "Damage": 10
+        }
+      },
+      {
+        "id": "CARD.SHRUG_IT_OFF",
+        "className": "ShrugItOff",
+        "name": "ShrugItOff",
+        "type": "Skill",
+        "rarity": "Common",
+        "description": "",
+        "cost": 1,
+        "costsX": false,
+        "upgradeLevel": 1,
+        "canUpgrade": false,
+        "modified": false,
+        "enchantment": null,
+        "enchantmentAmount": 0,
+        "affliction": null,
+        "keywords": [],
+        "variables": {
+          "Block": 11,
+          "Cards": 1
+        }
+      },
+      {
+        "id": "CARD.THUNDERCLAP",
+        "className": "Thunderclap",
+        "name": "Thunderclap",
+        "type": "Attack",
+        "rarity": "Common",
+        "description": "",
+        "cost": 1,
+        "costsX": false,
+        "upgradeLevel": 0,
+        "canUpgrade": true,
+        "modified": false,
+        "enchantment": null,
+        "enchantmentAmount": 0,
+        "affliction": null,
+        "keywords": [],
+        "variables": {
+          "Damage": 4,
+          "VulnerablePower": 1
+        }
+      },
+      {
+        "id": "CARD.JUGGERNAUT",
+        "className": "Juggernaut",
+        "name": "Juggernaut",
+        "type": "Power",
+        "rarity": "Rare",
+        "description": "",
+        "cost": 2,
+        "costsX": false,
+        "upgradeLevel": 0,
+        "canUpgrade": true,
+        "modified": false,
+        "enchantment": null,
+        "enchantmentAmount": 0,
+        "affliction": null,
+        "keywords": [],
+        "variables": {
+          "JuggernautPower": 6
+        }
+      },
+      {
+        "id": "CARD.OFFERING",
+        "className": "Offering",
+        "name": "Offering",
+        "type": "Skill",
+        "rarity": "Rare",
+        "description": "",
+        "cost": 0,
+        "costsX": false,
+        "upgradeLevel": 0,
+        "canUpgrade": true,
+        "modified": false,
+        "enchantment": null,
+        "enchantmentAmount": 0,
+        "affliction": null,
+        "keywords": [
+          "Exhaust"
+        ],
+        "variables": {
+          "Cards": 3,
+          "Energy": 2,
+          "HpLoss": 6
+        }
+      },
+      {
+        "id": "CARD.STONE_ARMOR",
+        "className": "StoneArmor",
+        "name": "StoneArmor",
+        "type": "Power",
+        "rarity": "Uncommon",
+        "description": "",
+        "cost": 1,
+        "costsX": false,
+        "upgradeLevel": 0,
+        "canUpgrade": true,
+        "modified": false,
+        "enchantment": null,
+        "enchantmentAmount": 0,
+        "affliction": null,
+        "keywords": [],
+        "variables": {
+          "PlatingPower": 4
+        }
+      }
+    ],
+    "relics": [
+      "RELIC.BURNING_BLOOD",
+      "RELIC.LEAD_PAPERWEIGHT",
+      "RELIC.BAG_OF_MARBLES",
+      "RELIC.CANDELABRA",
+      "RELIC.BAG_OF_PREPARATION",
+      "RELIC.PAELS_CLAW"
+    ],
+    "potionSlots": [
+      "POTION.SWIFT_POTION",
+      "POTION.ATTACK_POTION"
+    ],
+    "nextNodeTypes": [
+      "Monster"
+    ],
+    "hidden": null,
+    "map": {
+      "totalActs": 3,
+      "rows": 15,
+      "currentRow": 2,
+      "bossRow": 15,
+      "mapType": "MegaCrit.Sts2.Core.Map.StandardActMap",
+      "longMap": true,
+      "extraLayers": 0,
+      "extraActs": 0,
+      "contentAct": 2,
+      "enemyHpScale": 1,
+      "enemyDamageScale": 1,
+      "combatGoldScale": 1,
+      "error": null
+    },
+    "recentBattles": [],
+    "commerce": {
+      "reachableShops": 2,
+      "nearestShopDistance": 10,
+      "reachableUnknowns": 7,
+      "futureActs": 1
+    }
+  },
+  "card": {
+    "id": "CARD.ASHEN_STRIKE",
+    "className": "AshenStrike",
+    "name": "AshenStrike",
+    "type": "Attack",
+    "rarity": "Uncommon",
+    "description": "",
+    "cost": 1,
+    "costsX": false,
+    "upgradeLevel": 0,
+    "canUpgrade": true,
+    "modified": false,
+    "enchantment": null,
+    "enchantmentAmount": 0,
+    "affliction": null,
+    "keywords": [],
+    "variables": {
+      "CalculatedDamage": 6,
+      "CalculationBase": 6,
+      "ExtraDamage": 3
+    }
+  }
+}

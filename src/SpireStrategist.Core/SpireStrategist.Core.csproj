@@ -1,0 +1,4 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <ItemGroup><EmbeddedResource Include="../../localization/en.json" LogicalName="SpireStrategist.English.json" /></ItemGroup>
+  <ItemGroup><EmbeddedResource Include="../../data/cards-v0.111.0.json" LogicalName="SpireStrategist.Cards.json" /><EmbeddedResource Include="../../data/event-cards-v0.111.0.json" LogicalName="SpireStrategist.EventCards.json" /></ItemGroup>
+</Project>

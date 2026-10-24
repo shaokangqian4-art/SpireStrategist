@@ -1,0 +1,14 @@
+Global Strategy Assistant / 全局战略助手
+
+This is an unofficial mod, not affiliated with or endorsed by Mega Crit.
+Slay the Spire 2 and its game content belong to Mega Crit and their respective rights holders.
+CombatSolver by Torch is a separate project and is not distributed here.
+
+The MIT license applies to this project's original source code and documentation.
+It does not grant rights to the game, game assets, game assemblies, or third-party mods.
+The data/*.json card fixtures contain compatibility identifiers, card names and numeric
+mechanic snapshots for game 0.111.0. No game art, audio, or full card descriptions are included.
+Names and underlying game content retain their respective ownership.
+
+To compile the game integration, supply assemblies from your own local game installation.
+Do not commit or redistribute those assemblies in this repository.

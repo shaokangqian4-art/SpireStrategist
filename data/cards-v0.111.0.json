@@ -1,0 +1,5909 @@
+[
+  {
+    "pool": "IroncladCardPool",
+    "basic": {
+      "id": "CARD.AGGRESSION",
+      "className": "Aggression",
+      "name": "Aggression",
+      "type": "Power",
+      "rarity": "Rare",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "keywords": [],
+      "variables": {}
+    },
+    "upgraded": {
+      "id": "CARD.AGGRESSION",
+      "className": "Aggression",
+      "name": "Aggression",
+      "type": "Power",
+      "rarity": "Rare",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "keywords": [
+        "Innate"
+      ],
+      "variables": {}
+    }
+  },
+  {
+    "pool": "IroncladCardPool",
+    "basic": {
+      "id": "CARD.ANGER",
+      "className": "Anger",
+      "name": "Anger",
+      "type": "Attack",
+      "rarity": "Common",
+      "description": "",
+      "cost": 0,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "Damage": 6
+      }
+    },
+    "upgraded": {
+      "id": "CARD.ANGER",
+      "className": "Anger",
+      "name": "Anger",
+      "type": "Attack",
+      "rarity": "Common",
+      "description": "",
+      "cost": 0,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "Damage": 8
+      }
+    }
+  },
+  {
+    "pool": "IroncladCardPool",
+    "basic": {
+      "id": "CARD.ARMAMENTS",
+      "className": "Armaments",
+      "name": "Armaments",
+      "type": "Skill",
+      "rarity": "Common",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "Block": 5
+      }
+    },
+    "upgraded": {
+      "id": "CARD.ARMAMENTS",
+      "className": "Armaments",
+      "name": "Armaments",
+      "type": "Skill",
+      "rarity": "Common",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "Block": 5
+      }
+    }
+  },
+  {
+    "pool": "IroncladCardPool",
+    "basic": {
+      "id": "CARD.ASHEN_STRIKE",
+      "className": "AshenStrike",
+      "name": "AshenStrike",
+      "type": "Attack",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "CalculationBase": 6,
+        "ExtraDamage": 3,
+        "CalculatedDamage": 6
+      }
+    },
+    "upgraded": {
+      "id": "CARD.ASHEN_STRIKE",
+      "className": "AshenStrike",
+      "name": "AshenStrike",
+      "type": "Attack",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "CalculationBase": 6,
+        "ExtraDamage": 4,
+        "CalculatedDamage": 6
+      }
+    }
+  },
+  {
+    "pool": "IroncladCardPool",
+    "basic": {
+      "id": "CARD.BARRICADE",
+      "className": "Barricade",
+      "name": "Barricade",
+      "type": "Power",
+      "rarity": "Rare",
+      "description": "",
+      "cost": 3,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "keywords": [],
+      "variables": {}
+    },
+    "upgraded": {
+      "id": "CARD.BARRICADE",
+      "className": "Barricade",
+      "name": "Barricade",
+      "type": "Power",
+      "rarity": "Rare",
+      "description": "",
+      "cost": 2,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "keywords": [],
+      "variables": {}
+    }
+  },
+  {
+    "pool": "IroncladCardPool",
+    "basic": {
+      "id": "CARD.BASH",
+      "className": "Bash",
+      "name": "Bash",
+      "type": "Attack",
+      "rarity": "Basic",
+      "description": "",
+      "cost": 2,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "Damage": 8,
+        "VulnerablePower": 2
+      }
+    },
+    "upgraded": {
+      "id": "CARD.BASH",
+      "className": "Bash",
+      "name": "Bash",
+      "type": "Attack",
+      "rarity": "Basic",
+      "description": "",
+      "cost": 2,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "Damage": 10,
+        "VulnerablePower": 3
+      }
+    }
+  },
+  {
+    "pool": "IroncladCardPool",
+    "basic": {
+      "id": "CARD.BATTLE_TRANCE",
+      "className": "BattleTrance",
+      "name": "BattleTrance",
+      "type": "Skill",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 0,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "Cards": 3
+      }
+    },
+    "upgraded": {
+      "id": "CARD.BATTLE_TRANCE",
+      "className": "BattleTrance",
+      "name": "BattleTrance",
+      "type": "Skill",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 0,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "Cards": 4
+      }
+    }
+  },
+  {
+    "pool": "IroncladCardPool",
+    "basic": {
+      "id": "CARD.BLAZE",
+      "className": "Blaze",
+      "name": "Blaze",
+      "type": "Skill",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 2,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "StrengthPower": 5
+      }
+    },
+    "upgraded": {
+      "id": "CARD.BLAZE",
+      "className": "Blaze",
+      "name": "Blaze",
+      "type": "Skill",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 2,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "StrengthPower": 7
+      }
+    }
+  },
+  {
+    "pool": "IroncladCardPool",
+    "basic": {
+      "id": "CARD.BLOOD_WALL",
+      "className": "BloodWall",
+      "name": "BloodWall",
+      "type": "Skill",
+      "rarity": "Common",
+      "description": "",
+      "cost": 2,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "HpLoss": 2,
+        "Block": 16
+      }
+    },
+    "upgraded": {
+      "id": "CARD.BLOOD_WALL",
+      "className": "BloodWall",
+      "name": "BloodWall",
+      "type": "Skill",
+      "rarity": "Common",
+      "description": "",
+      "cost": 2,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "HpLoss": 2,
+        "Block": 20
+      }
+    }
+  },
+  {
+    "pool": "IroncladCardPool",
+    "basic": {
+      "id": "CARD.BLOODLETTING",
+      "className": "Bloodletting",
+      "name": "Bloodletting",
+      "type": "Skill",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 0,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "HpLoss": 3,
+        "Energy": 2
+      }
+    },
+    "upgraded": {
+      "id": "CARD.BLOODLETTING",
+      "className": "Bloodletting",
+      "name": "Bloodletting",
+      "type": "Skill",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 0,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "HpLoss": 3,
+        "Energy": 3
+      }
+    }
+  },
+  {
+    "pool": "IroncladCardPool",
+    "basic": {
+      "id": "CARD.BLUDGEON",
+      "className": "Bludgeon",
+      "name": "Bludgeon",
+      "type": "Attack",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 3,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "Damage": 32
+      }
+    },
+    "upgraded": {
+      "id": "CARD.BLUDGEON",
+      "className": "Bludgeon",
+      "name": "Bludgeon",
+      "type": "Attack",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 3,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "Damage": 42
+      }
+    }
+  },
+  {
+    "pool": "IroncladCardPool",
+    "basic": {
+      "id": "CARD.BODY_SLAM",
+      "className": "BodySlam",
+      "name": "BodySlam",
+      "type": "Attack",
+      "rarity": "Common",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "CalculationBase": 0,
+        "ExtraDamage": 1,
+        "CalculatedDamage": 0
+      }
+    },
+    "upgraded": {
+      "id": "CARD.BODY_SLAM",
+      "className": "BodySlam",
+      "name": "BodySlam",
+      "type": "Attack",
+      "rarity": "Common",
+      "description": "",
+      "cost": 0,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "CalculationBase": 0,
+        "ExtraDamage": 1,
+        "CalculatedDamage": 0
+      }
+    }
+  },
+  {
+    "pool": "IroncladCardPool",
+    "basic": {
+      "id": "CARD.BRAND",
+      "className": "Brand",
+      "name": "Brand",
+      "type": "Skill",
+      "rarity": "Rare",
+      "description": "",
+      "cost": 0,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "HpLoss": 1,
+        "StrengthPower": 1
+      }
+    },
+    "upgraded": {
+      "id": "CARD.BRAND",
+      "className": "Brand",
+      "name": "Brand",
+      "type": "Skill",
+      "rarity": "Rare",
+      "description": "",
+      "cost": 0,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "HpLoss": 1,
+        "StrengthPower": 2
+      }
+    }
+  },
+  {
+    "pool": "IroncladCardPool",
+    "basic": {
+      "id": "CARD.BREAK",
+      "className": "Break",
+      "name": "Break",
+      "type": "Attack",
+      "rarity": "Ancient",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "Damage": 20,
+        "VulnerablePower": 5
+      }
+    },
+    "upgraded": {
+      "id": "CARD.BREAK",
+      "className": "Break",
+      "name": "Break",
+      "type": "Attack",
+      "rarity": "Ancient",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "Damage": 30,
+        "VulnerablePower": 7
+      }
+    }
+  },
+  {
+    "pool": "IroncladCardPool",
+    "basic": {
+      "id": "CARD.BREAKTHROUGH",
+      "className": "Breakthrough",
+      "name": "Breakthrough",
+      "type": "Attack",
+      "rarity": "Common",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "Damage": 9,
+        "HpLoss": 1
+      }
+    },
+    "upgraded": {
+      "id": "CARD.BREAKTHROUGH",
+      "className": "Breakthrough",
+      "name": "Breakthrough",
+      "type": "Attack",
+      "rarity": "Common",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "Damage": 13,
+        "HpLoss": 1
+      }
+    }
+  },
+  {
+    "pool": "IroncladCardPool",
+    "basic": {
+      "id": "CARD.BULLY",
+      "className": "Bully",
+      "name": "Bully",
+      "type": "Attack",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 0,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "CalculationBase": 4,
+        "ExtraDamage": 2,
+        "CalculatedDamage": 4
+      }
+    },
+    "upgraded": {
+      "id": "CARD.BULLY",
+      "className": "Bully",
+      "name": "Bully",
+      "type": "Attack",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 0,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "CalculationBase": 4,
+        "ExtraDamage": 3,
+        "CalculatedDamage": 4
+      }
+    }
+  },
+  {
+    "pool": "IroncladCardPool",
+    "basic": {
+      "id": "CARD.BURNING_PACT",
+      "className": "BurningPact",
+      "name": "BurningPact",
+      "type": "Skill",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "Cards": 2
+      }
+    },
+    "upgraded": {
+      "id": "CARD.BURNING_PACT",
+      "className": "BurningPact",
+      "name": "BurningPact",
+      "type": "Skill",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "Cards": 3
+      }
+    }
+  },
+  {
+    "pool": "IroncladCardPool",
+    "basic": {
+      "id": "CARD.CASCADE",
+      "className": "Cascade",
+      "name": "Cascade",
+      "type": "Skill",
+      "rarity": "Rare",
+      "description": "",
+      "cost": 0,
+      "costsX": true,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "keywords": [],
+      "variables": {}
+    },
+    "upgraded": {
+      "id": "CARD.CASCADE",
+      "className": "Cascade",
+      "name": "Cascade",
+      "type": "Skill",
+      "rarity": "Rare",
+      "description": "",
+      "cost": 0,
+      "costsX": true,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "keywords": [],
+      "variables": {}
+    }
+  },
+  {
+    "pool": "IroncladCardPool",
+    "basic": {
+      "id": "CARD.CINDER",
+      "className": "Cinder",
+      "name": "Cinder",
+      "type": "Attack",
+      "rarity": "Common",
+      "description": "",
+      "cost": 2,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "Damage": 18
+      }
+    },
+    "upgraded": {
+      "id": "CARD.CINDER",
+      "className": "Cinder",
+      "name": "Cinder",
+      "type": "Attack",
+      "rarity": "Common",
+      "description": "",
+      "cost": 2,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "Damage": 24
+      }
+    }
+  },
+  {
+    "pool": "IroncladCardPool",
+    "basic": {
+      "id": "CARD.COLOSSUS",
+      "className": "Colossus",
+      "name": "Colossus",
+      "type": "Skill",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "Block": 4,
+        "Colossus": 1
+      }
+    },
+    "upgraded": {
+      "id": "CARD.COLOSSUS",
+      "className": "Colossus",
+      "name": "Colossus",
+      "type": "Skill",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "Block": 7,
+        "Colossus": 1
+      }
+    }
+  },
+  {
+    "pool": "IroncladCardPool",
+    "basic": {
+      "id": "CARD.CONFLAGRATION",
+      "className": "Conflagration",
+      "name": "Conflagration",
+      "type": "Attack",
+      "rarity": "Rare",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "Damage": 2,
+        "Repeat": 4
+      }
+    },
+    "upgraded": {
+      "id": "CARD.CONFLAGRATION",
+      "className": "Conflagration",
+      "name": "Conflagration",
+      "type": "Attack",
+      "rarity": "Rare",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "Damage": 2,
+        "Repeat": 5
+      }
+    }
+  },
+  {
+    "pool": "IroncladCardPool",
+    "basic": {
+      "id": "CARD.CORRUPTION",
+      "className": "Corruption",
+      "name": "Corruption",
+      "type": "Power",
+      "rarity": "Ancient",
+      "description": "",
+      "cost": 3,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "Power": 1
+      }
+    },
+    "upgraded": {
+      "id": "CARD.CORRUPTION",
+      "className": "Corruption",
+      "name": "Corruption",
+      "type": "Power",
+      "rarity": "Ancient",
+      "description": "",
+      "cost": 2,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "Power": 1
+      }
+    }
+  },
+  {
+    "pool": "IroncladCardPool",
+    "basic": {
+      "id": "CARD.CRIMSON_MANTLE",
+      "className": "CrimsonMantle",
+      "name": "CrimsonMantle",
+      "type": "Power",
+      "rarity": "Rare",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "CrimsonMantlePower": 7
+      }
+    },
+    "upgraded": {
+      "id": "CARD.CRIMSON_MANTLE",
+      "className": "CrimsonMantle",
+      "name": "CrimsonMantle",
+      "type": "Power",
+      "rarity": "Rare",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "CrimsonMantlePower": 10
+      }
+    }
+  },
+  {
+    "pool": "IroncladCardPool",
+    "basic": {
+      "id": "CARD.CRUELTY",
+      "className": "Cruelty",
+      "name": "Cruelty",
+      "type": "Power",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "CrueltyPower": 25
+      }
+    },
+    "upgraded": {
+      "id": "CARD.CRUELTY",
+      "className": "Cruelty",
+      "name": "Cruelty",
+      "type": "Power",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "CrueltyPower": 50
+      }
+    }
+  },
+  {
+    "pool": "IroncladCardPool",
+    "basic": {
+      "id": "CARD.DARK_EMBRACE",
+      "className": "DarkEmbrace",
+      "name": "DarkEmbrace",
+      "type": "Power",
+      "rarity": "Rare",
+      "description": "",
+      "cost": 2,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "keywords": [],
+      "variables": {}
+    },
+    "upgraded": {
+      "id": "CARD.DARK_EMBRACE",
+      "className": "DarkEmbrace",
+      "name": "DarkEmbrace",
+      "type": "Power",
+      "rarity": "Rare",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "keywords": [],
+      "variables": {}
+    }
+  },
+  {
+    "pool": "IroncladCardPool",
+    "basic": {
+      "id": "CARD.DEFEND_IRONCLAD",
+      "className": "DefendIronclad",
+      "name": "DefendIronclad",
+      "type": "Skill",
+      "rarity": "Basic",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "Block": 5
+      }
+    },
+    "upgraded": {
+      "id": "CARD.DEFEND_IRONCLAD",
+      "className": "DefendIronclad",
+      "name": "DefendIronclad",
+      "type": "Skill",
+      "rarity": "Basic",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "Block": 8
+      }
+    }
+  },
+  {
+    "pool": "IroncladCardPool",
+    "basic": {
+      "id": "CARD.DEMON_FORM",
+      "className": "DemonForm",
+      "name": "DemonForm",
+      "type": "Power",
+      "rarity": "Rare",
+      "description": "",
+      "cost": 3,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "StrengthPower": 3
+      }
+    },
+    "upgraded": {
+      "id": "CARD.DEMON_FORM",
+      "className": "DemonForm",
+      "name": "DemonForm",
+      "type": "Power",
+      "rarity": "Rare",
+      "description": "",
+      "cost": 3,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "StrengthPower": 4
+      }
+    }
+  },
+  {
+    "pool": "IroncladCardPool",
+    "basic": {
+      "id": "CARD.DEMONIC_SHIELD",
+      "className": "DemonicShield",
+      "name": "DemonicShield",
+      "type": "Skill",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 0,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "keywords": [
+        "Exhaust"
+      ],
+      "variables": {
+        "CalculationBase": 0,
+        "HpLoss": 1,
+        "CalculationExtra": 1,
+        "CalculatedBlock": 0
+      }
+    },
+    "upgraded": {
+      "id": "CARD.DEMONIC_SHIELD",
+      "className": "DemonicShield",
+      "name": "DemonicShield",
+      "type": "Skill",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 0,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "CalculationBase": 0,
+        "HpLoss": 1,
+        "CalculationExtra": 1,
+        "CalculatedBlock": 0
+      }
+    }
+  },
+  {
+    "pool": "IroncladCardPool",
+    "basic": {
+      "id": "CARD.DISMANTLE",
+      "className": "Dismantle",
+      "name": "Dismantle",
+      "type": "Attack",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "Damage": 8
+      }
+    },
+    "upgraded": {
+      "id": "CARD.DISMANTLE",
+      "className": "Dismantle",
+      "name": "Dismantle",
+      "type": "Attack",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "Damage": 10
+      }
+    }
+  },
+  {
+    "pool": "IroncladCardPool",
+    "basic": {
+      "id": "CARD.DOMINATE",
+      "className": "Dominate",
+      "name": "Dominate",
+      "type": "Skill",
+      "rarity": "Rare",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "keywords": [
+        "Exhaust"
+      ],
+      "variables": {
+        "VulnerablePower": 1,
+        "StrengthPerVulnerable": 1
+      }
+    },
+    "upgraded": {
+      "id": "CARD.DOMINATE",
+      "className": "Dominate",
+      "name": "Dominate",
+      "type": "Skill",
+      "rarity": "Rare",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "keywords": [
+        "Exhaust"
+      ],
+      "variables": {
+        "VulnerablePower": 2,
+        "StrengthPerVulnerable": 1
+      }
+    }
+  },
+  {
+    "pool": "IroncladCardPool",
+    "basic": {
+      "id": "CARD.DRUM_OF_BATTLE",
+      "className": "DrumOfBattle",
+      "name": "DrumOfBattle",
+      "type": "Skill",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "Cards": 2,
+        "Energy": 2
+      }
+    },
+    "upgraded": {
+      "id": "CARD.DRUM_OF_BATTLE",
+      "className": "DrumOfBattle",
+      "name": "DrumOfBattle",
+      "type": "Skill",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "Cards": 2,
+        "Energy": 3
+      }
+    }
+  },
+  {
+    "pool": "IroncladCardPool",
+    "basic": {
+      "id": "CARD.EVIL_EYE",
+      "className": "EvilEye",
+      "name": "EvilEye",
+      "type": "Skill",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "Block": 8
+      }
+    },
+    "upgraded": {
+      "id": "CARD.EVIL_EYE",
+      "className": "EvilEye",
+      "name": "EvilEye",
+      "type": "Skill",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "Block": 11
+      }
+    }
+  },
+  {
+    "pool": "IroncladCardPool",
+    "basic": {
+      "id": "CARD.EXPECT_A_FIGHT",
+      "className": "ExpectAFight",
+      "name": "ExpectAFight",
+      "type": "Skill",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 3,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "CalculationBase": 15,
+        "CalculationExtra": 5,
+        "CalculatedBlock": 15
+      }
+    },
+    "upgraded": {
+      "id": "CARD.EXPECT_A_FIGHT",
+      "className": "ExpectAFight",
+      "name": "ExpectAFight",
+      "type": "Skill",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 3,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "CalculationBase": 16,
+        "CalculationExtra": 8,
+        "CalculatedBlock": 16
+      }
+    }
+  },
+  {
+    "pool": "IroncladCardPool",
+    "basic": {
+      "id": "CARD.FEED",
+      "className": "Feed",
+      "name": "Feed",
+      "type": "Attack",
+      "rarity": "Rare",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "keywords": [
+        "Exhaust"
+      ],
+      "variables": {
+        "Damage": 10,
+        "MaxHp": 3
+      }
+    },
+    "upgraded": {
+      "id": "CARD.FEED",
+      "className": "Feed",
+      "name": "Feed",
+      "type": "Attack",
+      "rarity": "Rare",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "keywords": [
+        "Exhaust"
+      ],
+      "variables": {
+        "Damage": 12,
+        "MaxHp": 4
+      }
+    }
+  },
+  {
+    "pool": "IroncladCardPool",
+    "basic": {
+      "id": "CARD.FEEL_NO_PAIN",
+      "className": "FeelNoPain",
+      "name": "FeelNoPain",
+      "type": "Power",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "Power": 3
+      }
+    },
+    "upgraded": {
+      "id": "CARD.FEEL_NO_PAIN",
+      "className": "FeelNoPain",
+      "name": "FeelNoPain",
+      "type": "Power",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "Power": 4
+      }
+    }
+  },
+  {
+    "pool": "IroncladCardPool",
+    "basic": {
+      "id": "CARD.FIEND_FIRE",
+      "className": "FiendFire",
+      "name": "FiendFire",
+      "type": "Attack",
+      "rarity": "Rare",
+      "description": "",
+      "cost": 2,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "keywords": [
+        "Exhaust"
+      ],
+      "variables": {
+        "Damage": 7
+      }
+    },
+    "upgraded": {
+      "id": "CARD.FIEND_FIRE",
+      "className": "FiendFire",
+      "name": "FiendFire",
+      "type": "Attack",
+      "rarity": "Rare",
+      "description": "",
+      "cost": 2,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "keywords": [
+        "Exhaust"
+      ],
+      "variables": {
+        "Damage": 10
+      }
+    }
+  },
+  {
+    "pool": "IroncladCardPool",
+    "basic": {
+      "id": "CARD.FIGHT_ME",
+      "className": "FightMe",
+      "name": "FightMe",
+      "type": "Attack",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 2,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "Damage": 5,
+        "Repeat": 2,
+        "StrengthPower": 3,
+        "EnemyStrength": 1
+      }
+    },
+    "upgraded": {
+      "id": "CARD.FIGHT_ME",
+      "className": "FightMe",
+      "name": "FightMe",
+      "type": "Attack",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 2,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "Damage": 6,
+        "Repeat": 2,
+        "StrengthPower": 4,
+        "EnemyStrength": 1
+      }
+    }
+  },
+  {
+    "pool": "IroncladCardPool",
+    "basic": {
+      "id": "CARD.FLAME_BARRIER",
+      "className": "FlameBarrier",
+      "name": "FlameBarrier",
+      "type": "Skill",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 2,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "Block": 12,
+        "DamageBack": 4
+      }
+    },
+    "upgraded": {
+      "id": "CARD.FLAME_BARRIER",
+      "className": "FlameBarrier",
+      "name": "FlameBarrier",
+      "type": "Skill",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 2,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "Block": 16,
+        "DamageBack": 6
+      }
+    }
+  },
+  {
+    "pool": "IroncladCardPool",
+    "basic": {
+      "id": "CARD.FORGOTTEN_RITUAL",
+      "className": "ForgottenRitual",
+      "name": "ForgottenRitual",
+      "type": "Skill",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "keywords": [
+        "Exhaust"
+      ],
+      "variables": {
+        "Energy": 3
+      }
+    },
+    "upgraded": {
+      "id": "CARD.FORGOTTEN_RITUAL",
+      "className": "ForgottenRitual",
+      "name": "ForgottenRitual",
+      "type": "Skill",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "keywords": [
+        "Exhaust"
+      ],
+      "variables": {
+        "Energy": 4
+      }
+    }
+  },
+  {
+    "pool": "IroncladCardPool",
+    "basic": {
+      "id": "CARD.HAVOC",
+      "className": "Havoc",
+      "name": "Havoc",
+      "type": "Skill",
+      "rarity": "Common",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "keywords": [],
+      "variables": {}
+    },
+    "upgraded": {
+      "id": "CARD.HAVOC",
+      "className": "Havoc",
+      "name": "Havoc",
+      "type": "Skill",
+      "rarity": "Common",
+      "description": "",
+      "cost": 0,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "keywords": [],
+      "variables": {}
+    }
+  },
+  {
+    "pool": "IroncladCardPool",
+    "basic": {
+      "id": "CARD.HEADBUTT",
+      "className": "Headbutt",
+      "name": "Headbutt",
+      "type": "Attack",
+      "rarity": "Common",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "Damage": 9
+      }
+    },
+    "upgraded": {
+      "id": "CARD.HEADBUTT",
+      "className": "Headbutt",
+      "name": "Headbutt",
+      "type": "Attack",
+      "rarity": "Common",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "Damage": 12
+      }
+    }
+  },
+  {
+    "pool": "IroncladCardPool",
+    "basic": {
+      "id": "CARD.HELLRAISER",
+      "className": "Hellraiser",
+      "name": "Hellraiser",
+      "type": "Power",
+      "rarity": "Rare",
+      "description": "",
+      "cost": 2,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "keywords": [],
+      "variables": {}
+    },
+    "upgraded": {
+      "id": "CARD.HELLRAISER",
+      "className": "Hellraiser",
+      "name": "Hellraiser",
+      "type": "Power",
+      "rarity": "Rare",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "keywords": [],
+      "variables": {}
+    }
+  },
+  {
+    "pool": "IroncladCardPool",
+    "basic": {
+      "id": "CARD.HEMOKINESIS",
+      "className": "Hemokinesis",
+      "name": "Hemokinesis",
+      "type": "Attack",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "HpLoss": 2,
+        "Damage": 15
+      }
+    },
+    "upgraded": {
+      "id": "CARD.HEMOKINESIS",
+      "className": "Hemokinesis",
+      "name": "Hemokinesis",
+      "type": "Attack",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "HpLoss": 2,
+        "Damage": 20
+      }
+    }
+  },
+  {
+    "pool": "IroncladCardPool",
+    "basic": {
+      "id": "CARD.HOWL_FROM_BEYOND",
+      "className": "HowlFromBeyond",
+      "name": "HowlFromBeyond",
+      "type": "Attack",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 3,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "Damage": 18
+      }
+    },
+    "upgraded": {
+      "id": "CARD.HOWL_FROM_BEYOND",
+      "className": "HowlFromBeyond",
+      "name": "HowlFromBeyond",
+      "type": "Attack",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 3,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "Damage": 24
+      }
+    }
+  },
+  {
+    "pool": "IroncladCardPool",
+    "basic": {
+      "id": "CARD.IMPERVIOUS",
+      "className": "Impervious",
+      "name": "Impervious",
+      "type": "Skill",
+      "rarity": "Rare",
+      "description": "",
+      "cost": 2,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "keywords": [
+        "Exhaust"
+      ],
+      "variables": {
+        "Block": 30
+      }
+    },
+    "upgraded": {
+      "id": "CARD.IMPERVIOUS",
+      "className": "Impervious",
+      "name": "Impervious",
+      "type": "Skill",
+      "rarity": "Rare",
+      "description": "",
+      "cost": 2,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "keywords": [
+        "Exhaust"
+      ],
+      "variables": {
+        "Block": 40
+      }
+    }
+  },
+  {
+    "pool": "IroncladCardPool",
+    "basic": {
+      "id": "CARD.INFERNAL_BLADE",
+      "className": "InfernalBlade",
+      "name": "InfernalBlade",
+      "type": "Skill",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "keywords": [
+        "Exhaust"
+      ],
+      "variables": {}
+    },
+    "upgraded": {
+      "id": "CARD.INFERNAL_BLADE",
+      "className": "InfernalBlade",
+      "name": "InfernalBlade",
+      "type": "Skill",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 0,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "keywords": [
+        "Exhaust"
+      ],
+      "variables": {}
+    }
+  },
+  {
+    "pool": "IroncladCardPool",
+    "basic": {
+      "id": "CARD.INFERNO",
+      "className": "Inferno",
+      "name": "Inferno",
+      "type": "Power",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "InfernoPower": 6
+      }
+    },
+    "upgraded": {
+      "id": "CARD.INFERNO",
+      "className": "Inferno",
+      "name": "Inferno",
+      "type": "Power",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "InfernoPower": 9
+      }
+    }
+  },
+  {
+    "pool": "IroncladCardPool",
+    "basic": {
+      "id": "CARD.INFLAME",
+      "className": "Inflame",
+      "name": "Inflame",
+      "type": "Power",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "StrengthPower": 2
+      }
+    },
+    "upgraded": {
+      "id": "CARD.INFLAME",
+      "className": "Inflame",
+      "name": "Inflame",
+      "type": "Power",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "StrengthPower": 3
+      }
+    }
+  },
+  {
+    "pool": "IroncladCardPool",
+    "basic": {
+      "id": "CARD.IRON_WAVE",
+      "className": "IronWave",
+      "name": "IronWave",
+      "type": "Attack",
+      "rarity": "Common",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "Damage": 5,
+        "Block": 5
+      }
+    },
+    "upgraded": {
+      "id": "CARD.IRON_WAVE",
+      "className": "IronWave",
+      "name": "IronWave",
+      "type": "Attack",
+      "rarity": "Common",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "Damage": 7,
+        "Block": 7
+      }
+    }
+  },
+  {
+    "pool": "IroncladCardPool",
+    "basic": {
+      "id": "CARD.JUGGERNAUT",
+      "className": "Juggernaut",
+      "name": "Juggernaut",
+      "type": "Power",
+      "rarity": "Rare",
+      "description": "",
+      "cost": 2,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "JuggernautPower": 6
+      }
+    },
+    "upgraded": {
+      "id": "CARD.JUGGERNAUT",
+      "className": "Juggernaut",
+      "name": "Juggernaut",
+      "type": "Power",
+      "rarity": "Rare",
+      "description": "",
+      "cost": 2,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "JuggernautPower": 8
+      }
+    }
+  },
+  {
+    "pool": "IroncladCardPool",
+    "basic": {
+      "id": "CARD.JUGGLING",
+      "className": "Juggling",
+      "name": "Juggling",
+      "type": "Power",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "keywords": [],
+      "variables": {}
+    },
+    "upgraded": {
+      "id": "CARD.JUGGLING",
+      "className": "Juggling",
+      "name": "Juggling",
+      "type": "Power",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "keywords": [
+        "Innate"
+      ],
+      "variables": {}
+    }
+  },
+  {
+    "pool": "IroncladCardPool",
+    "basic": {
+      "id": "CARD.MANGLE",
+      "className": "Mangle",
+      "name": "Mangle",
+      "type": "Attack",
+      "rarity": "Rare",
+      "description": "",
+      "cost": 3,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "Damage": 20,
+        "StrengthLoss": 10
+      }
+    },
+    "upgraded": {
+      "id": "CARD.MANGLE",
+      "className": "Mangle",
+      "name": "Mangle",
+      "type": "Attack",
+      "rarity": "Rare",
+      "description": "",
+      "cost": 3,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "Damage": 26,
+        "StrengthLoss": 15
+      }
+    }
+  },
+  {
+    "pool": "IroncladCardPool",
+    "basic": {
+      "id": "CARD.MIDNIGHT",
+      "className": "Midnight",
+      "name": "Midnight",
+      "type": "Attack",
+      "rarity": "Rare",
+      "description": "",
+      "cost": 12,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "Damage": 60
+      }
+    },
+    "upgraded": {
+      "id": "CARD.MIDNIGHT",
+      "className": "Midnight",
+      "name": "Midnight",
+      "type": "Attack",
+      "rarity": "Rare",
+      "description": "",
+      "cost": 12,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "Damage": 72
+      }
+    }
+  },
+  {
+    "pool": "IroncladCardPool",
+    "basic": {
+      "id": "CARD.MOLTEN_FIST",
+      "className": "MoltenFist",
+      "name": "MoltenFist",
+      "type": "Attack",
+      "rarity": "Common",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "keywords": [
+        "Exhaust"
+      ],
+      "variables": {
+        "Damage": 10
+      }
+    },
+    "upgraded": {
+      "id": "CARD.MOLTEN_FIST",
+      "className": "MoltenFist",
+      "name": "MoltenFist",
+      "type": "Attack",
+      "rarity": "Common",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "keywords": [
+        "Exhaust"
+      ],
+      "variables": {
+        "Damage": 14
+      }
+    }
+  },
+  {
+    "pool": "IroncladCardPool",
+    "basic": {
+      "id": "CARD.NOT_YET",
+      "className": "NotYet",
+      "name": "NotYet",
+      "type": "Skill",
+      "rarity": "Rare",
+      "description": "",
+      "cost": 2,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "keywords": [
+        "Exhaust"
+      ],
+      "variables": {
+        "Heal": 10
+      }
+    },
+    "upgraded": {
+      "id": "CARD.NOT_YET",
+      "className": "NotYet",
+      "name": "NotYet",
+      "type": "Skill",
+      "rarity": "Rare",
+      "description": "",
+      "cost": 2,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "keywords": [
+        "Exhaust"
+      ],
+      "variables": {
+        "Heal": 13
+      }
+    }
+  },
+  {
+    "pool": "IroncladCardPool",
+    "basic": {
+      "id": "CARD.OFFERING",
+      "className": "Offering",
+      "name": "Offering",
+      "type": "Skill",
+      "rarity": "Rare",
+      "description": "",
+      "cost": 0,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "keywords": [
+        "Exhaust"
+      ],
+      "variables": {
+        "HpLoss": 6,
+        "Energy": 2,
+        "Cards": 3
+      }
+    },
+    "upgraded": {
+      "id": "CARD.OFFERING",
+      "className": "Offering",
+      "name": "Offering",
+      "type": "Skill",
+      "rarity": "Rare",
+      "description": "",
+      "cost": 0,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "keywords": [
+        "Exhaust"
+      ],
+      "variables": {
+        "HpLoss": 6,
+        "Energy": 2,
+        "Cards": 5
+      }
+    }
+  },
+  {
+    "pool": "IroncladCardPool",
+    "basic": {
+      "id": "CARD.ONE_TWO_PUNCH",
+      "className": "OneTwoPunch",
+      "name": "OneTwoPunch",
+      "type": "Skill",
+      "rarity": "Rare",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "Attacks": 1
+      }
+    },
+    "upgraded": {
+      "id": "CARD.ONE_TWO_PUNCH",
+      "className": "OneTwoPunch",
+      "name": "OneTwoPunch",
+      "type": "Skill",
+      "rarity": "Rare",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "Attacks": 2
+      }
+    }
+  },
+  {
+    "pool": "IroncladCardPool",
+    "basic": {
+      "id": "CARD.OUTRAGE",
+      "className": "Outrage",
+      "name": "Outrage",
+      "type": "Attack",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 0,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "Damage": 9
+      }
+    },
+    "upgraded": {
+      "id": "CARD.OUTRAGE",
+      "className": "Outrage",
+      "name": "Outrage",
+      "type": "Attack",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 0,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "Damage": 13
+      }
+    }
+  },
+  {
+    "pool": "IroncladCardPool",
+    "basic": {
+      "id": "CARD.PACTS_END",
+      "className": "PactsEnd",
+      "name": "PactsEnd",
+      "type": "Attack",
+      "rarity": "Rare",
+      "description": "",
+      "cost": 0,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "Damage": 18,
+        "Cards": 3
+      }
+    },
+    "upgraded": {
+      "id": "CARD.PACTS_END",
+      "className": "PactsEnd",
+      "name": "PactsEnd",
+      "type": "Attack",
+      "rarity": "Rare",
+      "description": "",
+      "cost": 0,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "Damage": 24,
+        "Cards": 3
+      }
+    }
+  },
+  {
+    "pool": "IroncladCardPool",
+    "basic": {
+      "id": "CARD.PERFECTED_STRIKE",
+      "className": "PerfectedStrike",
+      "name": "PerfectedStrike",
+      "type": "Attack",
+      "rarity": "Common",
+      "description": "",
+      "cost": 2,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "CalculationBase": 6,
+        "ExtraDamage": 2,
+        "CalculatedDamage": 6
+      }
+    },
+    "upgraded": {
+      "id": "CARD.PERFECTED_STRIKE",
+      "className": "PerfectedStrike",
+      "name": "PerfectedStrike",
+      "type": "Attack",
+      "rarity": "Common",
+      "description": "",
+      "cost": 2,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "CalculationBase": 6,
+        "ExtraDamage": 3,
+        "CalculatedDamage": 6
+      }
+    }
+  },
+  {
+    "pool": "IroncladCardPool",
+    "basic": {
+      "id": "CARD.PILLAGE",
+      "className": "Pillage",
+      "name": "Pillage",
+      "type": "Attack",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "Damage": 6
+      }
+    },
+    "upgraded": {
+      "id": "CARD.PILLAGE",
+      "className": "Pillage",
+      "name": "Pillage",
+      "type": "Attack",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "Damage": 9
+      }
+    }
+  },
+  {
+    "pool": "IroncladCardPool",
+    "basic": {
+      "id": "CARD.POMMEL_STRIKE",
+      "className": "PommelStrike",
+      "name": "PommelStrike",
+      "type": "Attack",
+      "rarity": "Common",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "Damage": 9,
+        "Cards": 1
+      }
+    },
+    "upgraded": {
+      "id": "CARD.POMMEL_STRIKE",
+      "className": "PommelStrike",
+      "name": "PommelStrike",
+      "type": "Attack",
+      "rarity": "Common",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "Damage": 10,
+        "Cards": 2
+      }
+    }
+  },
+  {
+    "pool": "IroncladCardPool",
+    "basic": {
+      "id": "CARD.PRIMAL_FORCE",
+      "className": "PrimalForce",
+      "name": "PrimalForce",
+      "type": "Skill",
+      "rarity": "Rare",
+      "description": "",
+      "cost": 0,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "keywords": [],
+      "variables": {}
+    },
+    "upgraded": {
+      "id": "CARD.PRIMAL_FORCE",
+      "className": "PrimalForce",
+      "name": "PrimalForce",
+      "type": "Skill",
+      "rarity": "Rare",
+      "description": "",
+      "cost": 0,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "keywords": [],
+      "variables": {}
+    }
+  },
+  {
+    "pool": "IroncladCardPool",
+    "basic": {
+      "id": "CARD.PYRE",
+      "className": "Pyre",
+      "name": "Pyre",
+      "type": "Power",
+      "rarity": "Rare",
+      "description": "",
+      "cost": 2,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "Energy": 1
+      }
+    },
+    "upgraded": {
+      "id": "CARD.PYRE",
+      "className": "Pyre",
+      "name": "Pyre",
+      "type": "Power",
+      "rarity": "Rare",
+      "description": "",
+      "cost": 2,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "Energy": 2
+      }
+    }
+  },
+  {
+    "pool": "IroncladCardPool",
+    "basic": {
+      "id": "CARD.RAGE",
+      "className": "Rage",
+      "name": "Rage",
+      "type": "Skill",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 0,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "Power": 3
+      }
+    },
+    "upgraded": {
+      "id": "CARD.RAGE",
+      "className": "Rage",
+      "name": "Rage",
+      "type": "Skill",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 0,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "Power": 5
+      }
+    }
+  },
+  {
+    "pool": "IroncladCardPool",
+    "basic": {
+      "id": "CARD.RAMPAGE",
+      "className": "Rampage",
+      "name": "Rampage",
+      "type": "Attack",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "Damage": 10,
+        "Increase": 5
+      }
+    },
+    "upgraded": {
+      "id": "CARD.RAMPAGE",
+      "className": "Rampage",
+      "name": "Rampage",
+      "type": "Attack",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "Damage": 10,
+        "Increase": 10
+      }
+    }
+  },
+  {
+    "pool": "IroncladCardPool",
+    "basic": {
+      "id": "CARD.RUPTURE",
+      "className": "Rupture",
+      "name": "Rupture",
+      "type": "Power",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "StrengthPower": 1
+      }
+    },
+    "upgraded": {
+      "id": "CARD.RUPTURE",
+      "className": "Rupture",
+      "name": "Rupture",
+      "type": "Power",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "StrengthPower": 2
+      }
+    }
+  },
+  {
+    "pool": "IroncladCardPool",
+    "basic": {
+      "id": "CARD.SECOND_WIND",
+      "className": "SecondWind",
+      "name": "SecondWind",
+      "type": "Skill",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "Block": 5
+      }
+    },
+    "upgraded": {
+      "id": "CARD.SECOND_WIND",
+      "className": "SecondWind",
+      "name": "SecondWind",
+      "type": "Skill",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "Block": 7
+      }
+    }
+  },
+  {
+    "pool": "IroncladCardPool",
+    "basic": {
+      "id": "CARD.SETUP_STRIKE",
+      "className": "SetupStrike",
+      "name": "SetupStrike",
+      "type": "Attack",
+      "rarity": "Common",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "Damage": 7,
+        "StrengthPower": 3
+      }
+    },
+    "upgraded": {
+      "id": "CARD.SETUP_STRIKE",
+      "className": "SetupStrike",
+      "name": "SetupStrike",
+      "type": "Attack",
+      "rarity": "Common",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "Damage": 9,
+        "StrengthPower": 4
+      }
+    }
+  },
+  {
+    "pool": "IroncladCardPool",
+    "basic": {
+      "id": "CARD.SHRUG_IT_OFF",
+      "className": "ShrugItOff",
+      "name": "ShrugItOff",
+      "type": "Skill",
+      "rarity": "Common",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "Block": 8,
+        "Cards": 1
+      }
+    },
+    "upgraded": {
+      "id": "CARD.SHRUG_IT_OFF",
+      "className": "ShrugItOff",
+      "name": "ShrugItOff",
+      "type": "Skill",
+      "rarity": "Common",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "Block": 11,
+        "Cards": 1
+      }
+    }
+  },
+  {
+    "pool": "IroncladCardPool",
+    "basic": {
+      "id": "CARD.SPITE",
+      "className": "Spite",
+      "name": "Spite",
+      "type": "Attack",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 0,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "Damage": 5,
+        "Repeat": 2
+      }
+    },
+    "upgraded": {
+      "id": "CARD.SPITE",
+      "className": "Spite",
+      "name": "Spite",
+      "type": "Attack",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 0,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "Damage": 5,
+        "Repeat": 3
+      }
+    }
+  },
+  {
+    "pool": "IroncladCardPool",
+    "basic": {
+      "id": "CARD.STAMPEDE",
+      "className": "Stampede",
+      "name": "Stampede",
+      "type": "Power",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 2,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "Power": 1
+      }
+    },
+    "upgraded": {
+      "id": "CARD.STAMPEDE",
+      "className": "Stampede",
+      "name": "Stampede",
+      "type": "Power",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "Power": 1
+      }
+    }
+  },
+  {
+    "pool": "IroncladCardPool",
+    "basic": {
+      "id": "CARD.STOKE",
+      "className": "Stoke",
+      "name": "Stoke",
+      "type": "Skill",
+      "rarity": "Rare",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "keywords": [],
+      "variables": {}
+    },
+    "upgraded": {
+      "id": "CARD.STOKE",
+      "className": "Stoke",
+      "name": "Stoke",
+      "type": "Skill",
+      "rarity": "Rare",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "keywords": [],
+      "variables": {}
+    }
+  },
+  {
+    "pool": "IroncladCardPool",
+    "basic": {
+      "id": "CARD.STOMP",
+      "className": "Stomp",
+      "name": "Stomp",
+      "type": "Attack",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 3,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "Damage": 12
+      }
+    },
+    "upgraded": {
+      "id": "CARD.STOMP",
+      "className": "Stomp",
+      "name": "Stomp",
+      "type": "Attack",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 3,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "Damage": 15
+      }
+    }
+  },
+  {
+    "pool": "IroncladCardPool",
+    "basic": {
+      "id": "CARD.STONE_ARMOR",
+      "className": "StoneArmor",
+      "name": "StoneArmor",
+      "type": "Power",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "PlatingPower": 4
+      }
+    },
+    "upgraded": {
+      "id": "CARD.STONE_ARMOR",
+      "className": "StoneArmor",
+      "name": "StoneArmor",
+      "type": "Power",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "PlatingPower": 6
+      }
+    }
+  },
+  {
+    "pool": "IroncladCardPool",
+    "basic": {
+      "id": "CARD.STRIKE_IRONCLAD",
+      "className": "StrikeIronclad",
+      "name": "StrikeIronclad",
+      "type": "Attack",
+      "rarity": "Basic",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "Damage": 6
+      }
+    },
+    "upgraded": {
+      "id": "CARD.STRIKE_IRONCLAD",
+      "className": "StrikeIronclad",
+      "name": "StrikeIronclad",
+      "type": "Attack",
+      "rarity": "Basic",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "Damage": 9
+      }
+    }
+  },
+  {
+    "pool": "IroncladCardPool",
+    "basic": {
+      "id": "CARD.SWORD_BOOMERANG",
+      "className": "SwordBoomerang",
+      "name": "SwordBoomerang",
+      "type": "Attack",
+      "rarity": "Common",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "Damage": 3,
+        "Repeat": 3
+      }
+    },
+    "upgraded": {
+      "id": "CARD.SWORD_BOOMERANG",
+      "className": "SwordBoomerang",
+      "name": "SwordBoomerang",
+      "type": "Attack",
+      "rarity": "Common",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "Damage": 3,
+        "Repeat": 4
+      }
+    }
+  },
+  {
+    "pool": "IroncladCardPool",
+    "basic": {
+      "id": "CARD.TANK",
+      "className": "Tank",
+      "name": "Tank",
+      "type": "Power",
+      "rarity": "Rare",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "DamageIncrease": 1.5,
+        "DamageDecrease": 0.5
+      }
+    },
+    "upgraded": {
+      "id": "CARD.TANK",
+      "className": "Tank",
+      "name": "Tank",
+      "type": "Power",
+      "rarity": "Rare",
+      "description": "",
+      "cost": 0,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "DamageIncrease": 1.5,
+        "DamageDecrease": 0.5
+      }
+    }
+  },
+  {
+    "pool": "IroncladCardPool",
+    "basic": {
+      "id": "CARD.TAUNT",
+      "className": "Taunt",
+      "name": "Taunt",
+      "type": "Skill",
+      "rarity": "Common",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "Block": 6,
+        "VulnerablePower": 1
+      }
+    },
+    "upgraded": {
+      "id": "CARD.TAUNT",
+      "className": "Taunt",
+      "name": "Taunt",
+      "type": "Skill",
+      "rarity": "Common",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "Block": 7,
+        "VulnerablePower": 2
+      }
+    }
+  },
+  {
+    "pool": "IroncladCardPool",
+    "basic": {
+      "id": "CARD.TEAR_ASUNDER",
+      "className": "TearAsunder",
+      "name": "TearAsunder",
+      "type": "Attack",
+      "rarity": "Rare",
+      "description": "",
+      "cost": 2,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "Damage": 5,
+        "Repeat": 1,
+        "CalculationBase": 0,
+        "CalculationExtra": 1,
+        "CalculatedHits": 0
+      }
+    },
+    "upgraded": {
+      "id": "CARD.TEAR_ASUNDER",
+      "className": "TearAsunder",
+      "name": "TearAsunder",
+      "type": "Attack",
+      "rarity": "Rare",
+      "description": "",
+      "cost": 2,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "Damage": 7,
+        "Repeat": 1,
+        "CalculationBase": 0,
+        "CalculationExtra": 1,
+        "CalculatedHits": 0
+      }
+    }
+  },
+  {
+    "pool": "IroncladCardPool",
+    "basic": {
+      "id": "CARD.THRASH",
+      "className": "Thrash",
+      "name": "Thrash",
+      "type": "Attack",
+      "rarity": "Rare",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "Damage": 4
+      }
+    },
+    "upgraded": {
+      "id": "CARD.THRASH",
+      "className": "Thrash",
+      "name": "Thrash",
+      "type": "Attack",
+      "rarity": "Rare",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "Damage": 6
+      }
+    }
+  },
+  {
+    "pool": "IroncladCardPool",
+    "basic": {
+      "id": "CARD.THUNDERCLAP",
+      "className": "Thunderclap",
+      "name": "Thunderclap",
+      "type": "Attack",
+      "rarity": "Common",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "Damage": 4,
+        "VulnerablePower": 1
+      }
+    },
+    "upgraded": {
+      "id": "CARD.THUNDERCLAP",
+      "className": "Thunderclap",
+      "name": "Thunderclap",
+      "type": "Attack",
+      "rarity": "Common",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "Damage": 7,
+        "VulnerablePower": 1
+      }
+    }
+  },
+  {
+    "pool": "IroncladCardPool",
+    "basic": {
+      "id": "CARD.TREMBLE",
+      "className": "Tremble",
+      "name": "Tremble",
+      "type": "Skill",
+      "rarity": "Common",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "keywords": [
+        "Exhaust"
+      ],
+      "variables": {
+        "VulnerablePower": 3
+      }
+    },
+    "upgraded": {
+      "id": "CARD.TREMBLE",
+      "className": "Tremble",
+      "name": "Tremble",
+      "type": "Skill",
+      "rarity": "Common",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "keywords": [
+        "Exhaust"
+      ],
+      "variables": {
+        "VulnerablePower": 4
+      }
+    }
+  },
+  {
+    "pool": "IroncladCardPool",
+    "basic": {
+      "id": "CARD.TRUE_GRIT",
+      "className": "TrueGrit",
+      "name": "TrueGrit",
+      "type": "Skill",
+      "rarity": "Common",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "Block": 7
+      }
+    },
+    "upgraded": {
+      "id": "CARD.TRUE_GRIT",
+      "className": "TrueGrit",
+      "name": "TrueGrit",
+      "type": "Skill",
+      "rarity": "Common",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "Block": 9
+      }
+    }
+  },
+  {
+    "pool": "IroncladCardPool",
+    "basic": {
+      "id": "CARD.TWIN_STRIKE",
+      "className": "TwinStrike",
+      "name": "TwinStrike",
+      "type": "Attack",
+      "rarity": "Common",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "Damage": 5
+      }
+    },
+    "upgraded": {
+      "id": "CARD.TWIN_STRIKE",
+      "className": "TwinStrike",
+      "name": "TwinStrike",
+      "type": "Attack",
+      "rarity": "Common",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "Damage": 7
+      }
+    }
+  },
+  {
+    "pool": "IroncladCardPool",
+    "basic": {
+      "id": "CARD.UNMOVABLE",
+      "className": "Unmovable",
+      "name": "Unmovable",
+      "type": "Power",
+      "rarity": "Rare",
+      "description": "",
+      "cost": 2,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "keywords": [],
+      "variables": {}
+    },
+    "upgraded": {
+      "id": "CARD.UNMOVABLE",
+      "className": "Unmovable",
+      "name": "Unmovable",
+      "type": "Power",
+      "rarity": "Rare",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "keywords": [],
+      "variables": {}
+    }
+  },
+  {
+    "pool": "IroncladCardPool",
+    "basic": {
+      "id": "CARD.UNRELENTING",
+      "className": "Unrelenting",
+      "name": "Unrelenting",
+      "type": "Attack",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 2,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "Damage": 14
+      }
+    },
+    "upgraded": {
+      "id": "CARD.UNRELENTING",
+      "className": "Unrelenting",
+      "name": "Unrelenting",
+      "type": "Attack",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 2,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "Damage": 20
+      }
+    }
+  },
+  {
+    "pool": "IroncladCardPool",
+    "basic": {
+      "id": "CARD.UPPERCUT",
+      "className": "Uppercut",
+      "name": "Uppercut",
+      "type": "Attack",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 2,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "Damage": 13,
+        "Power": 1
+      }
+    },
+    "upgraded": {
+      "id": "CARD.UPPERCUT",
+      "className": "Uppercut",
+      "name": "Uppercut",
+      "type": "Attack",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 2,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "Damage": 13,
+        "Power": 2
+      }
+    }
+  },
+  {
+    "pool": "IroncladCardPool",
+    "basic": {
+      "id": "CARD.VICIOUS",
+      "className": "Vicious",
+      "name": "Vicious",
+      "type": "Power",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "Cards": 1
+      }
+    },
+    "upgraded": {
+      "id": "CARD.VICIOUS",
+      "className": "Vicious",
+      "name": "Vicious",
+      "type": "Power",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "Cards": 2
+      }
+    }
+  },
+  {
+    "pool": "IroncladCardPool",
+    "basic": {
+      "id": "CARD.WHIRLWIND",
+      "className": "Whirlwind",
+      "name": "Whirlwind",
+      "type": "Attack",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 0,
+      "costsX": true,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "Damage": 5
+      }
+    },
+    "upgraded": {
+      "id": "CARD.WHIRLWIND",
+      "className": "Whirlwind",
+      "name": "Whirlwind",
+      "type": "Attack",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 0,
+      "costsX": true,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "Damage": 8
+      }
+    }
+  },
+  {
+    "pool": "ColorlessCardPool",
+    "basic": {
+      "id": "CARD.ALCHEMIZE",
+      "className": "Alchemize",
+      "name": "Alchemize",
+      "type": "Skill",
+      "rarity": "Rare",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "keywords": [
+        "Exhaust"
+      ],
+      "variables": {}
+    },
+    "upgraded": {
+      "id": "CARD.ALCHEMIZE",
+      "className": "Alchemize",
+      "name": "Alchemize",
+      "type": "Skill",
+      "rarity": "Rare",
+      "description": "",
+      "cost": 0,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "keywords": [
+        "Exhaust"
+      ],
+      "variables": {}
+    }
+  },
+  {
+    "pool": "ColorlessCardPool",
+    "basic": {
+      "id": "CARD.ANOINTED",
+      "className": "Anointed",
+      "name": "Anointed",
+      "type": "Skill",
+      "rarity": "Rare",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "keywords": [
+        "Exhaust"
+      ],
+      "variables": {}
+    },
+    "upgraded": {
+      "id": "CARD.ANOINTED",
+      "className": "Anointed",
+      "name": "Anointed",
+      "type": "Skill",
+      "rarity": "Rare",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "keywords": [
+        "Exhaust",
+        "Retain"
+      ],
+      "variables": {}
+    }
+  },
+  {
+    "pool": "ColorlessCardPool",
+    "basic": {
+      "id": "CARD.AUTOMATION",
+      "className": "Automation",
+      "name": "Automation",
+      "type": "Power",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "Energy": 1
+      }
+    },
+    "upgraded": {
+      "id": "CARD.AUTOMATION",
+      "className": "Automation",
+      "name": "Automation",
+      "type": "Power",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 0,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "Energy": 1
+      }
+    }
+  },
+  {
+    "pool": "ColorlessCardPool",
+    "basic": {
+      "id": "CARD.BEACON_OF_HOPE",
+      "className": "BeaconOfHope",
+      "name": "BeaconOfHope",
+      "type": "Power",
+      "rarity": "Rare",
+      "description": "",
+      "cost": 2,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "keywords": [],
+      "variables": {}
+    },
+    "upgraded": {
+      "id": "CARD.BEACON_OF_HOPE",
+      "className": "BeaconOfHope",
+      "name": "BeaconOfHope",
+      "type": "Power",
+      "rarity": "Rare",
+      "description": "",
+      "cost": 2,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "keywords": [
+        "Innate"
+      ],
+      "variables": {}
+    }
+  },
+  {
+    "pool": "ColorlessCardPool",
+    "basic": {
+      "id": "CARD.BEAT_DOWN",
+      "className": "BeatDown",
+      "name": "BeatDown",
+      "type": "Skill",
+      "rarity": "Rare",
+      "description": "",
+      "cost": 3,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "Cards": 3
+      }
+    },
+    "upgraded": {
+      "id": "CARD.BEAT_DOWN",
+      "className": "BeatDown",
+      "name": "BeatDown",
+      "type": "Skill",
+      "rarity": "Rare",
+      "description": "",
+      "cost": 3,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "Cards": 4
+      }
+    }
+  },
+  {
+    "pool": "ColorlessCardPool",
+    "basic": {
+      "id": "CARD.BELIEVE_IN_YOU",
+      "className": "BelieveInYou",
+      "name": "BelieveInYou",
+      "type": "Skill",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 0,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "Energy": 2
+      }
+    },
+    "upgraded": {
+      "id": "CARD.BELIEVE_IN_YOU",
+      "className": "BelieveInYou",
+      "name": "BelieveInYou",
+      "type": "Skill",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 0,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "Energy": 3
+      }
+    }
+  },
+  {
+    "pool": "ColorlessCardPool",
+    "basic": {
+      "id": "CARD.BOLAS",
+      "className": "Bolas",
+      "name": "Bolas",
+      "type": "Attack",
+      "rarity": "Rare",
+      "description": "",
+      "cost": 0,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "Damage": 3
+      }
+    },
+    "upgraded": {
+      "id": "CARD.BOLAS",
+      "className": "Bolas",
+      "name": "Bolas",
+      "type": "Attack",
+      "rarity": "Rare",
+      "description": "",
+      "cost": 0,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "Damage": 4
+      }
+    }
+  },
+  {
+    "pool": "ColorlessCardPool",
+    "basic": {
+      "id": "CARD.CALAMITY",
+      "className": "Calamity",
+      "name": "Calamity",
+      "type": "Power",
+      "rarity": "Rare",
+      "description": "",
+      "cost": 3,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "keywords": [],
+      "variables": {}
+    },
+    "upgraded": {
+      "id": "CARD.CALAMITY",
+      "className": "Calamity",
+      "name": "Calamity",
+      "type": "Power",
+      "rarity": "Rare",
+      "description": "",
+      "cost": 2,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "keywords": [],
+      "variables": {}
+    }
+  },
+  {
+    "pool": "ColorlessCardPool",
+    "basic": {
+      "id": "CARD.CATASTROPHE",
+      "className": "Catastrophe",
+      "name": "Catastrophe",
+      "type": "Skill",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 2,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "Cards": 2
+      }
+    },
+    "upgraded": {
+      "id": "CARD.CATASTROPHE",
+      "className": "Catastrophe",
+      "name": "Catastrophe",
+      "type": "Skill",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 2,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "Cards": 3
+      }
+    }
+  },
+  {
+    "pool": "ColorlessCardPool",
+    "basic": {
+      "id": "CARD.COORDINATE",
+      "className": "Coordinate",
+      "name": "Coordinate",
+      "type": "Skill",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "StrengthPower": 5
+      }
+    },
+    "upgraded": {
+      "id": "CARD.COORDINATE",
+      "className": "Coordinate",
+      "name": "Coordinate",
+      "type": "Skill",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "StrengthPower": 8
+      }
+    }
+  },
+  {
+    "pool": "ColorlessCardPool",
+    "basic": {
+      "id": "CARD.DARK_SHACKLES",
+      "className": "DarkShackles",
+      "name": "DarkShackles",
+      "type": "Skill",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 0,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "keywords": [
+        "Exhaust"
+      ],
+      "variables": {
+        "StrengthLoss": 9
+      }
+    },
+    "upgraded": {
+      "id": "CARD.DARK_SHACKLES",
+      "className": "DarkShackles",
+      "name": "DarkShackles",
+      "type": "Skill",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 0,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "keywords": [
+        "Exhaust"
+      ],
+      "variables": {
+        "StrengthLoss": 15
+      }
+    }
+  },
+  {
+    "pool": "ColorlessCardPool",
+    "basic": {
+      "id": "CARD.DISCOVERY",
+      "className": "Discovery",
+      "name": "Discovery",
+      "type": "Skill",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "keywords": [
+        "Exhaust"
+      ],
+      "variables": {}
+    },
+    "upgraded": {
+      "id": "CARD.DISCOVERY",
+      "className": "Discovery",
+      "name": "Discovery",
+      "type": "Skill",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "keywords": [],
+      "variables": {}
+    }
+  },
+  {
+    "pool": "ColorlessCardPool",
+    "basic": {
+      "id": "CARD.DRAMATIC_ENTRANCE",
+      "className": "DramaticEntrance",
+      "name": "DramaticEntrance",
+      "type": "Attack",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 0,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "keywords": [
+        "Exhaust",
+        "Innate"
+      ],
+      "variables": {
+        "Damage": 11
+      }
+    },
+    "upgraded": {
+      "id": "CARD.DRAMATIC_ENTRANCE",
+      "className": "DramaticEntrance",
+      "name": "DramaticEntrance",
+      "type": "Attack",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 0,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "keywords": [
+        "Exhaust",
+        "Innate"
+      ],
+      "variables": {
+        "Damage": 15
+      }
+    }
+  },
+  {
+    "pool": "ColorlessCardPool",
+    "basic": {
+      "id": "CARD.ENTROPY",
+      "className": "Entropy",
+      "name": "Entropy",
+      "type": "Power",
+      "rarity": "Rare",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "Cards": 1
+      }
+    },
+    "upgraded": {
+      "id": "CARD.ENTROPY",
+      "className": "Entropy",
+      "name": "Entropy",
+      "type": "Power",
+      "rarity": "Rare",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "keywords": [
+        "Innate"
+      ],
+      "variables": {
+        "Cards": 1
+      }
+    }
+  },
+  {
+    "pool": "ColorlessCardPool",
+    "basic": {
+      "id": "CARD.EQUILIBRIUM",
+      "className": "Equilibrium",
+      "name": "Equilibrium",
+      "type": "Skill",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 2,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "Block": 13,
+        "Equilibrium": 1
+      }
+    },
+    "upgraded": {
+      "id": "CARD.EQUILIBRIUM",
+      "className": "Equilibrium",
+      "name": "Equilibrium",
+      "type": "Skill",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 2,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "Block": 16,
+        "Equilibrium": 1
+      }
+    }
+  },
+  {
+    "pool": "ColorlessCardPool",
+    "basic": {
+      "id": "CARD.ETERNAL_ARMOR",
+      "className": "EternalArmor",
+      "name": "EternalArmor",
+      "type": "Power",
+      "rarity": "Rare",
+      "description": "",
+      "cost": 3,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "PlatingPower": 9
+      }
+    },
+    "upgraded": {
+      "id": "CARD.ETERNAL_ARMOR",
+      "className": "EternalArmor",
+      "name": "EternalArmor",
+      "type": "Power",
+      "rarity": "Rare",
+      "description": "",
+      "cost": 3,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "PlatingPower": 12
+      }
+    }
+  },
+  {
+    "pool": "ColorlessCardPool",
+    "basic": {
+      "id": "CARD.FASTEN",
+      "className": "Fasten",
+      "name": "Fasten",
+      "type": "Power",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "ExtraBlock": 4
+      }
+    },
+    "upgraded": {
+      "id": "CARD.FASTEN",
+      "className": "Fasten",
+      "name": "Fasten",
+      "type": "Power",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "ExtraBlock": 6
+      }
+    }
+  },
+  {
+    "pool": "ColorlessCardPool",
+    "basic": {
+      "id": "CARD.FINESSE",
+      "className": "Finesse",
+      "name": "Finesse",
+      "type": "Skill",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 0,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "Block": 4,
+        "Cards": 1
+      }
+    },
+    "upgraded": {
+      "id": "CARD.FINESSE",
+      "className": "Finesse",
+      "name": "Finesse",
+      "type": "Skill",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 0,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "Block": 7,
+        "Cards": 1
+      }
+    }
+  },
+  {
+    "pool": "ColorlessCardPool",
+    "basic": {
+      "id": "CARD.FISTICUFFS",
+      "className": "Fisticuffs",
+      "name": "Fisticuffs",
+      "type": "Attack",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "Damage": 7
+      }
+    },
+    "upgraded": {
+      "id": "CARD.FISTICUFFS",
+      "className": "Fisticuffs",
+      "name": "Fisticuffs",
+      "type": "Attack",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "Damage": 9
+      }
+    }
+  },
+  {
+    "pool": "ColorlessCardPool",
+    "basic": {
+      "id": "CARD.FLASH_OF_STEEL",
+      "className": "FlashOfSteel",
+      "name": "FlashOfSteel",
+      "type": "Attack",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 0,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "Damage": 5,
+        "Cards": 1
+      }
+    },
+    "upgraded": {
+      "id": "CARD.FLASH_OF_STEEL",
+      "className": "FlashOfSteel",
+      "name": "FlashOfSteel",
+      "type": "Attack",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 0,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "Damage": 8,
+        "Cards": 1
+      }
+    }
+  },
+  {
+    "pool": "ColorlessCardPool",
+    "basic": {
+      "id": "CARD.GANG_UP",
+      "className": "GangUp",
+      "name": "GangUp",
+      "type": "Attack",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "CalculationBase": 5,
+        "ExtraDamage": 5,
+        "CalculatedDamage": 5
+      }
+    },
+    "upgraded": {
+      "id": "CARD.GANG_UP",
+      "className": "GangUp",
+      "name": "GangUp",
+      "type": "Attack",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "CalculationBase": 5,
+        "ExtraDamage": 7,
+        "CalculatedDamage": 5
+      }
+    }
+  },
+  {
+    "pool": "ColorlessCardPool",
+    "basic": {
+      "id": "CARD.GOLD_AXE",
+      "className": "GoldAxe",
+      "name": "GoldAxe",
+      "type": "Attack",
+      "rarity": "Rare",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "CalculationBase": 0,
+        "ExtraDamage": 1,
+        "CalculatedDamage": 0
+      }
+    },
+    "upgraded": {
+      "id": "CARD.GOLD_AXE",
+      "className": "GoldAxe",
+      "name": "GoldAxe",
+      "type": "Attack",
+      "rarity": "Rare",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "keywords": [
+        "Retain"
+      ],
+      "variables": {
+        "CalculationBase": 0,
+        "ExtraDamage": 1,
+        "CalculatedDamage": 0
+      }
+    }
+  },
+  {
+    "pool": "ColorlessCardPool",
+    "basic": {
+      "id": "CARD.HAND_OF_GREED",
+      "className": "HandOfGreed",
+      "name": "HandOfGreed",
+      "type": "Attack",
+      "rarity": "Rare",
+      "description": "",
+      "cost": 2,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "Damage": 20,
+        "Gold": 20
+      }
+    },
+    "upgraded": {
+      "id": "CARD.HAND_OF_GREED",
+      "className": "HandOfGreed",
+      "name": "HandOfGreed",
+      "type": "Attack",
+      "rarity": "Rare",
+      "description": "",
+      "cost": 2,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "Damage": 25,
+        "Gold": 25
+      }
+    }
+  },
+  {
+    "pool": "ColorlessCardPool",
+    "basic": {
+      "id": "CARD.HIDDEN_GEM",
+      "className": "HiddenGem",
+      "name": "HiddenGem",
+      "type": "Skill",
+      "rarity": "Rare",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "Replay": 2
+      }
+    },
+    "upgraded": {
+      "id": "CARD.HIDDEN_GEM",
+      "className": "HiddenGem",
+      "name": "HiddenGem",
+      "type": "Skill",
+      "rarity": "Rare",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "Replay": 3
+      }
+    }
+  },
+  {
+    "pool": "ColorlessCardPool",
+    "basic": {
+      "id": "CARD.HUDDLE_UP",
+      "className": "HuddleUp",
+      "name": "HuddleUp",
+      "type": "Skill",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "keywords": [
+        "Exhaust"
+      ],
+      "variables": {
+        "Cards": 2
+      }
+    },
+    "upgraded": {
+      "id": "CARD.HUDDLE_UP",
+      "className": "HuddleUp",
+      "name": "HuddleUp",
+      "type": "Skill",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "keywords": [
+        "Exhaust"
+      ],
+      "variables": {
+        "Cards": 3
+      }
+    }
+  },
+  {
+    "pool": "ColorlessCardPool",
+    "basic": {
+      "id": "CARD.IMPATIENCE",
+      "className": "Impatience",
+      "name": "Impatience",
+      "type": "Skill",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 0,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "Cards": 2
+      }
+    },
+    "upgraded": {
+      "id": "CARD.IMPATIENCE",
+      "className": "Impatience",
+      "name": "Impatience",
+      "type": "Skill",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 0,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "Cards": 3
+      }
+    }
+  },
+  {
+    "pool": "ColorlessCardPool",
+    "basic": {
+      "id": "CARD.INTERCEPT",
+      "className": "Intercept",
+      "name": "Intercept",
+      "type": "Skill",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "Block": 9
+      }
+    },
+    "upgraded": {
+      "id": "CARD.INTERCEPT",
+      "className": "Intercept",
+      "name": "Intercept",
+      "type": "Skill",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "Block": 13
+      }
+    }
+  },
+  {
+    "pool": "ColorlessCardPool",
+    "basic": {
+      "id": "CARD.JACK_OF_ALL_TRADES",
+      "className": "JackOfAllTrades",
+      "name": "JackOfAllTrades",
+      "type": "Skill",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 0,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "keywords": [
+        "Exhaust"
+      ],
+      "variables": {
+        "Cards": 1
+      }
+    },
+    "upgraded": {
+      "id": "CARD.JACK_OF_ALL_TRADES",
+      "className": "JackOfAllTrades",
+      "name": "JackOfAllTrades",
+      "type": "Skill",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 0,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "keywords": [
+        "Exhaust"
+      ],
+      "variables": {
+        "Cards": 2
+      }
+    }
+  },
+  {
+    "pool": "ColorlessCardPool",
+    "basic": {
+      "id": "CARD.JACKPOT",
+      "className": "Jackpot",
+      "name": "Jackpot",
+      "type": "Attack",
+      "rarity": "Rare",
+      "description": "",
+      "cost": 3,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "Damage": 25,
+        "Cards": 3
+      }
+    },
+    "upgraded": {
+      "id": "CARD.JACKPOT",
+      "className": "Jackpot",
+      "name": "Jackpot",
+      "type": "Attack",
+      "rarity": "Rare",
+      "description": "",
+      "cost": 3,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "Damage": 30,
+        "Cards": 3
+      }
+    }
+  },
+  {
+    "pool": "ColorlessCardPool",
+    "basic": {
+      "id": "CARD.KNOCKDOWN",
+      "className": "Knockdown",
+      "name": "Knockdown",
+      "type": "Attack",
+      "rarity": "Rare",
+      "description": "",
+      "cost": 3,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "Damage": 10,
+        "KnockdownPower": 2
+      }
+    },
+    "upgraded": {
+      "id": "CARD.KNOCKDOWN",
+      "className": "Knockdown",
+      "name": "Knockdown",
+      "type": "Attack",
+      "rarity": "Rare",
+      "description": "",
+      "cost": 3,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "Damage": 14,
+        "KnockdownPower": 3
+      }
+    }
+  },
+  {
+    "pool": "ColorlessCardPool",
+    "basic": {
+      "id": "CARD.LIFT",
+      "className": "Lift",
+      "name": "Lift",
+      "type": "Skill",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "Block": 11
+      }
+    },
+    "upgraded": {
+      "id": "CARD.LIFT",
+      "className": "Lift",
+      "name": "Lift",
+      "type": "Skill",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "Block": 16
+      }
+    }
+  },
+  {
+    "pool": "ColorlessCardPool",
+    "basic": {
+      "id": "CARD.MASTER_OF_STRATEGY",
+      "className": "MasterOfStrategy",
+      "name": "MasterOfStrategy",
+      "type": "Skill",
+      "rarity": "Rare",
+      "description": "",
+      "cost": 0,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "keywords": [
+        "Exhaust"
+      ],
+      "variables": {
+        "Cards": 3
+      }
+    },
+    "upgraded": {
+      "id": "CARD.MASTER_OF_STRATEGY",
+      "className": "MasterOfStrategy",
+      "name": "MasterOfStrategy",
+      "type": "Skill",
+      "rarity": "Rare",
+      "description": "",
+      "cost": 0,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "keywords": [
+        "Exhaust"
+      ],
+      "variables": {
+        "Cards": 4
+      }
+    }
+  },
+  {
+    "pool": "ColorlessCardPool",
+    "basic": {
+      "id": "CARD.MAYHEM",
+      "className": "Mayhem",
+      "name": "Mayhem",
+      "type": "Power",
+      "rarity": "Rare",
+      "description": "",
+      "cost": 2,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "keywords": [],
+      "variables": {}
+    },
+    "upgraded": {
+      "id": "CARD.MAYHEM",
+      "className": "Mayhem",
+      "name": "Mayhem",
+      "type": "Power",
+      "rarity": "Rare",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "keywords": [],
+      "variables": {}
+    }
+  },
+  {
+    "pool": "ColorlessCardPool",
+    "basic": {
+      "id": "CARD.MIMIC",
+      "className": "Mimic",
+      "name": "Mimic",
+      "type": "Skill",
+      "rarity": "Rare",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "keywords": [
+        "Exhaust"
+      ],
+      "variables": {
+        "CalculationBase": 0,
+        "CalculationExtra": 1,
+        "CalculatedBlock": 0
+      }
+    },
+    "upgraded": {
+      "id": "CARD.MIMIC",
+      "className": "Mimic",
+      "name": "Mimic",
+      "type": "Skill",
+      "rarity": "Rare",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "CalculationBase": 0,
+        "CalculationExtra": 1,
+        "CalculatedBlock": 0
+      }
+    }
+  },
+  {
+    "pool": "ColorlessCardPool",
+    "basic": {
+      "id": "CARD.MIND_BLAST",
+      "className": "MindBlast",
+      "name": "MindBlast",
+      "type": "Attack",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "keywords": [
+        "Innate"
+      ],
+      "variables": {
+        "CalculationBase": 0,
+        "ExtraDamage": 1,
+        "CalculatedDamage": 0
+      }
+    },
+    "upgraded": {
+      "id": "CARD.MIND_BLAST",
+      "className": "MindBlast",
+      "name": "MindBlast",
+      "type": "Attack",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 0,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "keywords": [
+        "Innate"
+      ],
+      "variables": {
+        "CalculationBase": 0,
+        "ExtraDamage": 1,
+        "CalculatedDamage": 0
+      }
+    }
+  },
+  {
+    "pool": "ColorlessCardPool",
+    "basic": {
+      "id": "CARD.NOSTALGIA",
+      "className": "Nostalgia",
+      "name": "Nostalgia",
+      "type": "Power",
+      "rarity": "Rare",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "keywords": [],
+      "variables": {}
+    },
+    "upgraded": {
+      "id": "CARD.NOSTALGIA",
+      "className": "Nostalgia",
+      "name": "Nostalgia",
+      "type": "Power",
+      "rarity": "Rare",
+      "description": "",
+      "cost": 0,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "keywords": [],
+      "variables": {}
+    }
+  },
+  {
+    "pool": "ColorlessCardPool",
+    "basic": {
+      "id": "CARD.OMNISLICE",
+      "className": "Omnislice",
+      "name": "Omnislice",
+      "type": "Attack",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 0,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "Damage": 8
+      }
+    },
+    "upgraded": {
+      "id": "CARD.OMNISLICE",
+      "className": "Omnislice",
+      "name": "Omnislice",
+      "type": "Attack",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 0,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "Damage": 11
+      }
+    }
+  },
+  {
+    "pool": "ColorlessCardPool",
+    "basic": {
+      "id": "CARD.PANACHE",
+      "className": "Panache",
+      "name": "Panache",
+      "type": "Power",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 0,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "PanacheDamage": 10
+      }
+    },
+    "upgraded": {
+      "id": "CARD.PANACHE",
+      "className": "Panache",
+      "name": "Panache",
+      "type": "Power",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 0,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "PanacheDamage": 14
+      }
+    }
+  },
+  {
+    "pool": "ColorlessCardPool",
+    "basic": {
+      "id": "CARD.PANIC_BUTTON",
+      "className": "PanicButton",
+      "name": "PanicButton",
+      "type": "Skill",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 0,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "keywords": [
+        "Exhaust"
+      ],
+      "variables": {
+        "Block": 30,
+        "Turns": 2
+      }
+    },
+    "upgraded": {
+      "id": "CARD.PANIC_BUTTON",
+      "className": "PanicButton",
+      "name": "PanicButton",
+      "type": "Skill",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 0,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "keywords": [
+        "Exhaust"
+      ],
+      "variables": {
+        "Block": 40,
+        "Turns": 2
+      }
+    }
+  },
+  {
+    "pool": "ColorlessCardPool",
+    "basic": {
+      "id": "CARD.PREP_TIME",
+      "className": "PrepTime",
+      "name": "PrepTime",
+      "type": "Power",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "PrepTimePower": 4
+      }
+    },
+    "upgraded": {
+      "id": "CARD.PREP_TIME",
+      "className": "PrepTime",
+      "name": "PrepTime",
+      "type": "Power",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "PrepTimePower": 6
+      }
+    }
+  },
+  {
+    "pool": "ColorlessCardPool",
+    "basic": {
+      "id": "CARD.PRODUCTION",
+      "className": "Production",
+      "name": "Production",
+      "type": "Skill",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 0,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "keywords": [
+        "Exhaust"
+      ],
+      "variables": {
+        "Energy": 2
+      }
+    },
+    "upgraded": {
+      "id": "CARD.PRODUCTION",
+      "className": "Production",
+      "name": "Production",
+      "type": "Skill",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 0,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "keywords": [
+        "Exhaust"
+      ],
+      "variables": {
+        "Energy": 3
+      }
+    }
+  },
+  {
+    "pool": "ColorlessCardPool",
+    "basic": {
+      "id": "CARD.PROLONG",
+      "className": "Prolong",
+      "name": "Prolong",
+      "type": "Skill",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 0,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "keywords": [
+        "Exhaust"
+      ],
+      "variables": {}
+    },
+    "upgraded": {
+      "id": "CARD.PROLONG",
+      "className": "Prolong",
+      "name": "Prolong",
+      "type": "Skill",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 0,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "keywords": [],
+      "variables": {}
+    }
+  },
+  {
+    "pool": "ColorlessCardPool",
+    "basic": {
+      "id": "CARD.PROWESS",
+      "className": "Prowess",
+      "name": "Prowess",
+      "type": "Power",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "StrengthPower": 1,
+        "DexterityPower": 1
+      }
+    },
+    "upgraded": {
+      "id": "CARD.PROWESS",
+      "className": "Prowess",
+      "name": "Prowess",
+      "type": "Power",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "StrengthPower": 2,
+        "DexterityPower": 2
+      }
+    }
+  },
+  {
+    "pool": "ColorlessCardPool",
+    "basic": {
+      "id": "CARD.PURITY",
+      "className": "Purity",
+      "name": "Purity",
+      "type": "Skill",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 0,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "keywords": [
+        "Retain",
+        "Exhaust"
+      ],
+      "variables": {
+        "Cards": 3
+      }
+    },
+    "upgraded": {
+      "id": "CARD.PURITY",
+      "className": "Purity",
+      "name": "Purity",
+      "type": "Skill",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 0,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "keywords": [
+        "Retain",
+        "Exhaust"
+      ],
+      "variables": {
+        "Cards": 5
+      }
+    }
+  },
+  {
+    "pool": "ColorlessCardPool",
+    "basic": {
+      "id": "CARD.RALLY",
+      "className": "Rally",
+      "name": "Rally",
+      "type": "Skill",
+      "rarity": "Rare",
+      "description": "",
+      "cost": 2,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "Block": 12
+      }
+    },
+    "upgraded": {
+      "id": "CARD.RALLY",
+      "className": "Rally",
+      "name": "Rally",
+      "type": "Skill",
+      "rarity": "Rare",
+      "description": "",
+      "cost": 2,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "Block": 17
+      }
+    }
+  },
+  {
+    "pool": "ColorlessCardPool",
+    "basic": {
+      "id": "CARD.REND",
+      "className": "Rend",
+      "name": "Rend",
+      "type": "Attack",
+      "rarity": "Rare",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "CalculationBase": 10,
+        "ExtraDamage": 5,
+        "CalculatedDamage": 10
+      }
+    },
+    "upgraded": {
+      "id": "CARD.REND",
+      "className": "Rend",
+      "name": "Rend",
+      "type": "Attack",
+      "rarity": "Rare",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "CalculationBase": 12,
+        "ExtraDamage": 8,
+        "CalculatedDamage": 12
+      }
+    }
+  },
+  {
+    "pool": "ColorlessCardPool",
+    "basic": {
+      "id": "CARD.RESTLESSNESS",
+      "className": "Restlessness",
+      "name": "Restlessness",
+      "type": "Skill",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 0,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "keywords": [
+        "Retain"
+      ],
+      "variables": {
+        "Cards": 2,
+        "Energy": 2
+      }
+    },
+    "upgraded": {
+      "id": "CARD.RESTLESSNESS",
+      "className": "Restlessness",
+      "name": "Restlessness",
+      "type": "Skill",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 0,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "keywords": [
+        "Retain"
+      ],
+      "variables": {
+        "Cards": 3,
+        "Energy": 3
+      }
+    }
+  },
+  {
+    "pool": "ColorlessCardPool",
+    "basic": {
+      "id": "CARD.ROLLING_BOULDER",
+      "className": "RollingBoulder",
+      "name": "RollingBoulder",
+      "type": "Power",
+      "rarity": "Rare",
+      "description": "",
+      "cost": 3,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "RollingBoulderPower": 5,
+        "IncrementAmount": 5
+      }
+    },
+    "upgraded": {
+      "id": "CARD.ROLLING_BOULDER",
+      "className": "RollingBoulder",
+      "name": "RollingBoulder",
+      "type": "Power",
+      "rarity": "Rare",
+      "description": "",
+      "cost": 3,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "RollingBoulderPower": 10,
+        "IncrementAmount": 5
+      }
+    }
+  },
+  {
+    "pool": "ColorlessCardPool",
+    "basic": {
+      "id": "CARD.SALVO",
+      "className": "Salvo",
+      "name": "Salvo",
+      "type": "Attack",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "Damage": 12
+      }
+    },
+    "upgraded": {
+      "id": "CARD.SALVO",
+      "className": "Salvo",
+      "name": "Salvo",
+      "type": "Attack",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "Damage": 16
+      }
+    }
+  },
+  {
+    "pool": "ColorlessCardPool",
+    "basic": {
+      "id": "CARD.SCRAWL",
+      "className": "Scrawl",
+      "name": "Scrawl",
+      "type": "Skill",
+      "rarity": "Rare",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "keywords": [
+        "Exhaust"
+      ],
+      "variables": {}
+    },
+    "upgraded": {
+      "id": "CARD.SCRAWL",
+      "className": "Scrawl",
+      "name": "Scrawl",
+      "type": "Skill",
+      "rarity": "Rare",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "keywords": [
+        "Exhaust",
+        "Retain"
+      ],
+      "variables": {}
+    }
+  },
+  {
+    "pool": "ColorlessCardPool",
+    "basic": {
+      "id": "CARD.SECRET_TECHNIQUE",
+      "className": "SecretTechnique",
+      "name": "SecretTechnique",
+      "type": "Skill",
+      "rarity": "Rare",
+      "description": "",
+      "cost": 0,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "keywords": [
+        "Exhaust"
+      ],
+      "variables": {}
+    },
+    "upgraded": {
+      "id": "CARD.SECRET_TECHNIQUE",
+      "className": "SecretTechnique",
+      "name": "SecretTechnique",
+      "type": "Skill",
+      "rarity": "Rare",
+      "description": "",
+      "cost": 0,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "keywords": [],
+      "variables": {}
+    }
+  },
+  {
+    "pool": "ColorlessCardPool",
+    "basic": {
+      "id": "CARD.SECRET_WEAPON",
+      "className": "SecretWeapon",
+      "name": "SecretWeapon",
+      "type": "Skill",
+      "rarity": "Rare",
+      "description": "",
+      "cost": 0,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "keywords": [
+        "Exhaust"
+      ],
+      "variables": {}
+    },
+    "upgraded": {
+      "id": "CARD.SECRET_WEAPON",
+      "className": "SecretWeapon",
+      "name": "SecretWeapon",
+      "type": "Skill",
+      "rarity": "Rare",
+      "description": "",
+      "cost": 0,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "keywords": [],
+      "variables": {}
+    }
+  },
+  {
+    "pool": "ColorlessCardPool",
+    "basic": {
+      "id": "CARD.SEEKER_STRIKE",
+      "className": "SeekerStrike",
+      "name": "SeekerStrike",
+      "type": "Attack",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "Damage": 9,
+        "Cards": 3
+      }
+    },
+    "upgraded": {
+      "id": "CARD.SEEKER_STRIKE",
+      "className": "SeekerStrike",
+      "name": "SeekerStrike",
+      "type": "Attack",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "Damage": 12,
+        "Cards": 3
+      }
+    }
+  },
+  {
+    "pool": "ColorlessCardPool",
+    "basic": {
+      "id": "CARD.SHOCKWAVE",
+      "className": "Shockwave",
+      "name": "Shockwave",
+      "type": "Skill",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 2,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "keywords": [
+        "Exhaust"
+      ],
+      "variables": {
+        "Power": 3
+      }
+    },
+    "upgraded": {
+      "id": "CARD.SHOCKWAVE",
+      "className": "Shockwave",
+      "name": "Shockwave",
+      "type": "Skill",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 2,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "keywords": [
+        "Exhaust"
+      ],
+      "variables": {
+        "Power": 5
+      }
+    }
+  },
+  {
+    "pool": "ColorlessCardPool",
+    "basic": {
+      "id": "CARD.SPLASH",
+      "className": "Splash",
+      "name": "Splash",
+      "type": "Skill",
+      "rarity": "Rare",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "keywords": [],
+      "variables": {}
+    },
+    "upgraded": {
+      "id": "CARD.SPLASH",
+      "className": "Splash",
+      "name": "Splash",
+      "type": "Skill",
+      "rarity": "Rare",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "keywords": [],
+      "variables": {}
+    }
+  },
+  {
+    "pool": "ColorlessCardPool",
+    "basic": {
+      "id": "CARD.STRATAGEM",
+      "className": "Stratagem",
+      "name": "Stratagem",
+      "type": "Power",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "keywords": [],
+      "variables": {}
+    },
+    "upgraded": {
+      "id": "CARD.STRATAGEM",
+      "className": "Stratagem",
+      "name": "Stratagem",
+      "type": "Power",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 0,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "keywords": [],
+      "variables": {}
+    }
+  },
+  {
+    "pool": "ColorlessCardPool",
+    "basic": {
+      "id": "CARD.TAG_TEAM",
+      "className": "TagTeam",
+      "name": "TagTeam",
+      "type": "Attack",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 2,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "Damage": 11
+      }
+    },
+    "upgraded": {
+      "id": "CARD.TAG_TEAM",
+      "className": "TagTeam",
+      "name": "TagTeam",
+      "type": "Attack",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 2,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "Damage": 15
+      }
+    }
+  },
+  {
+    "pool": "ColorlessCardPool",
+    "basic": {
+      "id": "CARD.THE_BALL",
+      "className": "TheBall",
+      "name": "TheBall",
+      "type": "Attack",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "Damage": 10,
+        "Increase": 10
+      }
+    },
+    "upgraded": {
+      "id": "CARD.THE_BALL",
+      "className": "TheBall",
+      "name": "TheBall",
+      "type": "Attack",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "Damage": 10,
+        "Increase": 15
+      }
+    }
+  },
+  {
+    "pool": "ColorlessCardPool",
+    "basic": {
+      "id": "CARD.THE_BOMB",
+      "className": "TheBomb",
+      "name": "TheBomb",
+      "type": "Skill",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 2,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "Turns": 3,
+        "BombDamage": 40
+      }
+    },
+    "upgraded": {
+      "id": "CARD.THE_BOMB",
+      "className": "TheBomb",
+      "name": "TheBomb",
+      "type": "Skill",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 2,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "Turns": 3,
+        "BombDamage": 50
+      }
+    }
+  },
+  {
+    "pool": "ColorlessCardPool",
+    "basic": {
+      "id": "CARD.THE_GAMBIT",
+      "className": "TheGambit",
+      "name": "TheGambit",
+      "type": "Skill",
+      "rarity": "Rare",
+      "description": "",
+      "cost": 0,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "Block": 50
+      }
+    },
+    "upgraded": {
+      "id": "CARD.THE_GAMBIT",
+      "className": "TheGambit",
+      "name": "TheGambit",
+      "type": "Skill",
+      "rarity": "Rare",
+      "description": "",
+      "cost": 0,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "Block": 75
+      }
+    }
+  },
+  {
+    "pool": "ColorlessCardPool",
+    "basic": {
+      "id": "CARD.THINKING_AHEAD",
+      "className": "ThinkingAhead",
+      "name": "ThinkingAhead",
+      "type": "Skill",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 0,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "keywords": [
+        "Exhaust"
+      ],
+      "variables": {
+        "Cards": 2
+      }
+    },
+    "upgraded": {
+      "id": "CARD.THINKING_AHEAD",
+      "className": "ThinkingAhead",
+      "name": "ThinkingAhead",
+      "type": "Skill",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 0,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "Cards": 2
+      }
+    }
+  },
+  {
+    "pool": "ColorlessCardPool",
+    "basic": {
+      "id": "CARD.THRUMMING_HATCHET",
+      "className": "ThrummingHatchet",
+      "name": "ThrummingHatchet",
+      "type": "Attack",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "Damage": 11
+      }
+    },
+    "upgraded": {
+      "id": "CARD.THRUMMING_HATCHET",
+      "className": "ThrummingHatchet",
+      "name": "ThrummingHatchet",
+      "type": "Attack",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "Damage": 14
+      }
+    }
+  },
+  {
+    "pool": "ColorlessCardPool",
+    "basic": {
+      "id": "CARD.ULTIMATE_DEFEND",
+      "className": "UltimateDefend",
+      "name": "UltimateDefend",
+      "type": "Skill",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "Block": 11
+      }
+    },
+    "upgraded": {
+      "id": "CARD.ULTIMATE_DEFEND",
+      "className": "UltimateDefend",
+      "name": "UltimateDefend",
+      "type": "Skill",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "Block": 15
+      }
+    }
+  },
+  {
+    "pool": "ColorlessCardPool",
+    "basic": {
+      "id": "CARD.ULTIMATE_STRIKE",
+      "className": "UltimateStrike",
+      "name": "UltimateStrike",
+      "type": "Attack",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "Damage": 14
+      }
+    },
+    "upgraded": {
+      "id": "CARD.ULTIMATE_STRIKE",
+      "className": "UltimateStrike",
+      "name": "UltimateStrike",
+      "type": "Attack",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "Damage": 20
+      }
+    }
+  },
+  {
+    "pool": "ColorlessCardPool",
+    "basic": {
+      "id": "CARD.VOLLEY",
+      "className": "Volley",
+      "name": "Volley",
+      "type": "Attack",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 0,
+      "costsX": true,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "Damage": 10
+      }
+    },
+    "upgraded": {
+      "id": "CARD.VOLLEY",
+      "className": "Volley",
+      "name": "Volley",
+      "type": "Attack",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 0,
+      "costsX": true,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "keywords": [],
+      "variables": {
+        "Damage": 14
+      }
+    }
+  }
+]
