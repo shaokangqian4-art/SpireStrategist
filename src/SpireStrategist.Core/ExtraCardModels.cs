@@ -20,6 +20,10 @@ public static class ExtraCardModels
         var u=card.UpgradeLevel>0;
         return c.ClassName switch
         {
+            "Exterminate"=>new(3,Attack:a*V("Repeat")*1.4,StrengthPayoff:1.5,Upgrade:9,
+                Note:"杀灭：四段群攻，锐利逐段增加伤害；不把产刀牌当作本体多段。"),
+            "Whistle"=>new(4,Attack:a,Block:1,Upgrade:12,
+                Note:"吹哨：33/44伤害并眩晕，消耗自身；不是主动消耗其他手牌的工具。"),
             "GiantRock"=>new(2,Attack:u?2.4:2,Upgrade:7,Note:"原始力量生成的一费20伤（升级24伤）攻击；无永久成长。"),
             "Aggression"=>new(2,Draw:.65,Scaling:.35,Upgrade:4,Note:"每回合从弃牌堆随机回收并升级攻击；首回合和无攻击弃牌时空转。"),
             "AshenStrike"=>new(1,Attack:a,ExhaustPayoff:.8,Upgrade:10,Note:"6+消耗堆张数×3（升级×4）；另计实际消耗来源，非固定6伤。"),

@@ -1,0 +1,3522 @@
+{
+  "relics": [
+    {
+      "id": "RELIC.AKABEKO",
+      "className": "Akabeko",
+      "rarity": "Uncommon",
+      "pool": "SharedRelicPool",
+      "variables": {
+        "VigorPower": 8
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.ALCHEMICAL_COFFER",
+      "className": "AlchemicalCoffer",
+      "rarity": "Ancient",
+      "pool": "EventRelicPool",
+      "variables": {
+        "PotionSlots": 4
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.AMETHYST_AUBERGINE",
+      "className": "AmethystAubergine",
+      "rarity": "Common",
+      "pool": "SharedRelicPool",
+      "variables": {
+        "Gold": 15
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.ANCHOR",
+      "className": "Anchor",
+      "rarity": "Common",
+      "pool": "SharedRelicPool",
+      "variables": {
+        "Block": 10
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.ARCANE_SCROLL",
+      "className": "ArcaneScroll",
+      "rarity": "Ancient",
+      "pool": "EventRelicPool",
+      "variables": {
+        "Cards": 1
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.ARCHAIC_TOOTH",
+      "className": "ArchaicTooth",
+      "rarity": "Ancient",
+      "pool": "EventRelicPool",
+      "variables": {
+        "StarterCard": 0,
+        "AncientCard": 0
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.ART_OF_WAR",
+      "className": "ArtOfWar",
+      "rarity": "Rare",
+      "pool": "SharedRelicPool",
+      "variables": {
+        "Energy": 1
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.ASTROLABE",
+      "className": "Astrolabe",
+      "rarity": "Ancient",
+      "pool": "EventRelicPool",
+      "variables": {
+        "Cards": 3
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.BAG_OF_MARBLES",
+      "className": "BagOfMarbles",
+      "rarity": "Common",
+      "pool": "SharedRelicPool",
+      "variables": {
+        "VulnerablePower": 1
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.BAG_OF_PREPARATION",
+      "className": "BagOfPreparation",
+      "rarity": "Common",
+      "pool": "SharedRelicPool",
+      "variables": {
+        "Cards": 2
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.BEATING_REMNANT",
+      "className": "BeatingRemnant",
+      "rarity": "Rare",
+      "pool": "SharedRelicPool",
+      "variables": {
+        "MaxHpLoss": 20
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.BEAUTIFUL_BRACELET",
+      "className": "BeautifulBracelet",
+      "rarity": "Ancient",
+      "pool": "EventRelicPool",
+      "variables": {
+        "Cards": 4,
+        "Swift": 2
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.BELLOWS",
+      "className": "Bellows",
+      "rarity": "Rare",
+      "pool": "SharedRelicPool",
+      "variables": {},
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.BELT_BUCKLE",
+      "className": "BeltBuckle",
+      "rarity": "Shop",
+      "pool": "SharedRelicPool",
+      "variables": {
+        "DexterityPower": 2
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.BIG_HAT",
+      "className": "BigHat",
+      "rarity": "Rare",
+      "pool": "NecrobinderRelicPool",
+      "variables": {
+        "Cards": 2
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.BIG_MUSHROOM",
+      "className": "BigMushroom",
+      "rarity": "Event",
+      "pool": "EventRelicPool",
+      "variables": {
+        "MaxHp": 20,
+        "Cards": 2
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.BIIIG_HUG",
+      "className": "BiiigHug",
+      "rarity": "Ancient",
+      "pool": "EventRelicPool",
+      "variables": {
+        "Cards": 4
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.BING_BONG",
+      "className": "BingBong",
+      "rarity": "Event",
+      "pool": "EventRelicPool",
+      "variables": {},
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.BLACK_BLOOD",
+      "className": "BlackBlood",
+      "rarity": "Starter",
+      "pool": "EventRelicPool",
+      "variables": {
+        "Heal": 12
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.BLACK_STAR",
+      "className": "BlackStar",
+      "rarity": "Ancient",
+      "pool": "EventRelicPool",
+      "variables": {},
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.BLESSED_ANTLER",
+      "className": "BlessedAntler",
+      "rarity": "Ancient",
+      "pool": "EventRelicPool",
+      "variables": {
+        "Energy": 1,
+        "Cards": 3
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.BLOOD_SOAKED_ROSE",
+      "className": "BloodSoakedRose",
+      "rarity": "Ancient",
+      "pool": "EventRelicPool",
+      "variables": {
+        "Energy": 1
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.BLOOD_VIAL",
+      "className": "BloodVial",
+      "rarity": "Common",
+      "pool": "SharedRelicPool",
+      "variables": {
+        "Heal": 2
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.BONE_FLUTE",
+      "className": "BoneFlute",
+      "rarity": "Common",
+      "pool": "NecrobinderRelicPool",
+      "variables": {
+        "Block": 2
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.BONE_TEA",
+      "className": "BoneTea",
+      "rarity": "Event",
+      "pool": "EventRelicPool",
+      "variables": {
+        "Combats": 1
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.BOOKMARK",
+      "className": "Bookmark",
+      "rarity": "Rare",
+      "pool": "NecrobinderRelicPool",
+      "variables": {},
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.BOOK_OF_FIVE_RINGS",
+      "className": "BookOfFiveRings",
+      "rarity": "Common",
+      "pool": "SharedRelicPool",
+      "variables": {
+        "Cards": 5,
+        "Heal": 20
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.BOOK_REPAIR_KNIFE",
+      "className": "BookRepairKnife",
+      "rarity": "Uncommon",
+      "pool": "NecrobinderRelicPool",
+      "variables": {
+        "Heal": 3
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.BOOMING_CONCH",
+      "className": "BoomingConch",
+      "rarity": "Ancient",
+      "pool": "EventRelicPool",
+      "variables": {
+        "Cards": 2,
+        "Energy": 1
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.BOUND_PHYLACTERY",
+      "className": "BoundPhylactery",
+      "rarity": "Starter",
+      "pool": "NecrobinderRelicPool",
+      "variables": {
+        "Summon": 1
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.BOWLER_HAT",
+      "className": "BowlerHat",
+      "rarity": "Uncommon",
+      "pool": "SharedRelicPool",
+      "variables": {
+        "GoldIncrease": 1.25
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.BREAD",
+      "className": "Bread",
+      "rarity": "Shop",
+      "pool": "SharedRelicPool",
+      "variables": {
+        "GainEnergy": 1,
+        "LoseEnergy": 2
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.BRILLIANT_SCARF",
+      "className": "BrilliantScarf",
+      "rarity": "Ancient",
+      "pool": "EventRelicPool",
+      "variables": {
+        "Cards": 5
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.BRIMSTONE",
+      "className": "Brimstone",
+      "rarity": "Shop",
+      "pool": "IroncladRelicPool",
+      "variables": {
+        "SelfStrength": 2,
+        "EnemyStrength": 1
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.BRONZE_SCALES",
+      "className": "BronzeScales",
+      "rarity": "Common",
+      "pool": "SharedRelicPool",
+      "variables": {
+        "ThornsPower": 3
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.BURNING_BLOOD",
+      "className": "BurningBlood",
+      "rarity": "Starter",
+      "pool": "IroncladRelicPool",
+      "variables": {
+        "Heal": 6
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.BURNING_STICKS",
+      "className": "BurningSticks",
+      "rarity": "Shop",
+      "pool": "SharedRelicPool",
+      "variables": {},
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.BYRDPIP",
+      "className": "Byrdpip",
+      "rarity": "Event",
+      "pool": "EventRelicPool",
+      "variables": {},
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.CALLING_BELL",
+      "className": "CallingBell",
+      "rarity": "Ancient",
+      "pool": "EventRelicPool",
+      "variables": {
+        "Relics": 3
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.CANDELABRA",
+      "className": "Candelabra",
+      "rarity": "Uncommon",
+      "pool": "SharedRelicPool",
+      "variables": {
+        "Energy": 2
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.CAPTAINS_WHEEL",
+      "className": "CaptainsWheel",
+      "rarity": "Rare",
+      "pool": "SharedRelicPool",
+      "variables": {
+        "Block": 18
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.CAULDRON",
+      "className": "Cauldron",
+      "rarity": "Shop",
+      "pool": "SharedRelicPool",
+      "variables": {
+        "Potions": 5
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.CENTENNIAL_PUZZLE",
+      "className": "CentennialPuzzle",
+      "rarity": "Common",
+      "pool": "SharedRelicPool",
+      "variables": {
+        "Cards": 3
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.CHANDELIER",
+      "className": "Chandelier",
+      "rarity": "Rare",
+      "pool": "SharedRelicPool",
+      "variables": {
+        "Energy": 3
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.CHARONS_ASHES",
+      "className": "CharonsAshes",
+      "rarity": "Rare",
+      "pool": "IroncladRelicPool",
+      "variables": {
+        "Damage": 3
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.CHEMICAL_X",
+      "className": "ChemicalX",
+      "rarity": "Shop",
+      "pool": "SharedRelicPool",
+      "variables": {
+        "Increase": 2
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.CHOICES_PARADOX",
+      "className": "ChoicesParadox",
+      "rarity": "Ancient",
+      "pool": "EventRelicPool",
+      "variables": {
+        "Cards": 5
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.CHOSEN_CHEESE",
+      "className": "ChosenCheese",
+      "rarity": "Event",
+      "pool": "EventRelicPool",
+      "variables": {
+        "MaxHp": 1
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.CIRCLET",
+      "className": "Circlet",
+      "rarity": "None",
+      "pool": "FallbackRelicPool",
+      "variables": {},
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.CLAWS",
+      "className": "Claws",
+      "rarity": "Ancient",
+      "pool": "EventRelicPool",
+      "variables": {
+        "Cards": 6
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.CLOAK_CLASP",
+      "className": "CloakClasp",
+      "rarity": "Rare",
+      "pool": "SharedRelicPool",
+      "variables": {
+        "Block": 1
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.CRACKED_CORE",
+      "className": "CrackedCore",
+      "rarity": "Starter",
+      "pool": "DefectRelicPool",
+      "variables": {
+        "Lightning": 1
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.CROSSBOW",
+      "className": "Crossbow",
+      "rarity": "Ancient",
+      "pool": "EventRelicPool",
+      "variables": {},
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.CURSED_PEARL",
+      "className": "CursedPearl",
+      "rarity": "Ancient",
+      "pool": "EventRelicPool",
+      "variables": {
+        "Gold": 333
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.DARKSTONE_PERIAPT",
+      "className": "DarkstonePeriapt",
+      "rarity": "Event",
+      "pool": "EventRelicPool",
+      "variables": {
+        "MaxHp": 6
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.DATA_DISK",
+      "className": "DataDisk",
+      "rarity": "Common",
+      "pool": "DefectRelicPool",
+      "variables": {
+        "FocusPower": 1
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.DAUGHTER_OF_THE_WIND",
+      "className": "DaughterOfTheWind",
+      "rarity": "Event",
+      "pool": "EventRelicPool",
+      "variables": {
+        "Block": 1
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.DELICATE_FROND",
+      "className": "DelicateFrond",
+      "rarity": "Ancient",
+      "pool": "EventRelicPool",
+      "variables": {},
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.DEMON_TONGUE",
+      "className": "DemonTongue",
+      "rarity": "Rare",
+      "pool": "IroncladRelicPool",
+      "variables": {},
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.DEPRECATED_RELIC",
+      "className": "DeprecatedRelic",
+      "rarity": "None",
+      "pool": "DeprecatedRelicPool",
+      "variables": {},
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.DIAMOND_DIADEM",
+      "className": "DiamondDiadem",
+      "rarity": "Ancient",
+      "pool": "EventRelicPool",
+      "variables": {
+        "Block": 20
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.DINGY_RUG",
+      "className": "DingyRug",
+      "rarity": "Shop",
+      "pool": "SharedRelicPool",
+      "variables": {},
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.DISTINGUISHED_CAPE",
+      "className": "DistinguishedCape",
+      "rarity": "Ancient",
+      "pool": "EventRelicPool",
+      "variables": {
+        "Curses": 2,
+        "Cards": 3
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.DIVINE_DESTINY",
+      "className": "DivineDestiny",
+      "rarity": "Starter",
+      "pool": "EventRelicPool",
+      "variables": {
+        "Stars": 7
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.DIVINE_RIGHT",
+      "className": "DivineRight",
+      "rarity": "Starter",
+      "pool": "RegentRelicPool",
+      "variables": {
+        "Stars": 3
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.DOLLYS_MIRROR",
+      "className": "DollysMirror",
+      "rarity": "Shop",
+      "pool": "SharedRelicPool",
+      "variables": {},
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.DOWSING_ROD",
+      "className": "DowsingRod",
+      "rarity": "Ancient",
+      "pool": "EventRelicPool",
+      "variables": {},
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.DRAGON_FRUIT",
+      "className": "DragonFruit",
+      "rarity": "Shop",
+      "pool": "SharedRelicPool",
+      "variables": {
+        "MaxHp": 1
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.DREAM_CATCHER",
+      "className": "DreamCatcher",
+      "rarity": "Event",
+      "pool": "EventRelicPool",
+      "variables": {},
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.DRIFTWOOD",
+      "className": "Driftwood",
+      "rarity": "Ancient",
+      "pool": "EventRelicPool",
+      "variables": {},
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.DUSTY_TOME",
+      "className": "DustyTome",
+      "rarity": "Ancient",
+      "pool": "EventRelicPool",
+      "variables": {
+        "AncientCard": 0
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.ECTOPLASM",
+      "className": "Ectoplasm",
+      "rarity": "Ancient",
+      "pool": "EventRelicPool",
+      "variables": {
+        "Energy": 1
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.ELECTRIC_SHRYMP",
+      "className": "ElectricShrymp",
+      "rarity": "Ancient",
+      "pool": "EventRelicPool",
+      "variables": {},
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.EMBER_TEA",
+      "className": "EmberTea",
+      "rarity": "Event",
+      "pool": "EventRelicPool",
+      "variables": {
+        "Combats": 5,
+        "StrengthPower": 2
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.EMOTION_CHIP",
+      "className": "EmotionChip",
+      "rarity": "Rare",
+      "pool": "DefectRelicPool",
+      "variables": {},
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.EMPTY_CAGE",
+      "className": "EmptyCage",
+      "rarity": "Ancient",
+      "pool": "EventRelicPool",
+      "variables": {
+        "Cards": 2
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.ETERNAL_FEATHER",
+      "className": "EternalFeather",
+      "rarity": "Uncommon",
+      "pool": "SharedRelicPool",
+      "variables": {
+        "Cards": 5,
+        "Heal": 3
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.FAKE_ANCHOR",
+      "className": "FakeAnchor",
+      "rarity": "Event",
+      "pool": "EventRelicPool",
+      "variables": {
+        "Block": 4
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.FAKE_BLOOD_VIAL",
+      "className": "FakeBloodVial",
+      "rarity": "Event",
+      "pool": "EventRelicPool",
+      "variables": {
+        "Heal": 1
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.FAKE_HAPPY_FLOWER",
+      "className": "FakeHappyFlower",
+      "rarity": "Event",
+      "pool": "EventRelicPool",
+      "variables": {
+        "Energy": 1,
+        "Turns": 5
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.FAKE_LEES_WAFFLE",
+      "className": "FakeLeesWaffle",
+      "rarity": "Event",
+      "pool": "EventRelicPool",
+      "variables": {
+        "Heal": 10
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.FAKE_MANGO",
+      "className": "FakeMango",
+      "rarity": "Event",
+      "pool": "EventRelicPool",
+      "variables": {
+        "MaxHp": 3
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.FAKE_MERCHANTS_RUG",
+      "className": "FakeMerchantsRug",
+      "rarity": "Event",
+      "pool": "EventRelicPool",
+      "variables": {},
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.FAKE_ORICHALCUM",
+      "className": "FakeOrichalcum",
+      "rarity": "Event",
+      "pool": "EventRelicPool",
+      "variables": {
+        "Block": 3
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.FAKE_SNECKO_EYE",
+      "className": "FakeSneckoEye",
+      "rarity": "Event",
+      "pool": "EventRelicPool",
+      "variables": {},
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.FAKE_STRIKE_DUMMY",
+      "className": "FakeStrikeDummy",
+      "rarity": "Event",
+      "pool": "EventRelicPool",
+      "variables": {
+        "ExtraDamage": 1
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.FAKE_VENERABLE_TEA_SET",
+      "className": "FakeVenerableTeaSet",
+      "rarity": "Event",
+      "pool": "EventRelicPool",
+      "variables": {
+        "Energy": 1
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.FENCING_MANUAL",
+      "className": "FencingManual",
+      "rarity": "Common",
+      "pool": "RegentRelicPool",
+      "variables": {
+        "Forge": 10
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.FESTIVE_POPPER",
+      "className": "FestivePopper",
+      "rarity": "Common",
+      "pool": "SharedRelicPool",
+      "variables": {
+        "Damage": 9
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.FIDDLE",
+      "className": "Fiddle",
+      "rarity": "Ancient",
+      "pool": "EventRelicPool",
+      "variables": {
+        "Cards": 2
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.FISHING_ROD",
+      "className": "FishingRod",
+      "rarity": "Ancient",
+      "pool": "EventRelicPool",
+      "variables": {
+        "Combats": 3
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.FORGOTTEN_SOUL",
+      "className": "ForgottenSoul",
+      "rarity": "Event",
+      "pool": "EventRelicPool",
+      "variables": {
+        "Damage": 1
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.FRAGRANT_MUSHROOM",
+      "className": "FragrantMushroom",
+      "rarity": "Event",
+      "pool": "EventRelicPool",
+      "variables": {
+        "HpLoss": 15,
+        "Cards": 2
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.FRESNEL_LENS",
+      "className": "FresnelLens",
+      "rarity": "Event",
+      "pool": "SharedRelicPool",
+      "variables": {
+        "NimbleAmount": 2
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.FROZEN_EGG",
+      "className": "FrozenEgg",
+      "rarity": "Rare",
+      "pool": "SharedRelicPool",
+      "variables": {},
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.FUNERARY_MASK",
+      "className": "FuneraryMask",
+      "rarity": "Uncommon",
+      "pool": "NecrobinderRelicPool",
+      "variables": {
+        "Cards": 3
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.FUR_COAT",
+      "className": "FurCoat",
+      "rarity": "Ancient",
+      "pool": "EventRelicPool",
+      "variables": {
+        "Combats": 8
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.GALACTIC_DUST",
+      "className": "GalacticDust",
+      "rarity": "Uncommon",
+      "pool": "RegentRelicPool",
+      "variables": {
+        "Stars": 10,
+        "Block": 10
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.GAMBLING_CHIP",
+      "className": "GamblingChip",
+      "rarity": "Rare",
+      "pool": "SharedRelicPool",
+      "variables": {},
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.GAME_PIECE",
+      "className": "GamePiece",
+      "rarity": "Rare",
+      "pool": "SharedRelicPool",
+      "variables": {
+        "Cards": 1
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.GHOST_SEED",
+      "className": "GhostSeed",
+      "rarity": "Shop",
+      "pool": "SharedRelicPool",
+      "variables": {},
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.GIRYA",
+      "className": "Girya",
+      "rarity": "Rare",
+      "pool": "SharedRelicPool",
+      "variables": {},
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.GLASS_EYE",
+      "className": "GlassEye",
+      "rarity": "Ancient",
+      "pool": "EventRelicPool",
+      "variables": {},
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.GLITTER",
+      "className": "Glitter",
+      "rarity": "Ancient",
+      "pool": "EventRelicPool",
+      "variables": {},
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.GNARLED_HAMMER",
+      "className": "GnarledHammer",
+      "rarity": "Shop",
+      "pool": "SharedRelicPool",
+      "variables": {
+        "Cards": 3,
+        "SharpAmount": 3
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.GOLDEN_COMPASS",
+      "className": "GoldenCompass",
+      "rarity": "Ancient",
+      "pool": "EventRelicPool",
+      "variables": {},
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.GOLDEN_PEARL",
+      "className": "GoldenPearl",
+      "rarity": "Ancient",
+      "pool": "EventRelicPool",
+      "variables": {
+        "Gold": 150
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.GOLD_PLATED_CABLES",
+      "className": "GoldPlatedCables",
+      "rarity": "Uncommon",
+      "pool": "DefectRelicPool",
+      "variables": {},
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.GORGET",
+      "className": "Gorget",
+      "rarity": "Common",
+      "pool": "SharedRelicPool",
+      "variables": {
+        "PlatingPower": 4
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.GREMLIN_HORN",
+      "className": "GremlinHorn",
+      "rarity": "Uncommon",
+      "pool": "SharedRelicPool",
+      "variables": {
+        "Energy": 1,
+        "Cards": 1
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.HAND_DRILL",
+      "className": "HandDrill",
+      "rarity": "Event",
+      "pool": "EventRelicPool",
+      "variables": {
+        "VulnerablePower": 2
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.HAPPY_FLOWER",
+      "className": "HappyFlower",
+      "rarity": "Common",
+      "pool": "SharedRelicPool",
+      "variables": {
+        "Energy": 1,
+        "Turns": 3
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.HEFTY_TABLET",
+      "className": "HeftyTablet",
+      "rarity": "Ancient",
+      "pool": "EventRelicPool",
+      "variables": {
+        "Cards": 3
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.HELICAL_DART",
+      "className": "HelicalDart",
+      "rarity": "Rare",
+      "pool": "SilentRelicPool",
+      "variables": {
+        "DexterityPower": 1
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.HISTORY_COURSE",
+      "className": "HistoryCourse",
+      "rarity": "Event",
+      "pool": "EventRelicPool",
+      "variables": {},
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.HORN_CLEAT",
+      "className": "HornCleat",
+      "rarity": "Uncommon",
+      "pool": "SharedRelicPool",
+      "variables": {
+        "Block": 14
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.ICE_CREAM",
+      "className": "IceCream",
+      "rarity": "Rare",
+      "pool": "SharedRelicPool",
+      "variables": {},
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.INFUSED_CORE",
+      "className": "InfusedCore",
+      "rarity": "Starter",
+      "pool": "EventRelicPool",
+      "variables": {
+        "Lightning": 3,
+        "ExtraDamage": 1
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.INTIMIDATING_HELMET",
+      "className": "IntimidatingHelmet",
+      "rarity": "Rare",
+      "pool": "SharedRelicPool",
+      "variables": {
+        "Block": 4,
+        "Energy": 2
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.IRON_CLUB",
+      "className": "IronClub",
+      "rarity": "Ancient",
+      "pool": "EventRelicPool",
+      "variables": {
+        "Cards": 4
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.IVORY_TILE",
+      "className": "IvoryTile",
+      "rarity": "Rare",
+      "pool": "NecrobinderRelicPool",
+      "variables": {
+        "Energy": 1,
+        "EnergyThreshold": 3
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.JEWELED_MASK",
+      "className": "JeweledMask",
+      "rarity": "Ancient",
+      "pool": "EventRelicPool",
+      "variables": {},
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.JEWELRY_BOX",
+      "className": "JewelryBox",
+      "rarity": "Ancient",
+      "pool": "EventRelicPool",
+      "variables": {},
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.JOSS_PAPER",
+      "className": "JossPaper",
+      "rarity": "Uncommon",
+      "pool": "SharedRelicPool",
+      "variables": {
+        "ExhaustAmount": 5,
+        "Cards": 1
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.JUZU_BRACELET",
+      "className": "JuzuBracelet",
+      "rarity": "Common",
+      "pool": "SharedRelicPool",
+      "variables": {},
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.KALEIDOSCOPE",
+      "className": "Kaleidoscope",
+      "rarity": "Ancient",
+      "pool": "EventRelicPool",
+      "variables": {
+        "Cards": 2
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.KIFUDA",
+      "className": "Kifuda",
+      "rarity": "Shop",
+      "pool": "SharedRelicPool",
+      "variables": {
+        "Cards": 3
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.KUNAI",
+      "className": "Kunai",
+      "rarity": "Rare",
+      "pool": "SharedRelicPool",
+      "variables": {
+        "Cards": 3,
+        "DexterityPower": 1
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.KUSARIGAMA",
+      "className": "Kusarigama",
+      "rarity": "Uncommon",
+      "pool": "SharedRelicPool",
+      "variables": {
+        "Cards": 3,
+        "Damage": 6
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.LANTERN",
+      "className": "Lantern",
+      "rarity": "Common",
+      "pool": "SharedRelicPool",
+      "variables": {
+        "Energy": 1
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.LARGE_CAPSULE",
+      "className": "LargeCapsule",
+      "rarity": "Ancient",
+      "pool": "EventRelicPool",
+      "variables": {
+        "Relics": 2
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.LASTING_CANDY",
+      "className": "LastingCandy",
+      "rarity": "Uncommon",
+      "pool": "EventRelicPool",
+      "variables": {},
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.LAVA_LAMP",
+      "className": "LavaLamp",
+      "rarity": "Shop",
+      "pool": "SharedRelicPool",
+      "variables": {},
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.LAVA_ROCK",
+      "className": "LavaRock",
+      "rarity": "Ancient",
+      "pool": "EventRelicPool",
+      "variables": {
+        "Relics": 2
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.LEAD_PAPERWEIGHT",
+      "className": "LeadPaperweight",
+      "rarity": "Ancient",
+      "pool": "EventRelicPool",
+      "variables": {},
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.LEAFY_POULTICE",
+      "className": "LeafyPoultice",
+      "rarity": "Ancient",
+      "pool": "EventRelicPool",
+      "variables": {
+        "MaxHp": 12
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.LEES_WAFFLE",
+      "className": "LeesWaffle",
+      "rarity": "Shop",
+      "pool": "SharedRelicPool",
+      "variables": {
+        "MaxHp": 7
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.LETTER_OPENER",
+      "className": "LetterOpener",
+      "rarity": "Uncommon",
+      "pool": "SharedRelicPool",
+      "variables": {
+        "Cards": 3,
+        "Damage": 5
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.LIZARD_TAIL",
+      "className": "LizardTail",
+      "rarity": "Rare",
+      "pool": "SharedRelicPool",
+      "variables": {
+        "Heal": 50
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.LOOMING_FRUIT",
+      "className": "LoomingFruit",
+      "rarity": "Ancient",
+      "pool": "SharedRelicPool",
+      "variables": {
+        "MaxHp": 31
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.LORDS_PARASOL",
+      "className": "LordsParasol",
+      "rarity": "Ancient",
+      "pool": "EventRelicPool",
+      "variables": {},
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.LOST_COFFER",
+      "className": "LostCoffer",
+      "rarity": "Ancient",
+      "pool": "EventRelicPool",
+      "variables": {},
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.LOST_WISP",
+      "className": "LostWisp",
+      "rarity": "Event",
+      "pool": "EventRelicPool",
+      "variables": {
+        "Damage": 8
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.LUCKY_FYSH",
+      "className": "LuckyFysh",
+      "rarity": "Uncommon",
+      "pool": "SharedRelicPool",
+      "variables": {
+        "Gold": 15
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.LUNAR_PASTRY",
+      "className": "LunarPastry",
+      "rarity": "Rare",
+      "pool": "RegentRelicPool",
+      "variables": {
+        "Stars": 1
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.MANGO",
+      "className": "Mango",
+      "rarity": "Rare",
+      "pool": "SharedRelicPool",
+      "variables": {
+        "MaxHp": 14
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.MASSIVE_SCROLL",
+      "className": "MassiveScroll",
+      "rarity": "Ancient",
+      "pool": "EventRelicPool",
+      "variables": {},
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.MAW_BANK",
+      "className": "MawBank",
+      "rarity": "Event",
+      "pool": "EventRelicPool",
+      "variables": {
+        "Gold": 12
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.MEAL_TICKET",
+      "className": "MealTicket",
+      "rarity": "Common",
+      "pool": "SharedRelicPool",
+      "variables": {
+        "Heal": 15
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.MEAT_CLEAVER",
+      "className": "MeatCleaver",
+      "rarity": "Ancient",
+      "pool": "EventRelicPool",
+      "variables": {},
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.MEAT_ON_THE_BONE",
+      "className": "MeatOnTheBone",
+      "rarity": "Rare",
+      "pool": "SharedRelicPool",
+      "variables": {
+        "HpThreshold": 50,
+        "Heal": 12
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.MEMBERSHIP_CARD",
+      "className": "MembershipCard",
+      "rarity": "Shop",
+      "pool": "SharedRelicPool",
+      "variables": {
+        "Discount": 50
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.MERCURY_HOURGLASS",
+      "className": "MercuryHourglass",
+      "rarity": "Uncommon",
+      "pool": "SharedRelicPool",
+      "variables": {
+        "Damage": 3
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.METRONOME",
+      "className": "Metronome",
+      "rarity": "Rare",
+      "pool": "DefectRelicPool",
+      "variables": {
+        "Damage": 30,
+        "OrbCount": 7
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.MINIATURE_CANNON",
+      "className": "MiniatureCannon",
+      "rarity": "Uncommon",
+      "pool": "SharedRelicPool",
+      "variables": {
+        "ExtraDamage": 3
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.MINIATURE_TENT",
+      "className": "MiniatureTent",
+      "rarity": "Shop",
+      "pool": "SharedRelicPool",
+      "variables": {},
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.MINI_REGENT",
+      "className": "MiniRegent",
+      "rarity": "Rare",
+      "pool": "RegentRelicPool",
+      "variables": {
+        "StrengthPower": 1
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.MOLTEN_EGG",
+      "className": "MoltenEgg",
+      "rarity": "Rare",
+      "pool": "SharedRelicPool",
+      "variables": {},
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.MR_STRUGGLES",
+      "className": "MrStruggles",
+      "rarity": "Event",
+      "pool": "EventRelicPool",
+      "variables": {},
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.MUMMIFIED_HAND",
+      "className": "MummifiedHand",
+      "rarity": "Rare",
+      "pool": "SharedRelicPool",
+      "variables": {},
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.MUSIC_BOX",
+      "className": "MusicBox",
+      "rarity": "Ancient",
+      "pool": "EventRelicPool",
+      "variables": {},
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.MYSTIC_LIGHTER",
+      "className": "MysticLighter",
+      "rarity": "Shop",
+      "pool": "SharedRelicPool",
+      "variables": {
+        "Damage": 9
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.NEOWS_BONES",
+      "className": "NeowsBones",
+      "rarity": "Ancient",
+      "pool": "EventRelicPool",
+      "variables": {
+        "Relics": 2,
+        "Curses": 1
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.NEOWS_SACRIFICE",
+      "className": "NeowsSacrifice",
+      "rarity": "Ancient",
+      "pool": "EventRelicPool",
+      "variables": {},
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.NEOWS_TALISMAN",
+      "className": "NeowsTalisman",
+      "rarity": "Ancient",
+      "pool": "EventRelicPool",
+      "variables": {},
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.NEOWS_TORMENT",
+      "className": "NeowsTorment",
+      "rarity": "Ancient",
+      "pool": "EventRelicPool",
+      "variables": {},
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.NEW_LEAF",
+      "className": "NewLeaf",
+      "rarity": "Ancient",
+      "pool": "EventRelicPool",
+      "variables": {
+        "Cards": 1
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.NINJA_SCROLL",
+      "className": "NinjaScroll",
+      "rarity": "Shop",
+      "pool": "SilentRelicPool",
+      "variables": {
+        "Shivs": 3
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.NUNCHAKU",
+      "className": "Nunchaku",
+      "rarity": "Uncommon",
+      "pool": "SharedRelicPool",
+      "variables": {
+        "Cards": 10,
+        "Energy": 1
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.NUTRITIOUS_OYSTER",
+      "className": "NutritiousOyster",
+      "rarity": "Ancient",
+      "pool": "EventRelicPool",
+      "variables": {
+        "MaxHp": 11
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.NUTRITIOUS_SOUP",
+      "className": "NutritiousSoup",
+      "rarity": "Ancient",
+      "pool": "EventRelicPool",
+      "variables": {},
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.ODDLY_SMOOTH_STONE",
+      "className": "OddlySmoothStone",
+      "rarity": "Common",
+      "pool": "SharedRelicPool",
+      "variables": {
+        "DexterityPower": 1
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.OLD_COIN",
+      "className": "OldCoin",
+      "rarity": "Rare",
+      "pool": "SharedRelicPool",
+      "variables": {
+        "Gold": 300
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.ORANGE_DOUGH",
+      "className": "OrangeDough",
+      "rarity": "Rare",
+      "pool": "RegentRelicPool",
+      "variables": {
+        "Cards": 2
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.ORICHALCUM",
+      "className": "Orichalcum",
+      "rarity": "Uncommon",
+      "pool": "SharedRelicPool",
+      "variables": {
+        "Block": 6
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.ORNAMENTAL_FAN",
+      "className": "OrnamentalFan",
+      "rarity": "Uncommon",
+      "pool": "SharedRelicPool",
+      "variables": {
+        "Cards": 3,
+        "Block": 4
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.ORRERY",
+      "className": "Orrery",
+      "rarity": "Shop",
+      "pool": "SharedRelicPool",
+      "variables": {
+        "Cards": 5
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.PAELS_BLOOD",
+      "className": "PaelsBlood",
+      "rarity": "Ancient",
+      "pool": "EventRelicPool",
+      "variables": {
+        "Cards": 1
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.PAELS_CLAW",
+      "className": "PaelsClaw",
+      "rarity": "Ancient",
+      "pool": "EventRelicPool",
+      "variables": {},
+      "exportWarning": "NullReferenceException: native localization required"
+    },
+    {
+      "id": "RELIC.PAELS_EYE",
+      "className": "PaelsEye",
+      "rarity": "Ancient",
+      "pool": "EventRelicPool",
+      "variables": {},
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.PAELS_FLESH",
+      "className": "PaelsFlesh",
+      "rarity": "Ancient",
+      "pool": "EventRelicPool",
+      "variables": {
+        "Energy": 1
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.PAELS_GROWTH",
+      "className": "PaelsGrowth",
+      "rarity": "Ancient",
+      "pool": "EventRelicPool",
+      "variables": {},
+      "exportWarning": "NullReferenceException: native localization required"
+    },
+    {
+      "id": "RELIC.PAELS_HORN",
+      "className": "PaelsHorn",
+      "rarity": "Ancient",
+      "pool": "EventRelicPool",
+      "variables": {},
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.PAELS_LEGION",
+      "className": "PaelsLegion",
+      "rarity": "Ancient",
+      "pool": "EventRelicPool",
+      "variables": {
+        "Turns": 2
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.PAELS_TEARS",
+      "className": "PaelsTears",
+      "rarity": "Ancient",
+      "pool": "EventRelicPool",
+      "variables": {
+        "Energy": 2
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.PAELS_TOOTH",
+      "className": "PaelsTooth",
+      "rarity": "Ancient",
+      "pool": "EventRelicPool",
+      "variables": {
+        "Cards": 5,
+        "CardTitles": 0
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.PAELS_WING",
+      "className": "PaelsWing",
+      "rarity": "Ancient",
+      "pool": "EventRelicPool",
+      "variables": {
+        "Sacrifices": 2
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.PANDORAS_BOX",
+      "className": "PandorasBox",
+      "rarity": "Ancient",
+      "pool": "EventRelicPool",
+      "variables": {},
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.PANTOGRAPH",
+      "className": "Pantograph",
+      "rarity": "Uncommon",
+      "pool": "SharedRelicPool",
+      "variables": {
+        "Heal": 25
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.PAPER_KRANE",
+      "className": "PaperKrane",
+      "rarity": "Rare",
+      "pool": "SilentRelicPool",
+      "variables": {},
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.PAPER_PHROG",
+      "className": "PaperPhrog",
+      "rarity": "Uncommon",
+      "pool": "IroncladRelicPool",
+      "variables": {},
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.PARRYING_SHIELD",
+      "className": "ParryingShield",
+      "rarity": "Uncommon",
+      "pool": "SharedRelicPool",
+      "variables": {
+        "Block": 10,
+        "Damage": 6
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.PEAR",
+      "className": "Pear",
+      "rarity": "Uncommon",
+      "pool": "SharedRelicPool",
+      "variables": {
+        "MaxHp": 10
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.PENDULUM",
+      "className": "Pendulum",
+      "rarity": "Common",
+      "pool": "SharedRelicPool",
+      "variables": {
+        "Cards": 1,
+        "Turns": 3
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.PEN_NIB",
+      "className": "PenNib",
+      "rarity": "Uncommon",
+      "pool": "SharedRelicPool",
+      "variables": {},
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.PERMAFROST",
+      "className": "Permafrost",
+      "rarity": "Uncommon",
+      "pool": "SharedRelicPool",
+      "variables": {
+        "Block": 7
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.PETRIFIED_TOAD",
+      "className": "PetrifiedToad",
+      "rarity": "Uncommon",
+      "pool": "SharedRelicPool",
+      "variables": {},
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.PHIAL_HOLSTER",
+      "className": "PhialHolster",
+      "rarity": "Ancient",
+      "pool": "EventRelicPool",
+      "variables": {
+        "PotionSlots": 1,
+        "Potions": 2
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.PHILOSOPHERS_STONE",
+      "className": "PhilosophersStone",
+      "rarity": "Ancient",
+      "pool": "EventRelicPool",
+      "variables": {
+        "StrengthPower": 1,
+        "Energy": 1
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.PHYLACTERY_UNBOUND",
+      "className": "PhylacteryUnbound",
+      "rarity": "Starter",
+      "pool": "EventRelicPool",
+      "variables": {
+        "StartOfCombat": 5,
+        "StartOfTurn": 2
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.PLANISPHERE",
+      "className": "Planisphere",
+      "rarity": "Uncommon",
+      "pool": "SharedRelicPool",
+      "variables": {
+        "Heal": 5
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.POCKETWATCH",
+      "className": "Pocketwatch",
+      "rarity": "Rare",
+      "pool": "SharedRelicPool",
+      "variables": {
+        "CardThreshold": 3,
+        "Cards": 3
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.POLLINOUS_CORE",
+      "className": "PollinousCore",
+      "rarity": "Event",
+      "pool": "EventRelicPool",
+      "variables": {
+        "Cards": 2,
+        "Turns": 4
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.POMANDER",
+      "className": "Pomander",
+      "rarity": "Ancient",
+      "pool": "EventRelicPool",
+      "variables": {
+        "Cards": 1
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.POTION_BELT",
+      "className": "PotionBelt",
+      "rarity": "Common",
+      "pool": "SharedRelicPool",
+      "variables": {
+        "PotionSlots": 2
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.POWER_CELL",
+      "className": "PowerCell",
+      "rarity": "Rare",
+      "pool": "DefectRelicPool",
+      "variables": {
+        "Cards": 2
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.PRAYER_WHEEL",
+      "className": "PrayerWheel",
+      "rarity": "Rare",
+      "pool": "SharedRelicPool",
+      "variables": {},
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.PRECARIOUS_SHEARS",
+      "className": "PrecariousShears",
+      "rarity": "Ancient",
+      "pool": "EventRelicPool",
+      "variables": {
+        "Cards": 2,
+        "Damage": 16
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.PRECISE_SCISSORS",
+      "className": "PreciseScissors",
+      "rarity": "Ancient",
+      "pool": "EventRelicPool",
+      "variables": {
+        "Cards": 1
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.PRESERVED_FOG",
+      "className": "PreservedFog",
+      "rarity": "Ancient",
+      "pool": "EventRelicPool",
+      "variables": {
+        "Cards": 3
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.PRISMATIC_GEM",
+      "className": "PrismaticGem",
+      "rarity": "Ancient",
+      "pool": "EventRelicPool",
+      "variables": {
+        "Energy": 1
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.PUMPKIN_CANDLE",
+      "className": "PumpkinCandle",
+      "rarity": "Ancient",
+      "pool": "EventRelicPool",
+      "variables": {
+        "CombatCount": 5,
+        "Energy": 1
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.PUNCH_DAGGER",
+      "className": "PunchDagger",
+      "rarity": "Shop",
+      "pool": "SharedRelicPool",
+      "variables": {
+        "Momentum": 5
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.RADIANT_PEARL",
+      "className": "RadiantPearl",
+      "rarity": "Ancient",
+      "pool": "EventRelicPool",
+      "variables": {
+        "Cards": 1
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.RAINBOW_RING",
+      "className": "RainbowRing",
+      "rarity": "Rare",
+      "pool": "SharedRelicPool",
+      "variables": {
+        "StrengthPower": 1,
+        "DexterityPower": 1
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.RAZOR_TOOTH",
+      "className": "RazorTooth",
+      "rarity": "Rare",
+      "pool": "EventRelicPool",
+      "variables": {},
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.RED_MASK",
+      "className": "RedMask",
+      "rarity": "Common",
+      "pool": "SharedRelicPool",
+      "variables": {
+        "WeakPower": 1
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.RED_SKULL",
+      "className": "RedSkull",
+      "rarity": "Common",
+      "pool": "IroncladRelicPool",
+      "variables": {
+        "HpThreshold": 50,
+        "StrengthPower": 3
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.REGALITE",
+      "className": "Regalite",
+      "rarity": "Uncommon",
+      "pool": "RegentRelicPool",
+      "variables": {
+        "Block": 4
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.REGAL_PILLOW",
+      "className": "RegalPillow",
+      "rarity": "Common",
+      "pool": "SharedRelicPool",
+      "variables": {
+        "Heal": 15
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.REPTILE_TRINKET",
+      "className": "ReptileTrinket",
+      "rarity": "Uncommon",
+      "pool": "SharedRelicPool",
+      "variables": {
+        "StrengthPower": 3
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.RINGING_TRIANGLE",
+      "className": "RingingTriangle",
+      "rarity": "Shop",
+      "pool": "SharedRelicPool",
+      "variables": {},
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.RING_OF_THE_DRAKE",
+      "className": "RingOfTheDrake",
+      "rarity": "Starter",
+      "pool": "EventRelicPool",
+      "variables": {
+        "Cards": 2,
+        "Turns": 3
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.RING_OF_THE_SNAKE",
+      "className": "RingOfTheSnake",
+      "rarity": "Starter",
+      "pool": "SilentRelicPool",
+      "variables": {
+        "Cards": 2
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.RIPPLE_BASIN",
+      "className": "RippleBasin",
+      "rarity": "Uncommon",
+      "pool": "SharedRelicPool",
+      "variables": {
+        "Block": 4
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.ROYAL_POISON",
+      "className": "RoyalPoison",
+      "rarity": "Event",
+      "pool": "EventRelicPool",
+      "variables": {
+        "Damage": 4
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.ROYAL_STAMP",
+      "className": "RoyalStamp",
+      "rarity": "Shop",
+      "pool": "SharedRelicPool",
+      "variables": {},
+      "exportWarning": "NullReferenceException: native localization required"
+    },
+    {
+      "id": "RELIC.RUINED_HELMET",
+      "className": "RuinedHelmet",
+      "rarity": "Rare",
+      "pool": "IroncladRelicPool",
+      "variables": {},
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.RUNIC_CAPACITOR",
+      "className": "RunicCapacitor",
+      "rarity": "Shop",
+      "pool": "DefectRelicPool",
+      "variables": {
+        "Repeat": 3
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.RUNIC_PYRAMID",
+      "className": "RunicPyramid",
+      "rarity": "Ancient",
+      "pool": "EventRelicPool",
+      "variables": {},
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.SAI",
+      "className": "Sai",
+      "rarity": "Ancient",
+      "pool": "EventRelicPool",
+      "variables": {
+        "Block": 7
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.SAND_CASTLE",
+      "className": "SandCastle",
+      "rarity": "Ancient",
+      "pool": "EventRelicPool",
+      "variables": {
+        "Cards": 6
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.SCREAMING_FLAGON",
+      "className": "ScreamingFlagon",
+      "rarity": "Shop",
+      "pool": "SharedRelicPool",
+      "variables": {
+        "Damage": 20
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.SCROLL_BOXES",
+      "className": "ScrollBoxes",
+      "rarity": "Ancient",
+      "pool": "EventRelicPool",
+      "variables": {},
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.SEA_GLASS",
+      "className": "SeaGlass",
+      "rarity": "Ancient",
+      "pool": "EventRelicPool",
+      "variables": {
+        "Cards": 15,
+        "Character": 0
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.SEAL_OF_GOLD",
+      "className": "SealOfGold",
+      "rarity": "Ancient",
+      "pool": "EventRelicPool",
+      "variables": {
+        "Energy": 1,
+        "Gold": 3
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.SELF_FORMING_CLAY",
+      "className": "SelfFormingClay",
+      "rarity": "Uncommon",
+      "pool": "IroncladRelicPool",
+      "variables": {
+        "BlockNextTurn": 3
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.SERE_TALON",
+      "className": "SereTalon",
+      "rarity": "Ancient",
+      "pool": "EventRelicPool",
+      "variables": {
+        "HpLoss": 9,
+        "Wishes": 3
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.SHOVEL",
+      "className": "Shovel",
+      "rarity": "Rare",
+      "pool": "SharedRelicPool",
+      "variables": {},
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.SHURIKEN",
+      "className": "Shuriken",
+      "rarity": "Rare",
+      "pool": "SharedRelicPool",
+      "variables": {
+        "Cards": 3,
+        "StrengthPower": 1
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.SIGNET_RING",
+      "className": "SignetRing",
+      "rarity": "Ancient",
+      "pool": "EventRelicPool",
+      "variables": {
+        "Gold": 888
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.SILKEN_TRESS",
+      "className": "SilkenTress",
+      "rarity": "Ancient",
+      "pool": "EventRelicPool",
+      "variables": {},
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.SILVER_CRUCIBLE",
+      "className": "SilverCrucible",
+      "rarity": "Ancient",
+      "pool": "EventRelicPool",
+      "variables": {
+        "Cards": 3
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.SLING_OF_COURAGE",
+      "className": "SlingOfCourage",
+      "rarity": "Shop",
+      "pool": "SharedRelicPool",
+      "variables": {
+        "StrengthPower": 2
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.SMALL_CAPSULE",
+      "className": "SmallCapsule",
+      "rarity": "Ancient",
+      "pool": "EventRelicPool",
+      "variables": {},
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.SNECKO_EYE",
+      "className": "SneckoEye",
+      "rarity": "Ancient",
+      "pool": "EventRelicPool",
+      "variables": {
+        "Cards": 2
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.SNECKO_SKULL",
+      "className": "SneckoSkull",
+      "rarity": "Common",
+      "pool": "SilentRelicPool",
+      "variables": {
+        "PoisonPower": 1
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.SOZU",
+      "className": "Sozu",
+      "rarity": "Ancient",
+      "pool": "EventRelicPool",
+      "variables": {
+        "Energy": 1
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.SPARKLING_ROUGE",
+      "className": "SparklingRouge",
+      "rarity": "Uncommon",
+      "pool": "EventRelicPool",
+      "variables": {
+        "StrengthPower": 1,
+        "DexterityPower": 1
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.SPIKED_GAUNTLETS",
+      "className": "SpikedGauntlets",
+      "rarity": "Ancient",
+      "pool": "EventRelicPool",
+      "variables": {
+        "Energy": 1
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.STONE_CALENDAR",
+      "className": "StoneCalendar",
+      "rarity": "Rare",
+      "pool": "SharedRelicPool",
+      "variables": {
+        "Damage": 52,
+        "DamageTurn": 7
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.STONE_CRACKER",
+      "className": "StoneCracker",
+      "rarity": "Uncommon",
+      "pool": "SharedRelicPool",
+      "variables": {
+        "Cards": 2
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.STONE_HUMIDIFIER",
+      "className": "StoneHumidifier",
+      "rarity": "Ancient",
+      "pool": "EventRelicPool",
+      "variables": {
+        "MaxHp": 5
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.STORYBOOK",
+      "className": "Storybook",
+      "rarity": "Ancient",
+      "pool": "EventRelicPool",
+      "variables": {},
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.STRAWBERRY",
+      "className": "Strawberry",
+      "rarity": "Common",
+      "pool": "SharedRelicPool",
+      "variables": {
+        "MaxHp": 7
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.STRIKE_DUMMY",
+      "className": "StrikeDummy",
+      "rarity": "Common",
+      "pool": "SharedRelicPool",
+      "variables": {
+        "ExtraDamage": 3
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.STURDY_CLAMP",
+      "className": "SturdyClamp",
+      "rarity": "Rare",
+      "pool": "SharedRelicPool",
+      "variables": {
+        "Block": 10
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.SWORD_OF_JADE",
+      "className": "SwordOfJade",
+      "rarity": "Event",
+      "pool": "EventRelicPool",
+      "variables": {
+        "StrengthPower": 3
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.SWORD_OF_STONE",
+      "className": "SwordOfStone",
+      "rarity": "Event",
+      "pool": "EventRelicPool",
+      "variables": {
+        "Elites": 5
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.SYMBIOTIC_VIRUS",
+      "className": "SymbioticVirus",
+      "rarity": "Uncommon",
+      "pool": "DefectRelicPool",
+      "variables": {
+        "Dark": 1
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.TANXS_WHISTLE",
+      "className": "TanxsWhistle",
+      "rarity": "Ancient",
+      "pool": "EventRelicPool",
+      "variables": {},
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.TEA_OF_DISCOURTESY",
+      "className": "TeaOfDiscourtesy",
+      "rarity": "Event",
+      "pool": "EventRelicPool",
+      "variables": {
+        "Heal": 1,
+        "Combats": 1,
+        "DazedCount": 2
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.THE_ABACUS",
+      "className": "TheAbacus",
+      "rarity": "Shop",
+      "pool": "SharedRelicPool",
+      "variables": {
+        "Block": 6
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.THE_BOOT",
+      "className": "TheBoot",
+      "rarity": "Event",
+      "pool": "EventRelicPool",
+      "variables": {
+        "DamageMinimum": 5,
+        "DamageThreshold": 4
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.THE_COURIER",
+      "className": "TheCourier",
+      "rarity": "Rare",
+      "pool": "SharedRelicPool",
+      "variables": {
+        "Discount": 20
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.THROWING_AXE",
+      "className": "ThrowingAxe",
+      "rarity": "Ancient",
+      "pool": "EventRelicPool",
+      "variables": {},
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.TINGSHA",
+      "className": "Tingsha",
+      "rarity": "Uncommon",
+      "pool": "SilentRelicPool",
+      "variables": {
+        "Damage": 3
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.TINY_MAILBOX",
+      "className": "TinyMailbox",
+      "rarity": "Uncommon",
+      "pool": "SharedRelicPool",
+      "variables": {},
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.TOASTY_MITTENS",
+      "className": "ToastyMittens",
+      "rarity": "Ancient",
+      "pool": "EventRelicPool",
+      "variables": {
+        "StrengthPower": 1
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.TOOLBOX",
+      "className": "Toolbox",
+      "rarity": "Shop",
+      "pool": "SharedRelicPool",
+      "variables": {
+        "Cards": 3
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.TOUCH_OF_OROBAS",
+      "className": "TouchOfOrobas",
+      "rarity": "Ancient",
+      "pool": "EventRelicPool",
+      "variables": {
+        "StarterRelic": 0,
+        "UpgradedRelic": 0
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.TOUGH_BANDAGES",
+      "className": "ToughBandages",
+      "rarity": "Rare",
+      "pool": "SilentRelicPool",
+      "variables": {
+        "Block": 3
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.TOXIC_EGG",
+      "className": "ToxicEgg",
+      "rarity": "Rare",
+      "pool": "SharedRelicPool",
+      "variables": {},
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.TOY_BOX",
+      "className": "ToyBox",
+      "rarity": "Ancient",
+      "pool": "EventRelicPool",
+      "variables": {
+        "Relics": 5,
+        "Combats": 3
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.TRI_BOOMERANG",
+      "className": "TriBoomerang",
+      "rarity": "Ancient",
+      "pool": "EventRelicPool",
+      "variables": {
+        "Cards": 3
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.TUNGSTEN_ROD",
+      "className": "TungstenRod",
+      "rarity": "Rare",
+      "pool": "SharedRelicPool",
+      "variables": {
+        "HpLossReduction": 1
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.TUNING_FORK",
+      "className": "TuningFork",
+      "rarity": "Uncommon",
+      "pool": "SharedRelicPool",
+      "variables": {
+        "Cards": 10,
+        "Block": 7
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.TWISTED_FUNNEL",
+      "className": "TwistedFunnel",
+      "rarity": "Uncommon",
+      "pool": "SilentRelicPool",
+      "variables": {
+        "PoisonPower": 4
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.UNCEASING_TOP",
+      "className": "UnceasingTop",
+      "rarity": "Rare",
+      "pool": "SharedRelicPool",
+      "variables": {},
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.UNDYING_SIGIL",
+      "className": "UndyingSigil",
+      "rarity": "Shop",
+      "pool": "NecrobinderRelicPool",
+      "variables": {
+        "DamageDecrease": 0.5
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.UNSETTLING_LAMP",
+      "className": "UnsettlingLamp",
+      "rarity": "Rare",
+      "pool": "SharedRelicPool",
+      "variables": {},
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.VAJRA",
+      "className": "Vajra",
+      "rarity": "Common",
+      "pool": "SharedRelicPool",
+      "variables": {
+        "StrengthPower": 1
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.VAMBRACE",
+      "className": "Vambrace",
+      "rarity": "Uncommon",
+      "pool": "SharedRelicPool",
+      "variables": {},
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.VELVET_CHOKER",
+      "className": "VelvetChoker",
+      "rarity": "Ancient",
+      "pool": "EventRelicPool",
+      "variables": {
+        "Cards": 6,
+        "Energy": 1
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.VENERABLE_TEA_SET",
+      "className": "VenerableTeaSet",
+      "rarity": "Common",
+      "pool": "SharedRelicPool",
+      "variables": {
+        "Energy": 2
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.VERY_HOT_COCOA",
+      "className": "VeryHotCocoa",
+      "rarity": "Ancient",
+      "pool": "SharedRelicPool",
+      "variables": {
+        "Energy": 4
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.VEXING_PUZZLEBOX",
+      "className": "VexingPuzzlebox",
+      "rarity": "Rare",
+      "pool": "SharedRelicPool",
+      "variables": {},
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.VITRUVIAN_MINION",
+      "className": "VitruvianMinion",
+      "rarity": "Shop",
+      "pool": "RegentRelicPool",
+      "variables": {},
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.WAR_HAMMER",
+      "className": "WarHammer",
+      "rarity": "Ancient",
+      "pool": "EventRelicPool",
+      "variables": {
+        "Cards": 4
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.WAR_PAINT",
+      "className": "WarPaint",
+      "rarity": "Common",
+      "pool": "SharedRelicPool",
+      "variables": {
+        "Cards": 2
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.WHETSTONE",
+      "className": "Whetstone",
+      "rarity": "Common",
+      "pool": "SharedRelicPool",
+      "variables": {
+        "Cards": 2
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.WHISPERING_EARRING",
+      "className": "WhisperingEarring",
+      "rarity": "Ancient",
+      "pool": "EventRelicPool",
+      "variables": {
+        "Energy": 1
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.WHITE_BEAST_STATUE",
+      "className": "WhiteBeastStatue",
+      "rarity": "Rare",
+      "pool": "SharedRelicPool",
+      "variables": {},
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.WHITE_STAR",
+      "className": "WhiteStar",
+      "rarity": "Rare",
+      "pool": "SharedRelicPool",
+      "variables": {},
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.WING_CHARM",
+      "className": "WingCharm",
+      "rarity": "Shop",
+      "pool": "SharedRelicPool",
+      "variables": {
+        "SwiftAmount": 1
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.WINGED_BOOTS",
+      "className": "WingedBoots",
+      "rarity": "Ancient",
+      "pool": "EventRelicPool",
+      "variables": {
+        "Rooms": 3
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.WONGO_CUSTOMER_APPRECIATION_BADGE",
+      "className": "WongoCustomerAppreciationBadge",
+      "rarity": "Event",
+      "pool": "EventRelicPool",
+      "variables": {},
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.WONGOS_MYSTERY_TICKET",
+      "className": "WongosMysteryTicket",
+      "rarity": "Event",
+      "pool": "EventRelicPool",
+      "variables": {
+        "Repeat": 3,
+        "RemainingCombats": 5
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "RELIC.YUMMY_COOKIE",
+      "className": "YummyCookie",
+      "rarity": "Ancient",
+      "pool": "EventRelicPool",
+      "variables": {
+        "Cards": 4
+      },
+      "exportWarning": null
+    }
+  ],
+  "potions": [
+    {
+      "id": "POTION.AMBERGRIS",
+      "className": "Ambergris",
+      "rarity": "Event",
+      "pool": "EventPotionPool",
+      "variables": {
+        "HealPercent": 50
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "POTION.ASHWATER",
+      "className": "Ashwater",
+      "rarity": "Uncommon",
+      "pool": "IroncladPotionPool",
+      "variables": {},
+      "exportWarning": null
+    },
+    {
+      "id": "POTION.ATTACK_POTION",
+      "className": "AttackPotion",
+      "rarity": "Common",
+      "pool": "SharedPotionPool",
+      "variables": {},
+      "exportWarning": null
+    },
+    {
+      "id": "POTION.BEETLE_JUICE",
+      "className": "BeetleJuice",
+      "rarity": "Rare",
+      "pool": "SharedPotionPool",
+      "variables": {
+        "DamageDecrease": 30,
+        "Repeat": 4
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "POTION.BLESSING_OF_THE_FORGE",
+      "className": "BlessingOfTheForge",
+      "rarity": "Uncommon",
+      "pool": "SharedPotionPool",
+      "variables": {},
+      "exportWarning": null
+    },
+    {
+      "id": "POTION.BLOCK_POTION",
+      "className": "BlockPotion",
+      "rarity": "Common",
+      "pool": "SharedPotionPool",
+      "variables": {
+        "Block": 12
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "POTION.BLOOD_POTION",
+      "className": "BloodPotion",
+      "rarity": "Common",
+      "pool": "IroncladPotionPool",
+      "variables": {
+        "HealPercent": 20
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "POTION.BONE_BREW",
+      "className": "BoneBrew",
+      "rarity": "Uncommon",
+      "pool": "NecrobinderPotionPool",
+      "variables": {
+        "Summon": 15
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "POTION.BOTTLED_POTENTIAL",
+      "className": "BottledPotential",
+      "rarity": "Rare",
+      "pool": "SharedPotionPool",
+      "variables": {
+        "Cards": 5
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "POTION.CLARITY",
+      "className": "Clarity",
+      "rarity": "Uncommon",
+      "pool": "SharedPotionPool",
+      "variables": {
+        "ClarityPower": 3,
+        "Cards": 1
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "POTION.COLORLESS_POTION",
+      "className": "ColorlessPotion",
+      "rarity": "Common",
+      "pool": "SharedPotionPool",
+      "variables": {},
+      "exportWarning": null
+    },
+    {
+      "id": "POTION.COSMIC_CONCOCTION",
+      "className": "CosmicConcoction",
+      "rarity": "Rare",
+      "pool": "RegentPotionPool",
+      "variables": {
+        "Cards": 3
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "POTION.CUNNING_POTION",
+      "className": "CunningPotion",
+      "rarity": "Uncommon",
+      "pool": "SilentPotionPool",
+      "variables": {
+        "Cards": 3
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "POTION.CURE_ALL",
+      "className": "CureAll",
+      "rarity": "Uncommon",
+      "pool": "SharedPotionPool",
+      "variables": {
+        "Energy": 1,
+        "Cards": 2
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "POTION.DEPRECATED_POTION",
+      "className": "DeprecatedPotion",
+      "rarity": "None",
+      "pool": "DeprecatedPotionPool",
+      "variables": {},
+      "exportWarning": null
+    },
+    {
+      "id": "POTION.DEXTERITY_POTION",
+      "className": "DexterityPotion",
+      "rarity": "Common",
+      "pool": "SharedPotionPool",
+      "variables": {
+        "DexterityPower": 2
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "POTION.DISTILLED_CHAOS",
+      "className": "DistilledChaos",
+      "rarity": "Rare",
+      "pool": "SharedPotionPool",
+      "variables": {
+        "Repeat": 3
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "POTION.DROPLET_OF_PRECOGNITION",
+      "className": "DropletOfPrecognition",
+      "rarity": "Rare",
+      "pool": "SharedPotionPool",
+      "variables": {},
+      "exportWarning": null
+    },
+    {
+      "id": "POTION.DUPLICATOR",
+      "className": "Duplicator",
+      "rarity": "Uncommon",
+      "pool": "SharedPotionPool",
+      "variables": {},
+      "exportWarning": null
+    },
+    {
+      "id": "POTION.ENERGY_POTION",
+      "className": "EnergyPotion",
+      "rarity": "Common",
+      "pool": "SharedPotionPool",
+      "variables": {
+        "Energy": 2
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "POTION.ENTROPIC_BREW",
+      "className": "EntropicBrew",
+      "rarity": "Rare",
+      "pool": "SharedPotionPool",
+      "variables": {},
+      "exportWarning": null
+    },
+    {
+      "id": "POTION.ESSENCE_OF_DARKNESS",
+      "className": "EssenceOfDarkness",
+      "rarity": "Rare",
+      "pool": "DefectPotionPool",
+      "variables": {},
+      "exportWarning": null
+    },
+    {
+      "id": "POTION.EXPLOSIVE_AMPOULE",
+      "className": "ExplosiveAmpoule",
+      "rarity": "Common",
+      "pool": "SharedPotionPool",
+      "variables": {
+        "Damage": 10
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "POTION.FAIRY_IN_A_BOTTLE",
+      "className": "FairyInABottle",
+      "rarity": "Rare",
+      "pool": "SharedPotionPool",
+      "variables": {},
+      "exportWarning": null
+    },
+    {
+      "id": "POTION.FIRE_POTION",
+      "className": "FirePotion",
+      "rarity": "Common",
+      "pool": "SharedPotionPool",
+      "variables": {
+        "Damage": 20
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "POTION.FLEX_POTION",
+      "className": "FlexPotion",
+      "rarity": "Common",
+      "pool": "SharedPotionPool",
+      "variables": {
+        "StrengthPower": 5
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "POTION.FOCUS_POTION",
+      "className": "FocusPotion",
+      "rarity": "Common",
+      "pool": "DefectPotionPool",
+      "variables": {
+        "FocusPower": 2
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "POTION.FORTIFIER",
+      "className": "Fortifier",
+      "rarity": "Uncommon",
+      "pool": "SharedPotionPool",
+      "variables": {},
+      "exportWarning": null
+    },
+    {
+      "id": "POTION.FOUL_POTION",
+      "className": "FoulPotion",
+      "rarity": "Event",
+      "pool": "EventPotionPool",
+      "variables": {
+        "Damage": 12,
+        "Gold": 100
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "POTION.FRUIT_JUICE",
+      "className": "FruitJuice",
+      "rarity": "Rare",
+      "pool": "SharedPotionPool",
+      "variables": {
+        "MaxHp": 5
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "POTION.FYSH_OIL",
+      "className": "FyshOil",
+      "rarity": "Uncommon",
+      "pool": "SharedPotionPool",
+      "variables": {
+        "StrengthPower": 1,
+        "DexterityPower": 1
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "POTION.GAMBLERS_BREW",
+      "className": "GamblersBrew",
+      "rarity": "Uncommon",
+      "pool": "SharedPotionPool",
+      "variables": {},
+      "exportWarning": null
+    },
+    {
+      "id": "POTION.GHOST_IN_A_JAR",
+      "className": "GhostInAJar",
+      "rarity": "Rare",
+      "pool": "SilentPotionPool",
+      "variables": {
+        "IntangiblePower": 1
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "POTION.GIGANTIFICATION_POTION",
+      "className": "GigantificationPotion",
+      "rarity": "Rare",
+      "pool": "SharedPotionPool",
+      "variables": {
+        "GigantificationPower": 1
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "POTION.GLOWWATER_POTION",
+      "className": "GlowwaterPotion",
+      "rarity": "Event",
+      "pool": "EventPotionPool",
+      "variables": {
+        "Cards": 10
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "POTION.HEART_OF_IRON",
+      "className": "HeartOfIron",
+      "rarity": "Uncommon",
+      "pool": "SharedPotionPool",
+      "variables": {
+        "PlatingPower": 7
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "POTION.KINGS_COURAGE",
+      "className": "KingsCourage",
+      "rarity": "Uncommon",
+      "pool": "RegentPotionPool",
+      "variables": {
+        "Forge": 15
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "POTION.LIQUID_BRONZE",
+      "className": "LiquidBronze",
+      "rarity": "Uncommon",
+      "pool": "SharedPotionPool",
+      "variables": {
+        "ThornsPower": 3
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "POTION.LIQUID_MEMORIES",
+      "className": "LiquidMemories",
+      "rarity": "Rare",
+      "pool": "SharedPotionPool",
+      "variables": {},
+      "exportWarning": null
+    },
+    {
+      "id": "POTION.LUCKY_TONIC",
+      "className": "LuckyTonic",
+      "rarity": "Rare",
+      "pool": "SharedPotionPool",
+      "variables": {
+        "BufferPower": 1
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "POTION.MAZALETHS_GIFT",
+      "className": "MazalethsGift",
+      "rarity": "Rare",
+      "pool": "SharedPotionPool",
+      "variables": {
+        "RitualPower": 1
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "POTION.OROBIC_ACID",
+      "className": "OrobicAcid",
+      "rarity": "Rare",
+      "pool": "SharedPotionPool",
+      "variables": {},
+      "exportWarning": null
+    },
+    {
+      "id": "POTION.POISON_POTION",
+      "className": "PoisonPotion",
+      "rarity": "Common",
+      "pool": "SilentPotionPool",
+      "variables": {
+        "PoisonPower": 6
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "POTION.POTION_OF_BINDING",
+      "className": "PotionOfBinding",
+      "rarity": "Uncommon",
+      "pool": "SharedPotionPool",
+      "variables": {
+        "VulnerablePower": 1,
+        "WeakPower": 1
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "POTION.POTION_OF_CAPACITY",
+      "className": "PotionOfCapacity",
+      "rarity": "Uncommon",
+      "pool": "DefectPotionPool",
+      "variables": {
+        "Repeat": 2
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "POTION.POTION_OF_DOOM",
+      "className": "PotionOfDoom",
+      "rarity": "Common",
+      "pool": "NecrobinderPotionPool",
+      "variables": {
+        "DoomPower": 33
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "POTION.POTION_SHAPED_ROCK",
+      "className": "PotionShapedRock",
+      "rarity": "Token",
+      "pool": "TokenPotionPool",
+      "variables": {
+        "Damage": 15
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "POTION.POT_OF_GHOULS",
+      "className": "PotOfGhouls",
+      "rarity": "Rare",
+      "pool": "NecrobinderPotionPool",
+      "variables": {
+        "Cards": 2
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "POTION.POWDERED_DEMISE",
+      "className": "PowderedDemise",
+      "rarity": "Uncommon",
+      "pool": "SharedPotionPool",
+      "variables": {
+        "Demise": 9
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "POTION.POWER_POTION",
+      "className": "PowerPotion",
+      "rarity": "Common",
+      "pool": "SharedPotionPool",
+      "variables": {},
+      "exportWarning": null
+    },
+    {
+      "id": "POTION.RADIANT_TINCTURE",
+      "className": "RadiantTincture",
+      "rarity": "Uncommon",
+      "pool": "SharedPotionPool",
+      "variables": {
+        "Energy": 1,
+        "RadiancePower": 3
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "POTION.REGEN_POTION",
+      "className": "RegenPotion",
+      "rarity": "Uncommon",
+      "pool": "SharedPotionPool",
+      "variables": {
+        "RegenPower": 5
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "POTION.SHACKLING_POTION",
+      "className": "ShacklingPotion",
+      "rarity": "Rare",
+      "pool": "SharedPotionPool",
+      "variables": {
+        "StrengthPower": 7
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "POTION.SHIP_IN_A_BOTTLE",
+      "className": "ShipInABottle",
+      "rarity": "Rare",
+      "pool": "SharedPotionPool",
+      "variables": {
+        "Block": 10
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "POTION.SKILL_POTION",
+      "className": "SkillPotion",
+      "rarity": "Common",
+      "pool": "SharedPotionPool",
+      "variables": {},
+      "exportWarning": null
+    },
+    {
+      "id": "POTION.SNECKO_OIL",
+      "className": "SneckoOil",
+      "rarity": "Rare",
+      "pool": "SharedPotionPool",
+      "variables": {
+        "Cards": 7
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "POTION.SOLDIERS_STEW",
+      "className": "SoldiersStew",
+      "rarity": "Rare",
+      "pool": "IroncladPotionPool",
+      "variables": {},
+      "exportWarning": null
+    },
+    {
+      "id": "POTION.SPEED_POTION",
+      "className": "SpeedPotion",
+      "rarity": "Common",
+      "pool": "SharedPotionPool",
+      "variables": {
+        "DexterityPower": 5
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "POTION.STABLE_SERUM",
+      "className": "StableSerum",
+      "rarity": "Uncommon",
+      "pool": "SharedPotionPool",
+      "variables": {
+        "Repeat": 2
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "POTION.STAR_POTION",
+      "className": "StarPotion",
+      "rarity": "Common",
+      "pool": "RegentPotionPool",
+      "variables": {
+        "Stars": 3
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "POTION.STRENGTH_POTION",
+      "className": "StrengthPotion",
+      "rarity": "Common",
+      "pool": "SharedPotionPool",
+      "variables": {
+        "StrengthPower": 2
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "POTION.SWIFT_POTION",
+      "className": "SwiftPotion",
+      "rarity": "Common",
+      "pool": "SharedPotionPool",
+      "variables": {
+        "Cards": 3
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "POTION.TOUCH_OF_INSANITY",
+      "className": "TouchOfInsanity",
+      "rarity": "Uncommon",
+      "pool": "SharedPotionPool",
+      "variables": {},
+      "exportWarning": null
+    },
+    {
+      "id": "POTION.VULNERABLE_POTION",
+      "className": "VulnerablePotion",
+      "rarity": "Common",
+      "pool": "SharedPotionPool",
+      "variables": {
+        "VulnerablePower": 3
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "POTION.WEAK_POTION",
+      "className": "WeakPotion",
+      "rarity": "Common",
+      "pool": "SharedPotionPool",
+      "variables": {
+        "WeakPower": 3
+      },
+      "exportWarning": null
+    },
+    {
+      "id": "POTION.MOCK_DISCARD_AND_ADD_SHIVS_POTION",
+      "className": "MockDiscardAndAddShivsPotion",
+      "rarity": "None",
+      "pool": "MockPotionPool",
+      "variables": {
+        "Cards": 2,
+        "Shivs": 2
+      },
+      "exportWarning": null
+    }
+  ]
+}

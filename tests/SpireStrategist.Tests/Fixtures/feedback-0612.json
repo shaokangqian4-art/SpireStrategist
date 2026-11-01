@@ -2,6 +2,7 @@
   "NEOW": {
     "decision": {
       "id": "9deccc87ae16470e870f477a7701531c",
+      "runId": "2953acd998c74379a488e8e88ed94950",
       "kind": "event",
       "state": {
         "character": "Ironclad",
@@ -19,10 +20,10 @@
           {
             "id": "CARD.STRIKE_IRONCLAD",
             "className": "StrikeIronclad",
-            "name": "StrikeIronclad",
+            "name": "打击",
             "type": "Attack",
             "rarity": "Basic",
-            "description": "",
+            "description": "造成6点伤害。",
             "cost": 1,
             "costsX": false,
             "upgradeLevel": 0,
@@ -39,10 +40,10 @@
           {
             "id": "CARD.STRIKE_IRONCLAD",
             "className": "StrikeIronclad",
-            "name": "StrikeIronclad",
+            "name": "打击",
             "type": "Attack",
             "rarity": "Basic",
-            "description": "",
+            "description": "造成6点伤害。",
             "cost": 1,
             "costsX": false,
             "upgradeLevel": 0,
@@ -59,10 +60,10 @@
           {
             "id": "CARD.STRIKE_IRONCLAD",
             "className": "StrikeIronclad",
-            "name": "StrikeIronclad",
+            "name": "打击",
             "type": "Attack",
             "rarity": "Basic",
-            "description": "",
+            "description": "造成6点伤害。",
             "cost": 1,
             "costsX": false,
             "upgradeLevel": 0,
@@ -79,10 +80,10 @@
           {
             "id": "CARD.STRIKE_IRONCLAD",
             "className": "StrikeIronclad",
-            "name": "StrikeIronclad",
+            "name": "打击",
             "type": "Attack",
             "rarity": "Basic",
-            "description": "",
+            "description": "造成6点伤害。",
             "cost": 1,
             "costsX": false,
             "upgradeLevel": 0,
@@ -99,10 +100,10 @@
           {
             "id": "CARD.STRIKE_IRONCLAD",
             "className": "StrikeIronclad",
-            "name": "StrikeIronclad",
+            "name": "打击",
             "type": "Attack",
             "rarity": "Basic",
-            "description": "",
+            "description": "造成6点伤害。",
             "cost": 1,
             "costsX": false,
             "upgradeLevel": 0,
@@ -119,10 +120,10 @@
           {
             "id": "CARD.DEFEND_IRONCLAD",
             "className": "DefendIronclad",
-            "name": "DefendIronclad",
+            "name": "防御",
             "type": "Skill",
             "rarity": "Basic",
-            "description": "",
+            "description": "获得5点[gold]格挡[/gold]。",
             "cost": 1,
             "costsX": false,
             "upgradeLevel": 0,
@@ -139,10 +140,10 @@
           {
             "id": "CARD.DEFEND_IRONCLAD",
             "className": "DefendIronclad",
-            "name": "DefendIronclad",
+            "name": "防御",
             "type": "Skill",
             "rarity": "Basic",
-            "description": "",
+            "description": "获得5点[gold]格挡[/gold]。",
             "cost": 1,
             "costsX": false,
             "upgradeLevel": 0,
@@ -159,10 +160,10 @@
           {
             "id": "CARD.DEFEND_IRONCLAD",
             "className": "DefendIronclad",
-            "name": "DefendIronclad",
+            "name": "防御",
             "type": "Skill",
             "rarity": "Basic",
-            "description": "",
+            "description": "获得5点[gold]格挡[/gold]。",
             "cost": 1,
             "costsX": false,
             "upgradeLevel": 0,
@@ -179,10 +180,10 @@
           {
             "id": "CARD.DEFEND_IRONCLAD",
             "className": "DefendIronclad",
-            "name": "DefendIronclad",
+            "name": "防御",
             "type": "Skill",
             "rarity": "Basic",
-            "description": "",
+            "description": "获得5点[gold]格挡[/gold]。",
             "cost": 1,
             "costsX": false,
             "upgradeLevel": 0,
@@ -199,10 +200,10 @@
           {
             "id": "CARD.BASH",
             "className": "Bash",
-            "name": "Bash",
+            "name": "痛击",
             "type": "Attack",
             "rarity": "Basic",
-            "description": "",
+            "description": "造成8点伤害。\n给予2层[gold]易伤[/gold]。",
             "cost": 2,
             "costsX": false,
             "upgradeLevel": 0,
@@ -220,10 +221,10 @@
           {
             "id": "CARD.ASCENDERS_BANE",
             "className": "AscendersBane",
-            "name": "AscendersBane",
+            "name": "进阶之灾",
             "type": "Curse",
             "rarity": "Curse",
-            "description": "",
+            "description": "[gold]不能被打出[/gold]。\n[gold]虚无[/gold]。\n[gold]永恒[/gold]。",
             "cost": -1,
             "costsX": false,
             "upgradeLevel": 0,
@@ -279,7 +280,7 @@
       "options": [
         {
           "key": "3550025374949",
-          "name": "event",
+          "name": "铅制镇纸",
           "kind": "event",
           "enabled": true,
           "card": null,
@@ -289,7 +290,7 @@
         },
         {
           "key": "3550797126912",
-          "name": "event",
+          "name": "石炉加湿器",
           "kind": "event",
           "enabled": true,
           "card": null,
@@ -299,7 +300,7 @@
         },
         {
           "key": "3551568879119",
-          "name": "event",
+          "name": "寻龙尺",
           "kind": "event",
           "enabled": true,
           "card": null,
@@ -307,13 +308,71 @@
           "smithCount": 1,
           "effectValue": null
         }
-      ]
+      ],
+      "evaluation": {
+        "policyVersion": "events-reviewed-0.2-forecasts",
+        "recommendedKey": "3550797126912",
+        "options": [
+          {
+            "key": "3550025374949",
+            "name": "铅制镇纸",
+            "supported": true,
+            "enabled": true,
+            "score": 6,
+            "parts": [
+              {
+                "reason": "已核对机制收益（待校准）",
+                "value": 6
+              }
+            ],
+            "notes": [
+              "人工机制估值，未完成训练校准。"
+            ]
+          },
+          {
+            "key": "3550797126912",
+            "name": "石炉加湿器",
+            "supported": true,
+            "enabled": true,
+            "score": 7.68,
+            "parts": [
+              {
+                "reason": "已核对机制收益（待校准）",
+                "value": 7.68
+              }
+            ],
+            "notes": [
+              "人工机制估值，未完成训练校准。"
+            ]
+          },
+          {
+            "key": "3551568879119",
+            "name": "寻龙尺",
+            "supported": true,
+            "enabled": true,
+            "score": 5.76,
+            "parts": [
+              {
+                "reason": "已核对机制收益（待校准）",
+                "value": 5.76
+              }
+            ],
+            "notes": [
+              "人工机制估值，未完成训练校准。"
+            ]
+          }
+        ],
+        "warnings": [
+          "点评作为条件假设；分数为人工先验，尚未经过跨种子胜率校准。",
+          "只将已核验的副本预测称为确定结果；未预测的随机收益按期望和风险计分。"
+        ]
+      }
     },
     "eventId": "EVENT.NEOW",
     "choices": [
       {
         "key": "3550025374949",
-        "name": "3550025374949",
+        "name": "铅制镇纸",
         "enabled": true,
         "supported": true,
         "lethal": false,
@@ -329,13 +388,15 @@
         "benefit": 6,
         "burden": 0,
         "selection": "",
-        "notes": [],
+        "notes": [
+          "人工机制估值，未完成训练校准。"
+        ],
         "preference": 0,
         "preferenceReason": "场景策略调整"
       },
       {
         "key": "3550797126912",
-        "name": "3550797126912",
+        "name": "石炉加湿器",
         "enabled": true,
         "supported": true,
         "lethal": false,
@@ -351,13 +412,15 @@
         "benefit": 7.68,
         "burden": 0,
         "selection": "",
-        "notes": [],
+        "notes": [
+          "人工机制估值，未完成训练校准。"
+        ],
         "preference": 0,
         "preferenceReason": "场景策略调整"
       },
       {
         "key": "3551568879119",
-        "name": "3551568879119",
+        "name": "寻龙尺",
         "enabled": true,
         "supported": true,
         "lethal": false,
@@ -373,7 +436,9 @@
         "benefit": 5.76,
         "burden": 0,
         "selection": "",
-        "notes": [],
+        "notes": [
+          "人工机制估值，未完成训练校准。"
+        ],
         "preference": 0,
         "preferenceReason": "场景策略调整"
       }
@@ -387,6 +452,7 @@
   "WELLSPRING": {
     "decision": {
       "id": "9e2d96b6f5974a72a1f3de0d4f609c2e",
+      "runId": "2953acd998c74379a488e8e88ed94950",
       "kind": "event",
       "state": {
         "character": "Ironclad",
@@ -404,10 +470,10 @@
           {
             "id": "CARD.STRIKE_IRONCLAD",
             "className": "StrikeIronclad",
-            "name": "StrikeIronclad",
+            "name": "打击",
             "type": "Attack",
             "rarity": "Basic",
-            "description": "",
+            "description": "造成6点伤害。",
             "cost": 1,
             "costsX": false,
             "upgradeLevel": 0,
@@ -424,10 +490,10 @@
           {
             "id": "CARD.STRIKE_IRONCLAD",
             "className": "StrikeIronclad",
-            "name": "StrikeIronclad",
+            "name": "打击",
             "type": "Attack",
             "rarity": "Basic",
-            "description": "",
+            "description": "造成6点伤害。",
             "cost": 1,
             "costsX": false,
             "upgradeLevel": 0,
@@ -444,10 +510,10 @@
           {
             "id": "CARD.STRIKE_IRONCLAD",
             "className": "StrikeIronclad",
-            "name": "StrikeIronclad",
+            "name": "打击",
             "type": "Attack",
             "rarity": "Basic",
-            "description": "",
+            "description": "造成6点伤害。",
             "cost": 1,
             "costsX": false,
             "upgradeLevel": 0,
@@ -464,10 +530,10 @@
           {
             "id": "CARD.STRIKE_IRONCLAD",
             "className": "StrikeIronclad",
-            "name": "StrikeIronclad",
+            "name": "打击",
             "type": "Attack",
             "rarity": "Basic",
-            "description": "",
+            "description": "造成6点伤害。",
             "cost": 1,
             "costsX": false,
             "upgradeLevel": 0,
@@ -484,10 +550,10 @@
           {
             "id": "CARD.STRIKE_IRONCLAD",
             "className": "StrikeIronclad",
-            "name": "StrikeIronclad",
+            "name": "打击",
             "type": "Attack",
             "rarity": "Basic",
-            "description": "",
+            "description": "造成6点伤害。",
             "cost": 1,
             "costsX": false,
             "upgradeLevel": 0,
@@ -504,10 +570,10 @@
           {
             "id": "CARD.DEFEND_IRONCLAD",
             "className": "DefendIronclad",
-            "name": "DefendIronclad",
+            "name": "防御",
             "type": "Skill",
             "rarity": "Basic",
-            "description": "",
+            "description": "获得5点[gold]格挡[/gold]。",
             "cost": 1,
             "costsX": false,
             "upgradeLevel": 0,
@@ -524,10 +590,10 @@
           {
             "id": "CARD.DEFEND_IRONCLAD",
             "className": "DefendIronclad",
-            "name": "DefendIronclad",
+            "name": "防御",
             "type": "Skill",
             "rarity": "Basic",
-            "description": "",
+            "description": "获得5点[gold]格挡[/gold]。",
             "cost": 1,
             "costsX": false,
             "upgradeLevel": 0,
@@ -544,10 +610,10 @@
           {
             "id": "CARD.DEFEND_IRONCLAD",
             "className": "DefendIronclad",
-            "name": "DefendIronclad",
+            "name": "防御",
             "type": "Skill",
             "rarity": "Basic",
-            "description": "",
+            "description": "获得5点[gold]格挡[/gold]。",
             "cost": 1,
             "costsX": false,
             "upgradeLevel": 0,
@@ -564,10 +630,10 @@
           {
             "id": "CARD.DEFEND_IRONCLAD",
             "className": "DefendIronclad",
-            "name": "DefendIronclad",
+            "name": "防御",
             "type": "Skill",
             "rarity": "Basic",
-            "description": "",
+            "description": "获得5点[gold]格挡[/gold]。",
             "cost": 1,
             "costsX": false,
             "upgradeLevel": 0,
@@ -584,10 +650,10 @@
           {
             "id": "CARD.BASH",
             "className": "Bash",
-            "name": "Bash",
+            "name": "痛击",
             "type": "Attack",
             "rarity": "Basic",
-            "description": "",
+            "description": "造成8点伤害。\n给予2层[gold]易伤[/gold]。",
             "cost": 2,
             "costsX": false,
             "upgradeLevel": 0,
@@ -605,10 +671,10 @@
           {
             "id": "CARD.ASCENDERS_BANE",
             "className": "AscendersBane",
-            "name": "AscendersBane",
+            "name": "进阶之灾",
             "type": "Curse",
             "rarity": "Curse",
-            "description": "",
+            "description": "[gold]不能被打出[/gold]。\n[gold]虚无[/gold]。\n[gold]永恒[/gold]。",
             "cost": -1,
             "costsX": false,
             "upgradeLevel": 0,
@@ -627,10 +693,10 @@
           {
             "id": "CARD.ANGER",
             "className": "Anger",
-            "name": "Anger",
+            "name": "愤怒",
             "type": "Attack",
             "rarity": "Common",
-            "description": "",
+            "description": "造成6点伤害。\n将一张此牌的复制品加入你的[gold]弃牌堆[/gold]。",
             "cost": 0,
             "costsX": false,
             "upgradeLevel": 0,
@@ -647,10 +713,10 @@
           {
             "id": "CARD.FLAME_BARRIER",
             "className": "FlameBarrier",
-            "name": "FlameBarrier",
+            "name": "火焰屏障",
             "type": "Skill",
             "rarity": "Uncommon",
-            "description": "",
+            "description": "获得12点[gold]格挡[/gold]。\n你在这个回合每受到一次攻击，都会对攻击者造成4点伤害。",
             "cost": 2,
             "costsX": false,
             "upgradeLevel": 0,
@@ -704,7 +770,7 @@
       "options": [
         {
           "key": "18524495962177",
-          "name": "event",
+          "name": "装瓶",
           "kind": "event",
           "enabled": true,
           "card": null,
@@ -714,7 +780,7 @@
         },
         {
           "key": "18525066383000",
-          "name": "event",
+          "name": "沐浴",
           "kind": "event",
           "enabled": true,
           "card": null,
@@ -722,13 +788,55 @@
           "smithCount": 1,
           "effectValue": null
         }
-      ]
+      ],
+      "evaluation": {
+        "policyVersion": "events-reviewed-0.2-forecasts",
+        "recommendedKey": "18524495962177",
+        "options": [
+          {
+            "key": "18524495962177",
+            "name": "装瓶",
+            "supported": true,
+            "enabled": true,
+            "score": 5,
+            "parts": [
+              {
+                "reason": "空药水栏收益",
+                "value": 5
+              }
+            ],
+            "notes": []
+          },
+          {
+            "key": "18525066383000",
+            "name": "沐浴",
+            "supported": true,
+            "enabled": true,
+            "score": 4.2,
+            "parts": [
+              {
+                "reason": "删牌边际收益",
+                "value": 9.2
+              },
+              {
+                "reason": "负担及不确定性",
+                "value": -5
+              }
+            ],
+            "notes": []
+          }
+        ],
+        "warnings": [
+          "点评作为条件假设；分数为人工先验，尚未经过跨种子胜率校准。",
+          "只将已核验的副本预测称为确定结果；未预测的随机收益按期望和风险计分。"
+        ]
+      }
     },
     "eventId": "EVENT.WELLSPRING",
     "choices": [
       {
         "key": "18524495962177",
-        "name": "18524495962177",
+        "name": "装瓶",
         "enabled": true,
         "supported": true,
         "lethal": false,
@@ -744,13 +852,13 @@
         "benefit": 0,
         "burden": 0,
         "selection": "",
-        "notes": [],
+        "notes": null,
         "preference": 0,
         "preferenceReason": "场景策略调整"
       },
       {
         "key": "18525066383000",
-        "name": "18525066383000",
+        "name": "沐浴",
         "enabled": true,
         "supported": true,
         "lethal": false,
@@ -766,7 +874,7 @@
         "benefit": 0,
         "burden": 5,
         "selection": "remove",
-        "notes": [],
+        "notes": null,
         "preference": 0,
         "preferenceReason": "场景策略调整"
       }

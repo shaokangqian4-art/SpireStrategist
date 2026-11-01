@@ -1,7 +1,13 @@
 namespace SpireStrategist.Core;
 
 public sealed record ShopCard(string Key,CardSnapshot Card,int Price);
-public sealed record ShopChoice(string Key,string Name,string Kind,int Price,double Score,string[] Reasons,int DeckIndex=-1);
+public sealed record ShopChoice(string Key,string Name,string Kind,int Price,double Score,string[] Reasons,int DeckIndex=-1)
+{
+    public double? IntrinsicValue {get;init;}
+    public bool Affordable {get;init;}=true;
+    public bool Modeled {get;init;}=true;
+    public bool Eligible {get;init;}=true;
+}
 public sealed record ShopEvaluation(ShopChoice? Recommendation,ShopChoice[] Choices,int Reserve,string[] Notes);
 
 public static class ShopPolicy
@@ -9,6 +15,7 @@ public static class ShopPolicy
     // Conservative initial policy, not a trained estimate of victory probability.
     public static ShopEvaluation Evaluate(RunSnapshot s,ShopCard[] stock,int? removalPrice,int arrivalGold,int boughtCards=0,int? reserveOverride=null)
     {
+        if(s.Character is "Defect" or "Silent" or "Regent" or "Necrobinder")return DefectStrategy.Shop(s,stock,removalPrice,arrivalGold,boughtCards,reserveOverride);
         var choices=new List<ShopChoice>();
         var reserve=reserveOverride??Math.Min(150,Math.Max(0,arrivalGold)*35/100);
         var profiles=s.Deck.Select(CardCatalog.Find).Where(p=>p!=null).Cast<CardProfile>().ToArray();
@@ -16,7 +23,7 @@ public static class ShopPolicy
         var exhaust=profiles.Sum(p=>p.ExhaustSource)>=3;
         var ghost=s.Relics.Any(r=>r is "RELIC.GHOST_SEED" or "GHOST_SEED");
         var mitigation=(ghost?.85:1)*(cycle?.9:1)*(exhaust?.85:1);
-        if(s.Character!="Ironclad" || s.PlayerCount!=1 || s.MaxHp<=0)
+        if(s.Character!="Ironclad" || s.PlayerCount<1 || s.MaxHp<=0)
             return new(null,[],reserve,["仅支持有效单人战士状态。"]);
         if(removalPrice is >=0 && removalPrice<=s.Gold)
         {
@@ -41,7 +48,9 @@ public static class ShopPolicy
         }
         foreach(var entry in stock.Where(e=>e.Price>=0 && e.Price<=s.Gold))
         {
-            if(entry.Card.Modified || CardCatalog.Find(entry.Card)==null) continue;
+            // Known enchantments already have a shared card model. Rejecting every
+            // modified card silently removed Ironclad shop recommendations.
+            if(CardCatalog.HasUnmodelledModification(entry.Card) || CardCatalog.Find(entry.Card)==null) continue;
             var score=new Policy().Evaluate(s,[new("card",entry.Card.Name,"card",Card:entry.Card),new("skip","存钱","skip")]).Options[0].Score;
             if(score==null)continue;
             var duplicates=CardMechanics.Copies(s,entry.Card);

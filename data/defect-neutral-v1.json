@@ -1,0 +1,528 @@
+{
+  "gameVersion": "0.111.0",
+  "status": "mechanism-reviewed-heuristics-not-trained-winrates",
+  "excludedMultiplayer": [
+    "BeaconOfHope",
+    "BelieveInYou",
+    "Coordinate",
+    "GangUp",
+    "HuddleUp",
+    "Intercept",
+    "Knockdown",
+    "Lift",
+    "Mimic",
+    "Rally",
+    "TagTeam",
+    "TheBall"
+  ],
+  "cards": {
+    "Alchemize": {
+      "base": 3.0,
+      "upgrade": 1.0,
+      "duplicate": 2.0,
+      "weights": {
+        "sozu": -12.0
+      },
+      "note": "Generates a combat potion; Sozu prevents obtaining it."
+    },
+    "Anointed": {
+      "base": 0.0,
+      "upgrade": 1.0,
+      "duplicate": 2.0,
+      "weights": {
+        "rare": 0.65
+      },
+      "note": "Tutors random rare cards from the draw pile, limited by hand space; upgraded version retains."
+    },
+    "Automation": {
+      "base": -1.0,
+      "upgrade": 1.5,
+      "duplicate": 3.0,
+      "weights": {
+        "draw": 0.65,
+        "cycle": 0.6
+      },
+      "note": "Every ten cards drawn yields energy; needs sustained draw, not just a large deck."
+    },
+    "BeatDown": {
+      "base": -2.0,
+      "upgrade": 1.0,
+      "duplicate": 3.0,
+      "weights": {
+        "goodAttack": 0.6,
+        "physical": 0.5
+      },
+      "note": "Autoplays random attacks from discard; basics dilute the pool and first-cycle discard may be empty."
+    },
+    "Bolas": {
+      "base": -2.0,
+      "upgrade": 0.4,
+      "duplicate": 3.0,
+      "weights": {
+        "physical": 0.65
+      },
+      "note": "Returns to hand after being played on the previous turn; free repeat attack occupies a hand slot."
+    },
+    "Calamity": {
+      "base": -3.0,
+      "upgrade": 1.0,
+      "duplicate": 4.0,
+      "weights": {
+        "physical": 0.5,
+        "energy": 0.25
+      },
+      "note": "Attacks generate random attacks that still cost energy; not free draw or a reason to collect filler."
+    },
+    "Catastrophe": {
+      "base": 2.0,
+      "upgrade": 2.0,
+      "duplicate": 2.5,
+      "weights": {
+        "expensive": 0.5
+      },
+      "note": "Autoplays two or three random playable draw-pile cards; discounts high-cost cards without guaranteeing a target."
+    },
+    "DarkShackles": {
+      "base": 4.0,
+      "upgrade": 1.5,
+      "duplicate": 2.5,
+      "weights": {},
+      "note": "Temporary enemy Strength reduction; does not protect against non-attack effects."
+    },
+    "Discovery": {
+      "base": 1.5,
+      "upgrade": 0.5,
+      "duplicate": 2.5,
+      "weights": {},
+      "note": "Chooses one of three random character cards, free this turn; discount random outcomes."
+    },
+    "DramaticEntrance": {
+      "base": 0.5,
+      "upgrade": 0.5,
+      "duplicate": 3.0,
+      "weights": {
+        "early": 1.0
+      },
+      "note": "Innate one-use AoE competes with engine setup in the opening hand."
+    },
+    "Entropy": {
+      "base": -1.0,
+      "upgrade": 0.5,
+      "duplicate": 3.0,
+      "weights": {
+        "junk": 0.5
+      },
+      "note": "Transforms a hand card each turn in combat; replacement is random and not permanent removal."
+    },
+    "Equilibrium": {
+      "base": 1.0,
+      "upgrade": 1.0,
+      "duplicate": 2.5,
+      "weights": {
+        "ice": 1.5,
+        "expensive": 0.25,
+        "pyramid": -3.0
+      },
+      "note": "Retains the hand for one turn and blocks; helps line up energy and expensive cards."
+    },
+    "EternalArmor": {
+      "base": 0.0,
+      "upgrade": 1.0,
+      "duplicate": 3.0,
+      "weights": {
+        "energy": 0.3
+      },
+      "note": "Persistent Plating with a three-energy setup cost; slow opening and repeated hits limit value."
+    },
+    "Fasten": {
+      "base": -2.0,
+      "upgrade": 1.0,
+      "duplicate": 4.0,
+      "weights": {
+        "defends": 0.65,
+        "ghost": -3.0
+      },
+      "note": "Improves Defend-tag cards only; not Dexterity or a buff to all block."
+    },
+    "Finesse": {
+      "base": 1.0,
+      "upgrade": 0.5,
+      "duplicate": 2.0,
+      "weights": {
+        "recall": 2.0
+      },
+      "note": "Free self-replacement and small block; All for One can recover it."
+    },
+    "Fisticuffs": {
+      "base": -1.0,
+      "upgrade": 0.5,
+      "duplicate": 3.0,
+      "weights": {
+        "physical": 0.65
+      },
+      "note": "Attack damage also becomes block; benefits from attack scaling, not Focus."
+    },
+    "FlashOfSteel": {
+      "base": 0.5,
+      "upgrade": 0.3,
+      "duplicate": 2.0,
+      "weights": {
+        "recall": 2.0,
+        "physical": 0.2
+      },
+      "note": "Free attack with one draw; recycling is useful but it is not net draw by itself."
+    },
+    "GoldAxe": {
+      "base": -2.0,
+      "upgrade": 1.0,
+      "duplicate": 3.0,
+      "weights": {
+        "cycle": 0.8
+      },
+      "note": "Damage grows with cards played during this combat, not gold; needs a fast long-fight engine."
+    },
+    "HandOfGreed": {
+      "base": -1.0,
+      "upgrade": 0.7,
+      "duplicate": 4.0,
+      "weights": {
+        "early": 4.0,
+        "physical": 0.3
+      },
+      "note": "Gold requires a killing blow; future shops and early fights matter more than rarity."
+    },
+    "HiddenGem": {
+      "base": 4.5,
+      "upgrade": 1.5,
+      "duplicate": 2.5,
+      "weights": {
+        "goodTarget": 0.4
+      },
+      "note": "Enchants a random eligible draw-pile card with two or three replays for this combat; not a chosen best card."
+    },
+    "Impatience": {
+      "base": 3.0,
+      "upgrade": 1.0,
+      "duplicate": 2.5,
+      "weights": {
+        "attackRatio": -8.0
+      },
+      "note": "Draws only with no attacks in hand; attack-heavy decks cannot count it as reliable draw."
+    },
+    "JackOfAllTrades": {
+      "base": 0.0,
+      "upgrade": 0.8,
+      "duplicate": 3.0,
+      "weights": {},
+      "note": "Random colorless generation, with no cost discount; one-use and uncertain output."
+    },
+    "Jackpot": {
+      "base": -1.0,
+      "upgrade": 1.5,
+      "duplicate": 3.0,
+      "weights": {
+        "physical": 0.5,
+        "energy": 0.4
+      },
+      "note": "Three-cost attack generates three random zero-cost character cards; upgraded version upgrades them."
+    },
+    "MasterOfStrategy": {
+      "base": 4.0,
+      "upgrade": 1.0,
+      "duplicate": 2.0,
+      "weights": {},
+      "note": "Zero-cost net draw that exhausts; useful setup without a lasting deck burden in combat."
+    },
+    "Mayhem": {
+      "base": -1.0,
+      "upgrade": 1.5,
+      "duplicate": 4.0,
+      "weights": {
+        "expensive": 0.4,
+        "xCount": -0.5
+      },
+      "note": "Autoplays the top card each turn; timing, targets and X-cost cards can waste effects."
+    },
+    "MindBlast": {
+      "base": -2.0,
+      "upgrade": 1.0,
+      "duplicate": 3.0,
+      "weights": {
+        "largeDeck": 0.15
+      },
+      "note": "Opening attack scales with remaining draw pile; never rewards adding weak cards merely to increase size."
+    },
+    "Nostalgia": {
+      "base": -1.0,
+      "upgrade": 1.0,
+      "duplicate": 3.0,
+      "weights": {
+        "cycle": 0.6,
+        "goodAttack": 0.2
+      },
+      "note": "Returns the first discarded Attack or Skill each turn to the draw-pile top; can repeat filler instead of a core card."
+    },
+    "Omnislice": {
+      "base": -1.0,
+      "upgrade": 0.5,
+      "duplicate": 3.0,
+      "weights": {
+        "physical": 0.6,
+        "early": 0.5
+      },
+      "note": "Free multi-target attack; direct damage scales with attacks rather than orbs."
+    },
+    "Panache": {
+      "base": -2.0,
+      "upgrade": 1.0,
+      "duplicate": 4.0,
+      "weights": {
+        "cycle": 1.0,
+        "physical": 0.3
+      },
+      "note": "Deals AoE after five cards played in a turn; needs sustainable card throughput."
+    },
+    "PanicButton": {
+      "base": 0.0,
+      "upgrade": 0.5,
+      "duplicate": 3.0,
+      "weights": {
+        "frost": 0.8
+      },
+      "note": "Large immediate block followed by two turns of card-block suppression; Frost can cover the gap."
+    },
+    "PrepTime": {
+      "base": -2.0,
+      "upgrade": 1.0,
+      "duplicate": 4.0,
+      "weights": {
+        "physical": 0.7
+      },
+      "note": "Grants Vigor each turn for an attack, not Strength or Focus."
+    },
+    "Production": {
+      "base": 1.0,
+      "upgrade": 1.0,
+      "duplicate": 2.0,
+      "weights": {
+        "expensive": 0.4,
+        "ice": 1.0
+      },
+      "note": "One-use energy; retained energy helps, but it does not draw a payoff."
+    },
+    "Prolong": {
+      "base": -2.0,
+      "upgrade": 0.5,
+      "duplicate": 3.0,
+      "weights": {
+        "frost": 0.5,
+        "block": 0.3
+      },
+      "note": "Next-turn block copies current block; cannot count the best-case block without setup."
+    },
+    "Prowess": {
+      "base": -2.0,
+      "upgrade": 1.0,
+      "duplicate": 3.0,
+      "weights": {
+        "physical": 0.6,
+        "block": 0.2
+      },
+      "note": "Strength and Dexterity help attacks and card block; neither improves orb damage."
+    },
+    "Purity": {
+      "base": -2.0,
+      "upgrade": 0.7,
+      "duplicate": 2.0,
+      "weights": {
+        "junk": 0.7
+      },
+      "note": "Retained selective hand exhaustion removes curses, statuses or spent transition cards; costs a draw slot."
+    },
+    "Rend": {
+      "base": -1.0,
+      "upgrade": 0.7,
+      "duplicate": 3.0,
+      "weights": {
+        "debuff": 0.7,
+        "physical": 0.3
+      },
+      "note": "Damage depends on distinct enemy debuffs, not total stacks of one debuff."
+    },
+    "Restlessness": {
+      "base": -3.0,
+      "upgrade": 1.0,
+      "duplicate": 3.0,
+      "weights": {
+        "cycle": 0.8,
+        "pyramid": -2.0,
+        "junk": -0.2
+      },
+      "note": "Requires being the only card in hand before giving draw and energy; retention alone does not solve this condition."
+    },
+    "RollingBoulder": {
+      "base": -1.0,
+      "upgrade": 1.0,
+      "duplicate": 4.0,
+      "weights": {
+        "energy": 0.3,
+        "block": 0.3
+      },
+      "note": "Slow three-energy scaling AoE; requires time and defense rather than instant damage."
+    },
+    "Salvo": {
+      "base": -1.0,
+      "upgrade": 0.5,
+      "duplicate": 3.0,
+      "weights": {
+        "ice": 1.0,
+        "expensive": 0.2
+      },
+      "note": "Attack that retains the whole hand this turn; useful timing utility, not an orb engine."
+    },
+    "Scrawl": {
+      "base": 4.0,
+      "upgrade": 0.7,
+      "duplicate": 2.0,
+      "weights": {
+        "pyramid": -2.0
+      },
+      "note": "Draws until the hand is full; upgraded version retains, it does not become zero-cost."
+    },
+    "SecretTechnique": {
+      "base": 2.0,
+      "upgrade": 0.5,
+      "duplicate": 2.0,
+      "weights": {
+        "recall": 1.0,
+        "goodSkill": 0.3
+      },
+      "note": "Tutors a Skill from the draw pile; reliable access to a useful engine component."
+    },
+    "SecretWeapon": {
+      "base": 1.0,
+      "upgrade": 0.5,
+      "duplicate": 2.0,
+      "weights": {
+        "recall": 3.0,
+        "physical": 0.25
+      },
+      "note": "Tutors an Attack, especially All for One or a physical finisher."
+    },
+    "SeekerStrike": {
+      "base": 0.0,
+      "upgrade": 0.5,
+      "duplicate": 3.0,
+      "weights": {
+        "physical": 0.3
+      },
+      "note": "Chooses among three random draw-pile cards; weaker selection than a full-pile tutor."
+    },
+    "Shockwave": {
+      "base": 3.0,
+      "upgrade": 1.0,
+      "duplicate": 3.0,
+      "weights": {
+        "physical": 0.4
+      },
+      "note": "AoE Weak plus Vulnerable; Vulnerable improves attacks, not normal orb damage."
+    },
+    "Splash": {
+      "base": 0.5,
+      "upgrade": 0.8,
+      "duplicate": 3.0,
+      "weights": {},
+      "note": "Chooses a random off-class attack and makes it free this turn; uncertain target quality."
+    },
+    "Stratagem": {
+      "base": 0.0,
+      "upgrade": 1.5,
+      "duplicate": 3.0,
+      "weights": {
+        "cycle": 0.7
+      },
+      "note": "Tutors after shuffling; needs repeated cycling, not simply a small starting deck."
+    },
+    "TheBomb": {
+      "base": 0.5,
+      "upgrade": 0.7,
+      "duplicate": 3.0,
+      "weights": {
+        "early": 1.0,
+        "block": 0.3
+      },
+      "note": "Delayed AoE resolves after three turns; survival and kill timing matter."
+    },
+    "TheGambit": {
+      "base": -25.0,
+      "upgrade": 0.0,
+      "duplicate": 5.0,
+      "weights": {},
+      "note": "Huge block but subsequent unblocked powered attack damage kills the player; never treat it as ordinary defense."
+    },
+    "ThinkingAhead": {
+      "base": 0.5,
+      "upgrade": 0.7,
+      "duplicate": 2.0,
+      "weights": {
+        "ice": 0.5
+      },
+      "note": "Draw two then put one on top; filters and arranges a hand but only modest net draw."
+    },
+    "ThrummingHatchet": {
+      "base": -2.0,
+      "upgrade": 0.5,
+      "duplicate": 3.0,
+      "weights": {
+        "physical": 0.6
+      },
+      "note": "Returns after being played on the previous turn; repeat damage still costs energy and hand space."
+    },
+    "UltimateDefend": {
+      "base": -2.0,
+      "upgrade": 0.5,
+      "duplicate": 4.0,
+      "weights": {
+        "fasten": 2.0
+      },
+      "note": "One-energy block with no draw, scaling or exhaustion; only explicit Defend synergies rescue it."
+    },
+    "UltimateStrike": {
+      "base": -3.0,
+      "upgrade": 0.5,
+      "duplicate": 4.0,
+      "weights": {
+        "strikeDummy": 1.5
+      },
+      "note": "One-energy damage with no cycling or lasting scaling; low-priority transition even though it has a large number."
+    },
+    "Volley": {
+      "base": -1.0,
+      "upgrade": 1.0,
+      "duplicate": 3.0,
+      "weights": {
+        "physical": 0.6,
+        "energy": 0.4,
+        "ice": 1.0,
+        "chemical": 2.0
+      },
+      "note": "X repeated attacks convert energy and Strength into damage; Chemical X adds two hits."
+    },
+    "Exterminate": {
+      "base": 3.5,
+      "upgrade": 1.3,
+      "duplicate": 2.5,
+      "weights": {
+        "physical": 0.4
+      },
+      "note": "Native event card: four hits to all enemies. Flat damage enchantments and Strength apply to each hit."
+    },
+    "Whistle": {
+      "base": 5.0,
+      "upgrade": 1.7,
+      "duplicate": 2.5,
+      "weights": {},
+      "note": "Native Ancient card: 33/44 damage and stun, Exhaust itself; cannot remove other cards."
+    }
+  }
+}

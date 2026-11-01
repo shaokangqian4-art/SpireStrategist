@@ -14,12 +14,15 @@ public sealed class Policy
 
     public Evaluation Evaluate(RunSnapshot state, IReadOnlyList<DecisionOption> options)
     {
+        if (HeroPolicy.Supports(state.Character)) return HeroPolicy.Evaluate(state, options);
+        if (state.Character == "Silent") return SilentPolicy.Evaluate(state, options);
+        if (state.Character == "Defect") return DefectPolicy.Evaluate(state, options);
         var warnings = new List<string>
         {
             "启发式分数，不是胜率；参数尚未训练。",
             "部分遗物联动采用机制先验，药水及复杂战斗联动尚未完整建模。"
         };
-        if (state.Character != "Ironclad" || state.PlayerCount != 1 || state.MaxHp <= 0)
+        if (state.Character != "Ironclad" || state.PlayerCount < 1 || state.MaxHp <= 0)
             return new(Version, null, options.Select(o => Unsupported(o, "仅支持单人铁甲战士有效局内状态。")).ToArray(), ["当前状态不在支持范围内。"]);
 
         var unknownDeck = state.Deck.Where(c => CardCatalog.Find(c) == null).Select(c => c.Name).Distinct().ToArray();
@@ -28,8 +31,10 @@ public sealed class Policy
         if (state.Deck.Any(c => c.Modified)) warnings.Add("附魔/异变卡已保留基础评价，额外效果尚未全部计分。");
         if (state.Hidden?.Error != null) warnings.Add("隐藏信息读取受限：" + state.Hidden.Error);
 
-        var scores = options.Select(o => Score(state, o)).ToArray();
-        var enabled = scores.Where(s => s.Enabled).ToArray();
+        if(state.IsMultiplayer)warnings.Add(MultiplayerAdvice.Notice);
+        var ignored=options.Where(MultiplayerAdvice.Ignore).Select(o=>o.Key).ToHashSet();
+        var scores = options.Select(o => ignored.Contains(o.Key)?Unsupported(o,MultiplayerAdvice.Ignored):Score(state, o)).ToArray();
+        var enabled = scores.Where(s => s.Enabled&&!ignored.Contains(s.Key)).ToArray();
         string? recommendation = null;
         if (enabled.Length > 0 && enabled.All(s => s.Supported && s.Score.HasValue))
             recommendation = enabled.OrderByDescending(s => s.Score).ThenBy(s => s.Key, StringComparer.Ordinal).First().Key;
@@ -51,6 +56,7 @@ public sealed class Policy
             var value = heal / s.MaxHp * w.HealValue * CardMechanics.RestHealingMultiplier(ratio);
             var history=CardMechanics.RecentCombatHealingMultiplier(s);
             return Result(o, [new($"实际可回复 {heal:0.#} 点生命", value),
+                new("休息附带奖励与代价（不含重复回血）",o.EffectValue??0),
                 new($"低血量紧迫性（当前 {ratio:P0}）", value * w.HealUrgency * Math.Pow(1 - ratio, 2)),
                 new("同幕最近三次精英/首领低承伤且未用药，小幅降低休息收益",value*(history-1)),
                 new("当前营火行动之后的路线危险差额",-s.CampRouteRisk.GetValueOrDefault("heal"))],
@@ -58,6 +64,7 @@ public sealed class Policy
         }
         if (o.Kind == "smith")
         {
+            if(ApotheosisPolicy.Finished(s))return Result(o,[new(ApotheosisPolicy.CampReason,ApotheosisPolicy.CoveredSmithScore)]);
             var best = s.Deck.Where(c => c.CanUpgrade && CardCatalog.Find(c) != null)
                 .Select(c => (Card: c, Value: CardMechanics.Upgrade(s,c) * w.UpgradeValue * 1.2))
                 .OrderByDescending(x => x.Value).Take(o.SmithCount).ToArray();
@@ -71,6 +78,7 @@ public sealed class Policy
 
     private OptionScore ScoreCard(RunSnapshot s, DecisionOption o, CardSnapshot c)
     {
+        if(c.ClassName=="Apotheosis")return ApotheosisPolicy.Score(s,o,c);
         var p = CardCatalog.Find(c);
         if (p == null) return Unsupported(o, "该卡或其附魔/异变尚未适配，已记录完整可读数据。");
         var deck = s.Deck.Select(CardCatalog.Find).Where(p => p != null).Cast<CardProfile>().ToArray();
@@ -208,6 +216,8 @@ public sealed class Policy
             parts.Add(new("低费多回合易伤覆盖（不把痛击当作充分启动）",3.5/(1+coverage*.7)));
             parts.Add(new("易伤启动现有主宰／延长／减伤等组件",Math.Min(3.5,IroncladSynergies.VulnerablePayoffs(s))/(1+duplicateCount)));
         }
+        if(CopyEngine.Active(s)||CopyEngine.SelfCopies(c)&&CopyEngine.Swift(c))
+            parts.AddRange(CopyEngine.Adjustments(s,c));
         return Result(o, parts, p.Note);
     }
 

@@ -18,7 +18,7 @@ public sealed class ClimbPreferences
     public string? PendingRunId {get;set;}
     public string? PendingMode {get;set;}
     public static string Mode(string character,int ascension)=>$"{character}:N{ascension}";
-    public bool Supported=>Character=="Ironclad";
+    public bool Supported=>DefectStrategy.Supported(Character);
     public ClimbStreak Get(string mode)
     {
         if(!Streaks.TryGetValue(mode,out var record))Streaks[mode]=record=new();

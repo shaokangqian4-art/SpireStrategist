@@ -50,7 +50,7 @@ Test("complete versioned card registry and both upgrade states", () =>
     Check(CardRegistry.All.Values.Count(c => c.Pool == "ColorlessCardPool") == 65, "Colorless card coverage");
     foreach (var d in CardRegistry.All.Values)
         foreach (var c in new[] { d.Basic, d.Upgraded })
-            Check(CardCatalog.Find(c) != null && double.IsFinite(Score(run, c)), "Missing: " + c.ClassName);
+            Check(MultiplayerAdvice.Ignore(c)?CardCatalog.Find(c)==null:CardCatalog.Find(c) != null && double.IsFinite(Score(run, c)), "Missing: " + c.ClassName);
 });
 Test("window clamp handles offscreen positions and invalid saved data", () =>
 {
@@ -100,10 +100,10 @@ Test("additional energy reduces high-cost burden", () =>
 {
     Check(Score(run with { Energy = 5 }, Card("Bludgeon", 3)) > Score(run with { Energy = 3 }, Card("Bludgeon", 3)), "Energy budget must matter");
 });
-Test("non-warrior and multiplayer states abstain", () =>
+Test("unsupported characters abstain while multiplayer supports personal advice", () =>
 {
-    Check(policy.Evaluate(run with { Character = "Silent" }, rest).RecommendedKey == null, "Unsupported character");
-    Check(policy.Evaluate(run with { PlayerCount = 2 }, rest).RecommendedKey == null, "Unsupported multiplayer");
+    Check(policy.Evaluate(run with { Character = "UnknownModHero" }, rest).RecommendedKey == null, "Unsupported character");
+    Check(policy.Evaluate(run with { PlayerCount = 2 }, rest).RecommendedKey != null, "Multiplayer personal camp advice");
 });
 Test("unknown camp options abstain while supported multi-upgrade is evaluated", () =>
 {
@@ -727,7 +727,7 @@ Test("recorded act-one event and boss reward replay with transparent solver evid
     Console.WriteLine("REPLAY0610 "+JsonSerializer.Serialize(new{eventScores=ep.Options.Select(o=>new{o.Name,o.Score}),cardScores=result.Options.Select(o=>new{o.Name,o.Score}),
         withoutSolver=Score(s with{CombatSolverAvailable=false},CardRegistry.All["Stoke"].Basic)}));
 });
-Test("regression late routes choose recovery and keep shop continuation visible",()=>
+Test("actual AFBB late routes choose recovery and keep shop continuation visible",()=>
 {
     using var doc=JsonDocument.Parse(File.ReadAllText(Path.Combine(AppContext.BaseDirectory,"Fixtures","feedback-0611.json")));
     var json=new JsonSerializerOptions{PropertyNameCaseInsensitive=true};
@@ -905,11 +905,11 @@ Test("recorded batch decisions repair missing defense and duplicate draw",()=>
         var options=row.GetProperty("options").Deserialize<DecisionOption[]>(json)!;
         var result=policy.Evaluate(s,options);var picked=options.Single(o=>o.Key==result.RecommendedKey);
         var seed=row.GetProperty("seed").GetString();
-        if(seed=="regression-case-5")Check(picked.Kind=="skip","Do not add second conflicting Trance in recorded weak deck");
-        if(seed=="regression-case-3")Check(picked.Card?.ClassName=="Shockwave","Sustained debuff must not vanish under generic taxes");
-        if(seed=="regression-case-6"&&options.Any(o=>o.Card?.ClassName=="FeelNoPain"))
+        if(seed=="C6D4069F9B25")Check(picked.Kind=="skip","Do not add second conflicting Trance in recorded weak deck");
+        if(seed=="9561CA709A80")Check(picked.Card?.ClassName=="Shockwave","Sustained debuff must not vanish under generic taxes");
+        if(seed=="088C7C869AF4"&&options.Any(o=>o.Card?.ClassName=="FeelNoPain"))
             Check(picked.Card?.ClassName=="FeelNoPain","Complete exhaust/block engine before strength payoff");
-        if(seed=="regression-case-2")Check(s.Deck.Where(c=>c.CanUpgrade).MaxBy(c=>CardMechanics.Upgrade(s,c))!.ClassName=="FeelNoPain","Upgrade sustained exhaust defense before another paid cycler");
+        if(seed=="B143435788F8")Check(s.Deck.Where(c=>c.CanUpgrade).MaxBy(c=>CardMechanics.Upgrade(s,c))!.ClassName=="FeelNoPain","Upgrade sustained exhaust defense before another paid cycler");
     }
 });
 Test("recorded 37 HP route keeps the camp healing branch and remains floor-independent",()=>
@@ -1049,7 +1049,7 @@ Test("climb preferences persist selected character and difficulty, fresh install
     Check(p.Ascension==0&&p.Character=="Ironclad"&&p.Supported,"fresh default N0 Ironclad");
     p.Ascension=10;p.Character="Necrobinder";p.Save(path);
     var loaded=ClimbPreferences.Load(path);
-    Check(loaded.Ascension==10&&loaded.Character=="Necrobinder"&&!loaded.Supported,"persist placeholder without enabling it");
+    Check(loaded.Ascension==10&&loaded.Character=="Necrobinder"&&loaded.Supported,"persist enabled Necrobinder selection");
     Check(ClimbPreferences.Characters.Length==5,"all five selectable labels");
 });
 Test("highest streak excludes joins, interruptions and duplicate outcomes; buckets stay separate",()=>
@@ -1141,6 +1141,866 @@ Test("English handles composed route notes and indented numeric explanations",()
     Check(!System.Text.RegularExpressions.Regex.IsMatch(output,"[\\u3400-\\u9fff]"),output);
     Check(output.Contains("12.5")&&output.Contains("21")&&output.Contains("10 %"),"keep numbers");
 });
+Test("Defect native policy matches reviewed offline prior across character and neutral fixtures",()=>
+{
+    using var doc=JsonDocument.Parse(File.ReadAllText(Path.Combine(AppContext.BaseDirectory,"Fixtures","defect-prior-v14.json")));
+    var json=new JsonSerializerOptions{PropertyNameCaseInsensitive=true};
+    foreach(var item in doc.RootElement.EnumerateArray())
+    {
+        var s=item.GetProperty("state").Deserialize<RunSnapshot>(json)!;
+        foreach(var value in item.GetProperty("scores").EnumerateArray())
+        {
+            var name=value.GetProperty("name").GetString()!;
+            var up=value.GetProperty("upgraded").GetBoolean();
+            var c=DefectPolicy.Card(name,up)??(up?CardRegistry.All[name].Upgraded:CardRegistry.All[name].Basic);
+            var result=policy.Evaluate(s,[Pick(c),Skip()]);var actual=result.Options[0].Score;
+            Check(result.PolicyVersion==DefectPolicy.Version,"Defect dispatcher");
+            foreach(var part in result.Options[0].Parts)
+                Check(!System.Text.RegularExpressions.Regex.IsMatch(Localization.English(part.Reason),"[\\u3400-\\u9fff]"),"Untranslated Defect reason: "+part.Reason);
+            var expected=value.GetProperty("score");
+            if(expected.ValueKind==JsonValueKind.Null)Check(actual==null,"Multiplayer exclusion: "+name);
+            else Check(actual.HasValue&&Math.Abs(actual.Value-expected.GetDouble())<.0011,$"{name} actual={actual} expected={expected} act={s.Act}");
+        }
+    }
+});
+Test("Defect refuses unknown effects and supports rest decisions",()=>
+{
+    var s=run with{Character="Defect",Deck=[DefectPolicy.Card("Zap")!,DefectPolicy.Card("Dualcast")!]};
+    Check(policy.Evaluate(s,[Pick(Card("UnknownModCard")),Skip()]).RecommendedKey==null,"unknown not skipped by default");
+    Check(policy.Evaluate(s,[Pick(DefectPolicy.Card("Glacier")! with{Enchantment="CUSTOM"}),Skip()]).RecommendedKey==null,"unknown enchantment");
+    Check(policy.Evaluate(s,rest).RecommendedKey=="smith","Defect has its own rest rules");
+    Check(policy.Evaluate(s with{PlayerCount=2},[Pick(DefectPolicy.Card("Glacier")!),Skip()]).RecommendedKey!=null,"multiplayer personal advice");
+    Check(policy.Evaluate(s,[Pick(DefectPolicy.Card("MeteorStrike")!),Skip()]).RecommendedKey=="skip","no self-funded meteor");
+});
+Test("Defect copy engine protects draw copies and distinguishes ordinary copies",()=>
+{
+    var a=DefectPolicy.Card("AdaptiveStrike")!;
+    var one=DefectPolicy.Card("AllForOne")!;
+    var s=run with{Character="Defect",Act=3,Deck=[a,DefectPolicy.Card("GoForTheEyes")!,DefectPolicy.Card("Hologram",true)!]};
+    Check(Score(s,one)>Score(s with{Deck=s.Deck.Where(c=>c!=a).ToArray()},one)+3,"generated zero cards must count for retrieval");
+    var swift=a with{Modified=true,Enchantment="ENCHANTMENT.SWIFT",EnchantmentAmount=2};
+    var combo=s with{Deck=[swift,one,DefectPolicy.Card("Coolheaded",true)!]};
+    Check(Score(combo,DefectPolicy.Card("Claw",true)!)<0,"copy engine does not need extra claws");
+    Check(Score(combo,DefectPolicy.Card("Iteration",true)!)<Score(s,DefectPolicy.Card("Iteration",true)!),"Swift copies reduce extra draw demand");
+    Check(DefectStrategy.Remove(combo,swift)<-20,"protect enchanted core from removal");
+    var thin=combo with{Deck=[..combo.Deck,DefectPolicy.Card("Scavenge")!]};
+    Check(CopyEngine.Active(thin),"exhaust support does not erase engine");
+    Check(new ClimbPreferences{Character="Defect"}.Supported,"Defect climbing enabled");
+    Check(new ClimbPreferences{Character="Regent"}.Supported,"Regent is now supported");
+});
+Test("Defect camping subtracts route risk and preserves emergency healing",()=>
+{
+    var s=run with{Character="Defect",Hp=60,MaxHp=75,Deck=[DefectPolicy.Card("Hologram")!]};
+    var calm=DefectStrategy.NonCard(s,new("smith","Smith","smith"))!.Score!.Value;
+    var risky=s with{CampRouteRisk=new(){{"smith",20}}};
+    Check(DefectStrategy.NonCard(risky,new("smith","Smith","smith"))!.Score<calm,"higher projected damage never increases smith score");
+    Check(DefectStrategy.NonCard(s with{Hp=5},new("heal","Rest","heal",HealAmount:22))!.Score>calm,"emergency survival can beat an engine upgrade");
+});
+Test("Defect neutral support and Anger preserve self-copy mechanics",()=>
+{
+    var a=DefectPolicy.Card("AdaptiveStrike")! with{Enchantment="ENCHANTMENT.SWIFT",EnchantmentAmount=2,Modified=true};
+    var s=run with{Character="Defect",Act=2,Deck=[a,DefectPolicy.Card("AllForOne")!,..Enumerable.Repeat(DefectPolicy.Card("DefendDefect")!,4)]};
+    var purity=CardRegistry.All["Purity"].Basic;
+    Check(Score(s,purity)>3,"native neutral exhaust supports thinning without Ironclad payoffs");
+    Check(Score(s,CardRegistry.All["MasterOfStrategy"].Basic)>0,"one-shot neutral draw is not an unsupported auto-skip");
+    var anger=Card("Anger");
+    var enchanted=anger with{Enchantment="ENCHANTMENT.SWIFT",EnchantmentAmount=2,Modified=true};
+    Check(Score(run,enchanted)>Score(run,anger)+3,"Anger inherited unused Swift receives a bounded mechanism bonus");
+});
+Test("Defect partial free rewards keep known support without inventing unknown values",()=>
+{
+    var s=run with{Character="Defect",Deck=[DefectPolicy.Card("Zap")!,DefectPolicy.Card("Dualcast")!]};
+    DecisionOption[] options=[new("unknown","Unknown","card",Card:Card("UnknownModCard")),new("draw","Draw","card",Card:CardRegistry.All["MasterOfStrategy"].Basic),Skip()];
+    var evaluation=policy.Evaluate(s,options);
+    Check(evaluation.RecommendedKey==null,"manual advice does not pretend complete comparison");
+    Check(DefectPolicy.KnownFreeReward(options,evaluation)?.Key=="draw","unknown option does not discard known positive support");
+    options=[options[0],Skip()];
+    Check(DefectPolicy.KnownFreeReward(options,policy.Evaluate(s,options))?.Kind=="skip","all unknown free rewards skip explicitly");
+    options=[options[0]];
+    Check(DefectPolicy.KnownFreeReward(options,policy.Evaluate(s,options))==null,"no forced or paid selection fallback");
+});
+Test("Defect evaluates X terminals against affordable existing retrieval",()=>
+{
+    var s=run with{Character="Defect",Act=3,Energy=3,Deck=[DefectPolicy.Card("Dualcast",true)!,DefectPolicy.Card("Hologram")!,DefectPolicy.Card("Darkness")!,DefectPolicy.Card("Coolheaded")!,DefectPolicy.Card("Coolheaded")!,DefectPolicy.Card("Defragment")!]};
+    var terminal=DefectPolicy.Card("MultiCast")!;
+    bool Limited(RunSnapshot state,CardSnapshot card)=>policy.Evaluate(state,[Pick(card)]).Options[0].Parts.Any(p=>p.Reason.Contains("缺爆发费用"));
+    Check(Limited(s,terminal),"three energy with free Dualcast and Hologram discounts extra X terminal");
+    Check(!Limited(s with{Deck=[..s.Deck,DefectPolicy.Card("Turbo")!]},terminal),"burst energy removes this specific constraint");
+    Check(!Limited(s with{Relics=["RELIC.CHEMICAL_X"]},terminal),"Chemical X changes the incremental evoke count");
+    Check(!Limited(s,DefectPolicy.Card("MultiCast",true)!),"upgraded extra evoke is retained");
+    Check(policy.Evaluate(s,[Pick(DefectPolicy.Card("Defragment")!)]).Options[0].Parts.Any(p=>p.Reason.Contains("冰霜防线")),"second focus is not purely redundant with frost support");
+});
+Test("Defect native optional reroll cannot block known rewards",()=>
+{
+    var s=run with{Character="Defect",Deck=[DefectPolicy.Card("Zap")!,DefectPolicy.Card("Dualcast")!]};
+    var reroll=new DecisionOption("alternative:1","Reroll","reroll");
+    DecisionOption[] options=[Pick(DefectPolicy.Card("Glacier")!),Skip(),reroll];
+    Check(policy.Evaluate(s,options).RecommendedKey==options[0].Key,"positive Glacier beats an unforecast reroll");
+    options=[Pick(DefectPolicy.Card("StrikeDefect")!),Skip(),reroll];
+    Check(policy.Evaluate(s,options).RecommendedKey==reroll.Key,"free native reroll beats skipping all negative cards");
+    options=[new("unknown","Unknown","card",Card:Card("UnknownModCard")),new("draw","Draw","card",Card:CardRegistry.All["MasterOfStrategy"].Basic),Skip(),reroll];
+    var e=policy.Evaluate(s,options);
+    Check(e.RecommendedKey==null&&DefectPolicy.KnownFreeReward(options,e)?.Key=="draw","unknown card plus reroll still preserves known support");
+    options=[options[0],Skip(),reroll with{Enabled=false}];
+    Check(DefectPolicy.KnownFreeReward(options,policy.Evaluate(s,options))?.Kind=="skip","unavailable reroll is never selected");
+});
+Test("ThisOrThat follows money preference with forecast bag exception and lethal guard",()=>
+{
+    var vars=new Dictionary<string,double>{{"HpLoss",6},{"Gold",50}};
+    var s=run with{Hp=7,MaxHp=80,Gold=100,Relics=["RELIC.BAG_OF_PREPARATION"]};
+    var money=EventRules.Describe("THIS_OR_THAT","PLAIN","Money",s,vars);
+    var relic=EventRules.Describe("THIS_OR_THAT","ORNATE","Relic",s,vars);
+    Check(EventPolicy.Evaluate(s,[money,relic]).RecommendedKey=="PLAIN","low nonlethal HP and already-owned bag do not change the explicit preference");
+    Check(EventPolicy.Evaluate(s,[ThisOrThatPolicy.Apply(money,"RELIC.BAG_OF_PREPARATION"),ThisOrThatPolicy.Apply(relic,"RELIC.BAG_OF_PREPARATION")]).RecommendedKey=="ORNATE","predicted reward bag is the exception");
+    Check(EventPolicy.Evaluate(s,[ThisOrThatPolicy.Apply(money,"RELIC.ICE_CREAM",true),ThisOrThatPolicy.Apply(relic,"RELIC.ICE_CREAM",true)]).RecommendedKey=="ORNATE","confirmed rare relic is also an explicit exception");
+    Check(EventPolicy.Evaluate(s,[ThisOrThatPolicy.Apply(money,"RELIC.SOMETHING_ELSE"),ThisOrThatPolicy.Apply(relic,"RELIC.SOMETHING_ELSE")]).RecommendedKey=="PLAIN","other common or uncommon relic stays below money");
+    Check(EventPolicy.Evaluate(s with{Hp=6},[money,relic]).RecommendedKey=="ORNATE","direct death protection remains above preference");
+});
+Test("Defect draft v6 separates engines and retains shared status support",()=>
+{
+    CardSnapshot C(string n)=>DefectPolicy.Card(n)!;
+    RunSnapshot S(params string[] n)=>run with{Character="Defect",Act=2,Hp=60,MaxHp=75,Deck=n.Select(C).ToArray()};
+    var orb=S("Storm","Thunder","Defragment","Glacier","Coolheaded");
+    foreach(var n in new[]{"Claw","AdaptiveStrike","BulkUp","Scrape","BeamCell"})Check(Score(orb,C(n))<0,"orb rejects physical "+n);
+    var clawScore=policy.Evaluate(orb,[Pick(C("Claw"))]).Options[0];
+    Check(clawScore.Parts.Count(p=>p.Reason=="球系主线不再投资物理组件")==1
+        &&!clawScore.Parts.Any(p=>p.Reason=="当前球系方向与物理组件的机会成本"),"cross-engine incompatibility charged once");
+    var claws=S("Claw","Claw","Claw","Hologram","AllForOne","Scrape");
+    foreach(var n in new[]{"Defragment","Darkness","Storm","Capacitor"})Check(Score(claws,C(n))<0,"physical rejects orb "+n);
+    Check(Score(claws,C("Claw"))>0,"fourth claw grows the shared damage engine");
+    Check(Score(S("Claw","Claw","Claw","Claw","Claw","Hologram","AllForOne"),C("Claw"))<0,"sixth claw prefers support");
+    Check(Score(S("AdaptiveStrike","AllForOne","Hologram"),C("Claw"))<0,"adaptive does not restart claws");
+    Check(Score(claws,C("AdaptiveStrike"))>0,"claw engine can accept one adaptive");
+    foreach(var st in new[]{orb,claws})
+    {Check(Score(st,C("Compact"))>0,"shared status handling");Check(Score(st,C("Overclock"))>0,"shared draw");}
+});
+Test("Defect common filler gate and repeatable energy are contextual",()=>
+{
+    CardSnapshot C(string n)=>DefectPolicy.Card(n)!;
+    var s=run with{Character="Defect",Act=2,Hp=60,MaxHp=75,Deck=[C("Hologram"),C("Turbo"),C("Skim"),C("MultiCast")],Relics=["RELIC.ICE_CREAM"]};
+    foreach(var n in new[]{"BallLightning","SweepingBeam"})
+    {
+        Check(Score(s with{Act=1},C(n))>0,"early utility does not satisfy damage need "+n);
+        Check(Score(s,C(n))<Score(s with{Act=1},C(n)),"transition value decays with phase without banning a needed first attack "+n);
+    }
+    Check(Score(s,C("GunkUp"))<0,"missing damage alone does not justify weak self-status attack");
+    var engine=s with{Deck=[..s.Deck,C("Darkness"),C("ConsumingShadow"),C("Loop")]};
+    foreach(var n in new[]{"BallLightning","SweepingBeam","Leap"})Check(Score(engine,C(n))<Score(s,C(n)),"existing engine reduces filler value without pretending all defense is solved "+n);
+    Check(Score(s with{Deck=[..s.Deck,C("DoubleEnergy"),C("DoubleEnergy")]},C("DoubleEnergy"))>0,"third energy has actual draw and spend support");
+    Check(Score(s with{Deck=[..s.Deck,..Enumerable.Repeat(C("DoubleEnergy"),4)]},C("DoubleEnergy"))<0,"energy is not unlimited");
+    var gem=CardRegistry.All["HiddenGem"].Basic;
+    Check(policy.Evaluate(s,[Pick(gem)]).Options[0] is {Supported:true,Score:>0},"neutral replay gem is modeled");
+});
+Test("Defect cheese growth and camping prioritize upgrades without sacrificing lethal protection",()=>
+{
+    var s=run with{Character="Defect",Act=1,Hp=51,MaxHp=75,Map=new(3,16,3,16,"Standard"),Deck=[DefectPolicy.Card("Hologram")!,DefectPolicy.Card("Coolheaded")!]};
+    var vars=new Dictionary<string,double>{{"Damage",14}};
+    var gorge=EventRules.Describe("ROOM_FULL_OF_CHEESE","GORGE","Cards",s,vars);
+    var cheese=EventRules.Describe("ROOM_FULL_OF_CHEESE","SEARCH","Cheese",s,vars);
+    Check(EventPolicy.Evaluate(s,[gorge,cheese]).RecommendedKey=="SEARCH","51 HP early cheese beats two forced commons");
+    Check(EventPolicy.Evaluate(s with{Hp=14},[gorge,cheese]).RecommendedKey=="GORGE","cheese cannot kill player");
+    var camp=s with{Hp=36,CampRouteRisk=new(){{"smith",100}}};
+    Check(policy.Evaluate(camp,rest).RecommendedKey=="smith","coarse distant hazard cannot force rest at viable HP with engine upgrades");
+    Check(policy.Evaluate(camp with{Hp=5},rest).RecommendedKey=="heal","critical HP still rests");
+    Check(policy.Evaluate(camp with{Deck=camp.Deck.Select(c=>c with{CanUpgrade=false}).ToArray()},rest).RecommendedKey=="heal","no usable upgrade still heals");
+});
+Test("Defect early Ice Cream run invests beyond common filler",()=>
+{
+    CardSnapshot C(string n)=>DefectPolicy.Card(n)!;
+    var s=run with{Character="Defect",Act=1,Floor=4,Hp=37,MaxHp=77,Relics=["RELIC.ICE_CREAM"],
+        Deck=[..Enumerable.Repeat(C("StrikeDefect"),5),..Enumerable.Repeat(C("DefendDefect"),5),C("Zap"),C("Dualcast"),C("LightningRod")],
+        Map=new(3,16,4,16,"Standard")};
+    var energyState=s with{Deck=[..s.Deck,C("SweepingBeam")],Hp=36,Floor=6};
+    Check(Score(energyState,C("DoubleEnergy"))>Score(energyState,C("GoForTheEyes")),"first doubler plus Ice Cream outranks weak-attack filler");
+    Check(!policy.Evaluate(energyState,[Pick(C("DoubleEnergy"))]).Options[0].Parts.Any(p=>p.Reason=="能量需要花费出口和过牌"),"generic energy penalty does not duplicate doubler-specific reasoning");
+    Check(Score(s,C("HelixDrill"))>Score(s with{Relics=[]},C("HelixDrill")),"stored energy improves multi-hit payoff without universally overruling immediate group damage");
+    Check(Score(s,CardRegistry.All["HiddenGem"].Basic)>0,"known colorless investment remains available without always outranking urgently needed group damage");
+    var starter=s with{Deck=s.Deck.Where(c=>c.ClassName!="LightningRod").ToArray()};
+    Check(Score(starter,C("Thunder"))>0,"first investment remains available alongside immediate transition options");
+    var vars=new Dictionary<string,double>{{"RipHpLoss",5}};
+    var a=EventRules.Describe("BRAIN_LEECH","RIP","Colorless",s,vars);
+    var b=EventRules.Describe("BRAIN_LEECH","SHARE_KNOWLEDGE","Class cards",s,vars);
+    Check(EventPolicy.Evaluate(s,[a,b]).RecommendedKey=="RIP","colorless opportunity can justify nonlethal health cost");
+    Check(EventPolicy.Evaluate(s with{Hp=5},[a,b]).RecommendedKey=="SHARE_KNOWLEDGE","no promised random card overrides direct death");
+});
+Test("Defect colorless catalog explicitly covers solo mechanisms and excludes multiplayer",()=>
+{
+    var excluded="BeaconOfHope BelieveInYou Coordinate GangUp HuddleUp Intercept Knockdown Lift Mimic Rally TagTeam TheBall".Split(' ').ToHashSet();
+    var pool=CardRegistry.All.Values.Where(d=>d.Pool=="ColorlessCardPool").ToArray();
+    Check(pool.Length==65,"native colorless pool changed; review new cards");
+    var s=run with{Character="Defect",Deck=[DefectPolicy.Card("Zap")!,DefectPolicy.Card("Dualcast")!]};
+    foreach(var d in pool)
+        foreach(var c in new[]{d.Basic,d.Upgraded})
+            Check(policy.Evaluate(s,[Pick(c)]).Options[0].Supported==!excluded.Contains(c.ClassName),"explicit coverage: "+c.ClassName);
+    Check(Score(s,CardRegistry.All["UltimateDefend"].Basic)<0&&Score(s,CardRegistry.All["UltimateStrike"].Basic)<0,"flat stats must not outrank functional cards");
+    Check(Score(s,CardRegistry.All["MasterOfStrategy"].Basic)>0,"reliable draw should remain useful");
+    Check(Score(s,CardRegistry.All["TheGambit"].Upgraded)<-20,"fatal downside cannot be valued as ordinary block");
+    Check(Score(s with{Relics=["RELIC.SOZU"]},CardRegistry.All["Alchemize"].Basic)<0,"Sozu suppresses potion generation");
+});
+Test("Defect energy startup and power duplication have explicit support and saturation",()=>
+{
+    CardSnapshot C(string n)=>DefectPolicy.Card(n)!;
+    var s=run with{Character="Defect",Energy=3,Act=2,Deck=[C("Storm"),C("Thunder"),C("Glacier"),C("DoubleEnergy"),C("SignalBoost")],Relics=["RELIC.ICE_CREAM"]};
+    Check(Score(s,C("MeteorStrike"))>Score(s with{Relics=[]},C("MeteorStrike"))+8,"stored doubled energy is a possible startup channel");
+    Check(Score(s with{Relics=[],Deck=[C("MeteorStrike")]},C("MeteorStrike"))<0,"Meteor's own plasma cannot pay its first cast");
+    Check(Score(s,C("SignalBoost"))>0,"second copy has two real power targets");
+    Check(Score(s with{Deck=[..s.Deck,C("SignalBoost"),C("SignalBoost")]},C("SignalBoost"))<0,"too many copies saturate real targets");
+    Check(Score(s,C("Darkness"))<0,"existing Lightning engine should not start a Dark branch");
+});
+Test("Defect relics use character synergies and do not redirect orbs toward attack filler",()=>
+{
+    CardSnapshot C(string n)=>DefectPolicy.Card(n)!;
+    var s=run with{Character="Defect",Deck=[C("Storm"),C("Thunder"),C("Glacier"),C("Defragment")],Relics=["RELIC.CRACKED_CORE"]};
+    var physical=s with{Deck=[C("Claw"),C("Claw"),C("AllForOne"),C("Scrape")]};
+    Check(RelicValue.Evaluate("TOUCH_OF_OROBAS",s,true).Value>10,"starter refinement counts Defect's core");
+    Check(RelicValue.Evaluate("DATA_DISK",s).Value>RelicValue.Evaluate("DATA_DISK",physical).Value,"Focus relic recognizes orbs");
+    Check(RelicValue.Evaluate("SHURIKEN",physical).Value>RelicValue.Evaluate("SHURIKEN",s).Value,"Strength relic recognizes attack throughput");
+    Check(!DefectRelics.CardAdjustments(s with{Relics=["RELIC.KUNAI","RELIC.SHURIKEN"]},C("GoForTheEyes")).Any(),"attack relics alone must not justify physical filler");
+    Check(Score(s with{Relics=["RELIC.MUMMIFIED_HAND"]},C("Storm"))>Score(s,C("Storm")),"owned relic changes actual card score");
+});
+Test("Defect Neow uses opening priorities and character-correct removal targets",()=>
+{
+    CardSnapshot C(string n)=>DefectPolicy.Card(n)!;
+    var s=run with{Character="Defect",PlayerCount=1,Hp=60,MaxHp=75,Act=1,
+        Deck=[..Enumerable.Repeat(C("StrikeDefect"),4),..Enumerable.Repeat(C("DefendDefect"),4),C("Zap"),C("Dualcast")]};
+    Check(NeowPolicy.Supports(s)&&!NeowPolicy.Supports(s with{PlayerCount=2}),"runtime gate must include singleplayer Defect");
+    double N(string id)=>NeowPolicy.Evaluate(id,s).Value;
+    Check(N("NEW_LEAF")>N("SCROLL_BOXES")&&N("SCROLL_BOXES")>N("LARGE_CAPSULE"),"observed opening must prefer transform, not extra basics");
+    Check(N("PRECISE_SCISSORS")>N("WINGED_BOOTS")&&N("SILVER_CRUCIBLE")>N("NEW_LEAF"),"previous user opening tiers carry over");
+    var cards=s.Deck.Select(c=>c with{Variables=new(c.Variables)}).ToArray();
+    var plan=NeowPolicy.RemovalPlan(s,cards,2);
+    Check(plan.Length==2&&cards[plan[0]].ClassName=="StrikeDefect"&&cards[plan[1]].ClassName=="DefendDefect","pair removes one Defect Strike and one Defend");
+});
+Test("Defect weak starting decks can trim redundant basics without deleting their last defenses",()=>
+{
+    CardSnapshot C(string n,bool up=false)=>DefectPolicy.Card(n,up)!;
+    var s=run with{Character="Defect",Hp=60,MaxHp=75,Act=1,Deck=[..Enumerable.Repeat(C("StrikeDefect"),4),
+        ..Enumerable.Repeat(C("DefendDefect"),3),C("DefendDefect",true),C("DefendDefect",true),C("Zap"),C("Dualcast"),C("Ftl")]};
+    var v=new StrategicValue(s);
+    var lights=new EventChoice("light","Light",Benefit:v.Upgrade(C("StrikeDefect"))+v.Upgrade(C("DefendDefect")));
+    var dark=new EventChoice("dark","Dark",Remove:1,Selection:"remove");
+    Check(EventPolicy.Evaluate(s,[lights,dark]).RecommendedKey=="dark","actual basic/basic upgrade forecast must lose to removal");
+    var coreLight=lights with{Benefit=v.Upgrade(C("Hologram"))+v.Upgrade(C("Defragment"))};
+    Check(EventPolicy.Evaluate(s,[coreLight,dark]).RecommendedKey=="light","do not replace this with unconditional removal");
+    var strike=C("StrikeDefect");
+    Check(DefectStrategy.Remove(s,strike)>0,"fresh UI snapshot should remove one matching slot");
+    var shared=s with{Deck=[strike,strike,strike,strike,..s.Deck.Where(c=>c.ClassName!="StrikeDefect")]};
+    var copied=shared with{Deck=shared.Deck.Select(c=>c with{Variables=new(c.Variables)}).ToArray()};
+    Check(DefectStrategy.Remove(shared,strike)==DefectStrategy.Remove(copied,strike),"aliasing and deserialization must not change removal score");
+    var sparse=s with{Deck=[C("StrikeDefect"),C("DefendDefect"),C("DefendDefect"),C("Zap"),C("Dualcast"),C("Turbo"),C("DoubleEnergy"),C("SignalBoost"),C("Overclock")]};
+    Check(DefectStrategy.Remove(sparse,C("StrikeDefect"))<0&&DefectStrategy.Remove(sparse,C("DefendDefect"))<0,"preserve last reliable attack/block sources");
+    Check(RelicValue.Evaluate("WHETSTONE",s).Value<8,"two random basic upgrades cannot get flat generic relic value");
+    Check(RelicValue.Evaluate("WAR_PAINT",s with{Deck=s.Deck.Select(c=>c with{CanUpgrade=false}).ToArray()}).Value==0,"no eligible cards means no upgrade relic benefit");
+});
+Test("Defect physical direction permits frost defense and values targeted recovery",()=>
+{
+    CardSnapshot C(string n)=>DefectPolicy.Card(n)!;
+    var s=run with{Character="Defect",Act=1,Hp=60,MaxHp=75,Relics=["RELIC.CRACKED_CORE"],
+        Deck=[..Enumerable.Repeat(C("StrikeDefect"),3),..Enumerable.Repeat(C("DefendDefect"),3),C("Zap"),C("Dualcast"),C("Claw")]};
+    Check(Score(s,C("Thunder"))<0,"first Claw must suppress unsupported lightning terminal investment");
+    var frost=s with{Deck=[..s.Deck,C("Glacier"),C("Coolheaded")]};
+    Check(Score(frost,C("Claw"))>0,"frost defense must not become an orb damage commitment");
+    Check(Score(s,C("Glacier"))>0,"physical decks can acquire frost defense");
+    Check(RelicValue.Evaluate("DATA_DISK",frost).Value>RelicValue.Evaluate("DATA_DISK",s).Value,"Frost still benefits from Focus relics despite not selecting an orb damage direction");
+    var committed=frost with{Deck=[..frost.Deck,C("Claw"),C("Feral")]};
+    Check(Score(committed,C("Glasswork"))<0&&Score(committed,C("Hotfix"))<0,"established physical deck does not invest in glass damage or temporary focus");
+    var mature=frost with{Act=3,Gold=486,Deck=[..frost.Deck,C("Claw"),C("Hologram"),C("BulkUp")]};
+    var shop=DefectStrategy.Shop(mature,[new("feral",C("Feral"),38),new("hotfix",C("Hotfix"),51)],150,486,0,100);
+    Check(shop.Recommendation?.Key=="feral","cheap Feral with repeatable zero attacks outranks temporary focus and basic removal");
+    Check(Score(mature,C("Hyperbeam"))<0,"established claw deck avoids expensive competing damage");
+    var orbs=s with{Deck=[C("Storm"),C("Thunder"),C("Defragment"),C("Glacier"),C("Coolheaded"),C("Zap"),C("Dualcast")]};
+    Check(Score(orbs,C("Feral"))<0,"zero skills and Frost do not justify Feral");
+});
+Test("Defect Smokestack requires actual status engine density",()=>
+{
+    CardSnapshot C(string n)=>DefectPolicy.Card(n)!;
+    var s=run with{Character="Defect",Act=3,Deck=[C("Claw"),C("Claw"),C("Glacier"),C("Coolheaded"),C("Turbo"),C("BoostAway"),C("Hologram")]};
+    Check(Score(s,DefectPolicy.Card("Smokestack",true)!)<0,"two utility status sources do not justify upgraded Smokestack");
+    var status=s with{Deck=[C("Turbo"),C("BoostAway"),C("Overclock"),C("GunkUp"),C("Compact"),C("FlakCannon")]};
+    var parts=policy.Evaluate(status,[Pick(C("Smokestack"))]).Options[0].Parts;
+    Check(!parts.Any(p=>p.Reason.StartsWith("烟囱需要高密度")),"true status-heavy engine is not blanket banned");
+});
+Test("Toasty Mittens and hole event value cleanup without treating Normality as free",()=>
+{
+    CardSnapshot C(string n)=>DefectPolicy.Card(n)!;
+    var s=run with{Character="Defect",Deck=[..Enumerable.Repeat(C("StrikeDefect"),3),..Enumerable.Repeat(C("DefendDefect"),3),C("Zap"),C("Dualcast"),C("Claw"),C("Glacier"),C("Hologram")]};
+    Check(RelicValue.Evaluate("TOASTY_MITTENS",s,true).Value>RelicValue.Evaluate("TOY_BOX",s,true).Value,"physical cleanup plus recurring Strength outranks generic toy value");
+    var remove=EventRules.Describe("FIELD_OF_MAN_SIZED_HOLES","RESIST","Remove",s,new Dictionary<string,double>());
+    var enchant=EventRules.Describe("FIELD_OF_MAN_SIZED_HOLES","ENTER_YOUR_HOLE","Enchant",s,new Dictionary<string,double>());
+    Check(EventPolicy.Evaluate(s,[remove,enchant]).RecommendedKey=="RESIST","many redundant basics justify the curse handling plan");
+    Check(remove.Burden>0,"curse remains a real cost");
+    var mittens=EventRules.Describe("FIELD_OF_MAN_SIZED_HOLES","RESIST","Remove",s with{Relics=["RELIC.TOASTY_MITTENS"]},new Dictionary<string,double>());
+    Check(mittens.Burden<remove.Burden,"reliable hand exhaust lowers the handling burden");
+});
+RunSnapshot EventRegression(string floor)
+{
+    using var doc=JsonDocument.Parse(File.ReadAllText(Path.Combine(AppContext.BaseDirectory,"Fixtures","defect-event-regression.json")));
+    return doc.RootElement.GetProperty(floor).Deserialize<RunSnapshot>(new JsonSerializerOptions{PropertyNameCaseInsensitive=true})!;
+}
+Test("Self Help Book actual Nimble candidates do not tie on base Defend",()=>
+{
+    var s=EventRegression("44");var v=new StrategicValue(s);
+    var cards=s.Deck.Where(c=>c.ClassName is "DefendDefect" or "BoostAway" or "BootSequence").ToArray();
+    foreach(var enchant in new[]{"NIMBLE","ADROIT"})
+    {
+        var best=cards.OrderByDescending(c=>v.Enchant(c,enchant,2)).First();
+        Check(best.ClassName=="BoostAway","repeatable upgraded zero-cost defense must win actual target ranking: "+enchant);
+        Check(v.Enchant(best,enchant,2)>v.Enchant(cards.Single(c=>c.ClassName=="DefendDefect"),enchant,2),"strictly better, not an order-dependent tie");
+        Check(cards.Reverse().OrderByDescending(c=>v.Enchant(c,enchant,2)).First().ClassName=="BoostAway","candidate order must not alter this choice");
+    }
+    var choice=EventRules.Describe("SELF_HELP_BOOK","READ_PASSAGE","Nimble",s,new Dictionary<string,double>());
+    Check(Math.Abs(choice.Benefit-cards.Max(c=>v.Enchant(c,"NIMBLE",2)))<1e-9,"event option must price the same target as execution");
+    var lone=s with{Deck=[DefectPolicy.Card("DefendDefect")!]};
+    Check(new StrategicValue(lone).BestEnchant("NIMBLE",2)>0,"a basic-only legal pool remains usable");
+    Check(v.Enchant(DefectPolicy.Card("Zap")!,"NIMBLE",2)<0,"no block is ineligible for Nimble");
+});
+Test("Zap upgrade cannot crowd out the observed functional upgrade",()=>
+{
+    var s=EventRegression("8");
+    var best=s.Deck.Where(c=>c.CanUpgrade).OrderByDescending(c=>DefectStrategy.Upgrade(s,c)).First();
+    Check(best.ClassName=="Modded","actual floor eight should upgrade Modded instead of Zap or Dualcast");
+    var dark=s with{Deck=[..s.Deck,DefectPolicy.Card("Darkness")!]};
+    Check(DefectStrategy.Upgrade(dark,DefectPolicy.Card("Dualcast")!)>DefectStrategy.Upgrade(s,DefectPolicy.Card("Dualcast")!),"Dark decks retain Dualcast upgrade value");
+});
+Test("Enthralled is not priced as an ordinary removable curse",()=>
+{
+    var s=EventRegression("34");
+    double Rose(RunSnapshot state)=>RelicValue.Evaluate("BLOOD_SOAKED_ROSE",state,true).Value;
+    Check(Rose(s)<RelicValue.Evaluate("LORDS_PARASOL",s,true).Value,"observed small deck must not choose Rose over Parasol");
+    var hand=s with{Deck=[..s.Deck,DefectPolicy.Card("Scavenge")!,DefectPolicy.Card("Compact")!]};
+    Check(Rose(hand)<0,"hand exhaust and status cleanup do not solve a locked hand");
+    Check(Rose(s with{Relics=[..s.Relics,"RELIC.TOASTY_MITTENS"]})>Rose(s)+10,"automatic start-of-turn exhaust is a verified exception");
+    Check(new StrategicValue(s).EnthralledCost()>new StrategicValue(s with{Deck=[..s.Deck,..s.Deck]}).EnthralledCost(),"small decks re-encounter the curse more often");
+});
+Test("First Echo Form can be invested in before an existing Power engine",()=>
+{
+    var s=EventRegression("17");var echo=DefectPolicy.Card("EchoForm")!;
+    Check(Score(s,echo)>Score(s,DefectPolicy.Card("IceLance")!),"actual boss reward should invest in its first long-fight engine");
+    var duplicate=s with{Deck=[..s.Deck,echo]};
+    Check(!policy.Evaluate(duplicate,[Pick(echo)]).Options[0].Parts.Any(p=>p.Reason.StartsWith("缺少长战引擎")),"not a duplicate-power bonus");
+    var low=s with{Hp=8};
+    Check(Score(s,echo)>Score(low,echo),"immediate survival still limits speculative investment");
+});
+RunSnapshot LongFightRegression(string floor)
+{
+    using var doc=JsonDocument.Parse(File.ReadAllText(Path.Combine(AppContext.BaseDirectory,"Fixtures","defect-long-fight-regression.json")));
+    return doc.RootElement.GetProperty(floor).Deserialize<RunSnapshot>(new JsonSerializerOptions{PropertyNameCaseInsensitive=true})!;
+}
+Test("Early Storm investment beats weak filler without crossing a physical commitment",()=>
+{
+    var s=LongFightRegression("3");var storm=DefectPolicy.Card("Storm")!;
+    Check(Score(s,storm)>Score(s,DefectPolicy.Card("Synthesis")!),"actual early Storm should outrank weak Synthesis");
+    var physical=s with{Deck=[..s.Deck,DefectPolicy.Card("Claw")!]};
+    Check(Score(physical,storm)>Score(physical with{Deck=[..physical.Deck,DefectPolicy.Card("Claw")!,DefectPolicy.Card("Feral")!]},storm),"one Claw is tentative; supported Claws impose a stronger switching cost");
+    Check(!policy.Evaluate(physical,[Pick(storm)]).Options[0].Parts.Any(p=>p.Reason.StartsWith("前期首张雷暴")),"physical commitment receives no early Storm bonus");
+});
+Test("Frost quantity is not Hailstorm damage scaling",()=>
+{
+    var s=LongFightRegression("36");
+    Check(Score(s,DefectPolicy.Card("Hailstorm")!)<0,"observed late Hailstorm should not be preferred over skip");
+    var p=policy.Evaluate(s,[Pick(DefectPolicy.Card("Hailstorm")!)]).Options[0];
+    Check(!p.Parts.Any(x=>x.Reason=="已有组件形成方向，保留有限未来投资"&&x.Value>0),"generic orb affinity must not inflate flat Hailstorm damage");
+});
+Test("Boss growth requires a damage chain rather than accumulated defensive components",()=>
+{
+    var s=LongFightRegression("47");
+    CardSnapshot C(string n,bool up=false)=>DefectPolicy.Card(n,up)!;
+    Check(DeckReadiness.Read(s).Growth<.65,"actual unfocused deck must not be near maximum long-fight growth");
+    var frost=s with{Deck=[C("Glacier"),C("Glacier"),C("Coolheaded",true),C("Defragment",true),C("Hotfix"),C("Capacitor"),C("Loop")],Relics=[]};
+    Check(DeckReadiness.Read(frost).Growth==0,"frost/focus/block without a damage route is not damage growth");
+    var dark=frost with{Deck=[..frost.Deck,C("Darkness",true),C("Darkness",true),C("Dualcast",true),C("Hologram",true)]};
+    Check(DeckReadiness.Read(dark).Growth>DeckReadiness.Read(s).Growth,"actual Dark generation/passive/evoke chain beats unrelated component count");
+    var claw=frost with{Deck=[C("Claw"),C("Claw"),C("Claw"),C("Feral"),C("AllForOne"),C("Hologram",true),C("Overclock")]};
+    var status=frost with{Deck=[C("FlakCannon"),C("Compact"),C("Iteration"),C("Turbo"),C("Overclock"),C("FightThrough")]};
+    Check(DeckReadiness.Read(claw).Growth>.5&&DeckReadiness.Read(status).Growth>.5,"physical and status engines retain their separate route to long-fight output");
+});
+RunSnapshot FeedbackRegression(string floor)
+{
+    using var doc=JsonDocument.Parse(File.ReadAllText(Path.Combine(AppContext.BaseDirectory,"Fixtures","defect-feedback-regression.json")));
+    return doc.RootElement.GetProperty(floor).GetProperty("state").Deserialize<RunSnapshot>(new JsonSerializerOptions{PropertyNameCaseInsensitive=true})!;
+}
+Test("Iteration compensates real self-created statuses without pretending to remove them",()=>
+{
+    var s=FeedbackRegression("13");var c=DefectPolicy.Card("Iteration")!;
+    Check(Score(s,c)>0,"first Iteration with Turbo and Overclock should be worth taking");
+    var noSources=s with{Deck=s.Deck.Where(x=>x.ClassName is not ("Turbo" or "Overclock")).ToArray()};
+    Check(Score(s,c)>Score(noSources,c),"own status sources must matter");
+    Check(!DefectPolicy.Tag(c,"status_clear"),"Iteration draws, does not remove status cards");
+});
+Test("weak duplicate resources do not win against skip by a fraction of a point",()=>
+{
+    Check(Score(FeedbackRegression("24"),DefectPolicy.Card("Turbo")!)<0,"actual second Turbo was only 0.05");
+    Check(Score(FeedbackRegression("45"),DefectPolicy.Card("Hotfix")!)<0,"actual second Hotfix was only 0.45");
+});
+Test("unupgraded Coolheaded is utility rather than an extra orb engine",()=>
+{
+    var s=FeedbackRegression("31");var c=DefectPolicy.Card("Coolheaded")!;
+    Check(Score(s,c)<Score(s,DefectPolicy.Card("Rainbow")!),"actual Rainbow has more marginal value than unupgraded Coolheaded");
+    Check(Score(s,DefectPolicy.Card("Coolheaded",true)!)>Score(s,c)+2,"upgraded real net draw retains its value");
+    var shop=FeedbackRegression("6");
+    Check(ShopPolicy.Evaluate(shop,[new("cool",c,48)],100,shop.Gold).Recommendation?.Kind=="remove","133 gold must not spend on utility instead of removal");
+});
+Test("first Supercritical supports the recorded expensive power startup",()=>
+{
+    var s=FeedbackRegression("39");
+    Check(Score(s,DefectPolicy.Card("Supercritical")!)>Score(s,DefectPolicy.Card("SignalBoost")!),"actual startup need should precede an additional copy effect");
+    var noPowers=s with{Deck=s.Deck.Where(c=>c.Type!="Power").ToArray()};
+    var eval=policy.Evaluate(noPowers,[Pick(DefectPolicy.Card("Supercritical")!)]);
+    Check(!eval.Options[0].Parts.Any(p=>p.Reason.StartsWith("首张超临界态帮助高费能力")),"bonus requires actual expensive powers");
+});
+Test("verified post-boss recovery affects acquisition only and never rewrites current HP",()=>
+{
+    var s=FeedbackRegression("33");var projected=s with{HpAfterPendingAncient=60};
+    Check(s.Hp==2&&projected.Hp==2,"actual HP remains untouched");
+    Check(Score(projected,DefectPolicy.Card("EchoForm")!)>Score(projected,DefectPolicy.Card("Spinner")!),"invest in Echo at verified recovery boundary");
+    Check(Score(projected,DefectPolicy.Card("EchoForm")!)>Score(s,DefectPolicy.Card("EchoForm")!),"ordinary low HP without verified recovery retains caution");
+    Check(Score(s with{HpAfterPendingAncient=999},DefectPolicy.Card("EchoForm")!)==Score(s,DefectPolicy.Card("EchoForm")!),"invalid recovery data cannot inflate valuation");
+});
+Test("Compact repeat requires high actual status burden rather than generic insurance",()=>
+{
+    CardSnapshot C(string n,bool u=false)=>DefectPolicy.Card(n,u)!;
+    var s=run with{Character="Defect",Act=1,Hp=39,MaxHp=77,Deck=[C("Turbo"),C("Overclock")]};
+    Check(Score(s,C("Compact"))>0,"first Compact remains useful");
+    foreach(var upgraded in new[]{false,true})foreach(var hp in new[]{5,39,77})
+    {
+        var covered=s with{Hp=hp,Deck=[..s.Deck,C("Compact",upgraded)]};
+        foreach(var offeredUpgrade in new[]{false,true})
+            Check(Score(covered,C("Compact",offeredUpgrade))<0,"second Compact loses to skip regardless of upgrade and urgency");
+    }
+    var heavy=s with{Deck=[..s.Deck,C("Compact"),C("FightThrough"),C("GunkUp")]};
+    Check(Score(heavy,C("Compact"))>0,"heavy generated statuses may justify second Compact");
+    Check(Score(heavy with{Deck=[..heavy.Deck,C("Compact")]},C("Compact"))<0,"do not extend to third copy");
+    Check(Score(heavy with{Deck=[..heavy.Deck,C("FlakCannon")]},C("Compact"))<0,"existing alternative clearance raises second-copy threshold");
+});
+Test("Output investment respects established physical versus orb direction",()=>
+{
+    CardSnapshot C(string n)=>DefectPolicy.Card(n)!;
+    var s=run with{Character="Defect",Act=1,Hp=60,MaxHp=75,Deck=[C("Hologram"),C("Turbo"),C("Leap")]};
+    var parts=policy.Evaluate(s,[Pick(C("Storm"))]).Options[0].Parts;
+    Check(parts.Any(p=>p.Reason.StartsWith("尚缺长战输出主干")),"utility alone cannot mark damage engine complete");
+    Check(Score(s with{Deck=[..s.Deck,C("Claw"),C("Claw")]},C("Storm"))<0,"physical deck does not start orb engine");
+    Check(Score(s with{Deck=[..s.Deck,C("Storm"),C("Thunder"),C("Defragment")]},C("Claw"))<0,"orb deck does not start Claw");
+});
+Test("Actual Compact and first-boss Voltaic choices retain contextual exceptions",()=>
+{
+    using var doc=JsonDocument.Parse(File.ReadAllText(Path.Combine(AppContext.BaseDirectory,"Fixtures","defect-live-0638.json")));
+    var json=new JsonSerializerOptions{PropertyNameCaseInsensitive=true};
+    foreach(var row in doc.RootElement.EnumerateArray())
+    {
+        var s=row.GetProperty("state").Deserialize<RunSnapshot>(json)!;
+        var choices=row.GetProperty("options").Deserialize<DecisionOption[]>(json)!;
+        var result=policy.Evaluate(s,choices);
+        var best=choices.Single(c=>c.Key==result.RecommendedKey);
+        if(s.Floor==13)Check(best.Kind=="skip","recorded second Compact should skip");
+        else
+        {
+            Check(best.Card?.ClassName=="Voltaic","recorded first-boss choice invests in missing damage");
+            var v=DefectPolicy.Card("Voltaic")!;
+            Check(DefectStrategy.Upgrade(s,v)>DefectStrategy.Upgrade(s,DefectPolicy.Card("Zap")!),"follow acquisition with upgrade priority");
+            var unsupported=s with{Deck=s.Deck.Where(c=>c.ClassName!="Zap").ToArray(),Relics=[]};
+            Check(Score(unsupported,v)<0,"no Lightning seed is not a working terminal");
+            var physical=s with{Deck=[..s.Deck,DefectPolicy.Card("Claw")!,DefectPolicy.Card("AllForOne")!]};
+            Check(Score(physical,v)<0,"do not switch established physical deck to Voltaic");
+        }
+    }
+});
+Test("Actual merchant Thunder completes upgraded Voltaic rather than buying generic Loop",()=>
+{
+    using var doc=JsonDocument.Parse(File.ReadAllText(Path.Combine(AppContext.BaseDirectory,"Fixtures","defect-shop-0638.json")));
+    var s=doc.RootElement.GetProperty("state").Deserialize<RunSnapshot>(new JsonSerializerOptions{PropertyNameCaseInsensitive=true})!;
+    Check(s.Gold==103,"captured pre-purchase budget");
+    var stock=new[]{new ShopCard("thunder",DefectPolicy.Card("Thunder")!,72),new ShopCard("barrage",DefectPolicy.Card("Barrage")!,50),new ShopCard("charge",DefectPolicy.Card("ChargeBattery")!,25)};
+    Check(ShopPolicy.Evaluate(s,stock,null,103).Recommendation?.Key=="thunder","affordable synergistic Thunder may use reserve");
+    Check(Score(s,DefectPolicy.Card("Loop")!)<0,"orb deck alone does not justify Loop");
+    var bare=s with{Deck=s.Deck.Where(c=>c.ClassName!="Voltaic").ToArray()};
+    Check(Score(s,DefectPolicy.Card("Thunder")!)>Score(bare,DefectPolicy.Card("Thunder")!),"specific owned amplifier accounts for extra value");
+    Check(policy.Evaluate(s,[Pick(DefectPolicy.Card("Thunder")!)]).Options[0].Parts.Any(p=>p.Reason.StartsWith("已有电流相生批量")&&p.Value>0),"owned amplifier has an explicit contribution");
+    Check(ShopPolicy.Evaluate(s with{Gold=71},stock,null,71).Recommendation?.Key!="thunder","cannot buy unaffordable combo");
+});
+Test("Concrete engine synergy survives generic cap without rewarding filler or duplicate cores",()=>
+{
+    CardSnapshot C(string n)=>DefectPolicy.Card(n)!;
+    var s=run with{Character="Defect",Act=2,Hp=60,MaxHp=75,Deck=[DefectPolicy.Card("Voltaic",true)!,C("Storm"),C("Subroutine"),C("Defragment"),C("BallLightning"),C("Glacier"),C("Turbo")]};
+    double Restored(RunSnapshot state,string n)=>policy.Evaluate(state,[Pick(C(n))]).Options[0].Parts.Where(p=>p.Reason.StartsWith("明确核心搭档")).Sum(p=>p.Value);
+    Check(Restored(s,"Thunder")>0,"actual power/electric synergy must survive cap");
+    Check(Score(s,C("Thunder"))>Score(s,C("ChargeBattery")),"output terminal beats another ordinary block");
+    Check(Restored(s,"ChargeBattery")==0,"generic tags cannot claim core budget");
+    Check(Restored(s with{Deck=[..s.Deck,C("Thunder")]},"Thunder")==0,"duplicate not given first-core budget");
+    Check(Restored(s with{Deck=[C("Glacier"),C("Turbo")]},"Thunder")==0,"removing partners removes budget");
+    Check(Score(s,C("SweepingBeam"))<Score(s with{Act=2,Deck=[C("Hologram"),C("Turbo"),C("Leap")]},C("SweepingBeam")),"existing damage engine lowers marginal need for bridge damage");
+});
+Test("Defect engine relic shop priority checks partners, alternatives and affordability",()=>
+{
+    CardSnapshot C(string n)=>DefectPolicy.Card(n)!;
+    var s=run with{Character="Defect",Act=2,Hp=60,MaxHp=75,Gold=200,Deck=[C("Storm"),C("Thunder"),C("EchoForm"),C("Defragment"),C("Glacier"),C("Turbo")]};
+    var hand=new ShopRelic("hand","MUMMIFIED_HAND","hand",180);
+    Check(PriorityShopPolicy.Evaluate(s,[hand],[new("filler",C("ChargeBattery"),50)])?.Relic.Key=="hand","save budget for actual engine relic");
+    Check(PriorityShopPolicy.Evaluate(s with{Gold=179},[hand],[])==null,"cannot spend missing gold");
+    var competing=s with{Deck=[C("Storm"),C("Thunder"),C("EchoForm"),C("Glacier"),C("BallLightning"),C("LightningRod")]};
+    Check(PriorityShopPolicy.Evaluate(competing,[hand with{Price=200}],[new("focus",C("Defragment"),0)])==null,"higher-value card prevents engine relic priority");
+    Check(PriorityShopPolicy.Evaluate(s with{Deck=[C("Claw"),C("AllForOne"),C("Hologram")]},[hand],[])==null,"physical deck without powers cannot claim hand synergy");
+    Check(PriorityShopPolicy.Evaluate(s,[hand],[new("echo",C("EchoForm") with{Enchantment="ENCHANTMENT.UNKNOWN"},50)])?.Relic.Key=="hand","unsupported card does not invent alternative value");
+});
+Test("Actual boss offers distinguish tentative components from damage engines",()=>
+{
+    using var doc=JsonDocument.Parse(File.ReadAllText(Path.Combine(AppContext.BaseDirectory,"Fixtures","defect-damage-plan-0639.json")));
+    var json=new JsonSerializerOptions{PropertyNameCaseInsensitive=true};
+    foreach(var row in doc.RootElement.EnumerateArray())
+    {
+        var s=row.GetProperty("state").Deserialize<RunSnapshot>(json)!;
+        var options=row.GetProperty("options").Deserialize<DecisionOption[]>(json)!;
+        var result=policy.Evaluate(s,options);
+        Check(options.Single(o=>o.Key==result.RecommendedKey).Card?.ClassName==row.GetProperty("expected").GetString(),row.GetProperty("label").GetString()!);
+    }
+});
+Test("Adaptive Strike investment uses normal copies and respects established orbs",()=>
+{
+    CardSnapshot C(string n)=>DefectPolicy.Card(n)!;
+    var s=run with{Character="Defect",Act=1,Deck=[C("Glacier"),C("Coolheaded"),C("Hologram"),C("Turbo"),C("Scavenge")]};
+    Check(Score(s,C("AdaptiveStrike"))>Score(s,C("Reboot")),"Frost defense and utility should welcome damage core");
+    foreach(var n in new[]{"Ftl","Sunder","Null"})Check(Score(s,C("AdaptiveStrike"))>Score(s,C(n)),"prefer core to bridge "+n);
+    var established=s with{Deck=[..s.Deck,C("Storm"),C("Thunder"),C("Defragment")]};
+    Check(Score(established,C("AdaptiveStrike"))<0,"do not abandon established electric damage");
+    var dark=s with{Deck=[..s.Deck,C("ConsumingShadow"),C("Null")]};
+    Check(Score(dark,C("AdaptiveStrike"))<0,"dark source plus actual seed remains a damage direction");
+    var tentative=s with{Deck=[C("Spinner"),C("ChargeBattery")]};
+    Check(Score(tentative,C("GoForTheEyes"))<Score(tentative,C("AdaptiveStrike")),"tentative orbs permit options but output core outranks weak support");
+    Check(Score(tentative,C("Scrape"))<0,"draw without zero-cost targets is not a missing damage core");
+    Check(Score(s with{Deck=[..s.Deck,C("AdaptiveStrike")]},C("AdaptiveStrike"))<Score(s,C("AdaptiveStrike"))-5,"first core investment cannot reward duplicates");
+});
+Test("Bridge attack budget accounts for role overlap without banning usable partners",()=>
+{
+    CardSnapshot C(string n)=>DefectPolicy.Card(n)!;
+    var s=run with{Character="Defect",Act=3,Deck=[C("SweepingBeam"),C("FocusedStrike"),C("Ftl"),C("Reboot"),C("Hologram"),C("Turbo")]};
+    Check(Score(s,C("Sunder"))<0,"late attack pile cannot keep buying bridge damage");
+    Check(Score(s,C("Null"))<0,"late new dark branch must justify itself");
+    var physical=s with{Deck=[C("AdaptiveStrike"),C("AllForOne"),C("Turbo")]};
+    var dark=s with{Deck=[C("Darkness"),C("Defragment"),C("MultiCast")]};
+    bool Budget(RunSnapshot x,string n)=>policy.Evaluate(x,[Pick(C(n))]).Options[0].Parts.Any(p=>p.Reason.StartsWith("过渡攻击共用"));
+    Check(!Budget(physical,"Ftl"),"retrievable FTL is a concrete physical partner");
+    Check(!Budget(dark,"Null"),"Null can seed an existing dark engine");
+    Check(Score(s with{Act=1,Deck=[C("StrikeDefect"),C("DefendDefect")]},C("Sunder"))>0,"first early bridge still allowed");
+});
+Test("All for One completion requires reusable retrieval, energy and damage targets",()=>
+{
+    CardSnapshot C(string n,bool up=false)=>DefectPolicy.Card(n,up)!;
+    var s=run with{Character="Defect",Act=1,Deck=[C("Hologram",true),C("Turbo"),C("Ftl")]};
+    double Completion(RunSnapshot x)=>policy.Evaluate(x,[Pick(C("AllForOne"))]).Options[0].Parts.Where(p=>p.Reason.StartsWith("这张牌补齐")).Sum(p=>p.Value);
+    Check(Completion(s)>0,"owned three pieces make a concrete loop investment");
+    foreach(var missing in new[]{"Hologram","Turbo","Ftl"})Check(Completion(s with{Deck=s.Deck.Where(c=>c.ClassName!=missing).ToArray()})==0,"missing "+missing+" cannot invent completion");
+    Check(Completion(s with{Deck=[C("Hologram"),C("Turbo"),C("Ftl")]})==0,"exhausting Hologram is not repeatable");
+});
+Test("normal fight losses reach route risk without inventing another act's danger",()=>
+{
+    var graph=new[]{new RouteNode("fight","Monster",[]),new RouteNode("camp","RestSite",[])};
+    var s=run with{Hp=24,Act=2,RecentBattles=[]};
+    var baseline=RoutePolicy.Evaluate(s,graph,["fight","camp"],new());
+    var observed=s with{RecentBattles=[new(2,"Monster",null,35,25,1,80)]};
+    var adjusted=RoutePolicy.Evaluate(observed,graph,["fight","camp"],new());
+    Check(adjusted.Options.Single(o=>o.Node=="fight").RiskPenalty>baseline.Options.Single(o=>o.Node=="fight").RiskPenalty,
+        "heavy ordinary damage must increase danger, even if potion/healing hid net loss");
+    Check(adjusted.RecommendedNode=="camp","recovery preferred to observed ordinary combat danger");
+    var oldAct=RoutePolicy.Evaluate(s with{RecentBattles=[new(1,"Monster",null,70,0,0,80)]},graph,["fight","camp"],new());
+    Check(oldAct.Options.Single(o=>o.Node=="fight").Score==baseline.Options.Single(o=>o.Node=="fight").Score,
+        "act one damage is not attributed to act two encounters");
+});
+Test("early Defect elite risk respects missing engine and observed damage",()=>
+{
+    CardSnapshot C(string n)=>DefectPolicy.Card(n)!;
+    var s=run with{Character="Defect",Act=1,Hp=60,MaxHp=80,Deck=[C("StrikeDefect"),C("DefendDefect"),C("Zap"),C("Dualcast"),C("Hologram"),C("DoubleEnergy")]};
+    var graph=new[]{new RouteNode("elite","Elite",[]),new RouteNode("camp","RestSite",[])};
+    var plan=RoutePolicy.Evaluate(s,graph,["elite","camp"],new());
+    Check(plan.RecommendedNode=="camp","tools without an engine prefer preparation to elite");
+    Check(plan.Options.Single(o=>o.Node=="elite").ProjectedHp<=30,"unformed deck budgets at least 30 elite damage before upgrades");
+    var hurt=RoutePolicy.Evaluate(s with{RecentBattles=[new(1,"Elite",null,50,30,1,80)]},graph,["elite","camp"],new());
+    Check(hurt.Options.Single(o=>o.Node=="elite").ProjectedHp<=15,"recent heavy damage keeps 90 percent risk despite healing");
+    var forced=RoutePolicy.Evaluate(s,graph,["elite"],new());
+    Check(forced.RecommendedNode=="elite","legal mandatory elite remains traversable");
+    var longMap=s with{Floor=100};
+    Check(RoutePolicy.Evaluate(longMap,graph,["elite","camp"],new()).Options[0].Score==plan.Options[0].Score,"extra floors do not turn first act into later act");
+});
+Test("foresight invests in cores without merging exclusive rewards or mixing archetypes",()=>
+{
+    CardSnapshot C(string n)=>DefectPolicy.Card(n)!;
+    var s=run with{Character="Defect",Act=1,Hp=60,MaxHp=75,Deck=[C("StrikeDefect"),C("DefendDefect"),C("Zap"),C("Hologram")]};
+    RewardBranch B(params string[] names)=>new("test",[new("2,3","Monster",1,.85,names.Select(C).ToArray())]);
+    RewardForesight F(params RewardBranch[] branches)=>new("test",true,branches,"conditional test");
+    double Bonus(RunSnapshot x,string n)=>DefectForesight.Adjustments(x,C(n)).Sum(p=>p.Value);
+    Check(Bonus(s,"AdaptiveStrike")==0,"absent forecast cannot invent a future core");
+    var future=s with{Foresight=F(B("AllForOne","Scrape","Hologram"))};
+    Check(Bonus(future,"AdaptiveStrike")>=8,"actual complementary preview makes first damage core a material investment");
+    Check(Bonus(future,"AdaptiveStrike")==Bonus(s with{Foresight=F(B("AllForOne"))},"AdaptiveStrike"),"three options in one reward are not three owned cards");
+    Check(Bonus(s with{Foresight=F(B("AllForOne"),B("Scrape"))},"AdaptiveStrike")==Bonus(future,"AdaptiveStrike"),"mutually exclusive route branches do not add together");
+    Check(Bonus(future with{Foresight=future.Foresight! with{SourceUnchanged=false}},"AdaptiveStrike")==0,"invalidated state cannot affect scoring");
+    Check(Bonus(future with{Deck=[C("Storm"),C("Thunder"),C("Defragment")]},"AdaptiveStrike")==0,"foresight cannot force physical into committed orb deck");
+    Check(Bonus(future with{Deck=[..s.Deck,C("AdaptiveStrike")]},"AdaptiveStrike")==0,"future supports do not reward redundant core copies");
+    Check(Bonus(future,"DefendDefect")==0,"generic filler receives no foresight bonus");
+    Check(DeckReadiness.Read(s)==DeckReadiness.Read(future),"future rewards never inflate present combat readiness");
+});
+Test("free card selection completes an available damage engine before more utility",()=>
+{
+    CardSnapshot C(string n)=>DefectPolicy.Card(n)!;
+    var s=run with{Character="Defect",Act=1,Hp=60,MaxHp=75,Deck=[C("StrikeDefect"),C("DefendDefect"),C("Zap"),C("Dualcast"),C("Hologram"),C("Turbo"),C("DoubleEnergy")]};
+    var result=policy.Evaluate(s,[new("core","AdaptiveStrike","card",Card:C("AdaptiveStrike")),new("tool","Coolheaded","card",Card:C("Coolheaded")),new("skip","skip","skip")]);
+    Check(result.RecommendedKey=="core","existing support can make Adaptive Strike the first real engine");
+    var alone=policy.Evaluate(s,[new("core","AdaptiveStrike","card",Card:C("AdaptiveStrike"))]);
+    Check(!alone.Options[0].Parts.Any(p=>p.Reason.StartsWith("现有组件已齐")),"completion priority does not alter standalone shop/card quotes");
+    var noSupport=policy.Evaluate(s with{Deck=[C("StrikeDefect"),C("DefendDefect")]},[new("core","AdaptiveStrike","card",Card:C("AdaptiveStrike")),new("skip","skip","skip")]);
+    Check(!noSupport.Options[0].Parts.Any(p=>p.Reason.StartsWith("现有组件已齐")),"completion requires owned support, not an imagined deck");
+});
+Test("shared potion replacement respects tiers defense and merchant opportunities",()=>
+{
+    foreach(var character in new[]{"Ironclad","Defect","Silent"})
+    {
+        var s=run with{Character=character};
+        var fire=new PotionCandidate("FirePotion","Common");var block=new PotionCandidate("BlockPotion","Common");
+        var rare=new PotionCandidate("FairyInABottle","Rare");var rainbow=new PotionCandidate("EntropicBrew","Rare");var foul=new PotionCandidate("FoulPotion","Event");
+        Check(PotionPolicy.Replacement(s,[fire],block)==0,"same tier defense wins");
+        Check(PotionPolicy.Replacement(s,[block],fire)==-1,"no reverse churn");
+        Check(PotionPolicy.Replacement(s,[block],rare)==0,"higher tier precedes defense preference");
+        Check(PotionPolicy.Replacement(s,[rare],rainbow)==-1,"revival and refill tie at highest priority");
+        Check(PotionPolicy.Replacement(s,[rainbow],rare)==-1,"retain rainbow");
+        var shop=s with{Commerce=new(1,1,0,0)};
+        Check(PotionPolicy.Replacement(shop,[rare],foul)==-1,"foul cannot displace revival protection");
+        Check(PotionPolicy.Replacement(shop,[rainbow],foul)==-1,"top priority ties preserve existing potion");
+        Check(PotionPolicy.Replacement(shop with{Relics=["RELIC.ECTOPLASM"]},[rare],foul)==-1,"ectoplasm prevents merchant money priority");
+        Check(PotionPolicy.Replacement(s,[fire],foul)==-1,"no shop evidence no foul replacement");
+        Check(PotionPolicy.Replacement(s,[foul],block)==0,"stranded foul frees a useful combat slot");
+        Check(PotionPolicy.Replacement(s,[new("Custom","Common",false)],rare)==-1,"unknown inventory protected");
+        Check(PotionPolicy.Replacement(s with{Relics=["RELIC.SOZU"]},[fire],rare)==-1,"Sozu cannot discard stock for unobtainable reward");
+    }
+});
+Test("Ironclad shop retains modeled enchanted offers",()=>
+{
+    var s=run with{Character="Ironclad",Gold=300};
+    var card=CardRegistry.All["Offering"].Basic with{Modified=true,Enchantment="ENCHANTMENT.SWIFT",EnchantmentAmount=2};
+    Check(ShopPolicy.Evaluate(s,[new("offering",card,25)],null,300).Recommendation?.Key=="offering","modeled modified card receives a recommendation");
+    Check(ShopPolicy.Evaluate(s,[new("unknown",card with{Enchantment="ENCHANTMENT.CUSTOM"},25)],null,300).Recommendation==null,"unknown enchantment still does not authorize a purchase");
+});
+Test("shared potion purchase values purpose and final boss preparation",()=>
+{
+    foreach(var ch in new[]{"Ironclad","Defect"})
+    {
+        var s=run with{Character=ch,Act=3,Gold=200,PotionSlots=[null,null],Map=new(3,15,12,15,"test"),NextNodeTypes=["Boss"]};
+        Check(PotionPolicy.PurchaseScore(s,new("ExplosiveAmpoule","Common"),50)<0,"do not pay for tiny final-boss damage");
+        Check(PotionPolicy.PurchaseScore(s,new("FairyInABottle","Rare"),100)>PotionPolicy.PurchaseScore(s,new("BlockPotion","Common"),25),"revival precedes cheap refill");
+        Check(PotionPolicy.PurchaseScore(s,new("EntropicBrew","Rare"),100)>PotionPolicy.PurchaseScore(s,new("BlockPotion","Common"),25),"refill precedes cheap refill");
+        Check(PotionPolicy.PurchaseScore(s with{PotionSlots=["POTION.FIRE_POTION"]},new("BlockPotion","Common"),20)<0,"no purchased potion without a free slot");
+        Check(PotionPolicy.Replacement(s,[new("GhostInAJar","Rare")],new("FairyInABottle","Rare"))==0,"revival exceeds ordinary rare defense");
+        Check(PotionPolicy.Replacement(s with{Commerce=new(1,1,0,0)},[new("FirePotion","Common")],new("FoulPotion","Event"))==0,"foul still useful with reachable merchant");
+        Check(RelicValue.Shop("BAG_OF_PREPARATION",s)!=null,"shared relic recommendation supports both characters");
+        Check(RelicValue.Shop("CUSTOM_UNKNOWN",s)==null,"unknown relic is not mislabeled as modeled");
+    }
+    var physical=run with{Character="Defect",Deck=[DefectPolicy.Card("Claw")!,DefectPolicy.Card("AllForOne")!]};
+    var orb=physical with{Deck=[DefectPolicy.Card("Darkness")!,DefectPolicy.Card("MultiCast")!]};
+    Check(PotionPolicy.Evaluate(orb,new("FocusPotion","Common"))!.Value> PotionPolicy.Evaluate(physical,new("FocusPotion","Common"))!.Value,"focus depends on orb sources");
+});
+Test("established dark engine does not invest in an unrelated lightning branch",()=>
+{
+    CardSnapshot C(string n)=>DefectPolicy.Card(n)!;
+    var s=run with{Character="Defect",Act=3,Deck=[C("Darkness"),C("MultiCast"),C("Hologram"),C("Coolheaded")]};
+    foreach(var n in new[]{"Storm","Thunder"})
+    {
+        var result=policy.Evaluate(s,[new("card",n,"card",Card:C(n)),new("skip","skip","skip")]);
+        Check(result.Options[0].Parts.Any(p=>p.Reason.StartsWith("黑球蓄积")),"dark branch penalty applied");
+        var f=s with{Foresight=new("x",true,[new("p",[new("n","Monster",1,1,[C("Voltaic")])])],"test")};
+        Check(!DefectForesight.Adjustments(f,C(n)).Any(),"future lightning cannot cancel dark commitment");
+        var lightning=policy.Evaluate(s with{Deck=[C("Storm"),C("Voltaic")]},[new("card",n,"card",Card:C(n))]);
+        Check(!lightning.Options[0].Parts.Any(p=>p.Reason.StartsWith("黑球蓄积")),"lightning synergy retained");
+    }
+});
+Test("foresight changes acquisition for reverse dark assembly across choice sources",()=>
+{
+    CardSnapshot C(string n)=>DefectPolicy.Card(n)!;
+    var s=run with{Character="Defect",Hp=60,MaxHp=75,Gold=200,Deck=[C("StrikeDefect"),C("DefendDefect"),C("Zap"),C("Dualcast")]};
+    var f=new RewardForesight("test",true,[new("p",[new("1","Monster",1,.85,[C("Darkness")])])],"test");
+    var options=new[]{new DecisionOption("core","MultiCast","card",Card:C("MultiCast")),new("tool","Leap","card",Card:C("Leap")),Skip()};
+    var before=policy.Evaluate(s,options);var after=policy.Evaluate(s with{Foresight=f},options);
+    Check(before.RecommendedKey!="core"&&after.RecommendedKey=="core","future Darkness must actually change the current choice to Multi-Cast");
+    var shop=ShopPolicy.Evaluate(s with{Foresight=f},[new("core",C("MultiCast"),30)],null,200);
+    Check(shop.Recommendation?.Key=="core"&&shop.Choices[0].Reasons.Any(r=>r.Contains("辉眼")),"shop applies and explains the same investment after price cost");
+    Check(new StrategicValue(s with{Foresight=f}).Add(C("MultiCast"))>new StrategicValue(s).Add(C("MultiCast"))+8,"event and ancient card valuation use the same future evidence");
+    Check(DeckReadiness.Read(s)==DeckReadiness.Read(s with{Foresight=f}),"future plans never improve current combat readiness");
+});
+Test("foresight shop plans respect total cash and invalidated evidence",()=>
+{
+    CardSnapshot C(string n)=>DefectPolicy.Card(n)!;
+    var s=run with{Character="Defect",Gold=100,Deck=[C("StrikeDefect"),C("DefendDefect")]};
+    var f=new RewardForesight("test",true,[new("p",[new("a","Shop",1,1,[C("Overclock")],[80]),new("b","Shop",1,1,[C("Turbo")],[80])])],"test");
+    var low=DefectBuildForecast.Evaluate(s with{Foresight=f},C("FlakCannon"));
+    var high=DefectBuildForecast.Evaluate(s with{Gold=200,Foresight=f},C("FlakCannon"));
+    Check(low.Value>0&&high.Value>low.Value,"two shops cannot each spend the same gold");
+    Check(DefectBuildForecast.Evaluate(s with{Gold=0,Foresight=f},C("FlakCannon")).Value==0,"unaffordable stock supplies no investment bonus");
+    var unknownPrice=f with{Branches=[new("p",[new("shop","Shop",1,1,[C("Overclock")],[])])]};
+    Check(DefectBuildForecast.Evaluate(s with{Foresight=unknownPrice},C("FlakCannon")).Value==0,"missing shop prices never imply free goods");
+    Check(DefectBuildForecast.Evaluate(s with{Foresight=f with{SourceUnchanged=false}},C("FlakCannon")).Value==0,"stale evidence cannot guide a build");
+});
+Test("future pages and routes cannot be combined into imaginary packages",()=>
+{
+    CardSnapshot C(string n)=>DefectPolicy.Card(n)!;
+    var s=run with{Character="Defect",Deck=[C("StrikeDefect")]};
+    RewardBranch B(params CardSnapshot[] cards)=>new("p",[new("a","Monster",1,1,cards)]);
+    double V(params RewardBranch[] branches)=>DefectBuildForecast.Evaluate(s with{Foresight=new("f",true,branches,"test")},C("FlakCannon")).Value;
+    Check(V(B(C("Overclock"),C("Turbo")))==V(B(C("Overclock"))),"one page supplies only one card");
+    Check(V(B(C("Overclock")),B(C("Turbo")))==V(B(C("Overclock"))),"exclusive paths cannot supply two cards");
+});
+Test("multiplayer-only cards abstain without blocking known rewards for either character",()=>
+{
+    foreach(var character in new[]{"Ironclad","Defect"})
+    foreach(var count in new[]{1,2,4})
+    {
+        var s=run with{Character=character,PlayerCount=count,MultiplayerSession=true,Gold=100};
+        var known=character=="Defect"?DefectPolicy.Card("Glacier")!:CardRegistry.All["Offering"].Basic;
+        var coop=new DecisionOption("coop","Cooperative card","card",Card:known with{MultiplayerOnly=true});
+        var choices=new[]{coop,new DecisionOption("known",known.Name,"card",Card:known),Skip()};
+        var result=policy.Evaluate(s,choices);
+        Check(result.Options[0].Score==null&&!result.Options[0].Supported,"cooperative option is not assigned a fabricated low score");
+        Check(result.RecommendedKey is "known" or "skip","known options remain comparable");
+        Check(s.IsMultiplayer&&result.Warnings.Contains(MultiplayerAdvice.Notice),"network multiplayer mode remains explicit even with one player");
+        Check(policy.Evaluate(s,[coop]).RecommendedKey==null,"mandatory all-cooperative choices remain manual");
+        Check(policy.Evaluate(s,[coop,new("unknown","unknown","card",Card:Card("UnknownModCard")),Skip()]).RecommendedKey==null,"ignoring cooperative cards does not silently ignore all unknown effects");
+        var stock=ShopPolicy.Evaluate(s,[new("coop",known with{MultiplayerOnly=true},1),new("known",known,1)],null,100);
+        Check(stock.Choices.All(c=>c.Key!="coop")&&stock.Choices.Any(c=>c.Key=="known"),"shop ignores cooperative stock but retains modeled quotes");
+    }
+});
+Test("review 0646 two exhausting Holograms are useful without mandatory smithing",()=>
+{
+    CardSnapshot C(string n,bool up=false)=>DefectPolicy.Card(n,up)!;
+    var s=run with{Character="Defect",Deck=[C("AdaptiveStrike"),C("Sunder"),C("Glacier"),C("Hologram"),C("Turbo")]};
+    Check(Score(s,C("Hologram"))>0,"second one-shot recall remains a valid acquisition");
+    var two=s with{Deck=[..s.Deck,C("Hologram")]};
+    Check(DefectStrategy.Upgrade(two,C("Hologram"))<DefectStrategy.Upgrade(s,C("Hologram")),"two one-shot copies reduce urgency to smith");
+    Check(Score(two,C("Hologram"))<Score(s,C("Hologram")),"third copy still has ordinary diminishing returns");
+    Check(DefectStrategy.Upgrade(two with{Deck=[..two.Deck,C("AllForOne")]},C("Hologram"))>DefectStrategy.Upgrade(two,C("Hologram")),"repeatable retrieval engine still values exhaust removal");
+});
+Test("review 0646 early coverage is not inferred from two support cards",()=>
+{
+    CardSnapshot C(string n,bool up=false)=>DefectPolicy.Card(n,up)!;
+    var s=run with{Character="Defect",Act=1,Floor=3,Hp=60,MaxHp=75,
+        Deck=[..Enumerable.Repeat(C("StrikeDefect"),4),..Enumerable.Repeat(C("DefendDefect"),4),C("Zap"),C("Dualcast"),C("Hologram"),C("Turbo")]};
+    foreach(var n in new[]{"BallLightning","ColdSnap","ChargeBattery"})
+        Check(Score(s,C(n))>0,"support-only additions cannot ban useful transition "+n);
+    Check(Score(s,C("BallLightning"))>Score(s,C("Coolheaded")),"immediate attack outranks unupgraded draw investment before early damage is solved");
+    Check(Score(s,C("Coolheaded",true))>Score(s,C("Coolheaded")),"net draw upgrade retains value");
+    var options=policy.Evaluate(s,rest);
+    Check(options.Options.Single(o=>o.Key=="smith").Parts.Any(p=>p.Reason.Contains("推荐升级：")),"smith recommendation identifies targets");
+});
+Test("review 0646 commitment requires partners and retains mature engine conflicts",()=>
+{
+    CardSnapshot C(string n)=>DefectPolicy.Card(n)!;
+    var s=run with{Character="Defect",Act=1,Deck=[C("StrikeDefect"),C("DefendDefect"),C("AdaptiveStrike")]};
+    Check(!policy.Evaluate(s,[Pick(C("Darkness"))]).Options[0].Parts.Any(p=>p.Reason=="物理主线不再投资集中与产球终端"),"single adaptive attack is not a hard archetype lock");
+    var supported=s with{Deck=[..s.Deck,C("AllForOne"),C("Hologram")]};
+    Check(Score(supported,C("Darkness"))<Score(s,C("Darkness")),"real partners increase switching cost");
+    Check(Score(supported,C("Glacier"))>0,"shared frost defense remains legal");
+});
+Test("0647 Apotheosis demand and priority are shared across characters",()=>
+{
+    CardSnapshot A(bool up=false)=>Card("Apotheosis",up?1:2,!up) with{Rarity="Ancient",Type="Skill",UpgradeLevel=up?1:0};
+    var cores=new[]{"Darkness","Storm","Defragment","Coolheaded"}.Select(n=>DefectPolicy.Card(n)!).ToArray();
+    var d=run with{Character="Defect",Deck=cores};
+    Check(ApotheosisPolicy.PendingCores(d)==4&&Score(d,A())>0,"four key upgrades justify Apotheosis");
+    Check(Score(d with{Deck=cores.Take(3).ToArray()},A())<0,"three key upgrades do not justify it by default");
+    Check(Score(d with{Deck=[..cores.Take(2),..Enumerable.Repeat(DefectPolicy.Card("DefendDefect")!,8)]},A())<0,"many basics do not manufacture core demand");
+    Check(RelicValue.Evaluate("JEWELRY_BOX",d).Value==ApotheosisPolicy.Value(d),"ancient offering uses actual upgrade demand");
+    foreach(var character in new[]{"Defect","Ironclad"})
+    {
+        var s=d with{Character=character,Deck=[..cores,A()]};
+        Check(CardMechanics.Upgrade(s,A())>cores.Max(c=>CardMechanics.Upgrade(s,c)),"Apotheosis first upgrade");
+        Check(Score(s,A())<0,"duplicate is not valuable");
+        var done=s with{Hp=40,Deck=[..cores,A(true)]};
+        Check(policy.Evaluate(done,rest).RecommendedKey=="heal","upgraded Apotheosis prefers recovery");
+        Check(cores.All(c=>CardMechanics.Upgrade(done,c)==0),"covered upgrades have no camp value");
+        var effects=new[]{rest[0],rest[1],new DecisionOption("dig","Dig","effect",EffectValue:8)};
+        Check(policy.Evaluate(done with{Hp=80},effects).RecommendedKey=="dig","full health keeps dig value");
+        Check(policy.Evaluate(s with{Hp=5},rest).RecommendedKey=="heal","critical recovery still beats Apotheosis smithing");
+    }
+});
+Test("0647 camp routes preserve safety and anticipate damage after Apotheosis",()=>
+{
+    var apo=Card("Apotheosis",1,false) with{UpgradeLevel=1,Type="Skill",Rarity="Ancient"};
+    var s=run with{Hp=80,Deck=[..run.Deck,apo]};
+    var nodes=new[]{new RouteNode("camp","RestSite",["boss"]),new("fight","Monster",["boss"]),new("boss","Boss",[])};
+    var r=RoutePolicy.Evaluate(s,nodes,["camp","fight"],new());
+    Check(r.RecommendedNode=="camp","full HP and Apotheosis do not ban safe camp route");
+    var path=new[]{new RouteNode("fight","Monster",["camp"]),new("camp","RestSite",["boss"]),new("boss","Boss",[])};
+    var plan=RoutePolicy.Evaluate(s,path,["fight"],new()).Options[0];
+    Check(plan.CampPlans.Any(p=>p.Contains("预计休息"))&&!plan.CampPlans.Any(p=>p.Contains("预计升级")),"future battle damage schedules healing before it happens");
+    var before=RoutePolicy.Evaluate(s with{Deck=[..run.Deck,apo with{CanUpgrade=true,UpgradeLevel=0}]},
+        [new("a","RestSite",["b"]),new("b","RestSite",[])],["a"],new()).Options[0];
+    Check(before.CampPlans.Count(p=>p.Contains("预计升级"))==1,"two camps only project the Apotheosis upgrade once");
+});
+Test("0647 tent actions and finite relic charges are not counted repeatedly",()=>
+{
+    var s=run with{Hp=40,Deck=[]};
+    var nodes=new[]{new RouteNode("a","RestSite",["b"]),new("b","RestSite",["c"]),new("c","RestSite",[])};
+    var economy=new RouteEconomy{CanSmith=false,CampAlternatives=[new("LIFT",10,1),new("DIG",8,12)],CampAllActions=true};
+    var plan=RoutePolicy.Evaluate(s,nodes,["a"],economy).Options[0];
+    Check(plan.CampPlans.Count(p=>p.Contains("LIFT"))==1,"only one remaining Girya charge");
+    Check(plan.CampPlans.Count(p=>p.Contains("DIG"))==3,"Shovel once per distinct camp");
+    Check(plan.CampPlans.Any(p=>p.Contains("预计休息")),"tent includes healing without giving up relic actions");
+    var single=RoutePolicy.Evaluate(s,[new("a","RestSite",[])],["a"],economy with{CampAllActions=false}).Options[0];
+    Check(single.CampPlans.Length==1,"ordinary camp gets one action");
+});
+Test("0647 passive camp healing is capped and never applied twice to current camp",()=>
+{
+    var s=run with{Hp=79,Deck=[]};
+    RouteScore R(RouteEconomy e)=>RoutePolicy.Evaluate(s,[new("a","RestSite",[])],["a"],e).Options[0];
+    var e=new RouteEconomy{CanRest=false,CanSmith=false,CampEntryHealing=9};
+    Check(R(e).ProjectedHp==80,"feather capped at max HP");
+    Check(R(e with{CurrentCampEntered=true}).ProjectedHp==79,"current camp already received feather heal");
+    var terrors=R(new(){CanSmith=false,CampHealToFull=true,CampHealMaxHpDelta=-5,CampHealExtra=-5});
+    Check(terrors.ProjectedHp==75,"full heal then max HP loss clamps projected HP");
+    var full=RoutePolicy.Evaluate(s with{Hp=80},[new("a","RestSite",[])],["a"],new(){CanSmith=false,CampHealToFull=true,CampHealMaxHpDelta=-5,CampHealExtra=-5}).Options[0];
+    Check(full.ProjectedHp==75,"mandatory full-HP rest cannot evade Night Terrors cost in forecast");
+    var armed=R(e with{CampEntryAlreadyArmed=true,CampEntryValue=5});
+    Check(armed.Score==R(e).Score,"already armed tea set does not stack more entry energy");
+});
+Test("0647 mimicked camp rest uses extra rewards without changing event combat burden",()=>
+{
+    var vars=new Dictionary<string,double>{{"Heal",24}};
+    var before=EventRules.Describe("DENSE_VEGETATION","REST","Rest",run,vars);
+    vars["RestExtra"]=6;
+    var after=EventRules.Describe("DENSE_VEGETATION","REST","Rest",run,vars);
+    Check(after.Benefit==before.Benefit+6&&after.Burden==before.Burden&&after.Heal==before.Heal,"extra reward does not replace combat risk or double-count healing");
+});
+Test("0648 real reward snapshots value burst energy and refresh over redundant transition cards",()=>
+{
+    using var doc=JsonDocument.Parse(File.ReadAllText(Path.Combine(AppContext.BaseDirectory,"Fixtures","reward-support-0648.json")));
+    var json=new JsonSerializerOptions{PropertyNameCaseInsensitive=true};
+    foreach(var item in doc.RootElement.EnumerateArray())
+    {
+        var s=item.GetProperty("state").Deserialize<RunSnapshot>(json)!;
+        var options=item.GetProperty("options").Deserialize<DecisionOption[]>(json)!;
+        var result=policy.Evaluate(s,options);
+        var expected=item.GetProperty("expected").GetString();
+        Check(options.Single(o=>o.Key==result.RecommendedKey).Card?.ClassName==expected,"actual reward should select "+expected);
+    }
+});
+Test("0648 strong support still respects duplicate and energy saturation",()=>
+{
+    var super=DefectPolicy.Card("Supercritical")!;var reboot=DefectPolicy.Card("Reboot")!;
+    var s=run with{Character="Defect",Deck=[DefectPolicy.Card("Glacier")!,DefectPolicy.Card("Hologram")!,DefectPolicy.Card("Skim")!,DefectPolicy.Card("AdaptiveStrike")!]};
+    Check(Score(s,super)>Score(s with{Deck=[..s.Deck,super,DefectPolicy.Card("Turbo")!,DefectPolicy.Card("DoubleEnergy")!]},super),"duplicate burst cannot grow without bound");
+    Check(Score(s,reboot)>Score(s with{Deck=[..s.Deck,reboot]},reboot),"second Reboot is marginal");
+    var zero=s with{Energy=5,Deck=Enumerable.Repeat(DefectPolicy.Card("Claw")!,8).ToArray()};
+    Check(Score(zero,super)<Score(s,super),"zero-cost deck cannot spend burst energy like an expensive deck");
+});
+Test("0648 bridge sees beyond another valuable card to a basic removal",()=>
+{
+    var core=DefectPolicy.Card("Supercritical")!;var bulk=DefectPolicy.Card("BulkUp")!;var basic=DefectPolicy.Card("DefendDefect")!;
+    var s=run with{Character="Defect",Hp=50,MaxHp=75,Deck=[..Enumerable.Repeat(DefectPolicy.Card("StrikeDefect")!,3),..Enumerable.Repeat(basic,4),core,bulk,DefectPolicy.Card("AdaptiveStrike")!,DefectPolicy.Card("Hologram")!]};
+    var plan=BridgePolicy.BestContinuation(s,[new(bulk,1,3),new(basic,2,7)])!;
+    Check(plan.Stop.Steps==2&&plan.Score>BridgePolicy.Removal(s,core),"spend 3+4 HP to remove a basic instead of core");
+    Check(BridgePolicy.BestContinuation(s with{Hp=3},[new(basic,1,3)])==null,"never predict surviving lethal damage");
+    var low=BridgePolicy.BestContinuation(s with{Hp=8},[new(bulk,1,3),new(basic,2,7)])!;
+    Check(low.Score<BridgePolicy.Removal(s with{Hp=8},core),"do not blindly pay down to one HP");
+    Check(BridgePolicy.Removal(s,basic)>BridgePolicy.BestContinuation(s,[new(basic,1,3)])!.Score,"stop immediately when a basic target already suffices");
+});
+HeroTests.Register(tests);
+ItemModelTests.Register(tests);
+SilentTests.Register(tests);
+SilentIntegrationTests.Register(tests);
 var failed = 0;
 foreach (var (name, test) in tests)
 {

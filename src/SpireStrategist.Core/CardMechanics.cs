@@ -33,6 +33,10 @@ public static class CardMechanics
     }
     public static double Upgrade(RunSnapshot s, CardSnapshot c)
     {
+        if(ApotheosisPolicy.UpgradeOverride(s,c) is {} apotheosis)return apotheosis;
+        if(HeroPolicy.Supports(s.Character))return HeroStrategy.Upgrade(s,c);
+        if(s.Character=="Silent")return SilentStrategy.Upgrade(s,c);
+        if(s.Character=="Defect")return DefectStrategy.Upgrade(s,c);
         var p = CardCatalog.Find(c);
         if (!c.CanUpgrade || p == null) return 0;
         var copies = Copies(s, c);

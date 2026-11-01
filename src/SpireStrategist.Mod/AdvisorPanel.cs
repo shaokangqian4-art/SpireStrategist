@@ -34,9 +34,20 @@ internal sealed class AdvisorPanel
     private readonly Label summary;
     private readonly Control loopHost;
     private readonly Label compactStatus;
+    private bool automationEnabled;
     private AdvisorDisplaySettings display = AdvisorDisplaySettings.Load();
     internal bool HighlightItems => display.Items;
     internal bool DrawRoutes => display.Routes;
+    internal bool DefectShadow => display.DefectShadow;
+    private readonly CheckButton defectShadowToggle;
+    private string character="Ironclad";
+    private bool multiplayer;
+    internal void SetDefectShadow(bool value)
+    {
+        display=display with{DefectShadow=value};display.Save();
+        defectShadowToggle.SetPressedNoSignal(value);
+        AdvisorService.Current?.RefreshPresentation();
+    }
     internal bool Visible => GodotObject.IsInstanceValid(panel)&&panel.IsInsideTree()&&panel.IsVisibleInTree();
     internal Rect2? LoopRect => GodotObject.IsInstanceValid(loopHost)&&loopHost.IsInsideTree()&&loopHost.IsVisibleInTree() ? new Rect2(loopHost.GetGlobalTransformWithCanvas().Origin, loopHost.Size) : null;
     internal void SelectTab(int index) { tabs.CurrentTab = index; Callable.From(ClimbController.RefreshUi).CallDeferred(); }
@@ -55,13 +66,13 @@ internal sealed class AdvisorPanel
         var header = new HBoxContainer(); box.AddChild(header);
         var title = new Label { Text = "策略助手", SizeFlagsHorizontal = Control.SizeFlags.ExpandFill,
             MouseFilter = Control.MouseFilterEnum.Stop, MouseDefaultCursorShape = Control.CursorShape.Move,
-            TooltipText = "v0.6.22 · 拖动标题可在全屏内移动；双击复位。请自行避开药水等操作区域。" };
+            TooltipText = "v0.6.55 · 拖动标题可在全屏内移动；双击复位。请自行避开药水等操作区域。" };
         title.AddThemeColorOverride("font_color",AdvisorUi.Accent); header.AddChild(title);
         var toggle = AdvisorUi.Button(collapsed ? "展开" : "收起"); header.AddChild(toggle);
         autoButton = AdvisorUi.Button("开始接管");
         autoButton.TooltipText="接管当前单局；常规动作前等待2秒，商店购买等待8秒。停止立即取消待执行动作，不自动开下一局。";
         header.AddChild(autoButton); autoButton.Pressed += toggleAuto;
-        compactStatus=AdvisorUi.Text("建议模式 · v0.6.22"); box.AddChild(compactStatus);
+        compactStatus=AdvisorUi.Text("建议模式 · v0.6.55"); box.AddChild(compactStatus);
         details = new VBoxContainer { Visible = !collapsed }; box.AddChild(details);
         summary=AdvisorUi.Text(""); details.AddChild(summary);
         var pauseRow=new HBoxContainer(); details.AddChild(pauseRow);
@@ -89,8 +100,11 @@ internal sealed class AdvisorPanel
         void SaveDisplay() { try { display.Save(); } catch(Exception ex) { Status("显示设置保存失败："+ex.Message); } }
         itemToggle.Toggled+=value=>{display=display with{Items=value};SaveDisplay();};
         routeToggle.Toggled+=value=>{display=display with{Routes=value};SaveDisplay();};
+        var shadowToggle=defectShadowToggle=new CheckButton{Text="隐藏机器人建议，仅记录",ButtonPressed=display.DefectShadow,FocusMode=Control.FocusModeEnum.None};
+        settings.AddChild(shadowToggle);
+        settings.AddChild(AdvisorUi.Text("勾选后隐藏机器人评分及推荐框，继续保存候选与实际选择；关闭后恢复建议。需要复盘时可导出反馈包。"));
+        shadowToggle.Toggled+=value=>{display=display with{DefectShadow=value};SaveDisplay();AdvisorService.Current?.RefreshPresentation();};
         integrations=AdvisorUi.Text(""); settings.AddChild(integrations);
-        UiLocalization.AddPicker(settings);
         var feedbackScroll=new ScrollContainer{Name="反馈",HorizontalScrollMode=ScrollContainer.ScrollMode.Disabled};tabs.AddChild(feedbackScroll);
         var feedbackPage=new VBoxContainer{SizeFlagsHorizontal=Control.SizeFlags.ExpandFill};feedbackScroll.AddChild(feedbackPage);feedbackPage.AddThemeConstantOverride("separation",10);
         var actions=new HBoxContainer();feedbackPage.AddChild(actions);
@@ -107,6 +121,8 @@ internal sealed class AdvisorPanel
         cancel.Pressed+=()=>feedbackEditor.Visible=false;
         feedbackPage.AddChild(AdvisorUi.Text("只保存在本机，不会自动上传或训练。\n反馈给作者：保存意见 → 导出反馈包 → 发送 ZIP。无需 GPT。\n反馈包包含本局；循环批次汇总及逐局记录另保存在本地日志目录。"));
         status=AdvisorUi.Text("可记录当前建议的赞同或异议");feedbackPage.AddChild(status);
+        var settingsPage=new VBoxContainer{Name="设置"};tabs.AddChild(settingsPage);
+        UiLocalization.AddPicker(settingsPage);
         // Detailed state remains available without forcing the full message onto the HUD.
 
         tabs.TabChanged+=_=>Callable.From(ClimbController.RefreshUi).CallDeferred();
@@ -133,11 +149,21 @@ internal sealed class AdvisorPanel
 
     internal void UpdateState(RunSnapshot s)
     {
+        character=s.Character;
+        multiplayer=s.IsMultiplayer;
+        autoButton.Disabled=multiplayer||!DefectStrategy.Supported(character);
+        fullAutoButton.Disabled=multiplayer;
+        reviewPause.Visible=!multiplayer&&DefectStrategy.Supported(character);
+        RefreshMode();
         var text = new StringBuilder();
         var solverError=SolverBridge.CompatibilityError();
         summary.Text=$"第 {s.Act} 幕 · {s.Floor} 层 · N{s.Ascension}    生命 {s.Hp}/{s.MaxHp}\n金币 {s.Gold}    牌组 {s.Deck.Length} 张";
         integrations.Text=(solverError==null?"战斗交给求解器 · CombatSolver":AdvisorUi.SolverLocked+"\n"+solverError)+
             (s.Map?.LongMap==true?$"\n更多层数已加载 · 每幕额外 {s.Map.ExtraLayers} 层 · 额外 {s.Map.ExtraActs} 幕":"");
+        if(HeroPolicy.Supports(character))integrations.Text=(solverError==null?"战斗交给求解器 · CombatSolver":AdvisorUi.SolverLocked)+"\n"+HeroPolicy.Scope(character);
+        if(character=="Silent")integrations.Text=(solverError==null?"猎人战斗交给求解器 · CombatSolver":AdvisorUi.SolverLocked)+"\n"+SilentPolicy.Scope;
+        if(character=="Defect")integrations.Text=(solverError==null?"机器人战斗交给求解器 · CombatSolver":AdvisorUi.SolverLocked)+"\n"+DefectPolicy.Scope;
+        if(multiplayer){integrations.Text=MultiplayerAdvice.Notice;autoStatus.Text=MultiplayerAdvice.Notice;}
         text.AppendLine($"第 {s.Act} 幕 · {s.Floor} 层 · 进阶 {s.Ascension}");
         if(s.Map is {} map)text.AppendLine($"地图 {map.Rows} 行 · 共 {map.TotalActs} 幕"+(map.LongMap?$" · 每幕额外 {map.ExtraLayers} 层":""));
         if(s.Map?.Error is {} error)text.AppendLine(error);
@@ -161,14 +187,24 @@ internal sealed class AdvisorPanel
     {
         UpdateState(s);
         if(feedbackEditor.Visible)return;
+        if(s.Character=="Defect"&&display.DefectShadow&&evaluation!=null&&evaluation.Options.Any(o=>o.Score.HasValue))
+        {
+            body.Text="候选牌、评分与实际选择会保存在本机；建议及推荐框已隐藏。可在“显示”页关闭此选项。";
+            agree.Disabled=true;disagree.Disabled=false;UiLocalization.Apply(panel);return;
+        }
         var text=new StringBuilder();
         if (evaluation == null) text.AppendLine(message ?? "等待选牌或营火。当前状态已记录。");
         else
         {
+            if(!string.IsNullOrEmpty(message))text.AppendLine(message);
             var best = evaluation.Options.FirstOrDefault(o => o.Key == evaluation.RecommendedKey);
             text.AppendLine(best != null ? $"建议：{best.Name}" : "暂不作整体推荐");
             text.AppendLine($"记录：{decisionId?[..8]}");
             text.AppendLine("分数用于相对比较，不是胜率。");
+            if(s.Foresight is {} sight)
+                text.AppendLine(sight.Branches.Length==0?sight.Status:
+                    evaluation.Options.Any(o=>o.Parts.Any(p=>p.Reason.StartsWith("辉眼：")&&p.Value!=0))
+                    ?"辉眼：已读取条件奖励，本次有选项获得投资加分。":"辉眼：已读取条件奖励，本次没有额外加分。");
             foreach (var option in evaluation.Options)
             {
                 text.AppendLine();
@@ -181,12 +217,30 @@ internal sealed class AdvisorPanel
             foreach (var warning in evaluation.Warnings) text.AppendLine("· " + warning);
         }
         body.Text = text.ToString();
-        agree.Disabled = disagree.Disabled = evaluation == null;
+        agree.Disabled = evaluation == null;
+        disagree.Disabled = false;
         status.Text = "可记录赞同或异议";UiLocalization.Apply(panel);
     }
 
     internal void Status(string message) {status.Text = message;UiLocalization.Apply(panel);}
-    internal void Automation(bool enabled,bool full,string message) {autoButton.Text=enabled?"停止接管":"开始接管";fullAutoButton.SetPressedNoSignal(full);autoStatus.Text=message;compactStatus.Text=enabled?(ReviewPaused?"已暂停 · 查看建议":message.Contains("请手动")||message.Contains("需手动")?"等待人工处理 · 详情见建议":ClimbController.Enabled?"循环接管中":"单局接管中"):"建议模式 · v0.6.22";compactStatus.TooltipText=message;UiLocalization.Apply(panel);}
+    // Both snapshot and automation refreshes use the same state. Per-action messages
+    // belong in the advice page, not in a mode label that flickers on every refresh.
+    private void RefreshMode()
+    {
+        if(multiplayer){autoButton.Text="多人局不支持接管";compactStatus.Text="多人建议模式 · 仅本人";return;}
+        autoButton.Text=automationEnabled?"停止接管":"开始接管";
+        compactStatus.Text=automationEnabled
+            ? (ReviewPaused?"已暂停 · 查看建议":ClimbController.Enabled?"循环接管中":"单局接管中")
+            : character=="Defect"
+                ? (display.DefectShadow?"故障机器人 · 隐藏建议，仅记录":"故障机器人 · 建议与接管")
+                : HeroPolicy.Supports(character)?HeroPolicy.Label(character)+" · 建议与接管":character=="Silent"?"静默猎手 · 建议与接管":"建议模式 · v0.6.55";
+    }
+    internal void Automation(bool enabled,bool full,string message)
+    {
+        if(multiplayer){enabled=false;full=false;message=MultiplayerAdvice.Notice;}
+        automationEnabled=enabled;fullAutoButton.SetPressedNoSignal(full);autoStatus.Text=message;
+        RefreshMode();compactStatus.TooltipText=message;UiLocalization.Apply(panel);
+    }
     internal void ShowRoute(RouteEvaluation route)
     {
         if(feedbackEditor.Visible)return;
@@ -204,9 +258,25 @@ internal sealed class AdvisorPanel
     {
         if(feedbackEditor.Visible)return;
         var text=new StringBuilder("商店评估（待校准）\n");
-        foreach(var choice in plan.Choices.OrderByDescending(c=>c.Score))
+        var cards=plan.Choices.Where(c=>c.Kind=="card").OrderByDescending(c=>c.IntrinsicValue??double.NegativeInfinity).ToArray();
+        if(cards.Length>0)
         {
-            text.AppendLine($"{(choice==plan.Recommendation?"推荐 ":"")}{(choice.Kind=="remove"?"删":"买")} {choice.Name}：{choice.Price} 金币 / {choice.Score:F1} 分");
+            text.AppendLine("卡牌评分一览（不等于购买指令）");
+            foreach(var card in cards)
+                text.AppendLine($"{card.Name}：{(card.IntrinsicValue is {} score?score.ToString("F1"):"未建模")} / {card.Price} 金币{(!card.Affordable?" · 买不起":"")}");
+            text.AppendLine();text.AppendLine("评分详情与其他交易");
+        }
+        foreach(var choice in plan.Choices.OrderBy(c=>c==plan.Recommendation?0:c.Kind=="card"||c.Kind=="remove"?1:c.Kind=="relic"?2:3).ThenByDescending(c=>c.Score))
+        {
+            var status=!choice.Affordable?" · 买不起":"";
+            text.AppendLine($"{(choice==plan.Recommendation?"推荐 ":"")}{choice.Name}：{choice.Price} 金币{status}");
+            if(!choice.Modeled)text.AppendLine("  尚未建模，不作强度推荐");
+            else if(choice.IntrinsicValue is {} intrinsic)
+            {
+                text.AppendLine($"  {(choice.Kind=="card"?"卡牌边际评分":"物品适配评分")}：{intrinsic:F1}");
+                if(choice.Eligible)text.AppendLine($"  交易评分：{choice.Score:F1}");
+            }
+            else text.AppendLine($"  交易评分：{choice.Score:F1}");
             foreach(var reason in choice.Reasons)text.AppendLine("  "+reason);
         }
         foreach(var note in plan.Notes)text.AppendLine(note);

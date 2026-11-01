@@ -5,7 +5,8 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <Deterministic>true</Deterministic>
-    <Version>0.6.22</Version>
+    <Version>0.6.55</Version>
+    <DefectPriorPath>$(MSBuildThisFileDirectory)data/defect-draft-v0.14.json</DefectPriorPath>
   </PropertyGroup>
   <Import Project="$(MSBuildThisFileDirectory)local.props" Condition="Exists('$(MSBuildThisFileDirectory)local.props')" />
 </Project>

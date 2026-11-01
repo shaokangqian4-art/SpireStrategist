@@ -2,6 +2,7 @@ namespace SpireStrategist.Core;
 
 public sealed record RouteNode(string Id,string Kind,string[] Children,int Row=-1);
 public sealed record NormalEncounterForecast(bool Weak,double MinGold,double MaxGold);
+public sealed record CampAlternative(string Id,double Value,int Uses);
 public sealed record RouteEconomy
 {
     public double GoldMultiplier {get;init;}=1;
@@ -14,6 +15,15 @@ public sealed record RouteEconomy
     public double? CampHealing {get;init;}
     public bool CanRest {get;init;}=true;
     public bool CanSmith {get;init;}=true;
+    public CampAlternative[] CampAlternatives {get;init;}=[];
+    public bool CampAllActions {get;init;}
+    public double CampEntryHealing {get;init;}
+    public double CampEntryValue {get;init;}
+    public bool CampEntryAlreadyArmed {get;init;}
+    public bool CurrentCampEntered {get;init;}
+    public double CampHealExtra {get;init;}
+    public int CampHealMaxHpDelta {get;init;}
+    public bool CampHealToFull {get;init;}
     public double NormalGoldMin {get;init;}=10;
     public double NormalGoldMax {get;init;}=20;
     public double EliteGoldMin {get;init;}=25;
@@ -48,18 +58,27 @@ public sealed record RouteEvaluation(string? RecommendedNode,double DeckQuality,
 
 public static class RoutePolicy
 {
-    // Four diverse representatives per node, twelve depths, two camp actions at most.
+    // Four diverse representatives per node, twelve depths; branch on available camp actions.
     // This is a bounded beam over the map DAG, not exhaustive run search. Recompute after every real room.
     private sealed record Projection(double Hp,double Gold,double Low,double High,double RelicBonus,
         double UpgradeCoverage,int KeyRemaining,double Value,double Weight,string[] Path,ShopForecast[] Shops,
         double[] NormalCounts,double[] Odds,int Unknowns,double Risk,int[] Upgraded,string[] CampPlans)
-    { public double ComparableValue=>Value/Math.Max(1,Weight)-Risk; }
+    {
+        public string[] UsedCampAlternatives {get;init;}=[];
+        public double MaxHp {get;init;}
+        public bool CampEntryArmed {get;init;}
+        public double ComparableValue=>Value/Math.Max(1,Weight)-Risk;
+    }
     public static RouteEvaluation Evaluate(RunSnapshot s,RouteNode[] nodes,string[] legalRoots,RouteEconomy economy,string? firstCampAction=null)
     {
         var profiles=s.Deck.Select(c=>(Card:c,Profile:CardCatalog.Find(c))).ToArray();
         var known=profiles.Where(p=>p.Profile!=null).ToArray();
         var readiness=DeckReadiness.Read(s);
         var quality=readiness.Quality;
+        var earlyDefect=s.Character is "Defect" or "Silent" or "Regent" or "Necrobinder"&&(s.Map?.ContentAct is >0?s.Map.ContentAct:s.Act)==1;
+        // Utility and future synergy are not evidence of immediate elite readiness.
+        var earlyElitePenalty=earlyDefect
+            ? 12+20*(1-readiness.Offense)+((s.Character=="Silent"?SilentPolicy.Analyze(s).DamageEngines>0:DefectComposition.HasDamageEngine(s))?0:12):0;
         // Use the SAME contextual upgrade model as actual smithing. A fixed catalog
         // threshold previously omitted Stoke entirely (catalog Upgrade = 9).
         var keys=known.Where(p=>CardMechanics.Upgrade(s,p.Card with{CanUpgrade=true})>=10).ToArray();
@@ -70,7 +89,7 @@ public static class RoutePolicy
         foreach(var root in legalRoots.Distinct().Order(StringComparer.Ordinal))
         {
             if(!graph.TryGetValue(root,out var first))continue;
-            var initial=new Projection(s.Hp,s.Gold,s.Gold,s.Gold,0,coverage,remaining,0,0,[],[],[1],economy.UnknownOdds,0,0,[],[]);
+            var initial=new Projection(s.Hp,s.Gold,s.Gold,s.Gold,0,coverage,remaining,0,0,[],[],[1],economy.UnknownOdds,0,0,[],[]){MaxHp=s.MaxHp,CampEntryArmed=economy.CampEntryAlreadyArmed};
             var firstStates=Expand(initial,first,0).ToArray();
             var immediate=firstStates.Max(p=>p.Value);
             var frontier=new Dictionary<string,List<Projection>>{{root,Keep(firstStates)}};
@@ -120,10 +139,11 @@ public static class RoutePolicy
             .ThenBy(o=>o.Node,StringComparer.Ordinal).ToArray();
         return new(ordered.FirstOrDefault()?.Node,quality,coverage,ordered,
             ["火堆优先；健康且成型、关键升级完成时提高精英；问号优于普通战。",
-             "前瞻最多 12 个节点，每层每节点保留最多4个不同血量/升级代表，火堆比较回血与锻造；每个真实房间后重新评分。飞鞋按次数机会成本判断。",
+             "前瞻最多 12 个节点，每层每节点保留最多4个不同血量/升级代表，火堆比较恢复、升级与遗物行动；每个真实房间后重新评分。飞鞋按次数机会成本判断。",
              "商店后继续检查必经战斗与恢复点；未知购买不计战力。商品预算按花到剩100估计，不是已经发生的交易。",
              "收益按折扣加权平均比较，危险单独扣分；预计生命耗尽后停止该分支，不能被后方火堆虚构救活。",
-             "战损、事件收支、后续加牌和新遗物均为估算；金币区间为情景范围，不是保证。",..economy.Notes]);
+             "战损、事件收支、后续加牌和新遗物均为估算；金币区间为情景范围，不是保证。",
+             ..(earlyDefect?new[]{HeroPolicy.Label(s.Character)+"第一幕降低精英收益；缺少成型输出时提高战损预算，已有大战损不按未来房间数自动淡化。"}:Array.Empty<string>()),..economy.Notes]);
 
         // Preserve a high-HP and an upgraded alternative even if immediate utility is lower.
         static List<Projection> Keep(IEnumerable<Projection> candidates)
@@ -138,13 +158,25 @@ public static class RoutePolicy
         {
             if(n.Kind=="RestSite")
             {
-                var smith=economy.CanSmith&&s.Deck.Where((c,i)=>!p.Upgraded.Contains(i)).Any(c=>c.CanUpgrade&&CardCatalog.Find(c)!=null);
-                var heal=economy.CanRest&&(economy.CampHealing??s.MaxHp*.3)>0&&p.Hp<s.MaxHp;
+                var projected=s with{Deck=s.Deck.Select((c,i)=>p.Upgraded.Contains(i)?c with{CanUpgrade=false,UpgradeLevel=c.UpgradeLevel+1}:c).ToArray()};
+                var smith=economy.CanSmith&&projected.Deck.Any(c=>c.CanUpgrade&&CardMechanics.Upgrade(projected,c)>0);
+                var entryHeal=depth==0&&economy.CurrentCampEntered?0:economy.CampEntryHealing;
+                var heal=economy.CanRest&&((economy.CampHealing??p.MaxHp*.3)>0&&p.Hp+entryHeal<p.MaxHp||economy.CampHealExtra>0);
+                var alternatives=economy.CampAlternatives.Where(a=>a.Value>0&&p.UsedCampAlternatives.Count(id=>id==a.Id)<a.Uses).ToArray();
                 if(depth==0&&firstCampAction is {} forced)
                 {yield return Step(p,n,depth,out _,forced);yield break;}
+                if(economy.CampAllActions)
+                {
+                    var actions=(heal?new[]{"heal"}:Array.Empty<string>()).Concat(smith?["smith"]:[]).Concat(alternatives.Select(a=>a.Id)).ToArray();
+                    yield return Step(p,n,depth,out _,actions.Length==0&&economy.CanRest?"heal":string.Join('|',actions));yield break;
+                }
                 if(heal)yield return Step(p,n,depth,out _,"heal");
                 if(smith)yield return Step(p,n,depth,out _,"smith");
-                if(heal||smith)yield break;
+                foreach(var alternative in alternatives)yield return Step(p,n,depth,out _,alternative.Id);
+                if(heal||smith||alternatives.Length>0)yield break;
+                // Native camps require a completed action before proceeding. A full-HP
+                // Night Terrors rest still has a real cost when no useful alternative exists.
+                if(economy.CanRest){yield return Step(p,n,depth,out _,"heal");yield break;}
             }
             yield return Step(p,n,depth,out _);
         }
@@ -155,21 +187,26 @@ public static class RoutePolicy
             var basis=boss?55:kind=="Elite"?30:9*weak+18*(1-weak);
             var estimate=basis*(1-.65*combatQuality)*(1-.2*upgrade)
                 *(1+.12*(Math.Max(1,s.Map?.ContentAct??s.Act)-1))*economy.CombatRiskMultiplier;
+            if(earlyDefect&&kind=="Elite"&&!(s.Character=="Silent"?SilentPolicy.Analyze(s).DamageEngines>0:DefectComposition.HasDamageEngine(s)))
+                estimate=Math.Max(estimate,30*(1-.15*upgrade)*economy.CombatRiskMultiplier);
             // Gross damage, not net loss: recent healing/potions must not hide a fragile deck.
             var recent=s.RecentBattles.Where(b=>b.Act==s.Act&&b.MaxHp>0&&b.Room==(boss?"Boss":kind)).TakeLast(3).ToArray();
             if(recent.Length>0)
-                estimate=Math.Max(estimate,.7*recent.Max(b=>b.DamageTaken/(double)b.MaxHp)*s.MaxHp*Math.Pow(.96,depth));
+                estimate=Math.Max(estimate,(earlyDefect&&kind=="Elite"?.9:.7)*recent.Max(b=>b.DamageTaken/(double)b.MaxHp)*s.MaxHp
+                    *(earlyDefect&&kind=="Elite"?1:Math.Pow(.96,depth)));
             return estimate;
         }
         Projection Step(Projection p,RouteNode n,int depth,out double local,string? campAction=null)
         {
-            var hp=p.Hp;var ratio=hp/Math.Max(1,s.MaxHp);
+            var hp=p.Hp;var maxHp=p.MaxHp;var ratio=hp/Math.Max(1,maxHp);
+            var campEntryArmed=p.CampEntryArmed;
             var gold=p.Gold+economy.GoldPerRoom*economy.GoldMultiplier;
             var low=p.Low+economy.GoldPerRoom*economy.GoldMultiplier;
             var high=p.High+economy.GoldPerRoom*economy.GoldMultiplier;
             var bonus=p.RelicBonus;var upgrade=p.UpgradeCoverage;var left=p.KeyRemaining;
             var shops=p.Shops;
             var risk=p.Risk;var upgraded=p.Upgraded;var campPlans=p.CampPlans;
+            var usedCampAlternatives=p.UsedCampAlternatives;
             var counts=p.NormalCounts;var odds=p.Odds;var unknowns=p.Unknowns;
             var weak=counts.Select((v,i)=>i<economy.NormalEncounters.Length&&economy.NormalEncounters[i].Weak?v:0).Sum();
             var normalLoss=BattleLoss("Monster",upgrade,depth,weak);
@@ -180,7 +217,7 @@ public static class RoutePolicy
             local=n.Kind switch
             {
                 "RestSite" => (ready?48:100)+45*(1-ratio)+Math.Min(20,left*4),
-                "Elite" => 25+45*quality+35*ratio+35*upgrade-150*Math.Max(0,.7-ratio)-120*Math.Max(0,.6-quality)+(ready?30:0),
+                "Elite" => 25+45*quality+35*ratio+35*upgrade-150*Math.Max(0,.7-ratio)-120*Math.Max(0,.6-quality)+(ready?30:0)-earlyElitePenalty,
                 "Unknown" => 58-15*(1-ratio),
                 "Monster" => 27+11*weak-25*(1-ratio),
                 "Shop" => 12+Math.Min(115,Math.Max(0,gold+bonus*.2)/Math.Max(.1,economy.PriceMultiplier)/3)
@@ -198,7 +235,7 @@ public static class RoutePolicy
                 shops=[..shops,new(n.Id,Math.Round(gold),Math.Round(Math.Max(0,low)),Math.Round(high),Math.Round(bonus,1))];
                 // Never credit hypothetical purchased healing/cards as combat strength.
                 // Reserve a spending budget so later shops do not reuse the same money.
-                hp=Math.Min(s.MaxHp,hp+economy.ShopHealing);
+                hp=Math.Min(maxHp,hp+economy.ShopHealing);
                 gold=Math.Min(gold,100);low=0;bonus=0;
             }
             if(n.Kind is "Monster" or "Elite" or "Boss" or "MiniBoss")
@@ -214,33 +251,56 @@ public static class RoutePolicy
                 var loss=elite?BattleLoss(n.Kind,upgrade,depth):normalLoss;
                 if(hp<=loss+8)risk+=(140+Math.Max(0,loss-hp)*8)*Math.Pow(.9,depth);
                 hp-=loss;
+                campEntryArmed=false;
                 if(elite)bonus+=economy.PossibleRelicGold*economy.GoldMultiplier;
                 else counts=Advance(counts,1);
             }
             else if(n.Kind=="RestSite")
             {
-                var projected=s with{Hp=(int)Math.Max(0,hp),
-                    Deck=s.Deck.Select((c,i)=>upgraded.Contains(i)?c with{CanUpgrade=false,UpgradeLevel=c.UpgradeLevel+1}:c).ToArray()};
-                var heal=Math.Max(0,economy.CampHealing??s.MaxHp*.3);
-                if(campAction=="heal"&&economy.CanRest)
+                if(!(depth==0&&economy.CurrentCampEntered))
                 {
-                    var actual=Math.Min(s.MaxHp-hp,heal);hp+=actual;
-                    campPlans=[..campPlans,$"{n.Id} 火堆预计休息 +{actual:F1} 生命，后续火堆仍保留升级机会"];
+                    var entry=Math.Min(maxHp-hp,economy.CampEntryHealing);hp+=entry;
+                    if(entry>0)campPlans=[..campPlans,$"{n.Id} 火堆入场被动恢复 +{entry:F1} 生命"];
+                    if(!campEntryArmed)local+=economy.CampEntryValue;
                 }
-                else if(campAction=="smith"&&economy.CanSmith)
+                campEntryArmed=true;
+                foreach(var action in (campAction??"").Split('|',StringSplitOptions.RemoveEmptyEntries))
                 {
-                    var target=projected.Deck.Select((c,i)=>(Card:c,Index:i,Value:CardMechanics.Upgrade(projected,c)))
-                        .Where(x=>x.Card.CanUpgrade).OrderByDescending(x=>x.Value).FirstOrDefault();
-                    if(target.Card!=null)
+                    var projected=s with{Hp=(int)Math.Max(0,hp),
+                        MaxHp=(int)maxHp,
+                        Deck=s.Deck.Select((c,i)=>upgraded.Contains(i)?c with{CanUpgrade=false,UpgradeLevel=c.UpgradeLevel+1}:c).ToArray()};
+                    var heal=Math.Max(0,economy.CampHealToFull?maxHp:economy.CampHealing??maxHp*.3);
+                    if(action=="heal"&&economy.CanRest)
                     {
-                        upgraded=[..upgraded,target.Index];
-                        if(keys.Any(k=>ReferenceEquals(k.Card,s.Deck[target.Index])))
-                        {left--;upgrade=Math.Min(1,upgrade+1d/Math.Max(1,keys.Length));}
-                        local+=Math.Min(30,target.Value);
-                        campPlans=[..campPlans,$"{n.Id} 火堆预计升级 {target.Card.Name}，机制收益 {target.Value:F1}"];
+                        var actual=Math.Min(maxHp-hp,heal);hp+=actual;
+                        local+=economy.CampHealExtra;
+                        // Gaining max HP also heals that amount; losing it clamps current HP.
+                        maxHp=Math.Max(1,maxHp+economy.CampHealMaxHpDelta);
+                        hp=Math.Min(maxHp,hp+Math.Max(0,economy.CampHealMaxHpDelta));
+                        campPlans=[..campPlans,$"{n.Id} 火堆预计休息 +{actual:F1} 生命，按到达时预计战损规划恢复"];
                     }
+                    else if(action=="smith"&&economy.CanSmith)
+                    {
+                        var target=projected.Deck.Select((c,i)=>(Card:c,Index:i,Value:CardMechanics.Upgrade(projected,c)))
+                            .Where(x=>x.Card.CanUpgrade&&x.Value>0).OrderByDescending(x=>x.Value).FirstOrDefault();
+                        if(target.Card!=null)
+                        {
+                            upgraded=[..upgraded,target.Index];
+                            if(keys.Any(k=>ReferenceEquals(k.Card,s.Deck[target.Index])))
+                            {left--;upgrade=Math.Min(1,upgrade+1d/Math.Max(1,keys.Length));}
+                            local+=Math.Min(30,target.Value);
+                            campPlans=[..campPlans,$"{n.Id} 火堆预计升级 {target.Card.Name}，机制收益 {target.Value:F1}"];
+                        }
+                    }
+                    else if(economy.CampAlternatives.FirstOrDefault(a=>a.Id==action&&usedCampAlternatives.Count(id=>id==a.Id)<a.Uses) is {} alternative)
+                    {
+                        local+=Math.Min(30,alternative.Value);
+                        usedCampAlternatives=[..usedCampAlternatives,alternative.Id];
+                        campPlans=[..campPlans,$"{n.Id} 火堆预计遗物行动 {alternative.Id}，收益估计 {alternative.Value:F1}"];
+                    }
+                // Keep the camp's safe-room preference even without an immediate action.
+                // No HP, upgrade or hypothetical relic combat power is credited here.
                 }
-                else local=10; // No usable heal/smith action: do not invent recovery.
             }
             else if(n.Kind=="Unknown")
             {
@@ -279,7 +339,8 @@ public static class RoutePolicy
             // attractive short route merely because only fractional combat risk was charged.
             if(hp<=0)risk=Math.Max(risk,300*Math.Pow(.9,depth));
             return new(hp,Math.Max(0,gold),Math.Max(0,low),Math.Max(0,high),bonus,upgrade,left,
-                p.Value+local*Math.Pow(.8,depth),p.Weight+Math.Pow(.8,depth),[..p.Path,n.Id],shops,counts,odds,unknowns,risk,upgraded,campPlans);
+                p.Value+local*Math.Pow(.8,depth),p.Weight+Math.Pow(.8,depth),[..p.Path,n.Id],shops,counts,odds,unknowns,risk,upgraded,campPlans)
+                {UsedCampAlternatives=usedCampAlternatives,MaxHp=maxHp,CampEntryArmed=campEntryArmed};
         }
         static double[] Advance(double[] counts,double chance)
         {

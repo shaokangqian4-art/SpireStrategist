@@ -1,4 +1,5 @@
 {
+  "source": "session-20261020-124718-27040461.jsonl",
   "unrestState": {
     "character": "Ironclad",
     "playerCount": 1,
@@ -14,10 +15,10 @@
       {
         "id": "CARD.STRIKE_IRONCLAD",
         "className": "StrikeIronclad",
-        "name": "StrikeIronclad",
+        "name": "打击",
         "type": "Attack",
         "rarity": "Basic",
-        "description": "",
+        "description": "造成6点伤害。",
         "cost": 1,
         "costsX": false,
         "upgradeLevel": 0,
@@ -34,10 +35,10 @@
       {
         "id": "CARD.STRIKE_IRONCLAD",
         "className": "StrikeIronclad",
-        "name": "StrikeIronclad",
+        "name": "打击",
         "type": "Attack",
         "rarity": "Basic",
-        "description": "",
+        "description": "造成6点伤害。",
         "cost": 1,
         "costsX": false,
         "upgradeLevel": 0,
@@ -54,10 +55,10 @@
       {
         "id": "CARD.STRIKE_IRONCLAD",
         "className": "StrikeIronclad",
-        "name": "StrikeIronclad",
+        "name": "打击",
         "type": "Attack",
         "rarity": "Basic",
-        "description": "",
+        "description": "造成6点伤害。",
         "cost": 1,
         "costsX": false,
         "upgradeLevel": 0,
@@ -74,10 +75,10 @@
       {
         "id": "CARD.STRIKE_IRONCLAD",
         "className": "StrikeIronclad",
-        "name": "StrikeIronclad",
+        "name": "打击",
         "type": "Attack",
         "rarity": "Basic",
-        "description": "",
+        "description": "造成6点伤害。",
         "cost": 1,
         "costsX": false,
         "upgradeLevel": 0,
@@ -94,10 +95,10 @@
       {
         "id": "CARD.DEFEND_IRONCLAD",
         "className": "DefendIronclad",
-        "name": "DefendIronclad",
+        "name": "防御",
         "type": "Skill",
         "rarity": "Basic",
-        "description": "",
+        "description": "获得5点[gold]格挡[/gold]。",
         "cost": 1,
         "costsX": false,
         "upgradeLevel": 0,
@@ -114,10 +115,10 @@
       {
         "id": "CARD.DEFEND_IRONCLAD",
         "className": "DefendIronclad",
-        "name": "DefendIronclad",
+        "name": "防御",
         "type": "Skill",
         "rarity": "Basic",
-        "description": "",
+        "description": "获得5点[gold]格挡[/gold]。",
         "cost": 1,
         "costsX": false,
         "upgradeLevel": 0,
@@ -134,10 +135,10 @@
       {
         "id": "CARD.DEFEND_IRONCLAD",
         "className": "DefendIronclad",
-        "name": "DefendIronclad",
+        "name": "防御",
         "type": "Skill",
         "rarity": "Basic",
-        "description": "",
+        "description": "获得5点[gold]格挡[/gold]。",
         "cost": 1,
         "costsX": false,
         "upgradeLevel": 0,
@@ -154,10 +155,10 @@
       {
         "id": "CARD.DEFEND_IRONCLAD",
         "className": "DefendIronclad",
-        "name": "DefendIronclad",
+        "name": "防御",
         "type": "Skill",
         "rarity": "Basic",
-        "description": "",
+        "description": "获得5点[gold]格挡[/gold]。",
         "cost": 1,
         "costsX": false,
         "upgradeLevel": 0,
@@ -174,10 +175,10 @@
       {
         "id": "CARD.BASH",
         "className": "Bash",
-        "name": "Bash",
+        "name": "痛击+",
         "type": "Attack",
         "rarity": "Basic",
-        "description": "",
+        "description": "造成10点伤害。\n给予3层[gold]易伤[/gold]。",
         "cost": 2,
         "costsX": false,
         "upgradeLevel": 1,
@@ -195,10 +196,10 @@
       {
         "id": "CARD.ASCENDERS_BANE",
         "className": "AscendersBane",
-        "name": "AscendersBane",
+        "name": "进阶之灾",
         "type": "Curse",
         "rarity": "Curse",
-        "description": "",
+        "description": "[gold]不能被打出[/gold]。\n[gold]虚无[/gold]。\n[gold]永恒[/gold]。",
         "cost": -1,
         "costsX": false,
         "upgradeLevel": 0,
@@ -217,10 +218,10 @@
       {
         "id": "CARD.THUNDERCLAP",
         "className": "Thunderclap",
-        "name": "Thunderclap",
+        "name": "闪电霹雳",
         "type": "Attack",
         "rarity": "Common",
-        "description": "",
+        "description": "对所有敌人造成4点伤害，给予1层[gold]易伤[/gold]。",
         "cost": 1,
         "costsX": false,
         "upgradeLevel": 0,
@@ -238,10 +239,10 @@
       {
         "id": "CARD.TWIN_STRIKE",
         "className": "TwinStrike",
-        "name": "TwinStrike",
+        "name": "双重打击",
         "type": "Attack",
         "rarity": "Common",
-        "description": "",
+        "description": "造成5点伤害两次。",
         "cost": 1,
         "costsX": false,
         "upgradeLevel": 0,
@@ -258,10 +259,10 @@
       {
         "id": "CARD.FLAME_BARRIER",
         "className": "FlameBarrier",
-        "name": "FlameBarrier",
+        "name": "火焰屏障",
         "type": "Skill",
         "rarity": "Uncommon",
-        "description": "",
+        "description": "获得12点[gold]格挡[/gold]。\n你在这个回合每受到一次攻击，都会对攻击者造成4点伤害。",
         "cost": 2,
         "costsX": false,
         "upgradeLevel": 0,
@@ -279,10 +280,10 @@
       {
         "id": "CARD.ANGER",
         "className": "Anger",
-        "name": "Anger",
+        "name": "愤怒",
         "type": "Attack",
         "rarity": "Common",
-        "description": "",
+        "description": "造成6点伤害。\n将一张此牌的复制品加入你的[gold]弃牌堆[/gold]。",
         "cost": 0,
         "costsX": false,
         "upgradeLevel": 0,
@@ -299,10 +300,10 @@
       {
         "id": "CARD.CLUMSY",
         "className": "Clumsy",
-        "name": "Clumsy",
+        "name": "笨拙",
         "type": "Curse",
         "rarity": "Curse",
-        "description": "",
+        "description": "[gold]不能被打出[/gold]。\n[gold]虚无[/gold]。",
         "cost": -1,
         "costsX": false,
         "upgradeLevel": 0,
@@ -320,10 +321,10 @@
       {
         "id": "CARD.SHRUG_IT_OFF",
         "className": "ShrugItOff",
-        "name": "ShrugItOff",
+        "name": "耸肩无视",
         "type": "Skill",
         "rarity": "Common",
-        "description": "",
+        "description": "获得8点[gold]格挡[/gold]。\n抽1张牌。",
         "cost": 1,
         "costsX": false,
         "upgradeLevel": 0,
@@ -341,10 +342,10 @@
       {
         "id": "CARD.TRUE_GRIT",
         "className": "TrueGrit",
-        "name": "TrueGrit",
+        "name": "坚毅",
         "type": "Skill",
         "rarity": "Common",
-        "description": "",
+        "description": "获得7点[gold]格挡[/gold]。\n 随机[gold]消耗[/gold]1张牌。",
         "cost": 1,
         "costsX": false,
         "upgradeLevel": 0,
@@ -402,9 +403,11 @@
       }
     ]
   },
-  "seed": "regression-case-1",
+  "solverFlagEvidence": "session_start lists CombatSolver 0.50.1; compatibility checked in this replay",
+  "seed": "AFBB955A139A",
   "stoke": {
     "id": "80ab450a4bb04f67b282d064befcab56",
+    "runId": "a53148afd2af4cf6a13df83a8b89dd03",
     "kind": "cards",
     "state": {
       "character": "Ironclad",
@@ -421,10 +424,10 @@
         {
           "id": "CARD.STRIKE_IRONCLAD",
           "className": "StrikeIronclad",
-          "name": "StrikeIronclad",
+          "name": "打击",
           "type": "Attack",
           "rarity": "Basic",
-          "description": "",
+          "description": "造成6点伤害。",
           "cost": 1,
           "costsX": false,
           "upgradeLevel": 0,
@@ -441,10 +444,10 @@
         {
           "id": "CARD.STRIKE_IRONCLAD",
           "className": "StrikeIronclad",
-          "name": "StrikeIronclad",
+          "name": "打击",
           "type": "Attack",
           "rarity": "Basic",
-          "description": "",
+          "description": "造成6点伤害。",
           "cost": 1,
           "costsX": false,
           "upgradeLevel": 0,
@@ -461,10 +464,10 @@
         {
           "id": "CARD.STRIKE_IRONCLAD",
           "className": "StrikeIronclad",
-          "name": "StrikeIronclad",
+          "name": "打击",
           "type": "Attack",
           "rarity": "Basic",
-          "description": "",
+          "description": "造成6点伤害。",
           "cost": 1,
           "costsX": false,
           "upgradeLevel": 0,
@@ -481,10 +484,10 @@
         {
           "id": "CARD.STRIKE_IRONCLAD",
           "className": "StrikeIronclad",
-          "name": "StrikeIronclad",
+          "name": "打击",
           "type": "Attack",
           "rarity": "Basic",
-          "description": "",
+          "description": "造成6点伤害。",
           "cost": 1,
           "costsX": false,
           "upgradeLevel": 0,
@@ -501,10 +504,10 @@
         {
           "id": "CARD.DEFEND_IRONCLAD",
           "className": "DefendIronclad",
-          "name": "DefendIronclad",
+          "name": "防御",
           "type": "Skill",
           "rarity": "Basic",
-          "description": "",
+          "description": "获得5点[gold]格挡[/gold]。",
           "cost": 1,
           "costsX": false,
           "upgradeLevel": 0,
@@ -521,10 +524,10 @@
         {
           "id": "CARD.DEFEND_IRONCLAD",
           "className": "DefendIronclad",
-          "name": "DefendIronclad",
+          "name": "防御",
           "type": "Skill",
           "rarity": "Basic",
-          "description": "",
+          "description": "获得5点[gold]格挡[/gold]。",
           "cost": 1,
           "costsX": false,
           "upgradeLevel": 0,
@@ -541,10 +544,10 @@
         {
           "id": "CARD.DEFEND_IRONCLAD",
           "className": "DefendIronclad",
-          "name": "DefendIronclad",
+          "name": "防御",
           "type": "Skill",
           "rarity": "Basic",
-          "description": "",
+          "description": "获得5点[gold]格挡[/gold]。",
           "cost": 1,
           "costsX": false,
           "upgradeLevel": 0,
@@ -561,10 +564,10 @@
         {
           "id": "CARD.DEFEND_IRONCLAD",
           "className": "DefendIronclad",
-          "name": "DefendIronclad",
+          "name": "防御",
           "type": "Skill",
           "rarity": "Basic",
-          "description": "",
+          "description": "获得5点[gold]格挡[/gold]。",
           "cost": 1,
           "costsX": false,
           "upgradeLevel": 0,
@@ -581,10 +584,10 @@
         {
           "id": "CARD.BASH",
           "className": "Bash",
-          "name": "Bash",
+          "name": "痛击+",
           "type": "Attack",
           "rarity": "Basic",
-          "description": "",
+          "description": "造成10点伤害。\n给予3层[gold]易伤[/gold]。",
           "cost": 2,
           "costsX": false,
           "upgradeLevel": 1,
@@ -602,10 +605,10 @@
         {
           "id": "CARD.ASCENDERS_BANE",
           "className": "AscendersBane",
-          "name": "AscendersBane",
+          "name": "进阶之灾",
           "type": "Curse",
           "rarity": "Curse",
-          "description": "",
+          "description": "[gold]不能被打出[/gold]。\n[gold]虚无[/gold]。\n[gold]永恒[/gold]。",
           "cost": -1,
           "costsX": false,
           "upgradeLevel": 0,
@@ -624,10 +627,10 @@
         {
           "id": "CARD.THUNDERCLAP",
           "className": "Thunderclap",
-          "name": "Thunderclap",
+          "name": "闪电霹雳",
           "type": "Attack",
           "rarity": "Common",
-          "description": "",
+          "description": "对所有敌人造成4点伤害，给予1层[gold]易伤[/gold]。",
           "cost": 1,
           "costsX": false,
           "upgradeLevel": 0,
@@ -645,10 +648,10 @@
         {
           "id": "CARD.TWIN_STRIKE",
           "className": "TwinStrike",
-          "name": "TwinStrike",
+          "name": "双重打击",
           "type": "Attack",
           "rarity": "Common",
-          "description": "",
+          "description": "造成5点伤害两次。",
           "cost": 1,
           "costsX": false,
           "upgradeLevel": 0,
@@ -665,10 +668,10 @@
         {
           "id": "CARD.FLAME_BARRIER",
           "className": "FlameBarrier",
-          "name": "FlameBarrier",
+          "name": "火焰屏障",
           "type": "Skill",
           "rarity": "Uncommon",
-          "description": "",
+          "description": "获得12点[gold]格挡[/gold]。\n你在这个回合每受到一次攻击，都会对攻击者造成4点伤害。",
           "cost": 2,
           "costsX": false,
           "upgradeLevel": 0,
@@ -686,10 +689,10 @@
         {
           "id": "CARD.ANGER",
           "className": "Anger",
-          "name": "Anger",
+          "name": "愤怒",
           "type": "Attack",
           "rarity": "Common",
-          "description": "",
+          "description": "造成6点伤害。\n将一张此牌的复制品加入你的[gold]弃牌堆[/gold]。",
           "cost": 0,
           "costsX": false,
           "upgradeLevel": 0,
@@ -706,10 +709,10 @@
         {
           "id": "CARD.CLUMSY",
           "className": "Clumsy",
-          "name": "Clumsy",
+          "name": "笨拙",
           "type": "Curse",
           "rarity": "Curse",
-          "description": "",
+          "description": "[gold]不能被打出[/gold]。\n[gold]虚无[/gold]。",
           "cost": -1,
           "costsX": false,
           "upgradeLevel": 0,
@@ -727,10 +730,10 @@
         {
           "id": "CARD.SHRUG_IT_OFF",
           "className": "ShrugItOff",
-          "name": "ShrugItOff",
+          "name": "耸肩无视",
           "type": "Skill",
           "rarity": "Common",
-          "description": "",
+          "description": "获得8点[gold]格挡[/gold]。\n抽1张牌。",
           "cost": 1,
           "costsX": false,
           "upgradeLevel": 0,
@@ -748,10 +751,10 @@
         {
           "id": "CARD.TRUE_GRIT",
           "className": "TrueGrit",
-          "name": "TrueGrit",
+          "name": "坚毅",
           "type": "Skill",
           "rarity": "Common",
-          "description": "",
+          "description": "获得7点[gold]格挡[/gold]。\n 随机[gold]消耗[/gold]1张牌。",
           "cost": 1,
           "costsX": false,
           "upgradeLevel": 0,
@@ -768,10 +771,10 @@
         {
           "id": "CARD.POMMEL_STRIKE",
           "className": "PommelStrike",
-          "name": "PommelStrike",
+          "name": "剑柄打击",
           "type": "Attack",
           "rarity": "Common",
-          "description": "",
+          "description": "造成9点伤害。\n抽1张牌。",
           "cost": 1,
           "costsX": false,
           "upgradeLevel": 0,
@@ -843,16 +846,16 @@
     "options": [
       {
         "key": "card:0",
-        "name": "card",
+        "name": "添柴",
         "kind": "card",
         "enabled": true,
         "card": {
           "id": "CARD.STOKE",
           "className": "Stoke",
-          "name": "Stoke",
+          "name": "添柴",
           "type": "Skill",
           "rarity": "Rare",
-          "description": "",
+          "description": "[gold]消耗[/gold]所有[gold]手牌[/gold]。\n每[gold]消耗[/gold]一张牌，将1张随机牌加入你的[gold]手牌[/gold]。",
           "cost": 1,
           "costsX": false,
           "upgradeLevel": 0,
@@ -870,16 +873,16 @@
       },
       {
         "key": "card:1",
-        "name": "card",
+        "name": "凌虐",
         "kind": "card",
         "enabled": true,
         "card": {
           "id": "CARD.MANGLE",
           "className": "Mangle",
-          "name": "Mangle",
+          "name": "凌虐",
           "type": "Attack",
           "rarity": "Rare",
-          "description": "",
+          "description": "造成20点伤害。\n敌人在本回合失去10点[gold]力量[/gold]。",
           "cost": 3,
           "costsX": false,
           "upgradeLevel": 0,
@@ -900,16 +903,16 @@
       },
       {
         "key": "card:2",
-        "name": "card",
+        "name": "烙印",
         "kind": "card",
         "enabled": true,
         "card": {
           "id": "CARD.BRAND",
           "className": "Brand",
-          "name": "Brand",
+          "name": "烙印",
           "type": "Skill",
           "rarity": "Rare",
-          "description": "",
+          "description": "失去1点生命。\n[gold]消耗[/gold]1张牌。\n获得1点[gold]力量[/gold]。",
           "cost": 0,
           "costsX": false,
           "upgradeLevel": 0,
@@ -930,7 +933,7 @@
       },
       {
         "key": "alternative:0",
-        "name": "skip",
+        "name": "跳过",
         "kind": "skip",
         "enabled": true,
         "card": null,
@@ -938,6 +941,136 @@
         "smithCount": 1,
         "effectValue": null
       }
-    ]
+    ],
+    "evaluation": {
+      "policyVersion": "ironclad-mechanisms-0.6.9",
+      "recommendedKey": "alternative:0",
+      "options": [
+        {
+          "key": "card:0",
+          "name": "添柴",
+          "supported": true,
+          "enabled": true,
+          "score": -2.557,
+          "parts": [
+            {
+              "reason": "净抽牌占位（已扣除可兑现的自替换）",
+              "value": -3
+            },
+            {
+              "reason": "有效牌组膨胀",
+              "value": -0.8100000000000008
+            },
+            {
+              "reason": "主动清理诅咒、状态和过渡牌（不要求消耗流）",
+              "value": 1.0858823529411765
+            },
+            {
+              "reason": "将低效手牌换为随机牌的机会（粗略先验）",
+              "value": 1.6666666666666667
+            },
+            {
+              "reason": "整手随机替换的不稳定性",
+              "value": -1.5
+            }
+          ],
+          "notes": [
+            "消耗其他手牌并生成等量随机战士牌；不等于从牌库抽牌，也不提供能量。可能损失手中的关键牌，生成收益仍为近似。"
+          ]
+        },
+        {
+          "key": "card:1",
+          "name": "凌虐",
+          "supported": true,
+          "enabled": true,
+          "score": -5.07,
+          "parts": [
+            {
+              "reason": "卡牌基础先验",
+              "value": 2
+            },
+            {
+              "reason": "补足前期输出",
+              "value": 0.3200000000000003
+            },
+            {
+              "reason": "补足防御",
+              "value": 0.4199999999999997
+            },
+            {
+              "reason": "净抽牌占位（已扣除可兑现的自替换）",
+              "value": -3
+            },
+            {
+              "reason": "有效牌组膨胀",
+              "value": -0.8100000000000008
+            },
+            {
+              "reason": "高费启动负担",
+              "value": -4
+            }
+          ],
+          "notes": [
+            "攻击并暂时大幅减力量；三费防攻一体，不能当永久减力量。"
+          ]
+        },
+        {
+          "key": "card:2",
+          "name": "烙印",
+          "supported": true,
+          "enabled": true,
+          "score": -0.503,
+          "parts": [
+            {
+              "reason": "卡牌基础先验",
+              "value": 1
+            },
+            {
+              "reason": "持续成长",
+              "value": 0.8999999999999999
+            },
+            {
+              "reason": "力量与多段的边际联动（同职能已足够时递减）",
+              "value": 1.5
+            },
+            {
+              "reason": "净抽牌占位（已扣除可兑现的自替换）",
+              "value": -3
+            },
+            {
+              "reason": "有效牌组膨胀",
+              "value": -0.8100000000000008
+            },
+            {
+              "reason": "自伤代价（低血量保留强惩罚）",
+              "value": -1.7635515141804197
+            },
+            {
+              "reason": "主动清理诅咒、状态和过渡牌（不要求消耗流）",
+              "value": 1.6705882352941177
+            }
+          ],
+          "notes": []
+        },
+        {
+          "key": "alternative:0",
+          "name": "跳过",
+          "supported": true,
+          "enabled": true,
+          "score": 0,
+          "parts": [
+            {
+              "reason": "保持牌组，作为比较基准",
+              "value": 0
+            }
+          ],
+          "notes": []
+        }
+      ],
+      "warnings": [
+        "启发式分数，不是胜率；参数尚未训练。",
+        "部分遗物联动采用机制先验，药水及复杂战斗联动尚未完整建模。"
+      ]
+    }
   }
 }

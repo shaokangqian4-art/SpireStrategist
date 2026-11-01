@@ -31,6 +31,14 @@ namespace SpireStrategist.Mod;
 internal static partial class AutopilotLab
 {
     private static bool started;
+    // Only consumed inside the marker-gated isolated native lab; never a user setting.
+    private static int trainingSeedIndex;
+    internal static string? TrainingSeed()
+    {
+        if(!started||System.Environment.GetEnvironmentVariable("SPIRE_STRATEGIST_EVENT_LAB") is not ("defect-training" or "silent-training"))return null;
+        var seed=System.Environment.GetEnvironmentVariable("SPIRE_STRATEGIST_LAB_SEED")??"SS-DEFECT";
+        return trainingSeedIndex++==0?seed:seed+"-"+trainingSeedIndex;
+    }
     private static string stage="starting";
     private static readonly List<string> checks=[];
     internal static void Postfix(NGame __instance)
@@ -81,12 +89,59 @@ internal static partial class AutopilotLab
             var ascension=int.TryParse(System.Environment.GetEnvironmentVariable("SPIRE_STRATEGIST_LAB_ASCENSION"),out var level)?level:10;
             if(ascension<0||ascension>10)throw new ArgumentOutOfRangeException(nameof(ascension));
             var gameMode=System.Environment.GetEnvironmentVariable("SPIRE_STRATEGIST_EVENT_LAB")=="global-shop-0619"?GameMode.Custom:GameMode.Standard;
-            var state=await game.StartNewSingleplayerRun(ModelDb.Character<Ironclad>(),false,ActModel.GetDefaultList(),[],seed,gameMode,ascension);
+            var defectMode=System.Environment.GetEnvironmentVariable("SPIRE_STRATEGIST_EVENT_LAB")??"";
+            var isDefectLab=defectMode.StartsWith("defect-");
+            if(defectMode=="defect-resume")
+            {
+                var menu=(NMainMenu)game.RootSceneContainer.CurrentScene;
+                await Until(()=>GameActions.Field(menu,"_readRunSaveResult")!=null,"isolated saved run ready");
+                await (Task)GameActions.Invoke(menu,"OnContinueButtonPressedAsync")!;
+                await Until(()=>AdvisorService.Current!=null,"isolated Defect continuation");
+                var resumed=AdvisorService.Current!;
+                Check(resumed.Player.Character is Defect&&resumed.State.TotalFloor>0,"resume preserves an existing Defect run");
+                ClimbController.SetEnabled(true);
+                Check(ClimbController.Batch.Current is {FullRun:false},"resumed sample excluded from full automatic statistics");
+                NModalContainer.Instance!.Clear();
+                await CheckDefect0627(resumed.State,resumed,true);return;
+            }
+            if(defectMode is "defect-training" or "silent-training" or "regent-training" or "necrobinder-training")
+            {
+                ClimbController.SetEnabled(true);
+                await Until(()=>AdvisorService.Current!=null&&!ClimbController.LaunchInProgress&&ClimbController.Batch.Current!=null,"Defect native menu launch",90);
+                var training=AdvisorService.Current!;
+                Check(training.State.ExtraFields.StartedWithNeow,"natural run has unlocked Neow");
+                Check(training.State.AscensionLevel==ascension&&training.Player.Character.GetType().Name==(defectMode.Split('-')[0] switch{"silent"=>"Silent","regent"=>"Regent","necrobinder"=>"Necrobinder",_=>"Defect"}),"native menu uses saved Defect difficulty");
+                Check(ClimbController.Batch.Current!.FullRun,"native menu start recorded as complete automatic run");
+                // Fresh isolated profiles show a non-gameplay early-access disclaimer.
+                NModalContainer.Instance!.Clear();
+                await CheckDefect0627(training.State,training,true);return;
+            }
+            var state=await game.StartNewSingleplayerRun(defectMode.StartsWith("regent-")?ModelDb.Character<Regent>():defectMode.StartsWith("necrobinder-")?ModelDb.Character<Necrobinder>():defectMode.StartsWith("silent-")?ModelDb.Character<Silent>():isDefectLab?ModelDb.Character<Defect>():ModelDb.Character<Ironclad>(),false,ActModel.GetDefaultList(),[],seed,gameMode,ascension);
             var service=AdvisorService.Current??throw new Exception("No advisor");
             var auto=service.Autopilot;var player=service.Player;
             await Delay(1);NModalContainer.Instance!.Clear();
             File.WriteAllText(Path.Combine(OS.GetUserDataDir(),"native-start.json"),JsonSerializer.Serialize(new{ascension,hp=player.Creature.CurrentHp,maxHp=player.Creature.MaxHp,source="native StartNewSingleplayerRun on map, BEFORE entering Neow and before fixture edits"},Journal.Json));
             Check(!auto.Enabled && !auto.FullAutomatic,"default disabled");
+            if(defectMode is "regent-native" or "necrobinder-native"){await CheckHeroNative(state,service);return;}
+            if(defectMode is "regent-combat" or "necrobinder-combat"){await CheckHeroCombat(state,service);return;}
+            if(defectMode is "regent-loop" or "necrobinder-loop"){await CheckClimb064(state,service);return;}
+            if(defectMode=="silent-native"){await CheckSilent(state,service);return;}
+            if(defectMode=="silent-mechanics-0652"){await CheckSilent0652(state,service);return;}
+            if(defectMode is "neow-common" or "defect-neow-common" or "silent-neow-common")
+            {await CheckNeow0651(state,service);return;}
+            if(defectMode is "silent-map-transition" or "defect-map-transition" or "ironclad-map-transition")
+            {await CheckMapTransition(state,service);return;}
+            if(defectMode=="silent-audit"){await CheckEvents(state,service,"audit");return;}
+            if(defectMode=="silent-loop"){await CheckClimb064(state,service);return;}
+            if(defectMode=="defect-transition-0627"){await CheckDefectTransitions0627(state,service);return;}
+            if(defectMode=="defect-foresight-0642"){await CheckForesight0642(state,service);return;}
+            if(defectMode=="defect-multiplayer-0645"){await CheckMultiplayer0645(state,service);return;}
+            if(defectMode is "defect-advice-0649" or "advice-0649"){await CheckAdvice0649(state,service);return;}
+            if(defectMode=="defect-advice-0646"){await CheckAdvice0646(state,service);return;}
+            if(defectMode=="defect-camps-0647"){await CheckCamps0647(state,service);return;}
+            if(defectMode=="defect-bridge-0648"){await CheckBridge0648(state,service);return;}
+            if(defectMode=="defect-potions-0643"||defectMode=="potions-0643"){await CheckPotions0643(state,service);return;}
+            if(isDefectLab){if(defectMode=="defect-loop-0627")await CheckClimb064(state,service);else await CheckDefect0627(state,service,false);return;}
             if(System.Environment.GetEnvironmentVariable("SPIRE_STRATEGIST_EVENT_LAB") is {Length:>0} eventLab)
             {await CheckEvents(state,service,eventLab);return;}
             if(System.Environment.GetEnvironmentVariable("SPIRE_STRATEGIST_LONGMAP_LAB")=="1")
@@ -239,7 +294,7 @@ internal static partial class AutopilotLab
             offer=new RewardsSet(player).WithCustomRewards([new PotionReward(excess,player)]).Offer();
             await Until(()=>Screen() is NRewardsScreen,"full potion belt reward");auto.Enable(true);
             await Until(()=>offer.IsCompleted,"excess potion left behind");await offer;auto.Pause("fixture boundary");
-            Check(player.PotionSlots.SequenceEqual(belt) && !player.PotionSlots.Contains(excess),"full belt never replaced or discarded");
+            Check(player.PotionSlots.SequenceEqual(belt) && !player.PotionSlots.Contains(excess),"equal-tier attack reward does not displace defensive belt");
 
             var ancient=ModelDb.Relic<GoldenPearl>().ToMutable();gold=player.Gold;
             offer=new RewardsSet(player).WithCustomRewards([new RelicReward(ancient,player)]).Offer();

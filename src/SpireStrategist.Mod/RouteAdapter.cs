@@ -104,11 +104,22 @@ internal static class RouteAdapter
         notes.Add("金币区间采用本幕遭遇模型奖励范围；问号可能付钱/给钱，尚未预测具体事件结果。拿到新遗物后立即重算。");
         var restOptions=new List<RestSiteOption>{new HealRestSiteOption(player),new SmithRestSiteOption(player)};
         Hook.ModifyRestSiteOptions(service.State,player,restOptions);
+        var campState=SnapshotReader.Read(service.State,player);
+        var alternatives=CampMechanics.Alternatives(service,restOptions,campState);
         return new(){GoldMultiplier=mul,GoldPerRoom=bank,GoldPerCombat=combat,GoldPerCard=card,TurnGoldCost=loss,
             PriceMultiplier=discount,ShopHealing=Var("MealTicket","Heal"),PossibleRelicGold=possible,
             CampHealing=(double)HealRestSiteOption.GetHealAmount(player),
             CanRest=restOptions.Any(o=>o is HealRestSiteOption&&o.IsEnabled),
             CanSmith=restOptions.Any(o=>o is SmithRestSiteOption&&o.IsEnabled),
+            CampAlternatives=alternatives,
+            CampAllActions=Find("MiniatureTent")!=null,
+            CampEntryHealing=Var("EternalFeather","Heal")*Math.Floor(campState.Deck.Length/Math.Max(1,Var("EternalFeather","Cards",5))),
+            CampEntryValue=(Var("VenerableTeaSet","Energy")+Var("FakeVenerableTeaSet","Energy"))*2,
+            CampEntryAlreadyArmed=(Find("VenerableTeaSet") as VenerableTeaSet)?.GainEnergyInNextCombat==true
+                ||(Find("FakeVenerableTeaSet") as FakeVenerableTeaSet)?.GainEnergyInNextCombat==true,
+            CampHealExtra=CampMechanics.HealExtra(service,campState),
+            CampHealMaxHpDelta=(int)Var("StoneHumidifier","MaxHp")-(service.State.Modifiers.Any(m=>m.GetType().Name=="NightTerrors")?5:0),
+            CampHealToFull=service.State.Modifiers.Any(m=>m.GetType().Name=="NightTerrors"),
             NormalGoldMin=normal.Length==0?10:normal.Min(e=>e.MinGoldReward),NormalGoldMax=normal.Length==0?20:normal.Max(e=>e.MaxGoldReward),
             EliteGoldMin=elite.Length==0?25:elite.Min(e=>e.MinGoldReward),EliteGoldMax=elite.Length==0?35:elite.Max(e=>e.MaxGoldReward),
             BossGoldMin=bosses.Length==0?100:bosses.Min(e=>e.MinGoldReward),BossGoldMax=bosses.Length==0?100:bosses.Max(e=>e.MaxGoldReward),

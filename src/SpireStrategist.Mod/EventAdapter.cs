@@ -21,9 +21,12 @@ internal static class EventAdapter
         if(model==null||model.Owner!=service.Player||model.GetType().Assembly!=typeof(EventModel).Assembly)return null;
         var buttons=GameActions.Descendants<NEventOptionButton>(room).Where(b=>b.IsVisibleInTree()&&b.Option!=null).ToArray();
         if(buttons.Length==0)return null;
-        var s=SnapshotReader.Read(service.State,service.Player);
+        var s=service.WithForesight(SnapshotReader.Read(service.State,service.Player));
         var before=JsonSerializer.Serialize(s.Hidden?.Streams);var eventBefore=model.Rng.ToSerializable();
         var vars=model.DynamicVars.ToDictionary(p=>p.Key,p=>(double)p.Value.BaseValue);
+        // Native DenseVegetation calls MimicRestSiteHeal: sleep rewards apply,
+        // but camp entry passives and Night Terrors' non-mimicked cost do not.
+        if(model is DenseVegetation)vars["RestExtra"]=CampMechanics.HealExtra(service,s,mimicked:true);
         var choices=buttons.Select(b=>Describe(model,b.Option,s,vars) with{Key=b.GetInstanceId().ToString()}).ToArray();
         if(!eventBefore.Equals(model.Rng.ToSerializable())||before!=JsonSerializer.Serialize(HiddenReader.Read(service.State,service.Player).Streams))
             throw new InvalidOperationException("事件评估推进了实际随机流，停止接管。");
@@ -41,7 +44,7 @@ internal static class EventAdapter
         if(model is AncientEventModel && option.Relic is {} relic)
         {
             var result=RelicValue.Evaluate(relic.Id.Entry,s,true);
-            if(model is Neow&&model.Owner!=null&&s.Character=="Ironclad"&&s.PlayerCount==1)
+            if(model is Neow&&model.Owner!=null&&NeowPolicy.Supports(s))
             {
                 var nodes=RouteAdapter.Nodes(model.Owner.RunState);
                 var start=nodes.OrderBy(n=>n.Row).FirstOrDefault()?.Id;
@@ -68,8 +71,27 @@ internal static class EventAdapter
     {
         var v=new StrategicValue(s);var o=option.TextKey.Split('.').Last();
         if(e.Owner==null)return c;
-        if(e is Neow&&s.Character=="Ironclad"&&s.PlayerCount==1)
+        if(e is ThisOrThat && o is "PLAIN" or "ORNATE")
         {
+            var predicted=ThisOrThatForecast.Read(e.Owner);
+            return ThisOrThatPolicy.Apply(c,predicted?.Id.ToString(),predicted?.Rarity==MegaCrit.Sts2.Core.Entities.Relics.RelicRarity.Rare) with
+            {Notes=[predicted==null?"遗物预测不可用，按用户默认选择金币。":
+                "原生奖励随机流与遗物袋副本预测："+predicted.Title.GetFormattedText()+"（"+predicted.Rarity+"）。不消耗真实遗物或随机数。"]};
+        }
+        if(e is Neow&&NeowPolicy.Supports(s))
+        {
+            if(o=="ARCANE_SCROLL"&&RewardForesightReader.Unsupported(e.Owner.RunState,e.Owner)==null)
+            {
+                var copy=RewardForesightReader.Clone(e.Owner.RunState);
+                var card=RewardForesightReader.GenerateArcaneScroll(copy.Players.Single());
+                if(card!=null)
+                {
+                    var path=s.Foresight?.Branches.FirstOrDefault()?.Path.Split('>');
+                    var future=path is {Length:>0}?RewardForesightReader.Read(e.Owner.RunState,e.Owner,path,true):null;
+                    return c with{Benefit=NeowPolicy.ScrollScore(s with{Foresight=future},card),
+                        Notes=[..c.Notes??[],"辉眼：奥术卷轴副本预览 "+card.Name+"；后续分支从卷轴消耗后的随机状态计算。"]};
+                }
+            }
             if(o=="NEW_LEAF")
             {
                 var best=e.Owner.Deck.Cards.Where(x=>x.IsTransformable)
@@ -126,14 +148,14 @@ internal static class EventAdapter
         {
             var card=GameActions.Field(e,"_randomCardToLose") as CardModel;
             if(card==null)return c;
-            if(o=="OVERCOME")return Known(v.Remove(SnapshotReader.ReadCard(card)),card.Title);
+            if(o=="OVERCOME")return Known(BridgePolicy.Removal(s,SnapshotReader.ReadCard(card)),card.Title);
             if(o.StartsWith("HOLD_ON"))
             {
-                var skipped=(GameActions.Field(e,"_skippedRemovals") as IEnumerable<CardModel>??[]).Append(card).ToHashSet();
-                var pool=e.Owner.Deck.Cards.Where(x=>x.GetType()!=card.GetType()&&x.IsRemovable&&!skipped.Contains(x)).ToList();
-                if(pool.Count==0)pool=e.Owner.Deck.Cards.Where(x=>x.IsRemovable).ToList();
-                var next=rng.NextItem(pool);
-                if(next!=null)return Known(v.Remove(SnapshotReader.ReadCard(next)),next.Title);
+                var stops=BridgeForecast.Read((SlipperyBridge)e,s);
+                var best=BridgePolicy.BestContinuation(s,stops);
+                if(best!=null)return c with{Supported=true,Benefit=best.Removal,HpLoss=best.Stop.HpLoss,
+                    Burden=Math.Max(0,best.Cost-v.HpCost(best.Stop.HpLoss)),
+                    Notes=[$"恨桥随机流副本前瞻：下一张 {stops[0].Card.Name}；计划再撑 {best.Stop.Steps} 次，累计损失 {best.Stop.HpLoss} 生命后移除 {best.Stop.Card.Name}。本次支付 {e.DynamicVars["HpLoss"].BaseValue} 生命；每次支付后重新评估，不连续盲点。"]};
             }
         }
         if(e is RelicTrader)

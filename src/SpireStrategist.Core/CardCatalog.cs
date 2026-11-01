@@ -90,8 +90,11 @@ public static class CardCatalog
 
     public static CardProfile? Find(CardSnapshot card)
     {
-        CardProfile? p = Profiles.GetValueOrDefault(card.ClassName);
+        if(MultiplayerAdvice.Ignore(card))return null;
+        if(card.ClassName=="Apotheosis")return new(0,Upgrade:20);
+        CardProfile? p = HeroStrategy.ProfileFor(card) ?? SilentStrategy.ProfileFor(card) ?? DefectPolicy.ProfileFor(card) ?? Profiles.GetValueOrDefault(card.ClassName);
         p ??= ExtraCardModels.Find(card);
+        p ??= DefectNeutral.ProfileFor(card);
         if (p == null && CardRegistry.All.TryGetValue(card.ClassName, out var definition)) p = CardRegistry.Estimate(card, definition);
         if (p == null && card.Type is "Curse" or "Status") p = new(-8, Upgrade: 0, Note: "诅咒/状态牌按负担处理；特殊联动未计入。");
         if (p != null && card.UpgradeLevel > 0)

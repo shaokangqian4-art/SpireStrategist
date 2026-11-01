@@ -1,0 +1,6 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup><OutputType>Exe</OutputType></PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ICSharpCode.Decompiler" HintPath="../../.tools/ilspy/.store/ilspycmd/9.1.0.7988/ilspycmd/9.1.0.7988/tools/net8.0/any/ICSharpCode.Decompiler.dll" />
+  </ItemGroup>
+</Project>

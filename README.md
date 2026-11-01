@@ -1,10 +1,16 @@
-# Global Strategy Assistant · 全局战略助手
+# Global Strategy Assistant · 全局战略助手 · 0.6.55
 
 [简体中文](README.zh-CN.md) · [Steam Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=3823884252) · [Downloads](https://github.com/shaokangqian4-art/SpireStrategist/releases)
 
-An experimental, local strategy assistant for **single-player Ironclad** in **Slay the Spire 2**. It evaluates your deck, health, relics, gold and map to recommend cards, routes, events, Ancient rewards, rest-site actions and shop purchases.
+A local strategy assistant for **all five native characters** in **Slay the Spire 2**. It evaluates your deck, health, relics, gold and map to recommend cards, routes, events, Ancient rewards, rest-site actions and shop purchases.
 
 **No online AI account, API key or live AI inference is required.** Decisions use explainable heuristic scores. Scores are not win probabilities.
+
+## 0.6.55 update
+
+Adds the remaining native characters, character-sensitive relic/potion valuation and budget-aware shop scores. Silent now values Runic Pyramid with Bullet Time, avoids redundant Calculated Gamble Retain upgrades under Pyramid, allows useful repeated Gambles in larger decks, and respects established shiv plans when considering forecast poison cards.
+
+Validation: 236 core regressions, 16 native hook bindings and 20 recorded reward replays. These are not new completed gameplay runs or win-rate measurements.
 
 ## Features
 
@@ -12,7 +18,7 @@ An experimental, local strategy assistant for **single-player Ironclad** in **Sl
 - Recommended card/shop highlights and a route overlay that updates when the run changes. Both can be hidden independently and do not intercept clicks.
 - Optional combat handoff to [CombatSolver by Torch](https://steamcommunity.com/sharedfiles/filedetails/?id=3790899961).
 - Continuous standard random-seed runs, with immediate stop or stop-after-this-run, saved difficulty/character settings and best streaks by character/difficulty.
-- Draggable, collapsible panels; English and Simplified Chinese interface, including strategy explanations. Select the language in Display or the main-menu panel. Defaults to following the game language.
+- Draggable, collapsible panels; English and Simplified Chinese interface, including strategy explanations. Select the language in Settings. Defaults to following the game language.
 - Local feedback exports and run records. Nothing is automatically submitted to the author.
 
 ## Install and use
@@ -26,7 +32,8 @@ The assistant starts in advice mode. Click **Take over** for the current run; **
 - Development baseline: game **0.111.0**, Windows x64, .NET 9; other game versions may change internal APIs.
 - Optional tested combat integration: **CombatSolver 0.50.1**. Without it, combat stays manual and continuous runs are unavailable. The solver is a separate project; this mod neither includes nor translates its interface.
 - Extra floors are supported through actual map structure. Extra acts and arbitrary mod combinations are not guaranteed.
-- Only Ironclad single-player strategy is supported; other character choices are visibly unavailable.
+- Ironclad, Silent, Defect, Regent and Necrobinder have advice and single-player takeover. Regent/Necrobinder use initial mechanism models needing more gameplay feedback.
+- Co-op is optional per client, with local advice, highlights and logs only. No takeover, automated combat, looping, cooperative-only card modelling, teammate synergy or co-op reward forecasts. Native handshake checks passed; real two-computer Steam play remains unverified.
 - Some hidden information is read through copied RNG state. Previews are conditional on future choices and RNG consumption, not a complete prophecy.
 - Policies and relic coverage are incomplete. Known key shop relics receive explicit treatment; remaining affordable relics can be purchased randomly within the budget. Do not interpret this as complete relic optimization.
 - Card, relic and event names follow the **game's** language. Raw JSON diagnostics retain stable original strings and identifiers for replay; English display does not change policy inputs or scores.

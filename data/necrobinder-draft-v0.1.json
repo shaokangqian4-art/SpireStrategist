@@ -1,0 +1,1440 @@
+{
+  "version": "necrobinder-draft-0.1",
+  "gameVersion": "0.111.0",
+  "excludedMultiplayer": [
+    "Cacophony",
+    "GlimpseBeyond",
+    "LegionOfBone",
+    "Soulbound",
+    "Underworld"
+  ],
+  "cards": {
+    "Afterlife": {
+      "base": 3.6,
+      "duplicate": 3.5,
+      "upgradeDelta": 1.4,
+      "phase": [
+        0,
+        0.2,
+        0.3
+      ],
+      "tags": [
+        "summon"
+      ],
+      "note": "一次性召唤，增加奥斯提生命不是玩家回血。",
+      "evidenceAdjustment": 0.039
+    },
+    "BansheesCry": {
+      "base": 5.4,
+      "duplicate": 4.0,
+      "upgradeDelta": 2.0,
+      "phase": [
+        0,
+        0.2,
+        0.3
+      ],
+      "tags": [
+        "attack",
+        "aoe",
+        "ethereal_payoff"
+      ],
+      "note": "九费每打虚无牌降二费，需要虚无频率才能启动。",
+      "evidenceAdjustment": 0.058
+    },
+    "BlightStrike": {
+      "base": 4.4,
+      "duplicate": 3.0,
+      "upgradeDelta": 1.3,
+      "phase": [
+        0.6,
+        -0.6,
+        -1.2
+      ],
+      "tags": [
+        "attack",
+        "doom_source",
+        "transition"
+      ],
+      "note": "实际造成伤害才附灾厄，敌方格挡影响产量。",
+      "evidenceAdjustment": -0.17
+    },
+    "Bodyguard": {
+      "base": 2.3,
+      "duplicate": 4.0,
+      "upgradeDelta": 1.0,
+      "phase": [
+        0,
+        0.2,
+        0.3
+      ],
+      "tags": [
+        "basic",
+        "summon"
+      ],
+      "note": "初始召唤，保护奥斯提主线时不能当普通防御删。",
+      "evidenceAdjustment": 0
+    },
+    "BoneShards": {
+      "base": 4.1,
+      "duplicate": 3.8,
+      "upgradeDelta": 1.4,
+      "phase": [
+        0,
+        0.2,
+        0.3
+      ],
+      "tags": [
+        "osty_attack",
+        "aoe",
+        "block",
+        "sacrifice"
+      ],
+      "note": "需要活着的奥斯提并献祭，不能与常驻大奥斯提无代价叠加。",
+      "evidenceAdjustment": -0.02
+    },
+    "BorrowedTime": {
+      "base": 3.7,
+      "duplicate": 4.0,
+      "upgradeDelta": 1.8,
+      "phase": [
+        0,
+        0.2,
+        0.3
+      ],
+      "tags": [
+        "energy",
+        "surcharge"
+      ],
+      "note": "获得能量同时所有牌涨费，零费灵魂链明显受损。",
+      "evidenceAdjustment": 0.246
+    },
+    "Bury": {
+      "base": 4.1,
+      "duplicate": 3.5,
+      "upgradeDelta": 1.2,
+      "phase": [
+        0.6,
+        -0.6,
+        -1.2
+      ],
+      "tags": [
+        "attack",
+        "expensive",
+        "transition"
+      ],
+      "note": "高费大伤，需供能或虚无降费配套。",
+      "evidenceAdjustment": -0.035
+    },
+    "Calcify": {
+      "base": 5.7,
+      "duplicate": 3.2,
+      "upgradeDelta": 2.0,
+      "phase": [
+        0,
+        0.2,
+        0.3
+      ],
+      "tags": [
+        "osty_engine",
+        "scaling"
+      ],
+      "note": "奥斯提专属每次攻击加伤，需要奥斯提攻击牌。",
+      "evidenceAdjustment": -0.131
+    },
+    "CallOfTheVoid": {
+      "base": 4.5,
+      "duplicate": 4.0,
+      "upgradeDelta": 1.5,
+      "phase": [
+        0,
+        0.2,
+        0.3
+      ],
+      "tags": [
+        "ethereal_source",
+        "generation"
+      ],
+      "note": "每回合随机虚无牌，为虚无体系提供频率，随机性仍在。",
+      "evidenceAdjustment": 0.101
+    },
+    "CaptureSpirit": {
+      "base": 4.6,
+      "duplicate": 2.6,
+      "upgradeDelta": 1.4,
+      "phase": [
+        0,
+        0.2,
+        0.3
+      ],
+      "tags": [
+        "soul_source"
+      ],
+      "note": "三张灵魂入抽牌堆，未来过牌与灵魂触发，不是即时抽三。",
+      "evidenceAdjustment": 0.104
+    },
+    "Cleanse": {
+      "base": 5.1,
+      "duplicate": 2.8,
+      "upgradeDelta": 1.0,
+      "phase": [
+        0,
+        0.2,
+        0.3
+      ],
+      "tags": [
+        "summon",
+        "cleanup"
+      ],
+      "note": "从抽牌堆定向消耗，处理状态、诅咒和基础牌。",
+      "evidenceAdjustment": -0.131
+    },
+    "Countdown": {
+      "base": 5.2,
+      "duplicate": 3.5,
+      "upgradeDelta": 2.0,
+      "phase": [
+        0,
+        0.2,
+        0.3
+      ],
+      "tags": [
+        "doom_source",
+        "doom_engine",
+        "scaling"
+      ],
+      "note": "每回合六灾厄，慢速长战成长；伤害不是即时六点。",
+      "evidenceAdjustment": -0.077
+    },
+    "DanseMacabre": {
+      "base": 4.5,
+      "duplicate": 4.0,
+      "upgradeDelta": 1.7,
+      "phase": [
+        0,
+        0.2,
+        0.3
+      ],
+      "tags": [
+        "block",
+        "expensive_payoff"
+      ],
+      "note": "两费以上卡触发防守，零费灵魂不触发。",
+      "evidenceAdjustment": 0.116
+    },
+    "DeathMarch": {
+      "base": 4.8,
+      "duplicate": 3.4,
+      "upgradeDelta": 2.0,
+      "phase": [
+        0,
+        0.2,
+        0.3
+      ],
+      "tags": [
+        "attack",
+        "draw_engine"
+      ],
+      "note": "按本回合额外抽牌增长，灵魂支持伤害。",
+      "evidenceAdjustment": -0.081
+    },
+    "Deathbringer": {
+      "base": 5.3,
+      "duplicate": 3.0,
+      "upgradeDelta": 1.5,
+      "phase": [
+        0,
+        0.2,
+        0.3
+      ],
+      "tags": [
+        "doom_source",
+        "aoe",
+        "weak"
+      ],
+      "note": "群体灾厄兼虚弱，不是即时群伤。",
+      "evidenceAdjustment": 0.091
+    },
+    "DeathsDoor": {
+      "base": 4.5,
+      "duplicate": 2.8,
+      "upgradeDelta": 1.3,
+      "phase": [
+        0,
+        0.2,
+        0.3
+      ],
+      "tags": [
+        "block",
+        "doom_block"
+      ],
+      "note": "同回合施灾厄后十八盾，需实际施加频率。",
+      "evidenceAdjustment": -0.057
+    },
+    "Debilitate": {
+      "base": 4.6,
+      "duplicate": 3.5,
+      "upgradeDelta": 1.5,
+      "phase": [
+        0,
+        0.2,
+        0.3
+      ],
+      "tags": [
+        "attack",
+        "vulnerable",
+        "weak",
+        "payoff_debuff"
+      ],
+      "note": "强化已有虚弱易伤，自己不施加二者。",
+      "evidenceAdjustment": 0.011
+    },
+    "DefendNecrobinder": {
+      "base": 0.5,
+      "duplicate": 4.0,
+      "upgradeDelta": 0.5,
+      "phase": [
+        0,
+        0.2,
+        0.3
+      ],
+      "tags": [
+        "basic",
+        "block"
+      ],
+      "note": "初始防御，低升级优先级。",
+      "evidenceAdjustment": 0
+    },
+    "Defile": {
+      "base": 3.7,
+      "duplicate": 3.5,
+      "upgradeDelta": 1.2,
+      "phase": [
+        0.6,
+        -0.6,
+        -1.2
+      ],
+      "tags": [
+        "attack",
+        "ethereal",
+        "transition"
+      ],
+      "note": "一费十三虚无伤害，合格过渡但不持续成长。",
+      "evidenceAdjustment": -0.061
+    },
+    "Defy": {
+      "base": 4.1,
+      "duplicate": 3.0,
+      "upgradeDelta": 1.3,
+      "phase": [
+        0,
+        0.2,
+        0.3
+      ],
+      "tags": [
+        "block",
+        "weak",
+        "ethereal"
+      ],
+      "note": "防御加虚弱，兼容虚无体系。",
+      "evidenceAdjustment": 0.527
+    },
+    "Delay": {
+      "base": 3.8,
+      "duplicate": 3.5,
+      "upgradeDelta": 1.8,
+      "phase": [
+        0,
+        0.2,
+        0.3
+      ],
+      "tags": [
+        "block",
+        "next_energy"
+      ],
+      "note": "先两费防御，下回合供能，不能算即时能量。",
+      "evidenceAdjustment": 0.234
+    },
+    "Demesne": {
+      "base": 6.0,
+      "duplicate": 4.0,
+      "upgradeDelta": 3.0,
+      "phase": [
+        0,
+        0.2,
+        0.3
+      ],
+      "tags": [
+        "draw",
+        "energy",
+        "ethereal",
+        "scaling"
+      ],
+      "note": "持续供能过牌，三费虚无有启动窗口，升级降费关键。",
+      "evidenceAdjustment": 0.467
+    },
+    "DevourLife": {
+      "base": 5.0,
+      "duplicate": 4.0,
+      "upgradeDelta": 2.0,
+      "phase": [
+        0,
+        0.2,
+        0.3
+      ],
+      "tags": [
+        "summon",
+        "soul_payoff"
+      ],
+      "note": "打灵魂召唤，实际灵魂来源决定生效频率。",
+      "evidenceAdjustment": -0.221
+    },
+    "Dirge": {
+      "base": 5.1,
+      "duplicate": 3.0,
+      "upgradeDelta": 1.5,
+      "phase": [
+        0,
+        0.2,
+        0.3
+      ],
+      "tags": [
+        "summon",
+        "soul_source",
+        "x"
+      ],
+      "note": "能量X转召唤与灵魂，兼容召唤和灵魂体系。",
+      "evidenceAdjustment": 0.173
+    },
+    "DrainPower": {
+      "base": 3.0,
+      "duplicate": 4.0,
+      "upgradeDelta": 1.0,
+      "phase": [
+        0.6,
+        -0.6,
+        -1.2
+      ],
+      "tags": [
+        "attack",
+        "transition"
+      ],
+      "note": "随机升级弃牌不保证升级核心，不替代营火。",
+      "evidenceAdjustment": -0.221
+    },
+    "Dredge": {
+      "base": 5.6,
+      "duplicate": 2.8,
+      "upgradeDelta": 1.3,
+      "phase": [
+        0,
+        0.2,
+        0.3
+      ],
+      "tags": [
+        "recall",
+        "draw"
+      ],
+      "note": "弃牌回收三张，消耗；升级保留帮助配齐。",
+      "evidenceAdjustment": 0.233
+    },
+    "Eidolon": {
+      "base": 5.6,
+      "duplicate": 4.0,
+      "upgradeDelta": 3.0,
+      "phase": [
+        0,
+        0.2,
+        0.3
+      ],
+      "tags": [
+        "ethereal_payoff",
+        "finisher"
+      ],
+      "note": "重放消耗区虚无牌，需足量已消耗虚无且考虑二费启动。",
+      "evidenceAdjustment": -0.116
+    },
+    "EndOfDays": {
+      "base": 5.5,
+      "duplicate": 4.0,
+      "upgradeDelta": 1.6,
+      "phase": [
+        0,
+        0.2,
+        0.3
+      ],
+      "tags": [
+        "doom_source",
+        "doom_payoff",
+        "aoe"
+      ],
+      "note": "即时灾厄斩杀省等待回合，需结合敌人生命与现有灾厄。",
+      "evidenceAdjustment": -0.138
+    },
+    "EnfeeblingTouch": {
+      "base": 5.0,
+      "duplicate": 3.0,
+      "upgradeDelta": 1.5,
+      "phase": [
+        0,
+        0.2,
+        0.3
+      ],
+      "tags": [
+        "strength_down",
+        "ethereal",
+        "block"
+      ],
+      "note": "大幅当回合降力量，多段敌人防守价值高。",
+      "evidenceAdjustment": 0.288
+    },
+    "Eradicate": {
+      "base": 5.7,
+      "duplicate": 3.0,
+      "upgradeDelta": 1.7,
+      "phase": [
+        0,
+        0.2,
+        0.3
+      ],
+      "tags": [
+        "attack",
+        "x",
+        "finisher",
+        "multihit"
+      ],
+      "note": "能量X多段伤害可保留，独立爆发出口。",
+      "evidenceAdjustment": 0.343
+    },
+    "Fear": {
+      "base": 3.5,
+      "duplicate": 3.5,
+      "upgradeDelta": 1.4,
+      "phase": [
+        0.6,
+        -0.6,
+        -1.2
+      ],
+      "tags": [
+        "attack",
+        "vulnerable",
+        "ethereal",
+        "transition"
+      ],
+      "note": "虚无过渡与易伤，辅助实际攻击主线。",
+      "evidenceAdjustment": -0.088
+    },
+    "Fetch": {
+      "base": 4.7,
+      "duplicate": 2.5,
+      "upgradeDelta": 1.1,
+      "phase": [
+        0,
+        0.2,
+        0.3
+      ],
+      "tags": [
+        "osty_attack",
+        "draw"
+      ],
+      "note": "每回合首次才抽牌，不得按反复回手无限抽。",
+      "evidenceAdjustment": 0.128
+    },
+    "Flatten": {
+      "base": 4.3,
+      "duplicate": 3.0,
+      "upgradeDelta": 1.4,
+      "phase": [
+        0.6,
+        -0.6,
+        -1.2
+      ],
+      "tags": [
+        "osty_attack",
+        "transition"
+      ],
+      "note": "奥斯提前置攻击后免费，需要同回合顺序。",
+      "evidenceAdjustment": 0.036
+    },
+    "ForbiddenGrimoire": {
+      "base": 6.5,
+      "duplicate": 7.0,
+      "upgradeDelta": 2.0,
+      "phase": [
+        1,
+        0,
+        -4
+      ],
+      "tags": [
+        "ancient",
+        "economy",
+        "cleanup"
+      ],
+      "note": "战后永久删牌，前期精简价值高，结束前必须实际打出。",
+      "evidenceAdjustment": 0
+    },
+    "Friendship": {
+      "base": 5.6,
+      "duplicate": 3.5,
+      "upgradeDelta": 1.1,
+      "phase": [
+        0,
+        0.2,
+        0.3
+      ],
+      "tags": [
+        "energy",
+        "scaling",
+        "strength_loss"
+      ],
+      "note": "玩家掉力量换每回合能量，不等于扣奥斯提自身力量。",
+      "evidenceAdjustment": 0.181
+    },
+    "GraveWarden": {
+      "base": 4.5,
+      "duplicate": 2.8,
+      "upgradeDelta": 1.3,
+      "phase": [
+        0,
+        0.2,
+        0.3
+      ],
+      "tags": [
+        "block",
+        "soul_source"
+      ],
+      "note": "格挡附一灵魂，稳健兼容但不能替代输出核心。",
+      "evidenceAdjustment": 0.295
+    },
+    "Graveblast": {
+      "base": 4.9,
+      "duplicate": 2.6,
+      "upgradeDelta": 1.4,
+      "phase": [
+        0,
+        0.2,
+        0.3
+      ],
+      "tags": [
+        "attack",
+        "recall"
+      ],
+      "note": "低伤定向回收，价值来自回收关键牌。",
+      "evidenceAdjustment": 0.043
+    },
+    "Hang": {
+      "base": 6.6,
+      "duplicate": 2.4,
+      "upgradeDelta": 1.4,
+      "phase": [
+        0,
+        0.2,
+        0.3
+      ],
+      "tags": [
+        "attack",
+        "autonomous",
+        "scaling"
+      ],
+      "note": "对同一敌人反复翻倍，独立Boss输出，需回收过牌。",
+      "evidenceAdjustment": -0.114
+    },
+    "Haunt": {
+      "base": 5.9,
+      "duplicate": 3.0,
+      "upgradeDelta": 1.8,
+      "phase": [
+        0,
+        0.2,
+        0.3
+      ],
+      "tags": [
+        "soul_payoff",
+        "soul_engine",
+        "scaling"
+      ],
+      "note": "打灵魂触发生命流失，灵魂生成决定持续输出。",
+      "evidenceAdjustment": -0.218
+    },
+    "HighFive": {
+      "base": 4.8,
+      "duplicate": 3.2,
+      "upgradeDelta": 1.5,
+      "phase": [
+        0,
+        0.2,
+        0.3
+      ],
+      "tags": [
+        "osty_attack",
+        "aoe",
+        "vulnerable"
+      ],
+      "note": "奥斯提群攻易伤，支持召唤攻击但非玩家力量收益。",
+      "evidenceAdjustment": 0.008
+    },
+    "Invoke": {
+      "base": 4.1,
+      "duplicate": 2.8,
+      "upgradeDelta": 1.5,
+      "phase": [
+        0,
+        0.2,
+        0.3
+      ],
+      "tags": [
+        "summon",
+        "next_energy"
+      ],
+      "note": "下回合召唤供能，有等待成本。",
+      "evidenceAdjustment": 0.212
+    },
+    "Lethality": {
+      "base": 4.6,
+      "duplicate": 3.8,
+      "upgradeDelta": 1.8,
+      "phase": [
+        0,
+        0.2,
+        0.3
+      ],
+      "tags": [
+        "attack_payoff",
+        "ethereal"
+      ],
+      "note": "每回合首张攻击加伤，应有高伤首击，非所有攻击增伤。",
+      "evidenceAdjustment": 0.254
+    },
+    "Melancholy": {
+      "base": 3.5,
+      "duplicate": 4.0,
+      "upgradeDelta": 1.3,
+      "phase": [
+        0,
+        0.2,
+        0.3
+      ],
+      "tags": [
+        "block",
+        "death_payoff"
+      ],
+      "note": "生物死亡才降费，单Boss缺少小怪时不保证便宜。",
+      "evidenceAdjustment": -0.118
+    },
+    "Misery": {
+      "base": 4.8,
+      "duplicate": 4.0,
+      "upgradeDelta": 1.1,
+      "phase": [
+        0,
+        0.2,
+        0.3
+      ],
+      "tags": [
+        "attack",
+        "aoe",
+        "doom_payoff"
+      ],
+      "note": "传播现有减益，单目标Boss时价值明显折扣。",
+      "evidenceAdjustment": -0.252
+    },
+    "NecroMastery": {
+      "base": 6.0,
+      "duplicate": 4.0,
+      "upgradeDelta": 1.6,
+      "phase": [
+        0,
+        0.2,
+        0.3
+      ],
+      "tags": [
+        "summon",
+        "osty_engine",
+        "scaling"
+      ],
+      "note": "奥斯提实际损血反伤，牺牲或死亡不无条件按最大血触发。",
+      "evidenceAdjustment": -0.119
+    },
+    "NegativePulse": {
+      "base": 4.2,
+      "duplicate": 3.0,
+      "upgradeDelta": 1.6,
+      "phase": [
+        0,
+        0.2,
+        0.3
+      ],
+      "tags": [
+        "block",
+        "doom_source",
+        "aoe"
+      ],
+      "note": "防守兼群体灾厄，低伤害立即性。",
+      "evidenceAdjustment": 0.002
+    },
+    "Neurosurge": {
+      "base": 6.1,
+      "duplicate": 4.5,
+      "upgradeDelta": 1.2,
+      "phase": [
+        0,
+        0.2,
+        0.3
+      ],
+      "tags": [
+        "energy",
+        "draw",
+        "self_doom"
+      ],
+      "note": "强供能抽牌但自身持续灾厄，低血长战有致死时限。",
+      "evidenceAdjustment": 0.456
+    },
+    "NoEscape": {
+      "base": 5.8,
+      "duplicate": 3.0,
+      "upgradeDelta": 1.7,
+      "phase": [
+        0,
+        0.2,
+        0.3
+      ],
+      "tags": [
+        "doom_source",
+        "doom_payoff",
+        "doom_engine"
+      ],
+      "note": "灾厄按已有层数增加，提供真正长战放大。",
+      "evidenceAdjustment": -0.147
+    },
+    "Oblivion": {
+      "base": 5.8,
+      "duplicate": 3.5,
+      "upgradeDelta": 1.7,
+      "phase": [
+        0,
+        0.2,
+        0.3
+      ],
+      "tags": [
+        "doom_source",
+        "doom_engine",
+        "play_payoff"
+      ],
+      "note": "本回合后续每次出牌施灾厄，灵魂链支持高频。",
+      "evidenceAdjustment": 0.054
+    },
+    "Pagestorm": {
+      "base": 5.2,
+      "duplicate": 4.0,
+      "upgradeDelta": 3.0,
+      "phase": [
+        0,
+        0.2,
+        0.3
+      ],
+      "tags": [
+        "draw",
+        "ethereal_payoff"
+      ],
+      "note": "抽虚无才追加抽牌，需虚无密度，升级降费重要。",
+      "evidenceAdjustment": 0.022
+    },
+    "Parse": {
+      "base": 5.0,
+      "duplicate": 2.6,
+      "upgradeDelta": 1.5,
+      "phase": [
+        0,
+        0.2,
+        0.3
+      ],
+      "tags": [
+        "draw",
+        "ethereal"
+      ],
+      "note": "抽三虚无，净过牌与虚无联动，不是烧其他牌。",
+      "evidenceAdjustment": 0.026
+    },
+    "Poke": {
+      "base": 3.9,
+      "duplicate": 3.0,
+      "upgradeDelta": 1.2,
+      "phase": [
+        0.6,
+        -0.6,
+        -1.2
+      ],
+      "tags": [
+        "osty_attack",
+        "transition"
+      ],
+      "note": "零费奥斯提攻击，需其存活，支持多次攻击。",
+      "evidenceAdjustment": 0.005
+    },
+    "Protector": {
+      "base": 6.5,
+      "duplicate": 3.0,
+      "upgradeDelta": 3.0,
+      "phase": [
+        0,
+        0.2,
+        0.3
+      ],
+      "tags": [
+        "osty_attack",
+        "summon_payoff",
+        "ancient"
+      ],
+      "note": "按奥斯提最大生命成长，非玩家最大生命。",
+      "evidenceAdjustment": 0
+    },
+    "PullAggro": {
+      "base": 3.6,
+      "duplicate": 3.5,
+      "upgradeDelta": 1.1,
+      "phase": [
+        0.6,
+        -0.6,
+        -1.2
+      ],
+      "tags": [
+        "summon",
+        "block",
+        "transition"
+      ],
+      "note": "两费召唤与格挡，防守收益不能双算同一伤害。",
+      "evidenceAdjustment": 0.08
+    },
+    "PullFromBelow": {
+      "base": 5.1,
+      "duplicate": 3.4,
+      "upgradeDelta": 1.8,
+      "phase": [
+        0,
+        0.2,
+        0.3
+      ],
+      "tags": [
+        "attack",
+        "ethereal_payoff",
+        "scaling",
+        "multihit"
+      ],
+      "note": "累计打出虚无的伤害终端，需虚无来源。",
+      "evidenceAdjustment": -0.023
+    },
+    "Putrefy": {
+      "base": 4.7,
+      "duplicate": 3.3,
+      "upgradeDelta": 1.3,
+      "phase": [
+        0,
+        0.2,
+        0.3
+      ],
+      "tags": [
+        "weak",
+        "vulnerable"
+      ],
+      "note": "一次双减益，多体系兼容，不是成长输出。",
+      "evidenceAdjustment": 0.238
+    },
+    "Rattle": {
+      "base": 5.3,
+      "duplicate": 3.0,
+      "upgradeDelta": 1.5,
+      "phase": [
+        0,
+        0.2,
+        0.3
+      ],
+      "tags": [
+        "osty_attack",
+        "osty_engine",
+        "multihit"
+      ],
+      "note": "同回合奥斯提攻击次数终端，需要低费前置攻击。",
+      "evidenceAdjustment": -0.071
+    },
+    "Reanimate": {
+      "base": 4.7,
+      "duplicate": 4.0,
+      "upgradeDelta": 1.4,
+      "phase": [
+        0,
+        0.2,
+        0.3
+      ],
+      "tags": [
+        "summon"
+      ],
+      "note": "三费大量召唤，适合大奥斯提但不凭空产生输出。",
+      "evidenceAdjustment": 0.183
+    },
+    "Reap": {
+      "base": 3.0,
+      "duplicate": 4.0,
+      "upgradeDelta": 1.0,
+      "phase": [
+        0.6,
+        -0.6,
+        -1.2
+      ],
+      "tags": [
+        "attack",
+        "expensive",
+        "transition"
+      ],
+      "note": "三费二十七过渡，只有高费联动或缺伤时考虑。",
+      "evidenceAdjustment": 0.04
+    },
+    "ReaperForm": {
+      "base": 5.8,
+      "duplicate": 4.0,
+      "upgradeDelta": 1.5,
+      "phase": [
+        0,
+        0.2,
+        0.3
+      ],
+      "tags": [
+        "doom_payoff",
+        "attack_payoff",
+        "scaling"
+      ],
+      "note": "攻击实际伤害追加灾厄，需攻击和三费启动能力。",
+      "evidenceAdjustment": 0.101
+    },
+    "Reave": {
+      "base": 4.2,
+      "duplicate": 3.0,
+      "upgradeDelta": 1.4,
+      "phase": [
+        0.6,
+        -0.6,
+        -1.2
+      ],
+      "tags": [
+        "attack",
+        "soul_source",
+        "transition"
+      ],
+      "note": "过渡攻击兼灵魂，灵魂升级有运转收益。",
+      "evidenceAdjustment": -0.219
+    },
+    "RightHandHand": {
+      "base": 4.7,
+      "duplicate": 3.0,
+      "upgradeDelta": 1.2,
+      "phase": [
+        0,
+        0.2,
+        0.3
+      ],
+      "tags": [
+        "osty_attack",
+        "expensive_payoff",
+        "scaling"
+      ],
+      "note": "高费牌回收零费奥斯提攻击，需高费打出频率。",
+      "evidenceAdjustment": -0.032
+    },
+    "Sacrifice": {
+      "base": 4.4,
+      "duplicate": 4.0,
+      "upgradeDelta": 3.0,
+      "phase": [
+        0,
+        0.2,
+        0.3
+      ],
+      "tags": [
+        "block",
+        "sacrifice",
+        "summon_payoff"
+      ],
+      "note": "牺牲奥斯提换盾，失去已养大奥斯提有实际代价。",
+      "evidenceAdjustment": -0.035
+    },
+    "Scourge": {
+      "base": 4.8,
+      "duplicate": 2.8,
+      "upgradeDelta": 1.8,
+      "phase": [
+        0,
+        0.2,
+        0.3
+      ],
+      "tags": [
+        "doom_source",
+        "draw"
+      ],
+      "note": "灾厄加过牌；升级净抽增加，非即时伤害。",
+      "evidenceAdjustment": -0.049
+    },
+    "SculptingStrike": {
+      "base": 3.8,
+      "duplicate": 3.2,
+      "upgradeDelta": 1.3,
+      "phase": [
+        0.6,
+        -0.6,
+        -1.2
+      ],
+      "tags": [
+        "attack",
+        "ethereal_source",
+        "cleanup",
+        "transition"
+      ],
+      "note": "手牌加虚无可清污染，须留到回合结束才消耗。",
+      "evidenceAdjustment": -0.163
+    },
+    "Seance": {
+      "base": 4.8,
+      "duplicate": 4.0,
+      "upgradeDelta": 3.0,
+      "phase": [
+        0,
+        0.2,
+        0.3
+      ],
+      "tags": [
+        "soul_source",
+        "cleanup",
+        "ethereal"
+      ],
+      "note": "将抽牌堆杂牌变灵魂，保护输出核心与供能。",
+      "evidenceAdjustment": -0.104
+    },
+    "SentryMode": {
+      "base": 5.6,
+      "duplicate": 4.0,
+      "upgradeDelta": 3.0,
+      "phase": [
+        0,
+        0.2,
+        0.3
+      ],
+      "tags": [
+        "generation",
+        "autonomous",
+        "scaling"
+      ],
+      "note": "每回合生成扫荡凝视，持续输出但仍需打出费用。",
+      "evidenceAdjustment": -0.02
+    },
+    "Severance": {
+      "base": 4.7,
+      "duplicate": 2.8,
+      "upgradeDelta": 1.3,
+      "phase": [
+        0,
+        0.2,
+        0.3
+      ],
+      "tags": [
+        "attack",
+        "soul_source"
+      ],
+      "note": "三处各加灵魂，手牌的一张即时可用。",
+      "evidenceAdjustment": -0.169
+    },
+    "SharedFate": {
+      "base": 4.7,
+      "duplicate": 4.0,
+      "upgradeDelta": 1.5,
+      "phase": [
+        0,
+        0.2,
+        0.3
+      ],
+      "tags": [
+        "strength_down",
+        "strength_loss"
+      ],
+      "note": "永久敌方降力量，玩家攻击主线承担自己的力量损失。",
+      "evidenceAdjustment": -0.01
+    },
+    "Shroud": {
+      "base": 5.0,
+      "duplicate": 3.5,
+      "upgradeDelta": 1.7,
+      "phase": [
+        0,
+        0.2,
+        0.3
+      ],
+      "tags": [
+        "block",
+        "doom_block"
+      ],
+      "note": "每次施灾厄格挡，不按灾厄层数逐点起盾。",
+      "evidenceAdjustment": -0.028
+    },
+    "SicEm": {
+      "base": 5.1,
+      "duplicate": 3.0,
+      "upgradeDelta": 1.4,
+      "phase": [
+        0,
+        0.2,
+        0.3
+      ],
+      "tags": [
+        "osty_attack",
+        "summon",
+        "osty_engine"
+      ],
+      "note": "后续奥斯提攻击该目标才召唤，需要攻击频率。",
+      "evidenceAdjustment": -0.107
+    },
+    "SleightOfFlesh": {
+      "base": 5.3,
+      "duplicate": 3.5,
+      "upgradeDelta": 1.8,
+      "phase": [
+        0,
+        0.2,
+        0.3
+      ],
+      "tags": [
+        "doom_payoff",
+        "scaling",
+        "debuff_engine"
+      ],
+      "note": "每次施加负面触发伤害，需施加频率而非层数。",
+      "evidenceAdjustment": 0.104
+    },
+    "Snap": {
+      "base": 3.6,
+      "duplicate": 3.5,
+      "upgradeDelta": 1.1,
+      "phase": [
+        0.6,
+        -0.6,
+        -1.2
+      ],
+      "tags": [
+        "osty_attack",
+        "retain",
+        "transition"
+      ],
+      "note": "攻击加单牌保留，组件桥梁而非输出核心。",
+      "evidenceAdjustment": 0.09
+    },
+    "SoulStorm": {
+      "base": 6.0,
+      "duplicate": 3.0,
+      "upgradeDelta": 1.8,
+      "phase": [
+        0,
+        0.2,
+        0.3
+      ],
+      "tags": [
+        "attack",
+        "soul_payoff",
+        "soul_engine",
+        "scaling"
+      ],
+      "note": "消耗区灵魂累计伤害，需灵魂来源，非抽牌数量。",
+      "evidenceAdjustment": -0.146
+    },
+    "Sow": {
+      "base": 3.7,
+      "duplicate": 3.5,
+      "upgradeDelta": 1.2,
+      "phase": [
+        0.6,
+        -0.6,
+        -1.2
+      ],
+      "tags": [
+        "attack",
+        "aoe",
+        "transition"
+      ],
+      "note": "一费群伤可保留，早期过渡不应后期堆积。",
+      "evidenceAdjustment": -0.143
+    },
+    "SpiritOfAsh": {
+      "base": 5.2,
+      "duplicate": 3.5,
+      "upgradeDelta": 1.5,
+      "phase": [
+        0,
+        0.2,
+        0.3
+      ],
+      "tags": [
+        "block",
+        "ethereal_payoff"
+      ],
+      "note": "打出虚无起盾，回合结束虚无消耗不算打出。",
+      "evidenceAdjustment": 0.051
+    },
+    "Spur": {
+      "base": 4.4,
+      "duplicate": 3.0,
+      "upgradeDelta": 1.6,
+      "phase": [
+        0,
+        0.2,
+        0.3
+      ],
+      "tags": [
+        "summon",
+        "heal_osty"
+      ],
+      "note": "召唤并治疗奥斯提，不能当玩家营火回血。",
+      "evidenceAdjustment": -0.102
+    },
+    "Squeeze": {
+      "base": 5.1,
+      "duplicate": 3.5,
+      "upgradeDelta": 1.4,
+      "phase": [
+        0,
+        0.2,
+        0.3
+      ],
+      "tags": [
+        "osty_attack",
+        "osty_engine",
+        "expensive"
+      ],
+      "note": "奥斯提攻击数量放大三费终端，不能按玩家力量成长。",
+      "evidenceAdjustment": 0.089
+    },
+    "StrikeNecrobinder": {
+      "base": 0.5,
+      "duplicate": 4.0,
+      "upgradeDelta": 0.5,
+      "phase": [
+        0,
+        0.2,
+        0.3
+      ],
+      "tags": [
+        "basic",
+        "attack"
+      ],
+      "note": "初始打击优先精简。",
+      "evidenceAdjustment": 0
+    },
+    "TheScythe": {
+      "base": 6.0,
+      "duplicate": 4.0,
+      "upgradeDelta": 1.6,
+      "phase": [
+        0,
+        0.2,
+        0.3
+      ],
+      "tags": [
+        "attack",
+        "autonomous",
+        "scaling"
+      ],
+      "note": "每局永久成长，越早获得越有积累机会，每战消耗。",
+      "evidenceAdjustment": 0.157
+    },
+    "TimesUp": {
+      "base": 5.4,
+      "duplicate": 3.5,
+      "upgradeDelta": 1.0,
+      "phase": [
+        0,
+        0.2,
+        0.3
+      ],
+      "tags": [
+        "attack",
+        "doom_payoff"
+      ],
+      "note": "灾厄转即时攻击，缺乏灾厄时没有基础伤害。",
+      "evidenceAdjustment": -0.123
+    },
+    "Transfigure": {
+      "base": 5.2,
+      "duplicate": 4.0,
+      "upgradeDelta": 1.5,
+      "phase": [
+        0,
+        0.2,
+        0.3
+      ],
+      "tags": [
+        "repeat_skill",
+        "surcharge"
+      ],
+      "note": "单牌重放加费，需具体目标和支付能力。",
+      "evidenceAdjustment": 0.003
+    },
+    "Undeath": {
+      "base": 4.2,
+      "duplicate": 5.0,
+      "upgradeDelta": 1.2,
+      "phase": [
+        0,
+        0.2,
+        0.3
+      ],
+      "tags": [
+        "block",
+        "generation"
+      ],
+      "note": "零费盾自复制会膨胀牌堆，重复抓取惩罚高。",
+      "evidenceAdjustment": -0.114
+    },
+    "Unleash": {
+      "base": 2.8,
+      "duplicate": 4.0,
+      "upgradeDelta": 1.0,
+      "phase": [
+        0,
+        0.2,
+        0.3
+      ],
+      "tags": [
+        "basic",
+        "osty_attack",
+        "summon_payoff"
+      ],
+      "note": "按奥斯提现有生命加伤，不是玩家生命。",
+      "evidenceAdjustment": 0
+    },
+    "Veilpiercer": {
+      "base": 4.4,
+      "duplicate": 3.0,
+      "upgradeDelta": 1.1,
+      "phase": [
+        0.6,
+        -0.6,
+        -1.2
+      ],
+      "tags": [
+        "attack",
+        "ethereal_payoff",
+        "transition"
+      ],
+      "note": "下一张虚无免费，可帮助高费虚无启动。",
+      "evidenceAdjustment": -0.163
+    },
+    "Wisp": {
+      "base": 4.3,
+      "duplicate": 3.0,
+      "upgradeDelta": 1.0,
+      "phase": [
+        0,
+        0.2,
+        0.3
+      ],
+      "tags": [
+        "energy"
+      ],
+      "note": "一次供能消耗，升级保留有配齐价值。",
+      "evidenceAdjustment": -0.007
+    }
+  }
+}

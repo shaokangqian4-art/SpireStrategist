@@ -6,6 +6,9 @@ public sealed record DeckReadiness(double Quality,double Offense,double Defense,
     public double SustainedDefense {get;init;}
     public static DeckReadiness Read(RunSnapshot s)
     {
+        if(HeroPolicy.Supports(s.Character))return HeroStrategy.Readiness(s);
+        if(s.Character=="Silent")return SilentStrategy.Readiness(s);
+        if(s.Character=="Defect")return DefectStrategy.Readiness(s);
         var cards=s.Deck.Select(c=>(Card:c,Profile:CardCatalog.Find(c))).Where(x=>x.Profile!=null).ToArray();
         var known=cards.Length/Math.Max(1d,s.Deck.Length);
         var seen=new Dictionary<string,int>();

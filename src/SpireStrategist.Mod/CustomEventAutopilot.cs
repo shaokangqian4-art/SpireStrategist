@@ -71,7 +71,7 @@ internal sealed partial class PartialAutopilot
         if(screen is NChooseACardSelectionScreen choose)
         {
             if(GameActions.Field(choose,"_screenComplete") is true)return true;
-            var v=new StrategicValue(SnapshotReader.Read(service.State,service.Player));
+            var v=new StrategicValue(service.WithForesight(SnapshotReader.Read(service.State,service.Player)));
             var best=GameActions.Descendants<NGridCardHolder>(choose).Where(h=>h.IsVisibleInTree()).OrderByDescending(h=>v.Add(SnapshotReader.ReadCard(h.CardModel))).FirstOrDefault();
             if(best==null)return true;
             var skip=GameActions.Field(choose,"_canSkip") is true && (eventSelection=="skip-foreign"||v.Add(SnapshotReader.ReadCard(best.CardModel))<=0);
@@ -92,7 +92,7 @@ internal sealed partial class PartialAutopilot
             }
             else
             {
-                var v=new StrategicValue(SnapshotReader.Read(service.State,service.Player));
+                var v=new StrategicValue(service.WithForesight(SnapshotReader.Read(service.State,service.Player)));
                 var best=GameActions.Descendants<NCardBundle>(bundle).Where(n=>n.IsVisibleInTree()).OrderByDescending(n=>n.Bundle.Sum(c=>v.Add(SnapshotReader.ReadCard(c)))).FirstOrDefault();
                 Wait("接管中 · 评估完整卡包的收益和冗余");
                 if(best!=null&&Claim("bundle-select:"+bundle.GetInstanceId())){plannedBundle=best;GameActions.Invoke(bundle,"OnBundleClicked",best);}
@@ -118,7 +118,7 @@ internal sealed partial class PartialAutopilot
         if(GameActions.Field(screen,"_entity") is not CrystalSphereMinigame game || !game.PlacedAllItems){Wait("接管中 · 等待水晶球生成");return;}
         if(game.IsFinished)
         {Proceed(screen,(NClickableControl)GameActions.Field(screen,"_proceedButton")!,"OnProceedButtonPressed");return;}
-        var v=new StrategicValue(SnapshotReader.Read(service.State,service.Player));
+        var v=new StrategicValue(service.WithForesight(SnapshotReader.Read(service.State,service.Player)));
         double Worth(CrystalSphereItem item)=>item.GetType().Name switch
         {"CrystalSphereRelic"=>10,"CrystalSphereCardReward"=>4,"CrystalSpherePotion"=>v.Potion(1),"CrystalSphereGold"=>v.Gold(item.Size.X==2?30:10),_=>-30};
         var hidden=game.cells.Cast<CrystalSphereCell>().Where(c=>c.IsHidden).ToArray();

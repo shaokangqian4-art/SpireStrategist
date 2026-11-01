@@ -6,6 +6,15 @@
     <EnableDynamicLoading>true</EnableDynamicLoading>
   </PropertyGroup>
   <ItemGroup>
+    <EmbeddedResource Include="../../data/regent-draft-v0.1.json" LogicalName="SpireStrategist.RegentPrior.json" />
+    <EmbeddedResource Include="../../data/regent-cards-v0.111.0.json" LogicalName="SpireStrategist.RegentCards.json" />
+    <EmbeddedResource Include="../../data/necrobinder-draft-v0.1.json" LogicalName="SpireStrategist.NecrobinderPrior.json" />
+    <EmbeddedResource Include="../../data/necrobinder-cards-v0.111.0.json" LogicalName="SpireStrategist.NecrobinderCards.json" />
+    <EmbeddedResource Include="../../data/silent-draft-v0.2.json" LogicalName="SpireStrategist.SilentPrior.json" />
+    <EmbeddedResource Include="../../data/silent-cards-v0.111.0.json" LogicalName="SpireStrategist.SilentCards.json" />
+    <EmbeddedResource Include="../../data/defect-neutral-v1.json" LogicalName="SpireStrategist.DefectNeutral.json" />
+    <EmbeddedResource Include="$(DefectPriorPath)" LogicalName="SpireStrategist.DefectPrior.json" />
+    <EmbeddedResource Include="../../data/defect-cards-v0.111.0.json" LogicalName="SpireStrategist.DefectCards.json" />
     <EmbeddedResource Include="../../localization/en.json" LogicalName="SpireStrategist.English.json" />
     <EmbeddedResource Include="../../data/cards-v0.111.0.json" LogicalName="SpireStrategist.Cards.json" />
     <EmbeddedResource Include="../../data/event-cards-v0.111.0.json" LogicalName="SpireStrategist.EventCards.json" />

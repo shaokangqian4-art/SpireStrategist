@@ -10,6 +10,7 @@ using MegaCrit.Sts2.Core.Nodes.Screens.CardSelection;
 using MegaCrit.Sts2.Core.Nodes.Screens.Map;
 using MegaCrit.Sts2.Core.Rooms;
 using MegaCrit.Sts2.Core.Runs;
+using SpireStrategist.Core;
 
 namespace SpireStrategist.Mod;
 
@@ -78,10 +79,11 @@ internal static partial class AutopilotLab
         var existing=ModelDb.Potion<BlockPotion>().ToMutable();
         await PotionCmd.TryToProcure(existing,player);
         await Rest("TinyMailbox one free slot");
-        Check(player.Potions.Count()==2&&player.Potions.Contains(existing),"one slot takes one potion and preserves the existing one");
+        int Rank(MegaCrit.Sts2.Core.Models.PotionModel potion)=>PotionPolicy.Rank(SnapshotReader.Read(state,player),new(potion.GetType().Name,potion.Rarity.ToString()));
+        Check(player.Potions.Count()==2&&player.Potions.Any(p=>Rank(p)>=Rank(existing)),"one free slot fills; any replacement preserves or improves potion rank");
         var full=player.Potions.ToArray();
         await Rest("TinyMailbox full belt");
-        Check(full.SequenceEqual(player.Potions),"full belt leaves all extra potions without replacement");
+        Check(player.Potions.Select(Rank).Order().Zip(full.Select(Rank).Order()).All(pair=>pair.First>=pair.Second),"full belt never replaces a potion with a lower-ranked reward");
         // Native removal invalidates that model instance; reacquisition uses a fresh relic.
         dream=ModelDb.Relic<DreamCatcher>().ToMutable();
         await RelicCmd.Obtain(dream,player);

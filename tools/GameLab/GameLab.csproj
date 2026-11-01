@@ -1,0 +1,9 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup><OutputType>Exe</OutputType><GameData>D:/steam/steamapps/common/Slay the Spire 2/data_sts2_windows_x86_64</GameData></PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="../../src/SpireStrategist.Core/SpireStrategist.Core.csproj" />
+    <Reference Include="sts2" HintPath="$(GameData)/sts2.dll" Private="false" />
+    <Reference Include="GodotSharp" HintPath="$(GameData)/GodotSharp.dll" Private="false" />
+    <Reference Include="0Harmony" HintPath="$(GameData)/0Harmony.dll" Private="false" />
+  </ItemGroup>
+</Project>

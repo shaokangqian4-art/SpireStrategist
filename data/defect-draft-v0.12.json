@@ -1,0 +1,1489 @@
+{
+  "version": "defect-draft-0.12",
+  "gameVersion": "0.111.0",
+  "status": "manual-review-calibrated-prior-not-winrate-trained",
+  "scope": "Singleplayer Defect experimental automation; card priors plus character adapters for route, shop and rest. Combat requires CombatSolver; unknown effects use explicit fallbacks.",
+  "coefficients": {
+    "cardTax": 2.5,
+    "damageNeed": 2.0,
+    "blockNeed": 2.0,
+    "duplicateQuadratic": 0.65,
+    "synergyCap": 5.0
+  },
+  "cards": {
+    "AdaptiveStrike": {
+      "base": 4.0,
+      "phase": [
+        1.0,
+        0.0,
+        -1.0
+      ],
+      "duplicate": 3.0,
+      "upgradeDelta": 1.0,
+      "tags": [
+        "attack",
+        "zero_setup"
+      ],
+      "note": "本体先复制到弃牌堆再触发迅捷；首次生成的零费复制品可继承未用迅捷。万物一心帮助启动回收，已用实例复制不重置迅捷。",
+      "confidence": "medium"
+    },
+    "AllForOne": {
+      "base": 3.5,
+      "phase": [
+        0.0,
+        1.0,
+        1.0
+      ],
+      "duplicate": 3.5,
+      "upgradeDelta": 1.0,
+      "tags": [
+        "attack",
+        "zero_payoff",
+        "recur"
+      ],
+      "note": "回收弃牌堆零费牌；零费能力和打出后消耗的牌不作持续回收目标。有足量可循环零费技能时也可用于球系，不按物理专属硬禁。",
+      "confidence": "medium"
+    },
+    "BallLightning": {
+      "base": 4.0,
+      "phase": [
+        1.0,
+        0.0,
+        -1.0
+      ],
+      "duplicate": 3.0,
+      "upgradeDelta": 1.0,
+      "tags": [
+        "attack",
+        "lightning"
+      ],
+      "note": "前期补伤害并产球；已有足够伤害时第二三张显著降分。",
+      "confidence": "medium"
+    },
+    "Barrage": {
+      "base": 1.0,
+      "phase": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "duplicate": 3.0,
+      "upgradeDelta": 1.5,
+      "tags": [
+        "attack",
+        "orb_attack"
+      ],
+      "note": "依据可填满的球位估算命中，不按纸面球位直接当满球。",
+      "confidence": "medium"
+    },
+    "BeamCell": {
+      "base": 1.0,
+      "phase": [
+        1.0,
+        0.0,
+        -1.0
+      ],
+      "duplicate": 3.0,
+      "upgradeDelta": 1.5,
+      "tags": [
+        "attack",
+        "zero",
+        "physical_support"
+      ],
+      "note": "易伤主要帮助攻击牌；不能给充能球伤害乘易伤。",
+      "confidence": "medium"
+    },
+    "BiasedCognition": {
+      "base": 7.0,
+      "phase": [
+        0.0,
+        1.0,
+        1.0
+      ],
+      "duplicate": 3.0,
+      "upgradeDelta": 1.0,
+      "tags": [
+        "focus",
+        "scaling"
+      ],
+      "note": "先古牌，短战爆发强；长战集中下降，不能按永久集中估值。",
+      "confidence": "medium"
+    },
+    "BoostAway": {
+      "base": 3.0,
+      "phase": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "duplicate": 2.5,
+      "upgradeDelta": 1.0,
+      "tags": [
+        "block",
+        "zero",
+        "status_source"
+      ],
+      "note": "免费格挡但塞晕眩；状态联动存在时再提高。",
+      "confidence": "medium"
+    },
+    "BootSequence": {
+      "base": 4.0,
+      "phase": [
+        1.0,
+        1.0,
+        0.0
+      ],
+      "duplicate": 4.0,
+      "upgradeDelta": 1.0,
+      "tags": [
+        "block",
+        "zero",
+        "opening"
+      ],
+      "note": "固有防御保护启动，但多张会挤占首回合关键牌。",
+      "confidence": "medium"
+    },
+    "Buffer": {
+      "base": 5.0,
+      "phase": [
+        0.0,
+        1.0,
+        1.0
+      ],
+      "duplicate": 3.0,
+      "upgradeDelta": 3.0,
+      "tags": [
+        "block",
+        "scaling"
+      ],
+      "note": "防大伤害与启动保护；面对多段小伤害价值下降，升级提升明显。",
+      "confidence": "medium"
+    },
+    "BulkUp": {
+      "base": 2.0,
+      "phase": [
+        0.0,
+        1.0,
+        1.0
+      ],
+      "duplicate": 3.5,
+      "upgradeDelta": 2.0,
+      "tags": [
+        "physical_support",
+        "slot_loss",
+        "scaling"
+      ],
+      "note": "少球位不等于产球失效：满球后新球会顶球激发。重点评估蓄黑球和被动收益损失；暴涨当场删除的球不激发，零球位不能生成球。力量敏捷仍须有兑现方式。",
+      "confidence": "low"
+    },
+    "Capacitor": {
+      "base": 0.0,
+      "phase": [
+        -1.0,
+        0.0,
+        1.0
+      ],
+      "duplicate": 4.0,
+      "upgradeDelta": 1.0,
+      "tags": [
+        "slots"
+      ],
+      "note": "蓄黑球时提供保留空间，避免新球过早顶掉核心；依赖顶球激发的构筑扩容会延后激发，不能一律按产球速度增分。",
+      "confidence": "medium"
+    },
+    "Chaos": {
+      "base": 1.0,
+      "phase": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "duplicate": 3.0,
+      "upgradeDelta": 3.0,
+      "tags": [
+        "random_orb"
+      ],
+      "note": "未升级仅随机一球；升级增加产量，不能把随机结果当指定冰霜。",
+      "confidence": "medium"
+    },
+    "ChargeBattery": {
+      "base": 4.0,
+      "phase": [
+        1.0,
+        0.0,
+        -1.0
+      ],
+      "duplicate": 3.0,
+      "upgradeDelta": 1.0,
+      "tags": [
+        "block",
+        "delayed_energy"
+      ],
+      "note": "可靠过渡防御；次回合能量不是本回合启动费用。",
+      "confidence": "medium"
+    },
+    "Chill": {
+      "base": 4.0,
+      "phase": [
+        1.0,
+        1.0,
+        0.0
+      ],
+      "duplicate": 3.0,
+      "upgradeDelta": 2.0,
+      "tags": [
+        "frost",
+        "zero",
+        "opening"
+      ],
+      "note": "多敌时强，单体仅一球；升级不再消耗，价值随补球需求变化。",
+      "confidence": "medium"
+    },
+    "Claw": {
+      "base": 2.0,
+      "phase": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "duplicate": 0.15,
+      "upgradeDelta": 1.5,
+      "tags": [
+        "attack",
+        "zero",
+        "claw"
+      ],
+      "note": "需要可实现的回收与低费循环；已有全息、万物一心、爪群时成长价值提高，不因一张爪无脑堆。",
+      "confidence": "medium"
+    },
+    "ColdSnap": {
+      "base": 3.5,
+      "phase": [
+        1.0,
+        0.0,
+        -1.0
+      ],
+      "duplicate": 3.0,
+      "upgradeDelta": 1.0,
+      "tags": [
+        "attack",
+        "frost"
+      ],
+      "note": "补伤害同时补冰霜；允许第一张过渡，但不无限堆低效攻击。",
+      "confidence": "medium"
+    },
+    "Compact": {
+      "base": 3.5,
+      "phase": [
+        0.0,
+        0.5,
+        1.0
+      ],
+      "duplicate": 4.0,
+      "upgradeDelta": 2.5,
+      "tags": [
+        "block",
+        "status_clear"
+      ],
+      "note": "第一张提供对敌方状态牌的泛用保险；自造状态时增强，与散射炮可互补。升级还将状态变化为升级燃料。",
+      "confidence": "medium"
+    },
+    "CompileDriver": {
+      "base": 3.0,
+      "phase": [
+        1.0,
+        1.0,
+        0.0
+      ],
+      "duplicate": 3.0,
+      "upgradeDelta": 1.0,
+      "tags": [
+        "attack",
+        "diversity_draw"
+      ],
+      "note": "过牌量来自已在场的球种，牌组拥有不同产球牌不保证同时到场。",
+      "confidence": "medium"
+    },
+    "ConsumingShadow": {
+      "base": 5.0,
+      "phase": [
+        0.0,
+        1.0,
+        1.0
+      ],
+      "duplicate": 3.0,
+      "upgradeDelta": 1.0,
+      "tags": [
+        "dark",
+        "evoke",
+        "scaling"
+      ],
+      "note": "生成黑暗并每回合激发最左球；与保留黑暗长时间蓄力存在冲突。",
+      "confidence": "medium"
+    },
+    "Coolant": {
+      "base": 2.0,
+      "phase": [
+        -1.0,
+        0.0,
+        1.0
+      ],
+      "duplicate": 4.0,
+      "upgradeDelta": 1.5,
+      "tags": [
+        "block",
+        "diversity_payoff",
+        "scaling"
+      ],
+      "note": "多球种持续防御；按可靠球种折扣，第一回合没有即时格挡。",
+      "confidence": "low"
+    },
+    "Coolheaded": {
+      "base": 5.0,
+      "phase": [
+        0.0,
+        1.0,
+        1.0
+      ],
+      "duplicate": 2.8,
+      "upgradeDelta": 2.5,
+      "tags": [
+        "frost",
+        "draw"
+      ],
+      "note": "优秀防御循环组件；未升级仅自替换，不能给净赚牌分；多抓仍降分。",
+      "confidence": "medium"
+    },
+    "CreativeAi": {
+      "base": 0.0,
+      "phase": [
+        -2.0,
+        -1.0,
+        0.0
+      ],
+      "duplicate": 5.0,
+      "upgradeDelta": 1.0,
+      "tags": [
+        "scaling",
+        "power_generator",
+        "slow"
+      ],
+      "note": "三费随机慢启动；低于已有子程序、雷暴等确定性配合，不因金卡或能力流标签自动增分。",
+      "confidence": "medium"
+    },
+    "Darkness": {
+      "base": 3.0,
+      "phase": [
+        0.0,
+        1.0,
+        1.0
+      ],
+      "duplicate": 3.0,
+      "upgradeDelta": 3.0,
+      "tags": [
+        "dark",
+        "scaling"
+      ],
+      "note": "生成黑暗并触发所有黑暗被动，升级触发两次；已有黑暗、保留空间及多次激发时提高，不只当普通产一球。",
+      "confidence": "medium"
+    },
+    "DefendDefect": {
+      "base": -6.0,
+      "phase": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "duplicate": 4.0,
+      "upgradeDelta": 1.0,
+      "tags": [
+        "basic",
+        "block"
+      ],
+      "note": "基础牌仅作为牌组能力和稀释参考，不主动新增。",
+      "confidence": "medium"
+    },
+    "Defragment": {
+      "base": 6.0,
+      "phase": [
+        0.0,
+        1.0,
+        2.0
+      ],
+      "duplicate": 2.5,
+      "upgradeDelta": 3.0,
+      "tags": [
+        "focus",
+        "scaling"
+      ],
+      "note": "集中支持闪电冰霜黑暗玻璃，不增强等离子；无相应产球则降低。",
+      "confidence": "medium"
+    },
+    "DoubleEnergy": {
+      "base": 5.0,
+      "phase": [
+        0.0,
+        1.0,
+        1.0
+      ],
+      "duplicate": 0.8,
+      "upgradeDelta": 2.0,
+      "tags": [
+        "energy",
+        "energy_multiply"
+      ],
+      "note": "需要起始能量、过牌与花费出口；未升级先花费再翻倍，不能当固定净赚。",
+      "confidence": "medium"
+    },
+    "Dualcast": {
+      "base": 1.0,
+      "phase": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "duplicate": 3.0,
+      "upgradeDelta": 2.0,
+      "tags": [
+        "evoke",
+        "basic"
+      ],
+      "note": "激发最右球两次；已有蓄黑球终端时提高，仍需排球。新增重复份数不能只因是激发牌就无限抓。",
+      "confidence": "medium"
+    },
+    "EchoForm": {
+      "base": 6.0,
+      "phase": [
+        -1.0,
+        1.0,
+        2.0
+      ],
+      "duplicate": 5.0,
+      "upgradeDelta": 0.5,
+      "tags": [
+        "scaling",
+        "slow"
+      ],
+      "note": "长战上限高但三费启动；先解决防御，不把升级去虚无等同于翻倍收益。",
+      "confidence": "medium"
+    },
+    "EnergySurge": {
+      "base": 0.0,
+      "phase": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "duplicate": 3.0,
+      "upgradeDelta": 1.0,
+      "tags": [
+        "multiplayer"
+      ],
+      "note": "多人专用，单人不评分。",
+      "confidence": "medium"
+    },
+    "Feral": {
+      "base": 0.0,
+      "phase": [
+        -1.0,
+        0.0,
+        1.0
+      ],
+      "duplicate": 4.0,
+      "upgradeDelta": 2.0,
+      "tags": [
+        "zero_payoff",
+        "scaling"
+      ],
+      "note": "只回收本回合首张零费攻击；零费技能不计入支持度。",
+      "confidence": "low"
+    },
+    "FightThrough": {
+      "base": 3.0,
+      "phase": [
+        1.0,
+        0.0,
+        -1.0
+      ],
+      "duplicate": 3.0,
+      "upgradeDelta": 1.5,
+      "tags": [
+        "block",
+        "status_source"
+      ],
+      "note": "高即时格挡换两伤口；状态牌会影响下一轮抽牌。",
+      "confidence": "medium"
+    },
+    "FlakCannon": {
+      "base": 2.5,
+      "phase": [
+        -1.0,
+        0.0,
+        1.0
+      ],
+      "duplicate": 4.0,
+      "upgradeDelta": 2.0,
+      "tags": [
+        "attack",
+        "status_payoff",
+        "status_clear"
+      ],
+      "note": "清理状态并按数量多段输出；敌方塞牌按折扣先验，不假装已知未来。自造状态时可与压缩并存。",
+      "confidence": "low"
+    },
+    "FocusedStrike": {
+      "base": 4.0,
+      "phase": [
+        1.0,
+        0.0,
+        -1.0
+      ],
+      "duplicate": 3.0,
+      "upgradeDelta": 1.5,
+      "tags": [
+        "attack",
+        "temp_focus"
+      ],
+      "note": "集中只持续本回合，按当回合球触发估值，不能当成长核心。",
+      "confidence": "medium"
+    },
+    "Ftl": {
+      "base": 3.0,
+      "phase": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "duplicate": 3.0,
+      "upgradeDelta": 1.0,
+      "tags": [
+        "attack",
+        "zero",
+        "conditional_draw"
+      ],
+      "note": "条件抽牌，后抽到时可能失效；不视作无条件零成本循环。",
+      "confidence": "medium"
+    },
+    "Fusion": {
+      "base": 3.0,
+      "phase": [
+        -1.0,
+        1.0,
+        1.0
+      ],
+      "duplicate": 3.0,
+      "upgradeDelta": 2.0,
+      "tags": [
+        "plasma",
+        "energy"
+      ],
+      "note": "等离子需要启动和排球；能量不等于过牌，升级移除消耗。",
+      "confidence": "medium"
+    },
+    "GeneticAlgorithm": {
+      "base": 1.0,
+      "phase": [
+        4.0,
+        0.0,
+        -3.0
+      ],
+      "duplicate": 4.0,
+      "upgradeDelta": 1.0,
+      "tags": [
+        "block",
+        "growing"
+      ],
+      "note": "越早越有培养期；后期新抓不能按养成成品评价，现有成长值另算。",
+      "confidence": "medium"
+    },
+    "Glacier": {
+      "base": 7.0,
+      "phase": [
+        0.0,
+        1.0,
+        1.0
+      ],
+      "duplicate": 3.0,
+      "upgradeDelta": 1.0,
+      "tags": [
+        "block",
+        "frost2"
+      ],
+      "note": "即时防御和持续防御兼具；重复份数由防御缺口和回转决定。",
+      "confidence": "medium"
+    },
+    "Glasswork": {
+      "base": 4.0,
+      "phase": [
+        2.0,
+        0.0,
+        -1.0
+      ],
+      "duplicate": 3.0,
+      "upgradeDelta": 1.0,
+      "tags": [
+        "block",
+        "glass"
+      ],
+      "note": "玻璃群伤补多敌能力；基础被动逐次衰减，不能算无限稳定输出。",
+      "confidence": "medium"
+    },
+    "GoForTheEyes": {
+      "base": 3.0,
+      "phase": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "duplicate": 3.0,
+      "upgradeDelta": 2.0,
+      "tags": [
+        "attack",
+        "zero",
+        "weak"
+      ],
+      "note": "攻击意图才挂虚弱；可补减伤，重复收益递减。",
+      "confidence": "medium"
+    },
+    "GunkUp": {
+      "base": 3.0,
+      "phase": [
+        2.0,
+        0.0,
+        -1.0
+      ],
+      "duplicate": 3.0,
+      "upgradeDelta": 1.0,
+      "tags": [
+        "attack",
+        "status_source"
+      ],
+      "note": "前期十二点伤害，代价是黏液；状态体系才放宽后续抓取。",
+      "confidence": "medium"
+    },
+    "Hailstorm": {
+      "base": 1.0,
+      "phase": [
+        0.0,
+        1.0,
+        1.0
+      ],
+      "duplicate": 3.0,
+      "upgradeDelta": 1.5,
+      "tags": [
+        "aoe",
+        "frost_payoff",
+        "scaling"
+      ],
+      "note": "必须稳定保有冰霜；是持续群伤，不是第一回合立即清场。",
+      "confidence": "medium"
+    },
+    "HelixDrill": {
+      "base": 2.0,
+      "phase": [
+        -1.0,
+        1.0,
+        2.0
+      ],
+      "duplicate": 3.0,
+      "upgradeDelta": 2.0,
+      "tags": [
+        "attack",
+        "zero",
+        "energy_payoff"
+      ],
+      "note": "按实际能花出去的能量计命中，不能把能量牌数量直接当输出。",
+      "confidence": "medium"
+    },
+    "Hibernate": {
+      "base": 0.0,
+      "phase": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "duplicate": 3.0,
+      "upgradeDelta": 1.0,
+      "tags": [
+        "multiplayer"
+      ],
+      "note": "模型标为多人专用，单人排除。",
+      "confidence": "medium"
+    },
+    "Hologram": {
+      "base": 4.5,
+      "phase": [
+        0.0,
+        1.0,
+        1.0
+      ],
+      "duplicate": 3.8,
+      "upgradeDelta": 2.5,
+      "tags": [
+        "block",
+        "recur"
+      ],
+      "note": "优先补第一张定向回收；已有优质回收目标或零费循环时增分，重复仍递减。升级去消耗很重要，但不等于无需费用。",
+      "confidence": "medium"
+    },
+    "Hotfix": {
+      "base": 3.5,
+      "phase": [
+        0.0,
+        1.0,
+        1.0
+      ],
+      "duplicate": 2.0,
+      "upgradeDelta": 1.0,
+      "tags": [
+        "temp_focus",
+        "zero"
+      ],
+      "note": "临时集中需本回合多球触发；未升级消耗，不按永久集中评分。",
+      "confidence": "medium"
+    },
+    "Hyperbeam": {
+      "base": 6.0,
+      "phase": [
+        2.0,
+        0.0,
+        -1.0
+      ],
+      "duplicate": 3.0,
+      "upgradeDelta": 1.5,
+      "tags": [
+        "attack",
+        "aoe",
+        "temp_focus_loss"
+      ],
+      "note": "本版本只当回合失去集中；群伤出色，但当回合冰霜防御仍可能受损。",
+      "confidence": "medium"
+    },
+    "IceLance": {
+      "base": 4.0,
+      "phase": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "duplicate": 3.0,
+      "upgradeDelta": 1.0,
+      "tags": [
+        "attack",
+        "frost3",
+        "expensive"
+      ],
+      "note": "三费攻防合一，手牌卡费时降分；球不是立刻按激发防御结算。",
+      "confidence": "medium"
+    },
+    "Ignition": {
+      "base": 0.0,
+      "phase": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "duplicate": 3.0,
+      "upgradeDelta": 1.0,
+      "tags": [
+        "multiplayer"
+      ],
+      "note": "目标另一名玩家，单人排除。",
+      "confidence": "medium"
+    },
+    "ImitationLearning": {
+      "base": 0.0,
+      "phase": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "duplicate": 3.0,
+      "upgradeDelta": 1.0,
+      "tags": [
+        "multiplayer"
+      ],
+      "note": "目标另一名玩家，单人排除。",
+      "confidence": "medium"
+    },
+    "Iteration": {
+      "base": 0.0,
+      "phase": [
+        -1.0,
+        0.0,
+        1.0
+      ],
+      "duplicate": 4.0,
+      "upgradeDelta": 1.5,
+      "tags": [
+        "status_draw",
+        "scaling"
+      ],
+      "note": "每回合首次抽到状态才触发；状态生成不等于立即过牌，诅咒不触发。",
+      "confidence": "medium"
+    },
+    "Leap": {
+      "base": 2.0,
+      "phase": [
+        1.0,
+        -1.0,
+        -2.0
+      ],
+      "duplicate": 3.0,
+      "upgradeDelta": 1.0,
+      "tags": [
+        "block"
+      ],
+      "note": "纯过渡格挡，后期已有冰霜等防线时降低。",
+      "confidence": "medium"
+    },
+    "LightningRod": {
+      "base": 4.0,
+      "phase": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "duplicate": 3.0,
+      "upgradeDelta": 1.0,
+      "tags": [
+        "block",
+        "lightning"
+      ],
+      "note": "闪电在后两个回合生成，有延迟；与立即产两球区分。",
+      "confidence": "medium"
+    },
+    "Loop": {
+      "base": 2.0,
+      "phase": [
+        -1.0,
+        1.0,
+        1.0
+      ],
+      "duplicate": 3.0,
+      "upgradeDelta": 2.0,
+      "tags": [
+        "orb_payoff",
+        "scaling"
+      ],
+      "note": "触发最右球；需要稳定球质量，非立即双倍所有球。",
+      "confidence": "medium"
+    },
+    "MachineLearning": {
+      "base": 3.0,
+      "phase": [
+        -1.0,
+        0.0,
+        1.0
+      ],
+      "duplicate": 4.0,
+      "upgradeDelta": 0.0,
+      "tags": [
+        "draw",
+        "scaling"
+      ],
+      "note": "下回合才开始赚牌；升级固有不自动加分，避免挤掉启动防御。",
+      "confidence": "medium"
+    },
+    "MeteorStrike": {
+      "base": 2.0,
+      "phase": [
+        -1.0,
+        0.0,
+        1.0
+      ],
+      "duplicate": 4.0,
+      "upgradeDelta": 1.0,
+      "tags": [
+        "attack",
+        "plasma",
+        "meteor"
+      ],
+      "note": "五费启动是硬门槛；本牌生成的等离子不能反过来支付首次费用。",
+      "confidence": "medium"
+    },
+    "Modded": {
+      "base": 2.0,
+      "phase": [
+        0.0,
+        1.0,
+        1.0
+      ],
+      "duplicate": 4.0,
+      "upgradeDelta": 1.5,
+      "tags": [
+        "slots",
+        "draw"
+      ],
+      "note": "首次零费，此后费用上涨；不能当永远零费抽牌扩容。",
+      "confidence": "low"
+    },
+    "MomentumStrike": {
+      "base": 4.0,
+      "phase": [
+        2.0,
+        0.0,
+        -1.0
+      ],
+      "duplicate": 3.0,
+      "upgradeDelta": 1.0,
+      "tags": [
+        "attack",
+        "zero_setup"
+      ],
+      "note": "首次仍一费，之后零费；回收联动需要先打出，不当开局零费牌。",
+      "confidence": "medium"
+    },
+    "MultiCast": {
+      "base": 2.0,
+      "phase": [
+        -1.0,
+        0.0,
+        1.0
+      ],
+      "duplicate": 3.0,
+      "upgradeDelta": 1.5,
+      "tags": [
+        "evoke",
+        "energy_payoff"
+      ],
+      "note": "最右球多次激发的 X 费终端；蓄黑球与费用充足时提高，仍需排球和防守。",
+      "confidence": "medium"
+    },
+    "Null": {
+      "base": 4.0,
+      "phase": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "duplicate": 3.0,
+      "upgradeDelta": 1.5,
+      "tags": [
+        "attack",
+        "dark",
+        "weak"
+      ],
+      "note": "两费挂虚弱并产黑暗；和一费过渡攻击比较时计入启动成本。",
+      "confidence": "medium"
+    },
+    "OneForAll": {
+      "base": 0.0,
+      "phase": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "duplicate": 3.0,
+      "upgradeDelta": 1.0,
+      "tags": [
+        "multiplayer"
+      ],
+      "note": "模型标为多人专用，单人排除。",
+      "confidence": "medium"
+    },
+    "Overclock": {
+      "base": 5.0,
+      "phase": [
+        0.0,
+        1.0,
+        1.0
+      ],
+      "duplicate": 1.6,
+      "upgradeDelta": 1.5,
+      "tags": [
+        "draw",
+        "zero",
+        "status_source"
+      ],
+      "note": "净抽一张但塞灼伤；状态引擎和费用充足时提高，不无脑堆。",
+      "confidence": "medium"
+    },
+    "Quadcast": {
+      "base": 4.0,
+      "phase": [
+        0.0,
+        1.0,
+        1.0
+      ],
+      "duplicate": 3.0,
+      "upgradeDelta": 2.0,
+      "tags": [
+        "evoke",
+        "basic"
+      ],
+      "note": "先古牌，激发最右球四次；提高蓄黑球兑现价值，不能把左侧成熟黑球假设为已在右侧。",
+      "confidence": "medium"
+    },
+    "Rainbow": {
+      "base": 2.0,
+      "phase": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "duplicate": 3.0,
+      "upgradeDelta": 1.0,
+      "tags": [
+        "lightning",
+        "frost",
+        "dark",
+        "diversity"
+      ],
+      "note": "补球种和一次补球；两费启动，升级去消耗不一定更好。",
+      "confidence": "medium"
+    },
+    "Reboot": {
+      "base": 5.0,
+      "phase": [
+        0.0,
+        1.0,
+        1.0
+      ],
+      "duplicate": 3.0,
+      "upgradeDelta": 1.0,
+      "tags": [
+        "draw",
+        "zero"
+      ],
+      "note": "重洗手牌与弃牌，有机会重抽废牌；不当稳定定向检索。",
+      "confidence": "medium"
+    },
+    "Refract": {
+      "base": 3.0,
+      "phase": [
+        1.0,
+        0.0,
+        -1.0
+      ],
+      "duplicate": 3.0,
+      "upgradeDelta": 1.0,
+      "tags": [
+        "attack",
+        "glass",
+        "expensive"
+      ],
+      "note": "三费多段加两玻璃，偏多敌；需要能量和当回合防守。",
+      "confidence": "medium"
+    },
+    "RocketPunch": {
+      "base": 2.0,
+      "phase": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "duplicate": 3.0,
+      "upgradeDelta": 1.5,
+      "tags": [
+        "attack",
+        "draw",
+        "status_discount"
+      ],
+      "note": "状态生成降低下次费用；不能在没有来源时按零费抽牌攻击估值。",
+      "confidence": "medium"
+    },
+    "Scavenge": {
+      "base": 3.0,
+      "phase": [
+        0.0,
+        1.0,
+        1.0
+      ],
+      "duplicate": 3.0,
+      "upgradeDelta": 1.0,
+      "tags": [
+        "exhaust",
+        "delayed_energy"
+      ],
+      "note": "可处理诅咒与过渡牌，能量下回合才到；不等同于本回合启动。",
+      "confidence": "medium"
+    },
+    "Scrape": {
+      "base": 2.5,
+      "phase": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "duplicate": 3.5,
+      "upgradeDelta": 1.5,
+      "tags": [
+        "attack",
+        "zero_payoff"
+      ],
+      "note": "按零费密度估计留下的牌数，零费数量不能代替密度；非零费核心可能被丢弃。",
+      "confidence": "medium"
+    },
+    "ShadowShield": {
+      "base": 4.0,
+      "phase": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "duplicate": 3.0,
+      "upgradeDelta": 1.0,
+      "tags": [
+        "block",
+        "dark"
+      ],
+      "note": "即时格挡兼黑暗启动；两费要考虑和其他启动牌争费用。",
+      "confidence": "medium"
+    },
+    "Shatter": {
+      "base": 5.0,
+      "phase": [
+        0.0,
+        1.0,
+        1.0
+      ],
+      "duplicate": 3.0,
+      "upgradeDelta": 1.0,
+      "tags": [
+        "attack",
+        "aoe",
+        "evoke_all"
+      ],
+      "note": "所有球双激发，补充蓄黑球终结与群伤；清球后失去后续被动，不能重复计入防御。",
+      "confidence": "medium"
+    },
+    "SignalBoost": {
+      "base": 4.0,
+      "phase": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "duplicate": 4.0,
+      "upgradeDelta": 2.0,
+      "tags": [
+        "power_payoff"
+      ],
+      "note": "有值得复制且付得起的能力牌才抓；先打它本身也占牌和能量。",
+      "confidence": "medium"
+    },
+    "Skim": {
+      "base": 3.0,
+      "phase": [
+        0.0,
+        1.0,
+        1.0
+      ],
+      "duplicate": 3.0,
+      "upgradeDelta": 1.5,
+      "tags": [
+        "draw"
+      ],
+      "note": "一费抽三净赚牌；需要能量或低费牌兑现，多张仍有卡手成本。",
+      "confidence": "medium"
+    },
+    "Smokestack": {
+      "base": -1.0,
+      "phase": [
+        -1.0,
+        0.0,
+        1.0
+      ],
+      "duplicate": 4.0,
+      "upgradeDelta": 1.5,
+      "tags": [
+        "status_payoff",
+        "aoe",
+        "scaling"
+      ],
+      "note": "触发是生成状态，非抽到；无来源时不赌未来拼图。",
+      "confidence": "medium"
+    },
+    "Spinner": {
+      "base": 4.0,
+      "phase": [
+        0.0,
+        1.0,
+        1.0
+      ],
+      "duplicate": 3.0,
+      "upgradeDelta": 1.5,
+      "tags": [
+        "glass",
+        "scaling"
+      ],
+      "note": "持续补玻璃弥补衰减，升级立即产一球；仍需首回合防御。",
+      "confidence": "medium"
+    },
+    "Storm": {
+      "base": 4.0,
+      "phase": [
+        0.0,
+        1.0,
+        1.0
+      ],
+      "duplicate": 3.5,
+      "upgradeDelta": 3.0,
+      "tags": [
+        "power_payoff",
+        "lightning_engine"
+      ],
+      "note": "能力机产电核心；按已有能力触发量估算，升级每次生成两球。允许有限前期投资，已有能力方向时提高，仍考虑启动费用。",
+      "confidence": "medium"
+    },
+    "StrikeDefect": {
+      "base": -6.0,
+      "phase": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "duplicate": 4.0,
+      "upgradeDelta": 1.0,
+      "tags": [
+        "basic",
+        "attack"
+      ],
+      "note": "初始输出只算有限即时能力，不主动新增。",
+      "confidence": "medium"
+    },
+    "Subroutine": {
+      "base": 4.0,
+      "phase": [
+        0.0,
+        1.0,
+        1.0
+      ],
+      "duplicate": 3.5,
+      "upgradeDelta": 2.5,
+      "tags": [
+        "power_payoff",
+        "power_energy"
+      ],
+      "note": "能力机费用核心；包括雷暴、雷霆等能力作为触发支持，不当无条件返能。",
+      "confidence": "medium"
+    },
+    "Sunder": {
+      "base": 5.0,
+      "phase": [
+        2.0,
+        0.0,
+        -1.0
+      ],
+      "duplicate": 3.0,
+      "upgradeDelta": 1.5,
+      "tags": [
+        "attack",
+        "expensive"
+      ],
+      "note": "前期斩杀退款强；无法斩杀首领时不能稳定计三点返能。",
+      "confidence": "medium"
+    },
+    "Supercritical": {
+      "base": 4.0,
+      "phase": [
+        0.0,
+        1.0,
+        1.0
+      ],
+      "duplicate": 3.0,
+      "upgradeDelta": 1.5,
+      "tags": [
+        "energy",
+        "zero"
+      ],
+      "note": "零费消耗获得四能量；需要过牌或昂贵牌兑现，单张不等于陨石必启动。",
+      "confidence": "medium"
+    },
+    "SweepingBeam": {
+      "base": 4.0,
+      "phase": [
+        2.0,
+        0.0,
+        -1.0
+      ],
+      "duplicate": 3.0,
+      "upgradeDelta": 1.0,
+      "tags": [
+        "attack",
+        "aoe",
+        "draw"
+      ],
+      "note": "前期补群伤和自替换；无净抽牌，后期重复过渡牌降分。",
+      "confidence": "medium"
+    },
+    "Synchronize": {
+      "base": 0.0,
+      "phase": [
+        -1.0,
+        0.0,
+        0.0
+      ],
+      "duplicate": 3.0,
+      "upgradeDelta": 2.0,
+      "tags": [
+        "temp_focus",
+        "diversity_payoff"
+      ],
+      "note": "按当回合可实现球种与触发估值，不当永久集中。",
+      "confidence": "low"
+    },
+    "Synthesis": {
+      "base": 2.0,
+      "phase": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "duplicate": 3.0,
+      "upgradeDelta": 1.0,
+      "tags": [
+        "attack",
+        "power_discount"
+      ],
+      "note": "要先花两费；下一张能力减费，需可用高费能力才赚。",
+      "confidence": "medium"
+    },
+    "Tempest": {
+      "base": 1.0,
+      "phase": [
+        -1.0,
+        0.0,
+        1.0
+      ],
+      "duplicate": 3.0,
+      "upgradeDelta": 1.5,
+      "tags": [
+        "lightning",
+        "energy_payoff"
+      ],
+      "note": "X费，按剩余费用和集中兑现；不计为零费或稳定固定数量产球。",
+      "confidence": "medium"
+    },
+    "TeslaCoil": {
+      "base": 1.0,
+      "phase": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "duplicate": 3.0,
+      "upgradeDelta": 2.0,
+      "tags": [
+        "attack",
+        "zero",
+        "lightning_payoff"
+      ],
+      "note": "需要已有闪电球；能定向触发但不是平白生成闪电。",
+      "confidence": "medium"
+    },
+    "Thunder": {
+      "base": 3.0,
+      "phase": [
+        0.0,
+        1.0,
+        1.0
+      ],
+      "duplicate": 3.5,
+      "upgradeDelta": 1.5,
+      "tags": [
+        "lightning_payoff",
+        "scaling"
+      ],
+      "note": "雷暴的持续产电支持激发终端；仍需产生和激发闪电，不能把它自身当产球牌。",
+      "confidence": "medium"
+    },
+    "TrashToTreasure": {
+      "base": 0.0,
+      "phase": [
+        -1.0,
+        1.0,
+        1.0
+      ],
+      "duplicate": 4.0,
+      "upgradeDelta": 2.0,
+      "tags": [
+        "status_payoff",
+        "random_orb_engine"
+      ],
+      "note": "生成状态才随机产球；不把诅咒或仅抽到状态当作触发。",
+      "confidence": "medium"
+    },
+    "Turbo": {
+      "base": 4.5,
+      "phase": [
+        0.0,
+        1.0,
+        0.5
+      ],
+      "duplicate": 3.5,
+      "upgradeDelta": 1.5,
+      "tags": [
+        "energy",
+        "zero",
+        "status_source"
+      ],
+      "note": "按能量缺口、过牌与高费核心评估第一张；虚空仍有后续代价，不是每套牌无条件必抓。",
+      "confidence": "medium"
+    },
+    "Uproar": {
+      "base": 2.0,
+      "phase": [
+        1.0,
+        0.0,
+        -1.0
+      ],
+      "duplicate": 3.0,
+      "upgradeDelta": 1.0,
+      "tags": [
+        "attack",
+        "expensive"
+      ],
+      "note": "随机打出抽牌堆攻击，有高费优质攻击时更好；低质攻击池降分。",
+      "confidence": "low"
+    },
+    "Voltaic": {
+      "base": 2.0,
+      "phase": [
+        -1.0,
+        0.0,
+        1.0
+      ],
+      "duplicate": 4.0,
+      "upgradeDelta": 1.5,
+      "tags": [
+        "lightning_payoff",
+        "expensive"
+      ],
+      "note": "雷暴持续产电与雷霆支持时是终端；不能用自身重放闪电反推首次产电，仍需支付三费。",
+      "confidence": "low"
+    },
+    "WhiteNoise": {
+      "base": 3.0,
+      "phase": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "duplicate": 3.0,
+      "upgradeDelta": 1.5,
+      "tags": [
+        "power_generator"
+      ],
+      "note": "随机能力当回合免费，先验收益折扣；不按命中回响的最好结果计分。",
+      "confidence": "medium"
+    },
+    "Zap": {
+      "base": 1.0,
+      "phase": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "duplicate": 3.0,
+      "upgradeDelta": 2.0,
+      "tags": [
+        "lightning",
+        "basic"
+      ],
+      "note": "初始产球，升级降费；新增份数按现有产球量而非固定强度判断。",
+      "confidence": "medium"
+    }
+  }
+}

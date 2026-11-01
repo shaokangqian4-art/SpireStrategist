@@ -29,9 +29,25 @@ internal sealed class AdvisorService
     private readonly Policy policy;
     private readonly AdvisorPanel panel;
     internal RecommendationOverlay Visuals {get;}
+    internal SelectionPlan? Selection {get;private set;}
+    private string selectionPurpose="";
+    private string lastSelectionAdvice="";
+    private object? selectionRoom;
+    internal void ObserveEventChoice(MegaCrit.Sts2.Core.Nodes.Events.NEventOptionButton button)
+    {
+        if(MegaCrit.Sts2.Core.Nodes.Rooms.NEventRoom.Instance is {} room && EventAdapter.Read(this,room) is {} plan)
+        {
+            selectionPurpose=plan.Choices.FirstOrDefault(c=>c.Key==button.GetInstanceId().ToString())?.Selection??"";
+            selectionRoom=run.CurrentRoom;
+        }
+    }
     private readonly string runId = Guid.NewGuid().ToString("N");
     private string lastState = "";
     private string lastDecision = "";
+    private RewardForesight? pendingForesight;
+    private string? foresightOrigin;
+    private string? buildForecastStamp;
+    private RewardForesight? buildForecast;
     private DecisionRecord? decision;
     private NCardRewardSelectionScreen? cardScreen;
     private IReadOnlyList<CardCreationResult> cardOptions = [];
@@ -41,6 +57,7 @@ internal sealed class AdvisorService
     private bool cardsResolved;
     private bool active = true;
     private bool faulted;
+    private bool resultRecorded;
     private readonly PartialAutopilot autopilot;
     private object? feedbackContext, pendingFeedbackContext;
     private string? lastShopPreview;
@@ -57,6 +74,8 @@ internal sealed class AdvisorService
     {feedbackContext=new{kind="route",state=SnapshotReader.Read(run,player),evaluation};panel.ShowRoute(evaluation);Visuals.Route(evaluation);}
     internal void ShowShop(RunSnapshot state,ShopEvaluation plan)
     {
+        if(NMerchantRoom.Instance?.Inventory is {IsOpen:true} inventory)
+            plan=ShopAdvice.Complete(this,state,inventory,plan);
         feedbackContext=new{kind="shop",state,plan};
         var fingerprint=JsonSerializer.Serialize(feedbackContext,Journal.Json);
         if(fingerprint!=lastShopPreview){lastShopPreview=fingerprint;journal.Write("shop_preview",new{runId,state,plan});}
@@ -77,25 +96,28 @@ internal sealed class AdvisorService
 
     internal static void Attach(NRun node, RunState state)
     {
-        if (state.Players.Count != 1) return;
-        Current = new AdvisorService(node, state);
+        var local=ResolveLocalPlayer(state);
+        if(local==null)return;
+        Current = new AdvisorService(node, state,local);
     }
+    internal static Player? ResolveLocalPlayer(RunState state)=>state.Players.FirstOrDefault(MegaCrit.Sts2.Core.Context.LocalContext.IsMe)
+        ??(!SnapshotReader.IsMultiplayer(state)&&state.Players.Count==1?state.Players[0]:null);
 
-    private AdvisorService(NRun node, RunState state)
+    private AdvisorService(NRun node, RunState state,Player local)
     {
         run = state;
-        player = state.Players[0];
+        player = local;
         journal = new Journal(Path.Combine(OS.GetUserDataDir(), "SpireStrategist"));
         PolicyWeights weights;
         string? configError = null;
         try { weights = journal.LoadWeights(); }
         catch (Exception ex) { weights = new(); configError = ex.Message; }
         policy = new Policy(weights);
-        journal.Write("session_start", new { runId, gameVersion = NGame.GetGameVersion(),
-            policyVersion = Policy.Version, weights, configError,
+        journal.Write("session_start", new { runId, playerCount=state.Players.Count,localPlayerId=player.NetId,adviceOnly=SnapshotReader.IsMultiplayer(state), gameVersion = NGame.GetGameVersion(),
+            policyVersion = HeroPolicy.VersionFor(player.Character.GetType().Name), weights, configError,
             mods = ModManager.GetLoadedMods().Where(m => m.manifest != null)
                 .Select(m => new { id = m.manifest!.id, version = m.manifest.version }).ToArray() });
-        panel = new AdvisorPanel(node, (vote,reason) => Guard(() => Feedback(vote,reason)),()=>pendingFeedbackContext=feedbackContext,
+        panel = new AdvisorPanel(node, (vote,reason) => Guard(() => Feedback(vote,reason)),()=>Guard(()=>pendingFeedbackContext=feedbackContext??new{kind="observation",state=SnapshotReader.Read(run,player)}),
             () => Guard(Export), () => Guard(ToggleAuto),value=>Guard(()=>autopilot!.SetFullAutomatic(value)));
         autopilot = new PartialAutopilot(this);
         Visuals = new RecommendationOverlay(node,this);
@@ -167,7 +189,9 @@ internal sealed class AdvisorService
         Poll();
     }
 
-    internal void RestStarted() => restBusy = true;
+    internal void RestStarted(ulong? playerId=null) {if(playerId==null||playerId==player.NetId)restBusy=true;}
+    internal void RemoteAwareRestFinished(RestSiteOption option,bool success,ulong playerId)
+    {if(playerId==player.NetId)RestFinished(option,success);}
     internal void RestFinished(RestSiteOption option, bool success)
     {
         if (decision?.Kind == "rest")
@@ -183,7 +207,7 @@ internal sealed class AdvisorService
 
     internal void RestEnabled() { restBusy = false; lastDecision = ""; Poll(); }
 
-    private static double? RestEffect(RestSiteOption option,RunSnapshot s)
+    internal static double? RestEffect(RestSiteOption option,RunSnapshot s)
     {
         var v=new StrategicValue(s);
         return option switch
@@ -192,10 +216,36 @@ internal sealed class AdvisorService
             CloneRestSiteOption=>s.Deck.Where(c=>c.Enchantment=="ENCHANTMENT.CLONE").Sum(v.Add),
             HatchRestSiteOption=>10*v.Horizon,
             KindleRestSiteOption=>5+Math.Min(4,v.Attack),
-            LiftRestSiteOption=>4+v.Multi*2,
+            LiftRestSiteOption=>s.Character=="Silent"?SilentMechanics.LiftValue(s):4+v.Multi*2,
             DigRestSiteOption=>8,
             _=>null
         };
+    }
+    internal RunSnapshot WithForesight(RunSnapshot snapshot)
+    {
+        if(snapshot.Character is not ("Defect" or "Silent" or "Regent" or "Necrobinder"))return snapshot;
+        if(snapshot.IsMultiplayer)
+        {
+            buildForecast=null;buildForecastStamp=null;pendingForesight=null;
+            return snapshot with{Foresight=new("",true,[],"辉眼暂不可用：多人或特殊模式修改器。")};
+        }
+        try
+        {
+            var stamp=RewardForesightReader.Fingerprint(run,player);
+            if(stamp!=buildForecastStamp)
+            {
+                var graph=RouteAdapter.Nodes(run);var economy=RouteAdapter.Economy(this);
+                var current=RouteAdapter.Key(run.CurrentMapPoint??run.Map.StartingMapPoint);
+                var roots=(graph.FirstOrDefault(n=>n.Id==current)?.Children??[]).Concat(economy.FlightRoots).Distinct().ToArray();
+                var route=RoutePolicy.Evaluate(snapshot with{Foresight=null},graph,roots,economy);
+                var path=route.Options.FirstOrDefault(o=>o.Node==route.RecommendedNode)?.Path;
+                buildForecast=path is {Length:>0}?RewardForesightReader.Read(run,player,path):new(stamp,true,[],"辉眼：当前幕内没有可预览的后续战斗奖励。");
+                buildForecastStamp=stamp;
+                journal.Write("build_foresight",new{runId,room=snapshot.Room,foresight=buildForecast});
+            }
+            return snapshot with{Foresight=buildForecast};
+        }
+        catch(Exception ex){return snapshot with{Foresight=new("",false,[],"辉眼暂不可用："+ex.GetBaseException().Message)};}
     }
     private void Poll()
     {
@@ -209,29 +259,51 @@ internal sealed class AdvisorService
         }
 
         panel.UpdateState(snapshot);
+        if(!DefectStrategy.Supported(snapshot.Character)) { PollAdviceOnly(snapshot); return; }
+        Selection=null;
+        if(!MegaCrit.Sts2.Core.Combat.CombatManager.Instance.IsInProgress &&
+            MegaCrit.Sts2.Core.Nodes.Screens.ScreenContext.ActiveScreenContext.Instance?.GetCurrentScreen() is Godot.Control selector &&
+            SelectionAdvice.Read(this,selector,ReferenceEquals(selectionRoom,run.CurrentRoom)?selectionPurpose:"") is {} selection)
+        {
+            Selection=selection;
+            feedbackContext=new{kind="selection_advice",state=selection.State,evaluation=selection.Evaluation};
+            var stamp=selector.GetInstanceId()+":"+JsonSerializer.Serialize(selection.Evaluation,Journal.Json);
+            if(stamp!=lastSelectionAdvice)
+            {
+                lastSelectionAdvice=stamp;
+                journal.Write("selection_advice",new{runId,screen=selector.GetType().Name,state=selection.State,evaluation=selection.Evaluation,
+                    targets=selection.Targets.Select(SnapshotReader.ReadCard)});
+            }
+            panel.Show(selection.State,selection.Evaluation,null,selection.Evaluation.Warnings.FirstOrDefault());return;
+        }
         if(MegaCrit.Sts2.Core.Nodes.Screens.Map.NMapScreen.Instance is {IsOpen:true} mapScreen)
         {
             if(!autopilot.Enabled || panel.ReviewPaused || !mapScreen.IsTravelEnabled)
                 ShowRoute(RouteAdapter.Preview(this,mapScreen));
             return;
         }
-        if(MegaCrit.Sts2.Core.Nodes.Rooms.NMerchantRoom.Instance?.Inventory is {IsOpen:true} inventory)
+        // A purchased relic can open rewards while the inventory remains open underneath.
+        // Only the foreground inventory owns the shop preview; child rewards must be scored.
+        if(MegaCrit.Sts2.Core.Nodes.Rooms.NMerchantRoom.Instance?.Inventory is {IsOpen:true} inventory &&
+            ReferenceEquals(MegaCrit.Sts2.Core.Nodes.Screens.ScreenContext.ActiveScreenContext.Instance?.GetCurrentScreen(),inventory))
         {
             if(!autopilot.Enabled || panel.ReviewPaused)
             {
+                snapshot=WithForesight(snapshot);
                 var slots=inventory.GetAllSlots().Where(x=>x.IsVisibleInTree()&&x.Entry is {IsStocked:true}).ToArray();
                 var stock=slots.Where(x=>x.Entry is MegaCrit.Sts2.Core.Entities.Merchant.MerchantCardEntry{CreationResult:not null})
                     .Select(x=>new ShopCard(x.GetInstanceId().ToString(),SnapshotReader.ReadCard(((MegaCrit.Sts2.Core.Entities.Merchant.MerchantCardEntry)x.Entry).CreationResult!.Card),x.Entry.Cost)).ToArray();
                 var removal=slots.FirstOrDefault(x=>x.Entry is MegaCrit.Sts2.Core.Entities.Merchant.MerchantCardRemovalEntry);
                 var relics=slots.Where(x=>x.Entry is MegaCrit.Sts2.Core.Entities.Merchant.MerchantRelicEntry {Model:not null})
                     .Select(x=>{var r=(MegaCrit.Sts2.Core.Entities.Merchant.MerchantRelicEntry)x.Entry;return new ShopRelic(x.GetInstanceId().ToString(),r.Model!.Id.Entry,r.Model.Title.GetFormattedText(),r.Cost);}).ToArray();
-                var priority=PriorityShopPolicy.Evaluate(snapshot,relics,stock,autopilot.ShopBoughtCards);
+                var priority=PriorityShopPolicy.Evaluate(snapshot,relics,stock,autopilot.ShopBoughtCards,removal?.Entry.Cost);
                 if(priority!=null)
                 {
                     var c=new ShopChoice(priority.Card?.Key??priority.Relic.Key,priority.Card?.Card.Name??priority.Relic.Name,
                         priority.Card!=null?"card":"relic",priority.Card?.Price??priority.Relic.Price,100,
                         [priority.Reason,$"计划总价 {priority.TotalPrice}，现款 {snapshot.Gold}"]);
-                    ShowShop(snapshot,new(c,[c],0,[priority.Reason]));
+                    var ordinary=ShopPolicy.Evaluate(snapshot,stock,removal?.Entry.Cost,autopilot.ShopArrivalGold(snapshot.Gold),autopilot.ShopBoughtCards);
+                    ShowShop(snapshot,ordinary with{Recommendation=c,Choices=[c,..ordinary.Choices.Where(x=>x.Key!=c.Key)],Notes=[priority.Reason,..ordinary.Notes]});
                 }
                 else ShowShop(snapshot,ShopPolicy.Evaluate(snapshot,stock,removal?.Entry.Cost,autopilot.ShopArrivalGold(snapshot.Gold),autopilot.ShopBoughtCards));
             }
@@ -246,9 +318,14 @@ internal sealed class AdvisorService
         if (cardScreen != null && GodotObject.IsInstanceValid(cardScreen) && cardScreen.IsInsideTree() && !cardsResolved)
         {
             kind = "cards";
+            // Unknown/custom transitions simply keep current-HP evaluation.
+            try{snapshot=snapshot with{HpAfterPendingAncient=SnapshotReader.PendingAncientHp(run,player)};}
+            catch(Exception ex){journal.Write("pending_recovery_unavailable",new{error=ex.GetBaseException().Message});}
             options = cardOptions.Select((c, i) => new DecisionOption("card:" + i, c.Card.Title, "card", Card: SnapshotReader.ReadCard(c.Card)))
                 .Concat(extraOptions.Select((o, i) => new DecisionOption("alternative:" + i, o.Title.GetFormattedText(),
-                    o.OptionId.Equals("Skip", StringComparison.OrdinalIgnoreCase) ? "skip" : o.OptionId=="SACRIFICE"&&player.GetRelic<MegaCrit.Sts2.Core.Models.Relics.PaelsWing>()!=null?"effect":"unknown",
+                    o.OptionId.Equals("Skip", StringComparison.OrdinalIgnoreCase) ? "skip" :
+                    o.OptionId=="REROLL"&&snapshot.Character is "Defect" or "Silent" or "Regent" or "Necrobinder"?"reroll":
+                    o.OptionId=="SACRIFICE"&&player.GetRelic<MegaCrit.Sts2.Core.Models.Relics.PaelsWing>()!=null?"effect":"unknown",
                     EffectValue:o.OptionId=="SACRIFICE"?4:null))).ToArray();
         }
         else if (restRoom != null && GodotObject.IsInstanceValid(restRoom) && restRoom.IsInsideTree() && !restBusy)
@@ -257,13 +334,30 @@ internal sealed class AdvisorService
             options = restRoom.Options.Select(o => new DecisionOption(o.OptionId, o.Title.GetFormattedText(),
                 o is HealRestSiteOption ? "heal" : o is SmithRestSiteOption ? "smith" : RestEffect(o,snapshot)!=null?"effect":"unknown", o.IsEnabled,
                 HealAmount: o is HealRestSiteOption ? (double)HealRestSiteOption.GetHealAmount(player) : 0,
-                SmithCount: o is SmithRestSiteOption smith ? smith.SmithCount : 1,EffectValue:RestEffect(o,snapshot))).ToArray();
+                SmithCount: o is SmithRestSiteOption smith ? smith.SmithCount : 1,EffectValue:CampMechanics.Effect(this,o,snapshot))).ToArray();
         }
 
         if (options is { Length: > 0 })
         {
             var fingerprint = stateJson + JsonSerializer.Serialize(options, Journal.Json);
             if (fingerprint == lastDecision) return;
+            if(kind=="cards"&&snapshot.Character is "Defect" or "Silent" or "Regent" or "Necrobinder")
+            {
+                var node=run.CurrentMapPoint is {} point?RouteAdapter.Key(point):null;
+                if(pendingForesight!=null&&node!=foresightOrigin)
+                {
+                    var predicted=pendingForesight.Branches.Select(b=>b.Rewards.FirstOrDefault()).Where(r=>r?.Node==node).ToArray();
+                    var actual=options.Where(o=>o.Kind=="card").Select(o=>o.Card!.Id+":"+o.Card.UpgradeLevel).ToArray();
+                    var matches=predicted.Any(r=>r!.Cards.Select(c=>c.Id+":"+c.UpgradeLevel).SequenceEqual(actual));
+                    journal.Write("reward_foresight_observed",new{runId,node,origin=foresightOrigin,
+                        fingerprint=pendingForesight.Fingerprint,covered=predicted.Length>0,matches,actual});
+                }
+                // Only invest against the route our actual survival policy recommends,
+                // not an attractive reward behind an unsafe, unchosen elite branch.
+                snapshot=WithForesight(snapshot);
+                pendingForesight=snapshot.Foresight;foresightOrigin=node;
+                journal.Write("reward_foresight",new{runId,foresight=snapshot.Foresight});
+            }
             if(kind=="rest"&&run.CurrentMapPoint is {} campPoint&&snapshot.Map?.Error==null)
             {
                 try
@@ -291,6 +385,53 @@ internal sealed class AdvisorService
             lastDecision = "";
             panel.Show(snapshot, null, null);
         }
+    }
+
+    internal void RefreshPresentation()
+    {
+        if(decision!=null)panel.Show(decision.State,decision.Evaluation,decision.Id);
+    }
+
+    // Never run Ironclad route, merchant, ancient or rest evaluators on other characters.
+    // Use the active screen so an old reward object cannot masquerade as a current offer.
+    private void PollAdviceOnly(RunSnapshot snapshot)
+    {
+        var screen=MegaCrit.Sts2.Core.Nodes.Screens.ScreenContext.ActiveScreenContext.Instance?.GetCurrentScreen();
+        DecisionOption[]? options=null;string kind="";
+        if(cardScreen!=null&&GodotObject.IsInstanceValid(cardScreen)&&ReferenceEquals(screen,cardScreen)&&!cardsResolved)
+        {
+            kind="cards";
+            options=cardOptions.Select((c,i)=>new DecisionOption("card:"+i,c.Card.Title,"card",Card:SnapshotReader.ReadCard(c.Card)))
+                .Concat(extraOptions.Select((o,i)=>new DecisionOption("alternative:"+i,o.Title.GetFormattedText(),
+                    o.OptionId.Equals("Skip",StringComparison.OrdinalIgnoreCase)?"skip":"unknown"))).ToArray();
+        }
+        else if(restRoom!=null&&GodotObject.IsInstanceValid(restRoom)&&ReferenceEquals(screen,restRoom)&&!restBusy)
+        {
+            kind="rest";
+            options=restRoom.Options.Select(o=>new DecisionOption(o.OptionId,o.Title.GetFormattedText(),
+                o is HealRestSiteOption?"heal":o is SmithRestSiteOption?"smith":"unknown",o.IsEnabled)).ToArray();
+        }
+        if(options is {Length:>0})
+        {
+            var fingerprint=JsonSerializer.Serialize(new{snapshot,options},Journal.Json);
+            if(fingerprint==lastDecision)return;
+            var evaluation=policy.Evaluate(snapshot,options);
+            decision=new(Guid.NewGuid().ToString("N"),runId,kind,snapshot,options,evaluation);
+            feedbackContext=decision;lastDecision=fingerprint;
+            journal.Write("decision",decision);journal.Latest("latest-decision",decision);
+            panel.Show(snapshot,evaluation,decision.Id);return;
+        }
+        if(restBusy&&decision?.Kind=="rest")return;
+        decision=null;feedbackContext=null;lastDecision="";Visuals.Clear();
+        panel.Show(snapshot,null,null,HeroPolicy.Supports(snapshot.Character)?HeroPolicy.Scope(snapshot.Character):snapshot.Character=="Silent"?SilentPolicy.Scope:snapshot.Character=="Defect"?DefectPolicy.Scope:"此角色尚未适配，请手动游玩；局面仍会记录。");
+    }
+
+    internal void RecordRunResult(bool victory)
+    {
+        if(resultRecorded)return;
+        journal.Write("run_result",new{runId,victory,state=SnapshotReader.Read(run,player),
+            policyVersion=HeroPolicy.VersionFor(player.Character.GetType().Name)});
+        resultRecorded=true;
     }
 
     internal ChoiceRecord? PrepareCardChoice(CardModel? model)

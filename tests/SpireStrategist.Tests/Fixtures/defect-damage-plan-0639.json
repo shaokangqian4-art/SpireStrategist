@@ -1,0 +1,2771 @@
+[
+  {
+    "label": "single-spinner-first-boss",
+    "state": {
+      "character": "Defect",
+      "playerCount": 1,
+      "hp": 30,
+      "maxHp": 75,
+      "hpAfterPendingAncient": 66,
+      "gold": 276,
+      "energy": 3,
+      "combatSolverAvailable": true,
+      "act": 1,
+      "floor": 17,
+      "ascension": 10,
+      "room": "CombatRoom",
+      "deck": [
+        {
+          "id": "CARD.STRIKE_DEFECT",
+          "className": "StrikeDefect",
+          "name": "打击",
+          "type": "Attack",
+          "rarity": "Basic",
+          "description": "造成6点伤害。",
+          "cost": 1,
+          "costsX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {
+            "Damage": 6
+          }
+        },
+        {
+          "id": "CARD.STRIKE_DEFECT",
+          "className": "StrikeDefect",
+          "name": "打击",
+          "type": "Attack",
+          "rarity": "Basic",
+          "description": "造成6点伤害。",
+          "cost": 1,
+          "costsX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {
+            "Damage": 6
+          }
+        },
+        {
+          "id": "CARD.STRIKE_DEFECT",
+          "className": "StrikeDefect",
+          "name": "打击",
+          "type": "Attack",
+          "rarity": "Basic",
+          "description": "造成6点伤害。",
+          "cost": 1,
+          "costsX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {
+            "Damage": 6
+          }
+        },
+        {
+          "id": "CARD.DEFEND_DEFECT",
+          "className": "DefendDefect",
+          "name": "防御",
+          "type": "Skill",
+          "rarity": "Basic",
+          "description": "获得5点[gold]格挡[/gold]。",
+          "cost": 1,
+          "costsX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {
+            "Block": 5
+          }
+        },
+        {
+          "id": "CARD.DEFEND_DEFECT",
+          "className": "DefendDefect",
+          "name": "防御",
+          "type": "Skill",
+          "rarity": "Basic",
+          "description": "获得5点[gold]格挡[/gold]。",
+          "cost": 1,
+          "costsX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {
+            "Block": 5
+          }
+        },
+        {
+          "id": "CARD.DEFEND_DEFECT",
+          "className": "DefendDefect",
+          "name": "防御",
+          "type": "Skill",
+          "rarity": "Basic",
+          "description": "获得5点[gold]格挡[/gold]。",
+          "cost": 1,
+          "costsX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {
+            "Block": 5
+          }
+        },
+        {
+          "id": "CARD.DEFEND_DEFECT",
+          "className": "DefendDefect",
+          "name": "防御",
+          "type": "Skill",
+          "rarity": "Basic",
+          "description": "获得5点[gold]格挡[/gold]。",
+          "cost": 1,
+          "costsX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {
+            "Block": 5
+          }
+        },
+        {
+          "id": "CARD.ZAP",
+          "className": "Zap",
+          "name": "电击",
+          "type": "Skill",
+          "rarity": "Basic",
+          "description": "[gold]生成[/gold]1个[gold]闪电[/gold]充能球。",
+          "cost": 1,
+          "costsX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {}
+        },
+        {
+          "id": "CARD.DUALCAST",
+          "className": "Dualcast",
+          "name": "双重释放",
+          "type": "Skill",
+          "rarity": "Basic",
+          "description": "[gold]激发[/gold]你最右侧的充能球两次。",
+          "cost": 1,
+          "costsX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {}
+        },
+        {
+          "id": "CARD.ASCENDERS_BANE",
+          "className": "AscendersBane",
+          "name": "进阶之灾",
+          "type": "Curse",
+          "rarity": "Curse",
+          "description": "[gold]不能被打出[/gold]。\n[gold]虚无[/gold]。\n[gold]永恒[/gold]。",
+          "cost": -1,
+          "costsX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": false,
+          "modified": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [
+            "Eternal",
+            "Ethereal",
+            "Unplayable"
+          ],
+          "variables": {}
+        },
+        {
+          "id": "CARD.SPINNER",
+          "className": "Spinner",
+          "name": "旋转工艺+",
+          "type": "Power",
+          "rarity": "Rare",
+          "description": "[gold]生成[/gold]1个[gold]玻璃[/gold]充能球。\n在你的回合开始时，[gold]生成[/gold]1个[gold]玻璃[/gold]充能球。",
+          "cost": 1,
+          "costsX": false,
+          "upgradeLevel": 1,
+          "canUpgrade": false,
+          "modified": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {
+            "SpinnerPower": 1
+          }
+        },
+        {
+          "id": "CARD.CHARGE_BATTERY",
+          "className": "ChargeBattery",
+          "name": "充电",
+          "type": "Skill",
+          "rarity": "Common",
+          "description": "获得7点[gold]格挡[/gold]。\n在下个回合获得[img]res://images/packed/sprite_fonts/defect_energy_icon.png[/img]。",
+          "cost": 1,
+          "costsX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {
+            "Block": 7,
+            "Energy": 1
+          }
+        },
+        {
+          "id": "CARD.FIGHT_THROUGH",
+          "className": "FightThrough",
+          "name": "强撑+",
+          "type": "Skill",
+          "rarity": "Uncommon",
+          "description": "获得17点[gold]格挡[/gold]。\n将2张[gold]伤口[/gold]加入你的[gold]弃牌堆[/gold]。",
+          "cost": 1,
+          "costsX": false,
+          "upgradeLevel": 1,
+          "canUpgrade": false,
+          "modified": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {
+            "Block": 17
+          }
+        },
+        {
+          "id": "CARD.DOUBLE_ENERGY",
+          "className": "DoubleEnergy",
+          "name": "双倍能量+",
+          "type": "Skill",
+          "rarity": "Uncommon",
+          "description": "将你的能量翻倍。\n[gold]消耗[/gold]。",
+          "cost": 0,
+          "costsX": false,
+          "upgradeLevel": 1,
+          "canUpgrade": false,
+          "modified": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [
+            "Exhaust"
+          ],
+          "variables": {}
+        },
+        {
+          "id": "CARD.BOOT_SEQUENCE",
+          "className": "BootSequence",
+          "name": "启动流程",
+          "type": "Skill",
+          "rarity": "Uncommon",
+          "description": "[gold]固有[/gold]。\n获得10点[gold]格挡[/gold]。\n[gold]消耗[/gold]。",
+          "cost": 0,
+          "costsX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [
+            "Exhaust",
+            "Innate"
+          ],
+          "variables": {
+            "Block": 10
+          }
+        }
+      ],
+      "relics": [
+        "RELIC.CRACKED_CORE",
+        "RELIC.ARCANE_SCROLL",
+        "RELIC.JUZU_BRACELET",
+        "RELIC.ANCHOR",
+        "RELIC.PARRYING_SHIELD"
+      ],
+      "potionSlots": [
+        null,
+        "POTION.POTION_OF_BINDING"
+      ],
+      "nextNodeTypes": [],
+      "hidden": {
+        "seed": "D0FE3E4B0C08",
+        "streams": [
+          {
+            "stream": "run.UpFront",
+            "counter": 415,
+            "s0": 8167286863575966312,
+            "s1": 7301165080258027371,
+            "s2": 16158382358066595523,
+            "s3": 17522647825915316971,
+            "preview": [
+              790444,
+              647882,
+              465665,
+              468391
+            ]
+          },
+          {
+            "stream": "run.Shuffle",
+            "counter": 185,
+            "s0": 9254581922385387700,
+            "s1": 4156753143116518428,
+            "s2": 16199241199577429324,
+            "s3": 15401436754955455153,
+            "preview": [
+              947107,
+              765411,
+              65036,
+              407056
+            ]
+          },
+          {
+            "stream": "run.UnknownMapPoint",
+            "counter": 4,
+            "s0": 17013203117458116450,
+            "s1": 3915887605559552531,
+            "s2": 17575767325992449773,
+            "s3": 15423144456066477127,
+            "preview": [
+              736788,
+              498522,
+              665993,
+              128036
+            ]
+          },
+          {
+            "stream": "run.CombatCardGeneration",
+            "counter": 18,
+            "s0": 4487359385892666398,
+            "s1": 3922396700918364620,
+            "s2": 12519081036403315075,
+            "s3": 17044270924948271964,
+            "preview": [
+              769255,
+              672367,
+              419942,
+              674310
+            ]
+          },
+          {
+            "stream": "run.CombatPotionGeneration",
+            "counter": 0,
+            "s0": 8486688710670055381,
+            "s1": 15979307025553925251,
+            "s2": 14797110840547677418,
+            "s3": 3796958724879198318,
+            "preview": [
+              542224,
+              829203,
+              578513,
+              999693
+            ]
+          },
+          {
+            "stream": "run.CombatCardSelection",
+            "counter": 0,
+            "s0": 15626454367472645031,
+            "s1": 13682042977496367877,
+            "s2": 1468027399339682922,
+            "s3": 17759017028109191327,
+            "preview": [
+              221007,
+              227190,
+              948649,
+              477330
+            ]
+          },
+          {
+            "stream": "run.CombatEnergyCosts",
+            "counter": 0,
+            "s0": 2773466595445859631,
+            "s1": 4298685304973632754,
+            "s2": 14299967833772478572,
+            "s3": 13265895597420670269,
+            "preview": [
+              265456,
+              362554,
+              970679,
+              263239
+            ]
+          },
+          {
+            "stream": "run.CombatTargets",
+            "counter": 50,
+            "s0": 1881638247097056388,
+            "s1": 11110156562074275761,
+            "s2": 2739541439492542311,
+            "s3": 3313963681095818027,
+            "preview": [
+              148893,
+              841859,
+              60361,
+              491723
+            ]
+          },
+          {
+            "stream": "run.MonsterAi",
+            "counter": 3,
+            "s0": 5072746156166794407,
+            "s1": 15770311775424185471,
+            "s2": 11151854209618290702,
+            "s3": 9652192024752932479,
+            "preview": [
+              283410,
+              95011,
+              852812,
+              117947
+            ]
+          },
+          {
+            "stream": "run.Niche",
+            "counter": 7,
+            "s0": 1782019488980474640,
+            "s1": 15845647255404839661,
+            "s2": 5259033487338379974,
+            "s3": 11620520650268623231,
+            "preview": [
+              806931,
+              252716,
+              831347,
+              723279
+            ]
+          },
+          {
+            "stream": "run.CombatOrbGeneration",
+            "counter": 0,
+            "s0": 7302598215403127445,
+            "s1": 2581869915076490041,
+            "s2": 12134297142346145637,
+            "s3": 16203304136545925357,
+            "preview": [
+              189463,
+              479058,
+              918201,
+              140297
+            ]
+          },
+          {
+            "stream": "run.TreasureRoomRelics",
+            "counter": 2,
+            "s0": 13717577512420884118,
+            "s1": 17343587594753232249,
+            "s2": 15325000434360572516,
+            "s3": 12171624292347757413,
+            "preview": [
+              539140,
+              909148,
+              261001,
+              582578
+            ]
+          },
+          {
+            "stream": "player.Rewards",
+            "counter": 100,
+            "s0": 16527925043324105575,
+            "s1": 6618409785279759051,
+            "s2": 983260906822577631,
+            "s3": 14698412685647936860,
+            "preview": [
+              599949,
+              538564,
+              294305,
+              879671
+            ]
+          },
+          {
+            "stream": "player.Shops",
+            "counter": 28,
+            "s0": 1000712992555831984,
+            "s1": 7935746846488175392,
+            "s2": 15110965696664897728,
+            "s3": 14893334780115370033,
+            "preview": [
+              938743,
+              436884,
+              875173,
+              810961
+            ]
+          },
+          {
+            "stream": "player.Transformations",
+            "counter": 0,
+            "s0": 17928271550390619314,
+            "s1": 18288607739333539858,
+            "s2": 518682385445481124,
+            "s3": 1823034883109363603,
+            "preview": [
+              621893,
+              446301,
+              893863,
+              41048
+            ]
+          }
+        ],
+        "acts": [
+          {
+            "act": 1,
+            "normalEncounters": [
+              "ENCOUNTER.NIBBITS_WEAK",
+              "ENCOUNTER.FUZZY_WURM_CRAWLER_WEAK",
+              "ENCOUNTER.SHRINKER_BEETLE_WEAK",
+              "ENCOUNTER.MAWLER_NORMAL",
+              "ENCOUNTER.VINE_SHAMBLER_NORMAL",
+              "ENCOUNTER.FLYCONID_NORMAL",
+              "ENCOUNTER.NIBBITS_NORMAL",
+              "ENCOUNTER.SLIMES_NORMAL",
+              "ENCOUNTER.SNAPPING_JAXFRUIT_NORMAL",
+              "ENCOUNTER.OVERGROWTH_CRAWLERS",
+              "ENCOUNTER.FOGMOG_NORMAL",
+              "ENCOUNTER.INKLETS_NORMAL",
+              "ENCOUNTER.CUBEX_CONSTRUCT_NORMAL",
+              "ENCOUNTER.SLITHERING_STRANGLER_NORMAL",
+              "ENCOUNTER.RUBY_RAIDERS_NORMAL"
+            ],
+            "normalVisited": 5,
+            "eliteEncounters": [
+              "ENCOUNTER.BYGONE_EFFIGY_ELITE",
+              "ENCOUNTER.PHROG_PARASITE_ELITE",
+              "ENCOUNTER.BYRDONIS_ELITE",
+              "ENCOUNTER.BYGONE_EFFIGY_ELITE",
+              "ENCOUNTER.BYRDONIS_ELITE",
+              "ENCOUNTER.PHROG_PARASITE_ELITE",
+              "ENCOUNTER.BYGONE_EFFIGY_ELITE",
+              "ENCOUNTER.PHROG_PARASITE_ELITE",
+              "ENCOUNTER.BYRDONIS_ELITE",
+              "ENCOUNTER.BYGONE_EFFIGY_ELITE",
+              "ENCOUNTER.BYRDONIS_ELITE",
+              "ENCOUNTER.PHROG_PARASITE_ELITE",
+              "ENCOUNTER.BYGONE_EFFIGY_ELITE",
+              "ENCOUNTER.BYRDONIS_ELITE",
+              "ENCOUNTER.PHROG_PARASITE_ELITE"
+            ],
+            "eliteVisited": 1,
+            "eventPool": [
+              "EVENT.BRAIN_LEECH",
+              "EVENT.CRYSTAL_SPHERE",
+              "EVENT.THE_FUTURE_OF_POTIONS",
+              "EVENT.WAR_HISTORIAN_REPY",
+              "EVENT.WELLSPRING",
+              "EVENT.JUNGLE_MAZE_ADVENTURE",
+              "EVENT.DENSE_VEGETATION",
+              "EVENT.THE_LEGENDS_WERE_TRUE",
+              "EVENT.TEA_MASTER",
+              "EVENT.WOOD_CARVINGS",
+              "EVENT.WHISPERING_HOLLOW",
+              "EVENT.THIS_OR_THAT",
+              "EVENT.WELCOME_TO_WONGOS",
+              "EVENT.RELIC_TRADER",
+              "EVENT.MORPHIC_GROVE",
+              "EVENT.SAPPHIRE_SEED",
+              "EVENT.DOLL_ROOM",
+              "EVENT.RANWID_THE_ELDER",
+              "EVENT.ROOM_FULL_OF_CHEESE",
+              "EVENT.LUMINOUS_CHOIR",
+              "EVENT.POTION_COURIER",
+              "EVENT.SELF_HELP_BOOK",
+              "EVENT.SUNKEN_STATUE",
+              "EVENT.BYRDONIS_NEST",
+              "EVENT.SLIPPERY_BRIDGE",
+              "EVENT.TABLET_OF_TRUTH",
+              "EVENT.STONE_OF_ALL_TIME",
+              "EVENT.SYMBIOTE",
+              "EVENT.AROMA_OF_CHAOS",
+              "EVENT.FAKE_MERCHANT",
+              "EVENT.UNREST_SITE"
+            ],
+            "eventsVisited": 6,
+            "boss": "ENCOUNTER.VANTOM_BOSS",
+            "secondBoss": null,
+            "ancient": "EVENT.NEOW"
+          },
+          {
+            "act": 2,
+            "normalEncounters": [
+              "ENCOUNTER.THIEVING_HOPPER_WEAK",
+              "ENCOUNTER.BOWLBUGS_WEAK",
+              "ENCOUNTER.OVICOPTER_NORMAL",
+              "ENCOUNTER.CHOMPERS_NORMAL",
+              "ENCOUNTER.SLUMBERING_BEETLE_NORMAL",
+              "ENCOUNTER.SPINY_TOAD_NORMAL",
+              "ENCOUNTER.THE_OBSCURA_NORMAL",
+              "ENCOUNTER.BOWLBUGS_NORMAL",
+              "ENCOUNTER.EXOSKELETONS_NORMAL",
+              "ENCOUNTER.LOUSE_PROGENITOR_NORMAL",
+              "ENCOUNTER.MYTES_NORMAL",
+              "ENCOUNTER.HUNTER_KILLER_NORMAL",
+              "ENCOUNTER.MYTES_NORMAL",
+              "ENCOUNTER.EXOSKELETONS_NORMAL"
+            ],
+            "normalVisited": 0,
+            "eliteEncounters": [
+              "ENCOUNTER.DECIMILLIPEDE_ELITE",
+              "ENCOUNTER.ENTOMANCER_ELITE",
+              "ENCOUNTER.INFESTED_PRISMS_ELITE",
+              "ENCOUNTER.DECIMILLIPEDE_ELITE",
+              "ENCOUNTER.INFESTED_PRISMS_ELITE",
+              "ENCOUNTER.ENTOMANCER_ELITE",
+              "ENCOUNTER.DECIMILLIPEDE_ELITE",
+              "ENCOUNTER.INFESTED_PRISMS_ELITE",
+              "ENCOUNTER.ENTOMANCER_ELITE",
+              "ENCOUNTER.DECIMILLIPEDE_ELITE",
+              "ENCOUNTER.INFESTED_PRISMS_ELITE",
+              "ENCOUNTER.ENTOMANCER_ELITE",
+              "ENCOUNTER.INFESTED_PRISMS_ELITE",
+              "ENCOUNTER.ENTOMANCER_ELITE",
+              "ENCOUNTER.DECIMILLIPEDE_ELITE"
+            ],
+            "eliteVisited": 0,
+            "eventPool": [
+              "EVENT.RANWID_THE_ELDER",
+              "EVENT.DOLL_ROOM",
+              "EVENT.FIELD_OF_MAN_SIZED_HOLES",
+              "EVENT.LOST_WISP",
+              "EVENT.STONE_OF_ALL_TIME",
+              "EVENT.SYMBIOTE",
+              "EVENT.POTION_COURIER",
+              "EVENT.ZEN_WEAVER",
+              "EVENT.THE_FUTURE_OF_POTIONS",
+              "EVENT.RELIC_TRADER",
+              "EVENT.SPIRIT_GRAFTER",
+              "EVENT.AMALGAMATOR",
+              "EVENT.COLOSSAL_FLOWER",
+              "EVENT.SELF_HELP_BOOK",
+              "EVENT.COLORFUL_PHILOSOPHERS",
+              "EVENT.WELCOME_TO_WONGOS",
+              "EVENT.THE_LANTERN_KEY",
+              "EVENT.BUGSLAYER",
+              "EVENT.BRAIN_LEECH",
+              "EVENT.FAKE_MERCHANT",
+              "EVENT.TEA_MASTER",
+              "EVENT.THE_LEGENDS_WERE_TRUE",
+              "EVENT.WAR_HISTORIAN_REPY",
+              "EVENT.INFESTED_AUTOMATON",
+              "EVENT.ROOM_FULL_OF_CHEESE",
+              "EVENT.CRYSTAL_SPHERE",
+              "EVENT.SLIPPERY_BRIDGE",
+              "EVENT.THIS_OR_THAT"
+            ],
+            "eventsVisited": 0,
+            "boss": "ENCOUNTER.KNOWLEDGE_DEMON_BOSS",
+            "secondBoss": null,
+            "ancient": "EVENT.TEZCATARA"
+          },
+          {
+            "act": 3,
+            "normalEncounters": [
+              "ENCOUNTER.TURRET_OPERATOR_WEAK",
+              "ENCOUNTER.DEVOTED_SCULPTOR_WEAK",
+              "ENCOUNTER.FABRICATOR_NORMAL",
+              "ENCOUNTER.OWL_MAGISTRATE_NORMAL",
+              "ENCOUNTER.AXEBOTS_NORMAL",
+              "ENCOUNTER.THE_LOST_AND_FORGOTTEN_NORMAL",
+              "ENCOUNTER.FROG_KNIGHT_NORMAL",
+              "ENCOUNTER.SLIMED_BERSERKER_NORMAL",
+              "ENCOUNTER.CONSTRUCT_MENAGERIE_NORMAL",
+              "ENCOUNTER.GLOBE_HEAD_NORMAL",
+              "ENCOUNTER.SCROLLS_OF_BITING_NORMAL",
+              "ENCOUNTER.SLIMED_BERSERKER_NORMAL",
+              "ENCOUNTER.OWL_MAGISTRATE_NORMAL"
+            ],
+            "normalVisited": 0,
+            "eliteEncounters": [
+              "ENCOUNTER.KNIGHTS_ELITE",
+              "ENCOUNTER.MECHA_KNIGHT_ELITE",
+              "ENCOUNTER.SOUL_NEXUS_ELITE",
+              "ENCOUNTER.KNIGHTS_ELITE",
+              "ENCOUNTER.SOUL_NEXUS_ELITE",
+              "ENCOUNTER.MECHA_KNIGHT_ELITE",
+              "ENCOUNTER.SOUL_NEXUS_ELITE",
+              "ENCOUNTER.MECHA_KNIGHT_ELITE",
+              "ENCOUNTER.KNIGHTS_ELITE",
+              "ENCOUNTER.SOUL_NEXUS_ELITE",
+              "ENCOUNTER.KNIGHTS_ELITE",
+              "ENCOUNTER.MECHA_KNIGHT_ELITE",
+              "ENCOUNTER.KNIGHTS_ELITE",
+              "ENCOUNTER.SOUL_NEXUS_ELITE",
+              "ENCOUNTER.MECHA_KNIGHT_ELITE"
+            ],
+            "eliteVisited": 0,
+            "eventPool": [
+              "EVENT.POTION_COURIER",
+              "EVENT.WAR_HISTORIAN_REPY",
+              "EVENT.TINKER_TIME",
+              "EVENT.GRAVE_OF_THE_FORGOTTEN",
+              "EVENT.DOLL_ROOM",
+              "EVENT.CRYSTAL_SPHERE",
+              "EVENT.HUNGRY_FOR_MUSHROOMS",
+              "EVENT.REFLECTIONS",
+              "EVENT.BATTLEWORN_DUMMY",
+              "EVENT.THE_LEGENDS_WERE_TRUE",
+              "EVENT.THIS_OR_THAT",
+              "EVENT.SLIPPERY_BRIDGE",
+              "EVENT.ROUND_TEA_PARTY",
+              "EVENT.THE_FUTURE_OF_POTIONS",
+              "EVENT.SYMBIOTE",
+              "EVENT.BRAIN_LEECH",
+              "EVENT.SELF_HELP_BOOK",
+              "EVENT.STONE_OF_ALL_TIME",
+              "EVENT.RANWID_THE_ELDER",
+              "EVENT.FAKE_MERCHANT",
+              "EVENT.RELIC_TRADER",
+              "EVENT.TEA_MASTER",
+              "EVENT.WELCOME_TO_WONGOS",
+              "EVENT.TRIAL",
+              "EVENT.ROOM_FULL_OF_CHEESE"
+            ],
+            "eventsVisited": 0,
+            "boss": "ENCOUNTER.QUEEN_BOSS",
+            "secondBoss": "ENCOUNTER.AEONGLASS_BOSS",
+            "ancient": "EVENT.VAKUU"
+          }
+        ],
+        "drawPile": [],
+        "sourceUnchanged": true,
+        "error": null
+      },
+      "map": {
+        "totalActs": 3,
+        "rows": 16,
+        "currentRow": 16,
+        "bossRow": 16,
+        "mapType": "MegaCrit.Sts2.Core.Map.StandardActMap",
+        "longMap": true,
+        "extraLayers": 0,
+        "extraActs": 0,
+        "contentAct": 1,
+        "enemyHpScale": 1,
+        "enemyDamageScale": 1,
+        "combatGoldScale": 1,
+        "error": null
+      },
+      "recentBattles": [
+        {
+          "act": 1,
+          "room": "Elite",
+          "encounter": "ENCOUNTER.BYGONE_EFFIGY_ELITE",
+          "damageTaken": 15,
+          "healing": 0,
+          "potionsUsed": 1,
+          "maxHp": 75
+        }
+      ],
+      "commerce": {
+        "reachableShops": 0,
+        "nearestShopDistance": null,
+        "reachableUnknowns": 0,
+        "futureActs": 2
+      },
+      "campRouteRisk": {}
+    },
+    "options": [
+      {
+        "key": "card:0",
+        "name": "重启",
+        "kind": "card",
+        "enabled": true,
+        "card": {
+          "id": "CARD.REBOOT",
+          "className": "Reboot",
+          "name": "重启",
+          "type": "Skill",
+          "rarity": "Rare",
+          "description": "将你的所有未消耗的卡牌重新洗牌放入[gold]抽牌堆[/gold]。\n抽4张牌。\n[gold]消耗[/gold]。",
+          "cost": 0,
+          "costsX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [
+            "Exhaust"
+          ],
+          "variables": {
+            "Cards": 4
+          }
+        },
+        "healAmount": 0,
+        "smithCount": 1,
+        "effectValue": null
+      },
+      {
+        "key": "card:1",
+        "name": "适应打击",
+        "kind": "card",
+        "enabled": true,
+        "card": {
+          "id": "CARD.ADAPTIVE_STRIKE",
+          "className": "AdaptiveStrike",
+          "name": "适应打击",
+          "type": "Attack",
+          "rarity": "Rare",
+          "description": "造成18点伤害。\n将这张牌的一张0[img]res://images/packed/sprite_fonts/defect_energy_icon.png[/img]复制品添加到你的[gold]弃牌堆[/gold]。",
+          "cost": 2,
+          "costsX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {
+            "Damage": 18
+          }
+        },
+        "healAmount": 0,
+        "smithCount": 1,
+        "effectValue": null
+      },
+      {
+        "key": "card:2",
+        "name": "超能光束",
+        "kind": "card",
+        "enabled": true,
+        "card": {
+          "id": "CARD.HYPERBEAM",
+          "className": "Hyperbeam",
+          "name": "超能光束",
+          "type": "Attack",
+          "rarity": "Rare",
+          "description": "对所有敌人造成24点伤害。\n在本回合失去3点[gold]集中[/gold]。",
+          "cost": 2,
+          "costsX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {
+            "Damage": 24,
+            "FocusPower": 3
+          }
+        },
+        "healAmount": 0,
+        "smithCount": 1,
+        "effectValue": null
+      },
+      {
+        "key": "alternative:0",
+        "name": "跳过",
+        "kind": "skip",
+        "enabled": true,
+        "card": null,
+        "healAmount": 0,
+        "smithCount": 1,
+        "effectValue": null
+      }
+    ],
+    "expected": "AdaptiveStrike"
+  },
+  {
+    "label": "established-dark-engine",
+    "state": {
+      "character": "Defect",
+      "playerCount": 1,
+      "hp": 14,
+      "maxHp": 63,
+      "hpAfterPendingAncient": 53,
+      "gold": 214,
+      "energy": 3,
+      "combatSolverAvailable": true,
+      "act": 1,
+      "floor": 17,
+      "ascension": 10,
+      "room": "CombatRoom",
+      "deck": [
+        {
+          "id": "CARD.STRIKE_DEFECT",
+          "className": "StrikeDefect",
+          "name": "打击",
+          "type": "Attack",
+          "rarity": "Basic",
+          "description": "造成6点伤害。",
+          "cost": 1,
+          "costsX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {
+            "Damage": 6
+          }
+        },
+        {
+          "id": "CARD.STRIKE_DEFECT",
+          "className": "StrikeDefect",
+          "name": "打击",
+          "type": "Attack",
+          "rarity": "Basic",
+          "description": "造成6点伤害。",
+          "cost": 1,
+          "costsX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {
+            "Damage": 6
+          }
+        },
+        {
+          "id": "CARD.STRIKE_DEFECT",
+          "className": "StrikeDefect",
+          "name": "打击",
+          "type": "Attack",
+          "rarity": "Basic",
+          "description": "造成6点伤害。",
+          "cost": 1,
+          "costsX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {
+            "Damage": 6
+          }
+        },
+        {
+          "id": "CARD.DEFEND_DEFECT",
+          "className": "DefendDefect",
+          "name": "防御",
+          "type": "Skill",
+          "rarity": "Basic",
+          "description": "获得5点[gold]格挡[/gold]。",
+          "cost": 1,
+          "costsX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {
+            "Block": 5
+          }
+        },
+        {
+          "id": "CARD.DEFEND_DEFECT",
+          "className": "DefendDefect",
+          "name": "防御",
+          "type": "Skill",
+          "rarity": "Basic",
+          "description": "获得5点[gold]格挡[/gold]。",
+          "cost": 1,
+          "costsX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {
+            "Block": 5
+          }
+        },
+        {
+          "id": "CARD.ZAP",
+          "className": "Zap",
+          "name": "电击",
+          "type": "Skill",
+          "rarity": "Basic",
+          "description": "[gold]生成[/gold]1个[gold]闪电[/gold]充能球。",
+          "cost": 1,
+          "costsX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {}
+        },
+        {
+          "id": "CARD.DUALCAST",
+          "className": "Dualcast",
+          "name": "双重释放+",
+          "type": "Skill",
+          "rarity": "Basic",
+          "description": "[gold]激发[/gold]你最右侧的充能球两次。",
+          "cost": 0,
+          "costsX": false,
+          "upgradeLevel": 1,
+          "canUpgrade": false,
+          "modified": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {}
+        },
+        {
+          "id": "CARD.ASCENDERS_BANE",
+          "className": "AscendersBane",
+          "name": "进阶之灾",
+          "type": "Curse",
+          "rarity": "Curse",
+          "description": "[gold]不能被打出[/gold]。\n[gold]虚无[/gold]。\n[gold]永恒[/gold]。",
+          "cost": -1,
+          "costsX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": false,
+          "modified": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [
+            "Eternal",
+            "Ethereal",
+            "Unplayable"
+          ],
+          "variables": {}
+        },
+        {
+          "id": "CARD.GLASSWORK",
+          "className": "Glasswork",
+          "name": "玻璃工艺",
+          "type": "Skill",
+          "rarity": "Uncommon",
+          "description": "获得5点[gold]格挡[/gold]。\n[gold]生成[/gold]1个[gold]玻璃[/gold]充能球。",
+          "cost": 1,
+          "costsX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {
+            "Block": 5
+          }
+        },
+        {
+          "id": "CARD.ITERATION",
+          "className": "Iteration",
+          "name": "迭代",
+          "type": "Power",
+          "rarity": "Uncommon",
+          "description": "每回合你第一次抽到状态牌时，抽2张牌。",
+          "cost": 1,
+          "costsX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {
+            "IterationPower": 2
+          }
+        },
+        {
+          "id": "CARD.DARKNESS",
+          "className": "Darkness",
+          "name": "漆黑+",
+          "type": "Skill",
+          "rarity": "Uncommon",
+          "description": "[gold]生成[/gold]1[gold]个黑暗[/gold]充能球。\n触发所有[gold]黑暗[/gold]充能球的被动两次。",
+          "cost": 1,
+          "costsX": false,
+          "upgradeLevel": 1,
+          "canUpgrade": false,
+          "modified": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {}
+        },
+        {
+          "id": "CARD.HOTFIX",
+          "className": "Hotfix",
+          "name": "热修复",
+          "type": "Skill",
+          "rarity": "Common",
+          "description": "在本回合获得2点[gold]集中[/gold]。\n[gold]消耗[/gold]。",
+          "cost": 0,
+          "costsX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [
+            "Exhaust"
+          ],
+          "variables": {
+            "FocusPower": 2
+          }
+        },
+        {
+          "id": "CARD.BOOST_AWAY",
+          "className": "BoostAway",
+          "name": "高速脱离",
+          "type": "Skill",
+          "rarity": "Common",
+          "description": "获得6点[gold]格挡[/gold]。\n将一张[gold]晕眩[/gold]添加到你的[gold]弃牌堆[/gold]中。",
+          "cost": 0,
+          "costsX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {
+            "Block": 6
+          }
+        },
+        {
+          "id": "CARD.SCAVENGE",
+          "className": "Scavenge",
+          "name": "内存清理",
+          "type": "Skill",
+          "rarity": "Uncommon",
+          "description": "[gold]消耗[/gold]一张牌。\n在下个回合获得[img]res://images/packed/sprite_fonts/defect_energy_icon.png[/img][img]res://images/packed/sprite_fonts/defect_energy_icon.png[/img]。",
+          "cost": 1,
+          "costsX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {
+            "Energy": 2
+          }
+        },
+        {
+          "id": "CARD.SUNDER",
+          "className": "Sunder",
+          "name": "分离",
+          "type": "Attack",
+          "rarity": "Uncommon",
+          "description": "造成26点伤害。\n如果这张牌击杀了敌人，则获得[img]res://images/packed/sprite_fonts/defect_energy_icon.png[/img][img]res://images/packed/sprite_fonts/defect_energy_icon.png[/img][img]res://images/packed/sprite_fonts/defect_energy_icon.png[/img]。",
+          "cost": 3,
+          "costsX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {
+            "Damage": 26,
+            "Energy": 3
+          }
+        },
+        {
+          "id": "CARD.CONSUMING_SHADOW",
+          "className": "ConsumingShadow",
+          "name": "吞噬暗影",
+          "type": "Power",
+          "rarity": "Rare",
+          "description": "[gold]生成[/gold]2个[gold]黑暗[/gold]充能球。\n在你的回合结束时，[gold]激发[/gold]你最左侧的充能球。",
+          "cost": 2,
+          "costsX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {
+            "ConsumingShadowPower": 1,
+            "Repeat": 2
+          }
+        }
+      ],
+      "relics": [
+        "RELIC.CRACKED_CORE",
+        "RELIC.LEAFY_POULTICE",
+        "RELIC.WHITE_STAR",
+        "RELIC.KUSARIGAMA",
+        "RELIC.PENDULUM"
+      ],
+      "potionSlots": [
+        "POTION.LIQUID_MEMORIES",
+        "POTION.LIQUID_MEMORIES"
+      ],
+      "nextNodeTypes": [],
+      "hidden": {
+        "seed": "7826125EE62D",
+        "streams": [
+          {
+            "stream": "run.UpFront",
+            "counter": 411,
+            "s0": 7438115972170680810,
+            "s1": 8632469268554373363,
+            "s2": 16601239374811764854,
+            "s3": 2629370806795200892,
+            "preview": [
+              490477,
+              248568,
+              301617,
+              91125
+            ]
+          },
+          {
+            "stream": "run.Shuffle",
+            "counter": 168,
+            "s0": 6157666094975587929,
+            "s1": 15842158060757229037,
+            "s2": 11896608394747905521,
+            "s3": 15894942592418724744,
+            "preview": [
+              717429,
+              667819,
+              156699,
+              41548
+            ]
+          },
+          {
+            "stream": "run.UnknownMapPoint",
+            "counter": 2,
+            "s0": 16380648626265866356,
+            "s1": 9413581766987600087,
+            "s2": 7245464700455735056,
+            "s3": 4903818462825415376,
+            "preview": [
+              393031,
+              490575,
+              325785,
+              795880
+            ]
+          },
+          {
+            "stream": "run.CombatCardGeneration",
+            "counter": 0,
+            "s0": 1955399563702143732,
+            "s1": 15329672230899685187,
+            "s2": 17109925515718995412,
+            "s3": 10566962057357398024,
+            "preview": [
+              693613,
+              894876,
+              563365,
+              895556
+            ]
+          },
+          {
+            "stream": "run.CombatPotionGeneration",
+            "counter": 0,
+            "s0": 5885005613095776366,
+            "s1": 17989117797475592183,
+            "s2": 15327097701481506811,
+            "s3": 5677585259133743264,
+            "preview": [
+              106091,
+              290010,
+              941734,
+              586424
+            ]
+          },
+          {
+            "stream": "run.CombatCardSelection",
+            "counter": 0,
+            "s0": 1209740873997700633,
+            "s1": 8598602259824107678,
+            "s2": 9247126853433668354,
+            "s3": 3311058799348311158,
+            "preview": [
+              915496,
+              245400,
+              913417,
+              265006
+            ]
+          },
+          {
+            "stream": "run.CombatEnergyCosts",
+            "counter": 0,
+            "s0": 2494929880171462691,
+            "s1": 8310970577327338990,
+            "s2": 3925558086361876420,
+            "s3": 8283613773867118612,
+            "preview": [
+              102438,
+              306733,
+              795241,
+              486713
+            ]
+          },
+          {
+            "stream": "run.CombatTargets",
+            "counter": 38,
+            "s0": 3683531083202904736,
+            "s1": 1573289470914125559,
+            "s2": 882412736579038443,
+            "s3": 10734578646609031813,
+            "preview": [
+              259992,
+              538616,
+              48977,
+              728806
+            ]
+          },
+          {
+            "stream": "run.MonsterAi",
+            "counter": 11,
+            "s0": 18381025393595109933,
+            "s1": 4899953861425070788,
+            "s2": 10551910115672692920,
+            "s3": 5731525405893598945,
+            "preview": [
+              11699,
+              161370,
+              363748,
+              580906
+            ]
+          },
+          {
+            "stream": "run.Niche",
+            "counter": 17,
+            "s0": 4471594994253100376,
+            "s1": 6665679162409525684,
+            "s2": 6154109878097927897,
+            "s3": 1111234454441858174,
+            "preview": [
+              359822,
+              955944,
+              601651,
+              105524
+            ]
+          },
+          {
+            "stream": "run.CombatOrbGeneration",
+            "counter": 0,
+            "s0": 4799868821921945558,
+            "s1": 4647717326278470922,
+            "s2": 4704953765675810057,
+            "s3": 1367586487233309990,
+            "preview": [
+              250784,
+              220489,
+              717709,
+              925953
+            ]
+          },
+          {
+            "stream": "run.TreasureRoomRelics",
+            "counter": 1,
+            "s0": 9722778415709218966,
+            "s1": 17358839310561608115,
+            "s2": 16983030504539505275,
+            "s3": 4052262223697329375,
+            "preview": [
+              301492,
+              187120,
+              515523,
+              91611
+            ]
+          },
+          {
+            "stream": "player.Rewards",
+            "counter": 123,
+            "s0": 13675026279836170236,
+            "s1": 382942973191902506,
+            "s2": 14195028069491894277,
+            "s3": 18385187773467253302,
+            "preview": [
+              574029,
+              300519,
+              473914,
+              782290
+            ]
+          },
+          {
+            "stream": "player.Shops",
+            "counter": 28,
+            "s0": 6186756635093506142,
+            "s1": 10590995248019523768,
+            "s2": 4762320927299426554,
+            "s3": 15472357479090584191,
+            "preview": [
+              40656,
+              260458,
+              305368,
+              778859
+            ]
+          },
+          {
+            "stream": "player.Transformations",
+            "counter": 2,
+            "s0": 16243097106107644997,
+            "s1": 13452256552702284915,
+            "s2": 8978588530642140590,
+            "s3": 15671135462934113124,
+            "preview": [
+              470144,
+              239153,
+              371260,
+              54924
+            ]
+          }
+        ],
+        "acts": [
+          {
+            "act": 1,
+            "normalEncounters": [
+              "ENCOUNTER.SLIMES_WEAK",
+              "ENCOUNTER.SHRINKER_BEETLE_WEAK",
+              "ENCOUNTER.NIBBITS_WEAK",
+              "ENCOUNTER.FLYCONID_NORMAL",
+              "ENCOUNTER.MAWLER_NORMAL",
+              "ENCOUNTER.OVERGROWTH_CRAWLERS",
+              "ENCOUNTER.CUBEX_CONSTRUCT_NORMAL",
+              "ENCOUNTER.FOGMOG_NORMAL",
+              "ENCOUNTER.RUBY_RAIDERS_NORMAL",
+              "ENCOUNTER.NIBBITS_NORMAL",
+              "ENCOUNTER.SLITHERING_STRANGLER_NORMAL",
+              "ENCOUNTER.INKLETS_NORMAL",
+              "ENCOUNTER.SNAPPING_JAXFRUIT_NORMAL",
+              "ENCOUNTER.VINE_SHAMBLER_NORMAL",
+              "ENCOUNTER.SLIMES_NORMAL"
+            ],
+            "normalVisited": 5,
+            "eliteEncounters": [
+              "ENCOUNTER.PHROG_PARASITE_ELITE",
+              "ENCOUNTER.BYRDONIS_ELITE",
+              "ENCOUNTER.BYGONE_EFFIGY_ELITE",
+              "ENCOUNTER.PHROG_PARASITE_ELITE",
+              "ENCOUNTER.BYGONE_EFFIGY_ELITE",
+              "ENCOUNTER.BYRDONIS_ELITE",
+              "ENCOUNTER.BYGONE_EFFIGY_ELITE",
+              "ENCOUNTER.BYRDONIS_ELITE",
+              "ENCOUNTER.PHROG_PARASITE_ELITE",
+              "ENCOUNTER.BYRDONIS_ELITE",
+              "ENCOUNTER.PHROG_PARASITE_ELITE",
+              "ENCOUNTER.BYGONE_EFFIGY_ELITE",
+              "ENCOUNTER.PHROG_PARASITE_ELITE",
+              "ENCOUNTER.BYRDONIS_ELITE",
+              "ENCOUNTER.BYGONE_EFFIGY_ELITE"
+            ],
+            "eliteVisited": 2,
+            "eventPool": [
+              "EVENT.THE_FUTURE_OF_POTIONS",
+              "EVENT.WELLSPRING",
+              "EVENT.TABLET_OF_TRUTH",
+              "EVENT.SUNKEN_STATUE",
+              "EVENT.JUNGLE_MAZE_ADVENTURE",
+              "EVENT.FAKE_MERCHANT",
+              "EVENT.SELF_HELP_BOOK",
+              "EVENT.DOLL_ROOM",
+              "EVENT.BRAIN_LEECH",
+              "EVENT.SLIPPERY_BRIDGE",
+              "EVENT.CRYSTAL_SPHERE",
+              "EVENT.SAPPHIRE_SEED",
+              "EVENT.STONE_OF_ALL_TIME",
+              "EVENT.THIS_OR_THAT",
+              "EVENT.RELIC_TRADER",
+              "EVENT.WOOD_CARVINGS",
+              "EVENT.AROMA_OF_CHAOS",
+              "EVENT.WAR_HISTORIAN_REPY",
+              "EVENT.DENSE_VEGETATION",
+              "EVENT.MORPHIC_GROVE",
+              "EVENT.UNREST_SITE",
+              "EVENT.POTION_COURIER",
+              "EVENT.WHISPERING_HOLLOW",
+              "EVENT.THE_LEGENDS_WERE_TRUE",
+              "EVENT.LUMINOUS_CHOIR",
+              "EVENT.RANWID_THE_ELDER",
+              "EVENT.ROOM_FULL_OF_CHEESE",
+              "EVENT.WELCOME_TO_WONGOS",
+              "EVENT.BYRDONIS_NEST",
+              "EVENT.SYMBIOTE",
+              "EVENT.TEA_MASTER"
+            ],
+            "eventsVisited": 3,
+            "boss": "ENCOUNTER.THE_KIN_BOSS",
+            "secondBoss": null,
+            "ancient": "EVENT.NEOW"
+          },
+          {
+            "act": 2,
+            "normalEncounters": [
+              "ENCOUNTER.THIEVING_HOPPER_WEAK",
+              "ENCOUNTER.BOWLBUGS_WEAK",
+              "ENCOUNTER.LOUSE_PROGENITOR_NORMAL",
+              "ENCOUNTER.BOWLBUGS_NORMAL",
+              "ENCOUNTER.OVICOPTER_NORMAL",
+              "ENCOUNTER.SPINY_TOAD_NORMAL",
+              "ENCOUNTER.CHOMPERS_NORMAL",
+              "ENCOUNTER.EXOSKELETONS_NORMAL",
+              "ENCOUNTER.SLUMBERING_BEETLE_NORMAL",
+              "ENCOUNTER.MYTES_NORMAL",
+              "ENCOUNTER.HUNTER_KILLER_NORMAL",
+              "ENCOUNTER.THE_OBSCURA_NORMAL",
+              "ENCOUNTER.CHOMPERS_NORMAL",
+              "ENCOUNTER.OVICOPTER_NORMAL"
+            ],
+            "normalVisited": 0,
+            "eliteEncounters": [
+              "ENCOUNTER.ENTOMANCER_ELITE",
+              "ENCOUNTER.DECIMILLIPEDE_ELITE",
+              "ENCOUNTER.INFESTED_PRISMS_ELITE",
+              "ENCOUNTER.DECIMILLIPEDE_ELITE",
+              "ENCOUNTER.INFESTED_PRISMS_ELITE",
+              "ENCOUNTER.ENTOMANCER_ELITE",
+              "ENCOUNTER.DECIMILLIPEDE_ELITE",
+              "ENCOUNTER.INFESTED_PRISMS_ELITE",
+              "ENCOUNTER.ENTOMANCER_ELITE",
+              "ENCOUNTER.DECIMILLIPEDE_ELITE",
+              "ENCOUNTER.ENTOMANCER_ELITE",
+              "ENCOUNTER.INFESTED_PRISMS_ELITE",
+              "ENCOUNTER.ENTOMANCER_ELITE",
+              "ENCOUNTER.INFESTED_PRISMS_ELITE",
+              "ENCOUNTER.DECIMILLIPEDE_ELITE"
+            ],
+            "eliteVisited": 0,
+            "eventPool": [
+              "EVENT.WAR_HISTORIAN_REPY",
+              "EVENT.POTION_COURIER",
+              "EVENT.FAKE_MERCHANT",
+              "EVENT.INFESTED_AUTOMATON",
+              "EVENT.SLIPPERY_BRIDGE",
+              "EVENT.THE_LEGENDS_WERE_TRUE",
+              "EVENT.BUGSLAYER",
+              "EVENT.COLOSSAL_FLOWER",
+              "EVENT.LOST_WISP",
+              "EVENT.CRYSTAL_SPHERE",
+              "EVENT.ROOM_FULL_OF_CHEESE",
+              "EVENT.DOLL_ROOM",
+              "EVENT.SYMBIOTE",
+              "EVENT.THE_LANTERN_KEY",
+              "EVENT.THIS_OR_THAT",
+              "EVENT.RELIC_TRADER",
+              "EVENT.THE_FUTURE_OF_POTIONS",
+              "EVENT.COLORFUL_PHILOSOPHERS",
+              "EVENT.RANWID_THE_ELDER",
+              "EVENT.ZEN_WEAVER",
+              "EVENT.SPIRIT_GRAFTER",
+              "EVENT.WELCOME_TO_WONGOS",
+              "EVENT.STONE_OF_ALL_TIME",
+              "EVENT.BRAIN_LEECH",
+              "EVENT.TEA_MASTER",
+              "EVENT.SELF_HELP_BOOK",
+              "EVENT.FIELD_OF_MAN_SIZED_HOLES",
+              "EVENT.AMALGAMATOR"
+            ],
+            "eventsVisited": 0,
+            "boss": "ENCOUNTER.KNOWLEDGE_DEMON_BOSS",
+            "secondBoss": null,
+            "ancient": "EVENT.OROBAS"
+          },
+          {
+            "act": 3,
+            "normalEncounters": [
+              "ENCOUNTER.TURRET_OPERATOR_WEAK",
+              "ENCOUNTER.DEVOTED_SCULPTOR_WEAK",
+              "ENCOUNTER.GLOBE_HEAD_NORMAL",
+              "ENCOUNTER.FABRICATOR_NORMAL",
+              "ENCOUNTER.AXEBOTS_NORMAL",
+              "ENCOUNTER.SLIMED_BERSERKER_NORMAL",
+              "ENCOUNTER.OWL_MAGISTRATE_NORMAL",
+              "ENCOUNTER.FROG_KNIGHT_NORMAL",
+              "ENCOUNTER.THE_LOST_AND_FORGOTTEN_NORMAL",
+              "ENCOUNTER.CONSTRUCT_MENAGERIE_NORMAL",
+              "ENCOUNTER.SCROLLS_OF_BITING_NORMAL",
+              "ENCOUNTER.FROG_KNIGHT_NORMAL",
+              "ENCOUNTER.AXEBOTS_NORMAL"
+            ],
+            "normalVisited": 0,
+            "eliteEncounters": [
+              "ENCOUNTER.KNIGHTS_ELITE",
+              "ENCOUNTER.MECHA_KNIGHT_ELITE",
+              "ENCOUNTER.SOUL_NEXUS_ELITE",
+              "ENCOUNTER.KNIGHTS_ELITE",
+              "ENCOUNTER.SOUL_NEXUS_ELITE",
+              "ENCOUNTER.MECHA_KNIGHT_ELITE",
+              "ENCOUNTER.KNIGHTS_ELITE",
+              "ENCOUNTER.MECHA_KNIGHT_ELITE",
+              "ENCOUNTER.SOUL_NEXUS_ELITE",
+              "ENCOUNTER.MECHA_KNIGHT_ELITE",
+              "ENCOUNTER.KNIGHTS_ELITE",
+              "ENCOUNTER.SOUL_NEXUS_ELITE",
+              "ENCOUNTER.MECHA_KNIGHT_ELITE",
+              "ENCOUNTER.KNIGHTS_ELITE",
+              "ENCOUNTER.SOUL_NEXUS_ELITE"
+            ],
+            "eliteVisited": 0,
+            "eventPool": [
+              "EVENT.SLIPPERY_BRIDGE",
+              "EVENT.WELCOME_TO_WONGOS",
+              "EVENT.TINKER_TIME",
+              "EVENT.TRIAL",
+              "EVENT.ROOM_FULL_OF_CHEESE",
+              "EVENT.CRYSTAL_SPHERE",
+              "EVENT.SYMBIOTE",
+              "EVENT.THIS_OR_THAT",
+              "EVENT.RANWID_THE_ELDER",
+              "EVENT.RELIC_TRADER",
+              "EVENT.BATTLEWORN_DUMMY",
+              "EVENT.BRAIN_LEECH",
+              "EVENT.POTION_COURIER",
+              "EVENT.GRAVE_OF_THE_FORGOTTEN",
+              "EVENT.THE_LEGENDS_WERE_TRUE",
+              "EVENT.THE_FUTURE_OF_POTIONS",
+              "EVENT.STONE_OF_ALL_TIME",
+              "EVENT.TEA_MASTER",
+              "EVENT.WAR_HISTORIAN_REPY",
+              "EVENT.SELF_HELP_BOOK",
+              "EVENT.REFLECTIONS",
+              "EVENT.HUNGRY_FOR_MUSHROOMS",
+              "EVENT.FAKE_MERCHANT",
+              "EVENT.ROUND_TEA_PARTY",
+              "EVENT.DOLL_ROOM"
+            ],
+            "eventsVisited": 0,
+            "boss": "ENCOUNTER.TEST_SUBJECT_BOSS",
+            "secondBoss": "ENCOUNTER.AEONGLASS_BOSS",
+            "ancient": "EVENT.DARV"
+          }
+        ],
+        "drawPile": [],
+        "sourceUnchanged": true,
+        "error": null
+      },
+      "map": {
+        "totalActs": 3,
+        "rows": 16,
+        "currentRow": 16,
+        "bossRow": 16,
+        "mapType": "MegaCrit.Sts2.Core.Map.StandardActMap",
+        "longMap": true,
+        "extraLayers": 0,
+        "extraActs": 0,
+        "contentAct": 1,
+        "enemyHpScale": 1,
+        "enemyDamageScale": 1,
+        "combatGoldScale": 1,
+        "error": null
+      },
+      "recentBattles": [
+        {
+          "act": 1,
+          "room": "Elite",
+          "encounter": "ENCOUNTER.PHROG_PARASITE_ELITE",
+          "damageTaken": 20,
+          "healing": 0,
+          "potionsUsed": 0,
+          "maxHp": 63
+        },
+        {
+          "act": 1,
+          "room": "Elite",
+          "encounter": "ENCOUNTER.BYRDONIS_ELITE",
+          "damageTaken": 23,
+          "healing": 0,
+          "potionsUsed": 0,
+          "maxHp": 63
+        }
+      ],
+      "commerce": {
+        "reachableShops": 0,
+        "nearestShopDistance": null,
+        "reachableUnknowns": 0,
+        "futureActs": 2
+      },
+      "campRouteRisk": {}
+    },
+    "options": [
+      {
+        "key": "card:0",
+        "name": "机器学习",
+        "kind": "card",
+        "enabled": true,
+        "card": {
+          "id": "CARD.MACHINE_LEARNING",
+          "className": "MachineLearning",
+          "name": "机器学习",
+          "type": "Power",
+          "rarity": "Rare",
+          "description": "在你的回合开始时，额外抽1张牌。",
+          "cost": 1,
+          "costsX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {
+            "Cards": 1
+          }
+        },
+        "healAmount": 0,
+        "smithCount": 1,
+        "effectValue": null
+      },
+      {
+        "key": "card:1",
+        "name": "适应打击",
+        "kind": "card",
+        "enabled": true,
+        "card": {
+          "id": "CARD.ADAPTIVE_STRIKE",
+          "className": "AdaptiveStrike",
+          "name": "适应打击",
+          "type": "Attack",
+          "rarity": "Rare",
+          "description": "造成18点伤害。\n将这张牌的一张0[img]res://images/packed/sprite_fonts/defect_energy_icon.png[/img]复制品添加到你的[gold]弃牌堆[/gold]。",
+          "cost": 2,
+          "costsX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {
+            "Damage": 18
+          }
+        },
+        "healAmount": 0,
+        "smithCount": 1,
+        "effectValue": null
+      },
+      {
+        "key": "card:2",
+        "name": "回响形态",
+        "kind": "card",
+        "enabled": true,
+        "card": {
+          "id": "CARD.ECHO_FORM",
+          "className": "EchoForm",
+          "name": "回响形态",
+          "type": "Power",
+          "rarity": "Rare",
+          "description": "[gold]虚无[/gold]。\n你每回合打出的第一张牌会被打出两次。",
+          "cost": 3,
+          "costsX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [
+            "Ethereal"
+          ],
+          "variables": {
+            "EchoForm": 1
+          }
+        },
+        "healAmount": 0,
+        "smithCount": 1,
+        "effectValue": null
+      },
+      {
+        "key": "alternative:0",
+        "name": "跳过",
+        "kind": "skip",
+        "enabled": true,
+        "card": null,
+        "healAmount": 0,
+        "smithCount": 1,
+        "effectValue": null
+      }
+    ],
+    "expected": "EchoForm"
+  },
+  {
+    "label": "hologram-turbo-ftl-first-boss",
+    "state": {
+      "character": "Defect",
+      "playerCount": 1,
+      "hp": 12,
+      "maxHp": 75,
+      "hpAfterPendingAncient": 62,
+      "gold": 204,
+      "energy": 3,
+      "combatSolverAvailable": true,
+      "act": 1,
+      "floor": 17,
+      "ascension": 10,
+      "room": "CombatRoom",
+      "deck": [
+        {
+          "id": "CARD.STRIKE_DEFECT",
+          "className": "StrikeDefect",
+          "name": "打击",
+          "type": "Attack",
+          "rarity": "Basic",
+          "description": "造成6点伤害。",
+          "cost": 1,
+          "costsX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {
+            "Damage": 6
+          }
+        },
+        {
+          "id": "CARD.STRIKE_DEFECT",
+          "className": "StrikeDefect",
+          "name": "打击",
+          "type": "Attack",
+          "rarity": "Basic",
+          "description": "造成6点伤害。",
+          "cost": 1,
+          "costsX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {
+            "Damage": 6
+          }
+        },
+        {
+          "id": "CARD.DEFEND_DEFECT",
+          "className": "DefendDefect",
+          "name": "防御",
+          "type": "Skill",
+          "rarity": "Basic",
+          "description": "获得5点[gold]格挡[/gold]。",
+          "cost": 1,
+          "costsX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {
+            "Block": 5
+          }
+        },
+        {
+          "id": "CARD.DEFEND_DEFECT",
+          "className": "DefendDefect",
+          "name": "防御",
+          "type": "Skill",
+          "rarity": "Basic",
+          "description": "获得5点[gold]格挡[/gold]。",
+          "cost": 1,
+          "costsX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {
+            "Block": 5
+          }
+        },
+        {
+          "id": "CARD.DEFEND_DEFECT",
+          "className": "DefendDefect",
+          "name": "防御",
+          "type": "Skill",
+          "rarity": "Basic",
+          "description": "获得5点[gold]格挡[/gold]。",
+          "cost": 1,
+          "costsX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {
+            "Block": 5
+          }
+        },
+        {
+          "id": "CARD.DEFEND_DEFECT",
+          "className": "DefendDefect",
+          "name": "防御",
+          "type": "Skill",
+          "rarity": "Basic",
+          "description": "获得5点[gold]格挡[/gold]。",
+          "cost": 1,
+          "costsX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {
+            "Block": 5
+          }
+        },
+        {
+          "id": "CARD.ZAP",
+          "className": "Zap",
+          "name": "电击",
+          "type": "Skill",
+          "rarity": "Basic",
+          "description": "[gold]生成[/gold]1个[gold]闪电[/gold]充能球。",
+          "cost": 1,
+          "costsX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {}
+        },
+        {
+          "id": "CARD.DUALCAST",
+          "className": "Dualcast",
+          "name": "双重释放",
+          "type": "Skill",
+          "rarity": "Basic",
+          "description": "[gold]激发[/gold]你最右侧的充能球两次。",
+          "cost": 1,
+          "costsX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {}
+        },
+        {
+          "id": "CARD.ASCENDERS_BANE",
+          "className": "AscendersBane",
+          "name": "进阶之灾",
+          "type": "Curse",
+          "rarity": "Curse",
+          "description": "[gold]不能被打出[/gold]。\n[gold]虚无[/gold]。\n[gold]永恒[/gold]。",
+          "cost": -1,
+          "costsX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": false,
+          "modified": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [
+            "Eternal",
+            "Ethereal",
+            "Unplayable"
+          ],
+          "variables": {}
+        },
+        {
+          "id": "CARD.SCAVENGE",
+          "className": "Scavenge",
+          "name": "内存清理",
+          "type": "Skill",
+          "rarity": "Uncommon",
+          "description": "[gold]消耗[/gold]一张牌。\n在下个回合获得[img]res://images/packed/sprite_fonts/defect_energy_icon.png[/img][img]res://images/packed/sprite_fonts/defect_energy_icon.png[/img]。",
+          "cost": 1,
+          "costsX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {
+            "Energy": 2
+          }
+        },
+        {
+          "id": "CARD.TURBO",
+          "className": "Turbo",
+          "name": "内核加速+",
+          "type": "Skill",
+          "rarity": "Common",
+          "description": "获得[img]res://images/packed/sprite_fonts/defect_energy_icon.png[/img][img]res://images/packed/sprite_fonts/defect_energy_icon.png[/img][img]res://images/packed/sprite_fonts/defect_energy_icon.png[/img]。\n将一张[gold]虚空[/gold]加入你的[gold]弃牌堆[/gold]。",
+          "cost": 0,
+          "costsX": false,
+          "upgradeLevel": 1,
+          "canUpgrade": false,
+          "modified": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {
+            "Energy": 3
+          }
+        },
+        {
+          "id": "CARD.SWEEPING_BEAM",
+          "className": "SweepingBeam",
+          "name": "扫荡射线",
+          "type": "Attack",
+          "rarity": "Common",
+          "description": "对所有敌人造成6点伤害。\n抽1张牌。",
+          "cost": 1,
+          "costsX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {
+            "Cards": 1,
+            "Damage": 6
+          }
+        },
+        {
+          "id": "CARD.HOLOGRAM",
+          "className": "Hologram",
+          "name": "全息影像+",
+          "type": "Skill",
+          "rarity": "Common",
+          "description": "获得5点[gold]格挡[/gold]。\n将[gold]弃牌堆[/gold]中的一张牌放入你的[gold]手牌[/gold]。",
+          "cost": 1,
+          "costsX": false,
+          "upgradeLevel": 1,
+          "canUpgrade": false,
+          "modified": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {
+            "Block": 5
+          }
+        },
+        {
+          "id": "CARD.FOCUSED_STRIKE",
+          "className": "FocusedStrike",
+          "name": "集中打击+",
+          "type": "Attack",
+          "rarity": "Common",
+          "description": "造成11点伤害。\n在本回合获得2点[gold]集中[/gold]。",
+          "cost": 1,
+          "costsX": false,
+          "upgradeLevel": 1,
+          "canUpgrade": false,
+          "modified": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {
+            "Damage": 11,
+            "FocusPower": 2
+          }
+        },
+        {
+          "id": "CARD.SPOILS_MAP",
+          "className": "SpoilsMap",
+          "name": "藏宝图",
+          "type": "Quest",
+          "rarity": "Quest",
+          "description": "[gold]不能被打出[/gold]。\n在下一阶段的地图上，标记一个有600额外[gold]金币[/gold]的地点。",
+          "cost": -1,
+          "costsX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": false,
+          "modified": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [
+            "Unplayable"
+          ],
+          "variables": {
+            "Gold": 600
+          }
+        },
+        {
+          "id": "CARD.FTL",
+          "className": "Ftl",
+          "name": "超越光速",
+          "type": "Attack",
+          "rarity": "Uncommon",
+          "description": "造成5点伤害。\n如果你在这回合打出的牌数小于3张，抽1张牌。",
+          "cost": 0,
+          "costsX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {
+            "Cards": 1,
+            "Damage": 5,
+            "PlayMax": 3
+          }
+        },
+        {
+          "id": "CARD.CHILL",
+          "className": "Chill",
+          "name": "冰寒",
+          "type": "Skill",
+          "rarity": "Uncommon",
+          "description": "当前每有一名敌人，就[gold]生成[/gold]1个[gold]冰霜[/gold]充能球。\n[gold]消耗[/gold]。",
+          "cost": 0,
+          "costsX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [
+            "Exhaust"
+          ],
+          "variables": {}
+        }
+      ],
+      "relics": [
+        "RELIC.CRACKED_CORE",
+        "RELIC.PHIAL_HOLSTER",
+        "RELIC.TUNING_FORK"
+      ],
+      "potionSlots": [
+        "POTION.BLESSING_OF_THE_FORGE",
+        null,
+        "POTION.DISTILLED_CHAOS"
+      ],
+      "nextNodeTypes": [],
+      "hidden": {
+        "seed": "11C12D92182F",
+        "streams": [
+          {
+            "stream": "run.UpFront",
+            "counter": 415,
+            "s0": 4742183678887658665,
+            "s1": 6855786028233193624,
+            "s2": 3374248799981852968,
+            "s3": 2356746107680509594,
+            "preview": [
+              720734,
+              968084,
+              250573,
+              940992
+            ]
+          },
+          {
+            "stream": "run.Shuffle",
+            "counter": 163,
+            "s0": 13469905677620468216,
+            "s1": 3396580458488438150,
+            "s2": 16775028390272707065,
+            "s3": 15156900648688303143,
+            "preview": [
+              583014,
+              630215,
+              830638,
+              549329
+            ]
+          },
+          {
+            "stream": "run.UnknownMapPoint",
+            "counter": 3,
+            "s0": 14605383036620807500,
+            "s1": 530294714995688748,
+            "s2": 12367946284021499199,
+            "s3": 7214894065667004830,
+            "preview": [
+              584644,
+              374767,
+              340751,
+              182486
+            ]
+          },
+          {
+            "stream": "run.CombatCardGeneration",
+            "counter": 49,
+            "s0": 11757870273569222093,
+            "s1": 6516215470058570534,
+            "s2": 6773686017520235546,
+            "s3": 15402742678157790685,
+            "preview": [
+              689751,
+              350325,
+              876527,
+              516920
+            ]
+          },
+          {
+            "stream": "run.CombatPotionGeneration",
+            "counter": 4,
+            "s0": 10585907306919709467,
+            "s1": 6004250802807047499,
+            "s2": 1115759132793234674,
+            "s3": 4919406620879857089,
+            "preview": [
+              828668,
+              889363,
+              244442,
+              3133
+            ]
+          },
+          {
+            "stream": "run.CombatCardSelection",
+            "counter": 0,
+            "s0": 14004176864704509278,
+            "s1": 11705993116988277377,
+            "s2": 15931140767460137709,
+            "s3": 6343936255332475955,
+            "preview": [
+              198992,
+              605228,
+              572828,
+              757708
+            ]
+          },
+          {
+            "stream": "run.CombatEnergyCosts",
+            "counter": 0,
+            "s0": 16600701217720234193,
+            "s1": 15128487979428797381,
+            "s2": 5802873853873355747,
+            "s3": 6882593715838392811,
+            "preview": [
+              873785,
+              375017,
+              638508,
+              716737
+            ]
+          },
+          {
+            "stream": "run.CombatTargets",
+            "counter": 57,
+            "s0": 3412616740761581793,
+            "s1": 1965071226984262308,
+            "s2": 15195083387191253191,
+            "s3": 6795720215325168154,
+            "preview": [
+              593934,
+              456872,
+              295080,
+              291706
+            ]
+          },
+          {
+            "stream": "run.MonsterAi",
+            "counter": 6,
+            "s0": 13266624614976766684,
+            "s1": 12338590424034659879,
+            "s2": 15975597311483436557,
+            "s3": 18062998387254330236,
+            "preview": [
+              727644,
+              944403,
+              828943,
+              673486
+            ]
+          },
+          {
+            "stream": "run.Niche",
+            "counter": 11,
+            "s0": 2884985428275753823,
+            "s1": 15497801424059304532,
+            "s2": 16661705869172438307,
+            "s3": 9657825136010374831,
+            "preview": [
+              191992,
+              857661,
+              11364,
+              88965
+            ]
+          },
+          {
+            "stream": "run.CombatOrbGeneration",
+            "counter": 0,
+            "s0": 9826055300545422987,
+            "s1": 9805643242617797063,
+            "s2": 9314753208591670703,
+            "s3": 1214660223467528459,
+            "preview": [
+              814315,
+              657382,
+              673338,
+              500550
+            ]
+          },
+          {
+            "stream": "run.TreasureRoomRelics",
+            "counter": 1,
+            "s0": 4949688771541540474,
+            "s1": 9820255459657934092,
+            "s2": 4909083295004665825,
+            "s3": 7801653621387324911,
+            "preview": [
+              376983,
+              54678,
+              387844,
+              11797
+            ]
+          },
+          {
+            "stream": "player.Rewards",
+            "counter": 101,
+            "s0": 7955206480161777923,
+            "s1": 15162838099290257355,
+            "s2": 15331117454156270934,
+            "s3": 877440273349525703,
+            "preview": [
+              599618,
+              641585,
+              503634,
+              662595
+            ]
+          },
+          {
+            "stream": "player.Shops",
+            "counter": 56,
+            "s0": 4253428434030355894,
+            "s1": 1086607614330862756,
+            "s2": 4008586096291120765,
+            "s3": 1043855762387273996,
+            "preview": [
+              293472,
+              148198,
+              561367,
+              388959
+            ]
+          },
+          {
+            "stream": "player.Transformations",
+            "counter": 0,
+            "s0": 3636468844185446200,
+            "s1": 133633466921466859,
+            "s2": 11202699025155195901,
+            "s3": 4396742397333329535,
+            "preview": [
+              727080,
+              197453,
+              398419,
+              181143
+            ]
+          }
+        ],
+        "acts": [
+          {
+            "act": 1,
+            "normalEncounters": [
+              "ENCOUNTER.FUZZY_WURM_CRAWLER_WEAK",
+              "ENCOUNTER.SHRINKER_BEETLE_WEAK",
+              "ENCOUNTER.SLIMES_WEAK",
+              "ENCOUNTER.SNAPPING_JAXFRUIT_NORMAL",
+              "ENCOUNTER.INKLETS_NORMAL",
+              "ENCOUNTER.VINE_SHAMBLER_NORMAL",
+              "ENCOUNTER.FOGMOG_NORMAL",
+              "ENCOUNTER.MAWLER_NORMAL",
+              "ENCOUNTER.RUBY_RAIDERS_NORMAL",
+              "ENCOUNTER.SLITHERING_STRANGLER_NORMAL",
+              "ENCOUNTER.NIBBITS_NORMAL",
+              "ENCOUNTER.SLIMES_NORMAL",
+              "ENCOUNTER.OVERGROWTH_CRAWLERS",
+              "ENCOUNTER.FLYCONID_NORMAL",
+              "ENCOUNTER.CUBEX_CONSTRUCT_NORMAL"
+            ],
+            "normalVisited": 5,
+            "eliteEncounters": [
+              "ENCOUNTER.PHROG_PARASITE_ELITE",
+              "ENCOUNTER.BYGONE_EFFIGY_ELITE",
+              "ENCOUNTER.BYRDONIS_ELITE",
+              "ENCOUNTER.BYGONE_EFFIGY_ELITE",
+              "ENCOUNTER.BYRDONIS_ELITE",
+              "ENCOUNTER.PHROG_PARASITE_ELITE",
+              "ENCOUNTER.BYRDONIS_ELITE",
+              "ENCOUNTER.BYGONE_EFFIGY_ELITE",
+              "ENCOUNTER.PHROG_PARASITE_ELITE",
+              "ENCOUNTER.BYGONE_EFFIGY_ELITE",
+              "ENCOUNTER.BYRDONIS_ELITE",
+              "ENCOUNTER.PHROG_PARASITE_ELITE",
+              "ENCOUNTER.BYRDONIS_ELITE",
+              "ENCOUNTER.PHROG_PARASITE_ELITE",
+              "ENCOUNTER.BYGONE_EFFIGY_ELITE"
+            ],
+            "eliteVisited": 0,
+            "eventPool": [
+              "EVENT.WELLSPRING",
+              "EVENT.SYMBIOTE",
+              "EVENT.SLIPPERY_BRIDGE",
+              "EVENT.WAR_HISTORIAN_REPY",
+              "EVENT.WHISPERING_HOLLOW",
+              "EVENT.RANWID_THE_ELDER",
+              "EVENT.LUMINOUS_CHOIR",
+              "EVENT.THE_LEGENDS_WERE_TRUE",
+              "EVENT.DENSE_VEGETATION",
+              "EVENT.DOLL_ROOM",
+              "EVENT.TABLET_OF_TRUTH",
+              "EVENT.MORPHIC_GROVE",
+              "EVENT.THIS_OR_THAT",
+              "EVENT.AROMA_OF_CHAOS",
+              "EVENT.TEA_MASTER",
+              "EVENT.BRAIN_LEECH",
+              "EVENT.POTION_COURIER",
+              "EVENT.SELF_HELP_BOOK",
+              "EVENT.SAPPHIRE_SEED",
+              "EVENT.BYRDONIS_NEST",
+              "EVENT.THE_FUTURE_OF_POTIONS",
+              "EVENT.RELIC_TRADER",
+              "EVENT.CRYSTAL_SPHERE",
+              "EVENT.JUNGLE_MAZE_ADVENTURE",
+              "EVENT.STONE_OF_ALL_TIME",
+              "EVENT.WOOD_CARVINGS",
+              "EVENT.UNREST_SITE",
+              "EVENT.WELCOME_TO_WONGOS",
+              "EVENT.FAKE_MERCHANT",
+              "EVENT.ROOM_FULL_OF_CHEESE",
+              "EVENT.SUNKEN_STATUE"
+            ],
+            "eventsVisited": 9,
+            "boss": "ENCOUNTER.CEREMONIAL_BEAST_BOSS",
+            "secondBoss": null,
+            "ancient": "EVENT.NEOW"
+          },
+          {
+            "act": 2,
+            "normalEncounters": [
+              "ENCOUNTER.EXOSKELETONS_WEAK",
+              "ENCOUNTER.THIEVING_HOPPER_WEAK",
+              "ENCOUNTER.HUNTER_KILLER_NORMAL",
+              "ENCOUNTER.MYTES_NORMAL",
+              "ENCOUNTER.CHOMPERS_NORMAL",
+              "ENCOUNTER.SLUMBERING_BEETLE_NORMAL",
+              "ENCOUNTER.LOUSE_PROGENITOR_NORMAL",
+              "ENCOUNTER.EXOSKELETONS_NORMAL",
+              "ENCOUNTER.THE_OBSCURA_NORMAL",
+              "ENCOUNTER.BOWLBUGS_NORMAL",
+              "ENCOUNTER.SPINY_TOAD_NORMAL",
+              "ENCOUNTER.OVICOPTER_NORMAL",
+              "ENCOUNTER.HUNTER_KILLER_NORMAL",
+              "ENCOUNTER.BOWLBUGS_NORMAL"
+            ],
+            "normalVisited": 0,
+            "eliteEncounters": [
+              "ENCOUNTER.ENTOMANCER_ELITE",
+              "ENCOUNTER.DECIMILLIPEDE_ELITE",
+              "ENCOUNTER.INFESTED_PRISMS_ELITE",
+              "ENCOUNTER.DECIMILLIPEDE_ELITE",
+              "ENCOUNTER.ENTOMANCER_ELITE",
+              "ENCOUNTER.INFESTED_PRISMS_ELITE",
+              "ENCOUNTER.ENTOMANCER_ELITE",
+              "ENCOUNTER.INFESTED_PRISMS_ELITE",
+              "ENCOUNTER.DECIMILLIPEDE_ELITE",
+              "ENCOUNTER.ENTOMANCER_ELITE",
+              "ENCOUNTER.DECIMILLIPEDE_ELITE",
+              "ENCOUNTER.INFESTED_PRISMS_ELITE",
+              "ENCOUNTER.ENTOMANCER_ELITE",
+              "ENCOUNTER.DECIMILLIPEDE_ELITE",
+              "ENCOUNTER.INFESTED_PRISMS_ELITE"
+            ],
+            "eliteVisited": 0,
+            "eventPool": [
+              "EVENT.RANWID_THE_ELDER",
+              "EVENT.SPIRIT_GRAFTER",
+              "EVENT.ZEN_WEAVER",
+              "EVENT.COLOSSAL_FLOWER",
+              "EVENT.BRAIN_LEECH",
+              "EVENT.SYMBIOTE",
+              "EVENT.STONE_OF_ALL_TIME",
+              "EVENT.POTION_COURIER",
+              "EVENT.COLORFUL_PHILOSOPHERS",
+              "EVENT.THE_LEGENDS_WERE_TRUE",
+              "EVENT.TEA_MASTER",
+              "EVENT.CRYSTAL_SPHERE",
+              "EVENT.AMALGAMATOR",
+              "EVENT.WELCOME_TO_WONGOS",
+              "EVENT.WAR_HISTORIAN_REPY",
+              "EVENT.SELF_HELP_BOOK",
+              "EVENT.FIELD_OF_MAN_SIZED_HOLES",
+              "EVENT.SLIPPERY_BRIDGE",
+              "EVENT.INFESTED_AUTOMATON",
+              "EVENT.THE_FUTURE_OF_POTIONS",
+              "EVENT.BUGSLAYER",
+              "EVENT.DOLL_ROOM",
+              "EVENT.RELIC_TRADER",
+              "EVENT.ROOM_FULL_OF_CHEESE",
+              "EVENT.LOST_WISP",
+              "EVENT.THIS_OR_THAT",
+              "EVENT.FAKE_MERCHANT",
+              "EVENT.THE_LANTERN_KEY"
+            ],
+            "eventsVisited": 0,
+            "boss": "ENCOUNTER.KAISER_CRAB_BOSS",
+            "secondBoss": null,
+            "ancient": "EVENT.TEZCATARA"
+          },
+          {
+            "act": 3,
+            "normalEncounters": [
+              "ENCOUNTER.DEVOTED_SCULPTOR_WEAK",
+              "ENCOUNTER.SCROLLS_OF_BITING_WEAK",
+              "ENCOUNTER.AXEBOTS_NORMAL",
+              "ENCOUNTER.THE_LOST_AND_FORGOTTEN_NORMAL",
+              "ENCOUNTER.FABRICATOR_NORMAL",
+              "ENCOUNTER.FROG_KNIGHT_NORMAL",
+              "ENCOUNTER.GLOBE_HEAD_NORMAL",
+              "ENCOUNTER.SLIMED_BERSERKER_NORMAL",
+              "ENCOUNTER.OWL_MAGISTRATE_NORMAL",
+              "ENCOUNTER.CONSTRUCT_MENAGERIE_NORMAL",
+              "ENCOUNTER.SCROLLS_OF_BITING_NORMAL",
+              "ENCOUNTER.FABRICATOR_NORMAL",
+              "ENCOUNTER.FROG_KNIGHT_NORMAL"
+            ],
+            "normalVisited": 0,
+            "eliteEncounters": [
+              "ENCOUNTER.SOUL_NEXUS_ELITE",
+              "ENCOUNTER.MECHA_KNIGHT_ELITE",
+              "ENCOUNTER.KNIGHTS_ELITE",
+              "ENCOUNTER.MECHA_KNIGHT_ELITE",
+              "ENCOUNTER.SOUL_NEXUS_ELITE",
+              "ENCOUNTER.KNIGHTS_ELITE",
+              "ENCOUNTER.SOUL_NEXUS_ELITE",
+              "ENCOUNTER.KNIGHTS_ELITE",
+              "ENCOUNTER.MECHA_KNIGHT_ELITE",
+              "ENCOUNTER.KNIGHTS_ELITE",
+              "ENCOUNTER.MECHA_KNIGHT_ELITE",
+              "ENCOUNTER.SOUL_NEXUS_ELITE",
+              "ENCOUNTER.KNIGHTS_ELITE",
+              "ENCOUNTER.MECHA_KNIGHT_ELITE",
+              "ENCOUNTER.SOUL_NEXUS_ELITE"
+            ],
+            "eliteVisited": 0,
+            "eventPool": [
+              "EVENT.GRAVE_OF_THE_FORGOTTEN",
+              "EVENT.ROUND_TEA_PARTY",
+              "EVENT.TRIAL",
+              "EVENT.HUNGRY_FOR_MUSHROOMS",
+              "EVENT.TEA_MASTER",
+              "EVENT.POTION_COURIER",
+              "EVENT.CRYSTAL_SPHERE",
+              "EVENT.BATTLEWORN_DUMMY",
+              "EVENT.RANWID_THE_ELDER",
+              "EVENT.THE_FUTURE_OF_POTIONS",
+              "EVENT.WELCOME_TO_WONGOS",
+              "EVENT.SELF_HELP_BOOK",
+              "EVENT.ROOM_FULL_OF_CHEESE",
+              "EVENT.DOLL_ROOM",
+              "EVENT.SLIPPERY_BRIDGE",
+              "EVENT.WAR_HISTORIAN_REPY",
+              "EVENT.BRAIN_LEECH",
+              "EVENT.RELIC_TRADER",
+              "EVENT.SYMBIOTE",
+              "EVENT.TINKER_TIME",
+              "EVENT.THE_LEGENDS_WERE_TRUE",
+              "EVENT.FAKE_MERCHANT",
+              "EVENT.REFLECTIONS",
+              "EVENT.THIS_OR_THAT",
+              "EVENT.STONE_OF_ALL_TIME"
+            ],
+            "eventsVisited": 0,
+            "boss": "ENCOUNTER.TEST_SUBJECT_BOSS",
+            "secondBoss": "ENCOUNTER.QUEEN_BOSS",
+            "ancient": "EVENT.VAKUU"
+          }
+        ],
+        "drawPile": [],
+        "sourceUnchanged": true,
+        "error": null
+      },
+      "map": {
+        "totalActs": 3,
+        "rows": 16,
+        "currentRow": 16,
+        "bossRow": 16,
+        "mapType": "MegaCrit.Sts2.Core.Map.StandardActMap",
+        "longMap": true,
+        "extraLayers": 0,
+        "extraActs": 0,
+        "contentAct": 1,
+        "enemyHpScale": 1,
+        "enemyDamageScale": 1,
+        "combatGoldScale": 1,
+        "error": null
+      },
+      "recentBattles": [],
+      "commerce": {
+        "reachableShops": 0,
+        "nearestShopDistance": null,
+        "reachableUnknowns": 0,
+        "futureActs": 2
+      },
+      "campRouteRisk": {}
+    },
+    "options": [
+      {
+        "key": "card:0",
+        "name": "化废为宝",
+        "kind": "card",
+        "enabled": true,
+        "card": {
+          "id": "CARD.TRASH_TO_TREASURE",
+          "className": "TrashToTreasure",
+          "name": "化废为宝",
+          "type": "Power",
+          "rarity": "Rare",
+          "description": "每当你生成状态牌的时候，随机[gold]生成[/gold]一个充能球。",
+          "cost": 1,
+          "costsX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {}
+        },
+        "healAmount": 0,
+        "smithCount": 1,
+        "effectValue": null
+      },
+      {
+        "key": "card:1",
+        "name": "重启",
+        "kind": "card",
+        "enabled": true,
+        "card": {
+          "id": "CARD.REBOOT",
+          "className": "Reboot",
+          "name": "重启",
+          "type": "Skill",
+          "rarity": "Rare",
+          "description": "将你的所有未消耗的卡牌重新洗牌放入[gold]抽牌堆[/gold]。\n抽4张牌。\n[gold]消耗[/gold]。",
+          "cost": 0,
+          "costsX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [
+            "Exhaust"
+          ],
+          "variables": {
+            "Cards": 4
+          }
+        },
+        "healAmount": 0,
+        "smithCount": 1,
+        "effectValue": null
+      },
+      {
+        "key": "card:2",
+        "name": "万物一心",
+        "kind": "card",
+        "enabled": true,
+        "card": {
+          "id": "CARD.ALL_FOR_ONE",
+          "className": "AllForOne",
+          "name": "万物一心",
+          "type": "Attack",
+          "rarity": "Rare",
+          "description": "造成10点伤害。\n将你[gold]弃牌堆[/gold]中的所有0[img]res://images/packed/sprite_fonts/defect_energy_icon.png[/img]牌放入你的[gold]手牌[/gold]。",
+          "cost": 2,
+          "costsX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {
+            "Damage": 10
+          }
+        },
+        "healAmount": 0,
+        "smithCount": 1,
+        "effectValue": null
+      },
+      {
+        "key": "alternative:0",
+        "name": "跳过",
+        "kind": "skip",
+        "enabled": true,
+        "card": null,
+        "healAmount": 0,
+        "smithCount": 1,
+        "effectValue": null
+      }
+    ],
+    "expected": "AllForOne"
+  }
+]

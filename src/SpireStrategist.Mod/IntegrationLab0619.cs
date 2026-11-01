@@ -23,11 +23,9 @@ internal static partial class AutopilotLab
         var enabled=(CheckButton)AccessTools.Field(typeof(ClimbController),"enabledButton").GetValue(null)!;
         var path=Path.Combine(OS.GetUserDataDir(),"SpireStrategist","climb-settings.json");
         Check(asc.Value==0&&ClimbPreferences.Load(path).Ascension==0,"fresh install uses N0");
-        Check(chars.ItemCount==5&&Enumerable.Range(1,4).All(i=>chars.GetItemText(i).Contains(UiLocalization.English?"unavailable":"暂不可用")),"five characters with four unavailable labels");
+        Check(chars.ItemCount==5&&Enumerable.Range(0,5).All(i=>!chars.IsItemDisabled(i)),"all five native characters selectable");
         chars.Select(3);chars.EmitSignal(OptionButton.SignalName.ItemSelected,3L);
-        Check(enabled.Disabled&&ClimbPreferences.Load(path).Character=="Necrobinder","unavailable character saved and cannot start loop");
-        ClimbController.SetEnabled(true);
-        Check(!ClimbController.Enabled&&AdvisorService.Current==null,"programmatic unavailable launch rejected");
+        Check(!enabled.Disabled&&ClimbPreferences.Load(path).Character=="Necrobinder","Necrobinder preference saved and loop available");
         chars.Select(0);chars.EmitSignal(OptionButton.SignalName.ItemSelected,0L);
         await CheckMenu066(game);
         var loaded=ClimbPreferences.Load(path);

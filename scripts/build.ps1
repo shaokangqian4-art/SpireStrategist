@@ -19,7 +19,9 @@ try {
     if ($LASTEXITCODE -ne 0) { throw 'Mod compilation failed' }
     & $dotnetExe run --project 'tests/SpireStrategist.Tests/SpireStrategist.Tests.csproj' -c Release
     if ($LASTEXITCODE -ne 0) { throw 'Policy tests failed' }
-    & $dotnetExe run --project 'tools/IntegrationCheck/IntegrationCheck.csproj' -c Release "-p:GameDir=$GameDir" -- (Join-Path $GameDir 'data_sts2_windows_x86_64')
+    $sharedBuild = [xml](Get-Content -LiteralPath 'Directory.Build.props' -Raw)
+    $priorPath = $sharedBuild.Project.PropertyGroup.DefectPriorPath.Replace('$(MSBuildThisFileDirectory)', $projectRoot + '/')
+    & $dotnetExe run --project 'tools/IntegrationCheck/IntegrationCheck.csproj' -c Release "-p:GameDir=$GameDir" -- (Join-Path $GameDir 'data_sts2_windows_x86_64') $priorPath 'tests/SpireStrategist.Tests/Fixtures/defect-prior-v14.json'
     if ($LASTEXITCODE -ne 0) { throw 'Game hook compatibility checks failed' }
     & $dotnetExe build 'tools/Replay/Replay.csproj' -c Release --nologo
     if ($LASTEXITCODE -ne 0) { throw 'Replay tool compilation failed' }

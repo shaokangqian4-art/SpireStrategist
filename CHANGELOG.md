@@ -1,3 +1,10 @@
+# 0.6.55 — 2026-11-01
+
+- Added Defect, Silent, Regent and Necrobinder strategy integration since 0.6.22, including single-player takeover and looping with CombatSolver.
+- Added optional-per-client co-op advice (no automation), bounded reward/shop foresight, expanded native highlights, and character-sensitive item evaluation.
+- Fixed Pyramid/Bullet Time synergy, redundant Gamble Retain upgrades, deck-size-aware Gamble copies, and late-game shiv/poison forecast conflicts.
+- 236 core regressions and 16 hook bindings passed; 20 recorded reward snapshots replayed. No new win-rate claim.
+
 # Changelog
 
 ## 0.6.22

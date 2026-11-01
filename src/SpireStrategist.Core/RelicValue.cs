@@ -3,8 +3,34 @@ namespace SpireStrategist.Core;
 public sealed record RelicAssessment(double Value,string Selection="",string Note="人工机制估值，未完成训练校准。",bool Supported=true);
 public static class RelicValue
 {
+    // Nullable shop assessment: do not turn the generic fallback into a strength recommendation.
+    public static RelicAssessment? Shop(string id,RunSnapshot s)
+    {
+        if(CharacterItems.Relic(id,s) is {} native)return native;
+        if(AncientItems.Evaluate(id,s) is {} ancient)return ancient;
+        if(HeroRelics.Evaluate(id,s) is {} hero)return hero;
+        if(SilentRelics.Evaluate(id,s) is {} silent)return silent;
+        if(DefectRelics.Evaluate(id,s) is {} defect)return defect;
+        id=id.Split('.').Last();var v=new StrategicValue(s);
+        double? common=id switch{
+            "BAG_OF_PREPARATION"=>10,"ICE_CREAM"=>12+Math.Min(8,s.Deck.Count(c=>c.Cost>=2)),
+            "ANCHOR"=>5*v.Horizon,"BLOOD_VIAL"=>3*v.Horizon,"HAPPY_FLOWER"=>7*v.Horizon,
+            "VAJRA"=>4+v.Multi*2,"ODDLY_SMOOTH_STONE"=>4+Math.Min(6,v.Block),
+            "MUMMIFIED_HAND"=>4+v.Powers*2,"KUNAI" or "SHURIKEN"=>s.Deck.Count(c=>c.Type=="Attack"&&c.Cost<=1)>=5?14:4,
+            "PEN_NIB"=>6+Math.Min(6,v.Attack),"ORICHALCUM"=>v.Block<3?9:3,
+            "STRIKE_DUMMY"=>s.Deck.Count(c=>c.ClassName.Contains("Strike"))*1.5,
+            _=>null};
+        if(common.HasValue)return new(common.Value);
+        var known=Evaluate(id,s);
+        return known.Note=="普通遗物按通用先验估值，具体联动未完全建模。"?null:known;
+    }
     public static RelicAssessment Evaluate(string id,RunSnapshot s,bool ancient=false)
     {
+        if(CharacterItems.Relic(id,s) is {} native)return native;
+        if(AncientItems.Evaluate(id,s) is {} specialized)return specialized;
+        if(HeroRelics.Evaluate(id,s) is {} hero)return hero;
+        if(SilentRelics.Evaluate(id,s) is {} silent)return silent;
+        if(DefectRelics.Evaluate(id,s) is {} defect)return defect;
         id=id.Replace("RELIC.","");var v=new StrategicValue(s);
         double E=v.Energy,H=v.Horizon,D=v.Draw,X=v.Exhaust,P=v.Powers,B=v.Basics;
         return id switch
@@ -42,7 +68,7 @@ public static class RelicValue
             "BLESSED_ANTLER"=>new(E-8+Math.Min(6,X*2)),"BRILLIANT_SCARF"=>new(4+Math.Min(12,D*2+X)),
             "DELICATE_FROND"=>new(s.PotionSlots.Length*5*(v.Has("SOZU")?0:1),"","不设五格药水栏的硬门槛；少栏位仍有每战补药价值。"),
             "DIAMOND_DIADEM"=>new(16+(v.Block<3?5:0)),"FUR_COAT"=>new(13*H),
-            "GLITTER"=>new(7*H),"JEWELRY_BOX"=>new(v.UpgradeBest(s.Deck.Length)*.3+3),
+            "GLITTER"=>new(7*H),"JEWELRY_BOX"=>new(ApotheosisPolicy.Value(s),Note:ApotheosisPolicy.Reason(s)),
             "LOOMING_FRUIT"=>new(v.MaxHp(31)),"SIGNET_RING"=>new(v.Gold(888)*Math.Min(1,H)),
             "BEAUTIFUL_BRACELET"=>new(12+Math.Max(0,3-D)*2),
             "ELECTRIC_SHRYMP"=>new(v.BestEnchant("IMBUED"),"enchant:IMBUED","不限 X 费技能；还需检查自动施放的时机及目标。"),
@@ -68,7 +94,7 @@ public static class RelicValue
             "PUMPKIN_CANDLE"=>new(E*.65),"TOY_BOX"=>new(18),
             "SEAL_OF_GOLD"=>new(E*Math.Clamp(s.Gold/180d,0,1)-v.Gold(Math.Min(s.Gold,60))),
             "NUTRITIOUS_SOUP"=>new(s.Deck.Count(c=>c.ClassName=="StrikeIronclad")*3-(X>3?3:0)),
-            "BLOOD_SOAKED_ROSE"=>new(E-12),"WHISPERING_EARRING"=>new(E-17),
+            "BLOOD_SOAKED_ROSE"=>new(E-v.EnthralledCost(),"","执迷不能永久删除，留在手牌时阻止正常打牌；小牌组与高过牌反复支付解锁费用。仅已核验的自动消耗降低负担。"),"WHISPERING_EARRING"=>new(E-17),
             "FIDDLE"=>new(16-D*6),"PRESERVED_FOG"=>new(v.RemoveBest(3)-16,"remove"),
             "SERE_TALON"=>new(15-v.MaxHp(9)),"DISTINGUISHED_CAPE"=>new(20-2*v.Curse()),
             "CHOICES_PARADOX"=>new(10),"MUSIC_BOX"=>new(8+Math.Min(8,v.Attack)),
@@ -76,7 +102,7 @@ public static class RelicValue
             "JEWELED_MASK"=>new(P>0?12+Math.Min(8,P*2):0),
             "DAUGHTER_OF_THE_WIND"=>new(7+Math.Min(7,s.Deck.Count(c=>c.Type=="Attack"))),
             "MR_STRUGGLES"=>new(7),"BING_BONG"=>new(-8+Math.Min(10,s.Deck.Count(c=>c.ClassName=="PerfectedStrike")*3)),
-            "FORGOTTEN_SOUL"=>new(3+Math.Min(12,X*3)),"CHOSEN_CHEESE"=>new(8*H),
+            "FORGOTTEN_SOUL"=>new(3+Math.Min(12,X*3)),"CHOSEN_CHEESE"=>new(s.Character=="Defect"?DefectStrategy.CheeseValue(s):8*H),
             _=>new(8,"",ancient?"先古遗物未适配。":"普通遗物按通用先验估值，具体联动未完全建模。",!ancient)
         };
     }

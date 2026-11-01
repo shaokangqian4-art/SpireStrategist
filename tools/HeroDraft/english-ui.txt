@@ -1,0 +1,81 @@
+储君|Regent
+防守缺口|Defense gap
+即时输出缺口|Immediate damage gap
+亡灵契约师|Necrobinder
+铸剑|Blade
+星星|Stars
+生成|Generation
+奥斯提|Osty
+灾厄|Doom
+灵魂|Soul
+未确定|Undetermined
+接管：选牌、营火、路线、商店与原生事件；战斗交给 CombatSolver。首版机制权重，尚待实战校准。| takeover: cards, camps, routes, shops and native events; combat is delegated to CombatSolver. Initial mechanism weights, awaiting gameplay calibration.
+角色选择会保存；五个原生角色均可用。储君和亡灵契约师为首版机制权重，欢迎反馈。|Character selection is saved. All five native characters are available. Regent and Necrobinder use initial mechanism weights; feedback is welcome.
+所选角色尚不支持，请选择原生角色。|This character is not supported. Please select a native character.
+仅支持已建模原生角色的单人接管。|Takeover supports modeled native characters in single-player only.
+铸剑输出：已有铸造和增长／放大|Blade output: Forge supply and growth/amplification are present
+星星输出：已有供星与消费出口|Star output: both supply and spending outlets are present
+生成输出：已有生成与伤害成长|Generation output: generation and damage scaling are present
+持续攻击：已有长战出口|Sustained attacks: a long-fight damage outlet is present
+奥斯提：已有攻击／承伤与成长|Osty: attack/damage-absorption and growth tools are present
+灾厄：已有施加与长战增长|Doom: application and long-fight scaling are present
+灵魂：已有灵魂生成和伤害出口|Souls: generation and a damage outlet are present
+虚无：已有虚无供给及输出／回放|Ethereal: supply and damage/replay tools are present
+独立输出：已有可成长攻击或持续生成|Independent output: scaling attacks or recurring generation are present
+缺少长战输出，优先寻找可启动的核心|Missing sustained damage: prioritize a core that can be activated
+即时伤害不足，避免早期连续精英|Low immediate damage: avoid successive early elites
+防守薄弱|Insufficient defense
+星消耗高于可持续供星|Star demand exceeds renewable supply
+角色或局面无效。|Invalid character or run state.
+此操作尚未建模。|This action has not been modeled.
+此牌尚未建立当前角色的模型。|This card has no model for the current character.
+未知附魔／异变，保留手动选择。|Unknown enchantment/modification: manual choice required.
+基础机制先验（未实战校准）|Mechanism prior (not yet gameplay-calibrated)
+同版本单人A10同稀有度统计修正（有限幅度）|Limited same-version solo A10, same-rarity observational adjustment
+前／中／后期需求|Early/mid/late-run demand
+重复份数递减|Diminishing returns from additional copies
+已升级的实际收益|Benefit of the existing upgrade
+已有即时输出后少添过渡牌|Reduce filler acquisitions once immediate damage is covered
+过牌重复功能饱和|Draw support saturation
+星费与实际供星：零能量不等于免费|Star cost versus actual supply: zero Energy is not free
+供星服务已有消费与黑洞|Star supply supports existing spending and Black Hole
+供星支撑长战星系出口|Star supply supports a sustained Star damage outlet
+铸造支持已有剑与取剑组件|Forge supports existing blade and retrieval components
+剑放大需要真实铸造入口|Blade amplification needs an actual Forge source
+稳定取剑提高铸造兑现率|Reliable blade retrieval realizes Forge value
+生成联动不把抽牌算生成|Generation synergies do not count ordinary draws
+生成服务已有力量、格挡和累积攻击|Generation supports existing Strength, Block and scaling attacks
+技能链需要运转与低费技能|Skill chains need cycling and cheap skills
+星费防守与伤害共享预算|Star defense and damage share the same resource budget
+已有剑主线，不额外堆异体系终端|Established blade plan: avoid unrelated finishers
+星系主线缺少剑入口|Star plan lacks a blade entry point
+辐射需当回合供星|Radiate needs Stars gained this turn
+顶抽防御需要控制顶牌|Topdeck defense needs topdeck control
+末段经济收益按可达商店折扣|Late economic value is discounted by reachable shops
+奥斯提输出链的实际攻击与召唤|Actual attacks and Summon support for Osty's damage chain
+奥斯提攻击兑现钙化与多次攻击|Osty attacks realize Calcify and repeated-attack payoffs
+大奥斯提收益依赖真实召唤|Large-Osty payoffs require real Summon supply
+灵魂终端需要灵魂来源|Soul payoffs need a Soul source
+灵魂接通已有伤害与召唤终端|Souls connect existing damage and Summon payoffs
+灾厄配套按实际施加能力|Doom synergies depend on actual application capacity
+灾厄支持已有放大、格挡和即时斩杀|Doom supports amplification, Block and immediate execution
+虚无联动需要实际虚无密度|Ethereal synergies require actual Ethereal density
+虚无供应连接已有输出／抽牌|Ethereal supply connects existing damage/draw payoffs
+高费牌打出频率|Frequency of expensive card plays
+献祭会丢失已养大的奥斯提|Sacrificing Osty loses accumulated life investment
+玩家力量损失只惩罚玩家攻击主线|Player Strength loss penalizes player-attack plans only
+涨费妨碍零费灵魂与连打|Cost increases hinder free Souls and play chains
+自身灾厄在低血和缺输出长战中的风险|Self-Doom risk at low HP or in long fights without damage
+回收过牌帮助同目标翻倍|Retrieval and draw support same-target doubling
+主动处理基础牌与污染，不把自消耗当清理|Active cleanup of basics/junk; self-Exhaust is not cleanup
+自产状态的回转负担|Cycling burden from self-generated statuses
+供能重复功能饱和|Energy support saturation
+高费启动负担|Expensive setup burden
+接通现有组件的长战输出链|Completes a sustained damage chain from existing components
+尚缺核心输出，允许投资可发展的入口|Missing core damage: allow investment in a viable entry point
+已有防守但缺长战输出|Defense already present, sustained damage still missing
+缺输出时不堆重复辅助|Avoid duplicate support while damage is missing
+迅捷首次打出抽牌|Swift draws on the first play
+辉眼：{0}；条件构筑投资，不计当前战力|Foresight: {0}; conditional build investment, not current combat strength
+原生角色机制与当前构筑的条件估值；非实战胜率。|Conditional value from native mechanics and the current deck, not a measured win rate.
+已有遗物与角色资源、输出机制联动|Owned relic synergy with character resources and damage mechanisms

@@ -61,7 +61,7 @@ internal static partial class AutopilotLab
         SaveManager.Instance.Progress.EnableFtues=false;NModalContainer.Instance!.Clear();
         var panel=(PanelContainer)GameActions.Field(service.Panel,"panel")!;
         var tabs=(TabContainer)GameActions.Field(service.Panel,"tabs")!;
-        Check(tabs.GetTabCount()==5,"five categorized pages");
+        Check(tabs.GetTabCount()==6,"six categorized pages");
         var paintLayer=GameActions.Descendants<CanvasLayer>(NGame.Instance!).Single(n=>n.Name=="StrategistRecommendationPaint");
         Check(!GameActions.Descendants<Control>(paintLayer).Any(),"paint layer contains no mouse-intercepting controls");
         service.Panel.SelectTab(2);await Delay(.6);

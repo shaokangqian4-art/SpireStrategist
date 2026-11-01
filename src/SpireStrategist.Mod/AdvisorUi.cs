@@ -3,7 +3,7 @@ using System.Text.Json;
 
 namespace SpireStrategist.Mod;
 
-internal sealed record AdvisorDisplaySettings(bool Items = true, bool Routes = true)
+internal sealed record AdvisorDisplaySettings(bool Items = true, bool Routes = true, bool DefectShadow = false)
 {
     private static string PathName => Path.Combine(OS.GetUserDataDir(), "SpireStrategist", "display-settings.json");
     internal static AdvisorDisplaySettings Load()

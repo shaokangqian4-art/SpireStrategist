@@ -1,0 +1,1442 @@
+{
+  "version": "regent-draft-0.1",
+  "gameVersion": "0.111.0",
+  "excludedMultiplayer": [
+    "Constellation",
+    "HammerTime",
+    "Largesse",
+    "Plot",
+    "Tutor"
+  ],
+  "cards": {
+    "Alignment": {
+      "base": 4.8,
+      "duplicate": 3.0,
+      "upgradeDelta": 1.2,
+      "phase": [
+        0,
+        0.2,
+        0.3
+      ],
+      "tags": [
+        "energy"
+      ],
+      "note": "花星换能量，不是无条件零费供能。",
+      "evidenceAdjustment": 0.005
+    },
+    "Arsenal": {
+      "base": 5.8,
+      "duplicate": 4.0,
+      "upgradeDelta": 1.6,
+      "phase": [
+        0,
+        0.2,
+        0.3
+      ],
+      "tags": [
+        "generation_payoff",
+        "strength",
+        "scaling"
+      ],
+      "note": "每次生成牌获得力量；需要生成频率和攻击出口。",
+      "evidenceAdjustment": 0.211
+    },
+    "AstralPulse": {
+      "base": 4.0,
+      "duplicate": 3.0,
+      "upgradeDelta": 1.3,
+      "phase": [
+        0.6,
+        -0.6,
+        -1.2
+      ],
+      "tags": [
+        "attack",
+        "aoe",
+        "multihit",
+        "transition"
+      ],
+      "note": "花星的群体两段伤害，不能按免费白卡计算。",
+      "evidenceAdjustment": -0.143
+    },
+    "BeatIntoShape": {
+      "base": 5.8,
+      "duplicate": 3.0,
+      "upgradeDelta": 2.0,
+      "phase": [
+        0,
+        0.2,
+        0.3
+      ],
+      "tags": [
+        "forge",
+        "sword_engine",
+        "multihit_payoff"
+      ],
+      "note": "先命中再按本回合命中次数铸造，连击提高成长。",
+      "evidenceAdjustment": -0.127
+    },
+    "Begone": {
+      "base": 2.8,
+      "duplicate": 4.0,
+      "upgradeDelta": 1.5,
+      "phase": [
+        0,
+        0.2,
+        0.3
+      ],
+      "tags": [
+        "transform",
+        "generation",
+        "cleanup"
+      ],
+      "note": "将一张手牌变仆从打击；能处理杂牌但转化消耗一费。",
+      "evidenceAdjustment": 0.098
+    },
+    "BigBang": {
+      "base": 7.0,
+      "duplicate": 3.0,
+      "upgradeDelta": 2.0,
+      "phase": [
+        0,
+        0.2,
+        0.3
+      ],
+      "tags": [
+        "draw",
+        "energy",
+        "star_source",
+        "forge",
+        "generation"
+      ],
+      "note": "一次性抽牌、两种资源及铸造；升级固有，非永久供能。",
+      "evidenceAdjustment": 0.493
+    },
+    "BlackHole": {
+      "base": 5.6,
+      "duplicate": 3.2,
+      "upgradeDelta": 2.0,
+      "phase": [
+        0,
+        0.2,
+        0.3
+      ],
+      "tags": [
+        "star_engine",
+        "scaling",
+        "aoe"
+      ],
+      "note": "每次获得或花星触发，不按星数量逐点触发。",
+      "evidenceAdjustment": -0.135
+    },
+    "Bombardment": {
+      "base": 5.8,
+      "duplicate": 3.0,
+      "upgradeDelta": 1.8,
+      "phase": [
+        0,
+        0.2,
+        0.3
+      ],
+      "tags": [
+        "attack",
+        "scaling",
+        "autonomous"
+      ],
+      "note": "三费启动后消耗区每回合自动攻击，独立长战输出。",
+      "evidenceAdjustment": 0.209
+    },
+    "Bulwark": {
+      "base": 4.7,
+      "duplicate": 3.0,
+      "upgradeDelta": 1.5,
+      "phase": [
+        0,
+        0.2,
+        0.3
+      ],
+      "tags": [
+        "block",
+        "forge"
+      ],
+      "note": "两费防御兼铸造；需要能量安排。",
+      "evidenceAdjustment": 0.378
+    },
+    "BundleOfJoy": {
+      "base": 4.4,
+      "duplicate": 4.0,
+      "upgradeDelta": 1.2,
+      "phase": [
+        0,
+        0.2,
+        0.3
+      ],
+      "tags": [
+        "generation",
+        "draw_random"
+      ],
+      "note": "随机无色牌不是抽牌；依赖生成联动且仍需支付牌费。",
+      "evidenceAdjustment": 0.045
+    },
+    "CelestialMight": {
+      "base": 4.1,
+      "duplicate": 3.0,
+      "upgradeDelta": 1.8,
+      "phase": [
+        0.6,
+        -0.6,
+        -1.2
+      ],
+      "tags": [
+        "attack",
+        "multihit",
+        "transition"
+      ],
+      "note": "两费三段过渡，力量收益高，不能替代成长核心。",
+      "evidenceAdjustment": -0.155
+    },
+    "Charge": {
+      "base": 3.5,
+      "duplicate": 4.0,
+      "upgradeDelta": 1.3,
+      "phase": [
+        0,
+        0.2,
+        0.3
+      ],
+      "tags": [
+        "transform",
+        "generation",
+        "cleanup"
+      ],
+      "note": "把抽牌堆两张牌变仆从，优先基础与污染牌，保护核心。",
+      "evidenceAdjustment": 0.253
+    },
+    "ChildOfTheStars": {
+      "base": 5.2,
+      "duplicate": 3.0,
+      "upgradeDelta": 2.0,
+      "phase": [
+        0,
+        0.2,
+        0.3
+      ],
+      "tags": [
+        "star_block",
+        "block"
+      ],
+      "note": "按花掉的星数产格挡，须有实际星收入和消费。",
+      "evidenceAdjustment": 0.177
+    },
+    "CloakOfStars": {
+      "base": 3.3,
+      "duplicate": 3.5,
+      "upgradeDelta": 1.4,
+      "phase": [
+        0,
+        0.2,
+        0.3
+      ],
+      "tags": [
+        "block"
+      ],
+      "note": "星费防御会与星费攻击竞争资源。",
+      "evidenceAdjustment": -0.001
+    },
+    "CollisionCourse": {
+      "base": 3.2,
+      "duplicate": 3.5,
+      "upgradeDelta": 1.2,
+      "phase": [
+        0.6,
+        -0.6,
+        -1.2
+      ],
+      "tags": [
+        "attack",
+        "transition",
+        "self_status"
+      ],
+      "note": "星费攻击加碎屑手牌；不能忽略污染。",
+      "evidenceAdjustment": 0.049
+    },
+    "Comet": {
+      "base": 6.1,
+      "duplicate": 3.6,
+      "upgradeDelta": 1.5,
+      "phase": [
+        0,
+        0.2,
+        0.3
+      ],
+      "tags": [
+        "attack",
+        "star_finisher",
+        "weak",
+        "vulnerable"
+      ],
+      "note": "五颗星的大伤害与三层双减益，需要供星。",
+      "evidenceAdjustment": 0.104
+    },
+    "Conqueror": {
+      "base": 5.2,
+      "duplicate": 4.0,
+      "upgradeDelta": 1.0,
+      "phase": [
+        0,
+        0.2,
+        0.3
+      ],
+      "tags": [
+        "forge",
+        "sword_payoff"
+      ],
+      "note": "本回合剑翻倍，需要同回合拿到并打出君王之剑。",
+      "evidenceAdjustment": -0.099
+    },
+    "Convergence": {
+      "base": 4.2,
+      "duplicate": 3.0,
+      "upgradeDelta": 1.0,
+      "phase": [
+        0,
+        0.2,
+        0.3
+      ],
+      "tags": [
+        "retain",
+        "energy",
+        "star_source"
+      ],
+      "note": "保留手牌并把能量和星延至下回合，不能算当回合供能。",
+      "evidenceAdjustment": 0.188
+    },
+    "CosmicIndifference": {
+      "base": 3.5,
+      "duplicate": 3.5,
+      "upgradeDelta": 1.0,
+      "phase": [
+        0,
+        0.2,
+        0.3
+      ],
+      "tags": [
+        "block",
+        "recall"
+      ],
+      "note": "格挡与弃牌顶抽，回收核心但占下次抽牌位。",
+      "evidenceAdjustment": 0.076
+    },
+    "CrashLanding": {
+      "base": 3.7,
+      "duplicate": 5.0,
+      "upgradeDelta": 1.0,
+      "phase": [
+        0,
+        0.2,
+        0.3
+      ],
+      "tags": [
+        "attack",
+        "aoe",
+        "self_status"
+      ],
+      "note": "群伤后碎屑填手，必须折算污染与抽牌阻塞。",
+      "evidenceAdjustment": 0.0
+    },
+    "CrescentSpear": {
+      "base": 3.1,
+      "duplicate": 3.5,
+      "upgradeDelta": 1.0,
+      "phase": [
+        0.6,
+        -0.6,
+        -1.2
+      ],
+      "tags": [
+        "attack",
+        "transition"
+      ],
+      "note": "按星费牌数量增伤，不等于持续成长发动机。",
+      "evidenceAdjustment": -0.172
+    },
+    "CrushUnder": {
+      "base": 4.1,
+      "duplicate": 3.0,
+      "upgradeDelta": 1.3,
+      "phase": [
+        0.6,
+        -0.6,
+        -1.2
+      ],
+      "tags": [
+        "attack",
+        "aoe",
+        "weak",
+        "transition"
+      ],
+      "note": "早期群伤加当回合降力量，长战成长有限。",
+      "evidenceAdjustment": -0.134
+    },
+    "DecisionsDecisions": {
+      "base": 6.3,
+      "duplicate": 3.5,
+      "upgradeDelta": 1.5,
+      "phase": [
+        0,
+        0.2,
+        0.3
+      ],
+      "tags": [
+        "draw",
+        "repeat_skill"
+      ],
+      "note": "抽牌后重放技能三次；需实际高价值技能并考虑费用。",
+      "evidenceAdjustment": 0.121
+    },
+    "DefendRegent": {
+      "base": 0.5,
+      "duplicate": 4.0,
+      "upgradeDelta": 0.5,
+      "phase": [
+        0,
+        0.2,
+        0.3
+      ],
+      "tags": [
+        "basic",
+        "block"
+      ],
+      "note": "初始防御，升级低优先级。",
+      "evidenceAdjustment": 0
+    },
+    "Devastate": {
+      "base": 4.3,
+      "duplicate": 4.0,
+      "upgradeDelta": 1.4,
+      "phase": [
+        0.6,
+        -0.6,
+        -1.2
+      ],
+      "tags": [
+        "attack",
+        "conditional",
+        "transition"
+      ],
+      "note": "一能量加四星的高伤单击，没有额外禁抽限制；不能按一费35裸伤评价。",
+      "evidenceAdjustment": -0.171
+    },
+    "DyingStar": {
+      "base": 5.3,
+      "duplicate": 3.0,
+      "upgradeDelta": 1.4,
+      "phase": [
+        0,
+        0.2,
+        0.3
+      ],
+      "tags": [
+        "attack",
+        "aoe",
+        "strength_down",
+        "ethereal"
+      ],
+      "note": "群体大幅暂降力量，主要是高压回合防守。",
+      "evidenceAdjustment": -0.08
+    },
+    "FallingStar": {
+      "base": 2.5,
+      "duplicate": 4.0,
+      "upgradeDelta": 0.7,
+      "phase": [
+        0,
+        0.2,
+        0.3
+      ],
+      "tags": [
+        "basic",
+        "attack",
+        "weak",
+        "vulnerable"
+      ],
+      "note": "初始星费双减益，不是免费挂减益。",
+      "evidenceAdjustment": 0
+    },
+    "ForegoneConclusion": {
+      "base": 4.5,
+      "duplicate": 3.5,
+      "upgradeDelta": 1.4,
+      "phase": [
+        0,
+        0.2,
+        0.3
+      ],
+      "tags": [
+        "tutor",
+        "draw"
+      ],
+      "note": "下回合定向取牌，慢速组件配齐。",
+      "evidenceAdjustment": -0.116
+    },
+    "Furnace": {
+      "base": 6.0,
+      "duplicate": 3.0,
+      "upgradeDelta": 2.0,
+      "phase": [
+        0,
+        0.2,
+        0.3
+      ],
+      "tags": [
+        "forge",
+        "sword_engine",
+        "scaling"
+      ],
+      "note": "每回合铸造，提供独立的剑成长入口。",
+      "evidenceAdjustment": -0.085
+    },
+    "GammaBlast": {
+      "base": 4.6,
+      "duplicate": 3.0,
+      "upgradeDelta": 1.3,
+      "phase": [
+        0.6,
+        -0.6,
+        -1.2
+      ],
+      "tags": [
+        "attack",
+        "weak",
+        "vulnerable",
+        "transition"
+      ],
+      "note": "星费双减益与过渡输出。",
+      "evidenceAdjustment": 0.21
+    },
+    "GatherLight": {
+      "base": 4.2,
+      "duplicate": 2.8,
+      "upgradeDelta": 1.2,
+      "phase": [
+        0,
+        0.2,
+        0.3
+      ],
+      "tags": [
+        "block",
+        "star_source"
+      ],
+      "note": "当回合防御兼供星，支持星消费链。",
+      "evidenceAdjustment": 0.174
+    },
+    "Genesis": {
+      "base": 6.0,
+      "duplicate": 3.5,
+      "upgradeDelta": 2.5,
+      "phase": [
+        0,
+        0.2,
+        0.3
+      ],
+      "tags": [
+        "star_source",
+        "scaling"
+      ],
+      "note": "每回合稳定供星，仍需星消费伤害出口。",
+      "evidenceAdjustment": -0.106
+    },
+    "Glimmer": {
+      "base": 5.0,
+      "duplicate": 2.6,
+      "upgradeDelta": 1.6,
+      "phase": [
+        0,
+        0.2,
+        0.3
+      ],
+      "tags": [
+        "draw",
+        "topdeck"
+      ],
+      "note": "抽三放一，净抽两；可配合顶抽机制。",
+      "evidenceAdjustment": 0.063
+    },
+    "Glitterstream": {
+      "base": 2.8,
+      "duplicate": 3.8,
+      "upgradeDelta": 1.0,
+      "phase": [
+        0.6,
+        -0.6,
+        -1.2
+      ],
+      "tags": [
+        "block",
+        "transition"
+      ],
+      "note": "两费跨回合防御，已有防守时少抓。",
+      "evidenceAdjustment": 0.095
+    },
+    "Glow": {
+      "base": 4.7,
+      "duplicate": 2.6,
+      "upgradeDelta": 1.7,
+      "phase": [
+        0,
+        0.2,
+        0.3
+      ],
+      "tags": [
+        "draw",
+        "star_source"
+      ],
+      "note": "供星加本回合和下回合各抽牌，资源与运转桥梁。",
+      "evidenceAdjustment": 0.133
+    },
+    "Guards": {
+      "base": 4.0,
+      "duplicate": 5.0,
+      "upgradeDelta": 1.3,
+      "phase": [
+        0,
+        0.2,
+        0.3
+      ],
+      "tags": [
+        "transform",
+        "generation",
+        "cleanup",
+        "block"
+      ],
+      "note": "整手转仆从捐躯，适合清杂牌，不能当无条件核心保留。",
+      "evidenceAdjustment": 0.21
+    },
+    "GuidingStar": {
+      "base": 4.5,
+      "duplicate": 3.0,
+      "upgradeDelta": 1.4,
+      "phase": [
+        0.6,
+        -0.6,
+        -1.2
+      ],
+      "tags": [
+        "attack",
+        "draw",
+        "transition"
+      ],
+      "note": "过渡伤害与下回合抽牌，须支付星费。",
+      "evidenceAdjustment": 0.056
+    },
+    "HeavenlyDrill": {
+      "base": 6.2,
+      "duplicate": 3.0,
+      "upgradeDelta": 1.5,
+      "phase": [
+        0,
+        0.2,
+        0.3
+      ],
+      "tags": [
+        "attack",
+        "x",
+        "finisher",
+        "multihit"
+      ],
+      "note": "能量X达到四翻倍；需要储能或供能才能爆发。",
+      "evidenceAdjustment": 0.002
+    },
+    "Hegemony": {
+      "base": 3.9,
+      "duplicate": 3.2,
+      "upgradeDelta": 1.4,
+      "phase": [
+        0.6,
+        -0.6,
+        -1.2
+      ],
+      "tags": [
+        "attack",
+        "next_energy",
+        "transition"
+      ],
+      "note": "两费伤害换下回合供能，有等待成本。",
+      "evidenceAdjustment": -0.115
+    },
+    "HeirloomHammer": {
+      "base": 4.8,
+      "duplicate": 3.5,
+      "upgradeDelta": 1.3,
+      "phase": [
+        0,
+        0.2,
+        0.3
+      ],
+      "tags": [
+        "attack",
+        "generation",
+        "sword_payoff"
+      ],
+      "note": "复制无色牌，君王之剑也是目标；费用和手牌配齐制约。",
+      "evidenceAdjustment": -0.071
+    },
+    "HiddenCache": {
+      "base": 4.2,
+      "duplicate": 2.6,
+      "upgradeDelta": 1.2,
+      "phase": [
+        0,
+        0.2,
+        0.3
+      ],
+      "tags": [
+        "star_source",
+        "next_star"
+      ],
+      "note": "一星立即三星彩下回合，不能当即有四星。",
+      "evidenceAdjustment": 0.012
+    },
+    "IAmInvincible": {
+      "base": 4.3,
+      "duplicate": 4.0,
+      "upgradeDelta": 1.3,
+      "phase": [
+        0,
+        0.2,
+        0.3
+      ],
+      "tags": [
+        "block",
+        "topdeck_payoff"
+      ],
+      "note": "顶抽自动格挡依赖顶牌控制，不保证每回合触发。",
+      "evidenceAdjustment": -0.025
+    },
+    "KinglyKick": {
+      "base": 3.6,
+      "duplicate": 4.0,
+      "upgradeDelta": 1.0,
+      "phase": [
+        0.6,
+        -0.6,
+        -1.2
+      ],
+      "tags": [
+        "attack",
+        "draw_payoff",
+        "transition"
+      ],
+      "note": "四费每抽到降费，起手慢，长战收益需回转。",
+      "evidenceAdjustment": -0.141
+    },
+    "KinglyPunch": {
+      "base": 4.4,
+      "duplicate": 3.5,
+      "upgradeDelta": 1.8,
+      "phase": [
+        0,
+        0.2,
+        0.3
+      ],
+      "tags": [
+        "attack",
+        "draw_engine",
+        "scaling"
+      ],
+      "note": "反复抽到永久本战增伤，快回转支持长战。",
+      "evidenceAdjustment": -0.123
+    },
+    "KnockoutBlow": {
+      "base": 3.8,
+      "duplicate": 3.5,
+      "upgradeDelta": 1.3,
+      "phase": [
+        0.6,
+        -0.6,
+        -1.2
+      ],
+      "tags": [
+        "attack",
+        "star_source",
+        "transition"
+      ],
+      "note": "击杀才获得星，Boss无小怪时不能当稳定供星。",
+      "evidenceAdjustment": -0.187
+    },
+    "KnowThyPlace": {
+      "base": 3.7,
+      "duplicate": 4.0,
+      "upgradeDelta": 1.5,
+      "phase": [
+        0,
+        0.2,
+        0.3
+      ],
+      "tags": [
+        "weak",
+        "vulnerable"
+      ],
+      "note": "零能量减益仍需星费，升级变免费需实际数据。",
+      "evidenceAdjustment": 0.123
+    },
+    "LunarBlast": {
+      "base": 4.3,
+      "duplicate": 3.5,
+      "upgradeDelta": 1.3,
+      "phase": [
+        0,
+        0.2,
+        0.3
+      ],
+      "tags": [
+        "attack",
+        "skill_payoff",
+        "multihit"
+      ],
+      "note": "先打技能再出伤，单独抽到没有基础命中次数。",
+      "evidenceAdjustment": -0.159
+    },
+    "MakeItSo": {
+      "base": 5.2,
+      "duplicate": 3.5,
+      "upgradeDelta": 1.3,
+      "phase": [
+        0,
+        0.2,
+        0.3
+      ],
+      "tags": [
+        "attack",
+        "skill_engine",
+        "scaling"
+      ],
+      "note": "三技能回手形成运转伤害，需要低费技能和抽牌。",
+      "evidenceAdjustment": 0.024
+    },
+    "ManifestAuthority": {
+      "base": 4.3,
+      "duplicate": 3.0,
+      "upgradeDelta": 1.3,
+      "phase": [
+        0,
+        0.2,
+        0.3
+      ],
+      "tags": [
+        "block",
+        "generation"
+      ],
+      "note": "格挡与随机无色生成，随机牌不视作稳定抽牌。",
+      "evidenceAdjustment": 0.216
+    },
+    "MeteorShower": {
+      "base": 6.5,
+      "duplicate": 3.0,
+      "upgradeDelta": 1.6,
+      "phase": [
+        0,
+        0.2,
+        0.3
+      ],
+      "tags": [
+        "attack",
+        "aoe",
+        "weak",
+        "vulnerable",
+        "ancient"
+      ],
+      "note": "先古群体双减益，资源成本按实际星费。",
+      "evidenceAdjustment": 0
+    },
+    "MonarchsGaze": {
+      "base": 5.3,
+      "duplicate": 4.0,
+      "upgradeDelta": 3.0,
+      "phase": [
+        0,
+        0.2,
+        0.3
+      ],
+      "tags": [
+        "strength_down",
+        "block",
+        "multihit_payoff"
+      ],
+      "note": "攻击降低敌方当回合力量，依赖多次命中，升级降费关键。",
+      "evidenceAdjustment": -0.07
+    },
+    "Monologue": {
+      "base": 3.9,
+      "duplicate": 3.5,
+      "upgradeDelta": 1.2,
+      "phase": [
+        0,
+        0.2,
+        0.3
+      ],
+      "tags": [
+        "strength",
+        "play_payoff"
+      ],
+      "note": "本回合力量增长，先多次出牌再攻击，非永久力量。",
+      "evidenceAdjustment": -0.221
+    },
+    "NeutronAegis": {
+      "base": 5.3,
+      "duplicate": 3.5,
+      "upgradeDelta": 1.7,
+      "phase": [
+        0,
+        0.2,
+        0.3
+      ],
+      "tags": [
+        "block",
+        "sustained"
+      ],
+      "note": "覆甲提供持续防御，受伤害和启动资源限制。",
+      "evidenceAdjustment": -0.11
+    },
+    "Orbit": {
+      "base": 4.5,
+      "duplicate": 4.0,
+      "upgradeDelta": 3.0,
+      "phase": [
+        0,
+        0.2,
+        0.3
+      ],
+      "tags": [
+        "energy",
+        "engine"
+      ],
+      "note": "花能量返能量；已有供能与过牌才提高循环收益。",
+      "evidenceAdjustment": 0.111
+    },
+    "PaleBlueDot": {
+      "base": 4.4,
+      "duplicate": 3.0,
+      "upgradeDelta": 2.5,
+      "phase": [
+        0,
+        0.2,
+        0.3
+      ],
+      "tags": [
+        "draw",
+        "play_payoff"
+      ],
+      "note": "每回合五张牌门槛，额外抽牌从下回合兑现。",
+      "evidenceAdjustment": 0.086
+    },
+    "Parry": {
+      "base": 5.0,
+      "duplicate": 4.0,
+      "upgradeDelta": 1.7,
+      "phase": [
+        0,
+        0.2,
+        0.3
+      ],
+      "tags": [
+        "block",
+        "sword_payoff"
+      ],
+      "note": "剑同时起盾，需要稳定取剑与出剑。",
+      "evidenceAdjustment": 0.036
+    },
+    "ParticleWall": {
+      "base": 4.1,
+      "duplicate": 4.0,
+      "upgradeDelta": 1.6,
+      "phase": [
+        0,
+        0.2,
+        0.3
+      ],
+      "tags": [
+        "block",
+        "star_block"
+      ],
+      "note": "回手防御需反复花星，绝不是无限免费盾。",
+      "evidenceAdjustment": 0.11
+    },
+    "Patter": {
+      "base": 3.3,
+      "duplicate": 3.5,
+      "upgradeDelta": 1.0,
+      "phase": [
+        0.6,
+        -0.6,
+        -1.2
+      ],
+      "tags": [
+        "block",
+        "strength",
+        "transition"
+      ],
+      "note": "基础防御附少量活力，不当作成长核心。",
+      "evidenceAdjustment": -0.098
+    },
+    "PhotonCut": {
+      "base": 3.8,
+      "duplicate": 3.0,
+      "upgradeDelta": 1.6,
+      "phase": [
+        0.6,
+        -0.6,
+        -1.2
+      ],
+      "tags": [
+        "attack",
+        "draw",
+        "topdeck",
+        "transition"
+      ],
+      "note": "抽后放顶，基础版净抽零，升级增加净过牌。",
+      "evidenceAdjustment": -0.095
+    },
+    "PillarOfCreation": {
+      "base": 4.8,
+      "duplicate": 3.5,
+      "upgradeDelta": 1.8,
+      "phase": [
+        0,
+        0.2,
+        0.3
+      ],
+      "tags": [
+        "generation_payoff",
+        "block"
+      ],
+      "note": "生成卡牌才起盾，不能把所有抽牌算生成。",
+      "evidenceAdjustment": 0.144
+    },
+    "Prophesize": {
+      "base": 5.2,
+      "duplicate": 2.8,
+      "upgradeDelta": 1.6,
+      "phase": [
+        0,
+        0.2,
+        0.3
+      ],
+      "tags": [
+        "draw"
+      ],
+      "note": "两费大抽牌，需费用与手牌容量。",
+      "evidenceAdjustment": -0.052
+    },
+    "Quasar": {
+      "base": 4.5,
+      "duplicate": 2.8,
+      "upgradeDelta": 1.2,
+      "phase": [
+        0,
+        0.2,
+        0.3
+      ],
+      "tags": [
+        "generation"
+      ],
+      "note": "发现无色牌，可选择但仍须支付目标费用。",
+      "evidenceAdjustment": 0.019
+    },
+    "Radiate": {
+      "base": 4.1,
+      "duplicate": 3.5,
+      "upgradeDelta": 1.3,
+      "phase": [
+        0,
+        0.2,
+        0.3
+      ],
+      "tags": [
+        "attack",
+        "star_payoff",
+        "aoe",
+        "conditional"
+      ],
+      "note": "仅本回合获得的星转群伤，已有存星不触发。",
+      "evidenceAdjustment": -0.118
+    },
+    "RefineBlade": {
+      "base": 4.7,
+      "duplicate": 2.6,
+      "upgradeDelta": 1.7,
+      "phase": [
+        0,
+        0.2,
+        0.3
+      ],
+      "tags": [
+        "forge",
+        "next_energy"
+      ],
+      "note": "铸造兼下回合供能，适合剑主线。",
+      "evidenceAdjustment": 0.039
+    },
+    "Reflect": {
+      "base": 4.7,
+      "duplicate": 3.0,
+      "upgradeDelta": 1.4,
+      "phase": [
+        0,
+        0.2,
+        0.3
+      ],
+      "tags": [
+        "block",
+        "reflect"
+      ],
+      "note": "格挡反伤需要敌人本回合攻击，不是稳定Boss输出。",
+      "evidenceAdjustment": 0.289
+    },
+    "Resonance": {
+      "base": 5.2,
+      "duplicate": 3.0,
+      "upgradeDelta": 2.2,
+      "phase": [
+        0,
+        0.2,
+        0.3
+      ],
+      "tags": [
+        "strength",
+        "strength_down"
+      ],
+      "note": "永久双方力量差，攻击主线多段收益更高。",
+      "evidenceAdjustment": -0.269
+    },
+    "RoyalGamble": {
+      "base": 4.7,
+      "duplicate": 4.0,
+      "upgradeDelta": 1.0,
+      "phase": [
+        0,
+        0.2,
+        0.3
+      ],
+      "tags": [
+        "star_source"
+      ],
+      "note": "一次九星但消耗且支付牌面星费，按净资源计。",
+      "evidenceAdjustment": 0.059
+    },
+    "Royalties": {
+      "base": 3.8,
+      "duplicate": 5.0,
+      "upgradeDelta": 0.8,
+      "phase": [
+        1,
+        0,
+        -4
+      ],
+      "tags": [
+        "economy"
+      ],
+      "note": "付费投资未来商店，末段无商店时大幅折扣。",
+      "evidenceAdjustment": -0.143
+    },
+    "SeekingEdge": {
+      "base": 6.0,
+      "duplicate": 5.0,
+      "upgradeDelta": 1.5,
+      "phase": [
+        0,
+        0.2,
+        0.3
+      ],
+      "tags": [
+        "forge",
+        "sword_payoff",
+        "aoe"
+      ],
+      "note": "铸造并让剑群攻；重复群攻属性没有额外价值。",
+      "evidenceAdjustment": -0.113
+    },
+    "SevenStars": {
+      "base": 6.4,
+      "duplicate": 4.0,
+      "upgradeDelta": 3.0,
+      "phase": [
+        0,
+        0.2,
+        0.3
+      ],
+      "tags": [
+        "attack",
+        "multihit",
+        "aoe",
+        "star_finisher"
+      ],
+      "note": "七段群伤但同时高星费，升级省能量不省星。",
+      "evidenceAdjustment": -0.196
+    },
+    "ShiningStrike": {
+      "base": 4.6,
+      "duplicate": 3.0,
+      "upgradeDelta": 1.2,
+      "phase": [
+        0,
+        0.2,
+        0.3
+      ],
+      "tags": [
+        "attack",
+        "star_source",
+        "topdeck"
+      ],
+      "note": "持续顶抽供星也会占用抽牌槽，避免重复。",
+      "evidenceAdjustment": -0.122
+    },
+    "SolarStrike": {
+      "base": 4.1,
+      "duplicate": 3.0,
+      "upgradeDelta": 1.5,
+      "phase": [
+        0.6,
+        -0.6,
+        -1.2
+      ],
+      "tags": [
+        "attack",
+        "star_source",
+        "transition"
+      ],
+      "note": "过渡攻击兼供星，升级供星翻倍。",
+      "evidenceAdjustment": -0.217
+    },
+    "SpectrumShift": {
+      "base": 4.8,
+      "duplicate": 4.0,
+      "upgradeDelta": 2.8,
+      "phase": [
+        0,
+        0.2,
+        0.3
+      ],
+      "tags": [
+        "generation",
+        "scaling"
+      ],
+      "note": "每回合生成随机无色，升级降低启动费。",
+      "evidenceAdjustment": 0.25
+    },
+    "SpoilsOfBattle": {
+      "base": 5.5,
+      "duplicate": 2.5,
+      "upgradeDelta": 1.2,
+      "phase": [
+        0,
+        0.2,
+        0.3
+      ],
+      "tags": [
+        "forge",
+        "draw"
+      ],
+      "note": "铸造并抽二，剑体系运转，但仍需出剑费用。",
+      "evidenceAdjustment": -0.011
+    },
+    "Stardust": {
+      "base": 5.1,
+      "duplicate": 3.4,
+      "upgradeDelta": 1.6,
+      "phase": [
+        0,
+        0.2,
+        0.3
+      ],
+      "tags": [
+        "attack",
+        "star_finisher",
+        "multihit",
+        "x"
+      ],
+      "note": "星星X随机命中，分散目标，不按能量X计算。",
+      "evidenceAdjustment": -0.01
+    },
+    "StrikeRegent": {
+      "base": 0.5,
+      "duplicate": 4.0,
+      "upgradeDelta": 0.5,
+      "phase": [
+        0,
+        0.2,
+        0.3
+      ],
+      "tags": [
+        "basic",
+        "attack"
+      ],
+      "note": "初始打击，优先精简。",
+      "evidenceAdjustment": 0
+    },
+    "SummonForth": {
+      "base": 5.7,
+      "duplicate": 2.8,
+      "upgradeDelta": 1.3,
+      "phase": [
+        0,
+        0.2,
+        0.3
+      ],
+      "tags": [
+        "forge",
+        "sword_access"
+      ],
+      "note": "从任意位置取剑并铸造，解决出剑频率。",
+      "evidenceAdjustment": -0.014
+    },
+    "Supermassive": {
+      "base": 4.9,
+      "duplicate": 3.5,
+      "upgradeDelta": 1.4,
+      "phase": [
+        0,
+        0.2,
+        0.3
+      ],
+      "tags": [
+        "attack",
+        "generation_engine",
+        "scaling"
+      ],
+      "note": "本战生成牌累计增伤，缺少生成时只有五点。",
+      "evidenceAdjustment": -0.012
+    },
+    "SwordSage": {
+      "base": 6.0,
+      "duplicate": 5.0,
+      "upgradeDelta": 3.0,
+      "phase": [
+        0,
+        0.2,
+        0.3
+      ],
+      "tags": [
+        "sword_payoff",
+        "scaling"
+      ],
+      "note": "剑重放能放大铸造，升级降费关键，需有铸造入口。",
+      "evidenceAdjustment": 0.17
+    },
+    "Terraforming": {
+      "base": 3.2,
+      "duplicate": 4.0,
+      "upgradeDelta": 1.2,
+      "phase": [
+        0.6,
+        -0.6,
+        -1.2
+      ],
+      "tags": [
+        "strength",
+        "transition"
+      ],
+      "note": "一次活力，不可当永久力量引擎。",
+      "evidenceAdjustment": -0.199
+    },
+    "TheSealedThrone": {
+      "base": 8.0,
+      "duplicate": 5.0,
+      "upgradeDelta": 3.0,
+      "phase": [
+        0,
+        0.2,
+        0.3
+      ],
+      "tags": [
+        "star_source",
+        "scaling",
+        "ancient"
+      ],
+      "note": "每打牌供星，先古资源引擎；仍需输出出口。",
+      "evidenceAdjustment": 0
+    },
+    "TheSmith": {
+      "base": 6.0,
+      "duplicate": 3.0,
+      "upgradeDelta": 1.8,
+      "phase": [
+        0,
+        0.2,
+        0.3
+      ],
+      "tags": [
+        "forge",
+        "sword_engine"
+      ],
+      "note": "单次大量铸造开启剑输出；消耗与重复需求按原生数据。",
+      "evidenceAdjustment": -0.124
+    },
+    "Tyranny": {
+      "base": 5.6,
+      "duplicate": 4.0,
+      "upgradeDelta": 1.5,
+      "phase": [
+        0,
+        0.2,
+        0.3
+      ],
+      "tags": [
+        "draw",
+        "cleanup",
+        "scaling"
+      ],
+      "note": "每回合抽一并消耗手牌，精简与循环，升级固有。",
+      "evidenceAdjustment": 0.429
+    },
+    "Venerate": {
+      "base": 2.0,
+      "duplicate": 4.0,
+      "upgradeDelta": 1.0,
+      "phase": [
+        0,
+        0.2,
+        0.3
+      ],
+      "tags": [
+        "basic",
+        "star_source"
+      ],
+      "note": "初始供星；仅在已有替代供星时删除。",
+      "evidenceAdjustment": 0
+    },
+    "VoidForm": {
+      "base": 5.1,
+      "duplicate": 5.0,
+      "upgradeDelta": 2.0,
+      "phase": [
+        0,
+        0.2,
+        0.3
+      ],
+      "tags": [
+        "cost_cheat",
+        "engine"
+      ],
+      "note": "结束当前回合换每回合前两张免费；不能无视敌方攻击。",
+      "evidenceAdjustment": 0.208
+    },
+    "WroughtInWar": {
+      "base": 4.3,
+      "duplicate": 3.0,
+      "upgradeDelta": 1.3,
+      "phase": [
+        0.6,
+        -0.6,
+        -1.2
+      ],
+      "tags": [
+        "attack",
+        "forge",
+        "transition"
+      ],
+      "note": "早期伤害兼铸造，剑入口可用而非无限抓过渡。",
+      "evidenceAdjustment": -0.153
+    }
+  }
+}

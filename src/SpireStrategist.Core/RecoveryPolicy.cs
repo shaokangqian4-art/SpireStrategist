@@ -10,7 +10,7 @@ public static class RecoveryPolicy
     {
         RecoveryEvaluation Result(string action, double? score, params string[] reasons)
         {
-            if(continuous&&state.Character=="Ironclad"&&state.PlayerCount==1&&state.MaxHp>0)
+            if(continuous&&DefectStrategy.Supported(state.Character)&&state.PlayerCount==1&&state.MaxHp>0)
             {
                 if(action=="manual")return new("recover",card.Name,score,
                     ["全局接管：无法可靠判断永久舍弃收益，保守取回原有牌并继续；不代表该牌已完成建模。",..reasons]);
@@ -20,7 +20,7 @@ public static class RecoveryPolicy
             return new(action,card.Name,score,reasons);
         }
         var p = CardCatalog.Find(card);
-        if (state.Character != "Ironclad" || state.PlayerCount != 1 || state.MaxHp <= 0 || p == null ||
+        if (!DefectStrategy.Supported(state.Character) || state.PlayerCount != 1 || state.MaxHp <= 0 || p == null ||
             CardCatalog.HasUnmodelledModification(card) ||
             state.Deck.Any(c => CardCatalog.HasUnmodelledModification(c) || CardCatalog.Find(c) == null))
             return Result("manual", null, "存在未适配或附魔/异变效果，暂不自动决定永久舍弃。");

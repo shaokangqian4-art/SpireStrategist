@@ -11,7 +11,7 @@ public sealed class StrategicValue(RunSnapshot state)
     public double Multi=>Profiles.Sum(p=>p.StrengthPayoff);
     public double Block=>Profiles.Sum(p=>p.Block);
     public double Attack=>Profiles.Sum(p=>p.Attack);
-    public int Basics=>State.Deck.Count(c=>c.ClassName is "StrikeIronclad" or "DefendIronclad");
+    public int Basics=>State.Deck.Count(c=>c.ClassName is "StrikeIronclad" or "DefendIronclad" or "StrikeDefect" or "DefendDefect" or "StrikeSilent" or "DefendSilent" or "StrikeRegent" or "DefendRegent" or "StrikeNecrobinder" or "DefendNecrobinder");
     public int Powers=>State.Deck.Count(c=>c.Type=="Power");
     public double Ratio=>State.Hp/Math.Max(1d,State.MaxHp);
     public double Remaining=>State.Map is {} m?Math.Max(1,m.BossRow-m.CurrentRow)+Math.Max(0,m.TotalActs-State.Act)*Math.Max(1,m.Rows):18;
@@ -25,6 +25,9 @@ public sealed class StrategicValue(RunSnapshot state)
     public double Upgrade(CardSnapshot c)=>CardMechanics.Upgrade(State,c)*.65;
     public double Remove(CardSnapshot c)
     {
+        if(HeroPolicy.Supports(State.Character))return HeroStrategy.Remove(State,c);
+        if(State.Character=="Silent")return SilentStrategy.Remove(State,c);
+        if(State.Character=="Defect")return DefectStrategy.Remove(State,c);
         if(c.ClassName=="AscendersBane"||c.Keywords.Contains("Eternal"))return -100;
         if(c.Type=="Curse" && c.ClassName=="Guilty")
             return 4*Math.Clamp((double)c.Variables.GetValueOrDefault("Combats",5)/5,0,1);
@@ -32,7 +35,7 @@ public sealed class StrategicValue(RunSnapshot state)
         if(c.Type=="Status")return 10;
         var p=CardCatalog.Find(c);if(p==null)return -12;
         if(c.Modified)return -4;
-        var basic=c.ClassName is "StrikeIronclad" or "DefendIronclad";
+        var basic=c.ClassName is "StrikeIronclad" or "DefendIronclad" or "StrikeDefect" or "DefendDefect" or "StrikeSilent" or "DefendSilent" or "StrikeRegent" or "DefendRegent" or "StrikeNecrobinder" or "DefendNecrobinder";
         var value=basic?8+Math.Min(4,(State.Deck.Length-10)*.4)-c.UpgradeLevel*2:Math.Clamp(-Add(c),-16,5);
         if(c.Type=="Attack"&&Attack-p.Attack<2)value-=12;
         if(c.ClassName=="DefendIronclad"&&Block-p.Block<2)value-=10;
@@ -49,25 +52,41 @@ public sealed class StrategicValue(RunSnapshot state)
     public double TransformBest(int n)=>State.Deck.Select(Transform).OrderDescending().Take(n).Sum();
     public double Potion(int n)=>Has("SOZU")?0:Math.Min(n,State.PotionSlots.Count(p=>p==null))*5;
     public double Energy=>13+Math.Min(8,State.Deck.Count(c=>c.Cost>=2)*1.2)-Math.Max(0,State.Energy-3)*3;
-    public double Curse(string name="")=>name is "Guilt"?5:name is "Greed" or "CurseOfTheBell"?19:12;
+    public double Curse(string name="")=>(name is "Guilt"?5:name is "Greed" or "CurseOfTheBell"?19:12)
+        +(State.Character=="Silent"&&!SilentMechanics.CanCleanJunk(State)?3:0);
+    public double EnthralledCost()
+    {
+        // Enthralled blocks normal card plays while in hand and is Eternal. Hand
+        // exhaust cards cannot be played to clear it; Compact only handles statuses.
+        // Toasty Mittens selects a card automatically before normal plays instead.
+        if(Has("TOASTY_MITTENS"))return 9;
+        return 22+Math.Max(0,24-State.Deck.Length)*.9+Math.Min(6,Draw*1.5)+(Has("RUNIC_PYRAMID")?8:0);
+    }
+    private double BlockEnchant(CardSnapshot c,double amount)
+    {
+        var once=c.Type=="Power"||c.Keywords.Contains("Exhaust")||c.Keywords.Contains("Ethereal");
+        var basic=c.ClassName is "StrikeIronclad" or "DefendIronclad" or "StrikeDefect" or "DefendDefect" or "StrikeSilent" or "DefendSilent" or "StrikeRegent" or "DefendRegent" or "StrikeNecrobinder" or "DefendNecrobinder";
+        // Compare expected uses of the added block, not the original block amount.
+        // Both event previews and the actual target selector call this evaluator.
+        return amount*.9*(once?.65:1.25)*(c.Cost<=1?1.2:.85)*(basic?.65:1)
+            +(c.Cost==0&&!c.CostsX?.35:0)+Math.Clamp(Add(c),0,10)*.1;
+    }
     public double Enchant(CardSnapshot c,string name,double amount=1)
     {
         var p=CardCatalog.Find(c);if(p==null||c.Modified)return -10;
+        if(c.Type is "Curse" or "Status"||c.Keywords.Contains("Unplayable"))return -10;
+        if(EnchantmentValue.Evaluate(this,c,name,amount,p) is {} modeled)return modeled;
         return name switch
         {
-            "SHARP" or "VIGOROUS" or "INSTINCT" => c.Type=="Attack"?(name=="INSTINCT"?p.Attack*9:amount*.8)*(1+Math.Min(2,p.StrengthPayoff)):-10,
-            "CORRUPTED" => c.Type=="Attack"?p.Attack*5-HpCost(2)*2:-10,
             // Adroit adds block whenever the card is played, including attacks without
             // native block. Favor inexpensive reusable useful cards over soon-removed basics.
-            "ADROIT" => amount*.9*(c.Type=="Power"||c.Keywords.Contains("Exhaust")?.65:1.25)*
-                (c.Cost<=1?1.2:.85)*(c.ClassName is "StrikeIronclad" or "DefendIronclad"?.65:1)+Math.Clamp(Add(c),0,10)*.1,
-            "NIMBLE" or "GOOPY" => p.Block>0?amount*.9+(name=="GOOPY"?Exhaust:0):-10,
-            "SWIFT" => amount*3*(c.Cost<=1?1.2:.8),
-            "SOWN" => 7+Math.Max(0,c.Cost-1)*2,
+            "ADROIT" => BlockEnchant(c,amount),
+            "NIMBLE" => p.Block>0?BlockEnchant(c,amount):-10,
+            // Goopy changes the card to Exhaust and grows across combats; it is
+            // deliberately not treated as ordinary repeatable added block.
+            "GOOPY" => p.Block>0?amount*.9+Exhaust:-10,
             "SOULS_POWER" => c.Keywords.Contains("Exhaust")?Math.Max(0,Add(c))*.8-Exhaust:-10,
             "SLITHER" => c.CostsX?-15:(c.Cost-1.5)*6,
-            "IMBUED" => c.Type=="Skill"?Math.Max(0,Add(c))+c.Cost*3: -10,
-            "STEADY" => Math.Max(0,Add(c))*.4+(c.Cost>=2?3:1),
             "SPIRAL" => Math.Max(1,p.Attack*5+p.Block*4),
             "CLONE" => Math.Max(-5,Add(c)-2)*Math.Min(2,Horizon),
             "PERFECT_FIT" => c.Type=="Power"||c.Keywords.Contains("Exhaust")||c.Keywords.Contains("Ethereal") ? 0 : Math.Max(-5,Add(c)-2),

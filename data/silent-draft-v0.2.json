@@ -1,0 +1,1545 @@
+{
+  "version": "silent-draft-0.2",
+  "gameVersion": "0.111.0",
+  "scope": "Mechanism-based Silent advice, shared global takeover and bounded counterfactual foresight; not win-rate calibrated.",
+  "statistics": "silent-community-2026-11-01.json",
+  "excludedMultiplayer": [
+    "BladeSymphony",
+    "Concoct",
+    "Fade",
+    "Flanking",
+    "Sneaky"
+  ],
+  "coefficients": {
+    "cardTax": 2.5,
+    "positiveSynergyCap": 6,
+    "duplicateQuadratic": 0.45
+  },
+  "cards": {
+    "Abrasive": {
+      "base": 5.8,
+      "phase": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "duplicate": 2.7,
+      "upgradeDelta": 1.0,
+      "tags": [
+        "sly",
+        "dex",
+        "thorns"
+      ],
+      "note": "奇巧提供弃牌免费启动；荆棘依赖敌方攻击频率，不能当主动输出核心。",
+      "confidence": "initial-mechanism-prior-not-run-validated",
+      "evidenceAdjustment": 0.26
+    },
+    "Accelerant": {
+      "base": 3.6,
+      "phase": [
+        0.0,
+        0.7,
+        0.7
+      ],
+      "duplicate": 2.8,
+      "upgradeDelta": 2.0,
+      "tags": [
+        "poison_payoff",
+        "scaling"
+      ],
+      "note": "已有稳定施毒时的伤害放大器；每次触发都会减一层毒，不是无损乘法。",
+      "confidence": "initial-mechanism-prior-not-run-validated",
+      "evidenceAdjustment": 0.17
+    },
+    "Accuracy": {
+      "base": 3.4,
+      "phase": [
+        0.0,
+        0.5,
+        0.5
+      ],
+      "duplicate": 2.2,
+      "upgradeDelta": 1.6,
+      "tags": [
+        "shiv_payoff",
+        "scaling"
+      ],
+      "note": "需要实际产刀；多份加伤可叠加，但产刀量不增加时收益递减。",
+      "confidence": "initial-mechanism-prior-not-run-validated",
+      "evidenceAdjustment": 0.344
+    },
+    "Acrobatics": {
+      "base": 5.4,
+      "phase": [
+        0.0,
+        0.5,
+        0.5
+      ],
+      "duplicate": 1.2,
+      "upgradeDelta": 1.5,
+      "tags": [
+        "draw",
+        "discard"
+      ],
+      "note": "抽三弃一，算上自身净手牌仅加一；弃牌触发奇巧，不能同时当三个净抽牌。",
+      "confidence": "initial-mechanism-prior-not-run-validated",
+      "evidenceAdjustment": 0.166
+    },
+    "Adrenaline": {
+      "base": 7.8,
+      "phase": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "duplicate": 0.7,
+      "upgradeDelta": 1.5,
+      "tags": [
+        "draw",
+        "energy",
+        "exhaust"
+      ],
+      "note": "零费抽二供能且消耗，启动和爆发均强；仍比较更紧缺的输出核心。",
+      "confidence": "initial-mechanism-prior-not-run-validated",
+      "evidenceAdjustment": 0.602
+    },
+    "Afterimage": {
+      "base": 7.2,
+      "phase": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "duplicate": 2.2,
+      "upgradeDelta": 0.8,
+      "tags": [
+        "play_block",
+        "scaling"
+      ],
+      "note": "多次出牌转格挡，适配小刀及弃牌运转；并不解决输出缺口。",
+      "confidence": "initial-mechanism-prior-not-run-validated",
+      "evidenceAdjustment": 0.602
+    },
+    "Anticipate": {
+      "base": 1.6,
+      "phase": [
+        0.0,
+        -0.3,
+        -0.5
+      ],
+      "duplicate": 3.0,
+      "upgradeDelta": 1.2,
+      "tags": [
+        "temp_dex"
+      ],
+      "note": "仅本回合敏捷；需要同回合多张格挡牌，不计作永久成长。",
+      "confidence": "initial-mechanism-prior-not-run-validated",
+      "evidenceAdjustment": -0.165
+    },
+    "Assassinate": {
+      "base": 4.6,
+      "phase": [
+        1.0,
+        0.0,
+        -0.6
+      ],
+      "duplicate": 3.0,
+      "upgradeDelta": 1.2,
+      "tags": [
+        "attack",
+        "weak_open",
+        "exhaust"
+      ],
+      "note": "固有零费伤害易伤，重视首轮，第二份挤占起手；易伤不增幅毒。",
+      "confidence": "initial-mechanism-prior-not-run-validated",
+      "evidenceAdjustment": -0.004
+    },
+    "Backflip": {
+      "base": 5.4,
+      "phase": [
+        0.0,
+        0.3,
+        0.3
+      ],
+      "duplicate": 1.3,
+      "upgradeDelta": 0.8,
+      "tags": [
+        "draw",
+        "block"
+      ],
+      "note": "五格挡抽二，是通用运转兼防御；不能用不断补后空翻代替输出主线。",
+      "confidence": "initial-mechanism-prior-not-run-validated",
+      "evidenceAdjustment": 0.538
+    },
+    "Backstab": {
+      "base": 3.4,
+      "phase": [
+        1.4,
+        0.0,
+        -1.0
+      ],
+      "duplicate": 3.5,
+      "upgradeDelta": 0.7,
+      "tags": [
+        "attack",
+        "opening",
+        "exhaust"
+      ],
+      "note": "零费固有即时伤害，前期止损；不把首轮一次攻击当长战成长。",
+      "confidence": "initial-mechanism-prior-not-run-validated",
+      "evidenceAdjustment": 0.013
+    },
+    "BladeOfInk": {
+      "base": 6.5,
+      "phase": [
+        0.5,
+        0.4,
+        0.2
+      ],
+      "duplicate": 1.8,
+      "upgradeDelta": 1.8,
+      "tags": [
+        "shiv_source",
+        "weak",
+        "attack"
+      ],
+      "note": "可重复产墨影小刀，每把施加一虚弱；本机墨影不是抽牌附魔。",
+      "confidence": "initial-mechanism-prior-not-run-validated",
+      "evidenceAdjustment": 0.351
+    },
+    "BladeDance": {
+      "base": 4.5,
+      "phase": [
+        0.8,
+        0.0,
+        -0.5
+      ],
+      "duplicate": 2.0,
+      "upgradeDelta": 1.4,
+      "tags": [
+        "shiv_source",
+        "attack",
+        "exhaust"
+      ],
+      "note": "一费三把小刀，但本体消耗；有刀刃陷阱可回放小刀，不算可无限重复的产刀。",
+      "confidence": "initial-mechanism-prior-not-run-validated",
+      "evidenceAdjustment": 0.258
+    },
+    "Blur": {
+      "base": 4.1,
+      "phase": [
+        0.0,
+        0.5,
+        0.6
+      ],
+      "duplicate": 2.0,
+      "upgradeDelta": 0.8,
+      "tags": [
+        "block",
+        "carry_block"
+      ],
+      "note": "保留现有格挡到下一回合；有格挡盈余才值钱，不凭空生成壁垒。",
+      "confidence": "initial-mechanism-prior-not-run-validated",
+      "evidenceAdjustment": 0.22
+    },
+    "BouncingFlask": {
+      "base": 3.8,
+      "phase": [
+        0.5,
+        0.0,
+        0.0
+      ],
+      "duplicate": 2.2,
+      "upgradeDelta": 1.1,
+      "tags": [
+        "poison_seed",
+        "poison",
+        "attack"
+      ],
+      "note": "单体九层毒，多敌分散；毒伤延迟且会衰减，不能算立即九伤三次。",
+      "confidence": "initial-mechanism-prior-not-run-validated",
+      "evidenceAdjustment": 0.03
+    },
+    "BubbleBubble": {
+      "base": 3.6,
+      "phase": [
+        0.0,
+        0.5,
+        0.5
+      ],
+      "duplicate": 2.0,
+      "upgradeDelta": 1.2,
+      "tags": [
+        "poison_conditional",
+        "poison"
+      ],
+      "note": "先有中毒才施加九层，本身不是独立毒启动器。",
+      "confidence": "initial-mechanism-prior-not-run-validated",
+      "evidenceAdjustment": 0.126
+    },
+    "BulletTime": {
+      "base": 3.6,
+      "phase": [
+        -0.5,
+        0.5,
+        0.8
+      ],
+      "duplicate": 4.0,
+      "upgradeDelta": 2.4,
+      "tags": [
+        "cost_cheat"
+      ],
+      "note": "需要大手牌和高费出口；本回合禁抽，惩罚依赖继续抽牌的运转链。",
+      "confidence": "initial-mechanism-prior-not-run-validated",
+      "evidenceAdjustment": -0.095
+    },
+    "Burst": {
+      "base": 4.5,
+      "phase": [
+        0.0,
+        0.5,
+        0.5
+      ],
+      "duplicate": 3.0,
+      "upgradeDelta": 1.8,
+      "tags": [
+        "repeat_skill"
+      ],
+      "note": "重放的是技能；结合实际产刀、施毒、过牌与防御目标，不能直接重放能力。",
+      "confidence": "initial-mechanism-prior-not-run-validated",
+      "evidenceAdjustment": 0.013
+    },
+    "CalculatedGamble": {
+      "base": 5.4,
+      "phase": [
+        0.0,
+        0.7,
+        0.7
+      ],
+      "duplicate": 1.6,
+      "upgradeDelta": 1.2,
+      "tags": [
+        "draw",
+        "discard",
+        "refresh",
+        "exhaust"
+      ],
+      "note": "弃全手再抽等量，刷新不是永久烧牌；本版本升级增加保留，仍然消耗，不能按旧版无限循环建模。",
+      "confidence": "initial-mechanism-prior-not-run-validated",
+      "evidenceAdjustment": 0.351
+    },
+    "CloakAndDagger": {
+      "base": 4.5,
+      "phase": [
+        0.6,
+        0.0,
+        0.0
+      ],
+      "duplicate": 2.0,
+      "upgradeDelta": 1.4,
+      "tags": [
+        "block",
+        "shiv_source",
+        "attack"
+      ],
+      "note": "格挡附带小刀，升级加一刀；小刀加伤与敏捷均可受益。",
+      "confidence": "initial-mechanism-prior-not-run-validated",
+      "evidenceAdjustment": 0.316
+    },
+    "CorrosiveWave": {
+      "base": 3.2,
+      "phase": [
+        -0.6,
+        0.5,
+        1.0
+      ],
+      "duplicate": 3.0,
+      "upgradeDelta": 1.6,
+      "tags": [
+        "poison_draw",
+        "poison_payoff"
+      ],
+      "note": "只持续本回合，打出后抽牌才施毒；没有同回合过牌时不能作为稳定毒源。",
+      "confidence": "initial-mechanism-prior-not-run-validated",
+      "evidenceAdjustment": -0.083
+    },
+    "DaggerSpray": {
+      "base": 3.1,
+      "phase": [
+        1.2,
+        -0.3,
+        -1.0
+      ],
+      "duplicate": 3.0,
+      "upgradeDelta": 1.1,
+      "tags": [
+        "attack",
+        "aoe",
+        "multihit",
+        "transition"
+      ],
+      "note": "前期补群攻，多段吃力量；已补足即时输出后明显递减。",
+      "confidence": "initial-mechanism-prior-not-run-validated",
+      "evidenceAdjustment": -0.135
+    },
+    "DaggerThrow": {
+      "base": 3.4,
+      "phase": [
+        0.8,
+        -0.3,
+        -0.8
+      ],
+      "duplicate": 2.6,
+      "upgradeDelta": 0.7,
+      "tags": [
+        "attack",
+        "discard",
+        "transition"
+      ],
+      "note": "抽一弃一含自身净少一牌；可触发奇巧，不能当稳定正过牌核心。",
+      "confidence": "initial-mechanism-prior-not-run-validated",
+      "evidenceAdjustment": -0.159
+    },
+    "Dash": {
+      "base": 3.8,
+      "phase": [
+        1.0,
+        -0.4,
+        -0.8
+      ],
+      "duplicate": 3.0,
+      "upgradeDelta": 1.0,
+      "tags": [
+        "attack",
+        "block",
+        "transition"
+      ],
+      "note": "两费攻防一体帮助过渡；仍需为后续输出增长留空间。",
+      "confidence": "initial-mechanism-prior-not-run-validated",
+      "evidenceAdjustment": -0.044
+    },
+    "DeadlyPoison": {
+      "base": 3.1,
+      "phase": [
+        0.5,
+        0.0,
+        -0.5
+      ],
+      "duplicate": 2.5,
+      "upgradeDelta": 0.9,
+      "tags": [
+        "poison_seed",
+        "poison",
+        "transition"
+      ],
+      "note": "一费施毒入口，有触媒或持续补毒时更好；单张并不代表毒流成型。",
+      "confidence": "initial-mechanism-prior-not-run-validated",
+      "evidenceAdjustment": 0.016
+    },
+    "DefendSilent": {
+      "base": -5.0,
+      "phase": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "duplicate": 3.0,
+      "upgradeDelta": 0.3,
+      "tags": [
+        "basic",
+        "block"
+      ],
+      "note": "基础防御不是奖励抓取目标；保留与删牌必须另行评估。",
+      "confidence": "initial-mechanism-prior-not-run-validated",
+      "evidenceAdjustment": 0.0
+    },
+    "Deflect": {
+      "base": 3.0,
+      "phase": [
+        0.0,
+        0.1,
+        0.2
+      ],
+      "duplicate": 2.0,
+      "upgradeDelta": 0.9,
+      "tags": [
+        "block",
+        "cheap"
+      ],
+      "note": "零费格挡需要过牌或敏捷支持；抽牌占位仍有成本。",
+      "confidence": "initial-mechanism-prior-not-run-validated",
+      "evidenceAdjustment": 0.232
+    },
+    "DodgeAndRoll": {
+      "base": 3.0,
+      "phase": [
+        0.3,
+        0.0,
+        0.0
+      ],
+      "duplicate": 2.6,
+      "upgradeDelta": 1.2,
+      "tags": [
+        "block",
+        "dex_payoff"
+      ],
+      "note": "两回合格挡两次吃敏捷；下一回合价值打折，不当本回合八格挡。",
+      "confidence": "initial-mechanism-prior-not-run-validated",
+      "evidenceAdjustment": 0.177
+    },
+    "EchoingSlash": {
+      "base": 3.9,
+      "phase": [
+        1.4,
+        0.0,
+        -0.8
+      ],
+      "duplicate": 3.0,
+      "upgradeDelta": 1.0,
+      "tags": [
+        "attack",
+        "aoe",
+        "transition"
+      ],
+      "note": "一费群攻，击杀后再触发；有斩杀目标才增加连锁收益。",
+      "confidence": "initial-mechanism-prior-not-run-validated",
+      "evidenceAdjustment": -0.039
+    },
+    "Envenom": {
+      "base": 3.7,
+      "phase": [
+        -0.4,
+        0.5,
+        0.6
+      ],
+      "duplicate": 3.0,
+      "upgradeDelta": 1.8,
+      "tags": [
+        "hit_poison",
+        "scaling"
+      ],
+      "note": "每次未被格挡的攻击才施毒；多刀/多段可接毒，不能硬拆成互斥流派。",
+      "confidence": "initial-mechanism-prior-not-run-validated",
+      "evidenceAdjustment": -0.057
+    },
+    "EscapePlan": {
+      "base": 4.5,
+      "phase": [
+        0.0,
+        0.2,
+        0.2
+      ],
+      "duplicate": 1.8,
+      "upgradeDelta": 0.6,
+      "tags": [
+        "draw",
+        "cheap",
+        "conditional_block"
+      ],
+      "note": "抽一自替换，抽到技能才给格挡；技能密度和出牌惩罚都影响实际价值。",
+      "confidence": "initial-mechanism-prior-not-run-validated",
+      "evidenceAdjustment": 0.244
+    },
+    "Expertise": {
+      "base": 4.0,
+      "phase": [
+        0.0,
+        0.2,
+        0.2
+      ],
+      "duplicate": 2.4,
+      "upgradeDelta": 1.4,
+      "tags": [
+        "draw",
+        "retain"
+      ],
+      "note": "本版本抽二并给这些牌当回合保留，不是旧版抽至六张。",
+      "confidence": "initial-mechanism-prior-not-run-validated",
+      "evidenceAdjustment": -0.057
+    },
+    "Expose": {
+      "base": 4.9,
+      "phase": [
+        0.2,
+        0.2,
+        0.2
+      ],
+      "duplicate": 3.0,
+      "upgradeDelta": 0.7,
+      "tags": [
+        "vulnerable",
+        "exhaust",
+        "strip_artifact"
+      ],
+      "note": "清格挡人工制品并施加易伤；攻击流增伤，毒系主要受益于清人工制品。",
+      "confidence": "initial-mechanism-prior-not-run-validated",
+      "evidenceAdjustment": 0.328
+    },
+    "FanOfKnives": {
+      "base": 5.1,
+      "phase": [
+        0.5,
+        0.5,
+        0.2
+      ],
+      "duplicate": 3.5,
+      "upgradeDelta": 1.0,
+      "tags": [
+        "shiv_source",
+        "shiv_payoff",
+        "aoe",
+        "attack"
+      ],
+      "note": "能力启动自带四把刀，把所有小刀改为群攻；不要求事先已有产刀才能入选。",
+      "confidence": "initial-mechanism-prior-not-run-validated",
+      "evidenceAdjustment": 0.026
+    },
+    "Finisher": {
+      "base": 2.8,
+      "phase": [
+        -0.3,
+        0.4,
+        0.6
+      ],
+      "duplicate": 3.0,
+      "upgradeDelta": 1.2,
+      "tags": [
+        "attack",
+        "attack_payoff",
+        "multihit"
+      ],
+      "note": "需要本回合先打多次攻击；有产刀才是有效终端，不能裸当多段高伤。",
+      "confidence": "initial-mechanism-prior-not-run-validated",
+      "evidenceAdjustment": -0.067
+    },
+    "Flechettes": {
+      "base": 3.0,
+      "phase": [
+        0.4,
+        0.0,
+        -0.2
+      ],
+      "duplicate": 3.0,
+      "upgradeDelta": 1.0,
+      "tags": [
+        "attack",
+        "skill_payoff",
+        "multihit"
+      ],
+      "note": "按当前手牌技能数打多段；技能保留和大手牌支持，不按整个牌组技能数计伤害。",
+      "confidence": "initial-mechanism-prior-not-run-validated",
+      "evidenceAdjustment": -0.15
+    },
+    "FlickFlack": {
+      "base": 2.5,
+      "phase": [
+        0.8,
+        -0.4,
+        -0.8
+      ],
+      "duplicate": 3.0,
+      "upgradeDelta": 0.7,
+      "tags": [
+        "attack",
+        "aoe",
+        "sly",
+        "transition"
+      ],
+      "note": "被主动弃置时奇巧免费群攻；缺弃牌时只是低数值过渡。",
+      "confidence": "initial-mechanism-prior-not-run-validated",
+      "evidenceAdjustment": -0.226
+    },
+    "Sidestep": {
+      "base": 2.8,
+      "phase": [
+        0.0,
+        0.3,
+        0.2
+      ],
+      "duplicate": 3.0,
+      "upgradeDelta": 1.2,
+      "tags": [
+        "next_energy"
+      ],
+      "note": "供能发生在下一回合，不修复当前启动缺口；评估实际高费出口。",
+      "confidence": "initial-mechanism-prior-not-run-validated",
+      "evidenceAdjustment": 0.017
+    },
+    "Footwork": {
+      "base": 5.9,
+      "phase": [
+        0.2,
+        0.2,
+        0.2
+      ],
+      "duplicate": 2.0,
+      "upgradeDelta": 1.5,
+      "tags": [
+        "dex",
+        "scaling"
+      ],
+      "note": "稳定敏捷成长，普通格挡牌受益；不增幅余像的固定格挡，不是输出核心。",
+      "confidence": "initial-mechanism-prior-not-run-validated",
+      "evidenceAdjustment": 0.589
+    },
+    "GrandFinale": {
+      "base": 1.4,
+      "phase": [
+        -0.8,
+        0.0,
+        0.0
+      ],
+      "duplicate": 5.0,
+      "upgradeDelta": 0.6,
+      "tags": [
+        "attack",
+        "aoe",
+        "empty_draw"
+      ],
+      "note": "必须抽牌堆为空；精简、保留、可控过牌仅提高可行性，不宣称必定无限。",
+      "confidence": "initial-mechanism-prior-not-run-validated",
+      "evidenceAdjustment": -0.08
+    },
+    "HandTrick": {
+      "base": 3.3,
+      "phase": [
+        0.3,
+        0.2,
+        0.0
+      ],
+      "duplicate": 2.4,
+      "upgradeDelta": 0.8,
+      "tags": [
+        "block",
+        "grant_sly"
+      ],
+      "note": "当回合给一张技能奇巧，需要之后主动弃置才能兑现。",
+      "confidence": "initial-mechanism-prior-not-run-validated",
+      "evidenceAdjustment": -0.049
+    },
+    "Haze": {
+      "base": 3.8,
+      "phase": [
+        0.3,
+        0.3,
+        0.0
+      ],
+      "duplicate": 2.5,
+      "upgradeDelta": 1.5,
+      "tags": [
+        "poison_seed",
+        "poison",
+        "weak",
+        "aoe"
+      ],
+      "note": "群体施毒及虚弱，二费有启动负担；升级延长虚弱，不能只按毒数判断。",
+      "confidence": "initial-mechanism-prior-not-run-validated",
+      "evidenceAdjustment": -0.004
+    },
+    "HiddenDaggers": {
+      "base": 4.7,
+      "phase": [
+        0.5,
+        0.5,
+        0.2
+      ],
+      "duplicate": 1.8,
+      "upgradeDelta": 1.1,
+      "tags": [
+        "discard",
+        "shiv_source",
+        "attack",
+        "cheap"
+      ],
+      "note": "零费弃二产二刀，弃牌与产刀的桥梁；没有奇巧时有实际手牌损耗。",
+      "confidence": "initial-mechanism-prior-not-run-validated",
+      "evidenceAdjustment": 0.39
+    },
+    "InfiniteBlades": {
+      "base": 3.6,
+      "phase": [
+        0.0,
+        0.3,
+        0.2
+      ],
+      "duplicate": 2.5,
+      "upgradeDelta": 0.3,
+      "tags": [
+        "shiv_source",
+        "slow",
+        "scaling"
+      ],
+      "note": "每回合仅一刀，长战稳定产刀；不是本回合爆发，固有升级会占起手。",
+      "confidence": "initial-mechanism-prior-not-run-validated",
+      "evidenceAdjustment": 0.292
+    },
+    "KnifeTrap": {
+      "base": 4.7,
+      "phase": [
+        0.0,
+        0.7,
+        1.0
+      ],
+      "duplicate": 3.0,
+      "upgradeDelta": 1.8,
+      "tags": [
+        "shiv_payoff",
+        "finisher",
+        "scaling"
+      ],
+      "note": "回放已消耗小刀，是刀系长战输出；需先产刀并打出，不能空场启动。",
+      "confidence": "initial-mechanism-prior-not-run-validated",
+      "evidenceAdjustment": 0.402
+    },
+    "LeadingStrike": {
+      "base": 4.0,
+      "phase": [
+        0.8,
+        0.0,
+        -0.3
+      ],
+      "duplicate": 2.3,
+      "upgradeDelta": 0.7,
+      "tags": [
+        "attack",
+        "shiv_source",
+        "transition"
+      ],
+      "note": "低本体伤害加两刀，能享受刀增伤；补足产刀后不靠多抓堆牌。",
+      "confidence": "initial-mechanism-prior-not-run-validated",
+      "evidenceAdjustment": 0.371
+    },
+    "LegSweep": {
+      "base": 5.4,
+      "phase": [
+        0.2,
+        0.3,
+        0.3
+      ],
+      "duplicate": 2.0,
+      "upgradeDelta": 1.1,
+      "tags": [
+        "block",
+        "weak"
+      ],
+      "note": "大量格挡和持续虚弱兼顾；需要二费，不解决长战输出。",
+      "confidence": "initial-mechanism-prior-not-run-validated",
+      "evidenceAdjustment": 0.34
+    },
+    "Malaise": {
+      "base": 6.2,
+      "phase": [
+        0.0,
+        0.3,
+        0.3
+      ],
+      "duplicate": 2.2,
+      "upgradeDelta": 1.7,
+      "tags": [
+        "weak",
+        "strength_down",
+        "exhaust"
+      ],
+      "note": "X费降力量及虚弱，强防御功能；按多段敌人/费用看价值，不计为自身力量成长。",
+      "confidence": "initial-mechanism-prior-not-run-validated",
+      "evidenceAdjustment": 0.238
+    },
+    "MasterPlanner": {
+      "base": 3.0,
+      "phase": [
+        0.0,
+        0.5,
+        0.8
+      ],
+      "duplicate": 6.0,
+      "upgradeDelta": 1.8,
+      "tags": [
+        "grant_sly",
+        "engine"
+      ],
+      "note": "技能先正常打过才获奇巧；单层能力不叠加，需要弃牌与可回转技能，不能当立即全手免费。",
+      "confidence": "initial-mechanism-prior-not-run-validated",
+      "evidenceAdjustment": -0.277
+    },
+    "MementoMori": {
+      "base": 2.7,
+      "phase": [
+        0.4,
+        0.2,
+        0.0
+      ],
+      "duplicate": 3.0,
+      "upgradeDelta": 1.1,
+      "tags": [
+        "attack",
+        "discard_damage"
+      ],
+      "note": "本回合弃牌量转伤害，弃全手仍需重抽或保留此牌再打；不是跨回合成长。",
+      "confidence": "initial-mechanism-prior-not-run-validated",
+      "evidenceAdjustment": -0.185
+    },
+    "Mirage": {
+      "base": 2.8,
+      "phase": [
+        -0.3,
+        0.5,
+        0.7
+      ],
+      "duplicate": 2.5,
+      "upgradeDelta": 1.8,
+      "tags": [
+        "poison_block",
+        "block_payoff",
+        "exhaust"
+      ],
+      "note": "格挡依赖敌方已叠的毒；零毒时无收益，升级去消耗支持持续防御。",
+      "confidence": "initial-mechanism-prior-not-run-validated",
+      "evidenceAdjustment": 0.01
+    },
+    "Murder": {
+      "base": 3.0,
+      "phase": [
+        -0.6,
+        0.4,
+        1.0
+      ],
+      "duplicate": 4.0,
+      "upgradeDelta": 2.1,
+      "tags": [
+        "attack",
+        "draw_damage",
+        "finisher",
+        "scaling"
+      ],
+      "note": "战斗累计抽牌提供伤害，初始很低；稳定过牌/保留才能成为有效长战终端。",
+      "confidence": "initial-mechanism-prior-not-run-validated",
+      "evidenceAdjustment": -0.197
+    },
+    "Neutralize": {
+      "base": -2.0,
+      "phase": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "duplicate": 3.0,
+      "upgradeDelta": 1.0,
+      "tags": [
+        "basic",
+        "attack",
+        "weak"
+      ],
+      "note": "零费虚弱基础牌，其已有保留价值不等于值得再抓一张。",
+      "confidence": "initial-mechanism-prior-not-run-validated",
+      "evidenceAdjustment": 0.0
+    },
+    "Nightmare": {
+      "base": 3.0,
+      "phase": [
+        -0.5,
+        0.4,
+        0.8
+      ],
+      "duplicate": 4.0,
+      "upgradeDelta": 1.8,
+      "tags": [
+        "copy",
+        "delayed"
+      ],
+      "note": "复制目标下回合到手，要支付目标费用；强目标、防守窗口和供能缺一不可。",
+      "confidence": "initial-mechanism-prior-not-run-validated",
+      "evidenceAdjustment": -0.119
+    },
+    "NoxiousFumes": {
+      "base": 4.5,
+      "phase": [
+        0.3,
+        0.5,
+        0.4
+      ],
+      "duplicate": 2.0,
+      "upgradeDelta": 1.2,
+      "tags": [
+        "poison_seed",
+        "poison",
+        "slow",
+        "scaling",
+        "aoe"
+      ],
+      "note": "持续全体施毒，具备独立长战增长并可供触媒；启动慢，仍需即时伤害。",
+      "confidence": "initial-mechanism-prior-not-run-validated",
+      "evidenceAdjustment": 0.317
+    },
+    "Outbreak": {
+      "base": 5.0,
+      "phase": [
+        -0.1,
+        0.7,
+        0.8
+      ],
+      "duplicate": 3.0,
+      "upgradeDelta": 1.3,
+      "tags": [
+        "poison_seed",
+        "poison",
+        "finisher",
+        "aoe"
+      ],
+      "note": "自带全体九毒并立刻触发，可从零毒启动；有触媒/既有毒进一步受益，三费需预算。",
+      "confidence": "initial-mechanism-prior-not-run-validated",
+      "evidenceAdjustment": 0.083
+    },
+    "PhantomBlades": {
+      "base": 3.7,
+      "phase": [
+        0.0,
+        0.4,
+        0.4
+      ],
+      "duplicate": 4.5,
+      "upgradeDelta": 0.8,
+      "tags": [
+        "shiv_payoff",
+        "retain"
+      ],
+      "note": "所有刀保留，每回合仅第一刀加伤；不按每把刀都加九计算。",
+      "confidence": "initial-mechanism-prior-not-run-validated",
+      "evidenceAdjustment": 0.222
+    },
+    "PiercingWail": {
+      "base": 5.0,
+      "phase": [
+        0.3,
+        0.3,
+        0.3
+      ],
+      "duplicate": 1.7,
+      "upgradeDelta": 0.7,
+      "tags": [
+        "strength_down",
+        "exhaust"
+      ],
+      "note": "全体当回合降力量，对多段强；不能永久封锁敌人，也不替代所有持续防守。",
+      "confidence": "initial-mechanism-prior-not-run-validated",
+      "evidenceAdjustment": 0.35
+    },
+    "Pinpoint": {
+      "base": 2.7,
+      "phase": [
+        0.4,
+        0.0,
+        -0.3
+      ],
+      "duplicate": 3.0,
+      "upgradeDelta": 0.8,
+      "tags": [
+        "attack",
+        "skill_discount",
+        "transition"
+      ],
+      "note": "本回合技能打出后减费，不是牌组有技能就零费；启动顺序影响收益。",
+      "confidence": "initial-mechanism-prior-not-run-validated",
+      "evidenceAdjustment": -0.189
+    },
+    "PoisonedStab": {
+      "base": 2.8,
+      "phase": [
+        0.9,
+        -0.4,
+        -0.8
+      ],
+      "duplicate": 3.0,
+      "upgradeDelta": 1.0,
+      "tags": [
+        "attack",
+        "poison_seed",
+        "poison",
+        "transition"
+      ],
+      "note": "即时伤害加少量毒，可补早期缺口；低毒源不应独自证明成熟毒体系。",
+      "confidence": "initial-mechanism-prior-not-run-validated",
+      "evidenceAdjustment": -0.127
+    },
+    "Pounce": {
+      "base": 3.0,
+      "phase": [
+        0.8,
+        0.0,
+        -0.3
+      ],
+      "duplicate": 3.0,
+      "upgradeDelta": 1.2,
+      "tags": [
+        "attack",
+        "skill_discount",
+        "transition"
+      ],
+      "note": "下一张技能免费，需要手里有值得减费的技能；对廉价技能组不虚构省费。",
+      "confidence": "initial-mechanism-prior-not-run-validated",
+      "evidenceAdjustment": -0.202
+    },
+    "PreciseCut": {
+      "base": 2.4,
+      "phase": [
+        0.7,
+        -0.2,
+        -0.5
+      ],
+      "duplicate": 3.0,
+      "upgradeDelta": 0.7,
+      "tags": [
+        "attack",
+        "cheap",
+        "empty_hand",
+        "transition"
+      ],
+      "note": "手牌越多伤害越低；和大手牌保留有张力，弃牌可改善。",
+      "confidence": "initial-mechanism-prior-not-run-validated",
+      "evidenceAdjustment": -0.103
+    },
+    "Predator": {
+      "base": 3.1,
+      "phase": [
+        1.0,
+        -0.2,
+        -0.6
+      ],
+      "duplicate": 3.0,
+      "upgradeDelta": 1.0,
+      "tags": [
+        "attack",
+        "delayed_draw",
+        "transition"
+      ],
+      "note": "下回合抽二，不是当回合过牌；前期补单体，后期重复更差。",
+      "confidence": "initial-mechanism-prior-not-run-validated",
+      "evidenceAdjustment": -0.046
+    },
+    "Prepared": {
+      "base": 3.1,
+      "phase": [
+        0.0,
+        0.5,
+        0.5
+      ],
+      "duplicate": 1.6,
+      "upgradeDelta": 1.7,
+      "tags": [
+        "discard",
+        "filter",
+        "cheap"
+      ],
+      "note": "抽一弃一不增加手牌，升级抽弃二；配奇巧与弃牌收益，不裸当零费抽一。",
+      "confidence": "initial-mechanism-prior-not-run-validated",
+      "evidenceAdjustment": 0.251
+    },
+    "Reflex": {
+      "base": 2.8,
+      "phase": [
+        -0.5,
+        0.5,
+        0.7
+      ],
+      "duplicate": 2.0,
+      "upgradeDelta": 1.5,
+      "tags": [
+        "sly",
+        "draw"
+      ],
+      "note": "三费抽二，主要靠主动弃置免费打出；一个生存者不足以视为可靠启动。",
+      "confidence": "initial-mechanism-prior-not-run-validated",
+      "evidenceAdjustment": -0.015
+    },
+    "Ricochet": {
+      "base": 2.4,
+      "phase": [
+        0.7,
+        -0.2,
+        -0.6
+      ],
+      "duplicate": 3.0,
+      "upgradeDelta": 0.9,
+      "tags": [
+        "attack",
+        "multihit",
+        "sly",
+        "transition"
+      ],
+      "note": "两费随机四段，奇巧可绕过费用；多敌不可当定点斩杀。",
+      "confidence": "initial-mechanism-prior-not-run-validated",
+      "evidenceAdjustment": -0.044
+    },
+    "SerpentForm": {
+      "base": 4.5,
+      "phase": [
+        -0.2,
+        0.8,
+        1.0
+      ],
+      "duplicate": 3.0,
+      "upgradeDelta": 1.8,
+      "tags": [
+        "play_damage",
+        "finisher",
+        "scaling"
+      ],
+      "note": "每次出牌对随机敌人造成固定伤害，小刀/奇巧/廉价过牌都是入口；三费启动需防守。",
+      "confidence": "initial-mechanism-prior-not-run-validated",
+      "evidenceAdjustment": 0.24
+    },
+    "ShadowStep": {
+      "base": 2.8,
+      "phase": [
+        -0.6,
+        0.3,
+        0.6
+      ],
+      "duplicate": 4.0,
+      "upgradeDelta": 1.3,
+      "tags": [
+        "discard",
+        "next_attack"
+      ],
+      "note": "弃掉全手换下回合攻击翻倍；不增幅毒或群蛇固定伤害，计算本回合损失。",
+      "confidence": "initial-mechanism-prior-not-run-validated",
+      "evidenceAdjustment": -0.214
+    },
+    "Shadowmeld": {
+      "base": 4.3,
+      "phase": [
+        0.0,
+        0.5,
+        0.7
+      ],
+      "duplicate": 3.0,
+      "upgradeDelta": 1.3,
+      "tags": [
+        "block_payoff"
+      ],
+      "note": "仅本回合格挡翻倍，必须有可兑现的格挡来源。",
+      "confidence": "initial-mechanism-prior-not-run-validated",
+      "evidenceAdjustment": -0.014
+    },
+    "Skewer": {
+      "base": 2.8,
+      "phase": [
+        0.6,
+        0.0,
+        -0.3
+      ],
+      "duplicate": 3.0,
+      "upgradeDelta": 1.2,
+      "tags": [
+        "attack",
+        "multihit",
+        "energy_sink",
+        "transition"
+      ],
+      "note": "X费多段出口，有额外能量或力量时更好；不把X牌看成零费攻击。",
+      "confidence": "initial-mechanism-prior-not-run-validated",
+      "evidenceAdjustment": -0.167
+    },
+    "Slice": {
+      "base": 2.0,
+      "phase": [
+        0.8,
+        -0.5,
+        -1.0
+      ],
+      "duplicate": 3.0,
+      "upgradeDelta": 0.7,
+      "tags": [
+        "attack",
+        "cheap",
+        "transition"
+      ],
+      "note": "零费单次伤害，占抽牌；缺伤害时可过渡，不因为能打出就持续抓。",
+      "confidence": "initial-mechanism-prior-not-run-validated",
+      "evidenceAdjustment": -0.192
+    },
+    "Snakebite": {
+      "base": 3.3,
+      "phase": [
+        0.4,
+        0.1,
+        0.0
+      ],
+      "duplicate": 2.7,
+      "upgradeDelta": 1.2,
+      "tags": [
+        "poison_seed",
+        "poison",
+        "retain"
+      ],
+      "note": "二费七毒可保留，比较毒密度与费用；保留帮助配触媒但不制造能量。",
+      "confidence": "initial-mechanism-prior-not-run-validated",
+      "evidenceAdjustment": 0.166
+    },
+    "Speedster": {
+      "base": 2.4,
+      "phase": [
+        -0.6,
+        0.4,
+        0.7
+      ],
+      "duplicate": 3.0,
+      "upgradeDelta": 0.4,
+      "tags": [
+        "draw_damage",
+        "aoe",
+        "scaling"
+      ],
+      "note": "只对回合进行中的抽牌触发，不把起手自然抽牌计为输出；缺过牌不能独立救缺伤害。",
+      "confidence": "initial-mechanism-prior-not-run-validated",
+      "evidenceAdjustment": -0.259
+    },
+    "StormOfSteel": {
+      "base": 3.3,
+      "phase": [
+        -0.4,
+        0.4,
+        0.7
+      ],
+      "duplicate": 3.0,
+      "upgradeDelta": 1.4,
+      "tags": [
+        "discard",
+        "shiv_source",
+        "attack",
+        "refresh"
+      ],
+      "note": "弃全手换小刀，能触发奇巧；会失去原手牌，不当纯正收益产刀。",
+      "confidence": "initial-mechanism-prior-not-run-validated",
+      "evidenceAdjustment": -0.101
+    },
+    "Strangle": {
+      "base": 2.7,
+      "phase": [
+        0.5,
+        0.3,
+        0.0
+      ],
+      "duplicate": 3.0,
+      "upgradeDelta": 1.2,
+      "tags": [
+        "attack",
+        "play_damage",
+        "transition"
+      ],
+      "note": "只在本回合后续出牌触发；运转可提高，但不等价于持续群蛇形态。",
+      "confidence": "initial-mechanism-prior-not-run-validated",
+      "evidenceAdjustment": -0.25
+    },
+    "StrikeSilent": {
+      "base": -6.0,
+      "phase": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "duplicate": 3.0,
+      "upgradeDelta": 0.3,
+      "tags": [
+        "basic",
+        "attack"
+      ],
+      "note": "基础打击不作为奖励抓取目标；删牌逻辑另行评估。",
+      "confidence": "initial-mechanism-prior-not-run-validated",
+      "evidenceAdjustment": 0.0
+    },
+    "SuckerPunch": {
+      "base": 2.9,
+      "phase": [
+        0.8,
+        -0.3,
+        -0.7
+      ],
+      "duplicate": 3.0,
+      "upgradeDelta": 1.0,
+      "tags": [
+        "attack",
+        "weak",
+        "transition"
+      ],
+      "note": "过渡伤害带虚弱；已有中和/墨之刃/扫腿时不无限补相同功能。",
+      "confidence": "initial-mechanism-prior-not-run-validated",
+      "evidenceAdjustment": -0.125
+    },
+    "Suppress": {
+      "base": 6.0,
+      "phase": [
+        0.5,
+        0.2,
+        0.2
+      ],
+      "duplicate": 3.0,
+      "upgradeDelta": 1.3,
+      "tags": [
+        "attack",
+        "weak",
+        "opening"
+      ],
+      "note": "先古强化中和，固有零费强虚弱；不能套用普通中和或普通抓牌概率。",
+      "confidence": "initial-mechanism-prior-not-run-validated",
+      "evidenceAdjustment": 0.0
+    },
+    "Survivor": {
+      "base": -2.0,
+      "phase": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "duplicate": 3.0,
+      "upgradeDelta": 0.5,
+      "tags": [
+        "basic",
+        "block",
+        "discard"
+      ],
+      "note": "基础弃牌入口；仅一张不足以保障奇巧链稳定，已有牌保留另评。",
+      "confidence": "initial-mechanism-prior-not-run-validated",
+      "evidenceAdjustment": 0.0
+    },
+    "Tactician": {
+      "base": 2.6,
+      "phase": [
+        -0.6,
+        0.5,
+        0.7
+      ],
+      "duplicate": 2.5,
+      "upgradeDelta": 1.7,
+      "tags": [
+        "sly",
+        "energy"
+      ],
+      "note": "手打三费回一费亏费；主动弃置才是供能，需要可靠弃牌和费用出口。",
+      "confidence": "initial-mechanism-prior-not-run-validated",
+      "evidenceAdjustment": -0.147
+    },
+    "TheHunt": {
+      "base": 3.8,
+      "phase": [
+        1.2,
+        0.0,
+        -1.0
+      ],
+      "duplicate": 3.0,
+      "upgradeDelta": 0.8,
+      "tags": [
+        "attack",
+        "exhaust",
+        "reward_growth"
+      ],
+      "note": "斩杀再获卡牌奖励是早期成长机会；未知奖励不是已经到手的战力。",
+      "confidence": "initial-mechanism-prior-not-run-validated",
+      "evidenceAdjustment": -0.014
+    },
+    "ToolsOfTheTrade": {
+      "base": 6.0,
+      "phase": [
+        0.0,
+        0.4,
+        0.4
+      ],
+      "duplicate": 2.6,
+      "upgradeDelta": 1.2,
+      "tags": [
+        "draw",
+        "discard",
+        "slow",
+        "engine"
+      ],
+      "note": "每回合抽一弃一是选牌过滤并触发奇巧，不是每回合净加一手牌。",
+      "confidence": "initial-mechanism-prior-not-run-validated",
+      "evidenceAdjustment": 0.379
+    },
+    "Tracking": {
+      "base": 3.6,
+      "phase": [
+        0.0,
+        0.5,
+        0.5
+      ],
+      "duplicate": 6.0,
+      "upgradeDelta": 1.6,
+      "tags": [
+        "weak_payoff",
+        "scaling"
+      ],
+      "note": "对虚弱敌人的攻击增伤，需要可靠虚弱及攻击伤害；毒和群蛇固定伤害不受益。",
+      "confidence": "initial-mechanism-prior-not-run-validated",
+      "evidenceAdjustment": -0.053
+    },
+    "Untouchable": {
+      "base": 2.8,
+      "phase": [
+        0.1,
+        0.3,
+        0.3
+      ],
+      "duplicate": 2.4,
+      "upgradeDelta": 1.0,
+      "tags": [
+        "sly",
+        "block"
+      ],
+      "note": "两费六格挡很差，弃牌免费触发才有价值。",
+      "confidence": "initial-mechanism-prior-not-run-validated",
+      "evidenceAdjustment": -0.047
+    },
+    "UpMySleeve": {
+      "base": 2.7,
+      "phase": [
+        0.1,
+        0.2,
+        0.2
+      ],
+      "duplicate": 3.0,
+      "upgradeDelta": 1.3,
+      "tags": [
+        "shiv_source",
+        "attack",
+        "ramp_cost"
+      ],
+      "note": "初次两费产三刀，打出后本场降费；循环速度决定后续收益，不按永久零费。",
+      "confidence": "initial-mechanism-prior-not-run-validated",
+      "evidenceAdjustment": -0.161
+    },
+    "WellLaidPlans": {
+      "base": 5.5,
+      "phase": [
+        -0.2,
+        0.7,
+        0.8
+      ],
+      "duplicate": 6.0,
+      "upgradeDelta": 2.0,
+      "tags": [
+        "retain",
+        "engine"
+      ],
+      "note": "二费金卡，全部手牌不丢弃；帮助组合配齐，但手牌上限和启动费用仍是限制。",
+      "confidence": "initial-mechanism-prior-not-run-validated",
+      "evidenceAdjustment": 0.517
+    },
+    "WraithForm": {
+      "base": 6.8,
+      "phase": [
+        0.0,
+        0.3,
+        0.4
+      ],
+      "duplicate": 3.0,
+      "upgradeDelta": 2.2,
+      "tags": [
+        "intangible",
+        "exhaust_window"
+      ],
+      "note": "先古牌；限时无实体换持续掉敏捷，需在窗口内结束或另有防御；不是普通金卡候选。",
+      "confidence": "initial-mechanism-prior-not-run-validated",
+      "evidenceAdjustment": 0.0
+    }
+  }
+}

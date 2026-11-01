@@ -8,33 +8,85 @@ namespace SpireStrategist.Mod;
 
 internal static class SnapshotReader
 {
+    // Network role matters even if only one player remains in a co-op session.
+    internal static bool IsMultiplayer(IRunState run)=>IsMultiplayer(run.Players.Count,RunManager.Instance.NetService?.Type);
+    internal static bool IsMultiplayer(int playerCount,MegaCrit.Sts2.Core.Multiplayer.Game.NetGameType? networkType)=>playerCount>1||
+        networkType is MegaCrit.Sts2.Core.Multiplayer.Game.NetGameType.Host
+            or MegaCrit.Sts2.Core.Multiplayer.Game.NetGameType.Client;
+    internal static int? PendingAncientHp(IRunState run,Player player)
+    {
+        // Called only for a visible card reward. Never invoke a live heal/RNG.
+        if(player.Creature.CurrentHp<=0||MegaCrit.Sts2.Core.Combat.CombatManager.Instance.IsInProgress
+            ||run.CurrentRoom?.RoomType!=MegaCrit.Sts2.Core.Rooms.RoomType.Boss
+            ||run.CurrentActIndex+1>=run.Acts.Count)return null;
+        // On double-boss acts the first boss is not a safe recovery boundary.
+        if(run.Map.SecondBossMapPoint!=null&&run.CurrentMapCoord==run.Map.BossMapPoint.coord)return null;
+        var id=run.Acts[run.CurrentActIndex+1].ToSave().SerializableRooms.AncientId;
+        if(id is not {} ancientId)return null;
+        var ancient=ModelDb.GetById<AncientEventModel>(ancientId);
+        if(ancient.GetType().Assembly!=typeof(AncientEventModel).Assembly)return null;
+        var fraction=run.AscensionLevel>=(int)MegaCrit.Sts2.Core.Entities.Ascension.AscensionLevel.WearyTraveler?.8:1;
+        return player.Creature.CurrentHp+(int)Math.Floor((player.Creature.MaxHp-player.Creature.CurrentHp)*fraction);
+    }
+
     internal static RunSnapshot Read(IRunState run, Player player) => new()
     {
         Character = player.Character.GetType().Name,
         PlayerCount = run.Players.Count,
+        MultiplayerSession = IsMultiplayer(run),
         Hp = player.Creature.CurrentHp,
         MaxHp = player.Creature.MaxHp,
         Gold = player.Gold,
         Energy = player.MaxEnergy,
-        CombatSolverAvailable = SolverBridge.AvailableForEvaluation,
+        CombatSolverAvailable = !IsMultiplayer(run)&&SolverBridge.AvailableForEvaluation,
         Act = run.CurrentActIndex + 1,
         Floor = run.TotalFloor,
         Ascension = run.AscensionLevel,
         Room = run.CurrentRoom?.GetType().Name ?? "Transition",
         Deck = player.Deck.Cards.Select(ReadCard).ToArray(),
         Relics = player.Relics.Select(r => r.Id.ToString()).ToArray(),
+        GiryaLifts = player.GetRelic<MegaCrit.Sts2.Core.Models.Relics.Girya>()?.TimesLifted,
         PotionSlots = player.PotionSlots.Select(p => p?.Id.ToString()).ToArray(),
         NextNodeTypes = run.CurrentMapPoint?.Children.Select(p => p.PointType.ToString())
             .Order(StringComparer.Ordinal).ToArray() ?? [],
         Hidden = HiddenReader.Read(run, player),
         Map = LongMapAdapter.Read(run),
         Commerce = ReadCommerce(run,player),
-        RecentBattles = run.MapPointHistory.ElementAtOrDefault(run.CurrentActIndex)?.TakeLast(9)
-            .Where(h=>!ReferenceEquals(h,run.CurrentMapPointHistoryEntry) && h.Rooms.Count==1 && h.Rooms[0].RoomType is MegaCrit.Sts2.Core.Rooms.RoomType.Elite or MegaCrit.Sts2.Core.Rooms.RoomType.Boss)
-            .Select(h=>(Room:h.Rooms[0],Stats:h.GetEntry(player.NetId)))
-            .Where(x=>x.Stats.MaxHp>0&&x.Stats.CurrentHp>0).TakeLast(3)
-            .Select(x=>new CombatSummary(run.CurrentActIndex+1,x.Room.RoomType.ToString(),x.Room.ModelId?.ToString(),x.Stats.DamageTaken,x.Stats.HpHealed,x.Stats.PotionUsed.Count,x.Stats.MaxHp)).ToArray()??[]
+        RecentBattles = ReadRecentBattles(run.MapPointHistory.ElementAtOrDefault(run.CurrentActIndex)??[],
+            run.CurrentMapPointHistoryEntry,player.NetId,run.CurrentActIndex+1,CompletedMapCombat(run,player))
     };
+
+    private static CombatSummary? CompletedMapCombat(IRunState run,Player player)
+    {
+        // Native history seals CurrentHp/MaxHp only when the next node is entered.
+        // At a travel-enabled post-combat map use live HP, without editing history.
+        // Merely opening the map mid-combat is not evidence that combat has ended.
+        if(player.Creature.CurrentHp<=0 || MegaCrit.Sts2.Core.Combat.CombatManager.Instance.IsInProgress ||
+            run.CurrentRoom is not MegaCrit.Sts2.Core.Rooms.CombatRoom ||
+            MegaCrit.Sts2.Core.Nodes.Screens.Map.NMapScreen.Instance is not {IsOpen:true,IsTravelEnabled:true,IsTraveling:false} ||
+            run.CurrentMapPointHistoryEntry is not {} h || h.Rooms.Count!=1)return null;
+        var room=h.Rooms[0];
+        if(room.RoomType is not (MegaCrit.Sts2.Core.Rooms.RoomType.Monster or MegaCrit.Sts2.Core.Rooms.RoomType.Elite or MegaCrit.Sts2.Core.Rooms.RoomType.Boss))return null;
+        var stats=h.GetEntry(player.NetId);
+        return new(run.CurrentActIndex+1,room.RoomType.ToString(),room.ModelId?.ToString(),
+            stats.DamageTaken,stats.HpHealed,stats.PotionUsed.Count,player.Creature.MaxHp);
+    }
+
+    internal static CombatSummary[] ReadRecentBattles(
+        IEnumerable<MegaCrit.Sts2.Core.Runs.History.MapPointHistoryEntry> history,
+        MegaCrit.Sts2.Core.Runs.History.MapPointHistoryEntry? current,ulong playerId,int act,CombatSummary? completedCurrent=null)
+        => history.Where(h=>!ReferenceEquals(h,current) && h.Rooms.Count==1 &&
+                h.Rooms[0].RoomType is MegaCrit.Sts2.Core.Rooms.RoomType.Monster or MegaCrit.Sts2.Core.Rooms.RoomType.Elite or MegaCrit.Sts2.Core.Rooms.RoomType.Boss)
+            .Select(h=>(Room:h.Rooms[0],Stats:h.GetEntry(playerId)))
+            // Three per kind; normal fights must not evict the elite/boss samples
+            // used by camp decisions. Current/incomplete rooms remain excluded.
+            .Where(x=>x.Stats.MaxHp>0&&x.Stats.CurrentHp>0)
+            .Select(x=>new CombatSummary(act,x.Room.RoomType.ToString(),x.Room.ModelId?.ToString(),
+                x.Stats.DamageTaken,x.Stats.HpHealed,x.Stats.PotionUsed.Count,x.Stats.MaxHp))
+            .Concat(completedCurrent is {} last?new[]{last}:[])
+            .Select((battle,index)=>(battle,index))
+            .GroupBy(x=>x.battle.Room).SelectMany(g=>g.TakeLast(3)).OrderBy(x=>x.index)
+            .Select(x=>x.battle).ToArray();
 
     internal static CommerceContext? ReadCommerce(IRunState run,Player player)
     {
@@ -67,9 +119,11 @@ internal static class SnapshotReader
         Description = c.GetDescriptionForPile(PileType.Deck),
         Cost = c.EnergyCost.GetWithModifiers(CostModifiers.Local),
         CostsX = c.EnergyCost.CostsX || c.HasStarCostX,
+        StarCost = c.CurrentStarCost, CostsStarX = c.HasStarCostX,
         UpgradeLevel = c.CurrentUpgradeLevel,
         CanUpgrade = c.IsUpgradable,
         Modified = c.Enchantment != null || c.Affliction != null,
+          MultiplayerOnly = c.MultiplayerConstraint==CardMultiplayerConstraint.MultiplayerOnly,
         Enchantment = c.Enchantment?.Id.ToString(),
         EnchantmentAmount = c.Enchantment?.Amount ?? 0,
         Affliction = c.Affliction?.Id.ToString(),

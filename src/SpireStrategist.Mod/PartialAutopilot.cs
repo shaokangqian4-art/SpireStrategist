@@ -33,6 +33,9 @@ internal sealed partial class PartialAutopilot
     private readonly Stack<(Task Task,object? Origin)> parentOperations = new();
     private Task? chestOperation;
     private ulong operationStarted;
+    private AbstractRoom? pendingTravelFrom;
+    // A top-bar/hotkey opening belongs to the player even during a transition.
+    internal void ManualMapOpened(){pendingTravelFrom=null;gate.ResetPending();}
     private CardModel? smithTarget;
     private NRestSiteRoom? smithRoom;
     private CardModel? removalTarget;
@@ -54,7 +57,8 @@ internal sealed partial class PartialAutopilot
     internal void SetFullAutomatic(bool value) {if(value)Enable(true);else Pause("全自动待命已关闭。");}
     internal void Enable(bool fullAutomatic=false)
     {
-        if(service.State.Players.Count!=1 || service.Player.Character.GetType().Name!="Ironclad") { Pause("仅支持单人战士。");return; }
+        if(SnapshotReader.IsMultiplayer(service.State)){Status=MultiplayerAdvice.Notice;UpdatePanel();return;}
+        if((service.State.Players.Count!=1||SnapshotReader.IsMultiplayer(service.State)) || !DefectStrategy.Supported(service.Player.Character.GetType().Name)) { Pause("仅支持已建模原生角色的单人接管。");return; }
         gate.Enable(); FullAutomatic=fullAutomatic; WaitingForManual=false; blockedCombat=null;
         if(operation!=null)operationStarted=Time.GetTicksMsec();
         if(solver.Bind()==null)solver.ArmAutoStart();
@@ -109,6 +113,7 @@ internal sealed partial class PartialAutopilot
     private void TickCore()
     {
         if(!Enabled) return;
+        if((service.State.Players.Count!=1||SnapshotReader.IsMultiplayer(service.State))){Pause(MultiplayerAdvice.Notice);return;}
         if(ClimbController.Enabled&&ClimbController.LaunchInProgress)
         {gate.ResetPending();Wait("循环接管中 · 等待原生开局加载完成");return;}
         if(service.Panel.ReviewPaused){gate.ResetPending();if(operation!=null)operationStarted=Time.GetTicksMsec();Wait("接管待命 · 正在查看建议或填写异议，暂停后续动作");return;}
@@ -134,6 +139,10 @@ internal sealed partial class PartialAutopilot
         }
         if(operation!=null && Time.GetTicksMsec()-operationStarted>30000) {Pause("操作等待超过 30 秒，请手动检查。");return;}
         var screen=ActiveScreenContext.Instance.GetCurrentScreen();
+        // CurrentRoom changes before the old map overlay finishes closing. Do not
+        // release the travel guard on that intermediate change and vote a second time.
+        if(pendingTravelFrom!=null&&screen is not (NMapRoom or NMapScreen))
+            pendingTravelFrom=null;
         if(ClimbController.Enabled&&screen is MegaCrit.Sts2.Core.Nodes.Screens.MainMenu.NEarlyAccessDisclaimer disclaimer)
         {
             Wait("自动爬塔 · 关闭抢先体验说明");
@@ -204,11 +213,14 @@ internal sealed partial class PartialAutopilot
             if(d?.Kind!="cards") {gate.ResetPending();return;}
             var chosen=d.Options.FirstOrDefault(o=>o.Key==d.Evaluation.RecommendedKey);
             if(OwnsCurrentEvent&&eventSelection=="skip-foreign")chosen=d.Options.FirstOrDefault(o=>o.Kind=="skip"&&o.Enabled);
+            var partialReward=chosen==null&&FullAutomatic&&d.State.Character is "Defect" or "Silent" or "Regent" or "Necrobinder";
+            if(partialReward)chosen=DefectPolicy.KnownFreeReward(d.Options,d.Evaluation);
             if(chosen==null) {Manual("这组选牌存在未适配效果，请手动选择。");return;}
             Wait("接管中 · 即将选择 "+chosen.Name);
             if(!Claim("decision:"+d.Id,GameActions.RewardReady(cards))) return;
+            if(partialReward)service.RecordAuto("partial_reward_choice",new{decisionId=d.Id,selected=chosen.Key,reason="机器人接管：只比较已建模免费牌与跳过；未知选项未估值，不是整体最优保证",evaluation=d.Evaluation});
             if(chosen.Key.StartsWith("card:")) GameActions.SelectCard(cards,service.CardOptions[int.Parse(chosen.Key[5..])].Card);
-            else if(chosen.Kind=="skip"||chosen.Kind=="effect") GameActions.SelectSkip(cards,int.Parse(chosen.Key[12..]));
+            else if(chosen.Kind is "skip" or "effect" or "reroll") GameActions.SelectSkip(cards,int.Parse(chosen.Key[12..]));
             else Manual("当前奖励选项尚未支持自动执行。");
             return;
         }
@@ -274,24 +286,28 @@ internal sealed partial class PartialAutopilot
             if(excludedRewards){Manual("商店或先古奖励请手动处理。");return;}
             var skipped=(IEnumerable<Control>)GameActions.Field(rewards,"_skippedRewardButtons")!;
             var buttons=GameActions.Descendants<NRewardButton>(rewards).Where(b=>b.IsVisibleInTree() && b.IsEnabled && !skipped.Contains(b)).ToArray();
-            if(service.State.CurrentRoom is EventRoom courier && courier.CanonicalEvent is MegaCrit.Sts2.Core.Models.Events.PotionCourier &&
-                CourierPolicy.MayReplace(SnapshotReader.Read(service.State,service.Player)) &&
-                !service.Player.Relics.Any(r=>r.Id.Entry=="SOZU") && !service.Player.PotionSlots.Any(p=>p==null) &&
-                buttons.Any(b=>b.Reward is PotionReward {Potion: MegaCrit.Sts2.Core.Models.Potions.FoulPotion}))
+            var potionState=SnapshotReader.Read(service.State,service.Player);
+            PotionCandidate DescribePotion(PotionModel p)=>new(p.GetType().Name,p.Rarity.ToString(),p.GetType().Assembly==typeof(PotionModel).Assembly);
+            var bestPotion=buttons.Where(b=>b.Reward is PotionReward {Potion:not null})
+                .Where(b=>MegaCrit.Sts2.Core.Hooks.Hook.ShouldProcurePotion(service.State,service.Player.Creature.CombatState,((PotionReward)b.Reward!).Potion!,service.Player))
+                .OrderByDescending(b=>PotionPolicy.Rank(potionState,DescribePotion(((PotionReward)b.Reward!).Potion!))).FirstOrDefault();
+            if(service.State.CurrentRoom is not MerchantRoom && bestPotion?.Reward is PotionReward {Potion:not null} incoming &&
+                !service.Player.PotionSlots.Any(p=>p==null))
             {
-                var replace=service.Player.Potions.Where(p=>p is not MegaCrit.Sts2.Core.Models.Potions.FoulPotion && p.GetType().Assembly==typeof(PotionModel).Assembly)
-                    .OrderBy(p=>p.Rarity.ToString() switch{"Common"=>0,"Uncommon"=>1,"Rare"=>2,_=>3}).FirstOrDefault();
-                if(replace!=null)
+                var belt=service.Player.PotionSlots.Select(p=>p!).ToArray();
+                var index=PotionPolicy.Replacement(potionState,belt.Select(DescribePotion).ToArray(),DescribePotion(incoming.Potion));
+                if(index>=0)
                 {
-                    Wait("接管中 · 药水快递员：替换 "+replace.Title.GetFormattedText()+"，为污浊药水腾空位");
-                    if(Claim("courier-discard:"+rewards.GetInstanceId()+":"+service.Player.PotionSlots.ToList().IndexOf(replace)+":"+replace.Id+":"+string.Join(',',buttons.Select(b=>b.GetInstanceId()))))
-                    {service.RecordAuto("courier_discard",new{potion=replace.Id.ToString(),rarity=replace.Rarity.ToString(),state=SnapshotReader.Read(service.State,service.Player)});Track(()=>MegaCrit.Sts2.Core.Commands.PotionCmd.Discard(replace));}
+                    var replace=belt[index];
+                    Wait("接管中 · 药水升级替换："+replace.Title.GetFormattedText()+" → "+incoming.Potion.Title.GetFormattedText());
+                    if(Claim("potion-replace:"+bestPotion.GetInstanceId()+":"+index+":"+replace.Id))
+                    {service.RecordAuto("potion_replace",new{discard=replace.Id.ToString(),take=incoming.Potion.Id.ToString(),state=potionState});Track(()=>MegaCrit.Sts2.Core.Commands.PotionCmd.Discard(replace));}
                     return;
                 }
             }
             var safe=buttons.FirstOrDefault(b=>b.Reward is GoldReward or CardReward ||
-                b.Reward is RelicReward {Relic:not null} relic && relic.Relic.Rarity!=RelicRarity.Ancient && !LeaveHarmfulFakeRelic(b.Reward) ||
-                b.Reward is PotionReward && service.Player.PotionSlots.Any(p=>p==null));
+                b.Reward is RelicReward {Relic:not null} relic && relic.Relic.Rarity!=RelicRarity.Ancient && !LeaveHarmfulFakeRelic(b.Reward));
+            if(safe==null&&!service.Player.Relics.Any(r=>r.Id.Entry=="SOZU")&&service.Player.PotionSlots.Any(p=>p==null))safe=bestPotion;
             if(safe==null)
             {
                 // Evaluate AFTER ordinary rewards: a new card/relic can change whether recovery is useful.
@@ -315,7 +331,7 @@ internal sealed partial class PartialAutopilot
                 var unsupportedReward=buttons.FirstOrDefault(b=>b.Reward is not PotionReward && !IsStolenCardRecovery(b.Reward) && !LeaveHarmfulFakeRelic(b.Reward));
                 if(unsupportedReward!=null)
                 {Manual("此奖励尚未适配："+unsupportedReward.Reward?.Description.GetFormattedText()+"（"+unsupportedReward.Reward?.GetType().Name+"），请手动处理。");return;}
-                // Full potion belt: leave the excess potion behind, never discard or replace one.
+                // No strictly better potion remains: leave the excess reward behind.
                 var proceed=(NClickableControl)GameActions.Field(rewards,"_proceedButton")!;
                 if(plans.Length>0)
                 {
@@ -327,7 +343,7 @@ internal sealed partial class PartialAutopilot
                 }
                 Proceed(rewards,proceed,"OnProceedButtonPressed");return;
             }
-            Wait("接管中 · 领取奖励（遗物全拿，药水有空位才拿）");
+            Wait("接管中 · 领取奖励（药水按等级与防守用途择优保留）");
             if(Claim("reward:"+safe.GetInstanceId()))
             {if(safe.Reward is RelicReward {Relic:not null} pickup)PrepareRelicSelection(pickup.Relic);Track(()=>GameActions.ClaimReward(safe));}return;
         }
@@ -335,13 +351,15 @@ internal sealed partial class PartialAutopilot
         {
             var room=NMerchantRoom.Instance;
             if(room==null){gate.ResetPending();return;}
-            if(shoppingRoom!=merchant){shoppingRoom=merchant;shopArrivalGold=service.Player.Gold;shopBoughtCards=0;}
+            if(shoppingRoom!=merchant){shoppingRoom=merchant;shopArrivalGold=service.Player.Gold;shopBoughtCards=0;shopFoulUses=0;}
+            if(TickFoulMerchant(room))return;
+            if(shopFoulUses>0)shopArrivalGold=Math.Max(shopArrivalGold,service.Player.Gold);
             if(screen is NMerchantRoom)
             {
                 if(FullAutomatic&&leavingShop==room.GetInstanceId())
                 {Proceed(room,room.ProceedButton,"HideScreen");return;}
                 // Open once. When the user closes the inventory, leave control with them.
-                if(Claim("shop-open:"+room.GetInstanceId(),room.MerchantButton.IsEnabled))room.OpenInventory();
+                if(Claim("shop-open:"+room.GetInstanceId()+":"+shopFoulUses,room.MerchantButton.IsEnabled))room.OpenInventory();
                 else if(WaitingForManual) return;
                 return;
             }
@@ -350,7 +368,7 @@ internal sealed partial class PartialAutopilot
             var slots=inventory.GetAllSlots().Where(s=>s.IsVisibleInTree() && s.Hitbox.IsEnabled && s.Entry is {IsStocked:true}).ToArray();
             var removal=slots.FirstOrDefault(s=>s.Entry is MerchantCardRemovalEntry);
             var cardsInShop=slots.Where(s=>s.Entry is MerchantCardEntry {CreationResult:not null}).ToArray();
-            var state=SnapshotReader.Read(service.State,service.Player);
+            var state=service.WithForesight(SnapshotReader.Read(service.State,service.Player));
             if(TickPriorityShop(room,slots,state))return;
             var finalShop=FullAutomatic&&service.State.CurrentMapPoint is {} shopPoint&&
                 ShopBudget.Reserve(state,RouteAdapter.Nodes(service.State),RouteAdapter.Key(shopPoint),100)==0;
@@ -379,7 +397,20 @@ internal sealed partial class PartialAutopilot
         }
         if(screen is NMapScreen map)
         {
-            if(CombatManager.Instance.IsInProgress && !map.IsTravelEnabled){Manual("正在查看战斗中的地图，请手动返回战斗。");return;}
+            if(pendingTravelFrom!=null)
+            {
+                gate.ResetPending();
+                if(service.State.CurrentRoom is CombatRoom&&!ReferenceEquals(pendingTravelFrom,service.State.CurrentRoom))
+                {
+                    // Recover only the overlay left by OUR submitted travel. A manual
+                    // map opening clears ownership in MapPlayerOpenPatch.
+                    map.Close(false);pendingTravelFrom=null;
+                    service.RecordAuto("recovered_owned_map",new{room=service.State.CurrentRoom.GetType().Name});
+                    Wait("接管中 · 已关闭转场遗留地图，继续战斗");return;
+                }
+                Wait("接管中 · 等待原生房间切换完成");return;
+            }
+            if(CombatManager.Instance.IsInProgress){Manual("正在查看战斗中的地图，请手动返回战斗。");return;}
             var legal=RouteAdapter.Legal(map);
             if(legal.Length==0){gate.ResetPending();Wait("接管中 · 等待地图允许前进");return;}
             var evaluation=RouteAdapter.Evaluate(service,legal);
@@ -392,11 +423,18 @@ internal sealed partial class PartialAutopilot
             {
                 service.RecordAuto("route",evaluation);
                 service.RecordAuto("route_context",new{state=SnapshotReader.Read(service.State,service.Player),nodes=RouteAdapter.Nodes(service.State),legal=legal.Select(p=>RouteAdapter.Key(p.Point)).ToArray(),economy=RouteAdapter.Economy(service)});
+                pendingTravelFrom=service.State.CurrentRoom;
                 map.OnMapPointSelectedLocally(target);
             }return;
         }
         if(screen is NMapRoom && NMapScreen.Instance is {} mapScreen)
-        {Wait("接管中 · 打开地图");if(Claim("map-open:"+((NMapRoom)screen).GetInstanceId()))mapScreen.Open();return;}
+        {
+            // Selecting a point closes the overlay before the next room finishes loading.
+            // The old map scene can remain active during that interval, especially at 250ms.
+            if(pendingTravelFrom!=null||service.State.CurrentRoom is not MapRoom)
+            {gate.ResetPending();Wait("接管中 · 等待地图移动完成");return;}
+            Wait("接管中 · 打开地图");if(Claim("map-open:"+((NMapRoom)screen).GetInstanceId()))mapScreen.Open();return;
+        }
         var combat=CombatManager.Instance.DebugOnlyGetState();
         if(CombatManager.Instance.IsInProgress && combat!=null && (screen is NCombatRoom || screen is NEventRoom {EmbeddedCombatRoom:not null}))
         {

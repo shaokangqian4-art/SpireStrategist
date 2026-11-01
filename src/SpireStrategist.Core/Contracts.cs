@@ -11,9 +11,13 @@ public sealed record CardSnapshot
     public string Description { get; init; } = "";
     public int Cost { get; init; }
     public bool CostsX { get; init; }
+    // Distinct resource. Negative means no star cost; old journals retain this default.
+    public int StarCost { get; init; } = -1;
+    public bool CostsStarX { get; init; }
     public int UpgradeLevel { get; init; }
     public bool CanUpgrade { get; init; }
     public bool Modified { get; init; }
+    public bool MultiplayerOnly { get; init; }
     public string? Enchantment { get; init; }
     public int EnchantmentAmount { get; init; }
     public string? Affliction { get; init; }
@@ -25,8 +29,13 @@ public sealed record RunSnapshot
 {
     public string Character { get; init; } = "";
     public int PlayerCount { get; init; } = 1;
+    public bool MultiplayerSession { get; init; }
+    public bool IsMultiplayer => MultiplayerSession || PlayerCount > 1;
     public int Hp { get; init; }
     public int MaxHp { get; init; }
+    // Optional acquisition-only estimate after a completed act boss. Actual HP
+    // stays unchanged; absent unless the adapter verifies the next native Ancient.
+    public int? HpAfterPendingAncient { get; init; }
     public int Gold { get; init; }
     public int Energy { get; init; } = 3;
     public bool CombatSolverAvailable { get; init; }
@@ -36,15 +45,24 @@ public sealed record RunSnapshot
     public string Room { get; init; } = "";
     public CardSnapshot[] Deck { get; init; } = [];
     public string[] Relics { get; init; } = [];
+    // Null in old journals: owning Girya alone does not prove any lifts were taken.
+    public int? GiryaLifts { get; init; }
     public string?[] PotionSlots { get; init; } = [];
     public string[] NextNodeTypes { get; init; } = [];
     public HiddenSnapshot? Hidden { get; init; }
+    public RewardForesight? Foresight { get; init; }
     public MapContext? Map { get; init; }
     public CombatSummary[] RecentBattles {get;init;}=[];
     public CommerceContext? Commerce {get;init;}
     // Captured at an ordinary camp so offline policy replay includes the same survival check.
     public Dictionary<string,double> CampRouteRisk {get;init;}=[];
 }
+
+// Conditional forecasts, never added to the actual deck or combat readiness.
+// Reliability is a heuristic evidence discount, not a calibrated probability.
+public sealed record FutureReward(string Node,string Room,int Distance,double Reliability,CardSnapshot[] Cards,int[]? Prices=null);
+public sealed record RewardBranch(string Path,FutureReward[] Rewards);
+public sealed record RewardForesight(string Fingerprint,bool SourceUnchanged,RewardBranch[] Branches,string Status);
 
 public sealed record CommerceContext(int ReachableShops,int? NearestShopDistance,int ReachableUnknowns,int FutureActs);
 

@@ -1,6 +1,8 @@
 using Godot;
 using MegaCrit.Sts2.Core.Entities.Merchant;
 using MegaCrit.Sts2.Core.Nodes.Rooms;
+using MegaCrit.Sts2.Core.Nodes.Events;
+using MegaCrit.Sts2.Core.Nodes.Cards.Holders;
 using MegaCrit.Sts2.Core.Nodes.Screens.CardSelection;
 using MegaCrit.Sts2.Core.Nodes.Screens.Map;
 using MegaCrit.Sts2.Core.Nodes.Screens.ScreenContext;
@@ -49,11 +51,21 @@ internal sealed class RecommendationOverlay
     private void DrawCore()
     {
         VisibleItemKey=null;RouteSegments=0;
+        if(service.Player.Character.GetType().Name=="Defect"&&service.Panel.DefectShadow)return;
         if(MegaCrit.Sts2.Core.Nodes.CommonUi.NModalContainer.Instance?.OpenModal!=null)return;
         var screen=ActiveScreenContext.Instance?.GetCurrentScreen();
         if(service.Panel.DrawRoutes && NMapScreen.Instance is {IsOpen:true} map && ReferenceEquals(map,routeOwner) && ReferenceEquals(screen,map)) DrawRoute(map);
         if(!service.Panel.HighlightItems || NMapScreen.Instance?.IsOpen==true)return;
-        if(screen is NCardRewardSelectionScreen cards && ReferenceEquals(cards,service.CardScreen) &&
+        if(service.Selection is {} selection && ReferenceEquals(screen,selection.Screen))
+        {
+            foreach(var holder in GameActions.Descendants<NCardHolder>(selection.Screen).Where(h=>h.CardModel!=null&&selection.Targets.Contains(h.CardModel)))
+                Frame(holder.Hitbox,"selection:"+holder.GetInstanceId());
+        }
+        else if(screen is NEventRoom events && service.Decision is {Kind:"event"} ev && ev.Evaluation.RecommendedKey is {} eventKey)
+            Frame(GameActions.Descendants<NEventOptionButton>(events).FirstOrDefault(b=>b.GetInstanceId().ToString()==eventKey),eventKey);
+        else if(screen is NRestSiteRoom rest && service.Decision is {Kind:"rest"} rd && rd.Evaluation.RecommendedKey is {} restKey)
+            Frame(GameActions.Descendants<MegaCrit.Sts2.Core.Nodes.RestSite.NRestSiteButton>(rest).FirstOrDefault(b=>b.Option.OptionId==restKey),restKey);
+        else if(screen is NCardRewardSelectionScreen cards && ReferenceEquals(cards,service.CardScreen) &&
             service.Decision is {Kind:"cards"} d && d.Evaluation.RecommendedKey is {} key)
         {
             Control? target=null;

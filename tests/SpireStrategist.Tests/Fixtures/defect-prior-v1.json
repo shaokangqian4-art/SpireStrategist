@@ -1,0 +1,6005 @@
+[
+  {
+    "state": {
+      "character": "Defect",
+      "playerCount": 1,
+      "hp": 75,
+      "maxHp": 75,
+      "act": 1,
+      "energy": 3,
+      "deck": [
+        {
+          "id": "CARD.STRIKE_DEFECT",
+          "className": "StrikeDefect",
+          "name": "StrikeDefect",
+          "type": "Attack",
+          "rarity": "Basic",
+          "description": "",
+          "cost": 1,
+          "costsX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {
+            "Damage": 6
+          }
+        },
+        {
+          "id": "CARD.STRIKE_DEFECT",
+          "className": "StrikeDefect",
+          "name": "StrikeDefect",
+          "type": "Attack",
+          "rarity": "Basic",
+          "description": "",
+          "cost": 1,
+          "costsX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {
+            "Damage": 6
+          }
+        },
+        {
+          "id": "CARD.STRIKE_DEFECT",
+          "className": "StrikeDefect",
+          "name": "StrikeDefect",
+          "type": "Attack",
+          "rarity": "Basic",
+          "description": "",
+          "cost": 1,
+          "costsX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {
+            "Damage": 6
+          }
+        },
+        {
+          "id": "CARD.STRIKE_DEFECT",
+          "className": "StrikeDefect",
+          "name": "StrikeDefect",
+          "type": "Attack",
+          "rarity": "Basic",
+          "description": "",
+          "cost": 1,
+          "costsX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {
+            "Damage": 6
+          }
+        },
+        {
+          "id": "CARD.DEFEND_DEFECT",
+          "className": "DefendDefect",
+          "name": "DefendDefect",
+          "type": "Skill",
+          "rarity": "Basic",
+          "description": "",
+          "cost": 1,
+          "costsX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {
+            "Block": 5
+          }
+        },
+        {
+          "id": "CARD.DEFEND_DEFECT",
+          "className": "DefendDefect",
+          "name": "DefendDefect",
+          "type": "Skill",
+          "rarity": "Basic",
+          "description": "",
+          "cost": 1,
+          "costsX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {
+            "Block": 5
+          }
+        },
+        {
+          "id": "CARD.DEFEND_DEFECT",
+          "className": "DefendDefect",
+          "name": "DefendDefect",
+          "type": "Skill",
+          "rarity": "Basic",
+          "description": "",
+          "cost": 1,
+          "costsX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {
+            "Block": 5
+          }
+        },
+        {
+          "id": "CARD.DEFEND_DEFECT",
+          "className": "DefendDefect",
+          "name": "DefendDefect",
+          "type": "Skill",
+          "rarity": "Basic",
+          "description": "",
+          "cost": 1,
+          "costsX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {
+            "Block": 5
+          }
+        },
+        {
+          "id": "CARD.ZAP",
+          "className": "Zap",
+          "name": "Zap",
+          "type": "Skill",
+          "rarity": "Basic",
+          "description": "",
+          "cost": 1,
+          "costsX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {}
+        },
+        {
+          "id": "CARD.DUALCAST",
+          "className": "Dualcast",
+          "name": "Dualcast",
+          "type": "Skill",
+          "rarity": "Basic",
+          "description": "",
+          "cost": 1,
+          "costsX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {}
+        }
+      ],
+      "relics": [
+        "CRACKED_CORE"
+      ]
+    },
+    "scores": [
+      {
+        "name": "AdaptiveStrike",
+        "upgraded": false,
+        "score": 5.5
+      },
+      {
+        "name": "AdaptiveStrike",
+        "upgraded": true,
+        "score": 6.5
+      },
+      {
+        "name": "AllForOne",
+        "upgraded": false,
+        "score": -1.0
+      },
+      {
+        "name": "AllForOne",
+        "upgraded": true,
+        "score": 0.5
+      },
+      {
+        "name": "BallLightning",
+        "upgraded": false,
+        "score": 6.25
+      },
+      {
+        "name": "BallLightning",
+        "upgraded": true,
+        "score": 8.0
+      },
+      {
+        "name": "Barrage",
+        "upgraded": false,
+        "score": 0.1
+      },
+      {
+        "name": "Barrage",
+        "upgraded": true,
+        "score": 2.1
+      },
+      {
+        "name": "BeamCell",
+        "upgraded": false,
+        "score": -0.75
+      },
+      {
+        "name": "BeamCell",
+        "upgraded": true,
+        "score": 1.0
+      },
+      {
+        "name": "BiasedCognition",
+        "upgraded": false,
+        "score": 3.7
+      },
+      {
+        "name": "BiasedCognition",
+        "upgraded": true,
+        "score": 4.7
+      },
+      {
+        "name": "BoostAway",
+        "upgraded": false,
+        "score": 0.0
+      },
+      {
+        "name": "BoostAway",
+        "upgraded": true,
+        "score": 1.0
+      },
+      {
+        "name": "BootSequence",
+        "upgraded": false,
+        "score": 4.5
+      },
+      {
+        "name": "BootSequence",
+        "upgraded": true,
+        "score": 5.5
+      },
+      {
+        "name": "Buffer",
+        "upgraded": false,
+        "score": 4.5
+      },
+      {
+        "name": "Buffer",
+        "upgraded": true,
+        "score": 7.5
+      },
+      {
+        "name": "BulkUp",
+        "upgraded": false,
+        "score": -5.0
+      },
+      {
+        "name": "BulkUp",
+        "upgraded": true,
+        "score": -3.5
+      },
+      {
+        "name": "Capacitor",
+        "upgraded": false,
+        "score": -5.3
+      },
+      {
+        "name": "Capacitor",
+        "upgraded": true,
+        "score": -4.3
+      },
+      {
+        "name": "Chaos",
+        "upgraded": false,
+        "score": -1.5
+      },
+      {
+        "name": "Chaos",
+        "upgraded": true,
+        "score": 1.5
+      },
+      {
+        "name": "ChargeBattery",
+        "upgraded": false,
+        "score": 3.5
+      },
+      {
+        "name": "ChargeBattery",
+        "upgraded": true,
+        "score": 4.5
+      },
+      {
+        "name": "Chill",
+        "upgraded": false,
+        "score": 4.5
+      },
+      {
+        "name": "Chill",
+        "upgraded": true,
+        "score": 6.5
+      },
+      {
+        "name": "Claw",
+        "upgraded": false,
+        "score": -4.25
+      },
+      {
+        "name": "Claw",
+        "upgraded": true,
+        "score": -3.0
+      },
+      {
+        "name": "ColdSnap",
+        "upgraded": false,
+        "score": 8.0
+      },
+      {
+        "name": "ColdSnap",
+        "upgraded": true,
+        "score": 9.75
+      },
+      {
+        "name": "Compact",
+        "upgraded": false,
+        "score": -2.0
+      },
+      {
+        "name": "Compact",
+        "upgraded": true,
+        "score": -1.0
+      },
+      {
+        "name": "CompileDriver",
+        "upgraded": false,
+        "score": 3.95
+      },
+      {
+        "name": "CompileDriver",
+        "upgraded": true,
+        "score": 5.7
+      },
+      {
+        "name": "ConsumingShadow",
+        "upgraded": false,
+        "score": 2.5
+      },
+      {
+        "name": "ConsumingShadow",
+        "upgraded": true,
+        "score": 3.5
+      },
+      {
+        "name": "Coolant",
+        "upgraded": false,
+        "score": -0.5
+      },
+      {
+        "name": "Coolant",
+        "upgraded": true,
+        "score": 1.0
+      },
+      {
+        "name": "Coolheaded",
+        "upgraded": false,
+        "score": 4.5
+      },
+      {
+        "name": "Coolheaded",
+        "upgraded": true,
+        "score": 7.2
+      },
+      {
+        "name": "CreativeAi",
+        "upgraded": false,
+        "score": -3.7
+      },
+      {
+        "name": "CreativeAi",
+        "upgraded": true,
+        "score": -0.5
+      },
+      {
+        "name": "Darkness",
+        "upgraded": false,
+        "score": 0.5
+      },
+      {
+        "name": "Darkness",
+        "upgraded": true,
+        "score": 2.5
+      },
+      {
+        "name": "DefendDefect",
+        "upgraded": false,
+        "score": -34.9
+      },
+      {
+        "name": "DefendDefect",
+        "upgraded": true,
+        "score": -33.9
+      },
+      {
+        "name": "Defragment",
+        "upgraded": false,
+        "score": 2.7
+      },
+      {
+        "name": "Defragment",
+        "upgraded": true,
+        "score": 5.7
+      },
+      {
+        "name": "DoubleEnergy",
+        "upgraded": false,
+        "score": -4.5
+      },
+      {
+        "name": "DoubleEnergy",
+        "upgraded": true,
+        "score": -2.5
+      },
+      {
+        "name": "Dualcast",
+        "upgraded": false,
+        "score": -4.15
+      },
+      {
+        "name": "Dualcast",
+        "upgraded": true,
+        "score": -2.15
+      },
+      {
+        "name": "EchoForm",
+        "upgraded": false,
+        "score": 1.3
+      },
+      {
+        "name": "EchoForm",
+        "upgraded": true,
+        "score": 1.8
+      },
+      {
+        "name": "EnergySurge",
+        "upgraded": false,
+        "score": null
+      },
+      {
+        "name": "EnergySurge",
+        "upgraded": true,
+        "score": null
+      },
+      {
+        "name": "Feral",
+        "upgraded": false,
+        "score": -6.5
+      },
+      {
+        "name": "Feral",
+        "upgraded": true,
+        "score": -4.5
+      },
+      {
+        "name": "FightThrough",
+        "upgraded": false,
+        "score": 2.0
+      },
+      {
+        "name": "FightThrough",
+        "upgraded": true,
+        "score": 3.5
+      },
+      {
+        "name": "FlakCannon",
+        "upgraded": false,
+        "score": -5.0
+      },
+      {
+        "name": "FlakCannon",
+        "upgraded": true,
+        "score": -2.25
+      },
+      {
+        "name": "FocusedStrike",
+        "upgraded": false,
+        "score": 2.45
+      },
+      {
+        "name": "FocusedStrike",
+        "upgraded": true,
+        "score": 4.45
+      },
+      {
+        "name": "Ftl",
+        "upgraded": false,
+        "score": 3.45
+      },
+      {
+        "name": "Ftl",
+        "upgraded": true,
+        "score": 4.7
+      },
+      {
+        "name": "Fusion",
+        "upgraded": false,
+        "score": -1.5
+      },
+      {
+        "name": "Fusion",
+        "upgraded": true,
+        "score": 0.5
+      },
+      {
+        "name": "GeneticAlgorithm",
+        "upgraded": false,
+        "score": 4.5
+      },
+      {
+        "name": "GeneticAlgorithm",
+        "upgraded": true,
+        "score": 5.5
+      },
+      {
+        "name": "Glacier",
+        "upgraded": false,
+        "score": 6.5
+      },
+      {
+        "name": "Glacier",
+        "upgraded": true,
+        "score": 7.5
+      },
+      {
+        "name": "Glasswork",
+        "upgraded": false,
+        "score": 6.7
+      },
+      {
+        "name": "Glasswork",
+        "upgraded": true,
+        "score": 7.7
+      },
+      {
+        "name": "GoForTheEyes",
+        "upgraded": false,
+        "score": 4.25
+      },
+      {
+        "name": "GoForTheEyes",
+        "upgraded": true,
+        "score": 6.5
+      },
+      {
+        "name": "GunkUp",
+        "upgraded": false,
+        "score": 2.0
+      },
+      {
+        "name": "GunkUp",
+        "upgraded": true,
+        "score": 3.25
+      },
+      {
+        "name": "Hailstorm",
+        "upgraded": false,
+        "score": -3.3
+      },
+      {
+        "name": "Hailstorm",
+        "upgraded": true,
+        "score": -1.8
+      },
+      {
+        "name": "HelixDrill",
+        "upgraded": false,
+        "score": -0.75
+      },
+      {
+        "name": "HelixDrill",
+        "upgraded": true,
+        "score": 1.75
+      },
+      {
+        "name": "Hibernate",
+        "upgraded": false,
+        "score": null
+      },
+      {
+        "name": "Hibernate",
+        "upgraded": true,
+        "score": null
+      },
+      {
+        "name": "Hologram",
+        "upgraded": false,
+        "score": 2.5
+      },
+      {
+        "name": "Hologram",
+        "upgraded": true,
+        "score": 4.5
+      },
+      {
+        "name": "Hotfix",
+        "upgraded": false,
+        "score": -3.8
+      },
+      {
+        "name": "Hotfix",
+        "upgraded": true,
+        "score": -2.8
+      },
+      {
+        "name": "Hyperbeam",
+        "upgraded": false,
+        "score": 9.7
+      },
+      {
+        "name": "Hyperbeam",
+        "upgraded": true,
+        "score": 11.2
+      },
+      {
+        "name": "IceLance",
+        "upgraded": false,
+        "score": 5.3
+      },
+      {
+        "name": "IceLance",
+        "upgraded": true,
+        "score": 6.3
+      },
+      {
+        "name": "Ignition",
+        "upgraded": false,
+        "score": null
+      },
+      {
+        "name": "Ignition",
+        "upgraded": true,
+        "score": null
+      },
+      {
+        "name": "ImitationLearning",
+        "upgraded": false,
+        "score": null
+      },
+      {
+        "name": "ImitationLearning",
+        "upgraded": true,
+        "score": null
+      },
+      {
+        "name": "Iteration",
+        "upgraded": false,
+        "score": -6.0
+      },
+      {
+        "name": "Iteration",
+        "upgraded": true,
+        "score": -4.5
+      },
+      {
+        "name": "Leap",
+        "upgraded": false,
+        "score": 2.5
+      },
+      {
+        "name": "Leap",
+        "upgraded": true,
+        "score": 3.5
+      },
+      {
+        "name": "LightningRod",
+        "upgraded": false,
+        "score": 4.5
+      },
+      {
+        "name": "LightningRod",
+        "upgraded": true,
+        "score": 5.5
+      },
+      {
+        "name": "Loop",
+        "upgraded": false,
+        "score": -2.15
+      },
+      {
+        "name": "Loop",
+        "upgraded": true,
+        "score": -0.15
+      },
+      {
+        "name": "MachineLearning",
+        "upgraded": false,
+        "score": -0.5
+      },
+      {
+        "name": "MachineLearning",
+        "upgraded": true,
+        "score": -0.5
+      },
+      {
+        "name": "MeteorStrike",
+        "upgraded": false,
+        "score": -12.5
+      },
+      {
+        "name": "MeteorStrike",
+        "upgraded": true,
+        "score": -11.5
+      },
+      {
+        "name": "Modded",
+        "upgraded": false,
+        "score": -2.3
+      },
+      {
+        "name": "Modded",
+        "upgraded": true,
+        "score": -0.6
+      },
+      {
+        "name": "MomentumStrike",
+        "upgraded": false,
+        "score": 6.25
+      },
+      {
+        "name": "MomentumStrike",
+        "upgraded": true,
+        "score": 7.5
+      },
+      {
+        "name": "MultiCast",
+        "upgraded": false,
+        "score": -1.5
+      },
+      {
+        "name": "MultiCast",
+        "upgraded": true,
+        "score": 0.0
+      },
+      {
+        "name": "Null",
+        "upgraded": false,
+        "score": 6.0
+      },
+      {
+        "name": "Null",
+        "upgraded": true,
+        "score": 8.0
+      },
+      {
+        "name": "OneForAll",
+        "upgraded": false,
+        "score": null
+      },
+      {
+        "name": "OneForAll",
+        "upgraded": true,
+        "score": null
+      },
+      {
+        "name": "Overclock",
+        "upgraded": false,
+        "score": -0.8
+      },
+      {
+        "name": "Overclock",
+        "upgraded": true,
+        "score": 0.9
+      },
+      {
+        "name": "Quadcast",
+        "upgraded": false,
+        "score": 1.5
+      },
+      {
+        "name": "Quadcast",
+        "upgraded": true,
+        "score": 3.5
+      },
+      {
+        "name": "Rainbow",
+        "upgraded": false,
+        "score": 3.5
+      },
+      {
+        "name": "Rainbow",
+        "upgraded": true,
+        "score": 4.5
+      },
+      {
+        "name": "Reboot",
+        "upgraded": false,
+        "score": 2.9
+      },
+      {
+        "name": "Reboot",
+        "upgraded": true,
+        "score": 3.9
+      },
+      {
+        "name": "Refract",
+        "upgraded": false,
+        "score": 4.0
+      },
+      {
+        "name": "Refract",
+        "upgraded": true,
+        "score": 5.5
+      },
+      {
+        "name": "RocketPunch",
+        "upgraded": false,
+        "score": 1.0
+      },
+      {
+        "name": "RocketPunch",
+        "upgraded": true,
+        "score": 2.7
+      },
+      {
+        "name": "Scavenge",
+        "upgraded": false,
+        "score": 0.7
+      },
+      {
+        "name": "Scavenge",
+        "upgraded": true,
+        "score": 1.7
+      },
+      {
+        "name": "Scrape",
+        "upgraded": false,
+        "score": -3.75
+      },
+      {
+        "name": "Scrape",
+        "upgraded": true,
+        "score": -2.0
+      },
+      {
+        "name": "ShadowShield",
+        "upgraded": false,
+        "score": 3.5
+      },
+      {
+        "name": "ShadowShield",
+        "upgraded": true,
+        "score": 4.5
+      },
+      {
+        "name": "Shatter",
+        "upgraded": false,
+        "score": 5.45
+      },
+      {
+        "name": "Shatter",
+        "upgraded": true,
+        "score": 7.45
+      },
+      {
+        "name": "SignalBoost",
+        "upgraded": false,
+        "score": -6.5
+      },
+      {
+        "name": "SignalBoost",
+        "upgraded": true,
+        "score": -4.5
+      },
+      {
+        "name": "Skim",
+        "upgraded": false,
+        "score": 0.9
+      },
+      {
+        "name": "Skim",
+        "upgraded": true,
+        "score": 2.4
+      },
+      {
+        "name": "Smokestack",
+        "upgraded": false,
+        "score": -5.8
+      },
+      {
+        "name": "Smokestack",
+        "upgraded": true,
+        "score": -4.3
+      },
+      {
+        "name": "Spinner",
+        "upgraded": false,
+        "score": 2.7
+      },
+      {
+        "name": "Spinner",
+        "upgraded": true,
+        "score": 4.2
+      },
+      {
+        "name": "Storm",
+        "upgraded": false,
+        "score": -6.5
+      },
+      {
+        "name": "Storm",
+        "upgraded": true,
+        "score": -4.5
+      },
+      {
+        "name": "StrikeDefect",
+        "upgraded": false,
+        "score": -34.9
+      },
+      {
+        "name": "StrikeDefect",
+        "upgraded": true,
+        "score": -33.9
+      },
+      {
+        "name": "Subroutine",
+        "upgraded": false,
+        "score": -7.5
+      },
+      {
+        "name": "Subroutine",
+        "upgraded": true,
+        "score": -5.5
+      },
+      {
+        "name": "Sunder",
+        "upgraded": false,
+        "score": 6.3
+      },
+      {
+        "name": "Sunder",
+        "upgraded": true,
+        "score": 7.8
+      },
+      {
+        "name": "Supercritical",
+        "upgraded": false,
+        "score": 0.5
+      },
+      {
+        "name": "Supercritical",
+        "upgraded": true,
+        "score": 2.0
+      },
+      {
+        "name": "SweepingBeam",
+        "upgraded": false,
+        "score": 6.2
+      },
+      {
+        "name": "SweepingBeam",
+        "upgraded": true,
+        "score": 7.95
+      },
+      {
+        "name": "Synchronize",
+        "upgraded": false,
+        "score": -6.8
+      },
+      {
+        "name": "Synchronize",
+        "upgraded": true,
+        "score": -4.8
+      },
+      {
+        "name": "Synthesis",
+        "upgraded": false,
+        "score": 0.5
+      },
+      {
+        "name": "Synthesis",
+        "upgraded": true,
+        "score": 1.5
+      },
+      {
+        "name": "Tempest",
+        "upgraded": false,
+        "score": -2.5
+      },
+      {
+        "name": "Tempest",
+        "upgraded": true,
+        "score": -1.0
+      },
+      {
+        "name": "TeslaCoil",
+        "upgraded": false,
+        "score": -2.55
+      },
+      {
+        "name": "TeslaCoil",
+        "upgraded": true,
+        "score": -0.3
+      },
+      {
+        "name": "Thunder",
+        "upgraded": false,
+        "score": -4.8
+      },
+      {
+        "name": "Thunder",
+        "upgraded": true,
+        "score": -3.3
+      },
+      {
+        "name": "TrashToTreasure",
+        "upgraded": false,
+        "score": -6.0
+      },
+      {
+        "name": "TrashToTreasure",
+        "upgraded": true,
+        "score": -4.0
+      },
+      {
+        "name": "Turbo",
+        "upgraded": false,
+        "score": -3.0
+      },
+      {
+        "name": "Turbo",
+        "upgraded": true,
+        "score": -1.5
+      },
+      {
+        "name": "Uproar",
+        "upgraded": false,
+        "score": 2.0
+      },
+      {
+        "name": "Uproar",
+        "upgraded": true,
+        "score": 3.5
+      },
+      {
+        "name": "Voltaic",
+        "upgraded": false,
+        "score": -7.5
+      },
+      {
+        "name": "Voltaic",
+        "upgraded": true,
+        "score": -6.0
+      },
+      {
+        "name": "WhiteNoise",
+        "upgraded": false,
+        "score": 0.5
+      },
+      {
+        "name": "WhiteNoise",
+        "upgraded": true,
+        "score": 2.0
+      },
+      {
+        "name": "Zap",
+        "upgraded": false,
+        "score": -4.15
+      },
+      {
+        "name": "Zap",
+        "upgraded": true,
+        "score": -2.15
+      }
+    ]
+  },
+  {
+    "state": {
+      "character": "Defect",
+      "playerCount": 1,
+      "hp": 25,
+      "maxHp": 75,
+      "act": 2,
+      "energy": 3,
+      "deck": [
+        {
+          "id": "CARD.STRIKE_DEFECT",
+          "className": "StrikeDefect",
+          "name": "StrikeDefect",
+          "type": "Attack",
+          "rarity": "Basic",
+          "description": "",
+          "cost": 1,
+          "costsX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {
+            "Damage": 6
+          }
+        },
+        {
+          "id": "CARD.STRIKE_DEFECT",
+          "className": "StrikeDefect",
+          "name": "StrikeDefect",
+          "type": "Attack",
+          "rarity": "Basic",
+          "description": "",
+          "cost": 1,
+          "costsX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {
+            "Damage": 6
+          }
+        },
+        {
+          "id": "CARD.STRIKE_DEFECT",
+          "className": "StrikeDefect",
+          "name": "StrikeDefect",
+          "type": "Attack",
+          "rarity": "Basic",
+          "description": "",
+          "cost": 1,
+          "costsX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {
+            "Damage": 6
+          }
+        },
+        {
+          "id": "CARD.STRIKE_DEFECT",
+          "className": "StrikeDefect",
+          "name": "StrikeDefect",
+          "type": "Attack",
+          "rarity": "Basic",
+          "description": "",
+          "cost": 1,
+          "costsX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {
+            "Damage": 6
+          }
+        },
+        {
+          "id": "CARD.DEFEND_DEFECT",
+          "className": "DefendDefect",
+          "name": "DefendDefect",
+          "type": "Skill",
+          "rarity": "Basic",
+          "description": "",
+          "cost": 1,
+          "costsX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {
+            "Block": 5
+          }
+        },
+        {
+          "id": "CARD.DEFEND_DEFECT",
+          "className": "DefendDefect",
+          "name": "DefendDefect",
+          "type": "Skill",
+          "rarity": "Basic",
+          "description": "",
+          "cost": 1,
+          "costsX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {
+            "Block": 5
+          }
+        },
+        {
+          "id": "CARD.DEFEND_DEFECT",
+          "className": "DefendDefect",
+          "name": "DefendDefect",
+          "type": "Skill",
+          "rarity": "Basic",
+          "description": "",
+          "cost": 1,
+          "costsX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {
+            "Block": 5
+          }
+        },
+        {
+          "id": "CARD.DEFEND_DEFECT",
+          "className": "DefendDefect",
+          "name": "DefendDefect",
+          "type": "Skill",
+          "rarity": "Basic",
+          "description": "",
+          "cost": 1,
+          "costsX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {
+            "Block": 5
+          }
+        },
+        {
+          "id": "CARD.ZAP",
+          "className": "Zap",
+          "name": "Zap",
+          "type": "Skill",
+          "rarity": "Basic",
+          "description": "",
+          "cost": 1,
+          "costsX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {}
+        },
+        {
+          "id": "CARD.DUALCAST",
+          "className": "Dualcast",
+          "name": "Dualcast",
+          "type": "Skill",
+          "rarity": "Basic",
+          "description": "",
+          "cost": 1,
+          "costsX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {}
+        },
+        {
+          "id": "CARD.GLACIER",
+          "className": "Glacier",
+          "name": "Glacier",
+          "type": "Skill",
+          "rarity": "Uncommon",
+          "description": "",
+          "cost": 2,
+          "costsX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {
+            "Block": 6
+          }
+        },
+        {
+          "id": "CARD.DEFRAGMENT",
+          "className": "Defragment",
+          "name": "Defragment",
+          "type": "Power",
+          "rarity": "Rare",
+          "description": "",
+          "cost": 1,
+          "costsX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {
+            "FocusPower": 1
+          }
+        },
+        {
+          "id": "CARD.COOLHEADED",
+          "className": "Coolheaded",
+          "name": "Coolheaded",
+          "type": "Skill",
+          "rarity": "Common",
+          "description": "",
+          "cost": 1,
+          "costsX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {
+            "Cards": 1
+          }
+        },
+        {
+          "id": "CARD.COLD_SNAP",
+          "className": "ColdSnap",
+          "name": "ColdSnap",
+          "type": "Attack",
+          "rarity": "Common",
+          "description": "",
+          "cost": 1,
+          "costsX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {
+            "Damage": 6
+          }
+        }
+      ],
+      "relics": [
+        "CRACKED_CORE"
+      ]
+    },
+    "scores": [
+      {
+        "name": "AdaptiveStrike",
+        "upgraded": false,
+        "score": 3.938
+      },
+      {
+        "name": "AdaptiveStrike",
+        "upgraded": true,
+        "score": 4.938
+      },
+      {
+        "name": "AllForOne",
+        "upgraded": false,
+        "score": -0.469
+      },
+      {
+        "name": "AllForOne",
+        "upgraded": true,
+        "score": 0.938
+      },
+      {
+        "name": "BallLightning",
+        "upgraded": false,
+        "score": 4.922
+      },
+      {
+        "name": "BallLightning",
+        "upgraded": true,
+        "score": 6.531
+      },
+      {
+        "name": "Barrage",
+        "upgraded": false,
+        "score": 1.516
+      },
+      {
+        "name": "Barrage",
+        "upgraded": true,
+        "score": 3.422
+      },
+      {
+        "name": "BeamCell",
+        "upgraded": false,
+        "score": -1.441
+      },
+      {
+        "name": "BeamCell",
+        "upgraded": true,
+        "score": 0.262
+      },
+      {
+        "name": "BiasedCognition",
+        "upgraded": false,
+        "score": 7.1
+      },
+      {
+        "name": "BiasedCognition",
+        "upgraded": true,
+        "score": 8.1
+      },
+      {
+        "name": "BoostAway",
+        "upgraded": false,
+        "score": -2.21
+      },
+      {
+        "name": "BoostAway",
+        "upgraded": true,
+        "score": -1.21
+      },
+      {
+        "name": "BootSequence",
+        "upgraded": false,
+        "score": 3.29
+      },
+      {
+        "name": "BootSequence",
+        "upgraded": true,
+        "score": 4.29
+      },
+      {
+        "name": "Buffer",
+        "upgraded": false,
+        "score": 4.29
+      },
+      {
+        "name": "Buffer",
+        "upgraded": true,
+        "score": 7.29
+      },
+      {
+        "name": "BulkUp",
+        "upgraded": false,
+        "score": -8.05
+      },
+      {
+        "name": "BulkUp",
+        "upgraded": true,
+        "score": -6.55
+      },
+      {
+        "name": "Capacitor",
+        "upgraded": false,
+        "score": -1.9
+      },
+      {
+        "name": "Capacitor",
+        "upgraded": true,
+        "score": -0.9
+      },
+      {
+        "name": "Chaos",
+        "upgraded": false,
+        "score": -1.5
+      },
+      {
+        "name": "Chaos",
+        "upgraded": true,
+        "score": 1.5
+      },
+      {
+        "name": "ChargeBattery",
+        "upgraded": false,
+        "score": 1.74
+      },
+      {
+        "name": "ChargeBattery",
+        "upgraded": true,
+        "score": 2.74
+      },
+      {
+        "name": "Chill",
+        "upgraded": false,
+        "score": 4.29
+      },
+      {
+        "name": "Chill",
+        "upgraded": true,
+        "score": 6.29
+      },
+      {
+        "name": "Claw",
+        "upgraded": false,
+        "score": -4.391
+      },
+      {
+        "name": "Claw",
+        "upgraded": true,
+        "score": -3.188
+      },
+      {
+        "name": "ColdSnap",
+        "upgraded": false,
+        "score": 2.859
+      },
+      {
+        "name": "ColdSnap",
+        "upgraded": true,
+        "score": 4.468
+      },
+      {
+        "name": "Compact",
+        "upgraded": false,
+        "score": -3.21
+      },
+      {
+        "name": "Compact",
+        "upgraded": true,
+        "score": -2.21
+      },
+      {
+        "name": "CompileDriver",
+        "upgraded": false,
+        "score": 4.322
+      },
+      {
+        "name": "CompileDriver",
+        "upgraded": true,
+        "score": 5.931
+      },
+      {
+        "name": "ConsumingShadow",
+        "upgraded": false,
+        "score": 4.5
+      },
+      {
+        "name": "ConsumingShadow",
+        "upgraded": true,
+        "score": 5.5
+      },
+      {
+        "name": "Coolant",
+        "upgraded": false,
+        "score": 0.29
+      },
+      {
+        "name": "Coolant",
+        "upgraded": true,
+        "score": 1.79
+      },
+      {
+        "name": "Coolheaded",
+        "upgraded": false,
+        "score": 1.84
+      },
+      {
+        "name": "Coolheaded",
+        "upgraded": true,
+        "score": 4.74
+      },
+      {
+        "name": "CreativeAi",
+        "upgraded": false,
+        "score": -1.7
+      },
+      {
+        "name": "CreativeAi",
+        "upgraded": true,
+        "score": 1.5
+      },
+      {
+        "name": "Darkness",
+        "upgraded": false,
+        "score": 2.5
+      },
+      {
+        "name": "Darkness",
+        "upgraded": true,
+        "score": 4.5
+      },
+      {
+        "name": "DefendDefect",
+        "upgraded": false,
+        "score": -34.9
+      },
+      {
+        "name": "DefendDefect",
+        "upgraded": true,
+        "score": -33.9
+      },
+      {
+        "name": "Defragment",
+        "upgraded": false,
+        "score": 2.95
+      },
+      {
+        "name": "Defragment",
+        "upgraded": true,
+        "score": 5.95
+      },
+      {
+        "name": "DoubleEnergy",
+        "upgraded": false,
+        "score": -3.05
+      },
+      {
+        "name": "DoubleEnergy",
+        "upgraded": true,
+        "score": -1.05
+      },
+      {
+        "name": "Dualcast",
+        "upgraded": false,
+        "score": -5.15
+      },
+      {
+        "name": "Dualcast",
+        "upgraded": true,
+        "score": -3.15
+      },
+      {
+        "name": "EchoForm",
+        "upgraded": false,
+        "score": 3.3
+      },
+      {
+        "name": "EchoForm",
+        "upgraded": true,
+        "score": 3.8
+      },
+      {
+        "name": "EnergySurge",
+        "upgraded": false,
+        "score": null
+      },
+      {
+        "name": "EnergySurge",
+        "upgraded": true,
+        "score": null
+      },
+      {
+        "name": "Feral",
+        "upgraded": false,
+        "score": -5.5
+      },
+      {
+        "name": "Feral",
+        "upgraded": true,
+        "score": -3.5
+      },
+      {
+        "name": "FightThrough",
+        "upgraded": false,
+        "score": -0.21
+      },
+      {
+        "name": "FightThrough",
+        "upgraded": true,
+        "score": 1.29
+      },
+      {
+        "name": "FlakCannon",
+        "upgraded": false,
+        "score": -4.375
+      },
+      {
+        "name": "FlakCannon",
+        "upgraded": true,
+        "score": -1.766
+      },
+      {
+        "name": "FocusedStrike",
+        "upgraded": false,
+        "score": 4.928
+      },
+      {
+        "name": "FocusedStrike",
+        "upgraded": true,
+        "score": 6.834
+      },
+      {
+        "name": "Ftl",
+        "upgraded": false,
+        "score": 2.216
+      },
+      {
+        "name": "Ftl",
+        "upgraded": true,
+        "score": 3.419
+      },
+      {
+        "name": "Fusion",
+        "upgraded": false,
+        "score": 0.95
+      },
+      {
+        "name": "Fusion",
+        "upgraded": true,
+        "score": 2.95
+      },
+      {
+        "name": "GeneticAlgorithm",
+        "upgraded": false,
+        "score": -0.71
+      },
+      {
+        "name": "GeneticAlgorithm",
+        "upgraded": true,
+        "score": 0.29
+      },
+      {
+        "name": "Glacier",
+        "upgraded": false,
+        "score": 3.64
+      },
+      {
+        "name": "Glacier",
+        "upgraded": true,
+        "score": 4.64
+      },
+      {
+        "name": "Glasswork",
+        "upgraded": false,
+        "score": 4.49
+      },
+      {
+        "name": "Glasswork",
+        "upgraded": true,
+        "score": 5.49
+      },
+      {
+        "name": "GoForTheEyes",
+        "upgraded": false,
+        "score": 1.899
+      },
+      {
+        "name": "GoForTheEyes",
+        "upgraded": true,
+        "score": 4.102
+      },
+      {
+        "name": "GunkUp",
+        "upgraded": false,
+        "score": -0.188
+      },
+      {
+        "name": "GunkUp",
+        "upgraded": true,
+        "score": 1.016
+      },
+      {
+        "name": "Hailstorm",
+        "upgraded": false,
+        "score": 1.7
+      },
+      {
+        "name": "Hailstorm",
+        "upgraded": true,
+        "score": 3.2
+      },
+      {
+        "name": "HelixDrill",
+        "upgraded": false,
+        "score": 1.109
+      },
+      {
+        "name": "HelixDrill",
+        "upgraded": true,
+        "score": 3.516
+      },
+      {
+        "name": "Hibernate",
+        "upgraded": false,
+        "score": null
+      },
+      {
+        "name": "Hibernate",
+        "upgraded": true,
+        "score": null
+      },
+      {
+        "name": "Hologram",
+        "upgraded": false,
+        "score": 2.29
+      },
+      {
+        "name": "Hologram",
+        "upgraded": true,
+        "score": 4.29
+      },
+      {
+        "name": "Hotfix",
+        "upgraded": false,
+        "score": 0.1
+      },
+      {
+        "name": "Hotfix",
+        "upgraded": true,
+        "score": 1.1
+      },
+      {
+        "name": "Hyperbeam",
+        "upgraded": false,
+        "score": 6.338
+      },
+      {
+        "name": "Hyperbeam",
+        "upgraded": true,
+        "score": 7.838
+      },
+      {
+        "name": "IceLance",
+        "upgraded": false,
+        "score": 5.528
+      },
+      {
+        "name": "IceLance",
+        "upgraded": true,
+        "score": 6.528
+      },
+      {
+        "name": "Ignition",
+        "upgraded": false,
+        "score": null
+      },
+      {
+        "name": "Ignition",
+        "upgraded": true,
+        "score": null
+      },
+      {
+        "name": "ImitationLearning",
+        "upgraded": false,
+        "score": null
+      },
+      {
+        "name": "ImitationLearning",
+        "upgraded": true,
+        "score": null
+      },
+      {
+        "name": "Iteration",
+        "upgraded": false,
+        "score": -5.0
+      },
+      {
+        "name": "Iteration",
+        "upgraded": true,
+        "score": -3.5
+      },
+      {
+        "name": "Leap",
+        "upgraded": false,
+        "score": -0.71
+      },
+      {
+        "name": "Leap",
+        "upgraded": true,
+        "score": 0.29
+      },
+      {
+        "name": "LightningRod",
+        "upgraded": false,
+        "score": 3.29
+      },
+      {
+        "name": "LightningRod",
+        "upgraded": true,
+        "score": 4.29
+      },
+      {
+        "name": "Loop",
+        "upgraded": false,
+        "score": 2.5
+      },
+      {
+        "name": "Loop",
+        "upgraded": true,
+        "score": 4.5
+      },
+      {
+        "name": "MachineLearning",
+        "upgraded": false,
+        "score": 0.5
+      },
+      {
+        "name": "MachineLearning",
+        "upgraded": true,
+        "score": 0.5
+      },
+      {
+        "name": "MeteorStrike",
+        "upgraded": false,
+        "score": -11.062
+      },
+      {
+        "name": "MeteorStrike",
+        "upgraded": true,
+        "score": -10.062
+      },
+      {
+        "name": "Modded",
+        "upgraded": false,
+        "score": 1.1
+      },
+      {
+        "name": "Modded",
+        "upgraded": true,
+        "score": 3.0
+      },
+      {
+        "name": "MomentumStrike",
+        "upgraded": false,
+        "score": 3.734
+      },
+      {
+        "name": "MomentumStrike",
+        "upgraded": true,
+        "score": 4.938
+      },
+      {
+        "name": "MultiCast",
+        "upgraded": false,
+        "score": -0.5
+      },
+      {
+        "name": "MultiCast",
+        "upgraded": true,
+        "score": 1.0
+      },
+      {
+        "name": "Null",
+        "upgraded": false,
+        "score": 6.321
+      },
+      {
+        "name": "Null",
+        "upgraded": true,
+        "score": 8.228
+      },
+      {
+        "name": "OneForAll",
+        "upgraded": false,
+        "score": null
+      },
+      {
+        "name": "OneForAll",
+        "upgraded": true,
+        "score": null
+      },
+      {
+        "name": "Overclock",
+        "upgraded": false,
+        "score": 0.4
+      },
+      {
+        "name": "Overclock",
+        "upgraded": true,
+        "score": 2.3
+      },
+      {
+        "name": "Quadcast",
+        "upgraded": false,
+        "score": 2.5
+      },
+      {
+        "name": "Quadcast",
+        "upgraded": true,
+        "score": 4.5
+      },
+      {
+        "name": "Rainbow",
+        "upgraded": false,
+        "score": 4.29
+      },
+      {
+        "name": "Rainbow",
+        "upgraded": true,
+        "score": 5.29
+      },
+      {
+        "name": "Reboot",
+        "upgraded": false,
+        "score": 4.3
+      },
+      {
+        "name": "Reboot",
+        "upgraded": true,
+        "score": 5.3
+      },
+      {
+        "name": "Refract",
+        "upgraded": false,
+        "score": 3.531
+      },
+      {
+        "name": "Refract",
+        "upgraded": true,
+        "score": 4.938
+      },
+      {
+        "name": "RocketPunch",
+        "upgraded": false,
+        "score": -0.562
+      },
+      {
+        "name": "RocketPunch",
+        "upgraded": true,
+        "score": 1.338
+      },
+      {
+        "name": "Scavenge",
+        "upgraded": false,
+        "score": 2.15
+      },
+      {
+        "name": "Scavenge",
+        "upgraded": true,
+        "score": 3.15
+      },
+      {
+        "name": "Scrape",
+        "upgraded": false,
+        "score": -4.078
+      },
+      {
+        "name": "Scrape",
+        "upgraded": true,
+        "score": -2.469
+      },
+      {
+        "name": "ShadowShield",
+        "upgraded": false,
+        "score": 4.29
+      },
+      {
+        "name": "ShadowShield",
+        "upgraded": true,
+        "score": 5.29
+      },
+      {
+        "name": "Shatter",
+        "upgraded": false,
+        "score": 5.322
+      },
+      {
+        "name": "Shatter",
+        "upgraded": true,
+        "score": 7.134
+      },
+      {
+        "name": "SignalBoost",
+        "upgraded": false,
+        "score": -4.3
+      },
+      {
+        "name": "SignalBoost",
+        "upgraded": true,
+        "score": -2.3
+      },
+      {
+        "name": "Skim",
+        "upgraded": false,
+        "score": 2.3
+      },
+      {
+        "name": "Skim",
+        "upgraded": true,
+        "score": 3.8
+      },
+      {
+        "name": "Smokestack",
+        "upgraded": false,
+        "score": -4.8
+      },
+      {
+        "name": "Smokestack",
+        "upgraded": true,
+        "score": -3.3
+      },
+      {
+        "name": "Spinner",
+        "upgraded": false,
+        "score": 4.7
+      },
+      {
+        "name": "Spinner",
+        "upgraded": true,
+        "score": 6.2
+      },
+      {
+        "name": "Storm",
+        "upgraded": false,
+        "score": -4.3
+      },
+      {
+        "name": "Storm",
+        "upgraded": true,
+        "score": -2.3
+      },
+      {
+        "name": "StrikeDefect",
+        "upgraded": false,
+        "score": -34.9
+      },
+      {
+        "name": "StrikeDefect",
+        "upgraded": true,
+        "score": -33.9
+      },
+      {
+        "name": "Subroutine",
+        "upgraded": false,
+        "score": -4.85
+      },
+      {
+        "name": "Subroutine",
+        "upgraded": true,
+        "score": -2.85
+      },
+      {
+        "name": "Sunder",
+        "upgraded": false,
+        "score": 3.738
+      },
+      {
+        "name": "Sunder",
+        "upgraded": true,
+        "score": 5.238
+      },
+      {
+        "name": "Supercritical",
+        "upgraded": false,
+        "score": 1.95
+      },
+      {
+        "name": "Supercritical",
+        "upgraded": true,
+        "score": 3.45
+      },
+      {
+        "name": "SweepingBeam",
+        "upgraded": false,
+        "score": 3.919
+      },
+      {
+        "name": "SweepingBeam",
+        "upgraded": true,
+        "score": 5.528
+      },
+      {
+        "name": "Synchronize",
+        "upgraded": false,
+        "score": -0.9
+      },
+      {
+        "name": "Synchronize",
+        "upgraded": true,
+        "score": 1.1
+      },
+      {
+        "name": "Synthesis",
+        "upgraded": false,
+        "score": 0.138
+      },
+      {
+        "name": "Synthesis",
+        "upgraded": true,
+        "score": 1.138
+      },
+      {
+        "name": "Tempest",
+        "upgraded": false,
+        "score": -0.5
+      },
+      {
+        "name": "Tempest",
+        "upgraded": true,
+        "score": 1.0
+      },
+      {
+        "name": "TeslaCoil",
+        "upgraded": false,
+        "score": -2.691
+      },
+      {
+        "name": "TeslaCoil",
+        "upgraded": true,
+        "score": -0.488
+      },
+      {
+        "name": "Thunder",
+        "upgraded": false,
+        "score": -3.8
+      },
+      {
+        "name": "Thunder",
+        "upgraded": true,
+        "score": -2.3
+      },
+      {
+        "name": "TrashToTreasure",
+        "upgraded": false,
+        "score": -4.0
+      },
+      {
+        "name": "TrashToTreasure",
+        "upgraded": true,
+        "score": -2.0
+      },
+      {
+        "name": "Turbo",
+        "upgraded": false,
+        "score": -1.55
+      },
+      {
+        "name": "Turbo",
+        "upgraded": true,
+        "score": -0.05
+      },
+      {
+        "name": "Uproar",
+        "upgraded": false,
+        "score": 0.719
+      },
+      {
+        "name": "Uproar",
+        "upgraded": true,
+        "score": 2.125
+      },
+      {
+        "name": "Voltaic",
+        "upgraded": false,
+        "score": -5.5
+      },
+      {
+        "name": "Voltaic",
+        "upgraded": true,
+        "score": -4.0
+      },
+      {
+        "name": "WhiteNoise",
+        "upgraded": false,
+        "score": 0.5
+      },
+      {
+        "name": "WhiteNoise",
+        "upgraded": true,
+        "score": 2.0
+      },
+      {
+        "name": "Zap",
+        "upgraded": false,
+        "score": -4.15
+      },
+      {
+        "name": "Zap",
+        "upgraded": true,
+        "score": -2.15
+      }
+    ]
+  },
+  {
+    "state": {
+      "character": "Defect",
+      "playerCount": 1,
+      "hp": 60,
+      "maxHp": 75,
+      "act": 2,
+      "energy": 3,
+      "deck": [
+        {
+          "id": "CARD.STRIKE_DEFECT",
+          "className": "StrikeDefect",
+          "name": "StrikeDefect",
+          "type": "Attack",
+          "rarity": "Basic",
+          "description": "",
+          "cost": 1,
+          "costsX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {
+            "Damage": 6
+          }
+        },
+        {
+          "id": "CARD.STRIKE_DEFECT",
+          "className": "StrikeDefect",
+          "name": "StrikeDefect",
+          "type": "Attack",
+          "rarity": "Basic",
+          "description": "",
+          "cost": 1,
+          "costsX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {
+            "Damage": 6
+          }
+        },
+        {
+          "id": "CARD.STRIKE_DEFECT",
+          "className": "StrikeDefect",
+          "name": "StrikeDefect",
+          "type": "Attack",
+          "rarity": "Basic",
+          "description": "",
+          "cost": 1,
+          "costsX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {
+            "Damage": 6
+          }
+        },
+        {
+          "id": "CARD.STRIKE_DEFECT",
+          "className": "StrikeDefect",
+          "name": "StrikeDefect",
+          "type": "Attack",
+          "rarity": "Basic",
+          "description": "",
+          "cost": 1,
+          "costsX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {
+            "Damage": 6
+          }
+        },
+        {
+          "id": "CARD.DEFEND_DEFECT",
+          "className": "DefendDefect",
+          "name": "DefendDefect",
+          "type": "Skill",
+          "rarity": "Basic",
+          "description": "",
+          "cost": 1,
+          "costsX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {
+            "Block": 5
+          }
+        },
+        {
+          "id": "CARD.DEFEND_DEFECT",
+          "className": "DefendDefect",
+          "name": "DefendDefect",
+          "type": "Skill",
+          "rarity": "Basic",
+          "description": "",
+          "cost": 1,
+          "costsX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {
+            "Block": 5
+          }
+        },
+        {
+          "id": "CARD.DEFEND_DEFECT",
+          "className": "DefendDefect",
+          "name": "DefendDefect",
+          "type": "Skill",
+          "rarity": "Basic",
+          "description": "",
+          "cost": 1,
+          "costsX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {
+            "Block": 5
+          }
+        },
+        {
+          "id": "CARD.DEFEND_DEFECT",
+          "className": "DefendDefect",
+          "name": "DefendDefect",
+          "type": "Skill",
+          "rarity": "Basic",
+          "description": "",
+          "cost": 1,
+          "costsX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {
+            "Block": 5
+          }
+        },
+        {
+          "id": "CARD.ZAP",
+          "className": "Zap",
+          "name": "Zap",
+          "type": "Skill",
+          "rarity": "Basic",
+          "description": "",
+          "cost": 1,
+          "costsX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {}
+        },
+        {
+          "id": "CARD.DUALCAST",
+          "className": "Dualcast",
+          "name": "Dualcast",
+          "type": "Skill",
+          "rarity": "Basic",
+          "description": "",
+          "cost": 1,
+          "costsX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {}
+        },
+        {
+          "id": "CARD.FIGHT_THROUGH",
+          "className": "FightThrough",
+          "name": "FightThrough",
+          "type": "Skill",
+          "rarity": "Uncommon",
+          "description": "",
+          "cost": 1,
+          "costsX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {
+            "Block": 13
+          }
+        },
+        {
+          "id": "CARD.GUNK_UP",
+          "className": "GunkUp",
+          "name": "GunkUp",
+          "type": "Attack",
+          "rarity": "Common",
+          "description": "",
+          "cost": 1,
+          "costsX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {
+            "Damage": 4,
+            "Repeat": 3
+          }
+        },
+        {
+          "id": "CARD.OVERCLOCK",
+          "className": "Overclock",
+          "name": "Overclock",
+          "type": "Skill",
+          "rarity": "Uncommon",
+          "description": "",
+          "cost": 0,
+          "costsX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {
+            "Cards": 2
+          }
+        },
+        {
+          "id": "CARD.TRASH_TO_TREASURE",
+          "className": "TrashToTreasure",
+          "name": "TrashToTreasure",
+          "type": "Power",
+          "rarity": "Rare",
+          "description": "",
+          "cost": 1,
+          "costsX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {}
+        }
+      ],
+      "relics": [
+        "CRACKED_CORE"
+      ]
+    },
+    "scores": [
+      {
+        "name": "AdaptiveStrike",
+        "upgraded": false,
+        "score": 4.125
+      },
+      {
+        "name": "AdaptiveStrike",
+        "upgraded": true,
+        "score": 5.125
+      },
+      {
+        "name": "AllForOne",
+        "upgraded": false,
+        "score": 0.838
+      },
+      {
+        "name": "AllForOne",
+        "upgraded": true,
+        "score": 2.275
+      },
+      {
+        "name": "BallLightning",
+        "upgraded": false,
+        "score": 4.031
+      },
+      {
+        "name": "BallLightning",
+        "upgraded": true,
+        "score": 5.688
+      },
+      {
+        "name": "Barrage",
+        "upgraded": false,
+        "score": -1.056
+      },
+      {
+        "name": "Barrage",
+        "upgraded": true,
+        "score": 0.881
+      },
+      {
+        "name": "BeamCell",
+        "upgraded": false,
+        "score": -1.544
+      },
+      {
+        "name": "BeamCell",
+        "upgraded": true,
+        "score": 0.175
+      },
+      {
+        "name": "BiasedCognition",
+        "upgraded": false,
+        "score": 4.7
+      },
+      {
+        "name": "BiasedCognition",
+        "upgraded": true,
+        "score": 5.7
+      },
+      {
+        "name": "BoostAway",
+        "upgraded": false,
+        "score": -0.6
+      },
+      {
+        "name": "BoostAway",
+        "upgraded": true,
+        "score": 0.4
+      },
+      {
+        "name": "BootSequence",
+        "upgraded": false,
+        "score": 3.9
+      },
+      {
+        "name": "BootSequence",
+        "upgraded": true,
+        "score": 4.9
+      },
+      {
+        "name": "Buffer",
+        "upgraded": false,
+        "score": 4.9
+      },
+      {
+        "name": "Buffer",
+        "upgraded": true,
+        "score": 7.9
+      },
+      {
+        "name": "BulkUp",
+        "upgraded": false,
+        "score": -4.7
+      },
+      {
+        "name": "BulkUp",
+        "upgraded": true,
+        "score": -3.2
+      },
+      {
+        "name": "Capacitor",
+        "upgraded": false,
+        "score": -4.3
+      },
+      {
+        "name": "Capacitor",
+        "upgraded": true,
+        "score": -3.3
+      },
+      {
+        "name": "Chaos",
+        "upgraded": false,
+        "score": -1.5
+      },
+      {
+        "name": "Chaos",
+        "upgraded": true,
+        "score": 1.5
+      },
+      {
+        "name": "ChargeBattery",
+        "upgraded": false,
+        "score": 2.25
+      },
+      {
+        "name": "ChargeBattery",
+        "upgraded": true,
+        "score": 3.25
+      },
+      {
+        "name": "Chill",
+        "upgraded": false,
+        "score": 3.9
+      },
+      {
+        "name": "Chill",
+        "upgraded": true,
+        "score": 5.9
+      },
+      {
+        "name": "Claw",
+        "upgraded": false,
+        "score": -4.044
+      },
+      {
+        "name": "Claw",
+        "upgraded": true,
+        "score": -2.825
+      },
+      {
+        "name": "ColdSnap",
+        "upgraded": false,
+        "score": 6.212
+      },
+      {
+        "name": "ColdSnap",
+        "upgraded": true,
+        "score": 7.869
+      },
+      {
+        "name": "Compact",
+        "upgraded": false,
+        "score": 2.4
+      },
+      {
+        "name": "Compact",
+        "upgraded": true,
+        "score": 3.4
+      },
+      {
+        "name": "CompileDriver",
+        "upgraded": false,
+        "score": 3.731
+      },
+      {
+        "name": "CompileDriver",
+        "upgraded": true,
+        "score": 5.388
+      },
+      {
+        "name": "ConsumingShadow",
+        "upgraded": false,
+        "score": 3.5
+      },
+      {
+        "name": "ConsumingShadow",
+        "upgraded": true,
+        "score": 4.5
+      },
+      {
+        "name": "Coolant",
+        "upgraded": false,
+        "score": -0.1
+      },
+      {
+        "name": "Coolant",
+        "upgraded": true,
+        "score": 1.4
+      },
+      {
+        "name": "Coolheaded",
+        "upgraded": false,
+        "score": 4.9
+      },
+      {
+        "name": "Coolheaded",
+        "upgraded": true,
+        "score": 7.6
+      },
+      {
+        "name": "CreativeAi",
+        "upgraded": false,
+        "score": -1.7
+      },
+      {
+        "name": "CreativeAi",
+        "upgraded": true,
+        "score": 1.5
+      },
+      {
+        "name": "Darkness",
+        "upgraded": false,
+        "score": 1.5
+      },
+      {
+        "name": "Darkness",
+        "upgraded": true,
+        "score": 3.5
+      },
+      {
+        "name": "DefendDefect",
+        "upgraded": false,
+        "score": -34.9
+      },
+      {
+        "name": "DefendDefect",
+        "upgraded": true,
+        "score": -33.9
+      },
+      {
+        "name": "Defragment",
+        "upgraded": false,
+        "score": 3.7
+      },
+      {
+        "name": "Defragment",
+        "upgraded": true,
+        "score": 6.7
+      },
+      {
+        "name": "DoubleEnergy",
+        "upgraded": false,
+        "score": -3.15
+      },
+      {
+        "name": "DoubleEnergy",
+        "upgraded": true,
+        "score": -1.15
+      },
+      {
+        "name": "Dualcast",
+        "upgraded": false,
+        "score": -5.15
+      },
+      {
+        "name": "Dualcast",
+        "upgraded": true,
+        "score": -3.15
+      },
+      {
+        "name": "EchoForm",
+        "upgraded": false,
+        "score": 3.3
+      },
+      {
+        "name": "EchoForm",
+        "upgraded": true,
+        "score": 3.8
+      },
+      {
+        "name": "EnergySurge",
+        "upgraded": false,
+        "score": null
+      },
+      {
+        "name": "EnergySurge",
+        "upgraded": true,
+        "score": null
+      },
+      {
+        "name": "Feral",
+        "upgraded": false,
+        "score": -5.5
+      },
+      {
+        "name": "Feral",
+        "upgraded": true,
+        "score": -3.5
+      },
+      {
+        "name": "FightThrough",
+        "upgraded": false,
+        "score": -2.25
+      },
+      {
+        "name": "FightThrough",
+        "upgraded": true,
+        "score": -0.75
+      },
+      {
+        "name": "FlakCannon",
+        "upgraded": false,
+        "score": 0.75
+      },
+      {
+        "name": "FlakCannon",
+        "upgraded": true,
+        "score": 3.406
+      },
+      {
+        "name": "FocusedStrike",
+        "upgraded": false,
+        "score": 1.169
+      },
+      {
+        "name": "FocusedStrike",
+        "upgraded": true,
+        "score": 3.106
+      },
+      {
+        "name": "Ftl",
+        "upgraded": false,
+        "score": 2.294
+      },
+      {
+        "name": "Ftl",
+        "upgraded": true,
+        "score": 3.512
+      },
+      {
+        "name": "Fusion",
+        "upgraded": false,
+        "score": 0.85
+      },
+      {
+        "name": "Fusion",
+        "upgraded": true,
+        "score": 2.85
+      },
+      {
+        "name": "GeneticAlgorithm",
+        "upgraded": false,
+        "score": -0.1
+      },
+      {
+        "name": "GeneticAlgorithm",
+        "upgraded": true,
+        "score": 0.9
+      },
+      {
+        "name": "Glacier",
+        "upgraded": false,
+        "score": 6.9
+      },
+      {
+        "name": "Glacier",
+        "upgraded": true,
+        "score": 7.9
+      },
+      {
+        "name": "Glasswork",
+        "upgraded": false,
+        "score": 4.1
+      },
+      {
+        "name": "Glasswork",
+        "upgraded": true,
+        "score": 5.1
+      },
+      {
+        "name": "GoForTheEyes",
+        "upgraded": false,
+        "score": 2.556
+      },
+      {
+        "name": "GoForTheEyes",
+        "upgraded": true,
+        "score": 4.775
+      },
+      {
+        "name": "GunkUp",
+        "upgraded": false,
+        "score": -2.775
+      },
+      {
+        "name": "GunkUp",
+        "upgraded": true,
+        "score": -1.556
+      },
+      {
+        "name": "Hailstorm",
+        "upgraded": false,
+        "score": -2.3
+      },
+      {
+        "name": "Hailstorm",
+        "upgraded": true,
+        "score": -0.8
+      },
+      {
+        "name": "HelixDrill",
+        "upgraded": false,
+        "score": 1.156
+      },
+      {
+        "name": "HelixDrill",
+        "upgraded": true,
+        "score": 3.594
+      },
+      {
+        "name": "Hibernate",
+        "upgraded": false,
+        "score": null
+      },
+      {
+        "name": "Hibernate",
+        "upgraded": true,
+        "score": null
+      },
+      {
+        "name": "Hologram",
+        "upgraded": false,
+        "score": 2.9
+      },
+      {
+        "name": "Hologram",
+        "upgraded": true,
+        "score": 4.9
+      },
+      {
+        "name": "Hotfix",
+        "upgraded": false,
+        "score": -3.8
+      },
+      {
+        "name": "Hotfix",
+        "upgraded": true,
+        "score": -2.8
+      },
+      {
+        "name": "Hyperbeam",
+        "upgraded": false,
+        "score": 7.325
+      },
+      {
+        "name": "Hyperbeam",
+        "upgraded": true,
+        "score": 8.825
+      },
+      {
+        "name": "IceLance",
+        "upgraded": false,
+        "score": 5.325
+      },
+      {
+        "name": "IceLance",
+        "upgraded": true,
+        "score": 6.325
+      },
+      {
+        "name": "Ignition",
+        "upgraded": false,
+        "score": null
+      },
+      {
+        "name": "Ignition",
+        "upgraded": true,
+        "score": null
+      },
+      {
+        "name": "ImitationLearning",
+        "upgraded": false,
+        "score": null
+      },
+      {
+        "name": "ImitationLearning",
+        "upgraded": true,
+        "score": null
+      },
+      {
+        "name": "Iteration",
+        "upgraded": false,
+        "score": 0.0
+      },
+      {
+        "name": "Iteration",
+        "upgraded": true,
+        "score": 1.5
+      },
+      {
+        "name": "Leap",
+        "upgraded": false,
+        "score": -0.1
+      },
+      {
+        "name": "Leap",
+        "upgraded": true,
+        "score": 0.9
+      },
+      {
+        "name": "LightningRod",
+        "upgraded": false,
+        "score": 2.9
+      },
+      {
+        "name": "LightningRod",
+        "upgraded": true,
+        "score": 3.9
+      },
+      {
+        "name": "Loop",
+        "upgraded": false,
+        "score": -0.15
+      },
+      {
+        "name": "Loop",
+        "upgraded": true,
+        "score": 1.85
+      },
+      {
+        "name": "MachineLearning",
+        "upgraded": false,
+        "score": 0.5
+      },
+      {
+        "name": "MachineLearning",
+        "upgraded": true,
+        "score": 0.5
+      },
+      {
+        "name": "MeteorStrike",
+        "upgraded": false,
+        "score": -10.875
+      },
+      {
+        "name": "MeteorStrike",
+        "upgraded": true,
+        "score": -9.875
+      },
+      {
+        "name": "Modded",
+        "upgraded": false,
+        "score": -1.3
+      },
+      {
+        "name": "Modded",
+        "upgraded": true,
+        "score": 0.4
+      },
+      {
+        "name": "MomentumStrike",
+        "upgraded": false,
+        "score": 3.906
+      },
+      {
+        "name": "MomentumStrike",
+        "upgraded": true,
+        "score": 5.125
+      },
+      {
+        "name": "MultiCast",
+        "upgraded": false,
+        "score": -0.5
+      },
+      {
+        "name": "MultiCast",
+        "upgraded": true,
+        "score": 1.0
+      },
+      {
+        "name": "Null",
+        "upgraded": false,
+        "score": 6.088
+      },
+      {
+        "name": "Null",
+        "upgraded": true,
+        "score": 8.025
+      },
+      {
+        "name": "OneForAll",
+        "upgraded": false,
+        "score": null
+      },
+      {
+        "name": "OneForAll",
+        "upgraded": true,
+        "score": null
+      },
+      {
+        "name": "Overclock",
+        "upgraded": false,
+        "score": -2.45
+      },
+      {
+        "name": "Overclock",
+        "upgraded": true,
+        "score": -0.75
+      },
+      {
+        "name": "Quadcast",
+        "upgraded": false,
+        "score": 2.5
+      },
+      {
+        "name": "Quadcast",
+        "upgraded": true,
+        "score": 4.5
+      },
+      {
+        "name": "Rainbow",
+        "upgraded": false,
+        "score": 3.9
+      },
+      {
+        "name": "Rainbow",
+        "upgraded": true,
+        "score": 4.9
+      },
+      {
+        "name": "Reboot",
+        "upgraded": false,
+        "score": 3.9
+      },
+      {
+        "name": "Reboot",
+        "upgraded": true,
+        "score": 4.9
+      },
+      {
+        "name": "Refract",
+        "upgraded": false,
+        "score": 2.688
+      },
+      {
+        "name": "Refract",
+        "upgraded": true,
+        "score": 4.125
+      },
+      {
+        "name": "RocketPunch",
+        "upgraded": false,
+        "score": 4.625
+      },
+      {
+        "name": "RocketPunch",
+        "upgraded": true,
+        "score": 6.325
+      },
+      {
+        "name": "Scavenge",
+        "upgraded": false,
+        "score": 2.05
+      },
+      {
+        "name": "Scavenge",
+        "upgraded": true,
+        "score": 3.05
+      },
+      {
+        "name": "Scrape",
+        "upgraded": false,
+        "score": -2.819
+      },
+      {
+        "name": "Scrape",
+        "upgraded": true,
+        "score": -1.162
+      },
+      {
+        "name": "ShadowShield",
+        "upgraded": false,
+        "score": 3.9
+      },
+      {
+        "name": "ShadowShield",
+        "upgraded": true,
+        "score": 4.9
+      },
+      {
+        "name": "Shatter",
+        "upgraded": false,
+        "score": 6.231
+      },
+      {
+        "name": "Shatter",
+        "upgraded": true,
+        "score": 8.106
+      },
+      {
+        "name": "SignalBoost",
+        "upgraded": false,
+        "score": -5.5
+      },
+      {
+        "name": "SignalBoost",
+        "upgraded": true,
+        "score": -3.5
+      },
+      {
+        "name": "Skim",
+        "upgraded": false,
+        "score": 1.9
+      },
+      {
+        "name": "Skim",
+        "upgraded": true,
+        "score": 3.4
+      },
+      {
+        "name": "Smokestack",
+        "upgraded": false,
+        "score": 0.2
+      },
+      {
+        "name": "Smokestack",
+        "upgraded": true,
+        "score": 1.7
+      },
+      {
+        "name": "Spinner",
+        "upgraded": false,
+        "score": 3.7
+      },
+      {
+        "name": "Spinner",
+        "upgraded": true,
+        "score": 5.2
+      },
+      {
+        "name": "Storm",
+        "upgraded": false,
+        "score": -5.5
+      },
+      {
+        "name": "Storm",
+        "upgraded": true,
+        "score": -3.5
+      },
+      {
+        "name": "StrikeDefect",
+        "upgraded": false,
+        "score": -34.9
+      },
+      {
+        "name": "StrikeDefect",
+        "upgraded": true,
+        "score": -33.9
+      },
+      {
+        "name": "Subroutine",
+        "upgraded": false,
+        "score": -6.15
+      },
+      {
+        "name": "Subroutine",
+        "upgraded": true,
+        "score": -4.15
+      },
+      {
+        "name": "Sunder",
+        "upgraded": false,
+        "score": 3.925
+      },
+      {
+        "name": "Sunder",
+        "upgraded": true,
+        "score": 5.425
+      },
+      {
+        "name": "Supercritical",
+        "upgraded": false,
+        "score": 1.85
+      },
+      {
+        "name": "Supercritical",
+        "upgraded": true,
+        "score": 3.35
+      },
+      {
+        "name": "SweepingBeam",
+        "upgraded": false,
+        "score": 4.012
+      },
+      {
+        "name": "SweepingBeam",
+        "upgraded": true,
+        "score": 5.669
+      },
+      {
+        "name": "Synchronize",
+        "upgraded": false,
+        "score": -5.8
+      },
+      {
+        "name": "Synchronize",
+        "upgraded": true,
+        "score": -3.8
+      },
+      {
+        "name": "Synthesis",
+        "upgraded": false,
+        "score": -0.875
+      },
+      {
+        "name": "Synthesis",
+        "upgraded": true,
+        "score": 0.125
+      },
+      {
+        "name": "Tempest",
+        "upgraded": false,
+        "score": -1.5
+      },
+      {
+        "name": "Tempest",
+        "upgraded": true,
+        "score": 0.0
+      },
+      {
+        "name": "TeslaCoil",
+        "upgraded": false,
+        "score": -2.644
+      },
+      {
+        "name": "TeslaCoil",
+        "upgraded": true,
+        "score": -0.425
+      },
+      {
+        "name": "Thunder",
+        "upgraded": false,
+        "score": -3.8
+      },
+      {
+        "name": "Thunder",
+        "upgraded": true,
+        "score": -2.3
+      },
+      {
+        "name": "TrashToTreasure",
+        "upgraded": false,
+        "score": -3.65
+      },
+      {
+        "name": "TrashToTreasure",
+        "upgraded": true,
+        "score": -1.65
+      },
+      {
+        "name": "Turbo",
+        "upgraded": false,
+        "score": -0.65
+      },
+      {
+        "name": "Turbo",
+        "upgraded": true,
+        "score": 0.85
+      },
+      {
+        "name": "Uproar",
+        "upgraded": false,
+        "score": 0.812
+      },
+      {
+        "name": "Uproar",
+        "upgraded": true,
+        "score": 2.25
+      },
+      {
+        "name": "Voltaic",
+        "upgraded": false,
+        "score": -5.5
+      },
+      {
+        "name": "Voltaic",
+        "upgraded": true,
+        "score": -4.0
+      },
+      {
+        "name": "WhiteNoise",
+        "upgraded": false,
+        "score": 0.5
+      },
+      {
+        "name": "WhiteNoise",
+        "upgraded": true,
+        "score": 2.0
+      },
+      {
+        "name": "Zap",
+        "upgraded": false,
+        "score": -5.15
+      },
+      {
+        "name": "Zap",
+        "upgraded": true,
+        "score": -3.15
+      }
+    ]
+  },
+  {
+    "state": {
+      "character": "Defect",
+      "playerCount": 1,
+      "hp": 60,
+      "maxHp": 75,
+      "act": 3,
+      "energy": 4,
+      "deck": [
+        {
+          "id": "CARD.STRIKE_DEFECT",
+          "className": "StrikeDefect",
+          "name": "StrikeDefect",
+          "type": "Attack",
+          "rarity": "Basic",
+          "description": "",
+          "cost": 1,
+          "costsX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {
+            "Damage": 6
+          }
+        },
+        {
+          "id": "CARD.STRIKE_DEFECT",
+          "className": "StrikeDefect",
+          "name": "StrikeDefect",
+          "type": "Attack",
+          "rarity": "Basic",
+          "description": "",
+          "cost": 1,
+          "costsX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {
+            "Damage": 6
+          }
+        },
+        {
+          "id": "CARD.STRIKE_DEFECT",
+          "className": "StrikeDefect",
+          "name": "StrikeDefect",
+          "type": "Attack",
+          "rarity": "Basic",
+          "description": "",
+          "cost": 1,
+          "costsX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {
+            "Damage": 6
+          }
+        },
+        {
+          "id": "CARD.STRIKE_DEFECT",
+          "className": "StrikeDefect",
+          "name": "StrikeDefect",
+          "type": "Attack",
+          "rarity": "Basic",
+          "description": "",
+          "cost": 1,
+          "costsX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {
+            "Damage": 6
+          }
+        },
+        {
+          "id": "CARD.DEFEND_DEFECT",
+          "className": "DefendDefect",
+          "name": "DefendDefect",
+          "type": "Skill",
+          "rarity": "Basic",
+          "description": "",
+          "cost": 1,
+          "costsX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {
+            "Block": 5
+          }
+        },
+        {
+          "id": "CARD.DEFEND_DEFECT",
+          "className": "DefendDefect",
+          "name": "DefendDefect",
+          "type": "Skill",
+          "rarity": "Basic",
+          "description": "",
+          "cost": 1,
+          "costsX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {
+            "Block": 5
+          }
+        },
+        {
+          "id": "CARD.DEFEND_DEFECT",
+          "className": "DefendDefect",
+          "name": "DefendDefect",
+          "type": "Skill",
+          "rarity": "Basic",
+          "description": "",
+          "cost": 1,
+          "costsX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {
+            "Block": 5
+          }
+        },
+        {
+          "id": "CARD.DEFEND_DEFECT",
+          "className": "DefendDefect",
+          "name": "DefendDefect",
+          "type": "Skill",
+          "rarity": "Basic",
+          "description": "",
+          "cost": 1,
+          "costsX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {
+            "Block": 5
+          }
+        },
+        {
+          "id": "CARD.ZAP",
+          "className": "Zap",
+          "name": "Zap",
+          "type": "Skill",
+          "rarity": "Basic",
+          "description": "",
+          "cost": 1,
+          "costsX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {}
+        },
+        {
+          "id": "CARD.DUALCAST",
+          "className": "Dualcast",
+          "name": "Dualcast",
+          "type": "Skill",
+          "rarity": "Basic",
+          "description": "",
+          "cost": 1,
+          "costsX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {}
+        },
+        {
+          "id": "CARD.FTL",
+          "className": "Ftl",
+          "name": "Ftl",
+          "type": "Attack",
+          "rarity": "Uncommon",
+          "description": "",
+          "cost": 0,
+          "costsX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {
+            "Damage": 5,
+            "PlayMax": 3,
+            "Cards": 1
+          }
+        },
+        {
+          "id": "CARD.GO_FOR_THE_EYES",
+          "className": "GoForTheEyes",
+          "name": "GoForTheEyes",
+          "type": "Attack",
+          "rarity": "Common",
+          "description": "",
+          "cost": 0,
+          "costsX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {
+            "Damage": 3,
+            "WeakPower": 1
+          }
+        },
+        {
+          "id": "CARD.BEAM_CELL",
+          "className": "BeamCell",
+          "name": "BeamCell",
+          "type": "Attack",
+          "rarity": "Common",
+          "description": "",
+          "cost": 0,
+          "costsX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {
+            "Damage": 3,
+            "VulnerablePower": 1
+          }
+        },
+        {
+          "id": "CARD.HOLOGRAM",
+          "className": "Hologram",
+          "name": "Hologram",
+          "type": "Skill",
+          "rarity": "Common",
+          "description": "",
+          "cost": 1,
+          "costsX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [
+            "Exhaust"
+          ],
+          "variables": {
+            "Block": 3
+          }
+        },
+        {
+          "id": "CARD.ALL_FOR_ONE",
+          "className": "AllForOne",
+          "name": "AllForOne",
+          "type": "Attack",
+          "rarity": "Rare",
+          "description": "",
+          "cost": 2,
+          "costsX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {
+            "Damage": 10
+          }
+        },
+        {
+          "id": "CARD.CLAW",
+          "className": "Claw",
+          "name": "Claw",
+          "type": "Attack",
+          "rarity": "Common",
+          "description": "",
+          "cost": 0,
+          "costsX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {
+            "Damage": 3,
+            "Increase": 2
+          }
+        }
+      ],
+      "relics": [
+        "CRACKED_CORE"
+      ]
+    },
+    "scores": [
+      {
+        "name": "AdaptiveStrike",
+        "upgraded": false,
+        "score": 1.25
+      },
+      {
+        "name": "AdaptiveStrike",
+        "upgraded": true,
+        "score": 2.25
+      },
+      {
+        "name": "AllForOne",
+        "upgraded": false,
+        "score": -0.925
+      },
+      {
+        "name": "AllForOne",
+        "upgraded": true,
+        "score": 0.2
+      },
+      {
+        "name": "BallLightning",
+        "upgraded": false,
+        "score": 1.938
+      },
+      {
+        "name": "BallLightning",
+        "upgraded": true,
+        "score": 3.125
+      },
+      {
+        "name": "Barrage",
+        "upgraded": false,
+        "score": -1.838
+      },
+      {
+        "name": "Barrage",
+        "upgraded": true,
+        "score": -0.212
+      },
+      {
+        "name": "BeamCell",
+        "upgraded": false,
+        "score": -5.162
+      },
+      {
+        "name": "BeamCell",
+        "upgraded": true,
+        "score": -3.6
+      },
+      {
+        "name": "BiasedCognition",
+        "upgraded": false,
+        "score": 4.7
+      },
+      {
+        "name": "BiasedCognition",
+        "upgraded": true,
+        "score": 5.7
+      },
+      {
+        "name": "BoostAway",
+        "upgraded": false,
+        "score": -2.15
+      },
+      {
+        "name": "BoostAway",
+        "upgraded": true,
+        "score": -1.15
+      },
+      {
+        "name": "BootSequence",
+        "upgraded": false,
+        "score": 3.35
+      },
+      {
+        "name": "BootSequence",
+        "upgraded": true,
+        "score": 4.35
+      },
+      {
+        "name": "Buffer",
+        "upgraded": false,
+        "score": 5.35
+      },
+      {
+        "name": "Buffer",
+        "upgraded": true,
+        "score": 8.35
+      },
+      {
+        "name": "BulkUp",
+        "upgraded": false,
+        "score": -3.2
+      },
+      {
+        "name": "BulkUp",
+        "upgraded": true,
+        "score": -1.7
+      },
+      {
+        "name": "Capacitor",
+        "upgraded": false,
+        "score": -3.3
+      },
+      {
+        "name": "Capacitor",
+        "upgraded": true,
+        "score": -2.3
+      },
+      {
+        "name": "Chaos",
+        "upgraded": false,
+        "score": -1.5
+      },
+      {
+        "name": "Chaos",
+        "upgraded": true,
+        "score": 1.5
+      },
+      {
+        "name": "ChargeBattery",
+        "upgraded": false,
+        "score": 1.8
+      },
+      {
+        "name": "ChargeBattery",
+        "upgraded": true,
+        "score": 2.8
+      },
+      {
+        "name": "Chill",
+        "upgraded": false,
+        "score": 3.35
+      },
+      {
+        "name": "Chill",
+        "upgraded": true,
+        "score": 5.35
+      },
+      {
+        "name": "Claw",
+        "upgraded": false,
+        "score": -6.962
+      },
+      {
+        "name": "Claw",
+        "upgraded": true,
+        "score": -5.9
+      },
+      {
+        "name": "ColdSnap",
+        "upgraded": false,
+        "score": 4.725
+      },
+      {
+        "name": "ColdSnap",
+        "upgraded": true,
+        "score": 5.912
+      },
+      {
+        "name": "Compact",
+        "upgraded": false,
+        "score": -2.15
+      },
+      {
+        "name": "Compact",
+        "upgraded": true,
+        "score": -1.15
+      },
+      {
+        "name": "CompileDriver",
+        "upgraded": false,
+        "score": 1.638
+      },
+      {
+        "name": "CompileDriver",
+        "upgraded": true,
+        "score": 2.825
+      },
+      {
+        "name": "ConsumingShadow",
+        "upgraded": false,
+        "score": 3.5
+      },
+      {
+        "name": "ConsumingShadow",
+        "upgraded": true,
+        "score": 4.5
+      },
+      {
+        "name": "Coolant",
+        "upgraded": false,
+        "score": 1.35
+      },
+      {
+        "name": "Coolant",
+        "upgraded": true,
+        "score": 2.85
+      },
+      {
+        "name": "Coolheaded",
+        "upgraded": false,
+        "score": 5.35
+      },
+      {
+        "name": "Coolheaded",
+        "upgraded": true,
+        "score": 8.25
+      },
+      {
+        "name": "CreativeAi",
+        "upgraded": false,
+        "score": 0.5
+      },
+      {
+        "name": "CreativeAi",
+        "upgraded": true,
+        "score": 2.5
+      },
+      {
+        "name": "Darkness",
+        "upgraded": false,
+        "score": 1.5
+      },
+      {
+        "name": "Darkness",
+        "upgraded": true,
+        "score": 3.5
+      },
+      {
+        "name": "DefendDefect",
+        "upgraded": false,
+        "score": -34.9
+      },
+      {
+        "name": "DefendDefect",
+        "upgraded": true,
+        "score": -33.9
+      },
+      {
+        "name": "Defragment",
+        "upgraded": false,
+        "score": 4.7
+      },
+      {
+        "name": "Defragment",
+        "upgraded": true,
+        "score": 7.7
+      },
+      {
+        "name": "DoubleEnergy",
+        "upgraded": false,
+        "score": -2.05
+      },
+      {
+        "name": "DoubleEnergy",
+        "upgraded": true,
+        "score": -0.05
+      },
+      {
+        "name": "Dualcast",
+        "upgraded": false,
+        "score": -5.15
+      },
+      {
+        "name": "Dualcast",
+        "upgraded": true,
+        "score": -3.15
+      },
+      {
+        "name": "EchoForm",
+        "upgraded": false,
+        "score": 5.5
+      },
+      {
+        "name": "EchoForm",
+        "upgraded": true,
+        "score": 6.0
+      },
+      {
+        "name": "EnergySurge",
+        "upgraded": false,
+        "score": null
+      },
+      {
+        "name": "EnergySurge",
+        "upgraded": true,
+        "score": null
+      },
+      {
+        "name": "Feral",
+        "upgraded": false,
+        "score": 0.1
+      },
+      {
+        "name": "Feral",
+        "upgraded": true,
+        "score": 2.1
+      },
+      {
+        "name": "FightThrough",
+        "upgraded": false,
+        "score": -0.15
+      },
+      {
+        "name": "FightThrough",
+        "upgraded": true,
+        "score": 1.35
+      },
+      {
+        "name": "FlakCannon",
+        "upgraded": false,
+        "score": -4.5
+      },
+      {
+        "name": "FlakCannon",
+        "upgraded": true,
+        "score": -2.312
+      },
+      {
+        "name": "FocusedStrike",
+        "upgraded": false,
+        "score": -1.238
+      },
+      {
+        "name": "FocusedStrike",
+        "upgraded": true,
+        "score": 0.388
+      },
+      {
+        "name": "Ftl",
+        "upgraded": false,
+        "score": -2.138
+      },
+      {
+        "name": "Ftl",
+        "upgraded": true,
+        "score": -1.075
+      },
+      {
+        "name": "Fusion",
+        "upgraded": false,
+        "score": 0.95
+      },
+      {
+        "name": "Fusion",
+        "upgraded": true,
+        "score": 2.95
+      },
+      {
+        "name": "GeneticAlgorithm",
+        "upgraded": false,
+        "score": -2.65
+      },
+      {
+        "name": "GeneticAlgorithm",
+        "upgraded": true,
+        "score": -1.65
+      },
+      {
+        "name": "Glacier",
+        "upgraded": false,
+        "score": 7.35
+      },
+      {
+        "name": "Glacier",
+        "upgraded": true,
+        "score": 8.35
+      },
+      {
+        "name": "Glasswork",
+        "upgraded": false,
+        "score": 2.55
+      },
+      {
+        "name": "Glasswork",
+        "upgraded": true,
+        "score": 3.55
+      },
+      {
+        "name": "GoForTheEyes",
+        "upgraded": false,
+        "score": -1.112
+      },
+      {
+        "name": "GoForTheEyes",
+        "upgraded": true,
+        "score": 0.95
+      },
+      {
+        "name": "GunkUp",
+        "upgraded": false,
+        "score": -1.75
+      },
+      {
+        "name": "GunkUp",
+        "upgraded": true,
+        "score": -0.688
+      },
+      {
+        "name": "Hailstorm",
+        "upgraded": false,
+        "score": -2.3
+      },
+      {
+        "name": "Hailstorm",
+        "upgraded": true,
+        "score": -0.8
+      },
+      {
+        "name": "HelixDrill",
+        "upgraded": false,
+        "score": 2.688
+      },
+      {
+        "name": "HelixDrill",
+        "upgraded": true,
+        "score": 4.812
+      },
+      {
+        "name": "Hibernate",
+        "upgraded": false,
+        "score": null
+      },
+      {
+        "name": "Hibernate",
+        "upgraded": true,
+        "score": null
+      },
+      {
+        "name": "Hologram",
+        "upgraded": false,
+        "score": -0.3
+      },
+      {
+        "name": "Hologram",
+        "upgraded": true,
+        "score": 1.7
+      },
+      {
+        "name": "Hotfix",
+        "upgraded": false,
+        "score": -3.8
+      },
+      {
+        "name": "Hotfix",
+        "upgraded": true,
+        "score": -2.8
+      },
+      {
+        "name": "Hyperbeam",
+        "upgraded": false,
+        "score": 4.45
+      },
+      {
+        "name": "Hyperbeam",
+        "upgraded": true,
+        "score": 5.95
+      },
+      {
+        "name": "IceLance",
+        "upgraded": false,
+        "score": 4.1
+      },
+      {
+        "name": "IceLance",
+        "upgraded": true,
+        "score": 5.1
+      },
+      {
+        "name": "Ignition",
+        "upgraded": false,
+        "score": null
+      },
+      {
+        "name": "Ignition",
+        "upgraded": true,
+        "score": null
+      },
+      {
+        "name": "ImitationLearning",
+        "upgraded": false,
+        "score": null
+      },
+      {
+        "name": "ImitationLearning",
+        "upgraded": true,
+        "score": null
+      },
+      {
+        "name": "Iteration",
+        "upgraded": false,
+        "score": -4.0
+      },
+      {
+        "name": "Iteration",
+        "upgraded": true,
+        "score": -2.5
+      },
+      {
+        "name": "Leap",
+        "upgraded": false,
+        "score": -0.65
+      },
+      {
+        "name": "Leap",
+        "upgraded": true,
+        "score": 0.35
+      },
+      {
+        "name": "LightningRod",
+        "upgraded": false,
+        "score": 3.35
+      },
+      {
+        "name": "LightningRod",
+        "upgraded": true,
+        "score": 4.35
+      },
+      {
+        "name": "Loop",
+        "upgraded": false,
+        "score": -0.15
+      },
+      {
+        "name": "Loop",
+        "upgraded": true,
+        "score": 1.85
+      },
+      {
+        "name": "MachineLearning",
+        "upgraded": false,
+        "score": 1.5
+      },
+      {
+        "name": "MachineLearning",
+        "upgraded": true,
+        "score": 1.5
+      },
+      {
+        "name": "MeteorStrike",
+        "upgraded": false,
+        "score": -11.75
+      },
+      {
+        "name": "MeteorStrike",
+        "upgraded": true,
+        "score": -10.75
+      },
+      {
+        "name": "Modded",
+        "upgraded": false,
+        "score": -1.3
+      },
+      {
+        "name": "Modded",
+        "upgraded": true,
+        "score": 0.6
+      },
+      {
+        "name": "MomentumStrike",
+        "upgraded": false,
+        "score": 1.188
+      },
+      {
+        "name": "MomentumStrike",
+        "upgraded": true,
+        "score": 2.25
+      },
+      {
+        "name": "MultiCast",
+        "upgraded": false,
+        "score": 1.5
+      },
+      {
+        "name": "MultiCast",
+        "upgraded": true,
+        "score": 3.0
+      },
+      {
+        "name": "Null",
+        "upgraded": false,
+        "score": 3.975
+      },
+      {
+        "name": "Null",
+        "upgraded": true,
+        "score": 5.6
+      },
+      {
+        "name": "OneForAll",
+        "upgraded": false,
+        "score": null
+      },
+      {
+        "name": "OneForAll",
+        "upgraded": true,
+        "score": null
+      },
+      {
+        "name": "Overclock",
+        "upgraded": false,
+        "score": -0.6
+      },
+      {
+        "name": "Overclock",
+        "upgraded": true,
+        "score": 1.3
+      },
+      {
+        "name": "Quadcast",
+        "upgraded": false,
+        "score": 2.5
+      },
+      {
+        "name": "Quadcast",
+        "upgraded": true,
+        "score": 4.5
+      },
+      {
+        "name": "Rainbow",
+        "upgraded": false,
+        "score": 3.35
+      },
+      {
+        "name": "Rainbow",
+        "upgraded": true,
+        "score": 4.35
+      },
+      {
+        "name": "Reboot",
+        "upgraded": false,
+        "score": 4.3
+      },
+      {
+        "name": "Reboot",
+        "upgraded": true,
+        "score": 5.3
+      },
+      {
+        "name": "Refract",
+        "upgraded": false,
+        "score": 0.325
+      },
+      {
+        "name": "Refract",
+        "upgraded": true,
+        "score": 1.45
+      },
+      {
+        "name": "RocketPunch",
+        "upgraded": false,
+        "score": -2.25
+      },
+      {
+        "name": "RocketPunch",
+        "upgraded": true,
+        "score": -0.35
+      },
+      {
+        "name": "Scavenge",
+        "upgraded": false,
+        "score": 2.15
+      },
+      {
+        "name": "Scavenge",
+        "upgraded": true,
+        "score": 3.15
+      },
+      {
+        "name": "Scrape",
+        "upgraded": false,
+        "score": -0.462
+      },
+      {
+        "name": "Scrape",
+        "upgraded": true,
+        "score": 0.725
+      },
+      {
+        "name": "ShadowShield",
+        "upgraded": false,
+        "score": 3.35
+      },
+      {
+        "name": "ShadowShield",
+        "upgraded": true,
+        "score": 4.35
+      },
+      {
+        "name": "Shatter",
+        "upgraded": false,
+        "score": 5.138
+      },
+      {
+        "name": "Shatter",
+        "upgraded": true,
+        "score": 6.388
+      },
+      {
+        "name": "SignalBoost",
+        "upgraded": false,
+        "score": -4.5
+      },
+      {
+        "name": "SignalBoost",
+        "upgraded": true,
+        "score": -2.5
+      },
+      {
+        "name": "Skim",
+        "upgraded": false,
+        "score": 2.3
+      },
+      {
+        "name": "Skim",
+        "upgraded": true,
+        "score": 3.8
+      },
+      {
+        "name": "Smokestack",
+        "upgraded": false,
+        "score": -3.8
+      },
+      {
+        "name": "Smokestack",
+        "upgraded": true,
+        "score": -2.3
+      },
+      {
+        "name": "Spinner",
+        "upgraded": false,
+        "score": 3.7
+      },
+      {
+        "name": "Spinner",
+        "upgraded": true,
+        "score": 5.2
+      },
+      {
+        "name": "Storm",
+        "upgraded": false,
+        "score": -4.5
+      },
+      {
+        "name": "Storm",
+        "upgraded": true,
+        "score": -2.5
+      },
+      {
+        "name": "StrikeDefect",
+        "upgraded": false,
+        "score": -34.9
+      },
+      {
+        "name": "StrikeDefect",
+        "upgraded": true,
+        "score": -33.9
+      },
+      {
+        "name": "Subroutine",
+        "upgraded": false,
+        "score": -5.05
+      },
+      {
+        "name": "Subroutine",
+        "upgraded": true,
+        "score": -3.05
+      },
+      {
+        "name": "Sunder",
+        "upgraded": false,
+        "score": 2.25
+      },
+      {
+        "name": "Sunder",
+        "upgraded": true,
+        "score": 3.75
+      },
+      {
+        "name": "Supercritical",
+        "upgraded": false,
+        "score": 1.95
+      },
+      {
+        "name": "Supercritical",
+        "upgraded": true,
+        "score": 3.45
+      },
+      {
+        "name": "SweepingBeam",
+        "upgraded": false,
+        "score": 2.075
+      },
+      {
+        "name": "SweepingBeam",
+        "upgraded": true,
+        "score": 3.262
+      },
+      {
+        "name": "Synchronize",
+        "upgraded": false,
+        "score": -5.8
+      },
+      {
+        "name": "Synchronize",
+        "upgraded": true,
+        "score": -3.8
+      },
+      {
+        "name": "Synthesis",
+        "upgraded": false,
+        "score": -2.75
+      },
+      {
+        "name": "Synthesis",
+        "upgraded": true,
+        "score": -1.75
+      },
+      {
+        "name": "Tempest",
+        "upgraded": false,
+        "score": 0.5
+      },
+      {
+        "name": "Tempest",
+        "upgraded": true,
+        "score": 2.0
+      },
+      {
+        "name": "TeslaCoil",
+        "upgraded": false,
+        "score": -2.112
+      },
+      {
+        "name": "TeslaCoil",
+        "upgraded": true,
+        "score": -0.05
+      },
+      {
+        "name": "Thunder",
+        "upgraded": false,
+        "score": -2.8
+      },
+      {
+        "name": "Thunder",
+        "upgraded": true,
+        "score": -1.3
+      },
+      {
+        "name": "TrashToTreasure",
+        "upgraded": false,
+        "score": -4.0
+      },
+      {
+        "name": "TrashToTreasure",
+        "upgraded": true,
+        "score": -2.0
+      },
+      {
+        "name": "Turbo",
+        "upgraded": false,
+        "score": -2.55
+      },
+      {
+        "name": "Turbo",
+        "upgraded": true,
+        "score": -1.05
+      },
+      {
+        "name": "Uproar",
+        "upgraded": false,
+        "score": -1.125
+      },
+      {
+        "name": "Uproar",
+        "upgraded": true,
+        "score": 0.0
+      },
+      {
+        "name": "Voltaic",
+        "upgraded": false,
+        "score": -2.3
+      },
+      {
+        "name": "Voltaic",
+        "upgraded": true,
+        "score": -0.8
+      },
+      {
+        "name": "WhiteNoise",
+        "upgraded": false,
+        "score": 0.5
+      },
+      {
+        "name": "WhiteNoise",
+        "upgraded": true,
+        "score": 2.0
+      },
+      {
+        "name": "Zap",
+        "upgraded": false,
+        "score": -5.15
+      },
+      {
+        "name": "Zap",
+        "upgraded": true,
+        "score": -3.15
+      }
+    ]
+  },
+  {
+    "state": {
+      "character": "Defect",
+      "playerCount": 1,
+      "hp": 75,
+      "maxHp": 75,
+      "act": 3,
+      "energy": 5,
+      "deck": [
+        {
+          "id": "CARD.STRIKE_DEFECT",
+          "className": "StrikeDefect",
+          "name": "StrikeDefect",
+          "type": "Attack",
+          "rarity": "Basic",
+          "description": "",
+          "cost": 1,
+          "costsX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {
+            "Damage": 6
+          }
+        },
+        {
+          "id": "CARD.STRIKE_DEFECT",
+          "className": "StrikeDefect",
+          "name": "StrikeDefect",
+          "type": "Attack",
+          "rarity": "Basic",
+          "description": "",
+          "cost": 1,
+          "costsX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {
+            "Damage": 6
+          }
+        },
+        {
+          "id": "CARD.STRIKE_DEFECT",
+          "className": "StrikeDefect",
+          "name": "StrikeDefect",
+          "type": "Attack",
+          "rarity": "Basic",
+          "description": "",
+          "cost": 1,
+          "costsX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {
+            "Damage": 6
+          }
+        },
+        {
+          "id": "CARD.STRIKE_DEFECT",
+          "className": "StrikeDefect",
+          "name": "StrikeDefect",
+          "type": "Attack",
+          "rarity": "Basic",
+          "description": "",
+          "cost": 1,
+          "costsX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {
+            "Damage": 6
+          }
+        },
+        {
+          "id": "CARD.DEFEND_DEFECT",
+          "className": "DefendDefect",
+          "name": "DefendDefect",
+          "type": "Skill",
+          "rarity": "Basic",
+          "description": "",
+          "cost": 1,
+          "costsX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {
+            "Block": 5
+          }
+        },
+        {
+          "id": "CARD.DEFEND_DEFECT",
+          "className": "DefendDefect",
+          "name": "DefendDefect",
+          "type": "Skill",
+          "rarity": "Basic",
+          "description": "",
+          "cost": 1,
+          "costsX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {
+            "Block": 5
+          }
+        },
+        {
+          "id": "CARD.DEFEND_DEFECT",
+          "className": "DefendDefect",
+          "name": "DefendDefect",
+          "type": "Skill",
+          "rarity": "Basic",
+          "description": "",
+          "cost": 1,
+          "costsX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {
+            "Block": 5
+          }
+        },
+        {
+          "id": "CARD.DEFEND_DEFECT",
+          "className": "DefendDefect",
+          "name": "DefendDefect",
+          "type": "Skill",
+          "rarity": "Basic",
+          "description": "",
+          "cost": 1,
+          "costsX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {
+            "Block": 5
+          }
+        },
+        {
+          "id": "CARD.ZAP",
+          "className": "Zap",
+          "name": "Zap",
+          "type": "Skill",
+          "rarity": "Basic",
+          "description": "",
+          "cost": 1,
+          "costsX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {}
+        },
+        {
+          "id": "CARD.DUALCAST",
+          "className": "Dualcast",
+          "name": "Dualcast",
+          "type": "Skill",
+          "rarity": "Basic",
+          "description": "",
+          "cost": 1,
+          "costsX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {}
+        },
+        {
+          "id": "CARD.FUSION",
+          "className": "Fusion",
+          "name": "Fusion",
+          "type": "Skill",
+          "rarity": "Uncommon",
+          "description": "",
+          "cost": 1,
+          "costsX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [
+            "Exhaust"
+          ],
+          "variables": {}
+        },
+        {
+          "id": "CARD.SUPERCRITICAL",
+          "className": "Supercritical",
+          "name": "Supercritical",
+          "type": "Skill",
+          "rarity": "Rare",
+          "description": "",
+          "cost": 0,
+          "costsX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [
+            "Exhaust"
+          ],
+          "variables": {
+            "Energy": 4
+          }
+        },
+        {
+          "id": "CARD.METEOR_STRIKE",
+          "className": "MeteorStrike",
+          "name": "MeteorStrike",
+          "type": "Attack",
+          "rarity": "Rare",
+          "description": "",
+          "cost": 5,
+          "costsX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {
+            "Damage": 24
+          }
+        },
+        {
+          "id": "CARD.LOOP",
+          "className": "Loop",
+          "name": "Loop",
+          "type": "Power",
+          "rarity": "Uncommon",
+          "description": "",
+          "cost": 1,
+          "costsX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {
+            "Loop": 1
+          }
+        },
+        {
+          "id": "CARD.SKIM",
+          "className": "Skim",
+          "name": "Skim",
+          "type": "Skill",
+          "rarity": "Uncommon",
+          "description": "",
+          "cost": 1,
+          "costsX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {
+            "Cards": 3
+          }
+        }
+      ],
+      "relics": [
+        "CRACKED_CORE"
+      ]
+    },
+    "scores": [
+      {
+        "name": "AdaptiveStrike",
+        "upgraded": false,
+        "score": 2.375
+      },
+      {
+        "name": "AdaptiveStrike",
+        "upgraded": true,
+        "score": 3.375
+      },
+      {
+        "name": "AllForOne",
+        "upgraded": false,
+        "score": 0.212
+      },
+      {
+        "name": "AllForOne",
+        "upgraded": true,
+        "score": 1.525
+      },
+      {
+        "name": "BallLightning",
+        "upgraded": false,
+        "score": 2.594
+      },
+      {
+        "name": "BallLightning",
+        "upgraded": true,
+        "score": 4.062
+      },
+      {
+        "name": "Barrage",
+        "upgraded": false,
+        "score": -1.369
+      },
+      {
+        "name": "Barrage",
+        "upgraded": true,
+        "score": 0.444
+      },
+      {
+        "name": "BeamCell",
+        "upgraded": false,
+        "score": -2.131
+      },
+      {
+        "name": "BeamCell",
+        "upgraded": true,
+        "score": -0.475
+      },
+      {
+        "name": "BiasedCognition",
+        "upgraded": false,
+        "score": 4.7
+      },
+      {
+        "name": "BiasedCognition",
+        "upgraded": true,
+        "score": 5.7
+      },
+      {
+        "name": "BoostAway",
+        "upgraded": false,
+        "score": -2.0
+      },
+      {
+        "name": "BoostAway",
+        "upgraded": true,
+        "score": -1.0
+      },
+      {
+        "name": "BootSequence",
+        "upgraded": false,
+        "score": 3.5
+      },
+      {
+        "name": "BootSequence",
+        "upgraded": true,
+        "score": 4.5
+      },
+      {
+        "name": "Buffer",
+        "upgraded": false,
+        "score": 5.5
+      },
+      {
+        "name": "Buffer",
+        "upgraded": true,
+        "score": 8.5
+      },
+      {
+        "name": "BulkUp",
+        "upgraded": false,
+        "score": -4.1
+      },
+      {
+        "name": "BulkUp",
+        "upgraded": true,
+        "score": -2.6
+      },
+      {
+        "name": "Capacitor",
+        "upgraded": false,
+        "score": -3.3
+      },
+      {
+        "name": "Capacitor",
+        "upgraded": true,
+        "score": -2.3
+      },
+      {
+        "name": "Chaos",
+        "upgraded": false,
+        "score": -1.5
+      },
+      {
+        "name": "Chaos",
+        "upgraded": true,
+        "score": 1.5
+      },
+      {
+        "name": "ChargeBattery",
+        "upgraded": false,
+        "score": 2.65
+      },
+      {
+        "name": "ChargeBattery",
+        "upgraded": true,
+        "score": 3.65
+      },
+      {
+        "name": "Chill",
+        "upgraded": false,
+        "score": 3.5
+      },
+      {
+        "name": "Chill",
+        "upgraded": true,
+        "score": 5.5
+      },
+      {
+        "name": "Claw",
+        "upgraded": false,
+        "score": -4.931
+      },
+      {
+        "name": "Claw",
+        "upgraded": true,
+        "score": -3.775
+      },
+      {
+        "name": "ColdSnap",
+        "upgraded": false,
+        "score": 5.438
+      },
+      {
+        "name": "ColdSnap",
+        "upgraded": true,
+        "score": 6.906
+      },
+      {
+        "name": "Compact",
+        "upgraded": false,
+        "score": -2.0
+      },
+      {
+        "name": "Compact",
+        "upgraded": true,
+        "score": -1.0
+      },
+      {
+        "name": "CompileDriver",
+        "upgraded": false,
+        "score": 2.994
+      },
+      {
+        "name": "CompileDriver",
+        "upgraded": true,
+        "score": 4.462
+      },
+      {
+        "name": "ConsumingShadow",
+        "upgraded": false,
+        "score": 5.5
+      },
+      {
+        "name": "ConsumingShadow",
+        "upgraded": true,
+        "score": 6.5
+      },
+      {
+        "name": "Coolant",
+        "upgraded": false,
+        "score": 2.5
+      },
+      {
+        "name": "Coolant",
+        "upgraded": true,
+        "score": 4.0
+      },
+      {
+        "name": "Coolheaded",
+        "upgraded": false,
+        "score": 5.5
+      },
+      {
+        "name": "Coolheaded",
+        "upgraded": true,
+        "score": 8.4
+      },
+      {
+        "name": "CreativeAi",
+        "upgraded": false,
+        "score": 0.5
+      },
+      {
+        "name": "CreativeAi",
+        "upgraded": true,
+        "score": 2.5
+      },
+      {
+        "name": "Darkness",
+        "upgraded": false,
+        "score": 1.5
+      },
+      {
+        "name": "Darkness",
+        "upgraded": true,
+        "score": 3.5
+      },
+      {
+        "name": "DefendDefect",
+        "upgraded": false,
+        "score": -34.9
+      },
+      {
+        "name": "DefendDefect",
+        "upgraded": true,
+        "score": -33.9
+      },
+      {
+        "name": "Defragment",
+        "upgraded": false,
+        "score": 4.7
+      },
+      {
+        "name": "Defragment",
+        "upgraded": true,
+        "score": 7.7
+      },
+      {
+        "name": "DoubleEnergy",
+        "upgraded": false,
+        "score": -1.35
+      },
+      {
+        "name": "DoubleEnergy",
+        "upgraded": true,
+        "score": 0.65
+      },
+      {
+        "name": "Dualcast",
+        "upgraded": false,
+        "score": -3.15
+      },
+      {
+        "name": "Dualcast",
+        "upgraded": true,
+        "score": -1.15
+      },
+      {
+        "name": "EchoForm",
+        "upgraded": false,
+        "score": 5.5
+      },
+      {
+        "name": "EchoForm",
+        "upgraded": true,
+        "score": 6.0
+      },
+      {
+        "name": "EnergySurge",
+        "upgraded": false,
+        "score": null
+      },
+      {
+        "name": "EnergySurge",
+        "upgraded": true,
+        "score": null
+      },
+      {
+        "name": "Feral",
+        "upgraded": false,
+        "score": -4.5
+      },
+      {
+        "name": "Feral",
+        "upgraded": true,
+        "score": -2.5
+      },
+      {
+        "name": "FightThrough",
+        "upgraded": false,
+        "score": 0.0
+      },
+      {
+        "name": "FightThrough",
+        "upgraded": true,
+        "score": 1.5
+      },
+      {
+        "name": "FlakCannon",
+        "upgraded": false,
+        "score": -3.75
+      },
+      {
+        "name": "FlakCannon",
+        "upgraded": true,
+        "score": -1.281
+      },
+      {
+        "name": "FocusedStrike",
+        "upgraded": false,
+        "score": -0.394
+      },
+      {
+        "name": "FocusedStrike",
+        "upgraded": true,
+        "score": 1.419
+      },
+      {
+        "name": "Ftl",
+        "upgraded": false,
+        "score": 1.981
+      },
+      {
+        "name": "Ftl",
+        "upgraded": true,
+        "score": 3.138
+      },
+      {
+        "name": "Fusion",
+        "upgraded": false,
+        "score": -2.0
+      },
+      {
+        "name": "Fusion",
+        "upgraded": true,
+        "score": 0.0
+      },
+      {
+        "name": "GeneticAlgorithm",
+        "upgraded": false,
+        "score": -2.5
+      },
+      {
+        "name": "GeneticAlgorithm",
+        "upgraded": true,
+        "score": -1.5
+      },
+      {
+        "name": "Glacier",
+        "upgraded": false,
+        "score": 7.5
+      },
+      {
+        "name": "Glacier",
+        "upgraded": true,
+        "score": 8.5
+      },
+      {
+        "name": "Glasswork",
+        "upgraded": false,
+        "score": 2.7
+      },
+      {
+        "name": "Glasswork",
+        "upgraded": true,
+        "score": 3.7
+      },
+      {
+        "name": "GoForTheEyes",
+        "upgraded": false,
+        "score": 2.969
+      },
+      {
+        "name": "GoForTheEyes",
+        "upgraded": true,
+        "score": 5.125
+      },
+      {
+        "name": "GunkUp",
+        "upgraded": false,
+        "score": -1.375
+      },
+      {
+        "name": "GunkUp",
+        "upgraded": true,
+        "score": -0.219
+      },
+      {
+        "name": "Hailstorm",
+        "upgraded": false,
+        "score": -2.3
+      },
+      {
+        "name": "Hailstorm",
+        "upgraded": true,
+        "score": -0.8
+      },
+      {
+        "name": "HelixDrill",
+        "upgraded": false,
+        "score": 4.969
+      },
+      {
+        "name": "HelixDrill",
+        "upgraded": true,
+        "score": 7.281
+      },
+      {
+        "name": "Hibernate",
+        "upgraded": false,
+        "score": null
+      },
+      {
+        "name": "Hibernate",
+        "upgraded": true,
+        "score": null
+      },
+      {
+        "name": "Hologram",
+        "upgraded": false,
+        "score": 3.5
+      },
+      {
+        "name": "Hologram",
+        "upgraded": true,
+        "score": 5.5
+      },
+      {
+        "name": "Hotfix",
+        "upgraded": false,
+        "score": -3.8
+      },
+      {
+        "name": "Hotfix",
+        "upgraded": true,
+        "score": -2.8
+      },
+      {
+        "name": "Hyperbeam",
+        "upgraded": false,
+        "score": 5.575
+      },
+      {
+        "name": "Hyperbeam",
+        "upgraded": true,
+        "score": 7.075
+      },
+      {
+        "name": "IceLance",
+        "upgraded": false,
+        "score": 5.375
+      },
+      {
+        "name": "IceLance",
+        "upgraded": true,
+        "score": 6.375
+      },
+      {
+        "name": "Ignition",
+        "upgraded": false,
+        "score": null
+      },
+      {
+        "name": "Ignition",
+        "upgraded": true,
+        "score": null
+      },
+      {
+        "name": "ImitationLearning",
+        "upgraded": false,
+        "score": null
+      },
+      {
+        "name": "ImitationLearning",
+        "upgraded": true,
+        "score": null
+      },
+      {
+        "name": "Iteration",
+        "upgraded": false,
+        "score": -4.0
+      },
+      {
+        "name": "Iteration",
+        "upgraded": true,
+        "score": -2.5
+      },
+      {
+        "name": "Leap",
+        "upgraded": false,
+        "score": -0.5
+      },
+      {
+        "name": "Leap",
+        "upgraded": true,
+        "score": 0.5
+      },
+      {
+        "name": "LightningRod",
+        "upgraded": false,
+        "score": 3.5
+      },
+      {
+        "name": "LightningRod",
+        "upgraded": true,
+        "score": 4.5
+      },
+      {
+        "name": "Loop",
+        "upgraded": false,
+        "score": -3.8
+      },
+      {
+        "name": "Loop",
+        "upgraded": true,
+        "score": -1.8
+      },
+      {
+        "name": "MachineLearning",
+        "upgraded": false,
+        "score": 1.5
+      },
+      {
+        "name": "MachineLearning",
+        "upgraded": true,
+        "score": 1.5
+      },
+      {
+        "name": "MeteorStrike",
+        "upgraded": false,
+        "score": -1.275
+      },
+      {
+        "name": "MeteorStrike",
+        "upgraded": true,
+        "score": -0.275
+      },
+      {
+        "name": "Modded",
+        "upgraded": false,
+        "score": -1.3
+      },
+      {
+        "name": "Modded",
+        "upgraded": true,
+        "score": 0.6
+      },
+      {
+        "name": "MomentumStrike",
+        "upgraded": false,
+        "score": 2.219
+      },
+      {
+        "name": "MomentumStrike",
+        "upgraded": true,
+        "score": 3.375
+      },
+      {
+        "name": "MultiCast",
+        "upgraded": false,
+        "score": 5.5
+      },
+      {
+        "name": "MultiCast",
+        "upgraded": true,
+        "score": 7.0
+      },
+      {
+        "name": "Null",
+        "upgraded": false,
+        "score": 5.062
+      },
+      {
+        "name": "Null",
+        "upgraded": true,
+        "score": 6.875
+      },
+      {
+        "name": "OneForAll",
+        "upgraded": false,
+        "score": null
+      },
+      {
+        "name": "OneForAll",
+        "upgraded": true,
+        "score": null
+      },
+      {
+        "name": "Overclock",
+        "upgraded": false,
+        "score": -0.6
+      },
+      {
+        "name": "Overclock",
+        "upgraded": true,
+        "score": 1.3
+      },
+      {
+        "name": "Quadcast",
+        "upgraded": false,
+        "score": 4.5
+      },
+      {
+        "name": "Quadcast",
+        "upgraded": true,
+        "score": 6.5
+      },
+      {
+        "name": "Rainbow",
+        "upgraded": false,
+        "score": 3.5
+      },
+      {
+        "name": "Rainbow",
+        "upgraded": true,
+        "score": 4.5
+      },
+      {
+        "name": "Reboot",
+        "upgraded": false,
+        "score": 4.3
+      },
+      {
+        "name": "Reboot",
+        "upgraded": true,
+        "score": 5.3
+      },
+      {
+        "name": "Refract",
+        "upgraded": false,
+        "score": 1.262
+      },
+      {
+        "name": "Refract",
+        "upgraded": true,
+        "score": 2.575
+      },
+      {
+        "name": "RocketPunch",
+        "upgraded": false,
+        "score": -1.125
+      },
+      {
+        "name": "RocketPunch",
+        "upgraded": true,
+        "score": 0.775
+      },
+      {
+        "name": "Scavenge",
+        "upgraded": false,
+        "score": 2.85
+      },
+      {
+        "name": "Scavenge",
+        "upgraded": true,
+        "score": 3.85
+      },
+      {
+        "name": "Scrape",
+        "upgraded": false,
+        "score": -3.256
+      },
+      {
+        "name": "Scrape",
+        "upgraded": true,
+        "score": -1.788
+      },
+      {
+        "name": "ShadowShield",
+        "upgraded": false,
+        "score": 3.5
+      },
+      {
+        "name": "ShadowShield",
+        "upgraded": true,
+        "score": 4.5
+      },
+      {
+        "name": "Shatter",
+        "upgraded": false,
+        "score": 7.794
+      },
+      {
+        "name": "Shatter",
+        "upgraded": true,
+        "score": 9.419
+      },
+      {
+        "name": "SignalBoost",
+        "upgraded": false,
+        "score": -3.3
+      },
+      {
+        "name": "SignalBoost",
+        "upgraded": true,
+        "score": -1.3
+      },
+      {
+        "name": "Skim",
+        "upgraded": false,
+        "score": -1.35
+      },
+      {
+        "name": "Skim",
+        "upgraded": true,
+        "score": 0.15
+      },
+      {
+        "name": "Smokestack",
+        "upgraded": false,
+        "score": -3.8
+      },
+      {
+        "name": "Smokestack",
+        "upgraded": true,
+        "score": -2.3
+      },
+      {
+        "name": "Spinner",
+        "upgraded": false,
+        "score": 3.7
+      },
+      {
+        "name": "Spinner",
+        "upgraded": true,
+        "score": 5.2
+      },
+      {
+        "name": "Storm",
+        "upgraded": false,
+        "score": -3.3
+      },
+      {
+        "name": "Storm",
+        "upgraded": true,
+        "score": -1.3
+      },
+      {
+        "name": "StrikeDefect",
+        "upgraded": false,
+        "score": -34.9
+      },
+      {
+        "name": "StrikeDefect",
+        "upgraded": true,
+        "score": -33.9
+      },
+      {
+        "name": "Subroutine",
+        "upgraded": false,
+        "score": -3.15
+      },
+      {
+        "name": "Subroutine",
+        "upgraded": true,
+        "score": -1.15
+      },
+      {
+        "name": "Sunder",
+        "upgraded": false,
+        "score": 3.375
+      },
+      {
+        "name": "Sunder",
+        "upgraded": true,
+        "score": 4.875
+      },
+      {
+        "name": "Supercritical",
+        "upgraded": false,
+        "score": -1.0
+      },
+      {
+        "name": "Supercritical",
+        "upgraded": true,
+        "score": 0.5
+      },
+      {
+        "name": "SweepingBeam",
+        "upgraded": false,
+        "score": 2.638
+      },
+      {
+        "name": "SweepingBeam",
+        "upgraded": true,
+        "score": 4.106
+      },
+      {
+        "name": "Synchronize",
+        "upgraded": false,
+        "score": -4.8
+      },
+      {
+        "name": "Synchronize",
+        "upgraded": true,
+        "score": -2.8
+      },
+      {
+        "name": "Synthesis",
+        "upgraded": false,
+        "score": -0.425
+      },
+      {
+        "name": "Synthesis",
+        "upgraded": true,
+        "score": 0.575
+      },
+      {
+        "name": "Tempest",
+        "upgraded": false,
+        "score": 2.5
+      },
+      {
+        "name": "Tempest",
+        "upgraded": true,
+        "score": 4.0
+      },
+      {
+        "name": "TeslaCoil",
+        "upgraded": false,
+        "score": -1.831
+      },
+      {
+        "name": "TeslaCoil",
+        "upgraded": true,
+        "score": 0.325
+      },
+      {
+        "name": "Thunder",
+        "upgraded": false,
+        "score": -2.8
+      },
+      {
+        "name": "Thunder",
+        "upgraded": true,
+        "score": -1.3
+      },
+      {
+        "name": "TrashToTreasure",
+        "upgraded": false,
+        "score": -4.0
+      },
+      {
+        "name": "TrashToTreasure",
+        "upgraded": true,
+        "score": -2.0
+      },
+      {
+        "name": "Turbo",
+        "upgraded": false,
+        "score": -1.85
+      },
+      {
+        "name": "Turbo",
+        "upgraded": true,
+        "score": -0.35
+      },
+      {
+        "name": "Uproar",
+        "upgraded": false,
+        "score": -0.562
+      },
+      {
+        "name": "Uproar",
+        "upgraded": true,
+        "score": 0.75
+      },
+      {
+        "name": "Voltaic",
+        "upgraded": false,
+        "score": -2.3
+      },
+      {
+        "name": "Voltaic",
+        "upgraded": true,
+        "score": -0.8
+      },
+      {
+        "name": "WhiteNoise",
+        "upgraded": false,
+        "score": 0.5
+      },
+      {
+        "name": "WhiteNoise",
+        "upgraded": true,
+        "score": 2.0
+      },
+      {
+        "name": "Zap",
+        "upgraded": false,
+        "score": -5.15
+      },
+      {
+        "name": "Zap",
+        "upgraded": true,
+        "score": -3.15
+      }
+    ]
+  }
+]

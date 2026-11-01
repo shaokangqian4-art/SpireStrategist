@@ -1,0 +1,4754 @@
+[
+  {
+    "pool": "NecrobinderCardPool",
+    "multiplayerConstraint": "None",
+    "basic": {
+      "id": "CARD.AFTERLIFE",
+      "className": "Afterlife",
+      "name": "来生",
+      "type": "Skill",
+      "rarity": "Common",
+      "description": "[gold]召唤[/gold]{Summon:diff()}。",
+      "cost": 1,
+      "costsX": false,
+      "starCost": -1,
+      "costsStarX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "multiplayerOnly": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [
+        "Exhaust"
+      ],
+      "variables": {
+        "Summon": 6
+      }
+    },
+    "upgraded": {
+      "id": "CARD.AFTERLIFE",
+      "className": "Afterlife",
+      "name": "来生",
+      "type": "Skill",
+      "rarity": "Common",
+      "description": "[gold]召唤[/gold]{Summon:diff()}。",
+      "cost": 1,
+      "costsX": false,
+      "starCost": -1,
+      "costsStarX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "multiplayerOnly": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [
+        "Exhaust"
+      ],
+      "variables": {
+        "Summon": 9
+      }
+    }
+  },
+  {
+    "pool": "NecrobinderCardPool",
+    "multiplayerConstraint": "None",
+    "basic": {
+      "id": "CARD.BANSHEES_CRY",
+      "className": "BansheesCry",
+      "name": "女妖之嚎",
+      "type": "Attack",
+      "rarity": "Rare",
+      "description": "对所有敌人造成{Damage:diff()}点伤害。\n本场战斗中每打出过一张[gold]虚无[/gold]牌，此牌的耗能就减少{Energy:energyIcons()}。",
+      "cost": 9,
+      "costsX": false,
+      "starCost": -1,
+      "costsStarX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "multiplayerOnly": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "Damage": 33,
+        "Energy": 2
+      }
+    },
+    "upgraded": {
+      "id": "CARD.BANSHEES_CRY",
+      "className": "BansheesCry",
+      "name": "女妖之嚎",
+      "type": "Attack",
+      "rarity": "Rare",
+      "description": "对所有敌人造成{Damage:diff()}点伤害。\n本场战斗中每打出过一张[gold]虚无[/gold]牌，此牌的耗能就减少{Energy:energyIcons()}。",
+      "cost": 7,
+      "costsX": false,
+      "starCost": -1,
+      "costsStarX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "multiplayerOnly": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "Damage": 33,
+        "Energy": 2
+      }
+    }
+  },
+  {
+    "pool": "NecrobinderCardPool",
+    "multiplayerConstraint": "None",
+    "basic": {
+      "id": "CARD.BLIGHT_STRIKE",
+      "className": "BlightStrike",
+      "name": "荒疫打击",
+      "type": "Attack",
+      "rarity": "Common",
+      "description": "造成{Damage:diff()}点伤害。\n给予等量于所造成伤害的[gold]灾厄[/gold]。",
+      "cost": 1,
+      "costsX": false,
+      "starCost": -1,
+      "costsStarX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "multiplayerOnly": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "Damage": 8
+      }
+    },
+    "upgraded": {
+      "id": "CARD.BLIGHT_STRIKE",
+      "className": "BlightStrike",
+      "name": "荒疫打击",
+      "type": "Attack",
+      "rarity": "Common",
+      "description": "造成{Damage:diff()}点伤害。\n给予等量于所造成伤害的[gold]灾厄[/gold]。",
+      "cost": 1,
+      "costsX": false,
+      "starCost": -1,
+      "costsStarX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "multiplayerOnly": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "Damage": 10
+      }
+    }
+  },
+  {
+    "pool": "NecrobinderCardPool",
+    "multiplayerConstraint": "None",
+    "basic": {
+      "id": "CARD.BODYGUARD",
+      "className": "Bodyguard",
+      "name": "护卫",
+      "type": "Skill",
+      "rarity": "Basic",
+      "description": "[gold]召唤[/gold]{Summon:diff()}。",
+      "cost": 1,
+      "costsX": false,
+      "starCost": -1,
+      "costsStarX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "multiplayerOnly": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "Summon": 5
+      }
+    },
+    "upgraded": {
+      "id": "CARD.BODYGUARD",
+      "className": "Bodyguard",
+      "name": "护卫",
+      "type": "Skill",
+      "rarity": "Basic",
+      "description": "[gold]召唤[/gold]{Summon:diff()}。",
+      "cost": 1,
+      "costsX": false,
+      "starCost": -1,
+      "costsStarX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "multiplayerOnly": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "Summon": 7
+      }
+    }
+  },
+  {
+    "pool": "NecrobinderCardPool",
+    "multiplayerConstraint": "None",
+    "basic": {
+      "id": "CARD.BONE_SHARDS",
+      "className": "BoneShards",
+      "name": "碎骨",
+      "type": "Attack",
+      "rarity": "Uncommon",
+      "description": "如果[gold]奥斯提[/gold]存活，则他对所有敌人造成{OstyDamage:diff()}点伤害并且你获得{Block:diff()}点[gold]格挡[/gold]。\n然后[gold]奥斯提[/gold]死去。",
+      "cost": 1,
+      "costsX": false,
+      "starCost": -1,
+      "costsStarX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "multiplayerOnly": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "OstyDamage": 9,
+        "Block": 9
+      }
+    },
+    "upgraded": {
+      "id": "CARD.BONE_SHARDS",
+      "className": "BoneShards",
+      "name": "碎骨",
+      "type": "Attack",
+      "rarity": "Uncommon",
+      "description": "如果[gold]奥斯提[/gold]存活，则他对所有敌人造成{OstyDamage:diff()}点伤害并且你获得{Block:diff()}点[gold]格挡[/gold]。\n然后[gold]奥斯提[/gold]死去。",
+      "cost": 1,
+      "costsX": false,
+      "starCost": -1,
+      "costsStarX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "multiplayerOnly": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "OstyDamage": 12,
+        "Block": 12
+      }
+    }
+  },
+  {
+    "pool": "NecrobinderCardPool",
+    "multiplayerConstraint": "None",
+    "basic": {
+      "id": "CARD.BORROWED_TIME",
+      "className": "BorrowedTime",
+      "name": "预借时间",
+      "type": "Skill",
+      "rarity": "Uncommon",
+      "description": "获得{Energy:energyIcons()}。\n所有卡牌在本回合耗能增加{ExtraCost:energyIcons()}。",
+      "cost": 1,
+      "costsX": false,
+      "starCost": -1,
+      "costsStarX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "multiplayerOnly": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "Energy": 4,
+        "ExtraCost": 1
+      }
+    },
+    "upgraded": {
+      "id": "CARD.BORROWED_TIME",
+      "className": "BorrowedTime",
+      "name": "预借时间",
+      "type": "Skill",
+      "rarity": "Uncommon",
+      "description": "获得{Energy:energyIcons()}。\n所有卡牌在本回合耗能增加{ExtraCost:energyIcons()}。",
+      "cost": 1,
+      "costsX": false,
+      "starCost": -1,
+      "costsStarX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "multiplayerOnly": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "Energy": 6,
+        "ExtraCost": 1
+      }
+    }
+  },
+  {
+    "pool": "NecrobinderCardPool",
+    "multiplayerConstraint": "None",
+    "basic": {
+      "id": "CARD.BURY",
+      "className": "Bury",
+      "name": "埋葬",
+      "type": "Attack",
+      "rarity": "Uncommon",
+      "description": "造成{Damage:diff()}点伤害。",
+      "cost": 4,
+      "costsX": false,
+      "starCost": -1,
+      "costsStarX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "multiplayerOnly": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "Damage": 52
+      }
+    },
+    "upgraded": {
+      "id": "CARD.BURY",
+      "className": "Bury",
+      "name": "埋葬",
+      "type": "Attack",
+      "rarity": "Uncommon",
+      "description": "造成{Damage:diff()}点伤害。",
+      "cost": 4,
+      "costsX": false,
+      "starCost": -1,
+      "costsStarX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "multiplayerOnly": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "Damage": 63
+      }
+    }
+  },
+  {
+    "pool": "NecrobinderCardPool",
+    "multiplayerConstraint": "MultiplayerOnly",
+    "basic": {
+      "id": "CARD.CACOPHONY",
+      "className": "Cacophony",
+      "name": "不谐合曲",
+      "type": "Power",
+      "rarity": "Rare",
+      "description": "所有玩家每抽{Cards:diff()}张牌，就对随机一名敌人造成{Damage:diff()}点伤害。",
+      "cost": 2,
+      "costsX": false,
+      "starCost": -1,
+      "costsStarX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "multiplayerOnly": true,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "Cards": 33,
+        "Damage": 66
+      }
+    },
+    "upgraded": {
+      "id": "CARD.CACOPHONY",
+      "className": "Cacophony",
+      "name": "不谐合曲",
+      "type": "Power",
+      "rarity": "Rare",
+      "description": "所有玩家每抽{Cards:diff()}张牌，就对随机一名敌人造成{Damage:diff()}点伤害。",
+      "cost": 2,
+      "costsX": false,
+      "starCost": -1,
+      "costsStarX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "multiplayerOnly": true,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "Cards": 33,
+        "Damage": 99
+      }
+    }
+  },
+  {
+    "pool": "NecrobinderCardPool",
+    "multiplayerConstraint": "None",
+    "basic": {
+      "id": "CARD.CALCIFY",
+      "className": "Calcify",
+      "name": "钙化",
+      "type": "Power",
+      "rarity": "Uncommon",
+      "description": "[gold]奥斯提[/gold]的攻击额外造成{CalcifyPower:diff()}点伤害。",
+      "cost": 1,
+      "costsX": false,
+      "starCost": -1,
+      "costsStarX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "multiplayerOnly": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "CalcifyPower": 4
+      }
+    },
+    "upgraded": {
+      "id": "CARD.CALCIFY",
+      "className": "Calcify",
+      "name": "钙化",
+      "type": "Power",
+      "rarity": "Uncommon",
+      "description": "[gold]奥斯提[/gold]的攻击额外造成{CalcifyPower:diff()}点伤害。",
+      "cost": 1,
+      "costsX": false,
+      "starCost": -1,
+      "costsStarX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "multiplayerOnly": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "CalcifyPower": 6
+      }
+    }
+  },
+  {
+    "pool": "NecrobinderCardPool",
+    "multiplayerConstraint": "None",
+    "basic": {
+      "id": "CARD.CALL_OF_THE_VOID",
+      "className": "CallOfTheVoid",
+      "name": "虚空之唤",
+      "type": "Power",
+      "rarity": "Rare",
+      "description": "在你的回合开始时，将{Cards:diff()}张随机牌添加到你的[gold]手牌[/gold]中。添加的牌会获得[gold]虚无[/gold]。",
+      "cost": 1,
+      "costsX": false,
+      "starCost": -1,
+      "costsStarX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "multiplayerOnly": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "Cards": 1
+      }
+    },
+    "upgraded": {
+      "id": "CARD.CALL_OF_THE_VOID",
+      "className": "CallOfTheVoid",
+      "name": "虚空之唤",
+      "type": "Power",
+      "rarity": "Rare",
+      "description": "在你的回合开始时，将{Cards:diff()}张随机牌添加到你的[gold]手牌[/gold]中。添加的牌会获得[gold]虚无[/gold]。",
+      "cost": 1,
+      "costsX": false,
+      "starCost": -1,
+      "costsStarX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "multiplayerOnly": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [
+        "Innate"
+      ],
+      "variables": {
+        "Cards": 1
+      }
+    }
+  },
+  {
+    "pool": "NecrobinderCardPool",
+    "multiplayerConstraint": "None",
+    "basic": {
+      "id": "CARD.CAPTURE_SPIRIT",
+      "className": "CaptureSpirit",
+      "name": "捕捉灵魂",
+      "type": "Skill",
+      "rarity": "Uncommon",
+      "description": "敌人失去{Damage:diff()}点生命。\n将{Cards:diff()}张[gold]灵魂[/gold]加入你的[gold]抽牌堆[/gold]。",
+      "cost": 1,
+      "costsX": false,
+      "starCost": -1,
+      "costsStarX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "multiplayerOnly": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "Damage": 3,
+        "Cards": 3
+      }
+    },
+    "upgraded": {
+      "id": "CARD.CAPTURE_SPIRIT",
+      "className": "CaptureSpirit",
+      "name": "捕捉灵魂",
+      "type": "Skill",
+      "rarity": "Uncommon",
+      "description": "敌人失去{Damage:diff()}点生命。\n将{Cards:diff()}张[gold]灵魂[/gold]加入你的[gold]抽牌堆[/gold]。",
+      "cost": 1,
+      "costsX": false,
+      "starCost": -1,
+      "costsStarX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "multiplayerOnly": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "Damage": 4,
+        "Cards": 4
+      }
+    }
+  },
+  {
+    "pool": "NecrobinderCardPool",
+    "multiplayerConstraint": "None",
+    "basic": {
+      "id": "CARD.CLEANSE",
+      "className": "Cleanse",
+      "name": "洁净",
+      "type": "Skill",
+      "rarity": "Uncommon",
+      "description": "[gold]召唤[/gold]{Summon:diff()}。\n从你的[gold]抽牌堆[/gold]中选择一张牌将其[gold]消耗[/gold]。",
+      "cost": 1,
+      "costsX": false,
+      "starCost": -1,
+      "costsStarX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "multiplayerOnly": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "Summon": 3
+      }
+    },
+    "upgraded": {
+      "id": "CARD.CLEANSE",
+      "className": "Cleanse",
+      "name": "洁净",
+      "type": "Skill",
+      "rarity": "Uncommon",
+      "description": "[gold]召唤[/gold]{Summon:diff()}。\n从你的[gold]抽牌堆[/gold]中选择一张牌将其[gold]消耗[/gold]。",
+      "cost": 1,
+      "costsX": false,
+      "starCost": -1,
+      "costsStarX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "multiplayerOnly": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "Summon": 5
+      }
+    }
+  },
+  {
+    "pool": "NecrobinderCardPool",
+    "multiplayerConstraint": "None",
+    "basic": {
+      "id": "CARD.COUNTDOWN",
+      "className": "Countdown",
+      "name": "倒数计时",
+      "type": "Power",
+      "rarity": "Uncommon",
+      "description": "在你的回合开始时，给予随机敌人{CountdownPower:diff()}层[gold]灾厄[/gold]。",
+      "cost": 1,
+      "costsX": false,
+      "starCost": -1,
+      "costsStarX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "multiplayerOnly": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "CountdownPower": 6
+      }
+    },
+    "upgraded": {
+      "id": "CARD.COUNTDOWN",
+      "className": "Countdown",
+      "name": "倒数计时",
+      "type": "Power",
+      "rarity": "Uncommon",
+      "description": "在你的回合开始时，给予随机敌人{CountdownPower:diff()}层[gold]灾厄[/gold]。",
+      "cost": 1,
+      "costsX": false,
+      "starCost": -1,
+      "costsStarX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "multiplayerOnly": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "CountdownPower": 9
+      }
+    }
+  },
+  {
+    "pool": "NecrobinderCardPool",
+    "multiplayerConstraint": "None",
+    "basic": {
+      "id": "CARD.DANSE_MACABRE",
+      "className": "DanseMacabre",
+      "name": "死亡之舞",
+      "type": "Power",
+      "rarity": "Uncommon",
+      "description": "每当你打出一张耗能大于等于{Energy:energyIcons()}的牌时，获得{DanseMacabrePower:diff()}点[gold]格挡[/gold]。",
+      "cost": 1,
+      "costsX": false,
+      "starCost": -1,
+      "costsStarX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "multiplayerOnly": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "DanseMacabrePower": 4,
+        "Energy": 2
+      }
+    },
+    "upgraded": {
+      "id": "CARD.DANSE_MACABRE",
+      "className": "DanseMacabre",
+      "name": "死亡之舞",
+      "type": "Power",
+      "rarity": "Uncommon",
+      "description": "每当你打出一张耗能大于等于{Energy:energyIcons()}的牌时，获得{DanseMacabrePower:diff()}点[gold]格挡[/gold]。",
+      "cost": 1,
+      "costsX": false,
+      "starCost": -1,
+      "costsStarX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "multiplayerOnly": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "DanseMacabrePower": 6,
+        "Energy": 2
+      }
+    }
+  },
+  {
+    "pool": "NecrobinderCardPool",
+    "multiplayerConstraint": "None",
+    "basic": {
+      "id": "CARD.DEATH_MARCH",
+      "className": "DeathMarch",
+      "name": "死亡行军",
+      "type": "Attack",
+      "rarity": "Uncommon",
+      "description": "造成{CalculatedDamage:diff()}点伤害。\n你在回合进行中每抽到一张牌，都会使其额外造成{ExtraDamage:diff()}点伤害。",
+      "cost": 1,
+      "costsX": false,
+      "starCost": -1,
+      "costsStarX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "multiplayerOnly": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "CalculationBase": 8,
+        "ExtraDamage": 4,
+        "CalculatedDamage": 8
+      }
+    },
+    "upgraded": {
+      "id": "CARD.DEATH_MARCH",
+      "className": "DeathMarch",
+      "name": "死亡行军",
+      "type": "Attack",
+      "rarity": "Uncommon",
+      "description": "造成{CalculatedDamage:diff()}点伤害。\n你在回合进行中每抽到一张牌，都会使其额外造成{ExtraDamage:diff()}点伤害。",
+      "cost": 1,
+      "costsX": false,
+      "starCost": -1,
+      "costsStarX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "multiplayerOnly": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "CalculationBase": 9,
+        "ExtraDamage": 6,
+        "CalculatedDamage": 9
+      }
+    }
+  },
+  {
+    "pool": "NecrobinderCardPool",
+    "multiplayerConstraint": "None",
+    "basic": {
+      "id": "CARD.DEATHBRINGER",
+      "className": "Deathbringer",
+      "name": "死亡使者",
+      "type": "Skill",
+      "rarity": "Uncommon",
+      "description": "给予所有敌人{DoomPower:diff()}层[gold]灾厄[/gold]和{WeakPower:diff()}层[gold]虚弱[/gold]。",
+      "cost": 2,
+      "costsX": false,
+      "starCost": -1,
+      "costsStarX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "multiplayerOnly": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "DoomPower": 21,
+        "WeakPower": 1
+      }
+    },
+    "upgraded": {
+      "id": "CARD.DEATHBRINGER",
+      "className": "Deathbringer",
+      "name": "死亡使者",
+      "type": "Skill",
+      "rarity": "Uncommon",
+      "description": "给予所有敌人{DoomPower:diff()}层[gold]灾厄[/gold]和{WeakPower:diff()}层[gold]虚弱[/gold]。",
+      "cost": 2,
+      "costsX": false,
+      "starCost": -1,
+      "costsStarX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "multiplayerOnly": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "DoomPower": 26,
+        "WeakPower": 1
+      }
+    }
+  },
+  {
+    "pool": "NecrobinderCardPool",
+    "multiplayerConstraint": "None",
+    "basic": {
+      "id": "CARD.DEATHS_DOOR",
+      "className": "DeathsDoor",
+      "name": "死亡之门",
+      "type": "Skill",
+      "rarity": "Uncommon",
+      "description": "获得{Block:diff()}点[gold]格挡[/gold]。\n如果你在本回合中曾给予过[gold]灾厄[/gold]，则额外获得{Repeat:diff()}次[gold]格挡[/gold]。",
+      "cost": 1,
+      "costsX": false,
+      "starCost": -1,
+      "costsStarX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "multiplayerOnly": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "Block": 6,
+        "Repeat": 2
+      }
+    },
+    "upgraded": {
+      "id": "CARD.DEATHS_DOOR",
+      "className": "DeathsDoor",
+      "name": "死亡之门",
+      "type": "Skill",
+      "rarity": "Uncommon",
+      "description": "获得{Block:diff()}点[gold]格挡[/gold]。\n如果你在本回合中曾给予过[gold]灾厄[/gold]，则额外获得{Repeat:diff()}次[gold]格挡[/gold]。",
+      "cost": 1,
+      "costsX": false,
+      "starCost": -1,
+      "costsStarX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "multiplayerOnly": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "Block": 7,
+        "Repeat": 2
+      }
+    }
+  },
+  {
+    "pool": "NecrobinderCardPool",
+    "multiplayerConstraint": "None",
+    "basic": {
+      "id": "CARD.DEBILITATE",
+      "className": "Debilitate",
+      "name": "摧残",
+      "type": "Attack",
+      "rarity": "Uncommon",
+      "description": "造成{Damage:diff()}点伤害。\n在接下来的{DebilitatePower:diff()}回合内，该敌人身上的[gold]易伤[/gold]与[gold]虚弱[/gold]效果翻倍。",
+      "cost": 1,
+      "costsX": false,
+      "starCost": -1,
+      "costsStarX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "multiplayerOnly": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "Damage": 10,
+        "DebilitatePower": 2
+      }
+    },
+    "upgraded": {
+      "id": "CARD.DEBILITATE",
+      "className": "Debilitate",
+      "name": "摧残",
+      "type": "Attack",
+      "rarity": "Uncommon",
+      "description": "造成{Damage:diff()}点伤害。\n在接下来的{DebilitatePower:diff()}回合内，该敌人身上的[gold]易伤[/gold]与[gold]虚弱[/gold]效果翻倍。",
+      "cost": 1,
+      "costsX": false,
+      "starCost": -1,
+      "costsStarX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "multiplayerOnly": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "Damage": 12,
+        "DebilitatePower": 3
+      }
+    }
+  },
+  {
+    "pool": "NecrobinderCardPool",
+    "multiplayerConstraint": "None",
+    "basic": {
+      "id": "CARD.DEFEND_NECROBINDER",
+      "className": "DefendNecrobinder",
+      "name": "防御",
+      "type": "Skill",
+      "rarity": "Basic",
+      "description": "获得{Block:diff()}点[gold]格挡[/gold]。",
+      "cost": 1,
+      "costsX": false,
+      "starCost": -1,
+      "costsStarX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "multiplayerOnly": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "Block": 5
+      }
+    },
+    "upgraded": {
+      "id": "CARD.DEFEND_NECROBINDER",
+      "className": "DefendNecrobinder",
+      "name": "防御",
+      "type": "Skill",
+      "rarity": "Basic",
+      "description": "获得{Block:diff()}点[gold]格挡[/gold]。",
+      "cost": 1,
+      "costsX": false,
+      "starCost": -1,
+      "costsStarX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "multiplayerOnly": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "Block": 8
+      }
+    }
+  },
+  {
+    "pool": "NecrobinderCardPool",
+    "multiplayerConstraint": "None",
+    "basic": {
+      "id": "CARD.DEFILE",
+      "className": "Defile",
+      "name": "玷污",
+      "type": "Attack",
+      "rarity": "Common",
+      "description": "造成{Damage:diff()}点伤害。",
+      "cost": 1,
+      "costsX": false,
+      "starCost": -1,
+      "costsStarX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "multiplayerOnly": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [
+        "Ethereal"
+      ],
+      "variables": {
+        "Damage": 13
+      }
+    },
+    "upgraded": {
+      "id": "CARD.DEFILE",
+      "className": "Defile",
+      "name": "玷污",
+      "type": "Attack",
+      "rarity": "Common",
+      "description": "造成{Damage:diff()}点伤害。",
+      "cost": 1,
+      "costsX": false,
+      "starCost": -1,
+      "costsStarX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "multiplayerOnly": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [
+        "Ethereal"
+      ],
+      "variables": {
+        "Damage": 17
+      }
+    }
+  },
+  {
+    "pool": "NecrobinderCardPool",
+    "multiplayerConstraint": "None",
+    "basic": {
+      "id": "CARD.DEFY",
+      "className": "Defy",
+      "name": "违逆",
+      "type": "Skill",
+      "rarity": "Common",
+      "description": "获得{Block:diff()}点[gold]格挡[/gold]。\n给予{WeakPower:diff()}层[gold]虚弱[/gold]。",
+      "cost": 1,
+      "costsX": false,
+      "starCost": -1,
+      "costsStarX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "multiplayerOnly": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [
+        "Ethereal"
+      ],
+      "variables": {
+        "Block": 6,
+        "WeakPower": 1
+      }
+    },
+    "upgraded": {
+      "id": "CARD.DEFY",
+      "className": "Defy",
+      "name": "违逆",
+      "type": "Skill",
+      "rarity": "Common",
+      "description": "获得{Block:diff()}点[gold]格挡[/gold]。\n给予{WeakPower:diff()}层[gold]虚弱[/gold]。",
+      "cost": 1,
+      "costsX": false,
+      "starCost": -1,
+      "costsStarX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "multiplayerOnly": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [
+        "Ethereal"
+      ],
+      "variables": {
+        "Block": 9,
+        "WeakPower": 1
+      }
+    }
+  },
+  {
+    "pool": "NecrobinderCardPool",
+    "multiplayerConstraint": "None",
+    "basic": {
+      "id": "CARD.DELAY",
+      "className": "Delay",
+      "name": "拖延",
+      "type": "Skill",
+      "rarity": "Uncommon",
+      "description": "获得{Block:diff()}点[gold]格挡[/gold]。\n在下个回合，\n获得{Energy:energyIcons()}。",
+      "cost": 2,
+      "costsX": false,
+      "starCost": -1,
+      "costsStarX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "multiplayerOnly": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "Block": 11,
+        "Energy": 1
+      }
+    },
+    "upgraded": {
+      "id": "CARD.DELAY",
+      "className": "Delay",
+      "name": "拖延",
+      "type": "Skill",
+      "rarity": "Uncommon",
+      "description": "获得{Block:diff()}点[gold]格挡[/gold]。\n在下个回合，\n获得{Energy:energyIcons()}。",
+      "cost": 2,
+      "costsX": false,
+      "starCost": -1,
+      "costsStarX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "multiplayerOnly": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "Block": 13,
+        "Energy": 2
+      }
+    }
+  },
+  {
+    "pool": "NecrobinderCardPool",
+    "multiplayerConstraint": "None",
+    "basic": {
+      "id": "CARD.DEMESNE",
+      "className": "Demesne",
+      "name": "领域",
+      "type": "Power",
+      "rarity": "Rare",
+      "description": "在你的回合开始时，获得{Energy:energyIcons()}并额外多抽{Cards:diff()}张牌。",
+      "cost": 3,
+      "costsX": false,
+      "starCost": -1,
+      "costsStarX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "multiplayerOnly": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [
+        "Ethereal"
+      ],
+      "variables": {
+        "Energy": 1,
+        "Cards": 1
+      }
+    },
+    "upgraded": {
+      "id": "CARD.DEMESNE",
+      "className": "Demesne",
+      "name": "领域",
+      "type": "Power",
+      "rarity": "Rare",
+      "description": "在你的回合开始时，获得{Energy:energyIcons()}并额外多抽{Cards:diff()}张牌。",
+      "cost": 2,
+      "costsX": false,
+      "starCost": -1,
+      "costsStarX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "multiplayerOnly": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [
+        "Ethereal"
+      ],
+      "variables": {
+        "Energy": 1,
+        "Cards": 1
+      }
+    }
+  },
+  {
+    "pool": "NecrobinderCardPool",
+    "multiplayerConstraint": "None",
+    "basic": {
+      "id": "CARD.DEVOUR_LIFE",
+      "className": "DevourLife",
+      "name": "吞噬生命",
+      "type": "Power",
+      "rarity": "Rare",
+      "description": "每当你打出一张[gold]灵魂[/gold]时，[gold]召唤[/gold]{DevourLifePower:diff()}。",
+      "cost": 1,
+      "costsX": false,
+      "starCost": -1,
+      "costsStarX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "multiplayerOnly": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "DevourLifePower": 1
+      }
+    },
+    "upgraded": {
+      "id": "CARD.DEVOUR_LIFE",
+      "className": "DevourLife",
+      "name": "吞噬生命",
+      "type": "Power",
+      "rarity": "Rare",
+      "description": "每当你打出一张[gold]灵魂[/gold]时，[gold]召唤[/gold]{DevourLifePower:diff()}。",
+      "cost": 1,
+      "costsX": false,
+      "starCost": -1,
+      "costsStarX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "multiplayerOnly": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "DevourLifePower": 2
+      }
+    }
+  },
+  {
+    "pool": "NecrobinderCardPool",
+    "multiplayerConstraint": "None",
+    "basic": {
+      "id": "CARD.DIRGE",
+      "className": "Dirge",
+      "name": "挽歌",
+      "type": "Skill",
+      "rarity": "Uncommon",
+      "description": "[gold]召唤[/gold]{Summon:diff()}X次。\n将X张[gold]{IfUpgraded:show:灵魂+|灵魂}[/gold]添加到你的[gold]抽牌堆[/gold]中。",
+      "cost": 0,
+      "costsX": true,
+      "starCost": -1,
+      "costsStarX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "multiplayerOnly": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [
+        "Exhaust"
+      ],
+      "variables": {
+        "Summon": 3
+      }
+    },
+    "upgraded": {
+      "id": "CARD.DIRGE",
+      "className": "Dirge",
+      "name": "挽歌",
+      "type": "Skill",
+      "rarity": "Uncommon",
+      "description": "[gold]召唤[/gold]{Summon:diff()}X次。\n将X张[gold]{IfUpgraded:show:灵魂+|灵魂}[/gold]添加到你的[gold]抽牌堆[/gold]中。",
+      "cost": 0,
+      "costsX": true,
+      "starCost": -1,
+      "costsStarX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "multiplayerOnly": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [
+        "Exhaust"
+      ],
+      "variables": {
+        "Summon": 4
+      }
+    }
+  },
+  {
+    "pool": "NecrobinderCardPool",
+    "multiplayerConstraint": "None",
+    "basic": {
+      "id": "CARD.DRAIN_POWER",
+      "className": "DrainPower",
+      "name": "能量汲取",
+      "type": "Attack",
+      "rarity": "Common",
+      "description": "造成{Damage:diff()}点伤害。\n随机[gold]升级[/gold]你[gold]弃牌堆[/gold]中的{Cards:diff()}张牌。",
+      "cost": 1,
+      "costsX": false,
+      "starCost": -1,
+      "costsStarX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "multiplayerOnly": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "Damage": 10,
+        "Cards": 2
+      }
+    },
+    "upgraded": {
+      "id": "CARD.DRAIN_POWER",
+      "className": "DrainPower",
+      "name": "能量汲取",
+      "type": "Attack",
+      "rarity": "Common",
+      "description": "造成{Damage:diff()}点伤害。\n随机[gold]升级[/gold]你[gold]弃牌堆[/gold]中的{Cards:diff()}张牌。",
+      "cost": 1,
+      "costsX": false,
+      "starCost": -1,
+      "costsStarX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "multiplayerOnly": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "Damage": 12,
+        "Cards": 3
+      }
+    }
+  },
+  {
+    "pool": "NecrobinderCardPool",
+    "multiplayerConstraint": "None",
+    "basic": {
+      "id": "CARD.DREDGE",
+      "className": "Dredge",
+      "name": "清淤",
+      "type": "Skill",
+      "rarity": "Uncommon",
+      "description": "将{Cards:diff()}张牌从[gold]弃牌堆[/gold]加入你的[gold]手牌[/gold]。",
+      "cost": 1,
+      "costsX": false,
+      "starCost": -1,
+      "costsStarX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "multiplayerOnly": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [
+        "Exhaust"
+      ],
+      "variables": {
+        "Cards": 3
+      }
+    },
+    "upgraded": {
+      "id": "CARD.DREDGE",
+      "className": "Dredge",
+      "name": "清淤",
+      "type": "Skill",
+      "rarity": "Uncommon",
+      "description": "将{Cards:diff()}张牌从[gold]弃牌堆[/gold]加入你的[gold]手牌[/gold]。",
+      "cost": 1,
+      "costsX": false,
+      "starCost": -1,
+      "costsStarX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "multiplayerOnly": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [
+        "Exhaust",
+        "Retain"
+      ],
+      "variables": {
+        "Cards": 3
+      }
+    }
+  },
+  {
+    "pool": "NecrobinderCardPool",
+    "multiplayerConstraint": "None",
+    "basic": {
+      "id": "CARD.EIDOLON",
+      "className": "Eidolon",
+      "name": "幻景",
+      "type": "Skill",
+      "rarity": "Rare",
+      "description": "打出你[gold]消耗牌堆[/gold]中的所有[gold]虚无[/gold]牌。",
+      "cost": 2,
+      "costsX": false,
+      "starCost": -1,
+      "costsStarX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "multiplayerOnly": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [
+        "Exhaust"
+      ],
+      "variables": {}
+    },
+    "upgraded": {
+      "id": "CARD.EIDOLON",
+      "className": "Eidolon",
+      "name": "幻景",
+      "type": "Skill",
+      "rarity": "Rare",
+      "description": "打出你[gold]消耗牌堆[/gold]中的所有[gold]虚无[/gold]牌。",
+      "cost": 1,
+      "costsX": false,
+      "starCost": -1,
+      "costsStarX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "multiplayerOnly": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [
+        "Exhaust"
+      ],
+      "variables": {}
+    }
+  },
+  {
+    "pool": "NecrobinderCardPool",
+    "multiplayerConstraint": "None",
+    "basic": {
+      "id": "CARD.END_OF_DAYS",
+      "className": "EndOfDays",
+      "name": "末日降临",
+      "type": "Skill",
+      "rarity": "Rare",
+      "description": "给予所有敌人{DoomPower:diff()}层[gold]灾厄[/gold]。\n杀死所有[gold]灾厄[/gold]大于等于当前生命值的敌人。",
+      "cost": 3,
+      "costsX": false,
+      "starCost": -1,
+      "costsStarX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "multiplayerOnly": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "DoomPower": 29
+      }
+    },
+    "upgraded": {
+      "id": "CARD.END_OF_DAYS",
+      "className": "EndOfDays",
+      "name": "末日降临",
+      "type": "Skill",
+      "rarity": "Rare",
+      "description": "给予所有敌人{DoomPower:diff()}层[gold]灾厄[/gold]。\n杀死所有[gold]灾厄[/gold]大于等于当前生命值的敌人。",
+      "cost": 3,
+      "costsX": false,
+      "starCost": -1,
+      "costsStarX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "multiplayerOnly": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "DoomPower": 37
+      }
+    }
+  },
+  {
+    "pool": "NecrobinderCardPool",
+    "multiplayerConstraint": "None",
+    "basic": {
+      "id": "CARD.ENFEEBLING_TOUCH",
+      "className": "EnfeeblingTouch",
+      "name": "弱化之触",
+      "type": "Skill",
+      "rarity": "Uncommon",
+      "description": "让一名敌人在本回合内失去{StrengthLoss:diff()}点[gold]力量[/gold]。",
+      "cost": 1,
+      "costsX": false,
+      "starCost": -1,
+      "costsStarX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "multiplayerOnly": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [
+        "Ethereal"
+      ],
+      "variables": {
+        "StrengthLoss": 8
+      }
+    },
+    "upgraded": {
+      "id": "CARD.ENFEEBLING_TOUCH",
+      "className": "EnfeeblingTouch",
+      "name": "弱化之触",
+      "type": "Skill",
+      "rarity": "Uncommon",
+      "description": "让一名敌人在本回合内失去{StrengthLoss:diff()}点[gold]力量[/gold]。",
+      "cost": 1,
+      "costsX": false,
+      "starCost": -1,
+      "costsStarX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "multiplayerOnly": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [
+        "Ethereal"
+      ],
+      "variables": {
+        "StrengthLoss": 11
+      }
+    }
+  },
+  {
+    "pool": "NecrobinderCardPool",
+    "multiplayerConstraint": "None",
+    "basic": {
+      "id": "CARD.ERADICATE",
+      "className": "Eradicate",
+      "name": "根除",
+      "type": "Attack",
+      "rarity": "Rare",
+      "description": "造成{Damage:diff()}点伤害X次。",
+      "cost": 0,
+      "costsX": true,
+      "starCost": -1,
+      "costsStarX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "multiplayerOnly": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [
+        "Retain"
+      ],
+      "variables": {
+        "Damage": 11
+      }
+    },
+    "upgraded": {
+      "id": "CARD.ERADICATE",
+      "className": "Eradicate",
+      "name": "根除",
+      "type": "Attack",
+      "rarity": "Rare",
+      "description": "造成{Damage:diff()}点伤害X次。",
+      "cost": 0,
+      "costsX": true,
+      "starCost": -1,
+      "costsStarX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "multiplayerOnly": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [
+        "Retain"
+      ],
+      "variables": {
+        "Damage": 14
+      }
+    }
+  },
+  {
+    "pool": "NecrobinderCardPool",
+    "multiplayerConstraint": "None",
+    "basic": {
+      "id": "CARD.FEAR",
+      "className": "Fear",
+      "name": "恐惧",
+      "type": "Attack",
+      "rarity": "Common",
+      "description": "造成{Damage:diff()}点伤害。\n给予{VulnerablePower:diff()}层[gold]易伤[/gold]。",
+      "cost": 1,
+      "costsX": false,
+      "starCost": -1,
+      "costsStarX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "multiplayerOnly": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [
+        "Ethereal"
+      ],
+      "variables": {
+        "Damage": 7,
+        "VulnerablePower": 1
+      }
+    },
+    "upgraded": {
+      "id": "CARD.FEAR",
+      "className": "Fear",
+      "name": "恐惧",
+      "type": "Attack",
+      "rarity": "Common",
+      "description": "造成{Damage:diff()}点伤害。\n给予{VulnerablePower:diff()}层[gold]易伤[/gold]。",
+      "cost": 1,
+      "costsX": false,
+      "starCost": -1,
+      "costsStarX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "multiplayerOnly": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [
+        "Ethereal"
+      ],
+      "variables": {
+        "Damage": 8,
+        "VulnerablePower": 2
+      }
+    }
+  },
+  {
+    "pool": "NecrobinderCardPool",
+    "multiplayerConstraint": "None",
+    "basic": {
+      "id": "CARD.FETCH",
+      "className": "Fetch",
+      "name": "取回",
+      "type": "Attack",
+      "rarity": "Uncommon",
+      "description": "[gold]奥斯提[/gold]造成{OstyDamage:diff()}点伤害。\n如果这是这张牌第一次在本回合被打出，则抽{Cards:diff()}张牌。",
+      "cost": 0,
+      "costsX": false,
+      "starCost": -1,
+      "costsStarX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "multiplayerOnly": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "OstyDamage": 3,
+        "Cards": 1
+      }
+    },
+    "upgraded": {
+      "id": "CARD.FETCH",
+      "className": "Fetch",
+      "name": "取回",
+      "type": "Attack",
+      "rarity": "Uncommon",
+      "description": "[gold]奥斯提[/gold]造成{OstyDamage:diff()}点伤害。\n如果这是这张牌第一次在本回合被打出，则抽{Cards:diff()}张牌。",
+      "cost": 0,
+      "costsX": false,
+      "starCost": -1,
+      "costsStarX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "multiplayerOnly": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "OstyDamage": 6,
+        "Cards": 1
+      }
+    }
+  },
+  {
+    "pool": "NecrobinderCardPool",
+    "multiplayerConstraint": "None",
+    "basic": {
+      "id": "CARD.FLATTEN",
+      "className": "Flatten",
+      "name": "重压",
+      "type": "Attack",
+      "rarity": "Common",
+      "description": "[gold]奥斯提[/gold]造成{OstyDamage:diff()}点伤害。\n如果[gold]奥斯提[/gold]本回合攻击过，则这张牌的耗能变为0{energyPrefix:energyIcons(1)}。",
+      "cost": 2,
+      "costsX": false,
+      "starCost": -1,
+      "costsStarX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "multiplayerOnly": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "OstyDamage": 12
+      }
+    },
+    "upgraded": {
+      "id": "CARD.FLATTEN",
+      "className": "Flatten",
+      "name": "重压",
+      "type": "Attack",
+      "rarity": "Common",
+      "description": "[gold]奥斯提[/gold]造成{OstyDamage:diff()}点伤害。\n如果[gold]奥斯提[/gold]本回合攻击过，则这张牌的耗能变为0{energyPrefix:energyIcons(1)}。",
+      "cost": 2,
+      "costsX": false,
+      "starCost": -1,
+      "costsStarX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "multiplayerOnly": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "OstyDamage": 16
+      }
+    }
+  },
+  {
+    "pool": "NecrobinderCardPool",
+    "multiplayerConstraint": "None",
+    "basic": {
+      "id": "CARD.FORBIDDEN_GRIMOIRE",
+      "className": "ForbiddenGrimoire",
+      "name": "禁忌魔典",
+      "type": "Power",
+      "rarity": "Ancient",
+      "description": "在战斗结束时，你可以从你的[gold]牌组[/gold]中选一张牌移除。",
+      "cost": 2,
+      "costsX": false,
+      "starCost": -1,
+      "costsStarX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "multiplayerOnly": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [
+        "Eternal"
+      ],
+      "variables": {}
+    },
+    "upgraded": {
+      "id": "CARD.FORBIDDEN_GRIMOIRE",
+      "className": "ForbiddenGrimoire",
+      "name": "禁忌魔典",
+      "type": "Power",
+      "rarity": "Ancient",
+      "description": "在战斗结束时，你可以从你的[gold]牌组[/gold]中选一张牌移除。",
+      "cost": 1,
+      "costsX": false,
+      "starCost": -1,
+      "costsStarX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "multiplayerOnly": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [
+        "Eternal"
+      ],
+      "variables": {}
+    }
+  },
+  {
+    "pool": "NecrobinderCardPool",
+    "multiplayerConstraint": "None",
+    "basic": {
+      "id": "CARD.FRIENDSHIP",
+      "className": "Friendship",
+      "name": "友谊",
+      "type": "Power",
+      "rarity": "Uncommon",
+      "description": "失去{StrengthPower:inverseDiff()}点[gold]力量[/gold]。\n在每个回合开始时获得{Energy:energyIcons()}。",
+      "cost": 1,
+      "costsX": false,
+      "starCost": -1,
+      "costsStarX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "multiplayerOnly": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "StrengthPower": 2,
+        "Energy": 1
+      }
+    },
+    "upgraded": {
+      "id": "CARD.FRIENDSHIP",
+      "className": "Friendship",
+      "name": "友谊",
+      "type": "Power",
+      "rarity": "Uncommon",
+      "description": "失去{StrengthPower:inverseDiff()}点[gold]力量[/gold]。\n在每个回合开始时获得{Energy:energyIcons()}。",
+      "cost": 1,
+      "costsX": false,
+      "starCost": -1,
+      "costsStarX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "multiplayerOnly": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "StrengthPower": 1,
+        "Energy": 1
+      }
+    }
+  },
+  {
+    "pool": "NecrobinderCardPool",
+    "multiplayerConstraint": "MultiplayerOnly",
+    "basic": {
+      "id": "CARD.GLIMPSE_BEYOND",
+      "className": "GlimpseBeyond",
+      "name": "彼岸一瞥",
+      "type": "Skill",
+      "rarity": "Rare",
+      "description": "在所有玩家的[gold]抽牌堆[/gold]中加入{Cards:diff()}张[gold]灵魂[/gold]。",
+      "cost": 1,
+      "costsX": false,
+      "starCost": -1,
+      "costsStarX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "multiplayerOnly": true,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [
+        "Exhaust"
+      ],
+      "variables": {
+        "Cards": 3
+      }
+    },
+    "upgraded": {
+      "id": "CARD.GLIMPSE_BEYOND",
+      "className": "GlimpseBeyond",
+      "name": "彼岸一瞥",
+      "type": "Skill",
+      "rarity": "Rare",
+      "description": "在所有玩家的[gold]抽牌堆[/gold]中加入{Cards:diff()}张[gold]灵魂[/gold]。",
+      "cost": 1,
+      "costsX": false,
+      "starCost": -1,
+      "costsStarX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "multiplayerOnly": true,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [
+        "Exhaust"
+      ],
+      "variables": {
+        "Cards": 4
+      }
+    }
+  },
+  {
+    "pool": "NecrobinderCardPool",
+    "multiplayerConstraint": "None",
+    "basic": {
+      "id": "CARD.GRAVE_WARDEN",
+      "className": "GraveWarden",
+      "name": "守墓人",
+      "type": "Skill",
+      "rarity": "Common",
+      "description": "获得{Block:diff()}点[gold]格挡[/gold]。\n将一张[gold]灵魂[/gold]放入你的[gold]抽牌堆[/gold]中。",
+      "cost": 1,
+      "costsX": false,
+      "starCost": -1,
+      "costsStarX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "multiplayerOnly": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "Block": 8,
+        "Cards": 1
+      }
+    },
+    "upgraded": {
+      "id": "CARD.GRAVE_WARDEN",
+      "className": "GraveWarden",
+      "name": "守墓人",
+      "type": "Skill",
+      "rarity": "Common",
+      "description": "获得{Block:diff()}点[gold]格挡[/gold]。\n将一张[gold]灵魂[/gold]放入你的[gold]抽牌堆[/gold]中。",
+      "cost": 1,
+      "costsX": false,
+      "starCost": -1,
+      "costsStarX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "multiplayerOnly": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "Block": 11,
+        "Cards": 1
+      }
+    }
+  },
+  {
+    "pool": "NecrobinderCardPool",
+    "multiplayerConstraint": "None",
+    "basic": {
+      "id": "CARD.GRAVEBLAST",
+      "className": "Graveblast",
+      "name": "坟冢爆射",
+      "type": "Attack",
+      "rarity": "Common",
+      "description": "造成{Damage:diff()}点伤害。\n将[gold]弃牌堆[/gold]中的一张牌放入你的[gold]手牌[/gold]。",
+      "cost": 1,
+      "costsX": false,
+      "starCost": -1,
+      "costsStarX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "multiplayerOnly": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [
+        "Exhaust"
+      ],
+      "variables": {
+        "Damage": 4
+      }
+    },
+    "upgraded": {
+      "id": "CARD.GRAVEBLAST",
+      "className": "Graveblast",
+      "name": "坟冢爆射",
+      "type": "Attack",
+      "rarity": "Common",
+      "description": "造成{Damage:diff()}点伤害。\n将[gold]弃牌堆[/gold]中的一张牌放入你的[gold]手牌[/gold]。",
+      "cost": 1,
+      "costsX": false,
+      "starCost": -1,
+      "costsStarX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "multiplayerOnly": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "Damage": 6
+      }
+    }
+  },
+  {
+    "pool": "NecrobinderCardPool",
+    "multiplayerConstraint": "None",
+    "basic": {
+      "id": "CARD.HANG",
+      "className": "Hang",
+      "name": "吊杀",
+      "type": "Attack",
+      "rarity": "Rare",
+      "description": "造成{Damage:diff()}点伤害。\n让所有“吊杀”牌对这名敌人造成的伤害翻倍。",
+      "cost": 1,
+      "costsX": false,
+      "starCost": -1,
+      "costsStarX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "multiplayerOnly": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "Damage": 10
+      }
+    },
+    "upgraded": {
+      "id": "CARD.HANG",
+      "className": "Hang",
+      "name": "吊杀",
+      "type": "Attack",
+      "rarity": "Rare",
+      "description": "造成{Damage:diff()}点伤害。\n让所有“吊杀”牌对这名敌人造成的伤害翻倍。",
+      "cost": 1,
+      "costsX": false,
+      "starCost": -1,
+      "costsStarX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "multiplayerOnly": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "Damage": 13
+      }
+    }
+  },
+  {
+    "pool": "NecrobinderCardPool",
+    "multiplayerConstraint": "None",
+    "basic": {
+      "id": "CARD.HAUNT",
+      "className": "Haunt",
+      "name": "纠缠",
+      "type": "Power",
+      "rarity": "Uncommon",
+      "description": "每当你打出一张[gold]灵魂[/gold]时，随机一名敌人失去{HpLoss:diff()}点生命。",
+      "cost": 1,
+      "costsX": false,
+      "starCost": -1,
+      "costsStarX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "multiplayerOnly": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "HpLoss": 7
+      }
+    },
+    "upgraded": {
+      "id": "CARD.HAUNT",
+      "className": "Haunt",
+      "name": "纠缠",
+      "type": "Power",
+      "rarity": "Uncommon",
+      "description": "每当你打出一张[gold]灵魂[/gold]时，随机一名敌人失去{HpLoss:diff()}点生命。",
+      "cost": 1,
+      "costsX": false,
+      "starCost": -1,
+      "costsStarX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "multiplayerOnly": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "HpLoss": 9
+      }
+    }
+  },
+  {
+    "pool": "NecrobinderCardPool",
+    "multiplayerConstraint": "None",
+    "basic": {
+      "id": "CARD.HIGH_FIVE",
+      "className": "HighFive",
+      "name": "击掌",
+      "type": "Attack",
+      "rarity": "Uncommon",
+      "description": "[gold]奥斯提[/gold]对所有敌人\n造成{OstyDamage:diff()}点伤害并给予它们\n{VulnerablePower:diff()}层[gold]易伤[/gold]。",
+      "cost": 2,
+      "costsX": false,
+      "starCost": -1,
+      "costsStarX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "multiplayerOnly": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "OstyDamage": 11,
+        "VulnerablePower": 2
+      }
+    },
+    "upgraded": {
+      "id": "CARD.HIGH_FIVE",
+      "className": "HighFive",
+      "name": "击掌",
+      "type": "Attack",
+      "rarity": "Uncommon",
+      "description": "[gold]奥斯提[/gold]对所有敌人\n造成{OstyDamage:diff()}点伤害并给予它们\n{VulnerablePower:diff()}层[gold]易伤[/gold]。",
+      "cost": 2,
+      "costsX": false,
+      "starCost": -1,
+      "costsStarX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "multiplayerOnly": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "OstyDamage": 13,
+        "VulnerablePower": 3
+      }
+    }
+  },
+  {
+    "pool": "NecrobinderCardPool",
+    "multiplayerConstraint": "None",
+    "basic": {
+      "id": "CARD.INVOKE",
+      "className": "Invoke",
+      "name": "唤起",
+      "type": "Skill",
+      "rarity": "Common",
+      "description": "在下个回合[gold]召唤[/gold]{Summon:diff()}并获得{Energy:energyIcons()}。",
+      "cost": 1,
+      "costsX": false,
+      "starCost": -1,
+      "costsStarX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "multiplayerOnly": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "Summon": 2,
+        "Energy": 2
+      }
+    },
+    "upgraded": {
+      "id": "CARD.INVOKE",
+      "className": "Invoke",
+      "name": "唤起",
+      "type": "Skill",
+      "rarity": "Common",
+      "description": "在下个回合[gold]召唤[/gold]{Summon:diff()}并获得{Energy:energyIcons()}。",
+      "cost": 1,
+      "costsX": false,
+      "starCost": -1,
+      "costsStarX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "multiplayerOnly": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "Summon": 3,
+        "Energy": 3
+      }
+    }
+  },
+  {
+    "pool": "NecrobinderCardPool",
+    "multiplayerConstraint": "MultiplayerOnly",
+    "basic": {
+      "id": "CARD.LEGION_OF_BONE",
+      "className": "LegionOfBone",
+      "name": "骸骨军团",
+      "type": "Skill",
+      "rarity": "Uncommon",
+      "description": "所有玩家[gold]召唤[/gold]{Summon:diff()}。",
+      "cost": 2,
+      "costsX": false,
+      "starCost": -1,
+      "costsStarX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "multiplayerOnly": true,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "Summon": 6
+      }
+    },
+    "upgraded": {
+      "id": "CARD.LEGION_OF_BONE",
+      "className": "LegionOfBone",
+      "name": "骸骨军团",
+      "type": "Skill",
+      "rarity": "Uncommon",
+      "description": "所有玩家[gold]召唤[/gold]{Summon:diff()}。",
+      "cost": 2,
+      "costsX": false,
+      "starCost": -1,
+      "costsStarX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "multiplayerOnly": true,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "Summon": 8
+      }
+    }
+  },
+  {
+    "pool": "NecrobinderCardPool",
+    "multiplayerConstraint": "None",
+    "basic": {
+      "id": "CARD.LETHALITY",
+      "className": "Lethality",
+      "name": "致死性",
+      "type": "Power",
+      "rarity": "Uncommon",
+      "description": "每回合的第一张攻击牌会造成{LethalityPower:diff()}%额外伤害。",
+      "cost": 1,
+      "costsX": false,
+      "starCost": -1,
+      "costsStarX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "multiplayerOnly": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [
+        "Ethereal"
+      ],
+      "variables": {
+        "LethalityPower": 50
+      }
+    },
+    "upgraded": {
+      "id": "CARD.LETHALITY",
+      "className": "Lethality",
+      "name": "致死性",
+      "type": "Power",
+      "rarity": "Uncommon",
+      "description": "每回合的第一张攻击牌会造成{LethalityPower:diff()}%额外伤害。",
+      "cost": 1,
+      "costsX": false,
+      "starCost": -1,
+      "costsStarX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "multiplayerOnly": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [
+        "Ethereal"
+      ],
+      "variables": {
+        "LethalityPower": 75
+      }
+    }
+  },
+  {
+    "pool": "NecrobinderCardPool",
+    "multiplayerConstraint": "None",
+    "basic": {
+      "id": "CARD.MELANCHOLY",
+      "className": "Melancholy",
+      "name": "忧郁",
+      "type": "Skill",
+      "rarity": "Uncommon",
+      "description": "获得{Block:diff()}点[gold]格挡[/gold]。\n每当有任何生物死亡时，这张牌的耗能减少{Energy:energyIcons()}。",
+      "cost": 3,
+      "costsX": false,
+      "starCost": -1,
+      "costsStarX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "multiplayerOnly": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "Block": 13,
+        "Energy": 1
+      }
+    },
+    "upgraded": {
+      "id": "CARD.MELANCHOLY",
+      "className": "Melancholy",
+      "name": "忧郁",
+      "type": "Skill",
+      "rarity": "Uncommon",
+      "description": "获得{Block:diff()}点[gold]格挡[/gold]。\n每当有任何生物死亡时，这张牌的耗能减少{Energy:energyIcons()}。",
+      "cost": 3,
+      "costsX": false,
+      "starCost": -1,
+      "costsStarX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "multiplayerOnly": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "Block": 17,
+        "Energy": 1
+      }
+    }
+  },
+  {
+    "pool": "NecrobinderCardPool",
+    "multiplayerConstraint": "None",
+    "basic": {
+      "id": "CARD.MISERY",
+      "className": "Misery",
+      "name": "苦难",
+      "type": "Attack",
+      "rarity": "Rare",
+      "description": "造成{Damage:diff()}点伤害。\n给予其他敌人该名敌人身上的所有负面效果。",
+      "cost": 0,
+      "costsX": false,
+      "starCost": -1,
+      "costsStarX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "multiplayerOnly": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "Damage": 7
+      }
+    },
+    "upgraded": {
+      "id": "CARD.MISERY",
+      "className": "Misery",
+      "name": "苦难",
+      "type": "Attack",
+      "rarity": "Rare",
+      "description": "造成{Damage:diff()}点伤害。\n给予其他敌人该名敌人身上的所有负面效果。",
+      "cost": 0,
+      "costsX": false,
+      "starCost": -1,
+      "costsStarX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "multiplayerOnly": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [
+        "Retain"
+      ],
+      "variables": {
+        "Damage": 9
+      }
+    }
+  },
+  {
+    "pool": "NecrobinderCardPool",
+    "multiplayerConstraint": "None",
+    "basic": {
+      "id": "CARD.NECRO_MASTERY",
+      "className": "NecroMastery",
+      "name": "亡灵精通",
+      "type": "Power",
+      "rarity": "Rare",
+      "description": "[gold]召唤[/gold]{Summon:diff()}。\n每当[gold]奥斯提[/gold]失去生命值时，\n所有敌人失去等量生命值。",
+      "cost": 2,
+      "costsX": false,
+      "starCost": -1,
+      "costsStarX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "multiplayerOnly": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "Summon": 5
+      }
+    },
+    "upgraded": {
+      "id": "CARD.NECRO_MASTERY",
+      "className": "NecroMastery",
+      "name": "亡灵精通",
+      "type": "Power",
+      "rarity": "Rare",
+      "description": "[gold]召唤[/gold]{Summon:diff()}。\n每当[gold]奥斯提[/gold]失去生命值时，\n所有敌人失去等量生命值。",
+      "cost": 2,
+      "costsX": false,
+      "starCost": -1,
+      "costsStarX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "multiplayerOnly": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "Summon": 8
+      }
+    }
+  },
+  {
+    "pool": "NecrobinderCardPool",
+    "multiplayerConstraint": "None",
+    "basic": {
+      "id": "CARD.NEGATIVE_PULSE",
+      "className": "NegativePulse",
+      "name": "负能量脉冲",
+      "type": "Skill",
+      "rarity": "Common",
+      "description": "获得{Block:diff()}点[gold]格挡[/gold]。\n给予所有敌人{DoomPower:diff()}层[gold]灾厄[/gold]。",
+      "cost": 1,
+      "costsX": false,
+      "starCost": -1,
+      "costsStarX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "multiplayerOnly": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "Block": 5,
+        "DoomPower": 7
+      }
+    },
+    "upgraded": {
+      "id": "CARD.NEGATIVE_PULSE",
+      "className": "NegativePulse",
+      "name": "负能量脉冲",
+      "type": "Skill",
+      "rarity": "Common",
+      "description": "获得{Block:diff()}点[gold]格挡[/gold]。\n给予所有敌人{DoomPower:diff()}层[gold]灾厄[/gold]。",
+      "cost": 1,
+      "costsX": false,
+      "starCost": -1,
+      "costsStarX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "multiplayerOnly": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "Block": 6,
+        "DoomPower": 11
+      }
+    }
+  },
+  {
+    "pool": "NecrobinderCardPool",
+    "multiplayerConstraint": "None",
+    "basic": {
+      "id": "CARD.NEUROSURGE",
+      "className": "Neurosurge",
+      "name": "精神过载",
+      "type": "Power",
+      "rarity": "Rare",
+      "description": "获得{Energy:energyIcons()}。\n抽{Cards:diff()}张牌。\n在你的回合开始时，给予自身{NeurosurgePower:diff()}层[gold]灾厄[/gold]。",
+      "cost": 0,
+      "costsX": false,
+      "starCost": -1,
+      "costsStarX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "multiplayerOnly": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "NeurosurgePower": 3,
+        "Energy": 3,
+        "Cards": 2
+      }
+    },
+    "upgraded": {
+      "id": "CARD.NEUROSURGE",
+      "className": "Neurosurge",
+      "name": "精神过载",
+      "type": "Power",
+      "rarity": "Rare",
+      "description": "获得{Energy:energyIcons()}。\n抽{Cards:diff()}张牌。\n在你的回合开始时，给予自身{NeurosurgePower:diff()}层[gold]灾厄[/gold]。",
+      "cost": 0,
+      "costsX": false,
+      "starCost": -1,
+      "costsStarX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "multiplayerOnly": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "NeurosurgePower": 3,
+        "Energy": 4,
+        "Cards": 2
+      }
+    }
+  },
+  {
+    "pool": "NecrobinderCardPool",
+    "multiplayerConstraint": "None",
+    "basic": {
+      "id": "CARD.NO_ESCAPE",
+      "className": "NoEscape",
+      "name": "无处可逃",
+      "type": "Skill",
+      "rarity": "Uncommon",
+      "description": "给予{CalculationBase:diff()}层[gold]灾厄[/gold]，敌人身上每有{DoomThreshold:diff()}层[gold]灾厄[/gold]，则额外给予这名敌人{CalculationExtra:diff()}层[gold]灾厄[/gold]。{IsTargeting:\n（给予{CalculatedDoom:diff()}层[gold]灾厄[/gold]）|}",
+      "cost": 1,
+      "costsX": false,
+      "starCost": -1,
+      "costsStarX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "multiplayerOnly": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "DoomThreshold": 10,
+        "CalculationBase": 10,
+        "CalculationExtra": 5,
+        "CalculatedDoom": 10
+      }
+    },
+    "upgraded": {
+      "id": "CARD.NO_ESCAPE",
+      "className": "NoEscape",
+      "name": "无处可逃",
+      "type": "Skill",
+      "rarity": "Uncommon",
+      "description": "给予{CalculationBase:diff()}层[gold]灾厄[/gold]，敌人身上每有{DoomThreshold:diff()}层[gold]灾厄[/gold]，则额外给予这名敌人{CalculationExtra:diff()}层[gold]灾厄[/gold]。{IsTargeting:\n（给予{CalculatedDoom:diff()}层[gold]灾厄[/gold]）|}",
+      "cost": 1,
+      "costsX": false,
+      "starCost": -1,
+      "costsStarX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "multiplayerOnly": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "DoomThreshold": 10,
+        "CalculationBase": 15,
+        "CalculationExtra": 5,
+        "CalculatedDoom": 15
+      }
+    }
+  },
+  {
+    "pool": "NecrobinderCardPool",
+    "multiplayerConstraint": "None",
+    "basic": {
+      "id": "CARD.OBLIVION",
+      "className": "Oblivion",
+      "name": "湮灭",
+      "type": "Skill",
+      "rarity": "Rare",
+      "description": "打出此牌后，你在本回合内每打出一张牌，就给予该敌人{DoomPower:diff()}层[gold]灾厄[/gold]。",
+      "cost": 0,
+      "costsX": false,
+      "starCost": -1,
+      "costsStarX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "multiplayerOnly": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "DoomPower": 3
+      }
+    },
+    "upgraded": {
+      "id": "CARD.OBLIVION",
+      "className": "Oblivion",
+      "name": "湮灭",
+      "type": "Skill",
+      "rarity": "Rare",
+      "description": "打出此牌后，你在本回合内每打出一张牌，就给予该敌人{DoomPower:diff()}层[gold]灾厄[/gold]。",
+      "cost": 0,
+      "costsX": false,
+      "starCost": -1,
+      "costsStarX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "multiplayerOnly": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "DoomPower": 4
+      }
+    }
+  },
+  {
+    "pool": "NecrobinderCardPool",
+    "multiplayerConstraint": "None",
+    "basic": {
+      "id": "CARD.PAGESTORM",
+      "className": "Pagestorm",
+      "name": "书页风暴",
+      "type": "Power",
+      "rarity": "Uncommon",
+      "description": "每当你抽到一张[gold]虚无[/gold]牌时, 抽{Cards:diff()}张牌。",
+      "cost": 1,
+      "costsX": false,
+      "starCost": -1,
+      "costsStarX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "multiplayerOnly": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "Cards": 1
+      }
+    },
+    "upgraded": {
+      "id": "CARD.PAGESTORM",
+      "className": "Pagestorm",
+      "name": "书页风暴",
+      "type": "Power",
+      "rarity": "Uncommon",
+      "description": "每当你抽到一张[gold]虚无[/gold]牌时, 抽{Cards:diff()}张牌。",
+      "cost": 0,
+      "costsX": false,
+      "starCost": -1,
+      "costsStarX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "multiplayerOnly": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "Cards": 1
+      }
+    }
+  },
+  {
+    "pool": "NecrobinderCardPool",
+    "multiplayerConstraint": "None",
+    "basic": {
+      "id": "CARD.PARSE",
+      "className": "Parse",
+      "name": "领会",
+      "type": "Skill",
+      "rarity": "Uncommon",
+      "description": "抽{Cards:diff()}张牌。",
+      "cost": 1,
+      "costsX": false,
+      "starCost": -1,
+      "costsStarX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "multiplayerOnly": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [
+        "Ethereal"
+      ],
+      "variables": {
+        "Cards": 3
+      }
+    },
+    "upgraded": {
+      "id": "CARD.PARSE",
+      "className": "Parse",
+      "name": "领会",
+      "type": "Skill",
+      "rarity": "Uncommon",
+      "description": "抽{Cards:diff()}张牌。",
+      "cost": 1,
+      "costsX": false,
+      "starCost": -1,
+      "costsStarX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "multiplayerOnly": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [
+        "Ethereal"
+      ],
+      "variables": {
+        "Cards": 4
+      }
+    }
+  },
+  {
+    "pool": "NecrobinderCardPool",
+    "multiplayerConstraint": "None",
+    "basic": {
+      "id": "CARD.POKE",
+      "className": "Poke",
+      "name": "戳击",
+      "type": "Attack",
+      "rarity": "Common",
+      "description": "[gold]奥斯提[/gold]造成{OstyDamage:diff()}点伤害。",
+      "cost": 0,
+      "costsX": false,
+      "starCost": -1,
+      "costsStarX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "multiplayerOnly": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "OstyDamage": 6
+      }
+    },
+    "upgraded": {
+      "id": "CARD.POKE",
+      "className": "Poke",
+      "name": "戳击",
+      "type": "Attack",
+      "rarity": "Common",
+      "description": "[gold]奥斯提[/gold]造成{OstyDamage:diff()}点伤害。",
+      "cost": 0,
+      "costsX": false,
+      "starCost": -1,
+      "costsStarX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "multiplayerOnly": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "OstyDamage": 9
+      }
+    }
+  },
+  {
+    "pool": "NecrobinderCardPool",
+    "multiplayerConstraint": "None",
+    "basic": {
+      "id": "CARD.PROTECTOR",
+      "className": "Protector",
+      "name": "守护者",
+      "type": "Attack",
+      "rarity": "Ancient",
+      "description": "[gold]奥斯提[/gold]造成{CalculatedDamage:diff()}点伤害。\n额外造成等量于[gold]奥斯提[/gold][gold]最大生命值[/gold]的伤害。",
+      "cost": 1,
+      "costsX": false,
+      "starCost": -1,
+      "costsStarX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "multiplayerOnly": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "CalculationBase": 10,
+        "ExtraDamage": 1,
+        "CalculatedDamage": 10
+      }
+    },
+    "upgraded": {
+      "id": "CARD.PROTECTOR",
+      "className": "Protector",
+      "name": "守护者",
+      "type": "Attack",
+      "rarity": "Ancient",
+      "description": "[gold]奥斯提[/gold]造成{CalculatedDamage:diff()}点伤害。\n额外造成等量于[gold]奥斯提[/gold][gold]最大生命值[/gold]的伤害。",
+      "cost": 0,
+      "costsX": false,
+      "starCost": -1,
+      "costsStarX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "multiplayerOnly": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "CalculationBase": 15,
+        "ExtraDamage": 1,
+        "CalculatedDamage": 15
+      }
+    }
+  },
+  {
+    "pool": "NecrobinderCardPool",
+    "multiplayerConstraint": "None",
+    "basic": {
+      "id": "CARD.PULL_AGGRO",
+      "className": "PullAggro",
+      "name": "吸引仇恨",
+      "type": "Skill",
+      "rarity": "Common",
+      "description": "[gold]召唤[/gold]{Summon:diff()}。\n获得{Block:diff()}点[gold]格挡[/gold]。",
+      "cost": 2,
+      "costsX": false,
+      "starCost": -1,
+      "costsStarX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "multiplayerOnly": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "Summon": 4,
+        "Block": 7
+      }
+    },
+    "upgraded": {
+      "id": "CARD.PULL_AGGRO",
+      "className": "PullAggro",
+      "name": "吸引仇恨",
+      "type": "Skill",
+      "rarity": "Common",
+      "description": "[gold]召唤[/gold]{Summon:diff()}。\n获得{Block:diff()}点[gold]格挡[/gold]。",
+      "cost": 2,
+      "costsX": false,
+      "starCost": -1,
+      "costsStarX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "multiplayerOnly": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "Summon": 5,
+        "Block": 9
+      }
+    }
+  },
+  {
+    "pool": "NecrobinderCardPool",
+    "multiplayerConstraint": "None",
+    "basic": {
+      "id": "CARD.PULL_FROM_BELOW",
+      "className": "PullFromBelow",
+      "name": "亡魂牵引",
+      "type": "Attack",
+      "rarity": "Uncommon",
+      "description": "本场战斗中每打出过一张[gold]虚无[/gold]牌，此牌就造成{Damage:diff()}点伤害一次。{InCombat:\n（命中{CalculatedHits:diff()}次）|}",
+      "cost": 1,
+      "costsX": false,
+      "starCost": -1,
+      "costsStarX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "multiplayerOnly": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "Damage": 5,
+        "CalculationBase": 0,
+        "CalculationExtra": 1,
+        "CalculatedHits": 0
+      }
+    },
+    "upgraded": {
+      "id": "CARD.PULL_FROM_BELOW",
+      "className": "PullFromBelow",
+      "name": "亡魂牵引",
+      "type": "Attack",
+      "rarity": "Uncommon",
+      "description": "本场战斗中每打出过一张[gold]虚无[/gold]牌，此牌就造成{Damage:diff()}点伤害一次。{InCombat:\n（命中{CalculatedHits:diff()}次）|}",
+      "cost": 1,
+      "costsX": false,
+      "starCost": -1,
+      "costsStarX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "multiplayerOnly": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "Damage": 7,
+        "CalculationBase": 0,
+        "CalculationExtra": 1,
+        "CalculatedHits": 0
+      }
+    }
+  },
+  {
+    "pool": "NecrobinderCardPool",
+    "multiplayerConstraint": "None",
+    "basic": {
+      "id": "CARD.PUTREFY",
+      "className": "Putrefy",
+      "name": "腐败",
+      "type": "Skill",
+      "rarity": "Uncommon",
+      "description": "给予{Power:diff()}层[gold]虚弱[/gold]。\n给予{Power:diff()}层[gold]易伤[/gold]。",
+      "cost": 1,
+      "costsX": false,
+      "starCost": -1,
+      "costsStarX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "multiplayerOnly": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [
+        "Exhaust"
+      ],
+      "variables": {
+        "Power": 2
+      }
+    },
+    "upgraded": {
+      "id": "CARD.PUTREFY",
+      "className": "Putrefy",
+      "name": "腐败",
+      "type": "Skill",
+      "rarity": "Uncommon",
+      "description": "给予{Power:diff()}层[gold]虚弱[/gold]。\n给予{Power:diff()}层[gold]易伤[/gold]。",
+      "cost": 1,
+      "costsX": false,
+      "starCost": -1,
+      "costsStarX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "multiplayerOnly": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [
+        "Exhaust"
+      ],
+      "variables": {
+        "Power": 3
+      }
+    }
+  },
+  {
+    "pool": "NecrobinderCardPool",
+    "multiplayerConstraint": "None",
+    "basic": {
+      "id": "CARD.RATTLE",
+      "className": "Rattle",
+      "name": "猛晃",
+      "type": "Attack",
+      "rarity": "Uncommon",
+      "description": "[gold]奥斯提[/gold]造成{OstyDamage:diff()}点伤害。\n本回合每使用过一次奥斯提攻击牌，此牌就额外造成一次伤害。{InCombat:\n（命中{CalculatedHits:diff()}次）|}",
+      "cost": 1,
+      "costsX": false,
+      "starCost": -1,
+      "costsStarX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "multiplayerOnly": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "OstyDamage": 7,
+        "CalculationBase": 0,
+        "CalculationExtra": 1,
+        "CalculatedHits": 0
+      }
+    },
+    "upgraded": {
+      "id": "CARD.RATTLE",
+      "className": "Rattle",
+      "name": "猛晃",
+      "type": "Attack",
+      "rarity": "Uncommon",
+      "description": "[gold]奥斯提[/gold]造成{OstyDamage:diff()}点伤害。\n本回合每使用过一次奥斯提攻击牌，此牌就额外造成一次伤害。{InCombat:\n（命中{CalculatedHits:diff()}次）|}",
+      "cost": 1,
+      "costsX": false,
+      "starCost": -1,
+      "costsStarX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "multiplayerOnly": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "OstyDamage": 9,
+        "CalculationBase": 0,
+        "CalculationExtra": 1,
+        "CalculatedHits": 0
+      }
+    }
+  },
+  {
+    "pool": "NecrobinderCardPool",
+    "multiplayerConstraint": "None",
+    "basic": {
+      "id": "CARD.REANIMATE",
+      "className": "Reanimate",
+      "name": "死者苏生",
+      "type": "Skill",
+      "rarity": "Rare",
+      "description": "[gold]召唤[/gold]{Summon:diff()}。",
+      "cost": 3,
+      "costsX": false,
+      "starCost": -1,
+      "costsStarX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "multiplayerOnly": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [
+        "Exhaust"
+      ],
+      "variables": {
+        "Summon": 20
+      }
+    },
+    "upgraded": {
+      "id": "CARD.REANIMATE",
+      "className": "Reanimate",
+      "name": "死者苏生",
+      "type": "Skill",
+      "rarity": "Rare",
+      "description": "[gold]召唤[/gold]{Summon:diff()}。",
+      "cost": 3,
+      "costsX": false,
+      "starCost": -1,
+      "costsStarX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "multiplayerOnly": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [
+        "Exhaust"
+      ],
+      "variables": {
+        "Summon": 25
+      }
+    }
+  },
+  {
+    "pool": "NecrobinderCardPool",
+    "multiplayerConstraint": "None",
+    "basic": {
+      "id": "CARD.REAP",
+      "className": "Reap",
+      "name": "收割",
+      "type": "Attack",
+      "rarity": "Common",
+      "description": "造成{Damage:diff()}点伤害。",
+      "cost": 3,
+      "costsX": false,
+      "starCost": -1,
+      "costsStarX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "multiplayerOnly": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [
+        "Retain"
+      ],
+      "variables": {
+        "Damage": 27
+      }
+    },
+    "upgraded": {
+      "id": "CARD.REAP",
+      "className": "Reap",
+      "name": "收割",
+      "type": "Attack",
+      "rarity": "Common",
+      "description": "造成{Damage:diff()}点伤害。",
+      "cost": 3,
+      "costsX": false,
+      "starCost": -1,
+      "costsStarX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "multiplayerOnly": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [
+        "Retain"
+      ],
+      "variables": {
+        "Damage": 33
+      }
+    }
+  },
+  {
+    "pool": "NecrobinderCardPool",
+    "multiplayerConstraint": "None",
+    "basic": {
+      "id": "CARD.REAPER_FORM",
+      "className": "ReaperForm",
+      "name": "死神形态",
+      "type": "Power",
+      "rarity": "Rare",
+      "description": "每当你的攻击造成伤害时，同时给予等量的[gold]灾厄[/gold]。",
+      "cost": 3,
+      "costsX": false,
+      "starCost": -1,
+      "costsStarX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "multiplayerOnly": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {}
+    },
+    "upgraded": {
+      "id": "CARD.REAPER_FORM",
+      "className": "ReaperForm",
+      "name": "死神形态",
+      "type": "Power",
+      "rarity": "Rare",
+      "description": "每当你的攻击造成伤害时，同时给予等量的[gold]灾厄[/gold]。",
+      "cost": 3,
+      "costsX": false,
+      "starCost": -1,
+      "costsStarX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "multiplayerOnly": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [
+        "Retain"
+      ],
+      "variables": {}
+    }
+  },
+  {
+    "pool": "NecrobinderCardPool",
+    "multiplayerConstraint": "None",
+    "basic": {
+      "id": "CARD.REAVE",
+      "className": "Reave",
+      "name": "剥夺",
+      "type": "Attack",
+      "rarity": "Common",
+      "description": "造成{Damage:diff()}点伤害。\n将一张[gold]{IfUpgraded:show:灵魂+|灵魂}[/gold]加入你的[gold]抽牌堆[/gold]。",
+      "cost": 1,
+      "costsX": false,
+      "starCost": -1,
+      "costsStarX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "multiplayerOnly": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "Damage": 10,
+        "Cards": 1
+      }
+    },
+    "upgraded": {
+      "id": "CARD.REAVE",
+      "className": "Reave",
+      "name": "剥夺",
+      "type": "Attack",
+      "rarity": "Common",
+      "description": "造成{Damage:diff()}点伤害。\n将一张[gold]{IfUpgraded:show:灵魂+|灵魂}[/gold]加入你的[gold]抽牌堆[/gold]。",
+      "cost": 1,
+      "costsX": false,
+      "starCost": -1,
+      "costsStarX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "multiplayerOnly": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "Damage": 13,
+        "Cards": 1
+      }
+    }
+  },
+  {
+    "pool": "NecrobinderCardPool",
+    "multiplayerConstraint": "None",
+    "basic": {
+      "id": "CARD.RIGHT_HAND_HAND",
+      "className": "RightHandHand",
+      "name": "得力助手",
+      "type": "Attack",
+      "rarity": "Uncommon",
+      "description": "[gold]奥斯提[/gold]造成{OstyDamage:diff()}点伤害。\n每当你打出耗能为{Energy:energyIcons()}或以上的牌，将此牌从[gold]弃牌堆[/gold]放回你的[gold]手牌[/gold]。",
+      "cost": 0,
+      "costsX": false,
+      "starCost": -1,
+      "costsStarX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "multiplayerOnly": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "OstyDamage": 4,
+        "Energy": 2
+      }
+    },
+    "upgraded": {
+      "id": "CARD.RIGHT_HAND_HAND",
+      "className": "RightHandHand",
+      "name": "得力助手",
+      "type": "Attack",
+      "rarity": "Uncommon",
+      "description": "[gold]奥斯提[/gold]造成{OstyDamage:diff()}点伤害。\n每当你打出耗能为{Energy:energyIcons()}或以上的牌，将此牌从[gold]弃牌堆[/gold]放回你的[gold]手牌[/gold]。",
+      "cost": 0,
+      "costsX": false,
+      "starCost": -1,
+      "costsStarX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "multiplayerOnly": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "OstyDamage": 6,
+        "Energy": 2
+      }
+    }
+  },
+  {
+    "pool": "NecrobinderCardPool",
+    "multiplayerConstraint": "None",
+    "basic": {
+      "id": "CARD.SACRIFICE",
+      "className": "Sacrifice",
+      "name": "牺牲",
+      "type": "Skill",
+      "rarity": "Rare",
+      "description": "如果[gold]奥斯提[/gold]存活，则他死去，然后你获得等量于其最大生命值三倍的[gold]格挡[/gold]。{InCombat:\n（获得{IsOstyAlive:{CalculatedBlock:diff()}|0}点[gold]格挡[/gold]）|}",
+      "cost": 1,
+      "costsX": false,
+      "starCost": -1,
+      "costsStarX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "multiplayerOnly": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [
+        "Retain"
+      ],
+      "variables": {
+        "CalculationBase": 0,
+        "CalculationExtra": 1,
+        "CalculatedBlock": 0
+      }
+    },
+    "upgraded": {
+      "id": "CARD.SACRIFICE",
+      "className": "Sacrifice",
+      "name": "牺牲",
+      "type": "Skill",
+      "rarity": "Rare",
+      "description": "如果[gold]奥斯提[/gold]存活，则他死去，然后你获得等量于其最大生命值三倍的[gold]格挡[/gold]。{InCombat:\n（获得{IsOstyAlive:{CalculatedBlock:diff()}|0}点[gold]格挡[/gold]）|}",
+      "cost": 0,
+      "costsX": false,
+      "starCost": -1,
+      "costsStarX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "multiplayerOnly": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [
+        "Retain"
+      ],
+      "variables": {
+        "CalculationBase": 0,
+        "CalculationExtra": 1,
+        "CalculatedBlock": 0
+      }
+    }
+  },
+  {
+    "pool": "NecrobinderCardPool",
+    "multiplayerConstraint": "None",
+    "basic": {
+      "id": "CARD.SCOURGE",
+      "className": "Scourge",
+      "name": "鞭打",
+      "type": "Skill",
+      "rarity": "Common",
+      "description": "给予{DoomPower:diff()}层[gold]灾厄[/gold]。\n抽{Cards:diff()}张牌。",
+      "cost": 1,
+      "costsX": false,
+      "starCost": -1,
+      "costsStarX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "multiplayerOnly": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "DoomPower": 13,
+        "Cards": 1
+      }
+    },
+    "upgraded": {
+      "id": "CARD.SCOURGE",
+      "className": "Scourge",
+      "name": "鞭打",
+      "type": "Skill",
+      "rarity": "Common",
+      "description": "给予{DoomPower:diff()}层[gold]灾厄[/gold]。\n抽{Cards:diff()}张牌。",
+      "cost": 1,
+      "costsX": false,
+      "starCost": -1,
+      "costsStarX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "multiplayerOnly": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "DoomPower": 16,
+        "Cards": 2
+      }
+    }
+  },
+  {
+    "pool": "NecrobinderCardPool",
+    "multiplayerConstraint": "None",
+    "basic": {
+      "id": "CARD.SCULPTING_STRIKE",
+      "className": "SculptingStrike",
+      "name": "雕琢打击",
+      "type": "Attack",
+      "rarity": "Common",
+      "description": "造成{Damage:diff()}点伤害。\n为一张[gold]手牌[/gold]添加[gold]虚无[/gold]。",
+      "cost": 1,
+      "costsX": false,
+      "starCost": -1,
+      "costsStarX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "multiplayerOnly": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "Damage": 9
+      }
+    },
+    "upgraded": {
+      "id": "CARD.SCULPTING_STRIKE",
+      "className": "SculptingStrike",
+      "name": "雕琢打击",
+      "type": "Attack",
+      "rarity": "Common",
+      "description": "造成{Damage:diff()}点伤害。\n为一张[gold]手牌[/gold]添加[gold]虚无[/gold]。",
+      "cost": 1,
+      "costsX": false,
+      "starCost": -1,
+      "costsStarX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "multiplayerOnly": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "Damage": 12
+      }
+    }
+  },
+  {
+    "pool": "NecrobinderCardPool",
+    "multiplayerConstraint": "None",
+    "basic": {
+      "id": "CARD.SEANCE",
+      "className": "Seance",
+      "name": "降灵",
+      "type": "Skill",
+      "rarity": "Rare",
+      "description": "将你[gold]抽牌堆[/gold]中的一张牌变化为[gold]灵魂[/gold]。",
+      "cost": 1,
+      "costsX": false,
+      "starCost": -1,
+      "costsStarX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "multiplayerOnly": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [
+        "Ethereal"
+      ],
+      "variables": {
+        "Cards": 1
+      }
+    },
+    "upgraded": {
+      "id": "CARD.SEANCE",
+      "className": "Seance",
+      "name": "降灵",
+      "type": "Skill",
+      "rarity": "Rare",
+      "description": "将你[gold]抽牌堆[/gold]中的一张牌变化为[gold]灵魂[/gold]。",
+      "cost": 0,
+      "costsX": false,
+      "starCost": -1,
+      "costsStarX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "multiplayerOnly": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [
+        "Ethereal"
+      ],
+      "variables": {
+        "Cards": 1
+      }
+    }
+  },
+  {
+    "pool": "NecrobinderCardPool",
+    "multiplayerConstraint": "None",
+    "basic": {
+      "id": "CARD.SENTRY_MODE",
+      "className": "SentryMode",
+      "name": "哨卫模式",
+      "type": "Power",
+      "rarity": "Rare",
+      "description": "在你的回合开始时，将{SentryModePower:diff()}张[gold]扫荡凝视[/gold]加入你的[gold]手牌[/gold]。",
+      "cost": 2,
+      "costsX": false,
+      "starCost": -1,
+      "costsStarX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "multiplayerOnly": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "SentryModePower": 1
+      }
+    },
+    "upgraded": {
+      "id": "CARD.SENTRY_MODE",
+      "className": "SentryMode",
+      "name": "哨卫模式",
+      "type": "Power",
+      "rarity": "Rare",
+      "description": "在你的回合开始时，将{SentryModePower:diff()}张[gold]扫荡凝视[/gold]加入你的[gold]手牌[/gold]。",
+      "cost": 1,
+      "costsX": false,
+      "starCost": -1,
+      "costsStarX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "multiplayerOnly": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "SentryModePower": 1
+      }
+    }
+  },
+  {
+    "pool": "NecrobinderCardPool",
+    "multiplayerConstraint": "None",
+    "basic": {
+      "id": "CARD.SEVERANCE",
+      "className": "Severance",
+      "name": "切断",
+      "type": "Attack",
+      "rarity": "Uncommon",
+      "description": "造成{Damage:diff()}点伤害。\n将一张[gold]灵魂[/gold]分别加入你的[gold]抽牌堆[/gold]，[gold]手牌[/gold]和[gold]弃牌堆[/gold]中。",
+      "cost": 2,
+      "costsX": false,
+      "starCost": -1,
+      "costsStarX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "multiplayerOnly": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "Damage": 13
+      }
+    },
+    "upgraded": {
+      "id": "CARD.SEVERANCE",
+      "className": "Severance",
+      "name": "切断",
+      "type": "Attack",
+      "rarity": "Uncommon",
+      "description": "造成{Damage:diff()}点伤害。\n将一张[gold]灵魂[/gold]分别加入你的[gold]抽牌堆[/gold]，[gold]手牌[/gold]和[gold]弃牌堆[/gold]中。",
+      "cost": 2,
+      "costsX": false,
+      "starCost": -1,
+      "costsStarX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "multiplayerOnly": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "Damage": 18
+      }
+    }
+  },
+  {
+    "pool": "NecrobinderCardPool",
+    "multiplayerConstraint": "None",
+    "basic": {
+      "id": "CARD.SHARED_FATE",
+      "className": "SharedFate",
+      "name": "命运同担",
+      "type": "Skill",
+      "rarity": "Rare",
+      "description": "失去{PlayerStrengthLoss:diff()}点[gold]力量[/gold]。\n敌人失去{EnemyStrengthLoss:diff()}点[gold]力量[/gold]。",
+      "cost": 0,
+      "costsX": false,
+      "starCost": -1,
+      "costsStarX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "multiplayerOnly": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [
+        "Exhaust"
+      ],
+      "variables": {
+        "EnemyStrengthLoss": 2,
+        "PlayerStrengthLoss": 2
+      }
+    },
+    "upgraded": {
+      "id": "CARD.SHARED_FATE",
+      "className": "SharedFate",
+      "name": "命运同担",
+      "type": "Skill",
+      "rarity": "Rare",
+      "description": "失去{PlayerStrengthLoss:diff()}点[gold]力量[/gold]。\n敌人失去{EnemyStrengthLoss:diff()}点[gold]力量[/gold]。",
+      "cost": 0,
+      "costsX": false,
+      "starCost": -1,
+      "costsStarX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "multiplayerOnly": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [
+        "Exhaust"
+      ],
+      "variables": {
+        "EnemyStrengthLoss": 3,
+        "PlayerStrengthLoss": 2
+      }
+    }
+  },
+  {
+    "pool": "NecrobinderCardPool",
+    "multiplayerConstraint": "None",
+    "basic": {
+      "id": "CARD.SHROUD",
+      "className": "Shroud",
+      "name": "厄运之衣",
+      "type": "Power",
+      "rarity": "Uncommon",
+      "description": "每当你给予[gold]灾厄[/gold]时，获得{Block:diff()}点[gold]格挡[/gold]。",
+      "cost": 1,
+      "costsX": false,
+      "starCost": -1,
+      "costsStarX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "multiplayerOnly": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "Block": 3
+      }
+    },
+    "upgraded": {
+      "id": "CARD.SHROUD",
+      "className": "Shroud",
+      "name": "厄运之衣",
+      "type": "Power",
+      "rarity": "Uncommon",
+      "description": "每当你给予[gold]灾厄[/gold]时，获得{Block:diff()}点[gold]格挡[/gold]。",
+      "cost": 1,
+      "costsX": false,
+      "starCost": -1,
+      "costsStarX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "multiplayerOnly": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "Block": 4
+      }
+    }
+  },
+  {
+    "pool": "NecrobinderCardPool",
+    "multiplayerConstraint": "None",
+    "basic": {
+      "id": "CARD.SIC_EM",
+      "className": "SicEm",
+      "name": "紧追不放",
+      "type": "Attack",
+      "rarity": "Uncommon",
+      "description": "[gold]奥斯提[/gold]造成{OstyDamage:diff()}点伤害。\n在本回合内，每当[gold]奥斯提[/gold]攻击这名敌人时，[gold]召唤[/gold]{SicEmPower:diff()}。",
+      "cost": 1,
+      "costsX": false,
+      "starCost": -1,
+      "costsStarX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "multiplayerOnly": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "OstyDamage": 5,
+        "SicEmPower": 3
+      }
+    },
+    "upgraded": {
+      "id": "CARD.SIC_EM",
+      "className": "SicEm",
+      "name": "紧追不放",
+      "type": "Attack",
+      "rarity": "Uncommon",
+      "description": "[gold]奥斯提[/gold]造成{OstyDamage:diff()}点伤害。\n在本回合内，每当[gold]奥斯提[/gold]攻击这名敌人时，[gold]召唤[/gold]{SicEmPower:diff()}。",
+      "cost": 1,
+      "costsX": false,
+      "starCost": -1,
+      "costsStarX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "multiplayerOnly": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "OstyDamage": 6,
+        "SicEmPower": 4
+      }
+    }
+  },
+  {
+    "pool": "NecrobinderCardPool",
+    "multiplayerConstraint": "None",
+    "basic": {
+      "id": "CARD.SLEIGHT_OF_FLESH",
+      "className": "SleightOfFlesh",
+      "name": "血肉戏法",
+      "type": "Power",
+      "rarity": "Uncommon",
+      "description": "每当你给予一个敌人负面状态时，使其受到{SleightOfFleshPower:diff()}点伤害。",
+      "cost": 2,
+      "costsX": false,
+      "starCost": -1,
+      "costsStarX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "multiplayerOnly": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "SleightOfFleshPower": 9
+      }
+    },
+    "upgraded": {
+      "id": "CARD.SLEIGHT_OF_FLESH",
+      "className": "SleightOfFlesh",
+      "name": "血肉戏法",
+      "type": "Power",
+      "rarity": "Uncommon",
+      "description": "每当你给予一个敌人负面状态时，使其受到{SleightOfFleshPower:diff()}点伤害。",
+      "cost": 2,
+      "costsX": false,
+      "starCost": -1,
+      "costsStarX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "multiplayerOnly": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "SleightOfFleshPower": 13
+      }
+    }
+  },
+  {
+    "pool": "NecrobinderCardPool",
+    "multiplayerConstraint": "None",
+    "basic": {
+      "id": "CARD.SNAP",
+      "className": "Snap",
+      "name": "响指",
+      "type": "Attack",
+      "rarity": "Common",
+      "description": "[gold]奥斯提[/gold]造成{OstyDamage:diff()}点伤害。\n给[gold]手牌[/gold]中的一张牌添加[gold]保留[/gold]。",
+      "cost": 1,
+      "costsX": false,
+      "starCost": -1,
+      "costsStarX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "multiplayerOnly": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "OstyDamage": 7
+      }
+    },
+    "upgraded": {
+      "id": "CARD.SNAP",
+      "className": "Snap",
+      "name": "响指",
+      "type": "Attack",
+      "rarity": "Common",
+      "description": "[gold]奥斯提[/gold]造成{OstyDamage:diff()}点伤害。\n给[gold]手牌[/gold]中的一张牌添加[gold]保留[/gold]。",
+      "cost": 1,
+      "costsX": false,
+      "starCost": -1,
+      "costsStarX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "multiplayerOnly": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "OstyDamage": 10
+      }
+    }
+  },
+  {
+    "pool": "NecrobinderCardPool",
+    "multiplayerConstraint": "None",
+    "basic": {
+      "id": "CARD.SOUL_STORM",
+      "className": "SoulStorm",
+      "name": "灵魂风暴",
+      "type": "Attack",
+      "rarity": "Rare",
+      "description": "造成{CalculatedDamage:diff()}点伤害。\n你的[gold]消耗牌堆[/gold]中每有一张[gold]灵魂[/gold]，伤害增加{ExtraDamage:diff()}。",
+      "cost": 1,
+      "costsX": false,
+      "starCost": -1,
+      "costsStarX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "multiplayerOnly": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "CalculationBase": 9,
+        "ExtraDamage": 4,
+        "CalculatedDamage": 9
+      }
+    },
+    "upgraded": {
+      "id": "CARD.SOUL_STORM",
+      "className": "SoulStorm",
+      "name": "灵魂风暴",
+      "type": "Attack",
+      "rarity": "Rare",
+      "description": "造成{CalculatedDamage:diff()}点伤害。\n你的[gold]消耗牌堆[/gold]中每有一张[gold]灵魂[/gold]，伤害增加{ExtraDamage:diff()}。",
+      "cost": 1,
+      "costsX": false,
+      "starCost": -1,
+      "costsStarX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "multiplayerOnly": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "CalculationBase": 9,
+        "ExtraDamage": 6,
+        "CalculatedDamage": 9
+      }
+    }
+  },
+  {
+    "pool": "NecrobinderCardPool",
+    "multiplayerConstraint": "MultiplayerOnly",
+    "basic": {
+      "id": "CARD.SOULBOUND",
+      "className": "Soulbound",
+      "name": "灵魂绑定",
+      "type": "Power",
+      "rarity": "Uncommon",
+      "description": "选择一名盟友。\n每当你生成一张[gold]灵魂[/gold]时，将一张[gold]灵魂[/gold]，添加至他的[gold]抽牌堆[/gold]。",
+      "cost": 1,
+      "costsX": false,
+      "starCost": -1,
+      "costsStarX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "multiplayerOnly": true,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {}
+    },
+    "upgraded": {
+      "id": "CARD.SOULBOUND",
+      "className": "Soulbound",
+      "name": "灵魂绑定",
+      "type": "Power",
+      "rarity": "Uncommon",
+      "description": "选择一名盟友。\n每当你生成一张[gold]灵魂[/gold]时，将一张[gold]灵魂[/gold]，添加至他的[gold]抽牌堆[/gold]。",
+      "cost": 1,
+      "costsX": false,
+      "starCost": -1,
+      "costsStarX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "multiplayerOnly": true,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [
+        "Innate"
+      ],
+      "variables": {}
+    }
+  },
+  {
+    "pool": "NecrobinderCardPool",
+    "multiplayerConstraint": "None",
+    "basic": {
+      "id": "CARD.SOW",
+      "className": "Sow",
+      "name": "播种",
+      "type": "Attack",
+      "rarity": "Common",
+      "description": "对所有敌人造成{Damage:diff()}点伤害。",
+      "cost": 1,
+      "costsX": false,
+      "starCost": -1,
+      "costsStarX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "multiplayerOnly": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [
+        "Retain"
+      ],
+      "variables": {
+        "Damage": 8
+      }
+    },
+    "upgraded": {
+      "id": "CARD.SOW",
+      "className": "Sow",
+      "name": "播种",
+      "type": "Attack",
+      "rarity": "Common",
+      "description": "对所有敌人造成{Damage:diff()}点伤害。",
+      "cost": 1,
+      "costsX": false,
+      "starCost": -1,
+      "costsStarX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "multiplayerOnly": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [
+        "Retain"
+      ],
+      "variables": {
+        "Damage": 11
+      }
+    }
+  },
+  {
+    "pool": "NecrobinderCardPool",
+    "multiplayerConstraint": "None",
+    "basic": {
+      "id": "CARD.SPIRIT_OF_ASH",
+      "className": "SpiritOfAsh",
+      "name": "灰烬之灵",
+      "type": "Power",
+      "rarity": "Rare",
+      "description": "每当你打出一张[gold]虚无[/gold]牌时，获得{BlockOnExhaust:diff()}点[gold]格挡[/gold]。",
+      "cost": 1,
+      "costsX": false,
+      "starCost": -1,
+      "costsStarX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "multiplayerOnly": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "BlockOnExhaust": 4
+      }
+    },
+    "upgraded": {
+      "id": "CARD.SPIRIT_OF_ASH",
+      "className": "SpiritOfAsh",
+      "name": "灰烬之灵",
+      "type": "Power",
+      "rarity": "Rare",
+      "description": "每当你打出一张[gold]虚无[/gold]牌时，获得{BlockOnExhaust:diff()}点[gold]格挡[/gold]。",
+      "cost": 1,
+      "costsX": false,
+      "starCost": -1,
+      "costsStarX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "multiplayerOnly": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "BlockOnExhaust": 5
+      }
+    }
+  },
+  {
+    "pool": "NecrobinderCardPool",
+    "multiplayerConstraint": "None",
+    "basic": {
+      "id": "CARD.SPUR",
+      "className": "Spur",
+      "name": "增生",
+      "type": "Skill",
+      "rarity": "Uncommon",
+      "description": "[gold]召唤[/gold]{Summon:diff()}。\n[gold]奥斯提[/gold]回复{Heal:diff()}点生命。",
+      "cost": 1,
+      "costsX": false,
+      "starCost": -1,
+      "costsStarX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "multiplayerOnly": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [
+        "Retain"
+      ],
+      "variables": {
+        "Summon": 3,
+        "Heal": 5
+      }
+    },
+    "upgraded": {
+      "id": "CARD.SPUR",
+      "className": "Spur",
+      "name": "增生",
+      "type": "Skill",
+      "rarity": "Uncommon",
+      "description": "[gold]召唤[/gold]{Summon:diff()}。\n[gold]奥斯提[/gold]回复{Heal:diff()}点生命。",
+      "cost": 1,
+      "costsX": false,
+      "starCost": -1,
+      "costsStarX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "multiplayerOnly": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [
+        "Retain"
+      ],
+      "variables": {
+        "Summon": 5,
+        "Heal": 7
+      }
+    }
+  },
+  {
+    "pool": "NecrobinderCardPool",
+    "multiplayerConstraint": "None",
+    "basic": {
+      "id": "CARD.SQUEEZE",
+      "className": "Squeeze",
+      "name": "榨取",
+      "type": "Attack",
+      "rarity": "Rare",
+      "description": "[gold]奥斯提[/gold]造成{CalculatedDamage:diff()}点伤害。\n你每有一张[gold]奥斯提[/gold]的攻击牌，这张牌就额外造成{ExtraDamage:diff()}点伤害。",
+      "cost": 3,
+      "costsX": false,
+      "starCost": -1,
+      "costsStarX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "multiplayerOnly": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "CalculationBase": 25,
+        "ExtraDamage": 5,
+        "CalculatedDamage": 25
+      }
+    },
+    "upgraded": {
+      "id": "CARD.SQUEEZE",
+      "className": "Squeeze",
+      "name": "榨取",
+      "type": "Attack",
+      "rarity": "Rare",
+      "description": "[gold]奥斯提[/gold]造成{CalculatedDamage:diff()}点伤害。\n你每有一张[gold]奥斯提[/gold]的攻击牌，这张牌就额外造成{ExtraDamage:diff()}点伤害。",
+      "cost": 3,
+      "costsX": false,
+      "starCost": -1,
+      "costsStarX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "multiplayerOnly": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "CalculationBase": 30,
+        "ExtraDamage": 6,
+        "CalculatedDamage": 30
+      }
+    }
+  },
+  {
+    "pool": "NecrobinderCardPool",
+    "multiplayerConstraint": "None",
+    "basic": {
+      "id": "CARD.STRIKE_NECROBINDER",
+      "className": "StrikeNecrobinder",
+      "name": "打击",
+      "type": "Attack",
+      "rarity": "Basic",
+      "description": "造成{Damage:diff()}点伤害。",
+      "cost": 1,
+      "costsX": false,
+      "starCost": -1,
+      "costsStarX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "multiplayerOnly": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "Damage": 6
+      }
+    },
+    "upgraded": {
+      "id": "CARD.STRIKE_NECROBINDER",
+      "className": "StrikeNecrobinder",
+      "name": "打击",
+      "type": "Attack",
+      "rarity": "Basic",
+      "description": "造成{Damage:diff()}点伤害。",
+      "cost": 1,
+      "costsX": false,
+      "starCost": -1,
+      "costsStarX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "multiplayerOnly": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "Damage": 9
+      }
+    }
+  },
+  {
+    "pool": "NecrobinderCardPool",
+    "multiplayerConstraint": "None",
+    "basic": {
+      "id": "CARD.THE_SCYTHE",
+      "className": "TheScythe",
+      "name": "巨镰",
+      "type": "Attack",
+      "rarity": "Rare",
+      "description": "造成{Damage:diff()}点伤害。\n这张牌在本局游戏中的伤害永久性增加{Increase:diff()}。",
+      "cost": 2,
+      "costsX": false,
+      "starCost": -1,
+      "costsStarX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "multiplayerOnly": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [
+        "Exhaust"
+      ],
+      "variables": {
+        "Damage": 13,
+        "Increase": 5
+      }
+    },
+    "upgraded": {
+      "id": "CARD.THE_SCYTHE",
+      "className": "TheScythe",
+      "name": "巨镰",
+      "type": "Attack",
+      "rarity": "Rare",
+      "description": "造成{Damage:diff()}点伤害。\n这张牌在本局游戏中的伤害永久性增加{Increase:diff()}。",
+      "cost": 2,
+      "costsX": false,
+      "starCost": -1,
+      "costsStarX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "multiplayerOnly": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [
+        "Exhaust"
+      ],
+      "variables": {
+        "Damage": 13,
+        "Increase": 7
+      }
+    }
+  },
+  {
+    "pool": "NecrobinderCardPool",
+    "multiplayerConstraint": "None",
+    "basic": {
+      "id": "CARD.TIMES_UP",
+      "className": "TimesUp",
+      "name": "大限已至",
+      "type": "Attack",
+      "rarity": "Rare",
+      "description": "造成等量于该敌人身上的[gold]灾厄[/gold]层数的伤害。{IsTargeting:\n（造成{CalculatedDamage:diff()}点伤害）|}",
+      "cost": 2,
+      "costsX": false,
+      "starCost": -1,
+      "costsStarX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "multiplayerOnly": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "CalculationBase": 0,
+        "ExtraDamage": 1,
+        "CalculatedDamage": 0
+      }
+    },
+    "upgraded": {
+      "id": "CARD.TIMES_UP",
+      "className": "TimesUp",
+      "name": "大限已至",
+      "type": "Attack",
+      "rarity": "Rare",
+      "description": "造成等量于该敌人身上的[gold]灾厄[/gold]层数的伤害。{IsTargeting:\n（造成{CalculatedDamage:diff()}点伤害）|}",
+      "cost": 2,
+      "costsX": false,
+      "starCost": -1,
+      "costsStarX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "multiplayerOnly": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [
+        "Retain"
+      ],
+      "variables": {
+        "CalculationBase": 0,
+        "ExtraDamage": 1,
+        "CalculatedDamage": 0
+      }
+    }
+  },
+  {
+    "pool": "NecrobinderCardPool",
+    "multiplayerConstraint": "None",
+    "basic": {
+      "id": "CARD.TRANSFIGURE",
+      "className": "Transfigure",
+      "name": "重构",
+      "type": "Skill",
+      "rarity": "Rare",
+      "description": "给一张[gold]手牌[/gold]添加[gold]重放[/gold]。\n其耗能增加1{Energy:energyIcons()}。",
+      "cost": 1,
+      "costsX": false,
+      "starCost": -1,
+      "costsStarX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "multiplayerOnly": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [
+        "Exhaust"
+      ],
+      "variables": {
+        "Energy": 1
+      }
+    },
+    "upgraded": {
+      "id": "CARD.TRANSFIGURE",
+      "className": "Transfigure",
+      "name": "重构",
+      "type": "Skill",
+      "rarity": "Rare",
+      "description": "给一张[gold]手牌[/gold]添加[gold]重放[/gold]。\n其耗能增加1{Energy:energyIcons()}。",
+      "cost": 1,
+      "costsX": false,
+      "starCost": -1,
+      "costsStarX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "multiplayerOnly": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "Energy": 1
+      }
+    }
+  },
+  {
+    "pool": "NecrobinderCardPool",
+    "multiplayerConstraint": "None",
+    "basic": {
+      "id": "CARD.UNDEATH",
+      "className": "Undeath",
+      "name": "不死",
+      "type": "Skill",
+      "rarity": "Rare",
+      "description": "获得{Block:diff()}点[gold]格挡[/gold]。\n在[gold]弃牌堆[/gold]放入一张此牌的复制品。",
+      "cost": 0,
+      "costsX": false,
+      "starCost": -1,
+      "costsStarX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "multiplayerOnly": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "Block": 7
+      }
+    },
+    "upgraded": {
+      "id": "CARD.UNDEATH",
+      "className": "Undeath",
+      "name": "不死",
+      "type": "Skill",
+      "rarity": "Rare",
+      "description": "获得{Block:diff()}点[gold]格挡[/gold]。\n在[gold]弃牌堆[/gold]放入一张此牌的复制品。",
+      "cost": 0,
+      "costsX": false,
+      "starCost": -1,
+      "costsStarX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "multiplayerOnly": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "Block": 9
+      }
+    }
+  },
+  {
+    "pool": "NecrobinderCardPool",
+    "multiplayerConstraint": "MultiplayerOnly",
+    "basic": {
+      "id": "CARD.UNDERWORLD",
+      "className": "Underworld",
+      "name": "幽冥之界",
+      "type": "Skill",
+      "rarity": "Uncommon",
+      "description": "每当其他玩家在本回合造成攻击伤害时，给予敌人相等的[gold]灾厄[/gold]。",
+      "cost": 2,
+      "costsX": false,
+      "starCost": -1,
+      "costsStarX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "multiplayerOnly": true,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [
+        "Exhaust"
+      ],
+      "variables": {}
+    },
+    "upgraded": {
+      "id": "CARD.UNDERWORLD",
+      "className": "Underworld",
+      "name": "幽冥之界",
+      "type": "Skill",
+      "rarity": "Uncommon",
+      "description": "每当其他玩家在本回合造成攻击伤害时，给予敌人相等的[gold]灾厄[/gold]。",
+      "cost": 2,
+      "costsX": false,
+      "starCost": -1,
+      "costsStarX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "multiplayerOnly": true,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {}
+    }
+  },
+  {
+    "pool": "NecrobinderCardPool",
+    "multiplayerConstraint": "None",
+    "basic": {
+      "id": "CARD.UNLEASH",
+      "className": "Unleash",
+      "name": "出击",
+      "type": "Attack",
+      "rarity": "Basic",
+      "description": "[gold]奥斯提[/gold]造成{CalculatedDamage:diff()}点伤害。\n这张牌额外造成等量于[gold]奥斯提[/gold]当前生命值的伤害。",
+      "cost": 1,
+      "costsX": false,
+      "starCost": -1,
+      "costsStarX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "multiplayerOnly": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "CalculationBase": 6,
+        "ExtraDamage": 1,
+        "CalculatedDamage": 6
+      }
+    },
+    "upgraded": {
+      "id": "CARD.UNLEASH",
+      "className": "Unleash",
+      "name": "出击",
+      "type": "Attack",
+      "rarity": "Basic",
+      "description": "[gold]奥斯提[/gold]造成{CalculatedDamage:diff()}点伤害。\n这张牌额外造成等量于[gold]奥斯提[/gold]当前生命值的伤害。",
+      "cost": 1,
+      "costsX": false,
+      "starCost": -1,
+      "costsStarX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "multiplayerOnly": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "CalculationBase": 9,
+        "ExtraDamage": 1,
+        "CalculatedDamage": 9
+      }
+    }
+  },
+  {
+    "pool": "NecrobinderCardPool",
+    "multiplayerConstraint": "None",
+    "basic": {
+      "id": "CARD.VEILPIERCER",
+      "className": "Veilpiercer",
+      "name": "刺破帷幕",
+      "type": "Attack",
+      "rarity": "Uncommon",
+      "description": "造成{Damage:diff()}点伤害。\n你打出的下一张[gold]虚无[/gold]牌耗能变为0{energyPrefix:energyIcons(1)}。",
+      "cost": 1,
+      "costsX": false,
+      "starCost": -1,
+      "costsStarX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "multiplayerOnly": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "Damage": 10
+      }
+    },
+    "upgraded": {
+      "id": "CARD.VEILPIERCER",
+      "className": "Veilpiercer",
+      "name": "刺破帷幕",
+      "type": "Attack",
+      "rarity": "Uncommon",
+      "description": "造成{Damage:diff()}点伤害。\n你打出的下一张[gold]虚无[/gold]牌耗能变为0{energyPrefix:energyIcons(1)}。",
+      "cost": 1,
+      "costsX": false,
+      "starCost": -1,
+      "costsStarX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "multiplayerOnly": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "Damage": 13
+      }
+    }
+  },
+  {
+    "pool": "NecrobinderCardPool",
+    "multiplayerConstraint": "None",
+    "basic": {
+      "id": "CARD.WISP",
+      "className": "Wisp",
+      "name": "鬼火",
+      "type": "Skill",
+      "rarity": "Common",
+      "description": "获得{Energy:energyIcons()}。",
+      "cost": 0,
+      "costsX": false,
+      "starCost": -1,
+      "costsStarX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "multiplayerOnly": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [
+        "Exhaust"
+      ],
+      "variables": {
+        "Energy": 1
+      }
+    },
+    "upgraded": {
+      "id": "CARD.WISP",
+      "className": "Wisp",
+      "name": "鬼火",
+      "type": "Skill",
+      "rarity": "Common",
+      "description": "获得{Energy:energyIcons()}。",
+      "cost": 0,
+      "costsX": false,
+      "starCost": -1,
+      "costsStarX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "multiplayerOnly": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [
+        "Exhaust",
+        "Retain"
+      ],
+      "variables": {
+        "Energy": 1
+      }
+    }
+  }
+]

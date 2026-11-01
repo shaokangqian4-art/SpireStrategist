@@ -88,7 +88,7 @@ internal sealed partial class PartialAutopilot
         if(GameActions.Field(screen,"_cards") is not IEnumerable<CardModel> list || GameActions.Field(screen,"_prefs") is not CardSelectorPrefs prefs ||
             GameActions.Field(screen,"_selectedCards") is not HashSet<CardModel> selected)
         {Manual("事件选牌接口无法核验。");return;}
-        var cards=list.ToArray();var state=SnapshotReader.Read(service.State,service.Player);var v=new StrategicValue(state);
+        var cards=list.ToArray();var state=service.WithForesight(SnapshotReader.Read(service.State,service.Player));var v=new StrategicValue(state);
         double Value(CardModel c)
         {
             var snap=SnapshotReader.ReadCard(c);

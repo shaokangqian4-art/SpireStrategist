@@ -1,0 +1,1698 @@
+{
+  "source": "Spire Codex community-submitted runs, NOT Mega Crit telemetry",
+  "url": "https://spire-codex.com/api/runs/metrics/cards?bracket=solo:standard:a10:v0.111.0&character=SILENT",
+  "retrievedDate": "2026-11-01",
+  "dataThrough": "2026-10-31 12:28:58.253000",
+  "bracket": "solo:standard:a10:v0.111.0",
+  "characterRuns": 23029,
+  "characterWins": 4465,
+  "definitions": {
+    "pickRate": "Reward-screen selections / offers, percentage; not reward appearance probability",
+    "holderWinRate": "Win outcome of seats holding/acquiring the card as defined by provider; not causal pick benefit",
+    "sample": "Provider picks (acquisition/holder observations); NOT identical to reward-screen picked",
+    "lift": "Provider floor-adjusted difference vs player expected win rate, percentage points; observational",
+    "caveat": "Submitted saves, not random official sample; mods/solver use not controlled; upgraded rows separate; no extrapolation to win probability"
+  },
+  "cards": [
+    {
+      "className": "Abrasive",
+      "id": "ABRASIVE",
+      "name": "磨蚀",
+      "rarity": "Rare",
+      "pickRate": 50.3,
+      "holderWinRate": 36.6,
+      "winRateCi": [
+        34.6,
+        38.6
+      ],
+      "lift": 4.9,
+      "sample": 2279,
+      "offered": 4104,
+      "picked": 2066,
+      "pickRateByAct": [
+        53.2,
+        46.9,
+        44.9
+      ]
+    },
+    {
+      "className": "Accelerant",
+      "id": "ACCELERANT",
+      "name": "触媒",
+      "rarity": "Uncommon",
+      "pickRate": 21.0,
+      "holderWinRate": 31.8,
+      "winRateCi": [
+        30.4,
+        33.2
+      ],
+      "lift": 1.9,
+      "sample": 4379,
+      "offered": 14791,
+      "picked": 3106,
+      "pickRateByAct": [
+        21.9,
+        22.0,
+        17.1
+      ]
+    },
+    {
+      "className": "Accuracy",
+      "id": "ACCURACY",
+      "name": "精准",
+      "rarity": "Uncommon",
+      "pickRate": 36.1,
+      "holderWinRate": 32.7,
+      "winRateCi": [
+        31.5,
+        33.9
+      ],
+      "lift": 3.1,
+      "sample": 5974,
+      "offered": 13478,
+      "picked": 4872,
+      "pickRateByAct": [
+        38.8,
+        35.5,
+        30.3
+      ]
+    },
+    {
+      "className": "Acrobatics",
+      "id": "ACROBATICS",
+      "name": "杂技",
+      "rarity": "Uncommon",
+      "pickRate": 40.4,
+      "holderWinRate": 30.6,
+      "winRateCi": [
+        29.3,
+        32.0
+      ],
+      "lift": -0.8,
+      "sample": 4525,
+      "offered": 10673,
+      "picked": 4310,
+      "pickRateByAct": [
+        38.2,
+        43.3,
+        42.0
+      ]
+    },
+    {
+      "className": "Adrenaline",
+      "id": "ADRENALINE",
+      "name": "肾上腺素",
+      "rarity": "Rare",
+      "pickRate": 73.6,
+      "holderWinRate": 42.1,
+      "winRateCi": [
+        40.3,
+        43.8
+      ],
+      "lift": 8.8,
+      "sample": 3127,
+      "offered": 4052,
+      "picked": 2981,
+      "pickRateByAct": [
+        71.5,
+        75.3,
+        80.2
+      ]
+    },
+    {
+      "className": "Afterimage",
+      "id": "AFTERIMAGE",
+      "name": "余像",
+      "rarity": "Rare",
+      "pickRate": 72.1,
+      "holderWinRate": 46.2,
+      "winRateCi": [
+        44.5,
+        48.0
+      ],
+      "lift": 12.5,
+      "sample": 3045,
+      "offered": 4088,
+      "picked": 2946,
+      "pickRateByAct": [
+        70.6,
+        73.6,
+        75.9
+      ]
+    },
+    {
+      "className": "Anticipate",
+      "id": "ANTICIPATE",
+      "name": "预判",
+      "rarity": "Common",
+      "pickRate": 4.7,
+      "holderWinRate": 24.2,
+      "winRateCi": [
+        22.3,
+        26.1
+      ],
+      "lift": -6.1,
+      "sample": 1944,
+      "offered": 32065,
+      "picked": 1498,
+      "pickRateByAct": [
+        4.1,
+        5.3,
+        5.3
+      ]
+    },
+    {
+      "className": "Assassinate",
+      "id": "ASSASSINATE",
+      "name": "刺杀",
+      "rarity": "Rare",
+      "pickRate": 26.6,
+      "holderWinRate": 32.0,
+      "winRateCi": [
+        29.7,
+        34.3
+      ],
+      "lift": 1.7,
+      "sample": 1572,
+      "offered": 4674,
+      "picked": 1244,
+      "pickRateByAct": [
+        31.6,
+        21.0,
+        17.2
+      ]
+    },
+    {
+      "className": "Backflip",
+      "id": "BACKFLIP",
+      "name": "后空翻",
+      "rarity": "Common",
+      "pickRate": 38.3,
+      "holderWinRate": 30.8,
+      "winRateCi": [
+        29.9,
+        31.7
+      ],
+      "lift": 3.4,
+      "sample": 10461,
+      "offered": 30505,
+      "picked": 11686,
+      "pickRateByAct": [
+        39.3,
+        39.6,
+        33.0
+      ]
+    },
+    {
+      "className": "Backstab",
+      "id": "BACKSTAB",
+      "name": "背刺",
+      "rarity": "Uncommon",
+      "pickRate": 21.0,
+      "holderWinRate": 23.7,
+      "winRateCi": [
+        22.2,
+        25.3
+      ],
+      "lift": -1.3,
+      "sample": 2879,
+      "offered": 12111,
+      "picked": 2538,
+      "pickRateByAct": [
+        31.9,
+        11.2,
+        5.7
+      ]
+    },
+    {
+      "className": "BladeOfInk",
+      "id": "BLADE_OF_INK",
+      "name": "墨之刃",
+      "rarity": "Rare",
+      "pickRate": 50.0,
+      "holderWinRate": 39.2,
+      "winRateCi": [
+        37.3,
+        41.2
+      ],
+      "lift": 7.0,
+      "sample": 2398,
+      "offered": 4148,
+      "picked": 2074,
+      "pickRateByAct": [
+        53.4,
+        45.8,
+        44.0
+      ]
+    },
+    {
+      "className": "BladeDance",
+      "id": "BLADE_DANCE",
+      "name": "刀刃之舞",
+      "rarity": "Common",
+      "pickRate": 22.7,
+      "holderWinRate": 25.7,
+      "winRateCi": [
+        24.7,
+        26.8
+      ],
+      "lift": 0.6,
+      "sample": 6758,
+      "offered": 31709,
+      "picked": 7202,
+      "pickRateByAct": [
+        28.7,
+        17.6,
+        12.7
+      ]
+    },
+    {
+      "className": "Blur",
+      "id": "BLUR",
+      "name": "残影",
+      "rarity": "Uncommon",
+      "pickRate": 39.1,
+      "holderWinRate": 32.5,
+      "winRateCi": [
+        31.2,
+        33.9
+      ],
+      "lift": 0.5,
+      "sample": 4374,
+      "offered": 10743,
+      "picked": 4203,
+      "pickRateByAct": [
+        35.7,
+        42.7,
+        43.7
+      ]
+    },
+    {
+      "className": "BouncingFlask",
+      "id": "BOUNCING_FLASK",
+      "name": "弹跳药瓶",
+      "rarity": "Uncommon",
+      "pickRate": 21.1,
+      "holderWinRate": 25.7,
+      "winRateCi": [
+        24.1,
+        27.4
+      ],
+      "lift": -0.9,
+      "sample": 2624,
+      "offered": 11208,
+      "picked": 2369,
+      "pickRateByAct": [
+        29.0,
+        13.0,
+        11.3
+      ]
+    },
+    {
+      "className": "BubbleBubble",
+      "id": "BUBBLE_BUBBLE",
+      "name": "咕嘟冒泡",
+      "rarity": "Uncommon",
+      "pickRate": 25.0,
+      "holderWinRate": 29.6,
+      "winRateCi": [
+        27.9,
+        31.2
+      ],
+      "lift": 0.7,
+      "sample": 2949,
+      "offered": 10800,
+      "picked": 2700,
+      "pickRateByAct": [
+        26.3,
+        26.2,
+        19.2
+      ]
+    },
+    {
+      "className": "BulletTime",
+      "id": "BULLET_TIME",
+      "name": "子弹时间",
+      "rarity": "Rare",
+      "pickRate": 28.3,
+      "holderWinRate": 29.8,
+      "winRateCi": [
+        27.5,
+        32.2
+      ],
+      "lift": -1.1,
+      "sample": 1442,
+      "offered": 4164,
+      "picked": 1179,
+      "pickRateByAct": [
+        28.8,
+        27.9,
+        26.4
+      ]
+    },
+    {
+      "className": "Burst",
+      "id": "BURST",
+      "name": "爆发",
+      "rarity": "Rare",
+      "pickRate": 32.3,
+      "holderWinRate": 33.6,
+      "winRateCi": [
+        31.4,
+        36.0
+      ],
+      "lift": 1.4,
+      "sample": 1612,
+      "offered": 4187,
+      "picked": 1353,
+      "pickRateByAct": [
+        32.5,
+        33.6,
+        23.8
+      ]
+    },
+    {
+      "className": "CalculatedGamble",
+      "id": "CALCULATED_GAMBLE",
+      "name": "计算下注",
+      "rarity": "Uncommon",
+      "pickRate": 42.2,
+      "holderWinRate": 35.1,
+      "winRateCi": [
+        33.7,
+        36.4
+      ],
+      "lift": 2.7,
+      "sample": 4653,
+      "offered": 10716,
+      "picked": 4523,
+      "pickRateByAct": [
+        37.1,
+        47.9,
+        48.3
+      ]
+    },
+    {
+      "className": "CloakAndDagger",
+      "id": "CLOAK_AND_DAGGER",
+      "name": "斗篷与匕首",
+      "rarity": "Common",
+      "pickRate": 26.4,
+      "holderWinRate": 26.4,
+      "winRateCi": [
+        25.5,
+        27.4
+      ],
+      "lift": 1.1,
+      "sample": 7876,
+      "offered": 31121,
+      "picked": 8223,
+      "pickRateByAct": [
+        32.8,
+        21.2,
+        15.2
+      ]
+    },
+    {
+      "className": "CorrosiveWave",
+      "id": "CORROSIVE_WAVE",
+      "name": "腐蚀波",
+      "rarity": "Rare",
+      "pickRate": 12.9,
+      "holderWinRate": 30.0,
+      "winRateCi": [
+        26.9,
+        33.3
+      ],
+      "lift": 0.5,
+      "sample": 787,
+      "offered": 4138,
+      "picked": 534,
+      "pickRateByAct": [
+        14.4,
+        10.8,
+        11.6
+      ]
+    },
+    {
+      "className": "DaggerSpray",
+      "id": "DAGGER_SPRAY",
+      "name": "匕首雨",
+      "rarity": "Common",
+      "pickRate": 10.3,
+      "holderWinRate": 15.6,
+      "winRateCi": [
+        14.5,
+        16.7
+      ],
+      "lift": -5.5,
+      "sample": 3957,
+      "offered": 33166,
+      "picked": 3417,
+      "pickRateByAct": [
+        17.6,
+        2.7,
+        0.7
+      ]
+    },
+    {
+      "className": "DaggerThrow",
+      "id": "DAGGER_THROW",
+      "name": "投掷匕首",
+      "rarity": "Common",
+      "pickRate": 9.9,
+      "holderWinRate": 16.0,
+      "winRateCi": [
+        14.8,
+        17.2
+      ],
+      "lift": -6.0,
+      "sample": 3724,
+      "offered": 33075,
+      "picked": 3262,
+      "pickRateByAct": [
+        15.6,
+        4.2,
+        1.7
+      ]
+    },
+    {
+      "className": "Dash",
+      "id": "DASH",
+      "name": "冲刺",
+      "rarity": "Uncommon",
+      "pickRate": 17.0,
+      "holderWinRate": 21.9,
+      "winRateCi": [
+        20.3,
+        23.6
+      ],
+      "lift": -2.1,
+      "sample": 2415,
+      "offered": 12271,
+      "picked": 2084,
+      "pickRateByAct": [
+        27.4,
+        7.2,
+        3.2
+      ]
+    },
+    {
+      "className": "DeadlyPoison",
+      "id": "DEADLY_POISON",
+      "name": "致命毒药",
+      "rarity": "Common",
+      "pickRate": 15.0,
+      "holderWinRate": 20.5,
+      "winRateCi": [
+        19.4,
+        21.6
+      ],
+      "lift": -3.0,
+      "sample": 4902,
+      "offered": 31766,
+      "picked": 4753,
+      "pickRateByAct": [
+        21.4,
+        8.6,
+        5.6
+      ]
+    },
+    {
+      "className": "Deflect",
+      "id": "DEFLECT",
+      "name": "偏折",
+      "rarity": "Common",
+      "pickRate": 17.4,
+      "holderWinRate": 29.8,
+      "winRateCi": [
+        28.7,
+        31.0
+      ],
+      "lift": 0.9,
+      "sample": 5818,
+      "offered": 31583,
+      "picked": 5497,
+      "pickRateByAct": [
+        17.8,
+        17.9,
+        15.3
+      ]
+    },
+    {
+      "className": "DodgeAndRoll",
+      "id": "DODGE_AND_ROLL",
+      "name": "闪躲翻滚",
+      "rarity": "Common",
+      "pickRate": 14.6,
+      "holderWinRate": 29.8,
+      "winRateCi": [
+        28.5,
+        31.1
+      ],
+      "lift": 0.3,
+      "sample": 4853,
+      "offered": 31805,
+      "picked": 4629,
+      "pickRateByAct": [
+        14.4,
+        15.2,
+        14.1
+      ]
+    },
+    {
+      "className": "EchoingSlash",
+      "id": "ECHOING_SLASH",
+      "name": "回响斩击",
+      "rarity": "Uncommon",
+      "pickRate": 27.6,
+      "holderWinRate": 20.5,
+      "winRateCi": [
+        19.3,
+        21.8
+      ],
+      "lift": -3.3,
+      "sample": 3759,
+      "offered": 11852,
+      "picked": 3273,
+      "pickRateByAct": [
+        44.6,
+        14.9,
+        1.3
+      ]
+    },
+    {
+      "className": "Envenom",
+      "id": "ENVENOM",
+      "name": "涂毒",
+      "rarity": "Rare",
+      "pickRate": 27.3,
+      "holderWinRate": 31.9,
+      "winRateCi": [
+        29.5,
+        34.3
+      ],
+      "lift": 0.1,
+      "sample": 1400,
+      "offered": 4208,
+      "picked": 1150,
+      "pickRateByAct": [
+        29.5,
+        24.3,
+        24.2
+      ]
+    },
+    {
+      "className": "EscapePlan",
+      "id": "ESCAPE_PLAN",
+      "name": "逃脱计划",
+      "rarity": "Uncommon",
+      "pickRate": 42.6,
+      "holderWinRate": 30.5,
+      "winRateCi": [
+        29.2,
+        31.9
+      ],
+      "lift": 0.5,
+      "sample": 4569,
+      "offered": 10669,
+      "picked": 4548,
+      "pickRateByAct": [
+        43.1,
+        44.6,
+        37.6
+      ]
+    },
+    {
+      "className": "Expertise",
+      "id": "EXPERTISE",
+      "name": "独门技术",
+      "rarity": "Uncommon",
+      "pickRate": 12.6,
+      "holderWinRate": 29.6,
+      "winRateCi": [
+        27.4,
+        31.8
+      ],
+      "lift": -2.0,
+      "sample": 1637,
+      "offered": 11171,
+      "picked": 1402,
+      "pickRateByAct": [
+        11.8,
+        14.1,
+        12.2
+      ]
+    },
+    {
+      "className": "Expose",
+      "id": "EXPOSE",
+      "name": "暴露",
+      "rarity": "Uncommon",
+      "pickRate": 42.0,
+      "holderWinRate": 32.8,
+      "winRateCi": [
+        31.5,
+        34.1
+      ],
+      "lift": 2.2,
+      "sample": 4853,
+      "offered": 10749,
+      "picked": 4513,
+      "pickRateByAct": [
+        43.9,
+        42.0,
+        36.1
+      ]
+    },
+    {
+      "className": "FanOfKnives",
+      "id": "FAN_OF_KNIVES",
+      "name": "刀扇",
+      "rarity": "Rare",
+      "pickRate": 36.9,
+      "holderWinRate": 30.8,
+      "winRateCi": [
+        28.8,
+        32.9
+      ],
+      "lift": 1.1,
+      "sample": 1879,
+      "offered": 4117,
+      "picked": 1518,
+      "pickRateByAct": [
+        44.4,
+        29.5,
+        14.1
+      ]
+    },
+    {
+      "className": "Finisher",
+      "id": "FINISHER",
+      "name": "终结技",
+      "rarity": "Uncommon",
+      "pickRate": 10.4,
+      "holderWinRate": 25.5,
+      "winRateCi": [
+        23.4,
+        27.7
+      ],
+      "lift": -2.0,
+      "sample": 1566,
+      "offered": 12253,
+      "picked": 1274,
+      "pickRateByAct": [
+        13.3,
+        7.9,
+        6.4
+      ]
+    },
+    {
+      "className": "Flechettes",
+      "id": "FLECHETTES",
+      "name": "飞镖",
+      "rarity": "Uncommon",
+      "pickRate": 11.8,
+      "holderWinRate": 21.2,
+      "winRateCi": [
+        19.4,
+        23.2
+      ],
+      "lift": -4.3,
+      "sample": 1725,
+      "offered": 12358,
+      "picked": 1458,
+      "pickRateByAct": [
+        16.3,
+        8.3,
+        4.4
+      ]
+    },
+    {
+      "className": "FlickFlack",
+      "id": "FLICK_FLACK",
+      "name": "翻越撑击",
+      "rarity": "Common",
+      "pickRate": 9.1,
+      "holderWinRate": 13.0,
+      "winRateCi": [
+        11.9,
+        14.2
+      ],
+      "lift": -7.4,
+      "sample": 3406,
+      "offered": 33127,
+      "picked": 3011,
+      "pickRateByAct": [
+        14.7,
+        3.6,
+        0.8
+      ]
+    },
+    {
+      "className": "Sidestep",
+      "id": "SIDESTEP",
+      "name": "侧步",
+      "rarity": "Uncommon",
+      "pickRate": 29.0,
+      "holderWinRate": 28.4,
+      "winRateCi": [
+        26.9,
+        29.9
+      ],
+      "lift": -2.3,
+      "sample": 3523,
+      "offered": 10884,
+      "picked": 3159,
+      "pickRateByAct": [
+        29.2,
+        30.0,
+        26.9
+      ]
+    },
+    {
+      "className": "Footwork",
+      "id": "FOOTWORK",
+      "name": "灵动步法",
+      "rarity": "Uncommon",
+      "pickRate": 63.0,
+      "holderWinRate": 32.9,
+      "winRateCi": [
+        31.9,
+        33.8
+      ],
+      "lift": 3.7,
+      "sample": 9184,
+      "offered": 12288,
+      "picked": 7744,
+      "pickRateByAct": [
+        68.9,
+        60.4,
+        51.9
+      ]
+    },
+    {
+      "className": "GrandFinale",
+      "id": "GRAND_FINALE",
+      "name": "华丽收场",
+      "rarity": "Rare",
+      "pickRate": 3.5,
+      "holderWinRate": 29.3,
+      "winRateCi": [
+        25.0,
+        34.1
+      ],
+      "lift": 0.1,
+      "sample": 382,
+      "offered": 4806,
+      "picked": 170,
+      "pickRateByAct": [
+        4.4,
+        2.5,
+        1.9
+      ]
+    },
+    {
+      "className": "HandTrick",
+      "id": "HAND_TRICK",
+      "name": "手上技法",
+      "rarity": "Uncommon",
+      "pickRate": 15.6,
+      "holderWinRate": 26.0,
+      "winRateCi": [
+        24.1,
+        28.0
+      ],
+      "lift": -2.1,
+      "sample": 1945,
+      "offered": 10965,
+      "picked": 1709,
+      "pickRateByAct": [
+        17.2,
+        15.2,
+        11.2
+      ]
+    },
+    {
+      "className": "Haze",
+      "id": "HAZE",
+      "name": "迷雾",
+      "rarity": "Uncommon",
+      "pickRate": 22.6,
+      "holderWinRate": 24.4,
+      "winRateCi": [
+        22.9,
+        26.0
+      ],
+      "lift": -1.9,
+      "sample": 2828,
+      "offered": 10915,
+      "picked": 2468,
+      "pickRateByAct": [
+        30.8,
+        15.8,
+        9.7
+      ]
+    },
+    {
+      "className": "HiddenDaggers",
+      "id": "HIDDEN_DAGGERS",
+      "name": "隐秘匕首",
+      "rarity": "Uncommon",
+      "pickRate": 46.8,
+      "holderWinRate": 31.2,
+      "winRateCi": [
+        30.0,
+        32.5
+      ],
+      "lift": 2.7,
+      "sample": 5309,
+      "offered": 10600,
+      "picked": 4963,
+      "pickRateByAct": [
+        56.0,
+        39.6,
+        32.1
+      ]
+    },
+    {
+      "className": "InfiniteBlades",
+      "id": "INFINITE_BLADES",
+      "name": "无尽刀刃",
+      "rarity": "Uncommon",
+      "pickRate": 23.0,
+      "holderWinRate": 33.1,
+      "winRateCi": [
+        31.7,
+        34.5
+      ],
+      "lift": 4.1,
+      "sample": 4455,
+      "offered": 14877,
+      "picked": 3423,
+      "pickRateByAct": [
+        29.9,
+        18.4,
+        13.4
+      ]
+    },
+    {
+      "className": "KnifeTrap",
+      "id": "KNIFE_TRAP",
+      "name": "刀刃陷阱",
+      "rarity": "Rare",
+      "pickRate": 37.8,
+      "holderWinRate": 43.6,
+      "winRateCi": [
+        41.3,
+        45.8
+      ],
+      "lift": 10.6,
+      "sample": 1873,
+      "offered": 4154,
+      "picked": 1570,
+      "pickRateByAct": [
+        38.3,
+        38.0,
+        31.7
+      ]
+    },
+    {
+      "className": "LeadingStrike",
+      "id": "LEADING_STRIKE",
+      "name": "先制打击",
+      "rarity": "Common",
+      "pickRate": 27.7,
+      "holderWinRate": 26.3,
+      "winRateCi": [
+        25.4,
+        27.3
+      ],
+      "lift": 1.9,
+      "sample": 8562,
+      "offered": 32030,
+      "picked": 8884,
+      "pickRateByAct": [
+        38.6,
+        18.5,
+        10.6
+      ]
+    },
+    {
+      "className": "LegSweep",
+      "id": "LEG_SWEEP",
+      "name": "扫腿",
+      "rarity": "Uncommon",
+      "pickRate": 45.4,
+      "holderWinRate": 31.1,
+      "winRateCi": [
+        29.8,
+        32.3
+      ],
+      "lift": 1.9,
+      "sample": 5322,
+      "offered": 10708,
+      "picked": 4866,
+      "pickRateByAct": [
+        53.1,
+        40.0,
+        31.9
+      ]
+    },
+    {
+      "className": "Malaise",
+      "id": "MALAISE",
+      "name": "萎靡",
+      "rarity": "Rare",
+      "pickRate": 35.7,
+      "holderWinRate": 39.8,
+      "winRateCi": [
+        37.5,
+        42.2
+      ],
+      "lift": 6.9,
+      "sample": 1713,
+      "offered": 4189,
+      "picked": 1494,
+      "pickRateByAct": [
+        37.1,
+        33.4,
+        34.7
+      ]
+    },
+    {
+      "className": "MasterPlanner",
+      "id": "MASTER_PLANNER",
+      "name": "谋划专家",
+      "rarity": "Rare",
+      "pickRate": 15.1,
+      "holderWinRate": 24.8,
+      "winRateCi": [
+        22.0,
+        27.8
+      ],
+      "lift": -6.7,
+      "sample": 847,
+      "offered": 4157,
+      "picked": 627,
+      "pickRateByAct": [
+        15.6,
+        15.1,
+        11.1
+      ]
+    },
+    {
+      "className": "MementoMori",
+      "id": "MEMENTO_MORI",
+      "name": "铭记死亡",
+      "rarity": "Uncommon",
+      "pickRate": 3.2,
+      "holderWinRate": 17.8,
+      "winRateCi": [
+        14.9,
+        21.2
+      ],
+      "lift": -7.6,
+      "sample": 583,
+      "offered": 12335,
+      "picked": 389,
+      "pickRateByAct": [
+        4.9,
+        1.4,
+        1.1
+      ]
+    },
+    {
+      "className": "Mirage",
+      "id": "MIRAGE",
+      "name": "蜃景",
+      "rarity": "Uncommon",
+      "pickRate": 17.0,
+      "holderWinRate": 30.9,
+      "winRateCi": [
+        28.9,
+        32.9
+      ],
+      "lift": -0.8,
+      "sample": 2034,
+      "offered": 10849,
+      "picked": 1840,
+      "pickRateByAct": [
+        13.5,
+        21.6,
+        19.8
+      ]
+    },
+    {
+      "className": "Murder",
+      "id": "MURDER",
+      "name": "谋杀",
+      "rarity": "Rare",
+      "pickRate": 9.1,
+      "holderWinRate": 25.3,
+      "winRateCi": [
+        22.2,
+        28.7
+      ],
+      "lift": -4.0,
+      "sample": 672,
+      "offered": 4648,
+      "picked": 421,
+      "pickRateByAct": [
+        10.4,
+        6.6,
+        10.4
+      ]
+    },
+    {
+      "className": "Nightmare",
+      "id": "NIGHTMARE",
+      "name": "夜魇",
+      "rarity": "Rare",
+      "pickRate": 15.5,
+      "holderWinRate": 32.8,
+      "winRateCi": [
+        29.8,
+        36.0
+      ],
+      "lift": -1.0,
+      "sample": 862,
+      "offered": 4188,
+      "picked": 649,
+      "pickRateByAct": [
+        14.6,
+        16.2,
+        19.2
+      ]
+    },
+    {
+      "className": "NoxiousFumes",
+      "id": "NOXIOUS_FUMES",
+      "name": "毒雾",
+      "rarity": "Uncommon",
+      "pickRate": 38.2,
+      "holderWinRate": 29.4,
+      "winRateCi": [
+        28.3,
+        30.5
+      ],
+      "lift": 2.2,
+      "sample": 6584,
+      "offered": 13951,
+      "picked": 5331,
+      "pickRateByAct": [
+        51.6,
+        29.4,
+        21.3
+      ]
+    },
+    {
+      "className": "Outbreak",
+      "id": "OUTBREAK",
+      "name": "毒性爆发",
+      "rarity": "Rare",
+      "pickRate": 32.3,
+      "holderWinRate": 33.4,
+      "winRateCi": [
+        31.1,
+        35.7
+      ],
+      "lift": 3.3,
+      "sample": 1619,
+      "offered": 4047,
+      "picked": 1306,
+      "pickRateByAct": [
+        38.5,
+        25.1,
+        19.9
+      ]
+    },
+    {
+      "className": "PhantomBlades",
+      "id": "PHANTOM_BLADES",
+      "name": "幻影之刃",
+      "rarity": "Uncommon",
+      "pickRate": 24.0,
+      "holderWinRate": 31.6,
+      "winRateCi": [
+        30.2,
+        32.9
+      ],
+      "lift": 2.5,
+      "sample": 4646,
+      "offered": 14654,
+      "picked": 3515,
+      "pickRateByAct": [
+        28.8,
+        22.7,
+        14.3
+      ]
+    },
+    {
+      "className": "PiercingWail",
+      "id": "PIERCING_WAIL",
+      "name": "尖啸",
+      "rarity": "Common",
+      "pickRate": 33.1,
+      "holderWinRate": 29.3,
+      "winRateCi": [
+        28.4,
+        30.2
+      ],
+      "lift": 0.7,
+      "sample": 9786,
+      "offered": 31028,
+      "picked": 10265,
+      "pickRateByAct": [
+        32.1,
+        36.1,
+        31.1
+      ]
+    },
+    {
+      "className": "Pinpoint",
+      "id": "PINPOINT",
+      "name": "精密瞄准",
+      "rarity": "Uncommon",
+      "pickRate": 10.8,
+      "holderWinRate": 18.8,
+      "winRateCi": [
+        16.9,
+        20.8
+      ],
+      "lift": -5.4,
+      "sample": 1547,
+      "offered": 12356,
+      "picked": 1333,
+      "pickRateByAct": [
+        17.5,
+        4.5,
+        1.6
+      ]
+    },
+    {
+      "className": "PoisonedStab",
+      "id": "POISONED_STAB",
+      "name": "带毒刺击",
+      "rarity": "Common",
+      "pickRate": 7.1,
+      "holderWinRate": 16.6,
+      "winRateCi": [
+        15.2,
+        18.1
+      ],
+      "lift": -5.2,
+      "sample": 2589,
+      "offered": 33374,
+      "picked": 2370,
+      "pickRateByAct": [
+        11.6,
+        2.5,
+        1.1
+      ]
+    },
+    {
+      "className": "Pounce",
+      "id": "POUNCE",
+      "name": "猛扑",
+      "rarity": "Uncommon",
+      "pickRate": 16.1,
+      "holderWinRate": 19.4,
+      "winRateCi": [
+        17.8,
+        21.1
+      ],
+      "lift": -5.8,
+      "sample": 2252,
+      "offered": 12027,
+      "picked": 1938,
+      "pickRateByAct": [
+        23.9,
+        9.3,
+        4.7
+      ]
+    },
+    {
+      "className": "PreciseCut",
+      "id": "PRECISE_CUT",
+      "name": "精确切击",
+      "rarity": "Uncommon",
+      "pickRate": 8.6,
+      "holderWinRate": 21.9,
+      "winRateCi": [
+        19.7,
+        24.2
+      ],
+      "lift": -3.0,
+      "sample": 1263,
+      "offered": 12157,
+      "picked": 1051,
+      "pickRateByAct": [
+        14.7,
+        2.7,
+        0.9
+      ]
+    },
+    {
+      "className": "Predator",
+      "id": "PREDATOR",
+      "name": "猎杀者",
+      "rarity": "Common",
+      "pickRate": 6.1,
+      "holderWinRate": 20.6,
+      "winRateCi": [
+        19.1,
+        22.3
+      ],
+      "lift": -3.2,
+      "sample": 2443,
+      "offered": 33557,
+      "picked": 2040,
+      "pickRateByAct": [
+        9.8,
+        1.9,
+        1.4
+      ]
+    },
+    {
+      "className": "Prepared",
+      "id": "PREPARED",
+      "name": "早有准备",
+      "rarity": "Common",
+      "pickRate": 34.5,
+      "holderWinRate": 26.4,
+      "winRateCi": [
+        25.5,
+        27.3
+      ],
+      "lift": -1.3,
+      "sample": 9860,
+      "offered": 30629,
+      "picked": 10581,
+      "pickRateByAct": [
+        33.8,
+        36.5,
+        33.5
+      ]
+    },
+    {
+      "className": "Reflex",
+      "id": "REFLEX",
+      "name": "本能反应",
+      "rarity": "Uncommon",
+      "pickRate": 18.4,
+      "holderWinRate": 31.5,
+      "winRateCi": [
+        29.6,
+        33.4
+      ],
+      "lift": -1.6,
+      "sample": 2325,
+      "offered": 11106,
+      "picked": 2046,
+      "pickRateByAct": [
+        15.2,
+        22.3,
+        21.8
+      ]
+    },
+    {
+      "className": "Ricochet",
+      "id": "RICOCHET",
+      "name": "连续反弹",
+      "rarity": "Common",
+      "pickRate": 10.2,
+      "holderWinRate": 20.4,
+      "winRateCi": [
+        19.1,
+        21.7
+      ],
+      "lift": -3.6,
+      "sample": 3770,
+      "offered": 33706,
+      "picked": 3426,
+      "pickRateByAct": [
+        14.5,
+        6.1,
+        3.5
+      ]
+    },
+    {
+      "className": "SerpentForm",
+      "id": "SERPENT_FORM",
+      "name": "群蛇形态",
+      "rarity": "Rare",
+      "pickRate": 38.7,
+      "holderWinRate": 38.5,
+      "winRateCi": [
+        36.4,
+        40.7
+      ],
+      "lift": 6.3,
+      "sample": 1913,
+      "offered": 4237,
+      "picked": 1641,
+      "pickRateByAct": [
+        39.9,
+        36.7,
+        39.3
+      ]
+    },
+    {
+      "className": "ShadowStep",
+      "id": "SHADOW_STEP",
+      "name": "暗影步",
+      "rarity": "Rare",
+      "pickRate": 14.7,
+      "holderWinRate": 25.7,
+      "winRateCi": [
+        22.9,
+        28.8
+      ],
+      "lift": -4.4,
+      "sample": 844,
+      "offered": 4199,
+      "picked": 617,
+      "pickRateByAct": [
+        15.8,
+        13.0,
+        13.5
+      ]
+    },
+    {
+      "className": "Shadowmeld",
+      "id": "SHADOWMELD",
+      "name": "融入暗影",
+      "rarity": "Rare",
+      "pickRate": 26.0,
+      "holderWinRate": 34.4,
+      "winRateCi": [
+        31.9,
+        37.0
+      ],
+      "lift": 1.5,
+      "sample": 1320,
+      "offered": 4244,
+      "picked": 1104,
+      "pickRateByAct": [
+        25.2,
+        27.4,
+        25.9
+      ]
+    },
+    {
+      "className": "Skewer",
+      "id": "SKEWER",
+      "name": "串刺",
+      "rarity": "Uncommon",
+      "pickRate": 4.6,
+      "holderWinRate": 18.8,
+      "winRateCi": [
+        16.2,
+        21.8
+      ],
+      "lift": -5.9,
+      "sample": 749,
+      "offered": 12086,
+      "picked": 553,
+      "pickRateByAct": [
+        7.2,
+        1.8,
+        1.4
+      ]
+    },
+    {
+      "className": "Slice",
+      "id": "SLICE",
+      "name": "切割",
+      "rarity": "Common",
+      "pickRate": 3.7,
+      "holderWinRate": 15.9,
+      "winRateCi": [
+        14.2,
+        17.8
+      ],
+      "lift": -7.0,
+      "sample": 1600,
+      "offered": 33614,
+      "picked": 1233,
+      "pickRateByAct": [
+        5.7,
+        1.6,
+        0.9
+      ]
+    },
+    {
+      "className": "Snakebite",
+      "id": "SNAKEBITE",
+      "name": "蛇咬",
+      "rarity": "Common",
+      "pickRate": 20.0,
+      "holderWinRate": 22.6,
+      "winRateCi": [
+        21.7,
+        23.7
+      ],
+      "lift": -0.8,
+      "sample": 6775,
+      "offered": 31819,
+      "picked": 6375,
+      "pickRateByAct": [
+        29.4,
+        10.8,
+        7.3
+      ]
+    },
+    {
+      "className": "Speedster",
+      "id": "SPEEDSTER",
+      "name": "速行者",
+      "rarity": "Uncommon",
+      "pickRate": 3.4,
+      "holderWinRate": 20.9,
+      "winRateCi": [
+        18.4,
+        23.6
+      ],
+      "lift": -8.1,
+      "sample": 949,
+      "offered": 16299,
+      "picked": 549,
+      "pickRateByAct": [
+        3.6,
+        3.3,
+        3.0
+      ]
+    },
+    {
+      "className": "StormOfSteel",
+      "id": "STORM_OF_STEEL",
+      "name": "钢铁风暴",
+      "rarity": "Rare",
+      "pickRate": 15.7,
+      "holderWinRate": 29.0,
+      "winRateCi": [
+        26.2,
+        32.0
+      ],
+      "lift": -0.2,
+      "sample": 937,
+      "offered": 4203,
+      "picked": 660,
+      "pickRateByAct": [
+        17.7,
+        12.7,
+        15.0
+      ]
+    },
+    {
+      "className": "Strangle",
+      "id": "STRANGLE",
+      "name": "紧勒",
+      "rarity": "Uncommon",
+      "pickRate": 9.7,
+      "holderWinRate": 16.9,
+      "winRateCi": [
+        15.1,
+        19.0
+      ],
+      "lift": -7.2,
+      "sample": 1413,
+      "offered": 12288,
+      "picked": 1193,
+      "pickRateByAct": [
+        14.5,
+        5.2,
+        2.6
+      ]
+    },
+    {
+      "className": "SuckerPunch",
+      "id": "SUCKER_PUNCH",
+      "name": "突然一拳",
+      "rarity": "Common",
+      "pickRate": 7.0,
+      "holderWinRate": 20.1,
+      "winRateCi": [
+        18.6,
+        21.6
+      ],
+      "lift": -5.1,
+      "sample": 2731,
+      "offered": 33613,
+      "picked": 2357,
+      "pickRateByAct": [
+        9.9,
+        3.8,
+        3.4
+      ]
+    },
+    {
+      "className": "Tactician",
+      "id": "TACTICIAN",
+      "name": "战术大师",
+      "rarity": "Uncommon",
+      "pickRate": 21.2,
+      "holderWinRate": 27.6,
+      "winRateCi": [
+        25.9,
+        29.4
+      ],
+      "lift": -5.0,
+      "sample": 2608,
+      "offered": 10942,
+      "picked": 2321,
+      "pickRateByAct": [
+        18.3,
+        24.4,
+        24.3
+      ]
+    },
+    {
+      "className": "TheHunt",
+      "id": "THE_HUNT",
+      "name": "狩猎",
+      "rarity": "Rare",
+      "pickRate": 18.3,
+      "holderWinRate": 31.4,
+      "winRateCi": [
+        28.8,
+        34.0
+      ],
+      "lift": 2.5,
+      "sample": 1196,
+      "offered": 4554,
+      "picked": 834,
+      "pickRateByAct": [
+        26.6,
+        9.7,
+        1.2
+      ]
+    },
+    {
+      "className": "ToolsOfTheTrade",
+      "id": "TOOLS_OF_THE_TRADE",
+      "name": "必备工具",
+      "rarity": "Rare",
+      "pickRate": 48.8,
+      "holderWinRate": 41.3,
+      "winRateCi": [
+        39.3,
+        43.3
+      ],
+      "lift": 8.0,
+      "sample": 2246,
+      "offered": 4097,
+      "picked": 2001,
+      "pickRateByAct": [
+        48.6,
+        49.0,
+        50.3
+      ]
+    },
+    {
+      "className": "Tracking",
+      "id": "TRACKING",
+      "name": "跟踪",
+      "rarity": "Rare",
+      "pickRate": 29.0,
+      "holderWinRate": 31.7,
+      "winRateCi": [
+        29.4,
+        34.2
+      ],
+      "lift": -0.0,
+      "sample": 1446,
+      "offered": 4093,
+      "picked": 1186,
+      "pickRateByAct": [
+        30.6,
+        26.0,
+        31.1
+      ]
+    },
+    {
+      "className": "Untouchable",
+      "id": "UNTOUCHABLE",
+      "name": "触不可及",
+      "rarity": "Common",
+      "pickRate": 12.2,
+      "holderWinRate": 24.9,
+      "winRateCi": [
+        23.7,
+        26.3
+      ],
+      "lift": -3.9,
+      "sample": 4226,
+      "offered": 32015,
+      "picked": 3905,
+      "pickRateByAct": [
+        11.6,
+        13.7,
+        11.6
+      ]
+    },
+    {
+      "className": "UpMySleeve",
+      "id": "UP_MY_SLEEVE",
+      "name": "袖里乾坤",
+      "rarity": "Uncommon",
+      "pickRate": 17.8,
+      "holderWinRate": 20.5,
+      "winRateCi": [
+        18.9,
+        22.2
+      ],
+      "lift": -5.0,
+      "sample": 2307,
+      "offered": 11236,
+      "picked": 2004,
+      "pickRateByAct": [
+        24.0,
+        12.3,
+        8.5
+      ]
+    },
+    {
+      "className": "WellLaidPlans",
+      "id": "WELL_LAID_PLANS",
+      "name": "计划妥当",
+      "rarity": "Rare",
+      "pickRate": 47.1,
+      "holderWinRate": 46.5,
+      "winRateCi": [
+        44.4,
+        48.5
+      ],
+      "lift": 11.5,
+      "sample": 2270,
+      "offered": 4179,
+      "picked": 1970,
+      "pickRateByAct": [
+        49.3,
+        45.3,
+        39.0
+      ]
+    }
+  ]
+}

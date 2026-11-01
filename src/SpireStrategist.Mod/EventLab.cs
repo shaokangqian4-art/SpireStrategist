@@ -22,10 +22,13 @@ internal static partial class AutopilotLab
     private static async Task CheckEvents(RunState state,AdvisorService service,string mode)
     {
         var player=service.Player;var auto=service.Autopilot;
+        if(mode=="defect-foresight-0642"){await CheckForesight0642(state,service);return;}
+        if(mode=="foul-shop-0638"){await CheckFoulShop0638(state,service);return;}
         if(mode=="enchant-0621"){await CheckEnchant0621(state,service);return;}
         if(mode=="global-shop-0619"){await CheckGlobalShop0619(state,service);return;}
         if(mode=="ancient-healing"){await CheckAncientHealing(state,service);return;}
         if(mode=="climb-064"){await CheckClimb064(state,service);return;}
+        if(mode=="ui-0640"){await CheckUi0640(state,service);return;}
         if(mode=="ui-0620"){await CheckUi0620(state,service);return;}
         if(mode=="climb-shop-064"){await CheckClimbShop064(state,service);return;}
         if(mode=="tooth-065"){await CheckTooth065(state,service);return;}
@@ -45,7 +48,7 @@ internal static partial class AutopilotLab
         await RunManager.Instance.EnterRoomDebug(RoomType.Map,showTransition:false);
         NMapScreen.Instance!.Close(false);
         player.Gold=2000;
-        foreach(var card in new CardModel[]{state.CreateCard<ShrugItOff>(player),state.CreateCard<BattleTrance>(player),state.CreateCard<Inflame>(player),state.CreateCard<Impervious>(player),state.CreateCard<LanternKey>(player)})
+        foreach(var card in (player.Character.GetType().Name=="Silent"?new CardModel[]{state.CreateCard<BladeOfInk>(player),state.CreateCard<Accuracy>(player),state.CreateCard<Acrobatics>(player),state.CreateCard<Backflip>(player),state.CreateCard<LanternKey>(player)}:new CardModel[]{state.CreateCard<ShrugItOff>(player),state.CreateCard<BattleTrance>(player),state.CreateCard<Inflame>(player),state.CreateCard<Impervious>(player),state.CreateCard<LanternKey>(player)}))
             await CardPileCmd.Add(card,PileType.Deck);
         foreach(var relic in new RelicModel[]{ModelDb.Relic<Vajra>().ToMutable(),ModelDb.Relic<Anchor>().ToMutable(),ModelDb.Relic<BagOfPreparation>().ToMutable(),ModelDb.Relic<OddlySmoothStone>().ToMutable(),ModelDb.Relic<HappyFlower>().ToMutable()})await RelicCmd.Obtain(relic,player);
         await PotionCmd.TryToProcure(ModelDb.Potion<BlockPotion>().ToMutable(),player);

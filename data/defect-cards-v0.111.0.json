@@ -1,0 +1,4092 @@
+[
+  {
+    "pool": "DefectCardPool",
+    "multiplayerConstraint": "None",
+    "basic": {
+      "id": "CARD.ADAPTIVE_STRIKE",
+      "className": "AdaptiveStrike",
+      "name": "AdaptiveStrike",
+      "type": "Attack",
+      "rarity": "Rare",
+      "description": "",
+      "cost": 2,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "Damage": 18
+      }
+    },
+    "upgraded": {
+      "id": "CARD.ADAPTIVE_STRIKE",
+      "className": "AdaptiveStrike",
+      "name": "AdaptiveStrike",
+      "type": "Attack",
+      "rarity": "Rare",
+      "description": "",
+      "cost": 2,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "Damage": 23
+      }
+    }
+  },
+  {
+    "pool": "DefectCardPool",
+    "multiplayerConstraint": "None",
+    "basic": {
+      "id": "CARD.ALL_FOR_ONE",
+      "className": "AllForOne",
+      "name": "AllForOne",
+      "type": "Attack",
+      "rarity": "Rare",
+      "description": "",
+      "cost": 2,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "Damage": 10
+      }
+    },
+    "upgraded": {
+      "id": "CARD.ALL_FOR_ONE",
+      "className": "AllForOne",
+      "name": "AllForOne",
+      "type": "Attack",
+      "rarity": "Rare",
+      "description": "",
+      "cost": 2,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "Damage": 14
+      }
+    }
+  },
+  {
+    "pool": "DefectCardPool",
+    "multiplayerConstraint": "None",
+    "basic": {
+      "id": "CARD.BALL_LIGHTNING",
+      "className": "BallLightning",
+      "name": "BallLightning",
+      "type": "Attack",
+      "rarity": "Common",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "Damage": 7
+      }
+    },
+    "upgraded": {
+      "id": "CARD.BALL_LIGHTNING",
+      "className": "BallLightning",
+      "name": "BallLightning",
+      "type": "Attack",
+      "rarity": "Common",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "Damage": 10
+      }
+    }
+  },
+  {
+    "pool": "DefectCardPool",
+    "multiplayerConstraint": "None",
+    "basic": {
+      "id": "CARD.BARRAGE",
+      "className": "Barrage",
+      "name": "Barrage",
+      "type": "Attack",
+      "rarity": "Common",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "Damage": 5,
+        "CalculationBase": 0,
+        "CalculationExtra": 1,
+        "CalculatedHits": 0
+      }
+    },
+    "upgraded": {
+      "id": "CARD.BARRAGE",
+      "className": "Barrage",
+      "name": "Barrage",
+      "type": "Attack",
+      "rarity": "Common",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "Damage": 7,
+        "CalculationBase": 0,
+        "CalculationExtra": 1,
+        "CalculatedHits": 0
+      }
+    }
+  },
+  {
+    "pool": "DefectCardPool",
+    "multiplayerConstraint": "None",
+    "basic": {
+      "id": "CARD.BEAM_CELL",
+      "className": "BeamCell",
+      "name": "BeamCell",
+      "type": "Attack",
+      "rarity": "Common",
+      "description": "",
+      "cost": 0,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "Damage": 3,
+        "VulnerablePower": 1
+      }
+    },
+    "upgraded": {
+      "id": "CARD.BEAM_CELL",
+      "className": "BeamCell",
+      "name": "BeamCell",
+      "type": "Attack",
+      "rarity": "Common",
+      "description": "",
+      "cost": 0,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "Damage": 4,
+        "VulnerablePower": 2
+      }
+    }
+  },
+  {
+    "pool": "DefectCardPool",
+    "multiplayerConstraint": "None",
+    "basic": {
+      "id": "CARD.BIASED_COGNITION",
+      "className": "BiasedCognition",
+      "name": "BiasedCognition",
+      "type": "Power",
+      "rarity": "Ancient",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "FocusPower": 5,
+        "BiasedCognitionPower": 1
+      }
+    },
+    "upgraded": {
+      "id": "CARD.BIASED_COGNITION",
+      "className": "BiasedCognition",
+      "name": "BiasedCognition",
+      "type": "Power",
+      "rarity": "Ancient",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "FocusPower": 6,
+        "BiasedCognitionPower": 1
+      }
+    }
+  },
+  {
+    "pool": "DefectCardPool",
+    "multiplayerConstraint": "None",
+    "basic": {
+      "id": "CARD.BOOST_AWAY",
+      "className": "BoostAway",
+      "name": "BoostAway",
+      "type": "Skill",
+      "rarity": "Common",
+      "description": "",
+      "cost": 0,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "Block": 6
+      }
+    },
+    "upgraded": {
+      "id": "CARD.BOOST_AWAY",
+      "className": "BoostAway",
+      "name": "BoostAway",
+      "type": "Skill",
+      "rarity": "Common",
+      "description": "",
+      "cost": 0,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "Block": 9
+      }
+    }
+  },
+  {
+    "pool": "DefectCardPool",
+    "multiplayerConstraint": "None",
+    "basic": {
+      "id": "CARD.BOOT_SEQUENCE",
+      "className": "BootSequence",
+      "name": "BootSequence",
+      "type": "Skill",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 0,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [
+        "Innate",
+        "Exhaust"
+      ],
+      "variables": {
+        "Block": 10
+      }
+    },
+    "upgraded": {
+      "id": "CARD.BOOT_SEQUENCE",
+      "className": "BootSequence",
+      "name": "BootSequence",
+      "type": "Skill",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 0,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [
+        "Innate",
+        "Exhaust"
+      ],
+      "variables": {
+        "Block": 13
+      }
+    }
+  },
+  {
+    "pool": "DefectCardPool",
+    "multiplayerConstraint": "None",
+    "basic": {
+      "id": "CARD.BUFFER",
+      "className": "Buffer",
+      "name": "Buffer",
+      "type": "Power",
+      "rarity": "Rare",
+      "description": "",
+      "cost": 2,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "BufferPower": 1
+      }
+    },
+    "upgraded": {
+      "id": "CARD.BUFFER",
+      "className": "Buffer",
+      "name": "Buffer",
+      "type": "Power",
+      "rarity": "Rare",
+      "description": "",
+      "cost": 2,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "BufferPower": 2
+      }
+    }
+  },
+  {
+    "pool": "DefectCardPool",
+    "multiplayerConstraint": "None",
+    "basic": {
+      "id": "CARD.BULK_UP",
+      "className": "BulkUp",
+      "name": "BulkUp",
+      "type": "Power",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 2,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "OrbSlots": 1,
+        "StrengthPower": 2,
+        "DexterityPower": 2
+      }
+    },
+    "upgraded": {
+      "id": "CARD.BULK_UP",
+      "className": "BulkUp",
+      "name": "BulkUp",
+      "type": "Power",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 2,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "OrbSlots": 1,
+        "StrengthPower": 3,
+        "DexterityPower": 3
+      }
+    }
+  },
+  {
+    "pool": "DefectCardPool",
+    "multiplayerConstraint": "None",
+    "basic": {
+      "id": "CARD.CAPACITOR",
+      "className": "Capacitor",
+      "name": "Capacitor",
+      "type": "Power",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "Repeat": 2
+      }
+    },
+    "upgraded": {
+      "id": "CARD.CAPACITOR",
+      "className": "Capacitor",
+      "name": "Capacitor",
+      "type": "Power",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "Repeat": 3
+      }
+    }
+  },
+  {
+    "pool": "DefectCardPool",
+    "multiplayerConstraint": "None",
+    "basic": {
+      "id": "CARD.CHAOS",
+      "className": "Chaos",
+      "name": "Chaos",
+      "type": "Skill",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "Repeat": 1
+      }
+    },
+    "upgraded": {
+      "id": "CARD.CHAOS",
+      "className": "Chaos",
+      "name": "Chaos",
+      "type": "Skill",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "Repeat": 2
+      }
+    }
+  },
+  {
+    "pool": "DefectCardPool",
+    "multiplayerConstraint": "None",
+    "basic": {
+      "id": "CARD.CHARGE_BATTERY",
+      "className": "ChargeBattery",
+      "name": "ChargeBattery",
+      "type": "Skill",
+      "rarity": "Common",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "Block": 7,
+        "Energy": 1
+      }
+    },
+    "upgraded": {
+      "id": "CARD.CHARGE_BATTERY",
+      "className": "ChargeBattery",
+      "name": "ChargeBattery",
+      "type": "Skill",
+      "rarity": "Common",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "Block": 10,
+        "Energy": 1
+      }
+    }
+  },
+  {
+    "pool": "DefectCardPool",
+    "multiplayerConstraint": "None",
+    "basic": {
+      "id": "CARD.CHILL",
+      "className": "Chill",
+      "name": "Chill",
+      "type": "Skill",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 0,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [
+        "Exhaust"
+      ],
+      "variables": {}
+    },
+    "upgraded": {
+      "id": "CARD.CHILL",
+      "className": "Chill",
+      "name": "Chill",
+      "type": "Skill",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 0,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {}
+    }
+  },
+  {
+    "pool": "DefectCardPool",
+    "multiplayerConstraint": "None",
+    "basic": {
+      "id": "CARD.CLAW",
+      "className": "Claw",
+      "name": "Claw",
+      "type": "Attack",
+      "rarity": "Common",
+      "description": "",
+      "cost": 0,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "Damage": 3,
+        "Increase": 2
+      }
+    },
+    "upgraded": {
+      "id": "CARD.CLAW",
+      "className": "Claw",
+      "name": "Claw",
+      "type": "Attack",
+      "rarity": "Common",
+      "description": "",
+      "cost": 0,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "Damage": 4,
+        "Increase": 3
+      }
+    }
+  },
+  {
+    "pool": "DefectCardPool",
+    "multiplayerConstraint": "None",
+    "basic": {
+      "id": "CARD.COLD_SNAP",
+      "className": "ColdSnap",
+      "name": "ColdSnap",
+      "type": "Attack",
+      "rarity": "Common",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "Damage": 6
+      }
+    },
+    "upgraded": {
+      "id": "CARD.COLD_SNAP",
+      "className": "ColdSnap",
+      "name": "ColdSnap",
+      "type": "Attack",
+      "rarity": "Common",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "Damage": 9
+      }
+    }
+  },
+  {
+    "pool": "DefectCardPool",
+    "multiplayerConstraint": "None",
+    "basic": {
+      "id": "CARD.COMPACT",
+      "className": "Compact",
+      "name": "Compact",
+      "type": "Skill",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "Block": 6
+      }
+    },
+    "upgraded": {
+      "id": "CARD.COMPACT",
+      "className": "Compact",
+      "name": "Compact",
+      "type": "Skill",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "Block": 7
+      }
+    }
+  },
+  {
+    "pool": "DefectCardPool",
+    "multiplayerConstraint": "None",
+    "basic": {
+      "id": "CARD.COMPILE_DRIVER",
+      "className": "CompileDriver",
+      "name": "CompileDriver",
+      "type": "Attack",
+      "rarity": "Common",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "Damage": 7,
+        "CalculationBase": 0,
+        "CalculationExtra": 1,
+        "CalculatedCards": 0
+      }
+    },
+    "upgraded": {
+      "id": "CARD.COMPILE_DRIVER",
+      "className": "CompileDriver",
+      "name": "CompileDriver",
+      "type": "Attack",
+      "rarity": "Common",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "Damage": 10,
+        "CalculationBase": 0,
+        "CalculationExtra": 1,
+        "CalculatedCards": 0
+      }
+    }
+  },
+  {
+    "pool": "DefectCardPool",
+    "multiplayerConstraint": "None",
+    "basic": {
+      "id": "CARD.CONSUMING_SHADOW",
+      "className": "ConsumingShadow",
+      "name": "ConsumingShadow",
+      "type": "Power",
+      "rarity": "Rare",
+      "description": "",
+      "cost": 2,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "Repeat": 2,
+        "ConsumingShadowPower": 1
+      }
+    },
+    "upgraded": {
+      "id": "CARD.CONSUMING_SHADOW",
+      "className": "ConsumingShadow",
+      "name": "ConsumingShadow",
+      "type": "Power",
+      "rarity": "Rare",
+      "description": "",
+      "cost": 2,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "Repeat": 3,
+        "ConsumingShadowPower": 1
+      }
+    }
+  },
+  {
+    "pool": "DefectCardPool",
+    "multiplayerConstraint": "None",
+    "basic": {
+      "id": "CARD.COOLANT",
+      "className": "Coolant",
+      "name": "Coolant",
+      "type": "Power",
+      "rarity": "Rare",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "CoolantPower": 2
+      }
+    },
+    "upgraded": {
+      "id": "CARD.COOLANT",
+      "className": "Coolant",
+      "name": "Coolant",
+      "type": "Power",
+      "rarity": "Rare",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "CoolantPower": 3
+      }
+    }
+  },
+  {
+    "pool": "DefectCardPool",
+    "multiplayerConstraint": "None",
+    "basic": {
+      "id": "CARD.COOLHEADED",
+      "className": "Coolheaded",
+      "name": "Coolheaded",
+      "type": "Skill",
+      "rarity": "Common",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "Cards": 1
+      }
+    },
+    "upgraded": {
+      "id": "CARD.COOLHEADED",
+      "className": "Coolheaded",
+      "name": "Coolheaded",
+      "type": "Skill",
+      "rarity": "Common",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "Cards": 2
+      }
+    }
+  },
+  {
+    "pool": "DefectCardPool",
+    "multiplayerConstraint": "None",
+    "basic": {
+      "id": "CARD.CREATIVE_AI",
+      "className": "CreativeAi",
+      "name": "CreativeAi",
+      "type": "Power",
+      "rarity": "Rare",
+      "description": "",
+      "cost": 3,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "CreativeAi": 1
+      }
+    },
+    "upgraded": {
+      "id": "CARD.CREATIVE_AI",
+      "className": "CreativeAi",
+      "name": "CreativeAi",
+      "type": "Power",
+      "rarity": "Rare",
+      "description": "",
+      "cost": 2,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "CreativeAi": 1
+      }
+    }
+  },
+  {
+    "pool": "DefectCardPool",
+    "multiplayerConstraint": "None",
+    "basic": {
+      "id": "CARD.DARKNESS",
+      "className": "Darkness",
+      "name": "Darkness",
+      "type": "Skill",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {}
+    },
+    "upgraded": {
+      "id": "CARD.DARKNESS",
+      "className": "Darkness",
+      "name": "Darkness",
+      "type": "Skill",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {}
+    }
+  },
+  {
+    "pool": "DefectCardPool",
+    "multiplayerConstraint": "None",
+    "basic": {
+      "id": "CARD.DEFEND_DEFECT",
+      "className": "DefendDefect",
+      "name": "DefendDefect",
+      "type": "Skill",
+      "rarity": "Basic",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "Block": 5
+      }
+    },
+    "upgraded": {
+      "id": "CARD.DEFEND_DEFECT",
+      "className": "DefendDefect",
+      "name": "DefendDefect",
+      "type": "Skill",
+      "rarity": "Basic",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "Block": 8
+      }
+    }
+  },
+  {
+    "pool": "DefectCardPool",
+    "multiplayerConstraint": "None",
+    "basic": {
+      "id": "CARD.DEFRAGMENT",
+      "className": "Defragment",
+      "name": "Defragment",
+      "type": "Power",
+      "rarity": "Rare",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "FocusPower": 1
+      }
+    },
+    "upgraded": {
+      "id": "CARD.DEFRAGMENT",
+      "className": "Defragment",
+      "name": "Defragment",
+      "type": "Power",
+      "rarity": "Rare",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "FocusPower": 2
+      }
+    }
+  },
+  {
+    "pool": "DefectCardPool",
+    "multiplayerConstraint": "None",
+    "basic": {
+      "id": "CARD.DOUBLE_ENERGY",
+      "className": "DoubleEnergy",
+      "name": "DoubleEnergy",
+      "type": "Skill",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [
+        "Exhaust"
+      ],
+      "variables": {}
+    },
+    "upgraded": {
+      "id": "CARD.DOUBLE_ENERGY",
+      "className": "DoubleEnergy",
+      "name": "DoubleEnergy",
+      "type": "Skill",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 0,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [
+        "Exhaust"
+      ],
+      "variables": {}
+    }
+  },
+  {
+    "pool": "DefectCardPool",
+    "multiplayerConstraint": "None",
+    "basic": {
+      "id": "CARD.DUALCAST",
+      "className": "Dualcast",
+      "name": "Dualcast",
+      "type": "Skill",
+      "rarity": "Basic",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {}
+    },
+    "upgraded": {
+      "id": "CARD.DUALCAST",
+      "className": "Dualcast",
+      "name": "Dualcast",
+      "type": "Skill",
+      "rarity": "Basic",
+      "description": "",
+      "cost": 0,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {}
+    }
+  },
+  {
+    "pool": "DefectCardPool",
+    "multiplayerConstraint": "None",
+    "basic": {
+      "id": "CARD.ECHO_FORM",
+      "className": "EchoForm",
+      "name": "EchoForm",
+      "type": "Power",
+      "rarity": "Rare",
+      "description": "",
+      "cost": 3,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [
+        "Ethereal"
+      ],
+      "variables": {
+        "EchoForm": 1
+      }
+    },
+    "upgraded": {
+      "id": "CARD.ECHO_FORM",
+      "className": "EchoForm",
+      "name": "EchoForm",
+      "type": "Power",
+      "rarity": "Rare",
+      "description": "",
+      "cost": 3,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "EchoForm": 1
+      }
+    }
+  },
+  {
+    "pool": "DefectCardPool",
+    "multiplayerConstraint": "MultiplayerOnly",
+    "basic": {
+      "id": "CARD.ENERGY_SURGE",
+      "className": "EnergySurge",
+      "name": "EnergySurge",
+      "type": "Skill",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [
+        "Exhaust"
+      ],
+      "variables": {
+        "Energy": 2
+      }
+    },
+    "upgraded": {
+      "id": "CARD.ENERGY_SURGE",
+      "className": "EnergySurge",
+      "name": "EnergySurge",
+      "type": "Skill",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [
+        "Exhaust"
+      ],
+      "variables": {
+        "Energy": 3
+      }
+    }
+  },
+  {
+    "pool": "DefectCardPool",
+    "multiplayerConstraint": "None",
+    "basic": {
+      "id": "CARD.FERAL",
+      "className": "Feral",
+      "name": "Feral",
+      "type": "Power",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 2,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "FeralPower": 1
+      }
+    },
+    "upgraded": {
+      "id": "CARD.FERAL",
+      "className": "Feral",
+      "name": "Feral",
+      "type": "Power",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "FeralPower": 1
+      }
+    }
+  },
+  {
+    "pool": "DefectCardPool",
+    "multiplayerConstraint": "None",
+    "basic": {
+      "id": "CARD.FIGHT_THROUGH",
+      "className": "FightThrough",
+      "name": "FightThrough",
+      "type": "Skill",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "Block": 13
+      }
+    },
+    "upgraded": {
+      "id": "CARD.FIGHT_THROUGH",
+      "className": "FightThrough",
+      "name": "FightThrough",
+      "type": "Skill",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "Block": 17
+      }
+    }
+  },
+  {
+    "pool": "DefectCardPool",
+    "multiplayerConstraint": "None",
+    "basic": {
+      "id": "CARD.FLAK_CANNON",
+      "className": "FlakCannon",
+      "name": "FlakCannon",
+      "type": "Attack",
+      "rarity": "Rare",
+      "description": "",
+      "cost": 2,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "Damage": 8,
+        "CalculationBase": 0,
+        "CalculationExtra": 1,
+        "CalculatedHits": 0
+      }
+    },
+    "upgraded": {
+      "id": "CARD.FLAK_CANNON",
+      "className": "FlakCannon",
+      "name": "FlakCannon",
+      "type": "Attack",
+      "rarity": "Rare",
+      "description": "",
+      "cost": 2,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "Damage": 11,
+        "CalculationBase": 0,
+        "CalculationExtra": 1,
+        "CalculatedHits": 0
+      }
+    }
+  },
+  {
+    "pool": "DefectCardPool",
+    "multiplayerConstraint": "None",
+    "basic": {
+      "id": "CARD.FOCUSED_STRIKE",
+      "className": "FocusedStrike",
+      "name": "FocusedStrike",
+      "type": "Attack",
+      "rarity": "Common",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "Damage": 9,
+        "FocusPower": 1
+      }
+    },
+    "upgraded": {
+      "id": "CARD.FOCUSED_STRIKE",
+      "className": "FocusedStrike",
+      "name": "FocusedStrike",
+      "type": "Attack",
+      "rarity": "Common",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "Damage": 11,
+        "FocusPower": 2
+      }
+    }
+  },
+  {
+    "pool": "DefectCardPool",
+    "multiplayerConstraint": "None",
+    "basic": {
+      "id": "CARD.FTL",
+      "className": "Ftl",
+      "name": "Ftl",
+      "type": "Attack",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 0,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "Damage": 5,
+        "PlayMax": 3,
+        "Cards": 1
+      }
+    },
+    "upgraded": {
+      "id": "CARD.FTL",
+      "className": "Ftl",
+      "name": "Ftl",
+      "type": "Attack",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 0,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "Damage": 6,
+        "PlayMax": 4,
+        "Cards": 1
+      }
+    }
+  },
+  {
+    "pool": "DefectCardPool",
+    "multiplayerConstraint": "None",
+    "basic": {
+      "id": "CARD.FUSION",
+      "className": "Fusion",
+      "name": "Fusion",
+      "type": "Skill",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [
+        "Exhaust"
+      ],
+      "variables": {}
+    },
+    "upgraded": {
+      "id": "CARD.FUSION",
+      "className": "Fusion",
+      "name": "Fusion",
+      "type": "Skill",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {}
+    }
+  },
+  {
+    "pool": "DefectCardPool",
+    "multiplayerConstraint": "None",
+    "basic": {
+      "id": "CARD.GENETIC_ALGORITHM",
+      "className": "GeneticAlgorithm",
+      "name": "GeneticAlgorithm",
+      "type": "Skill",
+      "rarity": "Rare",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [
+        "Exhaust"
+      ],
+      "variables": {
+        "Block": 1,
+        "Increase": 3
+      }
+    },
+    "upgraded": {
+      "id": "CARD.GENETIC_ALGORITHM",
+      "className": "GeneticAlgorithm",
+      "name": "GeneticAlgorithm",
+      "type": "Skill",
+      "rarity": "Rare",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [
+        "Exhaust"
+      ],
+      "variables": {
+        "Block": 1,
+        "Increase": 4
+      }
+    }
+  },
+  {
+    "pool": "DefectCardPool",
+    "multiplayerConstraint": "None",
+    "basic": {
+      "id": "CARD.GLACIER",
+      "className": "Glacier",
+      "name": "Glacier",
+      "type": "Skill",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 2,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "Block": 6
+      }
+    },
+    "upgraded": {
+      "id": "CARD.GLACIER",
+      "className": "Glacier",
+      "name": "Glacier",
+      "type": "Skill",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 2,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "Block": 9
+      }
+    }
+  },
+  {
+    "pool": "DefectCardPool",
+    "multiplayerConstraint": "None",
+    "basic": {
+      "id": "CARD.GLASSWORK",
+      "className": "Glasswork",
+      "name": "Glasswork",
+      "type": "Skill",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "Block": 5
+      }
+    },
+    "upgraded": {
+      "id": "CARD.GLASSWORK",
+      "className": "Glasswork",
+      "name": "Glasswork",
+      "type": "Skill",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "Block": 8
+      }
+    }
+  },
+  {
+    "pool": "DefectCardPool",
+    "multiplayerConstraint": "None",
+    "basic": {
+      "id": "CARD.GO_FOR_THE_EYES",
+      "className": "GoForTheEyes",
+      "name": "GoForTheEyes",
+      "type": "Attack",
+      "rarity": "Common",
+      "description": "",
+      "cost": 0,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "Damage": 3,
+        "WeakPower": 1
+      }
+    },
+    "upgraded": {
+      "id": "CARD.GO_FOR_THE_EYES",
+      "className": "GoForTheEyes",
+      "name": "GoForTheEyes",
+      "type": "Attack",
+      "rarity": "Common",
+      "description": "",
+      "cost": 0,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "Damage": 4,
+        "WeakPower": 2
+      }
+    }
+  },
+  {
+    "pool": "DefectCardPool",
+    "multiplayerConstraint": "None",
+    "basic": {
+      "id": "CARD.GUNK_UP",
+      "className": "GunkUp",
+      "name": "GunkUp",
+      "type": "Attack",
+      "rarity": "Common",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "Damage": 4,
+        "Repeat": 3
+      }
+    },
+    "upgraded": {
+      "id": "CARD.GUNK_UP",
+      "className": "GunkUp",
+      "name": "GunkUp",
+      "type": "Attack",
+      "rarity": "Common",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "Damage": 5,
+        "Repeat": 3
+      }
+    }
+  },
+  {
+    "pool": "DefectCardPool",
+    "multiplayerConstraint": "None",
+    "basic": {
+      "id": "CARD.HAILSTORM",
+      "className": "Hailstorm",
+      "name": "Hailstorm",
+      "type": "Power",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "HailstormPower": 6
+      }
+    },
+    "upgraded": {
+      "id": "CARD.HAILSTORM",
+      "className": "Hailstorm",
+      "name": "Hailstorm",
+      "type": "Power",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "HailstormPower": 8
+      }
+    }
+  },
+  {
+    "pool": "DefectCardPool",
+    "multiplayerConstraint": "None",
+    "basic": {
+      "id": "CARD.HELIX_DRILL",
+      "className": "HelixDrill",
+      "name": "HelixDrill",
+      "type": "Attack",
+      "rarity": "Rare",
+      "description": "",
+      "cost": 0,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "Damage": 3,
+        "CalculationBase": 0,
+        "CalculationExtra": 1,
+        "CalculatedHits": 0
+      }
+    },
+    "upgraded": {
+      "id": "CARD.HELIX_DRILL",
+      "className": "HelixDrill",
+      "name": "HelixDrill",
+      "type": "Attack",
+      "rarity": "Rare",
+      "description": "",
+      "cost": 0,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "Damage": 5,
+        "CalculationBase": 0,
+        "CalculationExtra": 1,
+        "CalculatedHits": 0
+      }
+    }
+  },
+  {
+    "pool": "DefectCardPool",
+    "multiplayerConstraint": "MultiplayerOnly",
+    "basic": {
+      "id": "CARD.HIBERNATE",
+      "className": "Hibernate",
+      "name": "Hibernate",
+      "type": "Skill",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 2,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "Repeat": 2
+      }
+    },
+    "upgraded": {
+      "id": "CARD.HIBERNATE",
+      "className": "Hibernate",
+      "name": "Hibernate",
+      "type": "Skill",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 2,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "Repeat": 3
+      }
+    }
+  },
+  {
+    "pool": "DefectCardPool",
+    "multiplayerConstraint": "None",
+    "basic": {
+      "id": "CARD.HOLOGRAM",
+      "className": "Hologram",
+      "name": "Hologram",
+      "type": "Skill",
+      "rarity": "Common",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [
+        "Exhaust"
+      ],
+      "variables": {
+        "Block": 3
+      }
+    },
+    "upgraded": {
+      "id": "CARD.HOLOGRAM",
+      "className": "Hologram",
+      "name": "Hologram",
+      "type": "Skill",
+      "rarity": "Common",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "Block": 5
+      }
+    }
+  },
+  {
+    "pool": "DefectCardPool",
+    "multiplayerConstraint": "None",
+    "basic": {
+      "id": "CARD.HOTFIX",
+      "className": "Hotfix",
+      "name": "Hotfix",
+      "type": "Skill",
+      "rarity": "Common",
+      "description": "",
+      "cost": 0,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [
+        "Exhaust"
+      ],
+      "variables": {
+        "FocusPower": 2
+      }
+    },
+    "upgraded": {
+      "id": "CARD.HOTFIX",
+      "className": "Hotfix",
+      "name": "Hotfix",
+      "type": "Skill",
+      "rarity": "Common",
+      "description": "",
+      "cost": 0,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "FocusPower": 2
+      }
+    }
+  },
+  {
+    "pool": "DefectCardPool",
+    "multiplayerConstraint": "None",
+    "basic": {
+      "id": "CARD.HYPERBEAM",
+      "className": "Hyperbeam",
+      "name": "Hyperbeam",
+      "type": "Attack",
+      "rarity": "Rare",
+      "description": "",
+      "cost": 2,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "Damage": 24,
+        "FocusPower": 3
+      }
+    },
+    "upgraded": {
+      "id": "CARD.HYPERBEAM",
+      "className": "Hyperbeam",
+      "name": "Hyperbeam",
+      "type": "Attack",
+      "rarity": "Rare",
+      "description": "",
+      "cost": 2,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "Damage": 30,
+        "FocusPower": 3
+      }
+    }
+  },
+  {
+    "pool": "DefectCardPool",
+    "multiplayerConstraint": "None",
+    "basic": {
+      "id": "CARD.ICE_LANCE",
+      "className": "IceLance",
+      "name": "IceLance",
+      "type": "Attack",
+      "rarity": "Rare",
+      "description": "",
+      "cost": 3,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "Damage": 19,
+        "Repeat": 3
+      }
+    },
+    "upgraded": {
+      "id": "CARD.ICE_LANCE",
+      "className": "IceLance",
+      "name": "IceLance",
+      "type": "Attack",
+      "rarity": "Rare",
+      "description": "",
+      "cost": 3,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "Damage": 24,
+        "Repeat": 3
+      }
+    }
+  },
+  {
+    "pool": "DefectCardPool",
+    "multiplayerConstraint": "MultiplayerOnly",
+    "basic": {
+      "id": "CARD.IGNITION",
+      "className": "Ignition",
+      "name": "Ignition",
+      "type": "Skill",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [
+        "Exhaust"
+      ],
+      "variables": {}
+    },
+    "upgraded": {
+      "id": "CARD.IGNITION",
+      "className": "Ignition",
+      "name": "Ignition",
+      "type": "Skill",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {}
+    }
+  },
+  {
+    "pool": "DefectCardPool",
+    "multiplayerConstraint": "MultiplayerOnly",
+    "basic": {
+      "id": "CARD.IMITATION_LEARNING",
+      "className": "ImitationLearning",
+      "name": "ImitationLearning",
+      "type": "Skill",
+      "rarity": "Rare",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [
+        "Exhaust"
+      ],
+      "variables": {
+        "ImitationLearningPower": 2
+      }
+    },
+    "upgraded": {
+      "id": "CARD.IMITATION_LEARNING",
+      "className": "ImitationLearning",
+      "name": "ImitationLearning",
+      "type": "Skill",
+      "rarity": "Rare",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [
+        "Exhaust"
+      ],
+      "variables": {
+        "ImitationLearningPower": 3
+      }
+    }
+  },
+  {
+    "pool": "DefectCardPool",
+    "multiplayerConstraint": "None",
+    "basic": {
+      "id": "CARD.ITERATION",
+      "className": "Iteration",
+      "name": "Iteration",
+      "type": "Power",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "IterationPower": 2
+      }
+    },
+    "upgraded": {
+      "id": "CARD.ITERATION",
+      "className": "Iteration",
+      "name": "Iteration",
+      "type": "Power",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "IterationPower": 3
+      }
+    }
+  },
+  {
+    "pool": "DefectCardPool",
+    "multiplayerConstraint": "None",
+    "basic": {
+      "id": "CARD.LEAP",
+      "className": "Leap",
+      "name": "Leap",
+      "type": "Skill",
+      "rarity": "Common",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "Block": 9
+      }
+    },
+    "upgraded": {
+      "id": "CARD.LEAP",
+      "className": "Leap",
+      "name": "Leap",
+      "type": "Skill",
+      "rarity": "Common",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "Block": 12
+      }
+    }
+  },
+  {
+    "pool": "DefectCardPool",
+    "multiplayerConstraint": "None",
+    "basic": {
+      "id": "CARD.LIGHTNING_ROD",
+      "className": "LightningRod",
+      "name": "LightningRod",
+      "type": "Skill",
+      "rarity": "Common",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "Block": 4,
+        "LightningRodPower": 2
+      }
+    },
+    "upgraded": {
+      "id": "CARD.LIGHTNING_ROD",
+      "className": "LightningRod",
+      "name": "LightningRod",
+      "type": "Skill",
+      "rarity": "Common",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "Block": 7,
+        "LightningRodPower": 2
+      }
+    }
+  },
+  {
+    "pool": "DefectCardPool",
+    "multiplayerConstraint": "None",
+    "basic": {
+      "id": "CARD.LOOP",
+      "className": "Loop",
+      "name": "Loop",
+      "type": "Power",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "Loop": 1
+      }
+    },
+    "upgraded": {
+      "id": "CARD.LOOP",
+      "className": "Loop",
+      "name": "Loop",
+      "type": "Power",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "Loop": 2
+      }
+    }
+  },
+  {
+    "pool": "DefectCardPool",
+    "multiplayerConstraint": "None",
+    "basic": {
+      "id": "CARD.MACHINE_LEARNING",
+      "className": "MachineLearning",
+      "name": "MachineLearning",
+      "type": "Power",
+      "rarity": "Rare",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "Cards": 1
+      }
+    },
+    "upgraded": {
+      "id": "CARD.MACHINE_LEARNING",
+      "className": "MachineLearning",
+      "name": "MachineLearning",
+      "type": "Power",
+      "rarity": "Rare",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [
+        "Innate"
+      ],
+      "variables": {
+        "Cards": 1
+      }
+    }
+  },
+  {
+    "pool": "DefectCardPool",
+    "multiplayerConstraint": "None",
+    "basic": {
+      "id": "CARD.METEOR_STRIKE",
+      "className": "MeteorStrike",
+      "name": "MeteorStrike",
+      "type": "Attack",
+      "rarity": "Rare",
+      "description": "",
+      "cost": 5,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "Damage": 24
+      }
+    },
+    "upgraded": {
+      "id": "CARD.METEOR_STRIKE",
+      "className": "MeteorStrike",
+      "name": "MeteorStrike",
+      "type": "Attack",
+      "rarity": "Rare",
+      "description": "",
+      "cost": 5,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "Damage": 30
+      }
+    }
+  },
+  {
+    "pool": "DefectCardPool",
+    "multiplayerConstraint": "None",
+    "basic": {
+      "id": "CARD.MODDED",
+      "className": "Modded",
+      "name": "Modded",
+      "type": "Skill",
+      "rarity": "Rare",
+      "description": "",
+      "cost": 0,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "Repeat": 1,
+        "Cards": 1
+      }
+    },
+    "upgraded": {
+      "id": "CARD.MODDED",
+      "className": "Modded",
+      "name": "Modded",
+      "type": "Skill",
+      "rarity": "Rare",
+      "description": "",
+      "cost": 0,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "Repeat": 1,
+        "Cards": 2
+      }
+    }
+  },
+  {
+    "pool": "DefectCardPool",
+    "multiplayerConstraint": "None",
+    "basic": {
+      "id": "CARD.MOMENTUM_STRIKE",
+      "className": "MomentumStrike",
+      "name": "MomentumStrike",
+      "type": "Attack",
+      "rarity": "Common",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "Damage": 11
+      }
+    },
+    "upgraded": {
+      "id": "CARD.MOMENTUM_STRIKE",
+      "className": "MomentumStrike",
+      "name": "MomentumStrike",
+      "type": "Attack",
+      "rarity": "Common",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "Damage": 15
+      }
+    }
+  },
+  {
+    "pool": "DefectCardPool",
+    "multiplayerConstraint": "None",
+    "basic": {
+      "id": "CARD.MULTI_CAST",
+      "className": "MultiCast",
+      "name": "MultiCast",
+      "type": "Skill",
+      "rarity": "Rare",
+      "description": "",
+      "cost": 0,
+      "costsX": true,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {}
+    },
+    "upgraded": {
+      "id": "CARD.MULTI_CAST",
+      "className": "MultiCast",
+      "name": "MultiCast",
+      "type": "Skill",
+      "rarity": "Rare",
+      "description": "",
+      "cost": 0,
+      "costsX": true,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {}
+    }
+  },
+  {
+    "pool": "DefectCardPool",
+    "multiplayerConstraint": "None",
+    "basic": {
+      "id": "CARD.NULL",
+      "className": "Null",
+      "name": "Null",
+      "type": "Attack",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 2,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "Damage": 10,
+        "WeakPower": 1
+      }
+    },
+    "upgraded": {
+      "id": "CARD.NULL",
+      "className": "Null",
+      "name": "Null",
+      "type": "Attack",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 2,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "Damage": 13,
+        "WeakPower": 2
+      }
+    }
+  },
+  {
+    "pool": "DefectCardPool",
+    "multiplayerConstraint": "MultiplayerOnly",
+    "basic": {
+      "id": "CARD.ONE_FOR_ALL",
+      "className": "OneForAll",
+      "name": "OneForAll",
+      "type": "Power",
+      "rarity": "Rare",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "OneForAllPower": 3
+      }
+    },
+    "upgraded": {
+      "id": "CARD.ONE_FOR_ALL",
+      "className": "OneForAll",
+      "name": "OneForAll",
+      "type": "Power",
+      "rarity": "Rare",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "OneForAllPower": 4
+      }
+    }
+  },
+  {
+    "pool": "DefectCardPool",
+    "multiplayerConstraint": "None",
+    "basic": {
+      "id": "CARD.OVERCLOCK",
+      "className": "Overclock",
+      "name": "Overclock",
+      "type": "Skill",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 0,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "Cards": 2
+      }
+    },
+    "upgraded": {
+      "id": "CARD.OVERCLOCK",
+      "className": "Overclock",
+      "name": "Overclock",
+      "type": "Skill",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 0,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "Cards": 3
+      }
+    }
+  },
+  {
+    "pool": "DefectCardPool",
+    "multiplayerConstraint": "None",
+    "basic": {
+      "id": "CARD.QUADCAST",
+      "className": "Quadcast",
+      "name": "Quadcast",
+      "type": "Skill",
+      "rarity": "Ancient",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "Repeat": 4
+      }
+    },
+    "upgraded": {
+      "id": "CARD.QUADCAST",
+      "className": "Quadcast",
+      "name": "Quadcast",
+      "type": "Skill",
+      "rarity": "Ancient",
+      "description": "",
+      "cost": 0,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "Repeat": 4
+      }
+    }
+  },
+  {
+    "pool": "DefectCardPool",
+    "multiplayerConstraint": "None",
+    "basic": {
+      "id": "CARD.RAINBOW",
+      "className": "Rainbow",
+      "name": "Rainbow",
+      "type": "Skill",
+      "rarity": "Rare",
+      "description": "",
+      "cost": 2,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [
+        "Exhaust"
+      ],
+      "variables": {}
+    },
+    "upgraded": {
+      "id": "CARD.RAINBOW",
+      "className": "Rainbow",
+      "name": "Rainbow",
+      "type": "Skill",
+      "rarity": "Rare",
+      "description": "",
+      "cost": 2,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {}
+    }
+  },
+  {
+    "pool": "DefectCardPool",
+    "multiplayerConstraint": "None",
+    "basic": {
+      "id": "CARD.REBOOT",
+      "className": "Reboot",
+      "name": "Reboot",
+      "type": "Skill",
+      "rarity": "Rare",
+      "description": "",
+      "cost": 0,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [
+        "Exhaust"
+      ],
+      "variables": {
+        "Cards": 4
+      }
+    },
+    "upgraded": {
+      "id": "CARD.REBOOT",
+      "className": "Reboot",
+      "name": "Reboot",
+      "type": "Skill",
+      "rarity": "Rare",
+      "description": "",
+      "cost": 0,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [
+        "Exhaust"
+      ],
+      "variables": {
+        "Cards": 6
+      }
+    }
+  },
+  {
+    "pool": "DefectCardPool",
+    "multiplayerConstraint": "None",
+    "basic": {
+      "id": "CARD.REFRACT",
+      "className": "Refract",
+      "name": "Refract",
+      "type": "Attack",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 3,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "Repeat": 2,
+        "Damage": 10
+      }
+    },
+    "upgraded": {
+      "id": "CARD.REFRACT",
+      "className": "Refract",
+      "name": "Refract",
+      "type": "Attack",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 3,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "Repeat": 2,
+        "Damage": 13
+      }
+    }
+  },
+  {
+    "pool": "DefectCardPool",
+    "multiplayerConstraint": "None",
+    "basic": {
+      "id": "CARD.ROCKET_PUNCH",
+      "className": "RocketPunch",
+      "name": "RocketPunch",
+      "type": "Attack",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 2,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "Damage": 13,
+        "Cards": 1
+      }
+    },
+    "upgraded": {
+      "id": "CARD.ROCKET_PUNCH",
+      "className": "RocketPunch",
+      "name": "RocketPunch",
+      "type": "Attack",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 2,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "Damage": 14,
+        "Cards": 2
+      }
+    }
+  },
+  {
+    "pool": "DefectCardPool",
+    "multiplayerConstraint": "None",
+    "basic": {
+      "id": "CARD.SCAVENGE",
+      "className": "Scavenge",
+      "name": "Scavenge",
+      "type": "Skill",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "Energy": 2
+      }
+    },
+    "upgraded": {
+      "id": "CARD.SCAVENGE",
+      "className": "Scavenge",
+      "name": "Scavenge",
+      "type": "Skill",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "Energy": 3
+      }
+    }
+  },
+  {
+    "pool": "DefectCardPool",
+    "multiplayerConstraint": "None",
+    "basic": {
+      "id": "CARD.SCRAPE",
+      "className": "Scrape",
+      "name": "Scrape",
+      "type": "Attack",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "Damage": 7,
+        "Cards": 4
+      }
+    },
+    "upgraded": {
+      "id": "CARD.SCRAPE",
+      "className": "Scrape",
+      "name": "Scrape",
+      "type": "Attack",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "Damage": 10,
+        "Cards": 5
+      }
+    }
+  },
+  {
+    "pool": "DefectCardPool",
+    "multiplayerConstraint": "None",
+    "basic": {
+      "id": "CARD.SHADOW_SHIELD",
+      "className": "ShadowShield",
+      "name": "ShadowShield",
+      "type": "Skill",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 2,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "Block": 11
+      }
+    },
+    "upgraded": {
+      "id": "CARD.SHADOW_SHIELD",
+      "className": "ShadowShield",
+      "name": "ShadowShield",
+      "type": "Skill",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 2,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "Block": 15
+      }
+    }
+  },
+  {
+    "pool": "DefectCardPool",
+    "multiplayerConstraint": "None",
+    "basic": {
+      "id": "CARD.SHATTER",
+      "className": "Shatter",
+      "name": "Shatter",
+      "type": "Attack",
+      "rarity": "Rare",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [
+        "Exhaust"
+      ],
+      "variables": {
+        "Damage": 7
+      }
+    },
+    "upgraded": {
+      "id": "CARD.SHATTER",
+      "className": "Shatter",
+      "name": "Shatter",
+      "type": "Attack",
+      "rarity": "Rare",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [
+        "Exhaust"
+      ],
+      "variables": {
+        "Damage": 11
+      }
+    }
+  },
+  {
+    "pool": "DefectCardPool",
+    "multiplayerConstraint": "None",
+    "basic": {
+      "id": "CARD.SIGNAL_BOOST",
+      "className": "SignalBoost",
+      "name": "SignalBoost",
+      "type": "Skill",
+      "rarity": "Rare",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [
+        "Exhaust"
+      ],
+      "variables": {
+        "SignalBoostPower": 1
+      }
+    },
+    "upgraded": {
+      "id": "CARD.SIGNAL_BOOST",
+      "className": "SignalBoost",
+      "name": "SignalBoost",
+      "type": "Skill",
+      "rarity": "Rare",
+      "description": "",
+      "cost": 0,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [
+        "Exhaust"
+      ],
+      "variables": {
+        "SignalBoostPower": 1
+      }
+    }
+  },
+  {
+    "pool": "DefectCardPool",
+    "multiplayerConstraint": "None",
+    "basic": {
+      "id": "CARD.SKIM",
+      "className": "Skim",
+      "name": "Skim",
+      "type": "Skill",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "Cards": 3
+      }
+    },
+    "upgraded": {
+      "id": "CARD.SKIM",
+      "className": "Skim",
+      "name": "Skim",
+      "type": "Skill",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "Cards": 4
+      }
+    }
+  },
+  {
+    "pool": "DefectCardPool",
+    "multiplayerConstraint": "None",
+    "basic": {
+      "id": "CARD.SMOKESTACK",
+      "className": "Smokestack",
+      "name": "Smokestack",
+      "type": "Power",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "SmokestackPower": 5
+      }
+    },
+    "upgraded": {
+      "id": "CARD.SMOKESTACK",
+      "className": "Smokestack",
+      "name": "Smokestack",
+      "type": "Power",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "SmokestackPower": 7
+      }
+    }
+  },
+  {
+    "pool": "DefectCardPool",
+    "multiplayerConstraint": "None",
+    "basic": {
+      "id": "CARD.SPINNER",
+      "className": "Spinner",
+      "name": "Spinner",
+      "type": "Power",
+      "rarity": "Rare",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "SpinnerPower": 1
+      }
+    },
+    "upgraded": {
+      "id": "CARD.SPINNER",
+      "className": "Spinner",
+      "name": "Spinner",
+      "type": "Power",
+      "rarity": "Rare",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "SpinnerPower": 1
+      }
+    }
+  },
+  {
+    "pool": "DefectCardPool",
+    "multiplayerConstraint": "None",
+    "basic": {
+      "id": "CARD.STORM",
+      "className": "Storm",
+      "name": "Storm",
+      "type": "Power",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "StormPower": 1
+      }
+    },
+    "upgraded": {
+      "id": "CARD.STORM",
+      "className": "Storm",
+      "name": "Storm",
+      "type": "Power",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "StormPower": 2
+      }
+    }
+  },
+  {
+    "pool": "DefectCardPool",
+    "multiplayerConstraint": "None",
+    "basic": {
+      "id": "CARD.STRIKE_DEFECT",
+      "className": "StrikeDefect",
+      "name": "StrikeDefect",
+      "type": "Attack",
+      "rarity": "Basic",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "Damage": 6
+      }
+    },
+    "upgraded": {
+      "id": "CARD.STRIKE_DEFECT",
+      "className": "StrikeDefect",
+      "name": "StrikeDefect",
+      "type": "Attack",
+      "rarity": "Basic",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "Damage": 9
+      }
+    }
+  },
+  {
+    "pool": "DefectCardPool",
+    "multiplayerConstraint": "None",
+    "basic": {
+      "id": "CARD.SUBROUTINE",
+      "className": "Subroutine",
+      "name": "Subroutine",
+      "type": "Power",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {}
+    },
+    "upgraded": {
+      "id": "CARD.SUBROUTINE",
+      "className": "Subroutine",
+      "name": "Subroutine",
+      "type": "Power",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 0,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {}
+    }
+  },
+  {
+    "pool": "DefectCardPool",
+    "multiplayerConstraint": "None",
+    "basic": {
+      "id": "CARD.SUNDER",
+      "className": "Sunder",
+      "name": "Sunder",
+      "type": "Attack",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 3,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "Damage": 26,
+        "Energy": 3
+      }
+    },
+    "upgraded": {
+      "id": "CARD.SUNDER",
+      "className": "Sunder",
+      "name": "Sunder",
+      "type": "Attack",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 3,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "Damage": 34,
+        "Energy": 3
+      }
+    }
+  },
+  {
+    "pool": "DefectCardPool",
+    "multiplayerConstraint": "None",
+    "basic": {
+      "id": "CARD.SUPERCRITICAL",
+      "className": "Supercritical",
+      "name": "Supercritical",
+      "type": "Skill",
+      "rarity": "Rare",
+      "description": "",
+      "cost": 0,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [
+        "Exhaust"
+      ],
+      "variables": {
+        "Energy": 4
+      }
+    },
+    "upgraded": {
+      "id": "CARD.SUPERCRITICAL",
+      "className": "Supercritical",
+      "name": "Supercritical",
+      "type": "Skill",
+      "rarity": "Rare",
+      "description": "",
+      "cost": 0,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [
+        "Exhaust"
+      ],
+      "variables": {
+        "Energy": 6
+      }
+    }
+  },
+  {
+    "pool": "DefectCardPool",
+    "multiplayerConstraint": "None",
+    "basic": {
+      "id": "CARD.SWEEPING_BEAM",
+      "className": "SweepingBeam",
+      "name": "SweepingBeam",
+      "type": "Attack",
+      "rarity": "Common",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "Damage": 6,
+        "Cards": 1
+      }
+    },
+    "upgraded": {
+      "id": "CARD.SWEEPING_BEAM",
+      "className": "SweepingBeam",
+      "name": "SweepingBeam",
+      "type": "Attack",
+      "rarity": "Common",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "Damage": 9,
+        "Cards": 1
+      }
+    }
+  },
+  {
+    "pool": "DefectCardPool",
+    "multiplayerConstraint": "None",
+    "basic": {
+      "id": "CARD.SYNCHRONIZE",
+      "className": "Synchronize",
+      "name": "Synchronize",
+      "type": "Skill",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "CalculationBase": 0,
+        "CalculationExtra": 1,
+        "CalculatedFocus": 0
+      }
+    },
+    "upgraded": {
+      "id": "CARD.SYNCHRONIZE",
+      "className": "Synchronize",
+      "name": "Synchronize",
+      "type": "Skill",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "CalculationBase": 0,
+        "CalculationExtra": 2,
+        "CalculatedFocus": 0
+      }
+    }
+  },
+  {
+    "pool": "DefectCardPool",
+    "multiplayerConstraint": "None",
+    "basic": {
+      "id": "CARD.SYNTHESIS",
+      "className": "Synthesis",
+      "name": "Synthesis",
+      "type": "Attack",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 2,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "Damage": 14
+      }
+    },
+    "upgraded": {
+      "id": "CARD.SYNTHESIS",
+      "className": "Synthesis",
+      "name": "Synthesis",
+      "type": "Attack",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 2,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "Damage": 20
+      }
+    }
+  },
+  {
+    "pool": "DefectCardPool",
+    "multiplayerConstraint": "None",
+    "basic": {
+      "id": "CARD.TEMPEST",
+      "className": "Tempest",
+      "name": "Tempest",
+      "type": "Skill",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 0,
+      "costsX": true,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {}
+    },
+    "upgraded": {
+      "id": "CARD.TEMPEST",
+      "className": "Tempest",
+      "name": "Tempest",
+      "type": "Skill",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 0,
+      "costsX": true,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {}
+    }
+  },
+  {
+    "pool": "DefectCardPool",
+    "multiplayerConstraint": "None",
+    "basic": {
+      "id": "CARD.TESLA_COIL",
+      "className": "TeslaCoil",
+      "name": "TeslaCoil",
+      "type": "Attack",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 0,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "Damage": 3
+      }
+    },
+    "upgraded": {
+      "id": "CARD.TESLA_COIL",
+      "className": "TeslaCoil",
+      "name": "TeslaCoil",
+      "type": "Attack",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 0,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "Damage": 4
+      }
+    }
+  },
+  {
+    "pool": "DefectCardPool",
+    "multiplayerConstraint": "None",
+    "basic": {
+      "id": "CARD.THUNDER",
+      "className": "Thunder",
+      "name": "Thunder",
+      "type": "Power",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "ThunderPower": 8
+      }
+    },
+    "upgraded": {
+      "id": "CARD.THUNDER",
+      "className": "Thunder",
+      "name": "Thunder",
+      "type": "Power",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "ThunderPower": 11
+      }
+    }
+  },
+  {
+    "pool": "DefectCardPool",
+    "multiplayerConstraint": "None",
+    "basic": {
+      "id": "CARD.TRASH_TO_TREASURE",
+      "className": "TrashToTreasure",
+      "name": "TrashToTreasure",
+      "type": "Power",
+      "rarity": "Rare",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {}
+    },
+    "upgraded": {
+      "id": "CARD.TRASH_TO_TREASURE",
+      "className": "TrashToTreasure",
+      "name": "TrashToTreasure",
+      "type": "Power",
+      "rarity": "Rare",
+      "description": "",
+      "cost": 0,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {}
+    }
+  },
+  {
+    "pool": "DefectCardPool",
+    "multiplayerConstraint": "None",
+    "basic": {
+      "id": "CARD.TURBO",
+      "className": "Turbo",
+      "name": "Turbo",
+      "type": "Skill",
+      "rarity": "Common",
+      "description": "",
+      "cost": 0,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "Energy": 2
+      }
+    },
+    "upgraded": {
+      "id": "CARD.TURBO",
+      "className": "Turbo",
+      "name": "Turbo",
+      "type": "Skill",
+      "rarity": "Common",
+      "description": "",
+      "cost": 0,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "Energy": 3
+      }
+    }
+  },
+  {
+    "pool": "DefectCardPool",
+    "multiplayerConstraint": "None",
+    "basic": {
+      "id": "CARD.UPROAR",
+      "className": "Uproar",
+      "name": "Uproar",
+      "type": "Attack",
+      "rarity": "Common",
+      "description": "",
+      "cost": 2,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "Damage": 6
+      }
+    },
+    "upgraded": {
+      "id": "CARD.UPROAR",
+      "className": "Uproar",
+      "name": "Uproar",
+      "type": "Attack",
+      "rarity": "Common",
+      "description": "",
+      "cost": 2,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "Damage": 8
+      }
+    }
+  },
+  {
+    "pool": "DefectCardPool",
+    "multiplayerConstraint": "None",
+    "basic": {
+      "id": "CARD.VOLTAIC",
+      "className": "Voltaic",
+      "name": "Voltaic",
+      "type": "Skill",
+      "rarity": "Rare",
+      "description": "",
+      "cost": 3,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [
+        "Exhaust"
+      ],
+      "variables": {
+        "CalculationBase": 0,
+        "CalculationExtra": 1,
+        "CalculatedChannels": 0
+      }
+    },
+    "upgraded": {
+      "id": "CARD.VOLTAIC",
+      "className": "Voltaic",
+      "name": "Voltaic",
+      "type": "Skill",
+      "rarity": "Rare",
+      "description": "",
+      "cost": 3,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {
+        "CalculationBase": 0,
+        "CalculationExtra": 1,
+        "CalculatedChannels": 0
+      }
+    }
+  },
+  {
+    "pool": "DefectCardPool",
+    "multiplayerConstraint": "None",
+    "basic": {
+      "id": "CARD.WHITE_NOISE",
+      "className": "WhiteNoise",
+      "name": "WhiteNoise",
+      "type": "Skill",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [
+        "Exhaust"
+      ],
+      "variables": {}
+    },
+    "upgraded": {
+      "id": "CARD.WHITE_NOISE",
+      "className": "WhiteNoise",
+      "name": "WhiteNoise",
+      "type": "Skill",
+      "rarity": "Uncommon",
+      "description": "",
+      "cost": 0,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [
+        "Exhaust"
+      ],
+      "variables": {}
+    }
+  },
+  {
+    "pool": "DefectCardPool",
+    "multiplayerConstraint": "None",
+    "basic": {
+      "id": "CARD.ZAP",
+      "className": "Zap",
+      "name": "Zap",
+      "type": "Skill",
+      "rarity": "Basic",
+      "description": "",
+      "cost": 1,
+      "costsX": false,
+      "upgradeLevel": 0,
+      "canUpgrade": true,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {}
+    },
+    "upgraded": {
+      "id": "CARD.ZAP",
+      "className": "Zap",
+      "name": "Zap",
+      "type": "Skill",
+      "rarity": "Basic",
+      "description": "",
+      "cost": 0,
+      "costsX": false,
+      "upgradeLevel": 1,
+      "canUpgrade": false,
+      "modified": false,
+      "enchantment": null,
+      "enchantmentAmount": 0,
+      "affliction": null,
+      "keywords": [],
+      "variables": {}
+    }
+  }
+]

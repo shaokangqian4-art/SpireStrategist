@@ -2,11 +2,11 @@
   "id": "SpireStrategist",
   "name": "全局战略助手 / Global Strategy Assistant",
   "author": "穷仔",
-  "description": "单人铁甲战士本地战略助手，支持中英文。 Local, explainable Ironclad strategy: cards, routes, events, Ancients, rest sites and shops. Optional CombatSolver 0.50.1 integration enables combat and continuous runs. No online AI required. Experimental; partial hidden-information previews.",
-  "version": "0.6.22",
+  "description": "五个原生角色战略建议（储君与亡灵契约师为首版机制模型），单人支持接管及循环爬塔；多人仅本机建议和记录，可单方安装，不接管、忽略多人专属牌。自动战斗与循环需要 CombatSolver。中英文，无需在线 AI。 Strategy advice for all five native characters (initial Regent/Necrobinder models) with single-player automation. Co-op offers local advice/logs only: optional per client, no takeover, cooperative-only cards unscored. Automated combat and continuous runs require CombatSolver. Chinese/English UI. No online AI required.",
+  "version": "0.6.55",
   "has_pck": false,
   "has_dll": true,
-  "affects_gameplay": true,
+  "affects_gameplay": false,
   "min_game_version": "0.111.0",
   "dependencies": []
 }

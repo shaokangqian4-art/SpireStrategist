@@ -1,0 +1,966 @@
+[
+  {
+    "floor": 13,
+    "state": {
+      "character": "Defect",
+      "playerCount": 1,
+      "hp": 39,
+      "maxHp": 77,
+      "hpAfterPendingAncient": null,
+      "gold": 71,
+      "energy": 3,
+      "combatSolverAvailable": true,
+      "act": 1,
+      "floor": 13,
+      "ascension": 10,
+      "room": "CombatRoom",
+      "deck": [
+        {
+          "id": "CARD.STRIKE_DEFECT",
+          "className": "StrikeDefect",
+          "name": "打击",
+          "type": "Attack",
+          "rarity": "Basic",
+          "description": "造成6点伤害。",
+          "cost": 1,
+          "costsX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {
+            "Damage": 6
+          }
+        },
+        {
+          "id": "CARD.STRIKE_DEFECT",
+          "className": "StrikeDefect",
+          "name": "打击",
+          "type": "Attack",
+          "rarity": "Basic",
+          "description": "造成6点伤害。",
+          "cost": 1,
+          "costsX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {
+            "Damage": 6
+          }
+        },
+        {
+          "id": "CARD.STRIKE_DEFECT",
+          "className": "StrikeDefect",
+          "name": "打击",
+          "type": "Attack",
+          "rarity": "Basic",
+          "description": "造成6点伤害。",
+          "cost": 1,
+          "costsX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {
+            "Damage": 6
+          }
+        },
+        {
+          "id": "CARD.DEFEND_DEFECT",
+          "className": "DefendDefect",
+          "name": "防御",
+          "type": "Skill",
+          "rarity": "Basic",
+          "description": "获得5点[gold]格挡[/gold]。",
+          "cost": 1,
+          "costsX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {
+            "Block": 5
+          }
+        },
+        {
+          "id": "CARD.DEFEND_DEFECT",
+          "className": "DefendDefect",
+          "name": "防御",
+          "type": "Skill",
+          "rarity": "Basic",
+          "description": "获得5点[gold]格挡[/gold]。",
+          "cost": 1,
+          "costsX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {
+            "Block": 5
+          }
+        },
+        {
+          "id": "CARD.DEFEND_DEFECT",
+          "className": "DefendDefect",
+          "name": "防御",
+          "type": "Skill",
+          "rarity": "Basic",
+          "description": "获得5点[gold]格挡[/gold]。",
+          "cost": 1,
+          "costsX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {
+            "Block": 5
+          }
+        },
+        {
+          "id": "CARD.ZAP",
+          "className": "Zap",
+          "name": "电击",
+          "type": "Skill",
+          "rarity": "Basic",
+          "description": "[gold]生成[/gold]1个[gold]闪电[/gold]充能球。",
+          "cost": 1,
+          "costsX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {}
+        },
+        {
+          "id": "CARD.DUALCAST",
+          "className": "Dualcast",
+          "name": "双重释放",
+          "type": "Skill",
+          "rarity": "Basic",
+          "description": "[gold]激发[/gold]你最右侧的充能球两次。",
+          "cost": 1,
+          "costsX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {}
+        },
+        {
+          "id": "CARD.ASCENDERS_BANE",
+          "className": "AscendersBane",
+          "name": "进阶之灾",
+          "type": "Curse",
+          "rarity": "Curse",
+          "description": "[gold]不能被打出[/gold]。\n[gold]虚无[/gold]。\n[gold]永恒[/gold]。",
+          "cost": -1,
+          "costsX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": false,
+          "modified": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [
+            "Eternal",
+            "Ethereal",
+            "Unplayable"
+          ],
+          "variables": {}
+        },
+        {
+          "id": "CARD.COMPACT",
+          "className": "Compact",
+          "name": "压缩",
+          "type": "Skill",
+          "rarity": "Uncommon",
+          "description": "获得6点[gold]格挡[/gold]。\n将你[gold]手牌[/gold]中的全部状态牌[gold]变化[/gold]为[gold]燃料[/gold]。",
+          "cost": 1,
+          "costsX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {
+            "Block": 6
+          }
+        },
+        {
+          "id": "CARD.TURBO",
+          "className": "Turbo",
+          "name": "内核加速",
+          "type": "Skill",
+          "rarity": "Common",
+          "description": "获得[img]res://images/packed/sprite_fonts/defect_energy_icon.png[/img][img]res://images/packed/sprite_fonts/defect_energy_icon.png[/img]。\n将一张[gold]虚空[/gold]加入你的[gold]弃牌堆[/gold]。",
+          "cost": 0,
+          "costsX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {
+            "Energy": 2
+          }
+        },
+        {
+          "id": "CARD.GUILTY",
+          "className": "Guilty",
+          "name": "愧疚",
+          "type": "Curse",
+          "rarity": "Curse",
+          "description": "[gold]不能被打出[/gold]。\n在2场战斗后从你的[gold]牌组[/gold]中移除。",
+          "cost": -1,
+          "costsX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": false,
+          "modified": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [
+            "Unplayable"
+          ],
+          "variables": {
+            "Combats": 2
+          }
+        },
+        {
+          "id": "CARD.BULK_UP",
+          "className": "BulkUp",
+          "name": "暴涨+",
+          "type": "Power",
+          "rarity": "Uncommon",
+          "description": "失去1个充能球栏位。\n获得3点[gold]力量[/gold]。\n获得3点[gold]敏捷[/gold]。",
+          "cost": 2,
+          "costsX": false,
+          "upgradeLevel": 1,
+          "canUpgrade": false,
+          "modified": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {
+            "DexterityPower": 3,
+            "OrbSlots": 1,
+            "StrengthPower": 3
+          }
+        },
+        {
+          "id": "CARD.HIDDEN_GEM",
+          "className": "HiddenGem",
+          "name": "未掘宝石",
+          "type": "Skill",
+          "rarity": "Rare",
+          "description": "你[gold]抽牌堆[/gold]中的一张没有[gold]重放[/gold]的随机牌获得2层[gold]重放[/gold]。",
+          "cost": 1,
+          "costsX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {
+            "Replay": 2
+          }
+        },
+        {
+          "id": "CARD.OVERCLOCK",
+          "className": "Overclock",
+          "name": "超频",
+          "type": "Skill",
+          "rarity": "Uncommon",
+          "description": "抽2张牌。\n将一张[gold]灼伤[/gold]加入你的[gold]弃牌堆[/gold]。",
+          "cost": 0,
+          "costsX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {
+            "Cards": 2
+          }
+        }
+      ],
+      "relics": [
+        "RELIC.CRACKED_CORE",
+        "RELIC.PRECISE_SCISSORS",
+        "RELIC.CHOSEN_CHEESE",
+        "RELIC.RED_MASK",
+        "RELIC.LANTERN"
+      ],
+      "potionSlots": [
+        "POTION.STRENGTH_POTION",
+        null
+      ],
+      "nextNodeTypes": [
+        "Monster"
+      ],
+      "hidden": null,
+      "map": {
+        "totalActs": 3,
+        "rows": 16,
+        "currentRow": 12,
+        "bossRow": 16,
+        "mapType": "MegaCrit.Sts2.Core.Map.StandardActMap",
+        "longMap": true,
+        "extraLayers": 0,
+        "extraActs": 0,
+        "contentAct": 1,
+        "enemyHpScale": 1,
+        "enemyDamageScale": 1,
+        "combatGoldScale": 1,
+        "error": null
+      },
+      "recentBattles": [],
+      "commerce": {
+        "reachableShops": 0,
+        "nearestShopDistance": null,
+        "reachableUnknowns": 0,
+        "futureActs": 2
+      },
+      "campRouteRisk": {}
+    },
+    "options": [
+      {
+        "key": "card:0",
+        "name": "热修复",
+        "kind": "card",
+        "enabled": true,
+        "card": {
+          "id": "CARD.HOTFIX",
+          "className": "Hotfix",
+          "name": "热修复",
+          "type": "Skill",
+          "rarity": "Common",
+          "description": "在本回合获得2点[gold]集中[/gold]。\n[gold]消耗[/gold]。",
+          "cost": 0,
+          "costsX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [
+            "Exhaust"
+          ],
+          "variables": {
+            "FocusPower": 2
+          }
+        },
+        "healAmount": 0,
+        "smithCount": 1,
+        "effectValue": null
+      },
+      {
+        "key": "card:1",
+        "name": "弹幕齐射",
+        "kind": "card",
+        "enabled": true,
+        "card": {
+          "id": "CARD.BARRAGE",
+          "className": "Barrage",
+          "name": "弹幕齐射",
+          "type": "Attack",
+          "rarity": "Common",
+          "description": "当前每有一个[gold]充能球[/gold]，造成5点伤害。",
+          "cost": 1,
+          "costsX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {
+            "CalculatedHits": 0,
+            "CalculationBase": 0,
+            "CalculationExtra": 1,
+            "Damage": 5
+          }
+        },
+        "healAmount": 0,
+        "smithCount": 1,
+        "effectValue": null
+      },
+      {
+        "key": "card:2",
+        "name": "压缩",
+        "kind": "card",
+        "enabled": true,
+        "card": {
+          "id": "CARD.COMPACT",
+          "className": "Compact",
+          "name": "压缩",
+          "type": "Skill",
+          "rarity": "Uncommon",
+          "description": "获得6点[gold]格挡[/gold]。\n将你[gold]手牌[/gold]中的全部状态牌[gold]变化[/gold]为[gold]燃料[/gold]。",
+          "cost": 1,
+          "costsX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {
+            "Block": 6
+          }
+        },
+        "healAmount": 0,
+        "smithCount": 1,
+        "effectValue": null
+      },
+      {
+        "key": "alternative:0",
+        "name": "跳过",
+        "kind": "skip",
+        "enabled": true,
+        "card": null,
+        "healAmount": 0,
+        "smithCount": 1,
+        "effectValue": null
+      }
+    ]
+  },
+  {
+    "floor": 17,
+    "state": {
+      "character": "Defect",
+      "playerCount": 1,
+      "hp": 13,
+      "maxHp": 80,
+      "hpAfterPendingAncient": 66,
+      "gold": 189,
+      "energy": 3,
+      "combatSolverAvailable": true,
+      "act": 1,
+      "floor": 17,
+      "ascension": 10,
+      "room": "CombatRoom",
+      "deck": [
+        {
+          "id": "CARD.STRIKE_DEFECT",
+          "className": "StrikeDefect",
+          "name": "打击",
+          "type": "Attack",
+          "rarity": "Basic",
+          "description": "造成6点伤害。",
+          "cost": 1,
+          "costsX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {
+            "Damage": 6
+          }
+        },
+        {
+          "id": "CARD.STRIKE_DEFECT",
+          "className": "StrikeDefect",
+          "name": "打击",
+          "type": "Attack",
+          "rarity": "Basic",
+          "description": "造成6点伤害。",
+          "cost": 1,
+          "costsX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {
+            "Damage": 6
+          }
+        },
+        {
+          "id": "CARD.STRIKE_DEFECT",
+          "className": "StrikeDefect",
+          "name": "打击",
+          "type": "Attack",
+          "rarity": "Basic",
+          "description": "造成6点伤害。",
+          "cost": 1,
+          "costsX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {
+            "Damage": 6
+          }
+        },
+        {
+          "id": "CARD.DEFEND_DEFECT",
+          "className": "DefendDefect",
+          "name": "防御",
+          "type": "Skill",
+          "rarity": "Basic",
+          "description": "获得5点[gold]格挡[/gold]。",
+          "cost": 1,
+          "costsX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {
+            "Block": 5
+          }
+        },
+        {
+          "id": "CARD.DEFEND_DEFECT",
+          "className": "DefendDefect",
+          "name": "防御",
+          "type": "Skill",
+          "rarity": "Basic",
+          "description": "获得5点[gold]格挡[/gold]。",
+          "cost": 1,
+          "costsX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {
+            "Block": 5
+          }
+        },
+        {
+          "id": "CARD.DEFEND_DEFECT",
+          "className": "DefendDefect",
+          "name": "防御",
+          "type": "Skill",
+          "rarity": "Basic",
+          "description": "获得5点[gold]格挡[/gold]。",
+          "cost": 1,
+          "costsX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {
+            "Block": 5
+          }
+        },
+        {
+          "id": "CARD.ZAP",
+          "className": "Zap",
+          "name": "电击",
+          "type": "Skill",
+          "rarity": "Basic",
+          "description": "[gold]生成[/gold]1个[gold]闪电[/gold]充能球。",
+          "cost": 1,
+          "costsX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {}
+        },
+        {
+          "id": "CARD.DUALCAST",
+          "className": "Dualcast",
+          "name": "双重释放",
+          "type": "Skill",
+          "rarity": "Basic",
+          "description": "[gold]激发[/gold]你最右侧的充能球两次。",
+          "cost": 1,
+          "costsX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {}
+        },
+        {
+          "id": "CARD.ASCENDERS_BANE",
+          "className": "AscendersBane",
+          "name": "进阶之灾",
+          "type": "Curse",
+          "rarity": "Curse",
+          "description": "[gold]不能被打出[/gold]。\n[gold]虚无[/gold]。\n[gold]永恒[/gold]。",
+          "cost": -1,
+          "costsX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": false,
+          "modified": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [
+            "Eternal",
+            "Ethereal",
+            "Unplayable"
+          ],
+          "variables": {}
+        },
+        {
+          "id": "CARD.COMPACT",
+          "className": "Compact",
+          "name": "压缩",
+          "type": "Skill",
+          "rarity": "Uncommon",
+          "description": "获得6点[gold]格挡[/gold]。\n将你[gold]手牌[/gold]中的全部状态牌[gold]变化[/gold]为[gold]燃料[/gold]。",
+          "cost": 1,
+          "costsX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {
+            "Block": 6
+          }
+        },
+        {
+          "id": "CARD.TURBO",
+          "className": "Turbo",
+          "name": "内核加速",
+          "type": "Skill",
+          "rarity": "Common",
+          "description": "获得[img]res://images/packed/sprite_fonts/defect_energy_icon.png[/img][img]res://images/packed/sprite_fonts/defect_energy_icon.png[/img]。\n将一张[gold]虚空[/gold]加入你的[gold]弃牌堆[/gold]。",
+          "cost": 0,
+          "costsX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {
+            "Energy": 2
+          }
+        },
+        {
+          "id": "CARD.BULK_UP",
+          "className": "BulkUp",
+          "name": "暴涨+",
+          "type": "Power",
+          "rarity": "Uncommon",
+          "description": "失去1个充能球栏位。\n获得3点[gold]力量[/gold]。\n获得3点[gold]敏捷[/gold]。",
+          "cost": 2,
+          "costsX": false,
+          "upgradeLevel": 1,
+          "canUpgrade": false,
+          "modified": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {
+            "DexterityPower": 3,
+            "OrbSlots": 1,
+            "StrengthPower": 3
+          }
+        },
+        {
+          "id": "CARD.HIDDEN_GEM",
+          "className": "HiddenGem",
+          "name": "未掘宝石",
+          "type": "Skill",
+          "rarity": "Rare",
+          "description": "你[gold]抽牌堆[/gold]中的一张没有[gold]重放[/gold]的随机牌获得2层[gold]重放[/gold]。",
+          "cost": 1,
+          "costsX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {
+            "Replay": 2
+          }
+        },
+        {
+          "id": "CARD.OVERCLOCK",
+          "className": "Overclock",
+          "name": "超频",
+          "type": "Skill",
+          "rarity": "Uncommon",
+          "description": "抽2张牌。\n将一张[gold]灼伤[/gold]加入你的[gold]弃牌堆[/gold]。",
+          "cost": 0,
+          "costsX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {
+            "Cards": 2
+          }
+        },
+        {
+          "id": "CARD.COOLHEADED",
+          "className": "Coolheaded",
+          "name": "冷静头脑",
+          "type": "Skill",
+          "rarity": "Common",
+          "description": "[gold]生成[/gold]1个[gold]冰霜[/gold]充能球。\n抽1张牌。",
+          "cost": 1,
+          "costsX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {
+            "Cards": 1
+          }
+        },
+        {
+          "id": "CARD.WHITE_NOISE",
+          "className": "WhiteNoise",
+          "name": "白噪声",
+          "type": "Skill",
+          "rarity": "Uncommon",
+          "description": "将一张随机能力牌加入你的[gold]手牌[/gold]。这张牌在本回合内免费打出。\n[gold]消耗[/gold]。",
+          "cost": 1,
+          "costsX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [
+            "Exhaust"
+          ],
+          "variables": {}
+        }
+      ],
+      "relics": [
+        "RELIC.CRACKED_CORE",
+        "RELIC.PRECISE_SCISSORS",
+        "RELIC.CHOSEN_CHEESE",
+        "RELIC.RED_MASK",
+        "RELIC.LANTERN",
+        "RELIC.BRONZE_SCALES"
+      ],
+      "potionSlots": [
+        "POTION.STRENGTH_POTION",
+        "POTION.FIRE_POTION"
+      ],
+      "nextNodeTypes": [],
+      "hidden": null,
+      "map": {
+        "totalActs": 3,
+        "rows": 16,
+        "currentRow": 16,
+        "bossRow": 16,
+        "mapType": "MegaCrit.Sts2.Core.Map.StandardActMap",
+        "longMap": true,
+        "extraLayers": 0,
+        "extraActs": 0,
+        "contentAct": 1,
+        "enemyHpScale": 1,
+        "enemyDamageScale": 1,
+        "combatGoldScale": 1,
+        "error": null
+      },
+      "recentBattles": [
+        {
+          "act": 1,
+          "room": "Elite",
+          "encounter": "ENCOUNTER.BYGONE_EFFIGY_ELITE",
+          "damageTaken": 9,
+          "healing": 1,
+          "potionsUsed": 0,
+          "maxHp": 77
+        },
+        {
+          "act": 1,
+          "room": "Elite",
+          "encounter": "ENCOUNTER.PHROG_PARASITE_ELITE",
+          "damageTaken": 18,
+          "healing": 1,
+          "potionsUsed": 0,
+          "maxHp": 79
+        }
+      ],
+      "commerce": {
+        "reachableShops": 0,
+        "nearestShopDistance": null,
+        "reachableUnknowns": 0,
+        "futureActs": 2
+      },
+      "campRouteRisk": {}
+    },
+    "options": [
+      {
+        "key": "card:0",
+        "name": "遗传算法",
+        "kind": "card",
+        "enabled": true,
+        "card": {
+          "id": "CARD.GENETIC_ALGORITHM",
+          "className": "GeneticAlgorithm",
+          "name": "遗传算法",
+          "type": "Skill",
+          "rarity": "Rare",
+          "description": "获得1点[gold]格挡[/gold]。\n每打出一次，这张牌在本局游戏中的[gold]格挡[/gold]值永久增加3点。\n[gold]消耗[/gold]。",
+          "cost": 1,
+          "costsX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [
+            "Exhaust"
+          ],
+          "variables": {
+            "Block": 1,
+            "Increase": 3
+          }
+        },
+        "healAmount": 0,
+        "smithCount": 1,
+        "effectValue": null
+      },
+      {
+        "key": "card:1",
+        "name": "电流相生",
+        "kind": "card",
+        "enabled": true,
+        "card": {
+          "id": "CARD.VOLTAIC",
+          "className": "Voltaic",
+          "name": "电流相生",
+          "type": "Skill",
+          "rarity": "Rare",
+          "description": "[gold]生成[/gold]等量于你在这场战斗中[gold]生成过[/gold]的[gold]闪电[/gold]充能球数量的[gold]闪电[/gold]充能球。\n[gold]消耗[/gold]。",
+          "cost": 3,
+          "costsX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [
+            "Exhaust"
+          ],
+          "variables": {
+            "CalculatedChannels": 0,
+            "CalculationBase": 0,
+            "CalculationExtra": 1
+          }
+        },
+        "healAmount": 0,
+        "smithCount": 1,
+        "effectValue": null
+      },
+      {
+        "key": "card:2",
+        "name": "机器学习",
+        "kind": "card",
+        "enabled": true,
+        "card": {
+          "id": "CARD.MACHINE_LEARNING",
+          "className": "MachineLearning",
+          "name": "机器学习",
+          "type": "Power",
+          "rarity": "Rare",
+          "description": "在你的回合开始时，额外抽1张牌。",
+          "cost": 1,
+          "costsX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {
+            "Cards": 1
+          }
+        },
+        "healAmount": 0,
+        "smithCount": 1,
+        "effectValue": null
+      },
+      {
+        "key": "alternative:0",
+        "name": "跳过",
+        "kind": "skip",
+        "enabled": true,
+        "card": null,
+        "healAmount": 0,
+        "smithCount": 1,
+        "effectValue": null
+      }
+    ]
+  }
+]

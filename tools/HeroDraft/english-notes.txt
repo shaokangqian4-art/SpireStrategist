@@ -1,0 +1,172 @@
+Alignment|Converts Stars into Energy; not unconditional free Energy.
+Arsenal|Generating cards grants Strength. Requires generation and attack outlets.
+AstralPulse|Two area hits with a Star cost; not a free attack.
+BeatIntoShape|Forges more after earlier hits on the same enemy this turn.
+Begone|Transforms a hand card into Minion Strike; can clean junk at an Energy cost.
+BigBang|One-shot draw, Energy, Stars and Forge; upgraded Innate improves opening access.
+BlackHole|Triggers per Star gain/spend event, not once per individual Star.
+Bombardment|Three-Energy setup followed by automatic attacks from Exhaust each turn.
+Bulwark|Two-Energy defense plus Forge; budget enough Energy to use the blade.
+BundleOfJoy|Random colorless generation is not deck draw; generated cards still cost Energy.
+CelestialMight|Multi-hit transition damage benefits from Strength, but is not a scaling engine.
+Charge|Transforms two draw-pile cards into Minions. Protect core cards and target junk.
+ChildOfTheStars|Block per Star spent requires both actual Star supply and spending.
+CloakOfStars|Star-cost defense competes with Star-cost damage.
+CollisionCourse|Star-cost damage adds Debris to hand; account for pollution.
+Comet|Five Stars for damage, Weak and Vulnerable; requires a Star supply.
+Conqueror|Doubles the blade this turn; requires access and Energy to play it now.
+Convergence|Retains the hand and grants resources next turn, not immediately.
+CosmicIndifference|Block plus discard-to-top retrieval consumes a future draw slot.
+CrashLanding|Area damage fills the hand with Debris; account for pollution and hand space.
+CrescentSpear|Damage from Star-cost deck cards is not independent long-fight scaling.
+CrushUnder|Early area damage and temporary enemy Strength reduction.
+DecisionsDecisions|Draws, then repeats a skill three times; value actual skill targets and costs.
+DefendRegent|Basic defense with low upgrade priority.
+Devastate|Costs one Energy plus four Stars; no additional draw restriction.
+DyingStar|Area damage and substantial temporary Strength reduction for dangerous turns.
+FallingStar|Starter debuffs still have a Star cost.
+ForegoneConclusion|Delayed targeted draw helps assemble combinations next turn.
+Furnace|Recurring Forge supplies a blade scaling engine.
+GammaBlast|Star-cost transition damage with Weak and Vulnerable.
+GatherLight|Immediate defense and Stars connect Star-resource chains.
+Genesis|Recurring Star supply still needs a damage outlet.
+Glimmer|Draw three, put one back: two net cards and topdeck control.
+Glitterstream|Two-Energy defense across turns; avoid redundant copies.
+Glow|Stars and draw this turn and next; a resource/cycling bridge.
+Guards|Transforms hand cards into defensive Minions; useful for junk, risky for core cards.
+GuidingStar|Transition damage and next-turn draw, with a Star cost.
+HeavenlyDrill|Energy-X hits double at four or more; benefits from stored or generated Energy.
+Hegemony|Damage now, Energy next turn; account for the delay.
+HeirloomHammer|Copies a colorless hand card, including the blade; requires hand alignment and Energy.
+HiddenCache|One Star now and three next turn, not four immediately.
+IAmInvincible|Automatic topdeck defense requires topdeck control; not guaranteed every turn.
+KinglyKick|Expensive initially; repeated draws lower its combat cost.
+KinglyPunch|Repeated draws increase combat damage; cycling supports scaling.
+KnockoutBlow|Stars require a kill; unreliable against a lone Boss.
+KnowThyPlace|Debuffs may cost Stars despite zero Energy; use native upgrade costs.
+LunarBlast|Needs prior skills this turn; no unconditional hit count.
+MakeItSo|Returns after three skills, enabling a damage loop with cheap skills and draw.
+ManifestAuthority|Block plus random colorless generation; not guaranteed deck draw.
+MeteorShower|Ancient area damage and debuffs; account for its actual Star cost.
+MonarchsGaze|Hits reduce enemy Strength for the turn; cost reduction is an important upgrade.
+Monologue|Strength grows only this turn; play cards before the damage outlet.
+NeutronAegis|Plating gives sustained defense, subject to incoming damage and setup costs.
+Orbit|Energy spending refunds Energy; needs existing draw and spending capacity.
+PaleBlueDot|Requires five plays per turn; extra draw arrives next turn.
+Parry|Adds defense to blade plays; requires reliable blade access and Energy.
+ParticleWall|Returning to hand still requires repeated Star payment; not infinite free Block.
+Patter|Block with small temporary Vigor; not a scaling engine.
+PhotonCut|Draw then topdeck: base version has no net draw; upgrade improves cycling.
+PillarOfCreation|Block triggers on generation, not ordinary draws.
+Prophesize|Large two-Energy draw; consider remaining Energy and hand capacity.
+Quasar|Selectable colorless generation; the selected card still has its own cost.
+Radiate|Only Stars gained this turn create hits; stored Stars do not count.
+RefineBlade|Forge and next-turn Energy support the blade plan.
+Reflect|Reflected damage depends on enemy attacks this turn; not reliable Boss scaling.
+Resonance|Permanent Strength swing, especially valuable for multi-hit player attacks.
+RoyalGamble|One-shot Star burst; use net gain after its printed Star cost.
+Royalties|An investment in future shops; heavily discounted when none remain.
+SeekingEdge|Forge plus area blade damage; repeated area-targeting effects are redundant.
+SevenStars|Seven area hits require substantial Stars and Energy; upgrade saves Energy only.
+ShiningStrike|Topdecking maintains Star generation but occupies future draws.
+SolarStrike|Transition attack plus Stars; upgrade doubles Star generation.
+SpectrumShift|Recurring random colorless generation; upgrade reduces setup cost.
+SpoilsOfBattle|Forge plus draw two supports blade cycling; reserve Energy for the blade.
+Stardust|Star-X random hits, not Energy-X; damage can split across enemies.
+StrikeRegent|Basic attack, normally a removal target.
+SummonForth|Retrieves the blade from anywhere and Forges, improving play frequency.
+Supermassive|Scales with cards generated this combat; only five base damage without generation.
+SwordSage|Blade Replay amplifies Forge; needs Forge support and benefits from a cost upgrade.
+Terraforming|One-use Vigor, not permanent Strength scaling.
+TheSealedThrone|Ancient Star generation on every play; still needs a damage outlet.
+TheSmith|Large Forge creates a blade damage entry point; native keywords govern reuse.
+Tyranny|Recurring draw and targeted hand Exhaust support thinning and cycling.
+Venerate|Starter Star supply; remove only with adequate replacements.
+VoidForm|Ends the current turn for future free plays; cannot ignore the enemy response.
+WroughtInWar|Early damage plus Forge; a blade entry, not a reason to collect endless filler.
+Afterlife|One-shot Summon raises Osty's life, not the player's HP.
+BansheesCry|Starts at nine Energy; played Ethereal cards reduce cost by two.
+BlightStrike|Doom follows actual damage dealt, so enemy Block matters.
+Bodyguard|Starter Summon; protect it when Osty still needs a reliable life supply.
+BoneShards|Requires a living Osty and sacrifices him; conflicts with retaining a large Osty.
+BorrowedTime|Energy gain raises all card costs this turn, hurting zero-cost Soul chains.
+Bury|High-cost damage requires Energy or cost-cheating support.
+Calcify|Extra damage on Osty's attacks requires actual Osty attack cards.
+CallOfTheVoid|Recurring random Ethereal cards supply triggers, with uncertain outcomes.
+CaptureSpirit|Adds Souls to the draw pile; future cycling, not immediate draw three.
+Cleanse|Targeted draw-pile Exhaust removes statuses, curses and basics.
+Countdown|Recurring Doom is slow scaling, not immediate damage.
+DanseMacabre|Defense from cards costing at least two Energy; zero-cost Souls do not trigger it.
+DeathMarch|Damage scales with extra draws this turn; Souls support the outlet.
+Deathbringer|Area Doom plus Weak, not immediate area attack damage.
+DeathsDoor|Enhanced Block requires applying Doom in the same turn.
+Debilitate|Amplifies existing Weak/Vulnerable but does not apply them itself.
+DefendNecrobinder|Basic defense with low upgrade priority.
+Defile|Efficient Ethereal transition damage without persistent scaling.
+Defy|Block and Weak also support Ethereal interactions.
+Delay|Defense now, Energy next turn; not immediate Energy generation.
+Demesne|Recurring Energy and draw; expensive Ethereal setup makes the cost upgrade valuable.
+DevourLife|Playing Souls Summons Osty; actual Soul supply determines frequency.
+Dirge|Energy-X creates Summon and Souls, bridging both plans.
+DrainPower|Random discard upgrades do not guarantee a core upgrade or replace camps.
+Dredge|Returns three discard cards once; upgraded Retain helps align combinations.
+Eidolon|Replays exhausted Ethereal cards; needs enough useful targets and setup Energy.
+EndOfDays|Immediate Doom execution can avoid the waiting turn; compare Doom to enemy HP.
+EnfeeblingTouch|Strong temporary Strength reduction, especially against multi-hit enemies.
+Eradicate|Retainable Energy-X multi-hit burst, an independent damage outlet.
+Fear|Ethereal transition attack and Vulnerable support actual attacks.
+Fetch|Only the first play each turn draws; repeated retrieval is not infinite draw.
+Flatten|Free after an earlier Osty attack this turn; ordering matters.
+ForbiddenGrimoire|Permanent post-combat removal; must actually be played before combat ends.
+Friendship|Player Strength loss for recurring Energy does not remove Osty's own Strength.
+GraveWarden|Block plus a Soul is useful support, but cannot replace an output core.
+Graveblast|Small attack with targeted retrieval; value comes from the retrieved card.
+Hang|Repeated hits double damage against the same enemy; draw/retrieval improve Boss scaling.
+Haunt|Soul plays cause HP loss; Soul generation determines sustained output.
+HighFive|Osty area attack and Vulnerable; not a player-Strength payoff.
+Invoke|Delayed Summon and Energy have a waiting cost.
+Lethality|Only the first attack each turn is amplified; favor a substantial opening hit.
+Melancholy|Deaths lower its cost; a lone Boss does not guarantee discounts.
+Misery|Spreads existing debuffs; substantially less useful against a lone target.
+NecroMastery|Reflects Osty's actual HP loss; sacrifice/death is not automatic maximum-HP damage.
+NegativePulse|Defense plus area Doom; little immediate damage.
+Neurosurge|Strong Energy/draw with recurring self-Doom; dangerous in long fights at low HP.
+NoEscape|Doom increases with existing Doom, providing long-fight amplification.
+Oblivion|Subsequent plays this turn apply Doom; Soul chains increase trigger frequency.
+Pagestorm|Drawing Ethereal cards gives extra draw; needs density and values the cost upgrade.
+Parse|Net draw and Ethereal synergy; self-Ethereal does not clean other cards.
+Poke|Free Osty attack requires a living Osty and supports attack-frequency payoffs.
+Protector|Scales with Osty's maximum life, not the player's maximum HP.
+PullAggro|Summon plus Block must not count the same absorbed damage twice.
+PullFromBelow|Damage from Ethereal cards played this combat needs an actual supply.
+Putrefy|One-shot Weak and Vulnerable are broad support, not scaling damage.
+Rattle|Additional hits require earlier Osty attacks this turn.
+Reanimate|Large expensive Summon supports Osty but is not a damage outlet by itself.
+Reap|Expensive transition damage; consider only damage shortages or high-cost synergies.
+ReaperForm|Actual attack damage also applies Doom; needs attacks and setup Energy.
+Reave|Transition attack plus Soul; the upgraded Soul improves cycling.
+RightHandHand|High-cost plays retrieve this free Osty attack; needs enough such plays.
+Sacrifice|Sacrifices Osty for Block, losing his accumulated life investment.
+Scourge|Doom and draw; the upgrade improves net draw, not immediate damage.
+SculptingStrike|Adds Ethereal to hand junk; cleanup occurs only if it stays until turn end.
+Seance|Transforms draw-pile junk into Souls; preserve core damage and resources.
+SentryMode|Recurring generated attacks provide sustained output but still need Energy to play.
+Severance|Creates Souls in three piles; the hand Soul is immediately available.
+SharedFate|Permanent enemy Strength reduction also penalizes player-attack damage plans.
+Shroud|Block per Doom application, not per Doom stack.
+SicEm|Later Osty attacks on this target Summon; requires attack frequency.
+SleightOfFlesh|Damage per debuff application depends on frequency, not stack count.
+Snap|Osty attack plus single-card Retain is a bridge, not a scaling engine.
+SoulStorm|Scales with exhausted Souls, not generic draw count.
+Sow|Retainable early area transition damage; avoid late redundant copies.
+SpiritOfAsh|Block requires playing Ethereal cards, not merely exhausting them at turn end.
+Spur|Summons and heals Osty; does not heal the player.
+Squeeze|High-cost Osty finisher scales with Osty attack cards, not player Strength.
+StrikeNecrobinder|Basic attack, normally a removal target.
+TheScythe|Permanent run-long damage growth rewards early acquisition; Exhaust limits each fight.
+TimesUp|Converts current Doom into attack damage; no base damage without Doom.
+Transfigure|Replay increases the target's cost; requires a useful target and sufficient Energy.
+Undeath|Free self-copying Block bloats the discard pile; redundant acquisitions are costly.
+Unleash|Scales with Osty's current life, not the player's HP.
+Veilpiercer|Makes the next Ethereal card free, supporting expensive Ethereal setup.
+Wisp|One-shot Energy with Exhaust; upgraded Retain helps align resource use.

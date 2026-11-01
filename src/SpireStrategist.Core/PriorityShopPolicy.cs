@@ -10,9 +10,9 @@ public sealed record PriorityPurchase(ShopRelic Relic,ShopCard? Card,string Reas
 // later random relic spending, not a restriction on these requested priority buys.
 public static class PriorityShopPolicy
 {
-    public static PriorityPurchase? Evaluate(RunSnapshot s,ShopRelic[] relics,ShopCard[] cards,int boughtCards=0)
+    public static PriorityPurchase? Evaluate(RunSnapshot s,ShopRelic[] relics,ShopCard[] cards,int boughtCards=0,int? removalPrice=null)
     {
-        if(s.Character!="Ironclad"||s.PlayerCount!=1||s.MaxHp<=0)return null;
+        if(!DefectStrategy.Supported(s.Character)||s.PlayerCount!=1||s.MaxHp<=0)return null;
         var eligible=relics.Where(r=>r.Price>=0&&r.Price<=s.Gold&&!s.Relics.Contains(r.Id)&&!s.Relics.Contains("RELIC."+r.Id));
         // Buying the discount first changes every remaining price; caller re-reads stock.
         foreach(var id in new[]{"MEMBERSHIP_CARD","GHOST_SEED","MINIATURE_TENT","ICE_CREAM","CHEMICAL_X"})
@@ -22,7 +22,7 @@ public static class PriorityShopPolicy
             {
                 if(id=="GHOST_SEED")
                 {
-                    var basics=s.Deck.Count(c=>(c.ClassName is "StrikeIronclad" or "DefendIronclad")&&!c.Keywords.Contains("Ethereal"));
+                    var basics=s.Deck.Count(c=>(c.ClassName is "StrikeIronclad" or "DefendIronclad" or "StrikeDefect" or "DefendDefect" or "StrikeSilent" or "DefendSilent" or "StrikeRegent" or "DefendRegent" or "StrikeNecrobinder" or "DefendNecrobinder")&&!c.Keywords.Contains("Ethereal"));
                     if(basics<5||basics/(double)Math.Max(1,s.Deck.Length)<.3)continue;
                     return new(relic,null,$"尚有 {basics} 张未虚无打防，占牌组 {basics/(double)s.Deck.Length:P0}，优先幽灵种子；它只让未打出的打防在回合结束时消耗，不改善首轮抽牌，也不永久删牌。");
                 }
@@ -40,6 +40,17 @@ public static class PriorityShopPolicy
                 if(choice!=null)return new(relic,cards.Single(c=>c.Key==choice.Key),
                     "先确认 X 牌本身值得购买，且现款足够同时购买该牌与化学物 X；先买牌再买遗物。");
             }
+        }
+        if(s.Character=="Defect")
+        {
+            // Evaluate concrete engine relics before spending on filler. Use the
+            // same gold cost as cards/removal, and compare before committing cash.
+            var alternative=ShopPolicy.Evaluate(s,cards,removalPrice,s.Gold,boughtCards).Recommendation?.Score??0;
+            var candidate=eligible.Where(r=>DefectRelics.EnginePurchase(s,r.Id))
+                .Select(r=>(Relic:r,Value:(RelicValue.Shop(r.Id,s)?.Value??0)-r.Price/40d*(s.Gold<150?1.5:1)))
+                .Where(r=>r.Value>=6&&r.Value>alternative+2)
+                .OrderByDescending(r=>r.Value).ThenBy(r=>r.Relic.Price).FirstOrDefault();
+            if(candidate.Relic!=null)return new(candidate.Relic,null,"已有牌组与遗物形成明确核心联动，净收益超过当前买牌或删牌；购买后重算。");
         }
         return null;
     }

@@ -1,0 +1,1160 @@
+{
+  "source": "https://spire-codex.com/api/runs/metrics/cards?bracket=solo:standard:a10:v0.111.0&character=NECROBINDER",
+  "bracket": "solo:standard:a10:v0.111.0",
+  "dataThrough": "2026-10-31 12:28:58.253000",
+  "runs": 13925,
+  "wins": 2481,
+  "warning": "Community observational data, not official or causal. Pick rate is conditional on an offer, not appearance probability; mods and player skill can confound.",
+  "cards": [
+    {
+      "className": "Afterlife",
+      "rarity": "Common",
+      "sample": 2796,
+      "offered": 19119,
+      "pickRate": 13.8,
+      "winRate": 22.5,
+      "lift": -2.4,
+      "winRateCI": [
+        21.0,
+        24.0
+      ]
+    },
+    {
+      "className": "BansheesCry",
+      "rarity": "Rare",
+      "sample": 851,
+      "offered": 2453,
+      "pickRate": 28.9,
+      "winRate": 36.7,
+      "lift": 5.6,
+      "winRateCI": [
+        33.5,
+        40.0
+      ]
+    },
+    {
+      "className": "BlightStrike",
+      "rarity": "Common",
+      "sample": 1277,
+      "offered": 18057,
+      "pickRate": 6.1,
+      "winRate": 14.3,
+      "lift": -7.3,
+      "winRateCI": [
+        12.4,
+        16.3
+      ]
+    },
+    {
+      "className": "Bodyguard",
+      "rarity": "Basic",
+      "sample": 0,
+      "offered": 0,
+      "pickRate": null,
+      "winRate": null,
+      "lift": null,
+      "winRateCI": null
+    },
+    {
+      "className": "BoneShards",
+      "rarity": "Uncommon",
+      "sample": 1943,
+      "offered": 6507,
+      "pickRate": 25.5,
+      "winRate": 24.0,
+      "lift": -0.6,
+      "winRateCI": [
+        22.1,
+        25.9
+      ]
+    },
+    {
+      "className": "BorrowedTime",
+      "rarity": "Uncommon",
+      "sample": 3016,
+      "offered": 6068,
+      "pickRate": 44.7,
+      "winRate": 32.7,
+      "lift": 2.8,
+      "winRateCI": [
+        31.1,
+        34.4
+      ]
+    },
+    {
+      "className": "Bury",
+      "rarity": "Uncommon",
+      "sample": 790,
+      "offered": 6915,
+      "pickRate": 9.5,
+      "winRate": 29.6,
+      "lift": 0.7,
+      "winRateCI": [
+        26.5,
+        32.9
+      ]
+    },
+    {
+      "className": "Cacophony",
+      "rarity": "Rare",
+      "sample": 0,
+      "offered": 0,
+      "pickRate": null,
+      "winRate": null,
+      "lift": null,
+      "winRateCI": null
+    },
+    {
+      "className": "Calcify",
+      "rarity": "Uncommon",
+      "sample": 1461,
+      "offered": 7928,
+      "pickRate": 14.3,
+      "winRate": 25.4,
+      "lift": -2.3,
+      "winRateCI": [
+        23.2,
+        27.7
+      ]
+    },
+    {
+      "className": "CallOfTheVoid",
+      "rarity": "Rare",
+      "sample": 1270,
+      "offered": 2308,
+      "pickRate": 48.4,
+      "winRate": 36.6,
+      "lift": 3.9,
+      "winRateCI": [
+        34.0,
+        39.3
+      ]
+    },
+    {
+      "className": "CaptureSpirit",
+      "rarity": "Uncommon",
+      "sample": 2260,
+      "offered": 6210,
+      "pickRate": 32.9,
+      "winRate": 31.2,
+      "lift": 1.4,
+      "winRateCI": [
+        29.3,
+        33.1
+      ]
+    },
+    {
+      "className": "Cleanse",
+      "rarity": "Uncommon",
+      "sample": 1626,
+      "offered": 6426,
+      "pickRate": 22.2,
+      "winRate": 26.7,
+      "lift": -3.2,
+      "winRateCI": [
+        24.6,
+        28.9
+      ]
+    },
+    {
+      "className": "Countdown",
+      "rarity": "Uncommon",
+      "sample": 2017,
+      "offered": 7633,
+      "pickRate": 20.0,
+      "winRate": 25.5,
+      "lift": -1.3,
+      "winRateCI": [
+        23.7,
+        27.5
+      ]
+    },
+    {
+      "className": "DanseMacabre",
+      "rarity": "Uncommon",
+      "sample": 2195,
+      "offered": 7687,
+      "pickRate": 23.3,
+      "winRate": 35.5,
+      "lift": 3.0,
+      "winRateCI": [
+        33.5,
+        37.5
+      ]
+    },
+    {
+      "className": "DeathMarch",
+      "rarity": "Uncommon",
+      "sample": 565,
+      "offered": 6911,
+      "pickRate": 6.4,
+      "winRate": 24.6,
+      "lift": -1.3,
+      "winRateCI": [
+        21.2,
+        28.3
+      ]
+    },
+    {
+      "className": "Deathbringer",
+      "rarity": "Uncommon",
+      "sample": 2807,
+      "offered": 6324,
+      "pickRate": 40.2,
+      "winRate": 26.0,
+      "lift": -0.0,
+      "winRateCI": [
+        24.4,
+        27.7
+      ]
+    },
+    {
+      "className": "DeathsDoor",
+      "rarity": "Uncommon",
+      "sample": 1591,
+      "offered": 6316,
+      "pickRate": 22.8,
+      "winRate": 28.3,
+      "lift": -1.3,
+      "winRateCI": [
+        26.1,
+        30.5
+      ]
+    },
+    {
+      "className": "Debilitate",
+      "rarity": "Uncommon",
+      "sample": 2048,
+      "offered": 6696,
+      "pickRate": 26.7,
+      "winRate": 30.7,
+      "lift": -0.0,
+      "winRateCI": [
+        28.8,
+        32.7
+      ]
+    },
+    {
+      "className": "DefendNecrobinder",
+      "rarity": "Basic",
+      "sample": 0,
+      "offered": 0,
+      "pickRate": null,
+      "winRate": null,
+      "lift": null,
+      "winRateCI": null
+    },
+    {
+      "className": "Defile",
+      "rarity": "Common",
+      "sample": 1825,
+      "offered": 18136,
+      "pickRate": 9.0,
+      "winRate": 16.1,
+      "lift": -4.2,
+      "winRateCI": [
+        14.4,
+        17.8
+      ]
+    },
+    {
+      "className": "Defy",
+      "rarity": "Common",
+      "sample": 7715,
+      "offered": 17161,
+      "pickRate": 51.6,
+      "winRate": 26.4,
+      "lift": 1.6,
+      "winRateCI": [
+        25.4,
+        27.4
+      ]
+    },
+    {
+      "className": "Delay",
+      "rarity": "Uncommon",
+      "sample": 3350,
+      "offered": 6197,
+      "pickRate": 50.7,
+      "winRate": 30.7,
+      "lift": 1.6,
+      "winRateCI": [
+        29.2,
+        32.3
+      ]
+    },
+    {
+      "className": "Demesne",
+      "rarity": "Rare",
+      "sample": 1727,
+      "offered": 2219,
+      "pickRate": 72.2,
+      "winRate": 43.0,
+      "lift": 10.0,
+      "winRateCI": [
+        40.7,
+        45.4
+      ]
+    },
+    {
+      "className": "DevourLife",
+      "rarity": "Rare",
+      "sample": 535,
+      "offered": 2350,
+      "pickRate": 17.7,
+      "winRate": 24.5,
+      "lift": -5.6,
+      "winRateCI": [
+        21.0,
+        28.3
+      ]
+    },
+    {
+      "className": "Dirge",
+      "rarity": "Uncommon",
+      "sample": 2324,
+      "offered": 6414,
+      "pickRate": 33.9,
+      "winRate": 31.8,
+      "lift": 2.9,
+      "winRateCI": [
+        29.9,
+        33.7
+      ]
+    },
+    {
+      "className": "DrainPower",
+      "rarity": "Common",
+      "sample": 1786,
+      "offered": 18223,
+      "pickRate": 8.5,
+      "winRate": 13.4,
+      "lift": -8.3,
+      "winRateCI": [
+        11.9,
+        15.0
+      ]
+    },
+    {
+      "className": "Dredge",
+      "rarity": "Uncommon",
+      "sample": 1677,
+      "offered": 6514,
+      "pickRate": 23.2,
+      "winRate": 39.8,
+      "lift": 6.4,
+      "winRateCI": [
+        37.5,
+        42.1
+      ]
+    },
+    {
+      "className": "Eidolon",
+      "rarity": "Rare",
+      "sample": 357,
+      "offered": 2401,
+      "pickRate": 10.3,
+      "winRate": 31.4,
+      "lift": -1.4,
+      "winRateCI": [
+        26.8,
+        36.4
+      ]
+    },
+    {
+      "className": "EndOfDays",
+      "rarity": "Rare",
+      "sample": 1074,
+      "offered": 2342,
+      "pickRate": 36.7,
+      "winRate": 25.9,
+      "lift": -2.0,
+      "winRateCI": [
+        23.4,
+        28.6
+      ]
+    },
+    {
+      "className": "EnfeeblingTouch",
+      "rarity": "Uncommon",
+      "sample": 3563,
+      "offered": 5874,
+      "pickRate": 55.1,
+      "winRate": 31.7,
+      "lift": 2.1,
+      "winRateCI": [
+        30.2,
+        33.2
+      ]
+    },
+    {
+      "className": "Eradicate",
+      "rarity": "Rare",
+      "sample": 956,
+      "offered": 2358,
+      "pickRate": 31.9,
+      "winRate": 45.7,
+      "lift": 14.8,
+      "winRateCI": [
+        42.6,
+        48.9
+      ]
+    },
+    {
+      "className": "Fear",
+      "rarity": "Common",
+      "sample": 2540,
+      "offered": 17858,
+      "pickRate": 12.9,
+      "winRate": 18.2,
+      "lift": -5.2,
+      "winRateCI": [
+        16.7,
+        19.7
+      ]
+    },
+    {
+      "className": "Fetch",
+      "rarity": "Uncommon",
+      "sample": 2450,
+      "offered": 6432,
+      "pickRate": 36.7,
+      "winRate": 28.4,
+      "lift": 1.4,
+      "winRateCI": [
+        26.7,
+        30.3
+      ]
+    },
+    {
+      "className": "Flatten",
+      "rarity": "Common",
+      "sample": 2230,
+      "offered": 17913,
+      "pickRate": 12.3,
+      "winRate": 19.8,
+      "lift": -2.2,
+      "winRateCI": [
+        18.2,
+        21.5
+      ]
+    },
+    {
+      "className": "ForbiddenGrimoire",
+      "rarity": "Ancient",
+      "sample": 0,
+      "offered": 0,
+      "pickRate": null,
+      "winRate": null,
+      "lift": null,
+      "winRateCI": null
+    },
+    {
+      "className": "Friendship",
+      "rarity": "Uncommon",
+      "sample": 3713,
+      "offered": 7137,
+      "pickRate": 40.7,
+      "winRate": 32.1,
+      "lift": 1.7,
+      "winRateCI": [
+        30.6,
+        33.6
+      ]
+    },
+    {
+      "className": "GlimpseBeyond",
+      "rarity": "Rare",
+      "sample": 0,
+      "offered": 0,
+      "pickRate": null,
+      "winRate": null,
+      "lift": null,
+      "winRateCI": null
+    },
+    {
+      "className": "GraveWarden",
+      "rarity": "Common",
+      "sample": 6090,
+      "offered": 18508,
+      "pickRate": 33.7,
+      "winRate": 24.6,
+      "lift": -0.2,
+      "winRateCI": [
+        23.6,
+        25.7
+      ]
+    },
+    {
+      "className": "Graveblast",
+      "rarity": "Common",
+      "sample": 2266,
+      "offered": 17834,
+      "pickRate": 12.0,
+      "winRate": 26.4,
+      "lift": -2.0,
+      "winRateCI": [
+        24.7,
+        28.3
+      ]
+    },
+    {
+      "className": "Hang",
+      "rarity": "Rare",
+      "sample": 849,
+      "offered": 2380,
+      "pickRate": 29.9,
+      "winRate": 26.3,
+      "lift": -0.8,
+      "winRateCI": [
+        23.4,
+        29.3
+      ]
+    },
+    {
+      "className": "Haunt",
+      "rarity": "Uncommon",
+      "sample": 1135,
+      "offered": 7972,
+      "pickRate": 10.9,
+      "winRate": 22.1,
+      "lift": -5.0,
+      "winRateCI": [
+        19.8,
+        24.6
+      ]
+    },
+    {
+      "className": "HighFive",
+      "rarity": "Uncommon",
+      "sample": 2096,
+      "offered": 6504,
+      "pickRate": 27.6,
+      "winRate": 25.7,
+      "lift": -0.2,
+      "winRateCI": [
+        23.8,
+        27.6
+      ]
+    },
+    {
+      "className": "Invoke",
+      "rarity": "Common",
+      "sample": 4027,
+      "offered": 19047,
+      "pickRate": 19.4,
+      "winRate": 26.8,
+      "lift": 0.4,
+      "winRateCI": [
+        25.5,
+        28.2
+      ]
+    },
+    {
+      "className": "LegionOfBone",
+      "rarity": "Uncommon",
+      "sample": 0,
+      "offered": 0,
+      "pickRate": null,
+      "winRate": null,
+      "lift": null,
+      "winRateCI": null
+    },
+    {
+      "className": "Lethality",
+      "rarity": "Uncommon",
+      "sample": 3761,
+      "offered": 7366,
+      "pickRate": 44.6,
+      "winRate": 31.0,
+      "lift": 2.7,
+      "winRateCI": [
+        29.6,
+        32.5
+      ]
+    },
+    {
+      "className": "Melancholy",
+      "rarity": "Uncommon",
+      "sample": 1337,
+      "offered": 6444,
+      "pickRate": 18.4,
+      "winRate": 23.8,
+      "lift": -2.6,
+      "winRateCI": [
+        21.6,
+        26.1
+      ]
+    },
+    {
+      "className": "Misery",
+      "rarity": "Rare",
+      "sample": 652,
+      "offered": 2418,
+      "pickRate": 20.2,
+      "winRate": 21.3,
+      "lift": -6.0,
+      "winRateCI": [
+        18.3,
+        24.6
+      ]
+    },
+    {
+      "className": "NecroMastery",
+      "rarity": "Rare",
+      "sample": 691,
+      "offered": 2318,
+      "pickRate": 23.8,
+      "winRate": 27.9,
+      "lift": -0.7,
+      "winRateCI": [
+        24.7,
+        31.4
+      ]
+    },
+    {
+      "className": "NegativePulse",
+      "rarity": "Common",
+      "sample": 3730,
+      "offered": 18815,
+      "pickRate": 19.6,
+      "winRate": 18.5,
+      "lift": -4.0,
+      "winRateCI": [
+        17.3,
+        19.7
+      ]
+    },
+    {
+      "className": "Neurosurge",
+      "rarity": "Rare",
+      "sample": 1617,
+      "offered": 2255,
+      "pickRate": 64.0,
+      "winRate": 43.8,
+      "lift": 11.1,
+      "winRateCI": [
+        41.4,
+        46.2
+      ]
+    },
+    {
+      "className": "NoEscape",
+      "rarity": "Uncommon",
+      "sample": 1790,
+      "offered": 6161,
+      "pickRate": 26.9,
+      "winRate": 22.8,
+      "lift": -4.1,
+      "winRateCI": [
+        21.0,
+        24.9
+      ]
+    },
+    {
+      "className": "Oblivion",
+      "rarity": "Rare",
+      "sample": 886,
+      "offered": 2327,
+      "pickRate": 31.1,
+      "winRate": 36.0,
+      "lift": 5.1,
+      "winRateCI": [
+        32.9,
+        39.2
+      ]
+    },
+    {
+      "className": "Pagestorm",
+      "rarity": "Uncommon",
+      "sample": 1497,
+      "offered": 7955,
+      "pickRate": 13.6,
+      "winRate": 37.3,
+      "lift": 2.1,
+      "winRateCI": [
+        34.9,
+        39.8
+      ]
+    },
+    {
+      "className": "Parse",
+      "rarity": "Uncommon",
+      "sample": 927,
+      "offered": 6354,
+      "pickRate": 12.7,
+      "winRate": 35.4,
+      "lift": 2.5,
+      "winRateCI": [
+        32.4,
+        38.5
+      ]
+    },
+    {
+      "className": "Poke",
+      "rarity": "Common",
+      "sample": 2442,
+      "offered": 17682,
+      "pickRate": 12.7,
+      "winRate": 20.0,
+      "lift": -3.0,
+      "winRateCI": [
+        18.5,
+        21.7
+      ]
+    },
+    {
+      "className": "Protector",
+      "rarity": "Ancient",
+      "sample": 0,
+      "offered": 0,
+      "pickRate": null,
+      "winRate": null,
+      "lift": null,
+      "winRateCI": null
+    },
+    {
+      "className": "PullAggro",
+      "rarity": "Common",
+      "sample": 3292,
+      "offered": 19267,
+      "pickRate": 15.8,
+      "winRate": 22.4,
+      "lift": -1.8,
+      "winRateCI": [
+        21.0,
+        23.8
+      ]
+    },
+    {
+      "className": "PullFromBelow",
+      "rarity": "Uncommon",
+      "sample": 1171,
+      "offered": 6751,
+      "pickRate": 14.1,
+      "winRate": 30.4,
+      "lift": 0.7,
+      "winRateCI": [
+        27.8,
+        33.1
+      ]
+    },
+    {
+      "className": "Putrefy",
+      "rarity": "Uncommon",
+      "sample": 2801,
+      "offered": 6293,
+      "pickRate": 41.1,
+      "winRate": 32.6,
+      "lift": 3.2,
+      "winRateCI": [
+        30.9,
+        34.4
+      ]
+    },
+    {
+      "className": "Rattle",
+      "rarity": "Uncommon",
+      "sample": 1075,
+      "offered": 6533,
+      "pickRate": 14.3,
+      "winRate": 25.8,
+      "lift": -0.9,
+      "winRateCI": [
+        23.2,
+        28.5
+      ]
+    },
+    {
+      "className": "Reanimate",
+      "rarity": "Rare",
+      "sample": 1169,
+      "offered": 2309,
+      "pickRate": 45.0,
+      "winRate": 38.5,
+      "lift": 7.0,
+      "winRateCI": [
+        35.7,
+        41.3
+      ]
+    },
+    {
+      "className": "Reap",
+      "rarity": "Common",
+      "sample": 2565,
+      "offered": 17916,
+      "pickRate": 12.7,
+      "winRate": 19.0,
+      "lift": -2.2,
+      "winRateCI": [
+        17.5,
+        20.6
+      ]
+    },
+    {
+      "className": "ReaperForm",
+      "rarity": "Rare",
+      "sample": 1079,
+      "offered": 2312,
+      "pickRate": 38.8,
+      "winRate": 38.6,
+      "lift": 5.4,
+      "winRateCI": [
+        35.8,
+        41.6
+      ]
+    },
+    {
+      "className": "Reave",
+      "rarity": "Common",
+      "sample": 1344,
+      "offered": 18006,
+      "pickRate": 6.7,
+      "winRate": 12.0,
+      "lift": -8.7,
+      "winRateCI": [
+        10.4,
+        13.8
+      ]
+    },
+    {
+      "className": "RightHandHand",
+      "rarity": "Uncommon",
+      "sample": 1192,
+      "offered": 6846,
+      "pickRate": 15.2,
+      "winRate": 27.5,
+      "lift": 0.3,
+      "winRateCI": [
+        25.1,
+        30.1
+      ]
+    },
+    {
+      "className": "Sacrifice",
+      "rarity": "Rare",
+      "sample": 514,
+      "offered": 2378,
+      "pickRate": 16.5,
+      "winRate": 35.2,
+      "lift": 3.4,
+      "winRateCI": [
+        31.2,
+        39.4
+      ]
+    },
+    {
+      "className": "Scourge",
+      "rarity": "Common",
+      "sample": 2100,
+      "offered": 19489,
+      "pickRate": 10.2,
+      "winRate": 20.2,
+      "lift": -4.0,
+      "winRateCI": [
+        18.6,
+        22.0
+      ]
+    },
+    {
+      "className": "SculptingStrike",
+      "rarity": "Common",
+      "sample": 1304,
+      "offered": 18028,
+      "pickRate": 6.4,
+      "winRate": 17.0,
+      "lift": -7.1,
+      "winRateCI": [
+        15.1,
+        19.2
+      ]
+    },
+    {
+      "className": "Seance",
+      "rarity": "Rare",
+      "sample": 877,
+      "offered": 2318,
+      "pickRate": 31.8,
+      "winRate": 32.2,
+      "lift": -0.6,
+      "winRateCI": [
+        29.1,
+        35.3
+      ]
+    },
+    {
+      "className": "SentryMode",
+      "rarity": "Rare",
+      "sample": 878,
+      "offered": 2395,
+      "pickRate": 31.8,
+      "winRate": 32.5,
+      "lift": 2.4,
+      "winRateCI": [
+        29.4,
+        35.6
+      ]
+    },
+    {
+      "className": "Severance",
+      "rarity": "Uncommon",
+      "sample": 1186,
+      "offered": 6826,
+      "pickRate": 14.9,
+      "winRate": 21.4,
+      "lift": -3.9,
+      "winRateCI": [
+        19.2,
+        23.8
+      ]
+    },
+    {
+      "className": "SharedFate",
+      "rarity": "Rare",
+      "sample": 770,
+      "offered": 2405,
+      "pickRate": 27.5,
+      "winRate": 36.1,
+      "lift": 3.3,
+      "winRateCI": [
+        32.8,
+        39.6
+      ]
+    },
+    {
+      "className": "Shroud",
+      "rarity": "Uncommon",
+      "sample": 1659,
+      "offered": 7573,
+      "pickRate": 17.5,
+      "winRate": 30.0,
+      "lift": 0.2,
+      "winRateCI": [
+        27.9,
+        32.3
+      ]
+    },
+    {
+      "className": "SicEm",
+      "rarity": "Uncommon",
+      "sample": 1080,
+      "offered": 6708,
+      "pickRate": 14.6,
+      "winRate": 25.0,
+      "lift": -2.1,
+      "winRateCI": [
+        22.5,
+        27.7
+      ]
+    },
+    {
+      "className": "SleightOfFlesh",
+      "rarity": "Uncommon",
+      "sample": 2869,
+      "offered": 7410,
+      "pickRate": 31.8,
+      "winRate": 29.8,
+      "lift": 1.4,
+      "winRateCI": [
+        28.2,
+        31.5
+      ]
+    },
+    {
+      "className": "Snap",
+      "rarity": "Common",
+      "sample": 3147,
+      "offered": 17602,
+      "pickRate": 16.1,
+      "winRate": 24.0,
+      "lift": -1.6,
+      "winRateCI": [
+        22.5,
+        25.5
+      ]
+    },
+    {
+      "className": "SoulStorm",
+      "rarity": "Rare",
+      "sample": 433,
+      "offered": 2421,
+      "pickRate": 12.5,
+      "winRate": 24.7,
+      "lift": -2.4,
+      "winRateCI": [
+        20.9,
+        29.0
+      ]
+    },
+    {
+      "className": "Soulbound",
+      "rarity": "Uncommon",
+      "sample": 0,
+      "offered": 0,
+      "pickRate": null,
+      "winRate": null,
+      "lift": null,
+      "winRateCI": null
+    },
+    {
+      "className": "Sow",
+      "rarity": "Common",
+      "sample": 2021,
+      "offered": 18025,
+      "pickRate": 9.8,
+      "winRate": 13.5,
+      "lift": -6.3,
+      "winRateCI": [
+        12.0,
+        15.0
+      ]
+    },
+    {
+      "className": "SpiritOfAsh",
+      "rarity": "Rare",
+      "sample": 855,
+      "offered": 2388,
+      "pickRate": 32.0,
+      "winRate": 38.4,
+      "lift": 4.9,
+      "winRateCI": [
+        35.2,
+        41.7
+      ]
+    },
+    {
+      "className": "Spur",
+      "rarity": "Uncommon",
+      "sample": 1788,
+      "offered": 6330,
+      "pickRate": 25.0,
+      "winRate": 25.4,
+      "lift": -2.7,
+      "winRateCI": [
+        23.4,
+        27.5
+      ]
+    },
+    {
+      "className": "Squeeze",
+      "rarity": "Rare",
+      "sample": 764,
+      "offered": 2335,
+      "pickRate": 27.5,
+      "winRate": 36.1,
+      "lift": 7.1,
+      "winRateCI": [
+        32.8,
+        39.6
+      ]
+    },
+    {
+      "className": "StrikeNecrobinder",
+      "rarity": "Basic",
+      "sample": 0,
+      "offered": 0,
+      "pickRate": null,
+      "winRate": null,
+      "lift": null,
+      "winRateCI": null
+    },
+    {
+      "className": "TheScythe",
+      "rarity": "Rare",
+      "sample": 714,
+      "offered": 2469,
+      "pickRate": 21.1,
+      "winRate": 35.9,
+      "lift": 10.8,
+      "winRateCI": [
+        32.4,
+        39.4
+      ]
+    },
+    {
+      "className": "TimesUp",
+      "rarity": "Rare",
+      "sample": 474,
+      "offered": 2452,
+      "pickRate": 14.1,
+      "winRate": 29.3,
+      "lift": -0.9,
+      "winRateCI": [
+        25.4,
+        33.6
+      ]
+    },
+    {
+      "className": "Transfigure",
+      "rarity": "Rare",
+      "sample": 1059,
+      "offered": 2386,
+      "pickRate": 37.7,
+      "winRate": 34.6,
+      "lift": 2.4,
+      "winRateCI": [
+        31.8,
+        37.5
+      ]
+    },
+    {
+      "className": "Undeath",
+      "rarity": "Rare",
+      "sample": 868,
+      "offered": 2325,
+      "pickRate": 30.3,
+      "winRate": 29.8,
+      "lift": -0.8,
+      "winRateCI": [
+        26.9,
+        33.0
+      ]
+    },
+    {
+      "className": "Underworld",
+      "rarity": "Uncommon",
+      "sample": 0,
+      "offered": 0,
+      "pickRate": null,
+      "winRate": null,
+      "lift": null,
+      "winRateCI": null
+    },
+    {
+      "className": "Unleash",
+      "rarity": "Basic",
+      "sample": 0,
+      "offered": 0,
+      "pickRate": null,
+      "winRate": null,
+      "lift": null,
+      "winRateCI": null
+    },
+    {
+      "className": "Veilpiercer",
+      "rarity": "Uncommon",
+      "sample": 1079,
+      "offered": 6580,
+      "pickRate": 14.0,
+      "winRate": 21.7,
+      "lift": -3.8,
+      "winRateCI": [
+        19.3,
+        24.2
+      ]
+    },
+    {
+      "className": "Wisp",
+      "rarity": "Common",
+      "sample": 2680,
+      "offered": 19394,
+      "pickRate": 12.1,
+      "winRate": 24.8,
+      "lift": -3.2,
+      "winRateCI": [
+        23.2,
+        26.4
+      ]
+    }
+  ]
+}

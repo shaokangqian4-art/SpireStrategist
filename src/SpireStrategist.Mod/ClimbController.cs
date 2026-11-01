@@ -30,6 +30,7 @@ internal static class ClimbController
     private static Label? solverNotice;
     private static HBoxContainer? floatingHeader;
     private static ScrollContainer? contentScroll;
+    private static TabContainer? floatingTabs;
     private static Button? collapseButton,floatingStop;
     private static PanelLayout? floatingLayout;
     private static string FloatingLayoutPath=>Path.Combine(OS.GetUserDataDir(),"SpireStrategist","climb-panel-layout.json");
@@ -97,8 +98,12 @@ internal static class ClimbController
                 else{dragOffset=shell.GetGlobalMousePosition()-shell.Position;dragTimer.Start();}dragTitle.AcceptEvent();}
         };
         var scroll=new ScrollContainer{HorizontalScrollMode=ScrollContainer.ScrollMode.Disabled,SizeFlagsVertical=Control.SizeFlags.ExpandFill};outer.AddChild(scroll);contentScroll=scroll;
-        var box=new VBoxContainer{SizeFlagsHorizontal=Control.SizeFlags.ExpandFill,MouseFilter=Control.MouseFilterEnum.Ignore};
-        box.AddThemeConstantOverride("separation",10);scroll.AddChild(box);
+        floatingTabs=new TabContainer{SizeFlagsHorizontal=Control.SizeFlags.ExpandFill,SizeFlagsVertical=Control.SizeFlags.ExpandFill};
+        scroll.AddChild(floatingTabs);
+        var box=new VBoxContainer{Name="循环",SizeFlagsHorizontal=Control.SizeFlags.ExpandFill,MouseFilter=Control.MouseFilterEnum.Ignore};
+        box.AddThemeConstantOverride("separation",10);floatingTabs.AddChild(box);
+        var settingsPage=new VBoxContainer{Name="设置"};floatingTabs.AddChild(settingsPage);
+        UiLocalization.AddPicker(settingsPage);
         box.AddChild(AdvisorUi.Text("循环爬塔 · 快速测试",310));
         solverNotice=AdvisorUi.Text("",310);box.AddChild(solverNotice);
         controls=box;
@@ -107,7 +112,7 @@ internal static class ClimbController
         box.Theme=new Theme{DefaultFont=font,DefaultFontSize=15};
         var row=new VBoxContainer();box.AddChild(row);
         enabledButton=new CheckButton{Text="循环爬塔",FocusMode=Control.FocusModeEnum.None,
-            TooltipText="快速连续战士随机种子测试；局间等待1秒。完整自动对局按角色/难度记录最高连胜。关闭交还控制；中途加入和人工参与会中断当前连胜。"};
+            TooltipText="快速连续随机种子测试；局间等待1秒。完整自动对局按角色/难度记录最高连胜。关闭交还控制；中途加入和人工参与会中断当前连胜。"};
         stopButton=new CheckButton{Text="本局结束后停止",FocusMode=Control.FocusModeEnum.None,
             TooltipText="打完当前局，保存结果，不再开新局。"};
         row.AddChild(enabledButton);row.AddChild(stopButton);
@@ -116,11 +121,10 @@ internal static class ClimbController
         ascensionInput=new SpinBox{MinValue=0,MaxValue=10,Step=1,Value=preferences.Ascension};
         ascensionRow.AddChild(ascensionInput);
         characterInput=new OptionButton{FocusMode=Control.FocusModeEnum.None,
-            TooltipText="角色选择会保存；其他四个角色暂不可用，选择后无法开启循环。"};
-        foreach(var name in new[]{"铁甲战士","静默猎手（暂不可用）","储君（暂不可用）","亡灵契约师（暂不可用）","故障机器人（暂不可用）"})characterInput.AddItem(name);
+            TooltipText="角色选择会保存；五个原生角色均可用。储君和亡灵契约师为首版机制权重，欢迎反馈。"};
+        foreach(var name in new[]{"铁甲战士","静默猎手","储君","亡灵契约师","故障机器人"})characterInput.AddItem(name);
         characterInput.Select(Array.IndexOf(ClimbPreferences.Characters,preferences.Character));
         box.AddChild(characterInput);
-        UiLocalization.AddPicker(box);
         box.AddChild(new Label{Text="标准模式 · 随机种子 · 勾选即开局"});
         ascensionInput.ValueChanged+=value=>
         {if(refreshingPreferences)return;preferences.Ascension=(int)value;SavePreferences();Refresh();};
@@ -166,19 +170,20 @@ internal static class ClimbController
         if(transitioning)
         {Status="新局仍在加载，接管已取消；加载完成后可以重新开启。";Refresh();return;}
         var service=AdvisorService.Current;
+        if(InMultiplayerLobby()){Status=MultiplayerAdvice.Notice;Refresh();return;}
         if(SolverBridge.CompatibilityError() is {} error){Status=error;Refresh();return;}
         var menu=game?.RootSceneContainer?.CurrentScene is NMainMenu&&service==null;
         if(menu&&SaveManager.Instance.HasRunSave)
         {Status="存在未完成的单人存档：请先继续该局再开启接管，或手动结束该局。";Refresh();return;}
         if(menu&&!preferences.Supported)
-        {Status="所选角色暂不可用，请选择铁甲战士。";Refresh();return;}
-        if(!menu&&(service==null||service.State.IsGameOver||service.State.GameMode!=GameMode.Standard||service.State.Players.Count!=1||
-           service.Player.Character is not Ironclad||service.State.Modifiers.Count!=0)
+        {Status="所选角色尚不支持，请选择原生角色。";Refresh();return;}
+        if(!menu&&(service==null||service.State.IsGameOver||service.State.GameMode!=GameMode.Standard||(service.State.Players.Count!=1||SnapshotReader.IsMultiplayer(service.State))||
+           !DefectStrategy.Supported(service.Player.Character.GetType().Name)||service.State.Modifiers.Count!=0)
         )
-        {Status="请在单人标准战士局内开启（不支持每日/自定义模式）。";Refresh();return;}
+        {Status="请在单人标准模式局内开启（循环爬塔不支持每日/自定义模式）。";Refresh();return;}
         generation++;endedAt=0;attached=null;
         ascension=menu?(int)(ascensionInput?.Value??0):service!.State.AscensionLevel;
-        preferences.Ascension=ascension;preferences.Character="Ironclad";SavePreferences();
+        preferences.Ascension=ascension;preferences.Character=menu?preferences.Character:service!.Player.Character.GetType().Name;SavePreferences();
         shouldSave=menu||RunManager.Instance.ShouldSave;
         journal??=new Journal(Path.Combine(OS.GetUserDataDir(),"SpireStrategist","climb-batches",
             DateTime.UtcNow.ToString("yyyyMMdd-HHmmss")+"-"+Guid.NewGuid().ToString("N")[..8]));
@@ -189,16 +194,17 @@ internal static class ClimbController
     }
     internal static void Attach(AdvisorService service,bool? full=null)
     {
+        if((service.State.Players.Count!=1||SnapshotReader.IsMultiplayer(service.State))){if(Enabled)Stop(MultiplayerAdvice.Notice);Refresh();return;}
         if(!Enabled)return;
         if(attached==service.State)return;
         if(Batch.Current!=null){Stop("检测到未经批次启动的换局/读档，本局标为中断");return;}
         attached=service.State;endedAt=0;
         randomSalt=Convert.ToHexString(System.Security.Cryptography.RandomNumberGenerator.GetBytes(16));
         Batch.Start(service.State.Rng.StringSeed,full??launching);
-        preferences.Begin(Batch.Current!,"Ironclad",service.State.AscensionLevel);SavePreferences();
+        preferences.Begin(Batch.Current!,service.Player.Character.GetType().Name,service.State.AscensionLevel);SavePreferences();
         service.Panel.SetReviewPaused(false);service.Autopilot.Enable(true);
         Write("run_start",new{run=Batch.Current,state=SnapshotReader.Read(service.State,service.Player),
-            policy=Policy.Version,gameVersion=NGame.GetGameVersion(),randomSalt,relicReserve=RelicReserve,
+            policy=HeroPolicy.VersionFor(service.Player.Character.GetType().Name),gameVersion=NGame.GetGameVersion(),randomSalt,relicReserve=RelicReserve,
             mods=ModManager.GetLoadedMods().Where(m=>m.manifest!=null).Select(m=>new{m.manifest!.id,m.manifest.version}),
             solverSettings=ReadSolverSettings()});
         Status="连续爬塔中"+(Batch.Current!.FullRun?"":" · 本局中途加入，单独记录");Refresh();
@@ -228,6 +234,7 @@ internal static class ClimbController
     }
     internal static void Concede(AdvisorService service,int turn)
     {
+        if((service.State.Players.Count!=1||SnapshotReader.IsMultiplayer(service.State)))return;
         if(conceding!=null||!service.Autopilot.Enabled||!service.Autopilot.FullAutomatic)return;
         conceding=service.State;
         concessionStarted=Time.GetTicksMsec();
@@ -285,12 +292,12 @@ internal static class ClimbController
             if(!Enabled||token!=generation)return;
             if(!fromMenu)await game!.ReturnToMainMenuAfterRun();
             if(!Enabled||token!=generation)return;
-            var seed=Convert.ToHexString(System.Security.Cryptography.RandomNumberGenerator.GetBytes(6));
+            var seed=AutopilotLab.TrainingSeed()??Convert.ToHexString(System.Security.Cryptography.RandomNumberGenerator.GetBytes(6));
             Write("launch_requested",new{seed,ascension});
             launching=true;
             // Native NCharacterSelectScreen.BeginRun stops menu music before launching.
             NAudioManager.Instance?.StopMusic();
-            await game!.StartNewSingleplayerRun(ModelDb.Character<Ironclad>(),shouldSave,
+            await game!.StartNewSingleplayerRun(SelectedCharacter(),shouldSave,
                 ActModel.GetDefaultList(),[],seed,GameMode.Standard,ascension);
             if(!Enabled||token!=generation){AdvisorService.Current?.Autopilot.Pause("换局期间已关闭自动爬塔");return;}
             if(AdvisorService.Current is {} service)Attach(service,true);
@@ -301,11 +308,18 @@ internal static class ClimbController
     private static void Write(string type,object data)
     {
         journal?.Write(type,data);
-        journal?.Latest("summary",new{version="0.6.21",Batch.Enabled,Batch.StopAfterRun,Batch.Current,
+        journal?.Latest("summary",new{version="0.6.55",Batch.Enabled,Batch.StopAfterRun,Batch.Current,
             Batch.Wins,Batch.Losses,completed=Batch.Wins+Batch.Losses,
             winRate=Batch.Wins+Batch.Losses==0?(double?)null:Batch.Wins/(double)(Batch.Wins+Batch.Losses),
             results=Batch.Results,streaks=preferences.Streaks,notes="从开局全程接管的自然结算及求解器死亡路线主动放弃计入胜负；主动放弃在 reason 中单列，中途加入、人工干预和中断另列。连胜按角色/难度，只计完整自动对局。"});
     }
+    private static CharacterModel SelectedCharacter()=>preferences.Character switch{
+        "Silent"=>ModelDb.Character<Silent>(),"Defect"=>ModelDb.Character<Defect>(),
+        "Regent"=>ModelDb.Character<Regent>(),"Necrobinder"=>ModelDb.Character<Necrobinder>(),_=>ModelDb.Character<Ironclad>()};
+    private static bool InMultiplayerLobby()=>game!=null&&(
+        GameActions.Descendants<MegaCrit.Sts2.Core.Nodes.Screens.CharacterSelect.NCharacterSelectScreen>(game)
+            .Any(s=>s.IsVisibleInTree()&&s.Lobby?.NetService.Type is MegaCrit.Sts2.Core.Multiplayer.Game.NetGameType.Host or MegaCrit.Sts2.Core.Multiplayer.Game.NetGameType.Client)||
+        GameActions.Descendants<MegaCrit.Sts2.Core.Nodes.Screens.CharacterSelect.NMultiplayerLoadGameScreen>(game).Any(s=>s.IsVisibleInTree()));
     private static void SavePreferences()
     {
         try{preferences.Save(PreferencesPath);}
@@ -313,6 +327,7 @@ internal static class ClimbController
     }
     private static void Refresh()
     {
+        if(game==null||!GodotObject.IsInstanceValid(game)||!game.IsInsideTree())return;
         var compatible=SolverBridge.CompatibilityError()==null;
         if(exportLast!=null)exportLast.Visible=game?.RootSceneContainer?.CurrentScene is NMainMenu;
         var dock=AdvisorService.Current?.Panel.LoopRect;
@@ -322,6 +337,7 @@ internal static class ClimbController
             shell.Visible=menu||dock!=null||AdvisorService.Current is {Panel.Visible:false};
             var viewport=shell.GetViewportRect().Size;
             var floating=dock==null;
+            if(floatingTabs!=null){floatingTabs.TabsVisible=floating;if(!floating)floatingTabs.CurrentTab=0;}
             var collapsed=floating&&(floatingLayout?.Collapsed??false);
             if(floatingHeader!=null)floatingHeader.Visible=floating;
             if(contentScroll!=null)contentScroll.Visible=!collapsed;
@@ -340,19 +356,23 @@ internal static class ClimbController
         if(ascensionInput!=null)
         {
             refreshingPreferences=true;
-            ascensionInput.MaxValue=SaveManager.Instance.Progress.GetStatsForCharacter(ModelDb.Character<Ironclad>().Id)?.MaxAscension??0;
+            ascensionInput.MaxValue=SaveManager.Instance.Progress.GetStatsForCharacter(SelectedCharacter().Id)?.MaxAscension??0;
             ascensionInput.Value=Math.Min(preferences.Ascension,ascensionInput.MaxValue);
             refreshingPreferences=false;
         }
         enabledButton?.SetPressedNoSignal(Enabled);stopButton?.SetPressedNoSignal(Batch.StopAfterRun);
         characterInput?.Select(Array.IndexOf(ClimbPreferences.Characters,preferences.Character));
-        if(enabledButton!=null)enabledButton.Disabled=!Enabled&&(!compatible||AdvisorService.Current==null&&!preferences.Supported);
+        var multiplayer=InMultiplayerLobby()||AdvisorService.Current is {} activeService&&SnapshotReader.IsMultiplayer(activeService.State);
+        var adviceOnly=multiplayer||AdvisorService.Current is {} current&&!DefectStrategy.Supported(current.Player.Character.GetType().Name);
+        if(enabledButton!=null)enabledButton.Disabled=!Enabled&&(!compatible||adviceOnly||AdvisorService.Current==null&&!preferences.Supported);
+        if(adviceOnly&&solverNotice!=null)solverNotice.Text=multiplayer?MultiplayerAdvice.Notice:DefectPolicy.Scope;
         if(stopButton!=null)stopButton.Disabled=!Enabled;
-        var mode=ClimbPreferences.Mode(Enabled?"Ironclad":preferences.Character,Enabled?ascension:preferences.Ascension);
+        var mode=ClimbPreferences.Mode(preferences.Character,Enabled?ascension:preferences.Ascension);
         var streak=preferences.Get(mode);
         if(label!=null)label.Text=$"{Status}\n所有已结算：{Batch.Results.Count(r=>r.Outcome=="win")} 胜 / {Batch.Results.Count(r=>r.Outcome=="loss")} 负"+
             $"\n完整自动样本：{Batch.Wins} 胜 / {Batch.Losses} 负；人工参与、中途加入或中断 {Batch.Results.Count(r=>!r.FullRun||r.Outcome=="interrupted")} 局"+
-            $"\n{(Enabled?"铁甲战士":characterInput?.GetItemText(characterInput.Selected))} N{(Enabled?ascension:preferences.Ascension)}：当前连胜 {streak.Current} · 历史最高 {streak.Best}";
+            $"\n{(Enabled?(HeroPolicy.Label(preferences.Character)):characterInput?.GetItemText(characterInput.Selected))} N{(Enabled?ascension:preferences.Ascension)}：当前连胜 {streak.Current} · 历史最高 {streak.Best}";
+        if(adviceOnly&&label!=null)label.Text=multiplayer?MultiplayerAdvice.Notice:"此角色尚未开放循环爬塔。手动游玩记录不会计入战士循环胜率。";
         if(shell!=null)UiLocalization.Apply(shell);
     }
 }
@@ -363,5 +383,9 @@ internal static class ClimbReadyPatch {static void Postfix(NGame __instance)=>En
 internal static class ClimbEndedPatch
 {
     static void Prefix(RunManager __instance,out RunState? __state)=>__state=__instance.DebugOnlyGetState();
-    static void Postfix(bool isVictory,RunState? __state)=>Entry.Safe(()=>ClimbController.Ended(__state,isVictory));
+    static void Postfix(bool isVictory,RunState? __state)=>Entry.Safe(()=>
+    {
+        if(AdvisorService.Current is {} service&&ReferenceEquals(service.State,__state))service.Guard(()=>service.RecordRunResult(isVictory));
+        ClimbController.Ended(__state,isVictory);
+    });
 }

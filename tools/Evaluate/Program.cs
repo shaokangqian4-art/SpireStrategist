@@ -23,7 +23,11 @@ foreach (var deck in decks)
     var result = policy.Evaluate(run, choices);
     total++;
     if (result.RecommendedKey == "skip") skips++; else if(result.RecommendedKey == "card") selected++;
-    if (result.RecommendedKey == null || result.Options.Any(o => o.Score is not double score || !double.IsFinite(score))) failures.Add("Unscored:"+card.ClassName);
+    if (MultiplayerAdvice.Ignore(card))
+    {
+        if(result.RecommendedKey!="skip"||result.Options.Single(o=>o.Key=="card") is not {Supported:false,Score:null}) failures.Add("CoopNotIgnored:"+card.ClassName);
+    }
+    else if (result.RecommendedKey == null || result.Options.Any(o => o.Score is not double score || !double.IsFinite(score))) failures.Add("Unscored:"+card.ClassName);
     if (JsonSerializer.Serialize(result,json) != JsonSerializer.Serialize(policy.Evaluate(run, choices),json)) failures.Add("Nondeterministic:"+card.ClassName);
     if (before != JsonSerializer.Serialize(run,json)) failures.Add("Mutation:"+card.ClassName);
     var reversed = policy.Evaluate(run, choices.Reverse().ToArray());

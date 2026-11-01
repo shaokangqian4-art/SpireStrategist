@@ -29,6 +29,7 @@ internal static partial class AutopilotLab
         Check(ClimbController.Batch.Results.Count==1&&ClimbController.Batch.Wins==0,"native duplicate settlement counted once; joined win excluded");
         await Until(()=>AdvisorService.Current is {} next&&next.State!=state&&ClimbController.Batch.Current!=null,"native next random run",60);
         var second=AdvisorService.Current!;
+        Check(second.Player.Character.GetType()==service.Player.Character.GetType(),"next run retains selected character");
         Check(second.State.Rng.StringSeed!=firstSeed&&second.State.AscensionLevel==state.AscensionLevel,"next seed differs and ascension preserved");
         Check(ClimbController.Batch.Current!.FullRun&&second.Autopilot.FullAutomatic,"new native run automatically controlled");
         await Until(()=>second.State.TotalFloor>=1&&second.Player.Creature.CurrentHp>0,"new run enters Neow automatically",45);
@@ -48,7 +49,7 @@ internal static partial class AutopilotLab
         // Use a fresh native state to test immediate cancellation separately from game-over.
         await MegaCrit.Sts2.Core.Nodes.NGame.Instance!.ReturnToMainMenuAfterRun();
         await MegaCrit.Sts2.Core.Nodes.NGame.Instance.StartNewSingleplayerRun(
-            ModelDb.Character<MegaCrit.Sts2.Core.Models.Characters.Ironclad>(),false,ActModel.GetDefaultList(),[],"SS-CLIMB-STOP",GameMode.Standard,state.AscensionLevel);
+            ModelDb.GetById<CharacterModel>(service.Player.Character.Id),false,ActModel.GetDefaultList(),[],"SS-CLIMB-STOP",GameMode.Standard,state.AscensionLevel);
         var third=AdvisorService.Current!;
         await CreatureCmd.SetCurrentHp(third.Player.Creature,third.Player.Creature.MaxHp);
         ClimbController.SetEnabled(true);

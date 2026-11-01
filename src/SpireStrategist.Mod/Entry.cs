@@ -21,7 +21,7 @@ public static class Entry
         try
         {
             new Harmony("local.SpireStrategist").PatchAll(typeof(Entry).Assembly);
-            GD.Print("[SpireStrategist] 0.6.22 loaded: conditional card mechanisms and opt-in continuous climbs; starts in advice mode.");
+            GD.Print("[SpireStrategist] 0.6.55 loaded: conditional card mechanisms and opt-in continuous climbs; starts in advice mode.");
             if(NGame.Instance!=null){ClimbController.Initialize(NGame.Instance);AutopilotLab.Postfix(NGame.Instance);}
         }
         catch (Exception ex) { GD.PrintErr("[SpireStrategist] Initialization failed: " + ex); }
@@ -82,14 +82,14 @@ internal static class RestReadyPatch
 [HarmonyPatch(typeof(NRestSiteRoom), "OnBeforePlayerSelectedRestSiteOption")]
 internal static class RestStartPatch
 {
-    static void Postfix() => AdvisorService.Current?.Guard(() => AdvisorService.Current?.RestStarted());
+    static void Postfix(ulong playerId) => AdvisorService.Current?.Guard(() => AdvisorService.Current?.RestStarted(playerId));
 }
 
 [HarmonyPatch(typeof(NRestSiteRoom), "OnAfterPlayerSelectedRestSiteOption")]
 internal static class RestFinishedPatch
 {
-    static void Postfix(RestSiteOption option, bool success) =>
-        AdvisorService.Current?.Guard(() => AdvisorService.Current?.RestFinished(option, success));
+    static void Postfix(RestSiteOption option, bool success, ulong playerId) =>
+        AdvisorService.Current?.Guard(() => AdvisorService.Current?.RemoteAwareRestFinished(option, success, playerId));
 }
 
 [HarmonyPatch(typeof(NRestSiteRoom), nameof(NRestSiteRoom.EnableOptions))]
@@ -110,4 +110,11 @@ internal static class DigRelicSelectionPatch
 internal static class UpgradeRecordPatch
 {
     static void Postfix(CardModel __instance) => AdvisorService.Current?.Guard(() => AdvisorService.Current?.CardUpgraded(__instance));
+}
+
+[HarmonyPatch(typeof(MegaCrit.Sts2.Core.Nodes.Events.NEventOptionButton), "OnRelease")]
+internal static class EventAdviceChoicePatch
+{
+    static void Prefix(MegaCrit.Sts2.Core.Nodes.Events.NEventOptionButton __instance) =>
+        AdvisorService.Current?.Guard(()=>AdvisorService.Current.ObserveEventChoice(__instance));
 }
