@@ -118,6 +118,7 @@ internal static class RouteAdapter
             CampEntryAlreadyArmed=(Find("VenerableTeaSet") as VenerableTeaSet)?.GainEnergyInNextCombat==true
                 ||(Find("FakeVenerableTeaSet") as FakeVenerableTeaSet)?.GainEnergyInNextCombat==true,
             CampHealExtra=CampMechanics.HealExtra(service,campState),
+            CampHumidifierGain=Var("StoneHumidifier","MaxHp"),
             CampHealMaxHpDelta=(int)Var("StoneHumidifier","MaxHp")-(service.State.Modifiers.Any(m=>m.GetType().Name=="NightTerrors")?5:0),
             CampHealToFull=service.State.Modifiers.Any(m=>m.GetType().Name=="NightTerrors"),
             NormalGoldMin=normal.Length==0?10:normal.Min(e=>e.MinGoldReward),NormalGoldMax=normal.Length==0?20:normal.Max(e=>e.MaxGoldReward),

@@ -296,11 +296,12 @@ internal sealed class AdvisorService
                 var removal=slots.FirstOrDefault(x=>x.Entry is MegaCrit.Sts2.Core.Entities.Merchant.MerchantCardRemovalEntry);
                 var relics=slots.Where(x=>x.Entry is MegaCrit.Sts2.Core.Entities.Merchant.MerchantRelicEntry {Model:not null})
                     .Select(x=>{var r=(MegaCrit.Sts2.Core.Entities.Merchant.MerchantRelicEntry)x.Entry;return new ShopRelic(x.GetInstanceId().ToString(),r.Model!.Id.Entry,r.Model.Title.GetFormattedText(),r.Cost);}).ToArray();
-                var priority=PriorityShopPolicy.Evaluate(snapshot,relics,stock,autopilot.ShopBoughtCards,removal?.Entry.Cost);
+                var relicReserve=State.CurrentMapPoint is {} point?ShopBudget.Reserve(snapshot,RouteAdapter.Nodes(State),RouteAdapter.Key(point),ClimbController.RelicReserve):ClimbController.RelicReserve;
+                var priority=PriorityShopPolicy.Evaluate(snapshot,relics,stock,autopilot.ShopBoughtCards,removal?.Entry.Cost,relicReserve);
                 if(priority!=null)
                 {
-                    var c=new ShopChoice(priority.Card?.Key??priority.Relic.Key,priority.Card?.Card.Name??priority.Relic.Name,
-                        priority.Card!=null?"card":"relic",priority.Card?.Price??priority.Relic.Price,100,
+                    var c=new ShopChoice(priority.FirstCard?.Key??priority.Relic.Key,priority.FirstCard?.Card.Name??priority.Relic.Name,
+                        priority.FirstCard!=null?"card":"relic",priority.FirstCard?.Price??priority.Relic.Price,100,
                         [priority.Reason,$"计划总价 {priority.TotalPrice}，现款 {snapshot.Gold}"]);
                     var ordinary=ShopPolicy.Evaluate(snapshot,stock,removal?.Entry.Cost,autopilot.ShopArrivalGold(snapshot.Gold),autopilot.ShopBoughtCards);
                     ShowShop(snapshot,ordinary with{Recommendation=c,Choices=[c,..ordinary.Choices.Where(x=>x.Key!=c.Key)],Notes=[priority.Reason,..ordinary.Notes]});

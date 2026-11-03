@@ -1,23 +1,64 @@
 {
   "purpose": "Paired native combat pilot, not full runs. Seeds 101-102 exploration; 103 untouched holdout. Compare each addition with leave. No parameter fit on holdout.",
   "deck": [
-    {"cardId":"STRIKE_IRONCLAD","count":2},
-    {"cardId":"DEFEND_IRONCLAD","count":3},
-    {"cardId":"BASH","upgradeLevels":1},
-    {"cardId":"SHRUG_IT_OFF"},
-    {"cardId":"POMMEL_STRIKE","upgradeLevels":1},
-    {"cardId":"TWIN_STRIKE"},
-    {"cardId":"INFLAME"},
-    {"cardId":"BATTLE_TRANCE"},
-    {"cardId":"TRUE_GRIT","upgradeLevels":1},
-    {"cardId":"BURNING_PACT"},
-    {"cardId":"FEEL_NO_PAIN"},
-    {"cardId":"ASCENDERS_BANE"}
+    {
+      "cardId": "STRIKE_IRONCLAD",
+      "count": 2
+    },
+    {
+      "cardId": "DEFEND_IRONCLAD",
+      "count": 3
+    },
+    {
+      "cardId": "BASH",
+      "upgradeLevels": 1
+    },
+    {
+      "cardId": "SHRUG_IT_OFF"
+    },
+    {
+      "cardId": "POMMEL_STRIKE",
+      "upgradeLevels": 1
+    },
+    {
+      "cardId": "TWIN_STRIKE"
+    },
+    {
+      "cardId": "INFLAME"
+    },
+    {
+      "cardId": "BATTLE_TRANCE"
+    },
+    {
+      "cardId": "TRUE_GRIT",
+      "upgradeLevels": 1
+    },
+    {
+      "cardId": "BURNING_PACT"
+    },
+    {
+      "cardId": "FEEL_NO_PAIN"
+    },
+    {
+      "cardId": "ASCENDERS_BANE"
+    }
   ],
   "variants": {
     "leave": [],
-    "recover_strike": [{"cardId":"STRIKE_IRONCLAD"}],
-    "add_stoke": [{"cardId":"STOKE"}],
-    "duplicate_trance": [{"cardId":"BATTLE_TRANCE"}]
+    "recover_strike": [
+      {
+        "cardId": "STRIKE_IRONCLAD"
+      }
+    ],
+    "add_stoke": [
+      {
+        "cardId": "STOKE"
+      }
+    ],
+    "duplicate_trance": [
+      {
+        "cardId": "BATTLE_TRANCE"
+      }
+    ]
   }
 }

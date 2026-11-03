@@ -12,7 +12,7 @@ using System.Text.Encodings.Web;
 
 AssemblyLoadContext.Default.Resolving += (context, name) =>
 {
-    var file = Path.Combine(Environment.GetEnvironmentVariable("STS2_GAME_DATA") ?? AppContext.BaseDirectory, name.Name + ".dll");
+    var file = Path.Combine(@"D:\steam\steamapps\common\Slay the Spire 2\data_sts2_windows_x86_64", name.Name + ".dll");
     return File.Exists(file) ? context.LoadFromAssemblyPath(file) : null;
 };
 return Lab.Run(args);

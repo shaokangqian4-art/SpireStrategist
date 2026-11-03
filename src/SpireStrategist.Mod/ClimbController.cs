@@ -308,7 +308,7 @@ internal static class ClimbController
     private static void Write(string type,object data)
     {
         journal?.Write(type,data);
-        journal?.Latest("summary",new{version="0.6.55",Batch.Enabled,Batch.StopAfterRun,Batch.Current,
+        journal?.Latest("summary",new{version="0.6.72",Batch.Enabled,Batch.StopAfterRun,Batch.Current,
             Batch.Wins,Batch.Losses,completed=Batch.Wins+Batch.Losses,
             winRate=Batch.Wins+Batch.Losses==0?(double?)null:Batch.Wins/(double)(Batch.Wins+Batch.Losses),
             results=Batch.Results,streaks=preferences.Streaks,notes="从开局全程接管的自然结算及求解器死亡路线主动放弃计入胜负；主动放弃在 reason 中单列，中途加入、人工干预和中断另列。连胜按角色/难度，只计完整自动对局。"});

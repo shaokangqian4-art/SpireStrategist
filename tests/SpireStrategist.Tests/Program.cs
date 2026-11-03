@@ -1998,6 +1998,10 @@ Test("0648 bridge sees beyond another valuable card to a basic removal",()=>
     Check(BridgePolicy.Removal(s,basic)>BridgePolicy.BestContinuation(s,[new(basic,1,3)])!.Score,"stop immediately when a basic target already suffices");
 });
 HeroTests.Register(tests);
+Regent0670Tests.Register(tests);
+Regent0671Tests.Register(tests);
+Review0672Tests.Register(tests);
+RegentDirectionTests.Register(tests);
 ItemModelTests.Register(tests);
 SilentTests.Register(tests);
 SilentIntegrationTests.Register(tests);

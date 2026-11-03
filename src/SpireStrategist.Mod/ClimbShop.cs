@@ -41,19 +41,20 @@ internal sealed partial class PartialAutopilot
             .Select(s=>{var e=(MerchantRelicEntry)s.Entry;return new ShopRelic(s.GetInstanceId().ToString(),e.Model!.Id.Entry,e.Model.Title.GetFormattedText(),e.Cost);}).ToArray();
         var cards=slots.Where(s=>s.Entry is MerchantCardEntry {CreationResult:not null})
             .Select(s=>new ShopCard(s.GetInstanceId().ToString(),SnapshotReader.ReadCard(((MerchantCardEntry)s.Entry).CreationResult!.Card),s.Entry.Cost)).ToArray();
+        var reserve=service.State.CurrentMapPoint is {} point?ShopBudget.Reserve(state,RouteAdapter.Nodes(service.State),RouteAdapter.Key(point),ClimbController.RelicReserve):ClimbController.RelicReserve;
         var plan=PriorityShopPolicy.Evaluate(state,relics,cards,shopBoughtCards,
-            slots.FirstOrDefault(s=>s.Entry is MerchantCardRemovalEntry)?.Entry.Cost);
+            slots.FirstOrDefault(s=>s.Entry is MerchantCardRemovalEntry)?.Entry.Cost,reserve);
         if(plan==null)return false;
-        var key=plan.Card?.Key??plan.Relic.Key;
+        var key=plan.FirstCard?.Key??plan.Relic.Key;
         var slot=slots.Single(s=>s.GetInstanceId().ToString()==key);
-        var choice=new ShopChoice(key,plan.Card?.Card.Name??plan.Relic.Name,plan.Card!=null?"card":"relic",
+        var choice=new ShopChoice(key,plan.FirstCard?.Card.Name??plan.Relic.Name,plan.FirstCard!=null?"card":"relic",
             slot.Entry.Cost,100,[plan.Reason,$"本次计划总价 {plan.TotalPrice}，现款 {state.Gold}"]);
         service.ShowShop(state,new(choice,[choice],0,[plan.Reason,"优先清单执行后重新评估删牌、买牌；随机遗物仍保留预算。"]));
         Wait($"接管中 · 优先购买 {choice.Name}（{choice.Price} 金币）");
         if(Claim($"priority-shop:{room.GetInstanceId()}:{key}:{state.Gold}:{choice.Price}",slot.Entry.EnoughGold,8000))
         {
             service.RecordAuto("shop_priority",new{state,plan,choice});
-            Track(()=>BuyShopSlot(slot,plan.Card!=null));
+            Track(()=>BuyShopSlot(slot,plan.FirstCard!=null));
         }
         return true;
     }

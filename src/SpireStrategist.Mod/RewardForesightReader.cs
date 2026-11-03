@@ -44,6 +44,8 @@ internal static class RewardForesightReader
         foreach(var model in models)
         {
             if(model.GetType().Assembly!=native)return "辉眼暂不可用：存在未适配的第三方卡牌或遗物。";
+            // The one-shot reward modifier has already been consumed on the live reward.
+            if(model is MegaCrit.Sts2.Core.Models.Relics.SilkenTress {IsUsedUp:true})continue;
             foreach(var method in model.GetType().GetMethods())
                 if(method.DeclaringType==model.GetType()&&method.IsVirtual&&
                     (method.Name.Contains("Merchant")||method.Name.Contains("CardReward")||method.Name.Contains("ModifyRewards")||

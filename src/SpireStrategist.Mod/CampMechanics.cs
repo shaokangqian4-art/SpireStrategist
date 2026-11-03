@@ -12,7 +12,7 @@ internal static class CampMechanics
     {
         var v=new StrategicValue(s);
         var value=0d;
-        if(service.Player.GetRelic<StoneHumidifier>() is {} stone)value+=v.MaxHp((double)stone.DynamicVars.MaxHp.BaseValue);
+        if(service.Player.GetRelic<StoneHumidifier>() is {} stone)value+=CampAndMushroomPolicy.HumidifierValue(s,(double)stone.DynamicVars.MaxHp.BaseValue);
         if(service.Player.GetRelic<DreamCatcher>()!=null)value+=2; // optional unknown card, not a guaranteed acquisition
         if(service.Player.GetRelic<TinyMailbox>()!=null&&service.Player.GetRelic<Sozu>()==null)
             value+=Math.Min(2,s.PotionSlots.Count(p=>p==null))*2;

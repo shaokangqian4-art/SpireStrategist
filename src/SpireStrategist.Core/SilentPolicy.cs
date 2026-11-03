@@ -167,6 +167,7 @@ public static class SilentPolicy
         else Add("重复份数递减",-p.Duplicate*n-.45*n*n);
         if(name=="KnifeTrap"&&n>0)Add("已有可反复回放的刀刃陷阱，重复二费终端及敲牌需求",-8*n);
         if(c.UpgradeLevel>0&&!SilentMechanics.RedundantRetainUpgrade(s,c))Add("已升级的实际收益",p.UpgradeDelta);
+        if(c.Enchantment=="ENCHANTMENT.GLAM")Add("华彩：每场首次打出重放一次",NativeEnchantments.Glam(c));
         if(!string.IsNullOrEmpty(c.Enchantment))
         {
             var delta=c.Enchantment.Split('.').Last() switch{

@@ -89,7 +89,7 @@ public static class RelicValue
             "VERY_HOT_COCOA"=>new(12+Math.Min(8,s.Deck.Count(c=>c.Cost>=2))),
             "YUMMY_COOKIE"=>new(v.UpgradeBest(4),"upgrade"),
             "BIIIG_HUG"=>new(v.RemoveBest(4)-(s.Deck.Length<16?16:7)+Math.Min(5,X),"remove"),
-            "STORYBOOK"=>new(8-(s.MaxHp<40?15:0)),"TOASTY_MITTENS"=>new(8+v.Multi*2+Math.Min(6,X)),
+            "STORYBOOK"=>StorybookPolicy.Evaluate(s),"TOASTY_MITTENS"=>new(8+v.Multi*2+Math.Min(6,X)),
             "GOLDEN_COMPASS"=>new(7,"","替换地图后重新读真实节点，不按旧地图兑现收益。"),
             "PUMPKIN_CANDLE"=>new(E*.65),"TOY_BOX"=>new(18),
             "SEAL_OF_GOLD"=>new(E*Math.Clamp(s.Gold/180d,0,1)-v.Gold(Math.Min(s.Gold,60))),

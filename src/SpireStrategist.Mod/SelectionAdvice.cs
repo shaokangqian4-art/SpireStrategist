@@ -13,6 +13,17 @@ internal static class SelectionAdvice
 {
     internal static SelectionPlan? Read(AdvisorService service,Control screen,string purpose)
     {
+        if(screen is NChooseACardSelectionScreen choose)
+        {
+            var holders=GameActions.Descendants<MegaCrit.Sts2.Core.Nodes.Cards.Holders.NGridCardHolder>(choose).Where(h=>h.IsVisibleInTree()).ToArray();
+            if(holders.Length==0||holders.Any(h=>h.CardModel.Owner!=service.Player))return null;
+            var state=SnapshotReader.Read(service.State,service.Player);
+            var choiceOptions=holders.Select((h,i)=>new DecisionOption(i.ToString(),h.CardModel.Title,"card",Card:SnapshotReader.ReadCard(h.CardModel))).ToList();
+            if(GameActions.Field(choose,"_canSkip") is true)choiceOptions.Add(new("skip","跳过","skip"));
+            var evaluation=new Policy().Evaluate(state,choiceOptions);
+            var target=int.TryParse(evaluation.RecommendedKey,out var index)?new[]{holders[index].CardModel}:Array.Empty<CardModel>();
+            return new(choose,target,state,evaluation);
+        }
         if(screen is not (NDeckUpgradeSelectScreen or NDeckEnchantSelectScreen or NDeckTransformSelectScreen or NDeckCardSelectScreen or NSimpleCardSelectScreen))return null;
         if(GameActions.Field(screen,"_cards") is not IEnumerable<CardModel> source ||
             GameActions.Field(screen,"_prefs") is not CardSelectorPrefs prefs)return null;

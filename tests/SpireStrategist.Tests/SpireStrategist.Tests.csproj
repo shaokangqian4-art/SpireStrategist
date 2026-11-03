@@ -3,4 +3,5 @@
   <ItemGroup><ProjectReference Include="../../src/SpireStrategist.Core/SpireStrategist.Core.csproj" /></ItemGroup>
   <ItemGroup><None Update="Fixtures/*.json" CopyToOutputDirectory="PreserveNewest" /></ItemGroup>
   <ItemGroup><None Include="../../data/native-items-v0.111.0.json" Link="Fixtures/native-items.json" CopyToOutputDirectory="PreserveNewest" /></ItemGroup>
+  <ItemGroup><None Include="../../data/regent-tier-review-20261102.json" Link="Fixtures/regent-tier-review.json" CopyToOutputDirectory="PreserveNewest" /></ItemGroup>
 </Project>

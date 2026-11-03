@@ -21,12 +21,14 @@ public static class HeroStrategy
         if(Basic(c))return 3;
         var a=HeroPolicy.Analyze(s);var value=2+3*p.UpgradeDelta;
         bool T(string t)=>p.Tags.Contains(t);
-        if(T("sword_payoff")&&a.Forge==0||T("soul_payoff")&&a.Souls==0||T("ethereal_payoff")&&a.Ethereal<2||T("doom_payoff")&&a.Doom<8)value*=.45;
+        if(T("sword_payoff")&&a.Forge==0||T("soul_payoff")&&a.Souls==0||T("ethereal_payoff")&&NecrobinderMechanics.PayoffSupply(s,c)<2||T("doom_payoff")&&a.Doom<8)value*=.45;
         if(c.ClassName is "SwordSage" or "Demesne" or "SentryMode" or "Pagestorm" or "MonarchsGaze")value+=2;
         if(T("forge")&&a.Primary=="铸剑"||T("star_source")&&a.StarDemand>a.Stars||T("osty_engine")&&a.OstyAttacks>=3||T("doom_engine")&&a.Doom>=15)value+=2;
         if(T("basic"))value=Math.Min(value,5); // Resource starters are not automatic top smith targets.
         if(s.Deck.Any(d=>d.ClassName==c.ClassName&&d.UpgradeLevel>0))value*=.8;
-        return Math.Clamp(value,0,19);
+        if(s.Character=="Regent"&&c.Type=="Attack"&&s.Relics.Any(r=>r.Split('.').Last()=="MINIATURE_CANNON"))
+            value+=Math.Min(6,RegentAttackLinks.Hits(s,c)*1.2);
+        return Math.Clamp(UpgradeReview.Refine(s,c,value),0,19);
     }
     public static double Remove(RunSnapshot s,CardSnapshot c)
     {

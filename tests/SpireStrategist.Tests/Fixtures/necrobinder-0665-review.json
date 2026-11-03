@@ -1,0 +1,2380 @@
+{
+  "cards": [
+    {
+      "seed": "5EB864490C00",
+      "state": {
+        "character": "Necrobinder",
+        "playerCount": 1,
+        "multiplayerSession": false,
+        "isMultiplayer": false,
+        "hp": 23,
+        "maxHp": 66,
+        "hpAfterPendingAncient": 57,
+        "gold": 164,
+        "energy": 3,
+        "combatSolverAvailable": true,
+        "act": 1,
+        "floor": 17,
+        "ascension": 10,
+        "room": "CombatRoom",
+        "deck": [
+          {
+            "id": "CARD.STRIKE_NECROBINDER",
+            "className": "StrikeNecrobinder",
+            "name": "打击",
+            "type": "Attack",
+            "rarity": "Basic",
+            "description": "",
+            "cost": 1,
+            "costsX": false,
+            "starCost": -1,
+            "costsStarX": false,
+            "upgradeLevel": 0,
+            "canUpgrade": true,
+            "modified": false,
+            "multiplayerOnly": false,
+            "enchantment": null,
+            "enchantmentAmount": 0,
+            "affliction": null,
+            "keywords": [],
+            "variables": {
+              "Damage": 6
+            }
+          },
+          {
+            "id": "CARD.STRIKE_NECROBINDER",
+            "className": "StrikeNecrobinder",
+            "name": "打击",
+            "type": "Attack",
+            "rarity": "Basic",
+            "description": "",
+            "cost": 1,
+            "costsX": false,
+            "starCost": -1,
+            "costsStarX": false,
+            "upgradeLevel": 0,
+            "canUpgrade": true,
+            "modified": false,
+            "multiplayerOnly": false,
+            "enchantment": null,
+            "enchantmentAmount": 0,
+            "affliction": null,
+            "keywords": [],
+            "variables": {
+              "Damage": 6
+            }
+          },
+          {
+            "id": "CARD.STRIKE_NECROBINDER",
+            "className": "StrikeNecrobinder",
+            "name": "打击",
+            "type": "Attack",
+            "rarity": "Basic",
+            "description": "",
+            "cost": 1,
+            "costsX": false,
+            "starCost": -1,
+            "costsStarX": false,
+            "upgradeLevel": 0,
+            "canUpgrade": true,
+            "modified": false,
+            "multiplayerOnly": false,
+            "enchantment": null,
+            "enchantmentAmount": 0,
+            "affliction": null,
+            "keywords": [],
+            "variables": {
+              "Damage": 6
+            }
+          },
+          {
+            "id": "CARD.DEFEND_NECROBINDER",
+            "className": "DefendNecrobinder",
+            "name": "防御",
+            "type": "Skill",
+            "rarity": "Basic",
+            "description": "",
+            "cost": 1,
+            "costsX": false,
+            "starCost": -1,
+            "costsStarX": false,
+            "upgradeLevel": 0,
+            "canUpgrade": true,
+            "modified": false,
+            "multiplayerOnly": false,
+            "enchantment": null,
+            "enchantmentAmount": 0,
+            "affliction": null,
+            "keywords": [],
+            "variables": {
+              "Block": 5
+            }
+          },
+          {
+            "id": "CARD.DEFEND_NECROBINDER",
+            "className": "DefendNecrobinder",
+            "name": "防御",
+            "type": "Skill",
+            "rarity": "Basic",
+            "description": "",
+            "cost": 1,
+            "costsX": false,
+            "starCost": -1,
+            "costsStarX": false,
+            "upgradeLevel": 0,
+            "canUpgrade": true,
+            "modified": false,
+            "multiplayerOnly": false,
+            "enchantment": null,
+            "enchantmentAmount": 0,
+            "affliction": null,
+            "keywords": [],
+            "variables": {
+              "Block": 5
+            }
+          },
+          {
+            "id": "CARD.DEFEND_NECROBINDER",
+            "className": "DefendNecrobinder",
+            "name": "防御",
+            "type": "Skill",
+            "rarity": "Basic",
+            "description": "",
+            "cost": 1,
+            "costsX": false,
+            "starCost": -1,
+            "costsStarX": false,
+            "upgradeLevel": 0,
+            "canUpgrade": true,
+            "modified": false,
+            "multiplayerOnly": false,
+            "enchantment": null,
+            "enchantmentAmount": 0,
+            "affliction": null,
+            "keywords": [],
+            "variables": {
+              "Block": 5
+            }
+          },
+          {
+            "id": "CARD.BODYGUARD",
+            "className": "Bodyguard",
+            "name": "护卫+",
+            "type": "Skill",
+            "rarity": "Basic",
+            "description": "",
+            "cost": 1,
+            "costsX": false,
+            "starCost": -1,
+            "costsStarX": false,
+            "upgradeLevel": 1,
+            "canUpgrade": false,
+            "modified": false,
+            "multiplayerOnly": false,
+            "enchantment": null,
+            "enchantmentAmount": 0,
+            "affliction": null,
+            "keywords": [],
+            "variables": {
+              "Summon": 7
+            }
+          },
+          {
+            "id": "CARD.UNLEASH",
+            "className": "Unleash",
+            "name": "出击",
+            "type": "Attack",
+            "rarity": "Basic",
+            "description": "",
+            "cost": 1,
+            "costsX": false,
+            "starCost": -1,
+            "costsStarX": false,
+            "upgradeLevel": 0,
+            "canUpgrade": true,
+            "modified": false,
+            "multiplayerOnly": false,
+            "enchantment": null,
+            "enchantmentAmount": 0,
+            "affliction": null,
+            "keywords": [],
+            "variables": {
+              "CalculatedDamage": 6,
+              "CalculationBase": 6,
+              "ExtraDamage": 1
+            }
+          },
+          {
+            "id": "CARD.ASCENDERS_BANE",
+            "className": "AscendersBane",
+            "name": "进阶之灾",
+            "type": "Curse",
+            "rarity": "Curse",
+            "description": "",
+            "cost": -1,
+            "costsX": false,
+            "starCost": -1,
+            "costsStarX": false,
+            "upgradeLevel": 0,
+            "canUpgrade": false,
+            "modified": false,
+            "multiplayerOnly": false,
+            "enchantment": null,
+            "enchantmentAmount": 0,
+            "affliction": null,
+            "keywords": [
+              "Eternal",
+              "Ethereal",
+              "Unplayable"
+            ],
+            "variables": {}
+          },
+          {
+            "id": "CARD.POKE",
+            "className": "Poke",
+            "name": "戳击",
+            "type": "Attack",
+            "rarity": "Common",
+            "description": "",
+            "cost": 0,
+            "costsX": false,
+            "starCost": -1,
+            "costsStarX": false,
+            "upgradeLevel": 0,
+            "canUpgrade": true,
+            "modified": false,
+            "multiplayerOnly": false,
+            "enchantment": null,
+            "enchantmentAmount": 0,
+            "affliction": null,
+            "keywords": [],
+            "variables": {
+              "OstyDamage": 6
+            }
+          },
+          {
+            "id": "CARD.PUTREFY",
+            "className": "Putrefy",
+            "name": "腐败",
+            "type": "Skill",
+            "rarity": "Uncommon",
+            "description": "",
+            "cost": 1,
+            "costsX": false,
+            "starCost": -1,
+            "costsStarX": false,
+            "upgradeLevel": 0,
+            "canUpgrade": true,
+            "modified": false,
+            "multiplayerOnly": false,
+            "enchantment": null,
+            "enchantmentAmount": 0,
+            "affliction": null,
+            "keywords": [
+              "Exhaust"
+            ],
+            "variables": {
+              "Power": 2
+            }
+          },
+          {
+            "id": "CARD.CLEANSE",
+            "className": "Cleanse",
+            "name": "洁净+",
+            "type": "Skill",
+            "rarity": "Uncommon",
+            "description": "",
+            "cost": 1,
+            "costsX": false,
+            "starCost": -1,
+            "costsStarX": false,
+            "upgradeLevel": 1,
+            "canUpgrade": false,
+            "modified": false,
+            "multiplayerOnly": false,
+            "enchantment": null,
+            "enchantmentAmount": 0,
+            "affliction": null,
+            "keywords": [],
+            "variables": {
+              "Summon": 5
+            }
+          },
+          {
+            "id": "CARD.NEGATIVE_PULSE",
+            "className": "NegativePulse",
+            "name": "负能量脉冲+",
+            "type": "Skill",
+            "rarity": "Common",
+            "description": "",
+            "cost": 1,
+            "costsX": false,
+            "starCost": -1,
+            "costsStarX": false,
+            "upgradeLevel": 1,
+            "canUpgrade": false,
+            "modified": false,
+            "multiplayerOnly": false,
+            "enchantment": null,
+            "enchantmentAmount": 0,
+            "affliction": null,
+            "keywords": [],
+            "variables": {
+              "Block": 6,
+              "DoomPower": 11
+            }
+          },
+          {
+            "id": "CARD.SEANCE",
+            "className": "Seance",
+            "name": "降灵+",
+            "type": "Skill",
+            "rarity": "Rare",
+            "description": "",
+            "cost": 0,
+            "costsX": false,
+            "starCost": -1,
+            "costsStarX": false,
+            "upgradeLevel": 1,
+            "canUpgrade": false,
+            "modified": false,
+            "multiplayerOnly": false,
+            "enchantment": null,
+            "enchantmentAmount": 0,
+            "affliction": null,
+            "keywords": [
+              "Ethereal"
+            ],
+            "variables": {
+              "Cards": 1
+            }
+          },
+          {
+            "id": "CARD.DRAIN_POWER",
+            "className": "DrainPower",
+            "name": "能量汲取",
+            "type": "Attack",
+            "rarity": "Common",
+            "description": "",
+            "cost": 1,
+            "costsX": false,
+            "starCost": -1,
+            "costsStarX": false,
+            "upgradeLevel": 0,
+            "canUpgrade": true,
+            "modified": false,
+            "multiplayerOnly": false,
+            "enchantment": null,
+            "enchantmentAmount": 0,
+            "affliction": null,
+            "keywords": [],
+            "variables": {
+              "Cards": 2,
+              "Damage": 10
+            }
+          },
+          {
+            "id": "CARD.COUNTDOWN",
+            "className": "Countdown",
+            "name": "倒数计时+",
+            "type": "Power",
+            "rarity": "Uncommon",
+            "description": "",
+            "cost": 1,
+            "costsX": false,
+            "starCost": -1,
+            "costsStarX": false,
+            "upgradeLevel": 1,
+            "canUpgrade": false,
+            "modified": false,
+            "multiplayerOnly": false,
+            "enchantment": null,
+            "enchantmentAmount": 0,
+            "affliction": null,
+            "keywords": [],
+            "variables": {
+              "CountdownPower": 9
+            }
+          },
+          {
+            "id": "CARD.RATTLE",
+            "className": "Rattle",
+            "name": "猛晃",
+            "type": "Attack",
+            "rarity": "Uncommon",
+            "description": "",
+            "cost": 1,
+            "costsX": false,
+            "starCost": -1,
+            "costsStarX": false,
+            "upgradeLevel": 0,
+            "canUpgrade": true,
+            "modified": false,
+            "multiplayerOnly": false,
+            "enchantment": null,
+            "enchantmentAmount": 0,
+            "affliction": null,
+            "keywords": [],
+            "variables": {
+              "CalculatedHits": 0,
+              "CalculationBase": 0,
+              "CalculationExtra": 1,
+              "OstyDamage": 7
+            }
+          },
+          {
+            "id": "CARD.SCOURGE",
+            "className": "Scourge",
+            "name": "鞭打",
+            "type": "Skill",
+            "rarity": "Common",
+            "description": "",
+            "cost": 1,
+            "costsX": false,
+            "starCost": -1,
+            "costsStarX": false,
+            "upgradeLevel": 0,
+            "canUpgrade": true,
+            "modified": false,
+            "multiplayerOnly": false,
+            "enchantment": null,
+            "enchantmentAmount": 0,
+            "affliction": null,
+            "keywords": [],
+            "variables": {
+              "Cards": 1,
+              "DoomPower": 13
+            }
+          },
+          {
+            "id": "CARD.SCULPTING_STRIKE",
+            "className": "SculptingStrike",
+            "name": "雕琢打击",
+            "type": "Attack",
+            "rarity": "Common",
+            "description": "",
+            "cost": 1,
+            "costsX": false,
+            "starCost": -1,
+            "costsStarX": false,
+            "upgradeLevel": 0,
+            "canUpgrade": true,
+            "modified": false,
+            "multiplayerOnly": false,
+            "enchantment": null,
+            "enchantmentAmount": 0,
+            "affliction": null,
+            "keywords": [],
+            "variables": {
+              "Damage": 9
+            }
+          }
+        ],
+        "relics": [
+          "RELIC.BOUND_PHYLACTERY",
+          "RELIC.PHIAL_HOLSTER",
+          "RELIC.WAR_PAINT",
+          "RELIC.FUNERARY_MASK"
+        ],
+        "giryaLifts": null,
+        "potionSlots": [
+          "POTION.RADIANT_TINCTURE",
+          "POTION.EXPLOSIVE_AMPOULE",
+          "POTION.RADIANT_TINCTURE"
+        ],
+        "nextNodeTypes": [],
+        "foresight": {
+          "fingerprint": "082F6C8C3331011AD26FE169A6AB0695C359C1ED0E91D093C22EEEC26212D639",
+          "sourceUnchanged": true,
+          "branches": [],
+          "status": "辉眼：当前幕内没有可预览的后续战斗奖励。"
+        },
+        "map": {
+          "totalActs": 3,
+          "rows": 16,
+          "currentRow": 16,
+          "bossRow": 16,
+          "mapType": "MegaCrit.Sts2.Core.Map.StandardActMap",
+          "longMap": false,
+          "extraLayers": 0,
+          "extraActs": 0,
+          "contentAct": 1,
+          "enemyHpScale": 1,
+          "enemyDamageScale": 1,
+          "combatGoldScale": 1,
+          "error": null
+        },
+        "recentBattles": [
+          {
+            "act": 1,
+            "room": "Monster",
+            "encounter": "ENCOUNTER.FOGMOG_NORMAL",
+            "damageTaken": 0,
+            "healing": 0,
+            "potionsUsed": 0,
+            "maxHp": 66
+          },
+          {
+            "act": 1,
+            "room": "Monster",
+            "encounter": "ENCOUNTER.INKLETS_NORMAL",
+            "damageTaken": 7,
+            "healing": 0,
+            "potionsUsed": 0,
+            "maxHp": 66
+          },
+          {
+            "act": 1,
+            "room": "Monster",
+            "encounter": "ENCOUNTER.RUBY_RAIDERS_NORMAL",
+            "damageTaken": 14,
+            "healing": 0,
+            "potionsUsed": 0,
+            "maxHp": 66
+          },
+          {
+            "act": 1,
+            "room": "Elite",
+            "encounter": "ENCOUNTER.BYRDONIS_ELITE",
+            "damageTaken": 7,
+            "healing": 0,
+            "potionsUsed": 1,
+            "maxHp": 66
+          }
+        ],
+        "commerce": {
+          "reachableShops": 0,
+          "nearestShopDistance": null,
+          "reachableUnknowns": 0,
+          "futureActs": 2
+        },
+        "campRouteRisk": {}
+      },
+      "options": [
+        {
+          "key": "card:0",
+          "name": "末日降临",
+          "kind": "card",
+          "enabled": true,
+          "card": {
+            "id": "CARD.END_OF_DAYS",
+            "className": "EndOfDays",
+            "name": "末日降临",
+            "type": "Skill",
+            "rarity": "Rare",
+            "description": "",
+            "cost": 3,
+            "costsX": false,
+            "starCost": -1,
+            "costsStarX": false,
+            "upgradeLevel": 0,
+            "canUpgrade": true,
+            "modified": false,
+            "multiplayerOnly": false,
+            "enchantment": null,
+            "enchantmentAmount": 0,
+            "affliction": null,
+            "keywords": [],
+            "variables": {
+              "DoomPower": 29
+            }
+          },
+          "healAmount": 0,
+          "smithCount": 1,
+          "effectValue": null
+        },
+        {
+          "key": "card:1",
+          "name": "重构",
+          "kind": "card",
+          "enabled": true,
+          "card": {
+            "id": "CARD.TRANSFIGURE",
+            "className": "Transfigure",
+            "name": "重构",
+            "type": "Skill",
+            "rarity": "Rare",
+            "description": "",
+            "cost": 1,
+            "costsX": false,
+            "starCost": -1,
+            "costsStarX": false,
+            "upgradeLevel": 0,
+            "canUpgrade": true,
+            "modified": false,
+            "multiplayerOnly": false,
+            "enchantment": null,
+            "enchantmentAmount": 0,
+            "affliction": null,
+            "keywords": [
+              "Exhaust"
+            ],
+            "variables": {
+              "Energy": 1
+            }
+          },
+          "healAmount": 0,
+          "smithCount": 1,
+          "effectValue": null
+        },
+        {
+          "key": "card:2",
+          "name": "灰烬之灵",
+          "kind": "card",
+          "enabled": true,
+          "card": {
+            "id": "CARD.SPIRIT_OF_ASH",
+            "className": "SpiritOfAsh",
+            "name": "灰烬之灵",
+            "type": "Power",
+            "rarity": "Rare",
+            "description": "",
+            "cost": 1,
+            "costsX": false,
+            "starCost": -1,
+            "costsStarX": false,
+            "upgradeLevel": 0,
+            "canUpgrade": true,
+            "modified": false,
+            "multiplayerOnly": false,
+            "enchantment": null,
+            "enchantmentAmount": 0,
+            "affliction": null,
+            "keywords": [],
+            "variables": {
+              "BlockOnExhaust": 4
+            }
+          },
+          "healAmount": 0,
+          "smithCount": 1,
+          "effectValue": null
+        },
+        {
+          "key": "alternative:0",
+          "name": "跳过",
+          "kind": "skip",
+          "enabled": true,
+          "card": null,
+          "healAmount": 0,
+          "smithCount": 1,
+          "effectValue": null
+        }
+      ],
+      "expectedCard": "EndOfDays",
+      "originalEvaluation": {
+        "policyVersion": "necrobinder-draft-0.1",
+        "recommendedKey": "card:2",
+        "options": [
+          {
+            "key": "card:0",
+            "name": "末日降临",
+            "supported": true,
+            "enabled": true,
+            "score": 4.515,
+            "parts": [
+              {
+                "reason": "基础机制先验（未实战校准）",
+                "value": 5.5
+              },
+              {
+                "reason": "同版本单人A10同稀有度统计修正（有限幅度）",
+                "value": -0.138
+              },
+              {
+                "reason": "占用一次抽牌的基准成本",
+                "value": -2.5
+              },
+              {
+                "reason": "灾厄配套按实际施加能力",
+                "value": 2.653
+              },
+              {
+                "reason": "高费启动负担",
+                "value": -1
+              }
+            ],
+            "notes": [
+              "即时灾厄斩杀省等待回合，需结合敌人生命与现有灾厄。"
+            ]
+          },
+          {
+            "key": "card:1",
+            "name": "重构",
+            "supported": true,
+            "enabled": true,
+            "score": 1.704,
+            "parts": [
+              {
+                "reason": "基础机制先验（未实战校准）",
+                "value": 5.2
+              },
+              {
+                "reason": "同版本单人A10同稀有度统计修正（有限幅度）",
+                "value": 0.003
+              },
+              {
+                "reason": "占用一次抽牌的基准成本",
+                "value": -2.5
+              },
+              {
+                "reason": "涨费妨碍零费灵魂与连打",
+                "value": -0.999
+              }
+            ],
+            "notes": [
+              "单牌重放加费，需具体目标和支付能力。"
+            ]
+          },
+          {
+            "key": "card:2",
+            "name": "灰烬之灵",
+            "supported": true,
+            "enabled": true,
+            "score": 4.519,
+            "parts": [
+              {
+                "reason": "基础机制先验（未实战校准）",
+                "value": 5.2
+              },
+              {
+                "reason": "同版本单人A10同稀有度统计修正（有限幅度）",
+                "value": 0.051
+              },
+              {
+                "reason": "占用一次抽牌的基准成本",
+                "value": -2.5
+              },
+              {
+                "reason": "防守缺口",
+                "value": 0.268
+              },
+              {
+                "reason": "虚无联动需要实际虚无密度",
+                "value": 1.5
+              }
+            ],
+            "notes": [
+              "打出虚无起盾，回合结束虚无消耗不算打出。"
+            ]
+          },
+          {
+            "key": "alternative:0",
+            "name": "跳过",
+            "supported": true,
+            "enabled": true,
+            "score": 0,
+            "parts": [],
+            "notes": []
+          }
+        ],
+        "warnings": [
+          "亡灵契约师接管：选牌、营火、路线、商店与原生事件；战斗交给 CombatSolver。首版机制权重，尚待实战校准。",
+          "奥斯提：已有攻击／承伤与成长",
+          "灾厄：已有施加与长战增长",
+          "防守薄弱"
+        ]
+      }
+    },
+    {
+      "seed": "03752B817473",
+      "state": {
+        "character": "Necrobinder",
+        "playerCount": 1,
+        "multiplayerSession": false,
+        "isMultiplayer": false,
+        "hp": 25,
+        "maxHp": 66,
+        "hpAfterPendingAncient": null,
+        "gold": 112,
+        "energy": 3,
+        "combatSolverAvailable": true,
+        "act": 1,
+        "floor": 12,
+        "ascension": 10,
+        "room": "CombatRoom",
+        "deck": [
+          {
+            "id": "CARD.STRIKE_NECROBINDER",
+            "className": "StrikeNecrobinder",
+            "name": "打击",
+            "type": "Attack",
+            "rarity": "Basic",
+            "description": "",
+            "cost": 1,
+            "costsX": false,
+            "starCost": -1,
+            "costsStarX": false,
+            "upgradeLevel": 0,
+            "canUpgrade": true,
+            "modified": false,
+            "multiplayerOnly": false,
+            "enchantment": null,
+            "enchantmentAmount": 0,
+            "affliction": null,
+            "keywords": [],
+            "variables": {
+              "Damage": 6
+            }
+          },
+          {
+            "id": "CARD.STRIKE_NECROBINDER",
+            "className": "StrikeNecrobinder",
+            "name": "打击",
+            "type": "Attack",
+            "rarity": "Basic",
+            "description": "",
+            "cost": 1,
+            "costsX": false,
+            "starCost": -1,
+            "costsStarX": false,
+            "upgradeLevel": 0,
+            "canUpgrade": true,
+            "modified": false,
+            "multiplayerOnly": false,
+            "enchantment": null,
+            "enchantmentAmount": 0,
+            "affliction": null,
+            "keywords": [],
+            "variables": {
+              "Damage": 6
+            }
+          },
+          {
+            "id": "CARD.DEFEND_NECROBINDER",
+            "className": "DefendNecrobinder",
+            "name": "防御",
+            "type": "Skill",
+            "rarity": "Basic",
+            "description": "",
+            "cost": 1,
+            "costsX": false,
+            "starCost": -1,
+            "costsStarX": false,
+            "upgradeLevel": 0,
+            "canUpgrade": true,
+            "modified": false,
+            "multiplayerOnly": false,
+            "enchantment": null,
+            "enchantmentAmount": 0,
+            "affliction": null,
+            "keywords": [],
+            "variables": {
+              "Block": 5
+            }
+          },
+          {
+            "id": "CARD.DEFEND_NECROBINDER",
+            "className": "DefendNecrobinder",
+            "name": "防御",
+            "type": "Skill",
+            "rarity": "Basic",
+            "description": "",
+            "cost": 1,
+            "costsX": false,
+            "starCost": -1,
+            "costsStarX": false,
+            "upgradeLevel": 0,
+            "canUpgrade": true,
+            "modified": false,
+            "multiplayerOnly": false,
+            "enchantment": null,
+            "enchantmentAmount": 0,
+            "affliction": null,
+            "keywords": [],
+            "variables": {
+              "Block": 5
+            }
+          },
+          {
+            "id": "CARD.DEFEND_NECROBINDER",
+            "className": "DefendNecrobinder",
+            "name": "防御",
+            "type": "Skill",
+            "rarity": "Basic",
+            "description": "",
+            "cost": 1,
+            "costsX": false,
+            "starCost": -1,
+            "costsStarX": false,
+            "upgradeLevel": 0,
+            "canUpgrade": true,
+            "modified": false,
+            "multiplayerOnly": false,
+            "enchantment": null,
+            "enchantmentAmount": 0,
+            "affliction": null,
+            "keywords": [],
+            "variables": {
+              "Block": 5
+            }
+          },
+          {
+            "id": "CARD.DEFEND_NECROBINDER",
+            "className": "DefendNecrobinder",
+            "name": "防御",
+            "type": "Skill",
+            "rarity": "Basic",
+            "description": "",
+            "cost": 1,
+            "costsX": false,
+            "starCost": -1,
+            "costsStarX": false,
+            "upgradeLevel": 0,
+            "canUpgrade": true,
+            "modified": false,
+            "multiplayerOnly": false,
+            "enchantment": null,
+            "enchantmentAmount": 0,
+            "affliction": null,
+            "keywords": [],
+            "variables": {
+              "Block": 5
+            }
+          },
+          {
+            "id": "CARD.BODYGUARD",
+            "className": "Bodyguard",
+            "name": "护卫",
+            "type": "Skill",
+            "rarity": "Basic",
+            "description": "",
+            "cost": 1,
+            "costsX": false,
+            "starCost": -1,
+            "costsStarX": false,
+            "upgradeLevel": 0,
+            "canUpgrade": true,
+            "modified": false,
+            "multiplayerOnly": false,
+            "enchantment": null,
+            "enchantmentAmount": 0,
+            "affliction": null,
+            "keywords": [],
+            "variables": {
+              "Summon": 5
+            }
+          },
+          {
+            "id": "CARD.UNLEASH",
+            "className": "Unleash",
+            "name": "出击",
+            "type": "Attack",
+            "rarity": "Basic",
+            "description": "",
+            "cost": 1,
+            "costsX": false,
+            "starCost": -1,
+            "costsStarX": false,
+            "upgradeLevel": 0,
+            "canUpgrade": true,
+            "modified": false,
+            "multiplayerOnly": false,
+            "enchantment": null,
+            "enchantmentAmount": 0,
+            "affliction": null,
+            "keywords": [],
+            "variables": {
+              "CalculatedDamage": 6,
+              "CalculationBase": 6,
+              "ExtraDamage": 1
+            }
+          },
+          {
+            "id": "CARD.ASCENDERS_BANE",
+            "className": "AscendersBane",
+            "name": "进阶之灾",
+            "type": "Curse",
+            "rarity": "Curse",
+            "description": "",
+            "cost": -1,
+            "costsX": false,
+            "starCost": -1,
+            "costsStarX": false,
+            "upgradeLevel": 0,
+            "canUpgrade": false,
+            "modified": false,
+            "multiplayerOnly": false,
+            "enchantment": null,
+            "enchantmentAmount": 0,
+            "affliction": null,
+            "keywords": [
+              "Eternal",
+              "Ethereal",
+              "Unplayable"
+            ],
+            "variables": {}
+          },
+          {
+            "id": "CARD.SENTRY_MODE",
+            "className": "SentryMode",
+            "name": "哨卫模式+",
+            "type": "Power",
+            "rarity": "Rare",
+            "description": "",
+            "cost": 1,
+            "costsX": false,
+            "starCost": -1,
+            "costsStarX": false,
+            "upgradeLevel": 1,
+            "canUpgrade": false,
+            "modified": false,
+            "multiplayerOnly": false,
+            "enchantment": null,
+            "enchantmentAmount": 0,
+            "affliction": null,
+            "keywords": [],
+            "variables": {
+              "SentryModePower": 1
+            }
+          },
+          {
+            "id": "CARD.CALCIFY",
+            "className": "Calcify",
+            "name": "钙化",
+            "type": "Power",
+            "rarity": "Uncommon",
+            "description": "",
+            "cost": 1,
+            "costsX": false,
+            "starCost": -1,
+            "costsStarX": false,
+            "upgradeLevel": 0,
+            "canUpgrade": true,
+            "modified": false,
+            "multiplayerOnly": false,
+            "enchantment": null,
+            "enchantmentAmount": 0,
+            "affliction": null,
+            "keywords": [],
+            "variables": {
+              "CalcifyPower": 4
+            }
+          },
+          {
+            "id": "CARD.SNAP",
+            "className": "Snap",
+            "name": "响指",
+            "type": "Attack",
+            "rarity": "Common",
+            "description": "",
+            "cost": 1,
+            "costsX": false,
+            "starCost": -1,
+            "costsStarX": false,
+            "upgradeLevel": 0,
+            "canUpgrade": true,
+            "modified": false,
+            "multiplayerOnly": false,
+            "enchantment": null,
+            "enchantmentAmount": 0,
+            "affliction": null,
+            "keywords": [],
+            "variables": {
+              "OstyDamage": 7
+            }
+          },
+          {
+            "id": "CARD.DEFY",
+            "className": "Defy",
+            "name": "违逆",
+            "type": "Skill",
+            "rarity": "Common",
+            "description": "",
+            "cost": 1,
+            "costsX": false,
+            "starCost": -1,
+            "costsStarX": false,
+            "upgradeLevel": 0,
+            "canUpgrade": true,
+            "modified": false,
+            "multiplayerOnly": false,
+            "enchantment": null,
+            "enchantmentAmount": 0,
+            "affliction": null,
+            "keywords": [
+              "Ethereal"
+            ],
+            "variables": {
+              "Block": 6,
+              "WeakPower": 1
+            }
+          },
+          {
+            "id": "CARD.PECK",
+            "className": "Peck",
+            "name": "啄击",
+            "type": "Attack",
+            "rarity": "Event",
+            "description": "",
+            "cost": 1,
+            "costsX": false,
+            "starCost": -1,
+            "costsStarX": false,
+            "upgradeLevel": 0,
+            "canUpgrade": true,
+            "modified": false,
+            "multiplayerOnly": false,
+            "enchantment": null,
+            "enchantmentAmount": 0,
+            "affliction": null,
+            "keywords": [],
+            "variables": {
+              "Damage": 2,
+              "Repeat": 3
+            }
+          },
+          {
+            "id": "CARD.PAGESTORM",
+            "className": "Pagestorm",
+            "name": "书页风暴+",
+            "type": "Power",
+            "rarity": "Uncommon",
+            "description": "",
+            "cost": 0,
+            "costsX": false,
+            "starCost": -1,
+            "costsStarX": false,
+            "upgradeLevel": 1,
+            "canUpgrade": false,
+            "modified": false,
+            "multiplayerOnly": false,
+            "enchantment": null,
+            "enchantmentAmount": 0,
+            "affliction": null,
+            "keywords": [],
+            "variables": {
+              "Cards": 1
+            }
+          },
+          {
+            "id": "CARD.GUILTY",
+            "className": "Guilty",
+            "name": "愧疚",
+            "type": "Curse",
+            "rarity": "Curse",
+            "description": "",
+            "cost": -1,
+            "costsX": false,
+            "starCost": -1,
+            "costsStarX": false,
+            "upgradeLevel": 0,
+            "canUpgrade": false,
+            "modified": false,
+            "multiplayerOnly": false,
+            "enchantment": null,
+            "enchantmentAmount": 0,
+            "affliction": null,
+            "keywords": [
+              "Unplayable"
+            ],
+            "variables": {
+              "Combats": 4
+            }
+          }
+        ],
+        "relics": [
+          "RELIC.BOUND_PHYLACTERY",
+          "RELIC.HEFTY_TABLET",
+          "RELIC.JOSS_PAPER",
+          "RELIC.VAJRA"
+        ],
+        "giryaLifts": null,
+        "potionSlots": [
+          "POTION.FIRE_POTION",
+          null
+        ],
+        "nextNodeTypes": [
+          "Monster",
+          "RestSite"
+        ],
+        "foresight": {
+          "fingerprint": "F186D40D594AE03C40E9DC044EDD8B55B62E35EF1069A7441DC76EC514CA0C6B",
+          "sourceUnchanged": true,
+          "branches": [
+            {
+              "path": "2,12>2,13>3,14>4,15>3,16",
+              "rewards": [
+                {
+                  "node": "2,13",
+                  "room": "Elite",
+                  "distance": 2,
+                  "reliability": 0.85,
+                  "cards": [
+                    {
+                      "id": "CARD.FETCH",
+                      "className": "Fetch",
+                      "name": "取回",
+                      "type": "Attack",
+                      "rarity": "Uncommon",
+                      "description": "",
+                      "cost": 0,
+                      "costsX": false,
+                      "starCost": -1,
+                      "costsStarX": false,
+                      "upgradeLevel": 0,
+                      "canUpgrade": true,
+                      "modified": false,
+                      "multiplayerOnly": false,
+                      "enchantment": null,
+                      "enchantmentAmount": 0,
+                      "affliction": null,
+                      "keywords": [],
+                      "variables": {
+                        "Cards": 1,
+                        "OstyDamage": 3
+                      }
+                    },
+                    {
+                      "id": "CARD.LETHALITY",
+                      "className": "Lethality",
+                      "name": "致死性",
+                      "type": "Power",
+                      "rarity": "Uncommon",
+                      "description": "",
+                      "cost": 1,
+                      "costsX": false,
+                      "starCost": -1,
+                      "costsStarX": false,
+                      "upgradeLevel": 0,
+                      "canUpgrade": true,
+                      "modified": false,
+                      "multiplayerOnly": false,
+                      "enchantment": null,
+                      "enchantmentAmount": 0,
+                      "affliction": null,
+                      "keywords": [
+                        "Ethereal"
+                      ],
+                      "variables": {
+                        "LethalityPower": 50
+                      }
+                    },
+                    {
+                      "id": "CARD.WISP",
+                      "className": "Wisp",
+                      "name": "鬼火",
+                      "type": "Skill",
+                      "rarity": "Common",
+                      "description": "",
+                      "cost": 0,
+                      "costsX": false,
+                      "starCost": -1,
+                      "costsStarX": false,
+                      "upgradeLevel": 0,
+                      "canUpgrade": true,
+                      "modified": false,
+                      "multiplayerOnly": false,
+                      "enchantment": null,
+                      "enchantmentAmount": 0,
+                      "affliction": null,
+                      "keywords": [
+                        "Exhaust"
+                      ],
+                      "variables": {
+                        "Energy": 1
+                      }
+                    }
+                  ],
+                  "prices": null
+                },
+                {
+                  "node": "3,14",
+                  "room": "Shop",
+                  "distance": 3,
+                  "reliability": 0.315,
+                  "cards": [
+                    {
+                      "id": "CARD.DEFILE",
+                      "className": "Defile",
+                      "name": "玷污",
+                      "type": "Attack",
+                      "rarity": "Common",
+                      "description": "",
+                      "cost": 1,
+                      "costsX": false,
+                      "starCost": -1,
+                      "costsStarX": false,
+                      "upgradeLevel": 0,
+                      "canUpgrade": true,
+                      "modified": false,
+                      "multiplayerOnly": false,
+                      "enchantment": null,
+                      "enchantmentAmount": 0,
+                      "affliction": null,
+                      "keywords": [
+                        "Ethereal"
+                      ],
+                      "variables": {
+                        "Damage": 13
+                      }
+                    },
+                    {
+                      "id": "CARD.FLATTEN",
+                      "className": "Flatten",
+                      "name": "重压",
+                      "type": "Attack",
+                      "rarity": "Common",
+                      "description": "",
+                      "cost": 2,
+                      "costsX": false,
+                      "starCost": -1,
+                      "costsStarX": false,
+                      "upgradeLevel": 0,
+                      "canUpgrade": true,
+                      "modified": false,
+                      "multiplayerOnly": false,
+                      "enchantment": null,
+                      "enchantmentAmount": 0,
+                      "affliction": null,
+                      "keywords": [],
+                      "variables": {
+                        "OstyDamage": 12
+                      }
+                    },
+                    {
+                      "id": "CARD.NEGATIVE_PULSE",
+                      "className": "NegativePulse",
+                      "name": "负能量脉冲",
+                      "type": "Skill",
+                      "rarity": "Common",
+                      "description": "",
+                      "cost": 1,
+                      "costsX": false,
+                      "starCost": -1,
+                      "costsStarX": false,
+                      "upgradeLevel": 0,
+                      "canUpgrade": true,
+                      "modified": false,
+                      "multiplayerOnly": false,
+                      "enchantment": null,
+                      "enchantmentAmount": 0,
+                      "affliction": null,
+                      "keywords": [],
+                      "variables": {
+                        "Block": 5,
+                        "DoomPower": 7
+                      }
+                    },
+                    {
+                      "id": "CARD.INVOKE",
+                      "className": "Invoke",
+                      "name": "唤起",
+                      "type": "Skill",
+                      "rarity": "Common",
+                      "description": "",
+                      "cost": 1,
+                      "costsX": false,
+                      "starCost": -1,
+                      "costsStarX": false,
+                      "upgradeLevel": 0,
+                      "canUpgrade": true,
+                      "modified": false,
+                      "multiplayerOnly": false,
+                      "enchantment": null,
+                      "enchantmentAmount": 0,
+                      "affliction": null,
+                      "keywords": [],
+                      "variables": {
+                        "Energy": 2,
+                        "Summon": 2
+                      }
+                    },
+                    {
+                      "id": "CARD.FRIENDSHIP",
+                      "className": "Friendship",
+                      "name": "友谊",
+                      "type": "Power",
+                      "rarity": "Uncommon",
+                      "description": "",
+                      "cost": 1,
+                      "costsX": false,
+                      "starCost": -1,
+                      "costsStarX": false,
+                      "upgradeLevel": 0,
+                      "canUpgrade": true,
+                      "modified": false,
+                      "multiplayerOnly": false,
+                      "enchantment": null,
+                      "enchantmentAmount": 0,
+                      "affliction": null,
+                      "keywords": [],
+                      "variables": {
+                        "Energy": 1,
+                        "StrengthPower": 2
+                      }
+                    },
+                    {
+                      "id": "CARD.DARK_SHACKLES",
+                      "className": "DarkShackles",
+                      "name": "黑暗镣铐",
+                      "type": "Skill",
+                      "rarity": "Uncommon",
+                      "description": "",
+                      "cost": 0,
+                      "costsX": false,
+                      "starCost": -1,
+                      "costsStarX": false,
+                      "upgradeLevel": 0,
+                      "canUpgrade": true,
+                      "modified": false,
+                      "multiplayerOnly": false,
+                      "enchantment": null,
+                      "enchantmentAmount": 0,
+                      "affliction": null,
+                      "keywords": [
+                        "Exhaust"
+                      ],
+                      "variables": {
+                        "StrengthLoss": 9
+                      }
+                    },
+                    {
+                      "id": "CARD.BOLAS",
+                      "className": "Bolas",
+                      "name": "流星锤",
+                      "type": "Attack",
+                      "rarity": "Rare",
+                      "description": "",
+                      "cost": 0,
+                      "costsX": false,
+                      "starCost": -1,
+                      "costsStarX": false,
+                      "upgradeLevel": 0,
+                      "canUpgrade": true,
+                      "modified": false,
+                      "multiplayerOnly": false,
+                      "enchantment": null,
+                      "enchantmentAmount": 0,
+                      "affliction": null,
+                      "keywords": [],
+                      "variables": {
+                        "Damage": 3
+                      }
+                    }
+                  ],
+                  "prices": [
+                    51,
+                    49,
+                    52,
+                    48,
+                    38,
+                    88,
+                    178
+                  ]
+                },
+                {
+                  "node": "3,16",
+                  "room": "Boss",
+                  "distance": 5,
+                  "reliability": 0.22049999999999997,
+                  "cards": [
+                    {
+                      "id": "CARD.OBLIVION",
+                      "className": "Oblivion",
+                      "name": "湮灭",
+                      "type": "Skill",
+                      "rarity": "Rare",
+                      "description": "",
+                      "cost": 0,
+                      "costsX": false,
+                      "starCost": -1,
+                      "costsStarX": false,
+                      "upgradeLevel": 0,
+                      "canUpgrade": true,
+                      "modified": false,
+                      "multiplayerOnly": false,
+                      "enchantment": null,
+                      "enchantmentAmount": 0,
+                      "affliction": null,
+                      "keywords": [],
+                      "variables": {
+                        "DoomPower": 3
+                      }
+                    },
+                    {
+                      "id": "CARD.SHARED_FATE",
+                      "className": "SharedFate",
+                      "name": "命运同担",
+                      "type": "Skill",
+                      "rarity": "Rare",
+                      "description": "",
+                      "cost": 0,
+                      "costsX": false,
+                      "starCost": -1,
+                      "costsStarX": false,
+                      "upgradeLevel": 0,
+                      "canUpgrade": true,
+                      "modified": false,
+                      "multiplayerOnly": false,
+                      "enchantment": null,
+                      "enchantmentAmount": 0,
+                      "affliction": null,
+                      "keywords": [
+                        "Exhaust"
+                      ],
+                      "variables": {
+                        "EnemyStrengthLoss": 2,
+                        "PlayerStrengthLoss": 2
+                      }
+                    },
+                    {
+                      "id": "CARD.TRANSFIGURE",
+                      "className": "Transfigure",
+                      "name": "重构",
+                      "type": "Skill",
+                      "rarity": "Rare",
+                      "description": "",
+                      "cost": 1,
+                      "costsX": false,
+                      "starCost": -1,
+                      "costsStarX": false,
+                      "upgradeLevel": 0,
+                      "canUpgrade": true,
+                      "modified": false,
+                      "multiplayerOnly": false,
+                      "enchantment": null,
+                      "enchantmentAmount": 0,
+                      "affliction": null,
+                      "keywords": [
+                        "Exhaust"
+                      ],
+                      "variables": {
+                        "Energy": 1
+                      }
+                    }
+                  ],
+                  "prices": null
+                }
+              ]
+            }
+          ],
+          "status": "辉眼：沿推荐路线预览至多三次战斗奖励或商店供牌；商店按现款约束。未到达的事件、先古及后续交易尚未模拟，不保证获得。"
+        },
+        "map": {
+          "totalActs": 3,
+          "rows": 16,
+          "currentRow": 11,
+          "bossRow": 16,
+          "mapType": "MegaCrit.Sts2.Core.Map.StandardActMap",
+          "longMap": false,
+          "extraLayers": 0,
+          "extraActs": 0,
+          "contentAct": 1,
+          "enemyHpScale": 1,
+          "enemyDamageScale": 1,
+          "combatGoldScale": 1,
+          "error": null
+        },
+        "recentBattles": [
+          {
+            "act": 1,
+            "room": "Monster",
+            "encounter": "ENCOUNTER.NIBBITS_WEAK",
+            "damageTaken": 2,
+            "healing": 0,
+            "potionsUsed": 0,
+            "maxHp": 66
+          },
+          {
+            "act": 1,
+            "room": "Monster",
+            "encounter": "ENCOUNTER.SHRINKER_BEETLE_WEAK",
+            "damageTaken": 0,
+            "healing": 0,
+            "potionsUsed": 0,
+            "maxHp": 66
+          },
+          {
+            "act": 1,
+            "room": "Monster",
+            "encounter": "ENCOUNTER.SLITHERING_STRANGLER_NORMAL",
+            "damageTaken": 18,
+            "healing": 15,
+            "potionsUsed": 1,
+            "maxHp": 66
+          }
+        ],
+        "commerce": {
+          "reachableShops": 1,
+          "nearestShopDistance": 3,
+          "reachableUnknowns": 0,
+          "futureActs": 2
+        },
+        "campRouteRisk": {}
+      },
+      "options": [
+        {
+          "key": "card:0",
+          "name": "幻景",
+          "kind": "card",
+          "enabled": true,
+          "card": {
+            "id": "CARD.EIDOLON",
+            "className": "Eidolon",
+            "name": "幻景",
+            "type": "Skill",
+            "rarity": "Rare",
+            "description": "",
+            "cost": 2,
+            "costsX": false,
+            "starCost": -1,
+            "costsStarX": false,
+            "upgradeLevel": 0,
+            "canUpgrade": true,
+            "modified": false,
+            "multiplayerOnly": false,
+            "enchantment": null,
+            "enchantmentAmount": 0,
+            "affliction": null,
+            "keywords": [
+              "Exhaust"
+            ],
+            "variables": {}
+          },
+          "healAmount": 0,
+          "smithCount": 1,
+          "effectValue": null
+        },
+        {
+          "key": "card:1",
+          "name": "响指",
+          "kind": "card",
+          "enabled": true,
+          "card": {
+            "id": "CARD.SNAP",
+            "className": "Snap",
+            "name": "响指",
+            "type": "Attack",
+            "rarity": "Common",
+            "description": "",
+            "cost": 1,
+            "costsX": false,
+            "starCost": -1,
+            "costsStarX": false,
+            "upgradeLevel": 0,
+            "canUpgrade": true,
+            "modified": false,
+            "multiplayerOnly": false,
+            "enchantment": null,
+            "enchantmentAmount": 0,
+            "affliction": null,
+            "keywords": [],
+            "variables": {
+              "OstyDamage": 7
+            }
+          },
+          "healAmount": 0,
+          "smithCount": 1,
+          "effectValue": null
+        },
+        {
+          "key": "card:2",
+          "name": "腐败",
+          "kind": "card",
+          "enabled": true,
+          "card": {
+            "id": "CARD.PUTREFY",
+            "className": "Putrefy",
+            "name": "腐败",
+            "type": "Skill",
+            "rarity": "Uncommon",
+            "description": "",
+            "cost": 1,
+            "costsX": false,
+            "starCost": -1,
+            "costsStarX": false,
+            "upgradeLevel": 0,
+            "canUpgrade": true,
+            "modified": false,
+            "multiplayerOnly": false,
+            "enchantment": null,
+            "enchantmentAmount": 0,
+            "affliction": null,
+            "keywords": [
+              "Exhaust"
+            ],
+            "variables": {
+              "Power": 2
+            }
+          },
+          "healAmount": 0,
+          "smithCount": 1,
+          "effectValue": null
+        },
+        {
+          "key": "alternative:0",
+          "name": "跳过",
+          "kind": "skip",
+          "enabled": true,
+          "card": null,
+          "healAmount": 0,
+          "smithCount": 1,
+          "effectValue": null
+        }
+      ],
+      "expectedCard": "Putrefy",
+      "originalEvaluation": {
+        "policyVersion": "necrobinder-draft-0.1",
+        "recommendedKey": "card:0",
+        "options": [
+          {
+            "key": "card:0",
+            "name": "幻景",
+            "supported": true,
+            "enabled": true,
+            "score": 10.484,
+            "parts": [
+              {
+                "reason": "基础机制先验（未实战校准）",
+                "value": 5.6
+              },
+              {
+                "reason": "同版本单人A10同稀有度统计修正（有限幅度）",
+                "value": -0.116
+              },
+              {
+                "reason": "占用一次抽牌的基准成本",
+                "value": -2.5
+              },
+              {
+                "reason": "虚无联动需要实际虚无密度",
+                "value": 1
+              },
+              {
+                "reason": "高费启动负担",
+                "value": -0.5
+              },
+              {
+                "reason": "辉眼：Elite 2,13：致死性；条件构筑投资，不计当前战力",
+                "value": 7
+              }
+            ],
+            "notes": [
+              "重放消耗区虚无牌，需足量已消耗虚无且考虑二费启动。"
+            ]
+          },
+          {
+            "key": "card:1",
+            "name": "响指",
+            "supported": true,
+            "enabled": true,
+            "score": -0.123,
+            "parts": [
+              {
+                "reason": "基础机制先验（未实战校准）",
+                "value": 3.6
+              },
+              {
+                "reason": "同版本单人A10同稀有度统计修正（有限幅度）",
+                "value": 0.09
+              },
+              {
+                "reason": "前／中／后期需求",
+                "value": 0.6
+              },
+              {
+                "reason": "占用一次抽牌的基准成本",
+                "value": -2.5
+              },
+              {
+                "reason": "重复份数递减",
+                "value": -3.9
+              },
+              {
+                "reason": "即时输出缺口",
+                "value": 1.087
+              },
+              {
+                "reason": "奥斯提攻击兑现钙化与多次攻击",
+                "value": 0.9
+              }
+            ],
+            "notes": [
+              "攻击加单牌保留，组件桥梁而非输出核心。"
+            ]
+          },
+          {
+            "key": "card:2",
+            "name": "腐败",
+            "supported": true,
+            "enabled": true,
+            "score": 2.748,
+            "parts": [
+              {
+                "reason": "基础机制先验（未实战校准）",
+                "value": 4.7
+              },
+              {
+                "reason": "同版本单人A10同稀有度统计修正（有限幅度）",
+                "value": 0.238
+              },
+              {
+                "reason": "占用一次抽牌的基准成本",
+                "value": -2.5
+              },
+              {
+                "reason": "防守缺口",
+                "value": 0.295
+              },
+              {
+                "reason": "辉眼：Elite 2,13：致死性 → Shop 3,14：友谊 (38G) → Boss 3,16：重构；条件构筑投资，不计当前战力",
+                "value": 0.015
+              }
+            ],
+            "notes": [
+              "一次双减益，多体系兼容，不是成长输出。"
+            ]
+          },
+          {
+            "key": "alternative:0",
+            "name": "跳过",
+            "supported": true,
+            "enabled": true,
+            "score": 0,
+            "parts": [],
+            "notes": []
+          }
+        ],
+        "warnings": [
+          "亡灵契约师接管：选牌、营火、路线、商店与原生事件；战斗交给 CombatSolver。首版机制权重，尚待实战校准。",
+          "奥斯提：已有攻击／承伤与成长",
+          "独立输出：已有可成长攻击或持续生成",
+          "即时伤害不足，避免早期连续精英",
+          "防守薄弱"
+        ]
+      }
+    }
+  ],
+  "storybookState": {
+    "character": "Necrobinder",
+    "playerCount": 1,
+    "multiplayerSession": false,
+    "isMultiplayer": false,
+    "hp": 57,
+    "maxHp": 66,
+    "hpAfterPendingAncient": null,
+    "gold": 164,
+    "energy": 3,
+    "combatSolverAvailable": true,
+    "act": 2,
+    "floor": 18,
+    "ascension": 10,
+    "room": "EventRoom",
+    "deck": [
+      {
+        "id": "CARD.STRIKE_NECROBINDER",
+        "className": "StrikeNecrobinder",
+        "name": "打击",
+        "type": "Attack",
+        "rarity": "Basic",
+        "description": "",
+        "cost": 1,
+        "costsX": false,
+        "starCost": -1,
+        "costsStarX": false,
+        "upgradeLevel": 0,
+        "canUpgrade": true,
+        "modified": false,
+        "multiplayerOnly": false,
+        "enchantment": null,
+        "enchantmentAmount": 0,
+        "affliction": null,
+        "keywords": [],
+        "variables": {
+          "Damage": 6
+        }
+      },
+      {
+        "id": "CARD.STRIKE_NECROBINDER",
+        "className": "StrikeNecrobinder",
+        "name": "打击",
+        "type": "Attack",
+        "rarity": "Basic",
+        "description": "",
+        "cost": 1,
+        "costsX": false,
+        "starCost": -1,
+        "costsStarX": false,
+        "upgradeLevel": 0,
+        "canUpgrade": true,
+        "modified": false,
+        "multiplayerOnly": false,
+        "enchantment": null,
+        "enchantmentAmount": 0,
+        "affliction": null,
+        "keywords": [],
+        "variables": {
+          "Damage": 6
+        }
+      },
+      {
+        "id": "CARD.STRIKE_NECROBINDER",
+        "className": "StrikeNecrobinder",
+        "name": "打击",
+        "type": "Attack",
+        "rarity": "Basic",
+        "description": "",
+        "cost": 1,
+        "costsX": false,
+        "starCost": -1,
+        "costsStarX": false,
+        "upgradeLevel": 0,
+        "canUpgrade": true,
+        "modified": false,
+        "multiplayerOnly": false,
+        "enchantment": null,
+        "enchantmentAmount": 0,
+        "affliction": null,
+        "keywords": [],
+        "variables": {
+          "Damage": 6
+        }
+      },
+      {
+        "id": "CARD.DEFEND_NECROBINDER",
+        "className": "DefendNecrobinder",
+        "name": "防御",
+        "type": "Skill",
+        "rarity": "Basic",
+        "description": "",
+        "cost": 1,
+        "costsX": false,
+        "starCost": -1,
+        "costsStarX": false,
+        "upgradeLevel": 0,
+        "canUpgrade": true,
+        "modified": false,
+        "multiplayerOnly": false,
+        "enchantment": null,
+        "enchantmentAmount": 0,
+        "affliction": null,
+        "keywords": [],
+        "variables": {
+          "Block": 5
+        }
+      },
+      {
+        "id": "CARD.DEFEND_NECROBINDER",
+        "className": "DefendNecrobinder",
+        "name": "防御",
+        "type": "Skill",
+        "rarity": "Basic",
+        "description": "",
+        "cost": 1,
+        "costsX": false,
+        "starCost": -1,
+        "costsStarX": false,
+        "upgradeLevel": 0,
+        "canUpgrade": true,
+        "modified": false,
+        "multiplayerOnly": false,
+        "enchantment": null,
+        "enchantmentAmount": 0,
+        "affliction": null,
+        "keywords": [],
+        "variables": {
+          "Block": 5
+        }
+      },
+      {
+        "id": "CARD.DEFEND_NECROBINDER",
+        "className": "DefendNecrobinder",
+        "name": "防御",
+        "type": "Skill",
+        "rarity": "Basic",
+        "description": "",
+        "cost": 1,
+        "costsX": false,
+        "starCost": -1,
+        "costsStarX": false,
+        "upgradeLevel": 0,
+        "canUpgrade": true,
+        "modified": false,
+        "multiplayerOnly": false,
+        "enchantment": null,
+        "enchantmentAmount": 0,
+        "affliction": null,
+        "keywords": [],
+        "variables": {
+          "Block": 5
+        }
+      },
+      {
+        "id": "CARD.BODYGUARD",
+        "className": "Bodyguard",
+        "name": "护卫+",
+        "type": "Skill",
+        "rarity": "Basic",
+        "description": "",
+        "cost": 1,
+        "costsX": false,
+        "starCost": -1,
+        "costsStarX": false,
+        "upgradeLevel": 1,
+        "canUpgrade": false,
+        "modified": false,
+        "multiplayerOnly": false,
+        "enchantment": null,
+        "enchantmentAmount": 0,
+        "affliction": null,
+        "keywords": [],
+        "variables": {
+          "Summon": 7
+        }
+      },
+      {
+        "id": "CARD.UNLEASH",
+        "className": "Unleash",
+        "name": "出击",
+        "type": "Attack",
+        "rarity": "Basic",
+        "description": "",
+        "cost": 1,
+        "costsX": false,
+        "starCost": -1,
+        "costsStarX": false,
+        "upgradeLevel": 0,
+        "canUpgrade": true,
+        "modified": false,
+        "multiplayerOnly": false,
+        "enchantment": null,
+        "enchantmentAmount": 0,
+        "affliction": null,
+        "keywords": [],
+        "variables": {
+          "CalculatedDamage": 6,
+          "CalculationBase": 6,
+          "ExtraDamage": 1
+        }
+      },
+      {
+        "id": "CARD.ASCENDERS_BANE",
+        "className": "AscendersBane",
+        "name": "进阶之灾",
+        "type": "Curse",
+        "rarity": "Curse",
+        "description": "",
+        "cost": -1,
+        "costsX": false,
+        "starCost": -1,
+        "costsStarX": false,
+        "upgradeLevel": 0,
+        "canUpgrade": false,
+        "modified": false,
+        "multiplayerOnly": false,
+        "enchantment": null,
+        "enchantmentAmount": 0,
+        "affliction": null,
+        "keywords": [
+          "Eternal",
+          "Ethereal",
+          "Unplayable"
+        ],
+        "variables": {}
+      },
+      {
+        "id": "CARD.POKE",
+        "className": "Poke",
+        "name": "戳击",
+        "type": "Attack",
+        "rarity": "Common",
+        "description": "",
+        "cost": 0,
+        "costsX": false,
+        "starCost": -1,
+        "costsStarX": false,
+        "upgradeLevel": 0,
+        "canUpgrade": true,
+        "modified": false,
+        "multiplayerOnly": false,
+        "enchantment": null,
+        "enchantmentAmount": 0,
+        "affliction": null,
+        "keywords": [],
+        "variables": {
+          "OstyDamage": 6
+        }
+      },
+      {
+        "id": "CARD.PUTREFY",
+        "className": "Putrefy",
+        "name": "腐败",
+        "type": "Skill",
+        "rarity": "Uncommon",
+        "description": "",
+        "cost": 1,
+        "costsX": false,
+        "starCost": -1,
+        "costsStarX": false,
+        "upgradeLevel": 0,
+        "canUpgrade": true,
+        "modified": false,
+        "multiplayerOnly": false,
+        "enchantment": null,
+        "enchantmentAmount": 0,
+        "affliction": null,
+        "keywords": [
+          "Exhaust"
+        ],
+        "variables": {
+          "Power": 2
+        }
+      },
+      {
+        "id": "CARD.CLEANSE",
+        "className": "Cleanse",
+        "name": "洁净+",
+        "type": "Skill",
+        "rarity": "Uncommon",
+        "description": "",
+        "cost": 1,
+        "costsX": false,
+        "starCost": -1,
+        "costsStarX": false,
+        "upgradeLevel": 1,
+        "canUpgrade": false,
+        "modified": false,
+        "multiplayerOnly": false,
+        "enchantment": null,
+        "enchantmentAmount": 0,
+        "affliction": null,
+        "keywords": [],
+        "variables": {
+          "Summon": 5
+        }
+      },
+      {
+        "id": "CARD.NEGATIVE_PULSE",
+        "className": "NegativePulse",
+        "name": "负能量脉冲+",
+        "type": "Skill",
+        "rarity": "Common",
+        "description": "",
+        "cost": 1,
+        "costsX": false,
+        "starCost": -1,
+        "costsStarX": false,
+        "upgradeLevel": 1,
+        "canUpgrade": false,
+        "modified": false,
+        "multiplayerOnly": false,
+        "enchantment": null,
+        "enchantmentAmount": 0,
+        "affliction": null,
+        "keywords": [],
+        "variables": {
+          "Block": 6,
+          "DoomPower": 11
+        }
+      },
+      {
+        "id": "CARD.SEANCE",
+        "className": "Seance",
+        "name": "降灵+",
+        "type": "Skill",
+        "rarity": "Rare",
+        "description": "",
+        "cost": 0,
+        "costsX": false,
+        "starCost": -1,
+        "costsStarX": false,
+        "upgradeLevel": 1,
+        "canUpgrade": false,
+        "modified": false,
+        "multiplayerOnly": false,
+        "enchantment": null,
+        "enchantmentAmount": 0,
+        "affliction": null,
+        "keywords": [
+          "Ethereal"
+        ],
+        "variables": {
+          "Cards": 1
+        }
+      },
+      {
+        "id": "CARD.DRAIN_POWER",
+        "className": "DrainPower",
+        "name": "能量汲取",
+        "type": "Attack",
+        "rarity": "Common",
+        "description": "",
+        "cost": 1,
+        "costsX": false,
+        "starCost": -1,
+        "costsStarX": false,
+        "upgradeLevel": 0,
+        "canUpgrade": true,
+        "modified": false,
+        "multiplayerOnly": false,
+        "enchantment": null,
+        "enchantmentAmount": 0,
+        "affliction": null,
+        "keywords": [],
+        "variables": {
+          "Cards": 2,
+          "Damage": 10
+        }
+      },
+      {
+        "id": "CARD.COUNTDOWN",
+        "className": "Countdown",
+        "name": "倒数计时+",
+        "type": "Power",
+        "rarity": "Uncommon",
+        "description": "",
+        "cost": 1,
+        "costsX": false,
+        "starCost": -1,
+        "costsStarX": false,
+        "upgradeLevel": 1,
+        "canUpgrade": false,
+        "modified": false,
+        "multiplayerOnly": false,
+        "enchantment": null,
+        "enchantmentAmount": 0,
+        "affliction": null,
+        "keywords": [],
+        "variables": {
+          "CountdownPower": 9
+        }
+      },
+      {
+        "id": "CARD.RATTLE",
+        "className": "Rattle",
+        "name": "猛晃",
+        "type": "Attack",
+        "rarity": "Uncommon",
+        "description": "",
+        "cost": 1,
+        "costsX": false,
+        "starCost": -1,
+        "costsStarX": false,
+        "upgradeLevel": 0,
+        "canUpgrade": true,
+        "modified": false,
+        "multiplayerOnly": false,
+        "enchantment": null,
+        "enchantmentAmount": 0,
+        "affliction": null,
+        "keywords": [],
+        "variables": {
+          "CalculatedHits": 0,
+          "CalculationBase": 0,
+          "CalculationExtra": 1,
+          "OstyDamage": 7
+        }
+      },
+      {
+        "id": "CARD.SCOURGE",
+        "className": "Scourge",
+        "name": "鞭打",
+        "type": "Skill",
+        "rarity": "Common",
+        "description": "",
+        "cost": 1,
+        "costsX": false,
+        "starCost": -1,
+        "costsStarX": false,
+        "upgradeLevel": 0,
+        "canUpgrade": true,
+        "modified": false,
+        "multiplayerOnly": false,
+        "enchantment": null,
+        "enchantmentAmount": 0,
+        "affliction": null,
+        "keywords": [],
+        "variables": {
+          "Cards": 1,
+          "DoomPower": 13
+        }
+      },
+      {
+        "id": "CARD.SCULPTING_STRIKE",
+        "className": "SculptingStrike",
+        "name": "雕琢打击",
+        "type": "Attack",
+        "rarity": "Common",
+        "description": "",
+        "cost": 1,
+        "costsX": false,
+        "starCost": -1,
+        "costsStarX": false,
+        "upgradeLevel": 0,
+        "canUpgrade": true,
+        "modified": false,
+        "multiplayerOnly": false,
+        "enchantment": null,
+        "enchantmentAmount": 0,
+        "affliction": null,
+        "keywords": [],
+        "variables": {
+          "Damage": 9
+        }
+      },
+      {
+        "id": "CARD.SPIRIT_OF_ASH",
+        "className": "SpiritOfAsh",
+        "name": "灰烬之灵",
+        "type": "Power",
+        "rarity": "Rare",
+        "description": "",
+        "cost": 1,
+        "costsX": false,
+        "starCost": -1,
+        "costsStarX": false,
+        "upgradeLevel": 0,
+        "canUpgrade": true,
+        "modified": false,
+        "multiplayerOnly": false,
+        "enchantment": null,
+        "enchantmentAmount": 0,
+        "affliction": null,
+        "keywords": [],
+        "variables": {
+          "BlockOnExhaust": 4
+        }
+      }
+    ],
+    "relics": [
+      "RELIC.BOUND_PHYLACTERY",
+      "RELIC.PHIAL_HOLSTER",
+      "RELIC.WAR_PAINT",
+      "RELIC.FUNERARY_MASK"
+    ],
+    "giryaLifts": null,
+    "potionSlots": [
+      "POTION.RADIANT_TINCTURE",
+      "POTION.EXPLOSIVE_AMPOULE",
+      "POTION.RADIANT_TINCTURE"
+    ],
+    "nextNodeTypes": [
+      "Monster",
+      "Monster",
+      "Monster"
+    ],
+    "map": {
+      "totalActs": 3,
+      "rows": 15,
+      "currentRow": 0,
+      "bossRow": 15,
+      "mapType": "MegaCrit.Sts2.Core.Map.StandardActMap",
+      "longMap": false,
+      "extraLayers": 0,
+      "extraActs": 0,
+      "contentAct": 2,
+      "enemyHpScale": 1,
+      "enemyDamageScale": 1,
+      "combatGoldScale": 1,
+      "error": null
+    },
+    "recentBattles": [],
+    "commerce": {
+      "reachableShops": 3,
+      "nearestShopDistance": 4,
+      "reachableUnknowns": 12,
+      "futureActs": 1
+    },
+    "campRouteRisk": {}
+  }
+}

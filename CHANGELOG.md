@@ -1,5 +1,18 @@
 # 0.6.55 — 2026-11-01
 
+## 0.6.72 — 2026-11-03
+
+Source catch-up from 0.6.55, including intervening policy and compatibility fixes.
+
+- Recognize and protect invested Regent generation and strength/multi-hit plans; do not treat unrelated Sword cards as existing synergy.
+- Value marginal cards and spare Stars; calibrate Regent priors with documented community evidence and retain contextual scoring.
+- Improve multi-hit/enchantment choices and temporary-deck/duplicate handling.
+- Audit mechanism-sensitive upgrades across characters, including generated cards, energy reduction and opening access.
+- Reduce healthy Stone Humidifier rest bias, restrict Large Mushroom choices, and modestly adjust Regent Act 1 elite preference.
+- Resume Scroll Boxes when takeover starts after acquisition; buy Book of Five Rings before an already-desired card when the whole sequence fits the budget.
+- Validation: 270 core tests, 8 release-specific native workflow checks, 1,000 copied-RNG checks and 19,800 policy matrix checks. No new win-rate claim.
+
+
 - Added Defect, Silent, Regent and Necrobinder strategy integration since 0.6.22, including single-player takeover and looping with CombatSolver.
 - Added optional-per-client co-op advice (no automation), bounded reward/shop foresight, expanded native highlights, and character-sensitive item evaluation.
 - Fixed Pyramid/Bullet Time synergy, redundant Gamble Retain upgrades, deck-size-aware Gamble copies, and late-game shiv/poison forecast conflicts.

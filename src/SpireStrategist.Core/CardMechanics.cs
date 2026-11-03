@@ -92,7 +92,7 @@ public static class CardMechanics
             value = (15 + Math.Min(5, exhaust * 2) + (s.Deck.Any(d => d.ClassName == "Stoke") ? 4 : 0))
                 / (1 + .3 * Math.Max(0, copies - 1));
         }
-        return value;
+        return UpgradeReview.Refine(s,c,value);
     }
     public static double HealthyHealingMultiplier(double ratio) => .65 + .35 * Math.Clamp((.65 - ratio) / .3, 0, 1);
     public static double RestHealingMultiplier(double ratio) => .4 + .6 * Math.Clamp((.65 - ratio) / .3, 0, 1);

@@ -35,7 +35,7 @@ public static class SilentStrategy
         if(c.ClassName=="WellLaidPlans")result=14;
         if(c.ClassName=="CalculatedGamble")result=6; // Retain, NOT removal of Exhaust.
         if(c.ClassName=="Afterimage")result=12; // Innate reliability, not more block per play.
-        return Math.Clamp(result,0,19);
+        return Math.Clamp(UpgradeReview.Refine(s,c,result),0,19);
     }
     public static double Remove(RunSnapshot s,CardSnapshot c)
     {

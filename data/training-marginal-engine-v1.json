@@ -1,22 +1,63 @@
 {
   "purpose": "0.6.3 paired single-combat pilot. Seeds 301-302 exploratory, 303 predeclared holdout. Frozen policy; no fit on these results. Compare leaving, a third Twin Strike, and Bloodletting in a draw-supported strength deck. Not a full-run or archetype win-rate test.",
   "deck": [
-    {"cardId":"STRIKE_IRONCLAD","count":2},
-    {"cardId":"DEFEND_IRONCLAD","count":2},
-    {"cardId":"BASH","upgradeLevels":1},
-    {"cardId":"INFLAME","upgradeLevels":1},
-    {"cardId":"TWIN_STRIKE","count":2},
-    {"cardId":"SWORD_BOOMERANG"},
-    {"cardId":"SHRUG_IT_OFF","count":2},
-    {"cardId":"POMMEL_STRIKE","upgradeLevels":1},
-    {"cardId":"BURNING_PACT","upgradeLevels":1},
-    {"cardId":"BATTLE_TRANCE"},
-    {"cardId":"TRUE_GRIT","upgradeLevels":1},
-    {"cardId":"ASCENDERS_BANE"}
+    {
+      "cardId": "STRIKE_IRONCLAD",
+      "count": 2
+    },
+    {
+      "cardId": "DEFEND_IRONCLAD",
+      "count": 2
+    },
+    {
+      "cardId": "BASH",
+      "upgradeLevels": 1
+    },
+    {
+      "cardId": "INFLAME",
+      "upgradeLevels": 1
+    },
+    {
+      "cardId": "TWIN_STRIKE",
+      "count": 2
+    },
+    {
+      "cardId": "SWORD_BOOMERANG"
+    },
+    {
+      "cardId": "SHRUG_IT_OFF",
+      "count": 2
+    },
+    {
+      "cardId": "POMMEL_STRIKE",
+      "upgradeLevels": 1
+    },
+    {
+      "cardId": "BURNING_PACT",
+      "upgradeLevels": 1
+    },
+    {
+      "cardId": "BATTLE_TRANCE"
+    },
+    {
+      "cardId": "TRUE_GRIT",
+      "upgradeLevels": 1
+    },
+    {
+      "cardId": "ASCENDERS_BANE"
+    }
   ],
   "variants": {
     "leave": [],
-    "third_twin": [{"cardId":"TWIN_STRIKE"}],
-    "bloodletting": [{"cardId":"BLOODLETTING"}]
+    "third_twin": [
+      {
+        "cardId": "TWIN_STRIKE"
+      }
+    ],
+    "bloodletting": [
+      {
+        "cardId": "BLOODLETTING"
+      }
+    ]
   }
 }

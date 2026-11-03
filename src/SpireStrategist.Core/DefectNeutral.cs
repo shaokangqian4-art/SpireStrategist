@@ -72,6 +72,7 @@ public static class DefectNeutral
             new("无色牌重复份数递减",-n*model.Duplicate-n*n*.5)};
         parts.AddRange(HeroPolicy.Supports(s.Character)?HeroRelics.CardAdjustments(s,c):s.Character=="Silent"?SilentRelics.CardAdjustments(s,c):DefectRelics.CardAdjustments(s,c));
         parts.AddRange(CopyEngine.Adjustments(s,c));
+        parts.AddRange(RegentAttackLinks.Adjust(s,c));
         if(CopyEngine.Swift(c))parts.Add(new("迅捷首次打出抽牌，普通牌不重复触发",Math.Min(4,c.EnchantmentAmount*1.2)));
         if(s.Character!="Defect")parts=parts.Select(p=>p with{Reason=p.Reason.Replace("机器人",HeroPolicy.Label(s.Character))}).ToList();
         return new(o.Key,o.Name,true,o.Enabled,Math.Round(parts.Sum(p=>p.Value),3),parts.ToArray(),

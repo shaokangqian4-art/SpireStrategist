@@ -22,6 +22,7 @@ public sealed record RouteEconomy
     public bool CampEntryAlreadyArmed {get;init;}
     public bool CurrentCampEntered {get;init;}
     public double CampHealExtra {get;init;}
+    public double CampHumidifierGain {get;init;}
     public int CampHealMaxHpDelta {get;init;}
     public bool CampHealToFull {get;init;}
     public double NormalGoldMin {get;init;}=10;
@@ -76,9 +77,13 @@ public static class RoutePolicy
         var readiness=DeckReadiness.Read(s);
         var quality=readiness.Quality;
         var earlyDefect=s.Character is "Defect" or "Silent" or "Regent" or "Necrobinder"&&(s.Map?.ContentAct is >0?s.Map.ContentAct:s.Act)==1;
+        var earlyDamageEngine=s.Character switch{
+            "Silent"=>SilentPolicy.Analyze(s).DamageEngines>0,
+            "Regent" or "Necrobinder"=>HeroPolicy.Analyze(s).DamageEngines>0,
+            _=>DefectComposition.HasDamageEngine(s)};
         // Utility and future synergy are not evidence of immediate elite readiness.
         var earlyElitePenalty=earlyDefect
-            ? 12+20*(1-readiness.Offense)+((s.Character=="Silent"?SilentPolicy.Analyze(s).DamageEngines>0:DefectComposition.HasDamageEngine(s))?0:12):0;
+            ? (s.Character=="Regent"?8:12)+20*(1-readiness.Offense)+(earlyDamageEngine?0:12):0;
         // Use the SAME contextual upgrade model as actual smithing. A fixed catalog
         // threshold previously omitted Stoke entirely (catalog Upgrade = 9).
         var keys=known.Where(p=>CardMechanics.Upgrade(s,p.Card with{CanUpgrade=true})>=10).ToArray();
@@ -187,7 +192,7 @@ public static class RoutePolicy
             var basis=boss?55:kind=="Elite"?30:9*weak+18*(1-weak);
             var estimate=basis*(1-.65*combatQuality)*(1-.2*upgrade)
                 *(1+.12*(Math.Max(1,s.Map?.ContentAct??s.Act)-1))*economy.CombatRiskMultiplier;
-            if(earlyDefect&&kind=="Elite"&&!(s.Character=="Silent"?SilentPolicy.Analyze(s).DamageEngines>0:DefectComposition.HasDamageEngine(s)))
+            if(earlyDefect&&kind=="Elite"&&!earlyDamageEngine)
                 estimate=Math.Max(estimate,30*(1-.15*upgrade)*economy.CombatRiskMultiplier);
             // Gross damage, not net loss: recent healing/potions must not hide a fragile deck.
             var recent=s.RecentBattles.Where(b=>b.Act==s.Act&&b.MaxHp>0&&b.Room==(boss?"Boss":kind)).TakeLast(3).ToArray();
@@ -274,6 +279,9 @@ public static class RoutePolicy
                     {
                         var actual=Math.Min(maxHp-hp,heal);hp+=actual;
                         local+=economy.CampHealExtra;
+                        if(economy.CampHumidifierGain>0)
+                            local+=CampAndMushroomPolicy.HumidifierValue(projected,economy.CampHumidifierGain)
+                                -CampAndMushroomPolicy.HumidifierValue(s,economy.CampHumidifierGain);
                         // Gaining max HP also heals that amount; losing it clamps current HP.
                         maxHp=Math.Max(1,maxHp+economy.CampHealMaxHpDelta);
                         hp=Math.Min(maxHp,hp+Math.Max(0,economy.CampHealMaxHpDelta));

@@ -44,6 +44,8 @@ public sealed record RunSnapshot
     public int Ascension { get; init; }
     public string Room { get; init; } = "";
     public CardSnapshot[] Deck { get; init; } = [];
+    // Owned cards temporarily stored by Pael's Tooth. Never available in combat.
+    public CardSnapshot[] PendingToothCards { get; init; } = [];
     public string[] Relics { get; init; } = [];
     // Null in old journals: owning Girya alone does not prove any lifts were taken.
     public int? GiryaLifts { get; init; }

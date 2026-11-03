@@ -44,7 +44,7 @@ public static class DefectStrategy
         if(c.ClassName=="Dualcast")result=4+(s.Deck.Any(d=>d.ClassName is "Darkness" or "ConsumingShadow" or "Null")?5:0);
         if(c.ClassName=="AdaptiveStrike")result=CopyEngine.Active(s)?12:7;
         if(c.ClassName=="AllForOne")result=4; // extra damage, not stronger retrieval
-        return result;
+        return UpgradeReview.Refine(s,c,result);
     }
     public static double Remove(RunSnapshot s,CardSnapshot c)
     {

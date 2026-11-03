@@ -1,4 +1,4 @@
-# Global Strategy Assistant · 全局战略助手 · 0.6.55
+# Global Strategy Assistant · 全局战略助手 · 0.6.72
 
 [简体中文](README.zh-CN.md) · [Steam Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=3823884252) · [Downloads](https://github.com/shaokangqian4-art/SpireStrategist/releases)
 
@@ -6,11 +6,13 @@ A local strategy assistant for **all five native characters** in **Slay the Spir
 
 **No online AI account, API key or live AI inference is required.** Decisions use explainable heuristic scores. Scores are not win probabilities.
 
-## 0.6.55 update
+## 0.6.72 update
 
-Adds the remaining native characters, character-sensitive relic/potion valuation and budget-aware shop scores. Silent now values Runic Pyramid with Bullet Time, avoids redundant Calculated Gamble Retain upgrades under Pyramid, allows useful repeated Gambles in larger decks, and respects established shiv plans when considering forecast poison cards.
+Protects invested Regent colorless-generation and strength/multi-hit plans from unrelated Sword investment. Stardust is evaluated against spare Stars after existing resource demands. Mid/late-game filler must justify its marginal value; the Regent prior now uses an explicitly documented community tier review, not an official strength ranking.
 
-Validation: 236 core regressions, 16 native hook bindings and 20 recorded reward replays. These are not new completed gameplay runs or win-rate measurements.
+Improves mechanism-sensitive upgrade choices, healthy Stone Humidifier rest decisions, Large Mushroom risk handling, Scroll Boxes continuation, and Book of Five Rings purchase ordering. Includes the intervening 0.6.56–0.6.71 policy and compatibility changes.
+
+Validation: 270 core regressions, 8 release-specific native workflow checks, 1,000 copied-RNG checks and 19,800 structural policy checks passed in the development environment. These are not new completed gameplay runs or win-rate measurements. Regent and Necrobinder still need gameplay calibration.
 
 ## Features
 

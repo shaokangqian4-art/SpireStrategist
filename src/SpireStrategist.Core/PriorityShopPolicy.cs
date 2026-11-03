@@ -4,13 +4,15 @@ public sealed record ShopRelic(string Key,string Id,string Name,int Price);
 public sealed record PriorityPurchase(ShopRelic Relic,ShopCard? Card,string Reason)
 {
     public int TotalPrice=>Relic.Price+(Card?.Price??0);
+    public bool RelicFirst {get;init;}
+    public ShopCard? FirstCard=>RelicFirst?null:Card;
 }
 
 // Explicit whitelist, before ordinary removal/cards. The 100-gold reserve is for
 // later random relic spending, not a restriction on these requested priority buys.
 public static class PriorityShopPolicy
 {
-    public static PriorityPurchase? Evaluate(RunSnapshot s,ShopRelic[] relics,ShopCard[] cards,int boughtCards=0,int? removalPrice=null)
+    public static PriorityPurchase? Evaluate(RunSnapshot s,ShopRelic[] relics,ShopCard[] cards,int boughtCards=0,int? removalPrice=null,int relicReserve=100)
     {
         if(!DefectStrategy.Supported(s.Character)||s.PlayerCount!=1||s.MaxHp<=0)return null;
         var eligible=relics.Where(r=>r.Price>=0&&r.Price<=s.Gold&&!s.Relics.Contains(r.Id)&&!s.Relics.Contains("RELIC."+r.Id));
@@ -40,6 +42,18 @@ public static class PriorityShopPolicy
                 if(choice!=null)return new(relic,cards.Single(c=>c.Key==choice.Key),
                     "先确认 X 牌本身值得购买，且现款足够同时购买该牌与化学物 X；先买牌再买遗物。");
             }
+        }
+        // Order an already affordable pair, not "buy the book at any price".
+        // It counts cards added AFTER acquisition: five cards heal twenty HP.
+        // Never buy unwanted cards to chase a trigger or displace an exclusive core.
+        var ordinary=ShopPolicy.Evaluate(s,cards,removalPrice,s.Gold,boughtCards);
+        if(ordinary.Recommendation is {Kind:"card"} wanted)
+        foreach(var book in eligible.Where(r=>r.Id.Split('.').Last()=="BOOK_OF_FIVE_RINGS").OrderBy(r=>r.Price))
+        {
+            var model=RelicValue.Shop(book.Id,s);
+            if(book.Price+wanted.Price+relicReserve>s.Gold||model!=null&&model.Value-new StrategicValue(s).Gold(book.Price)<=0)continue;
+            return new(book,cards.Single(c=>c.Key==wanted.Key),
+                "五轮书先于已计划购买的卡牌：拿到遗物后每新增5张牌回复20生命，购牌计数从获得后开始；两者买完仍保留预算，成交后重算，不为回血额外抓牌。") {RelicFirst=true};
         }
         if(s.Character=="Defect")
         {

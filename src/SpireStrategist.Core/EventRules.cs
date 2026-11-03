@@ -6,7 +6,13 @@ public static class EventRules
     {
         var v=new StrategicValue(s);var o=key.Split('.').Last();var c=new EventChoice(key,name);
         double V(string k)=>vars.TryGetValue(k,out var n)?n:throw new InvalidOperationException("缺少事件变量 "+eventId+"."+k);
-        EventChoice Enchant(string id,int amount=1,int count=1)=>c with{Benefit=v.BestEnchant(id,amount,count),Selection="enchant:"+id};
+        EventChoice Enchant(string id,int amount=1,int count=1,string? type=null)
+        {
+            var targets=v.EnchantTargets(id,amount,type,count);
+            return c with{Benefit=targets.Sum(x=>x.Value),Selection="enchant:"+id,
+                Notes=targets.Length==0?["当前没有可评估的合法附魔目标。"]:
+                    targets.Select(x=>$"推荐附魔：{x.Card.Name}；{(id=="SHARP"?$"预计可支付 {RegentAttackLinks.Hits(s,x.Card):0.#} 段，重复打出收益":id=="SWIFT"?$"首次抽牌，过牌需求倍率 {EnchantmentValue.DrawNeed(s):0.##}":"按当前牌组与可重复使用价值评估")}；{x.Value:0.0} 分").ToArray()};
+        }
         EventChoice Combat(double reward)=>c with{Benefit=reward,Burden=(10+Math.Max(0,5-v.Attack)*4)*(1+2*(1-v.Ratio)),Notes=["事件战斗采用保守战损先验；尚未调用整场试战。"]};
         EventChoice Unknown()=>c with{Supported=false,Notes=["未核验的事件分支："+key]};
         // These are explicit option keys, never a keyword classifier over translated descriptions.
@@ -44,7 +50,7 @@ public static class EventRules
                     s.NextNodeTypes.Contains("Shop")&&s.Gold>=150?6:8,
                 Selection="remove",Notes=["优先长期精简；删两张后获得常态，需要后续删牌或可选手牌消耗处理。成本按已有处理手段及可见商店机会折扣，不保证及时处理。"]},_=>Unknown()},
             "GRAVE_OF_THE_FORGOTTEN"=>o switch{"ACCEPT"=>c with{Benefit=RelicValue.Evaluate("FORGOTTEN_SOUL",s).Value},"CONFRONT"=>Enchant("SOULS_POWER") with{Burden=v.Curse()},_=>Unknown()},
-            "HUNGRY_FOR_MUSHROOMS"=>o switch{"BIG_MUSHROOM"=>c with{MaxHp=20,Burden=20},"FRAGRANT_MUSHROOM"=>c with{HpLoss=15,RandomUpgrade=2},_=>Unknown()},
+            "HUNGRY_FOR_MUSHROOMS"=>o switch{"BIG_MUSHROOM"=>CampAndMushroomPolicy.Mushroom(c,s),"FRAGRANT_MUSHROOM"=>c with{HpLoss=15,RandomUpgrade=2},_=>Unknown()},
             "INFESTED_AUTOMATON"=>o switch{"STUDY"=>c with{Benefit=3+Math.Max(0,2-v.Powers)},"TOUCH_CORE"=>c with{Benefit=3},_=>Unknown()},
             "JUNGLE_MAZE_ADVENTURE"=>o switch{"JOIN_FORCES"=>c with{Gold=V("JoinForcesGold")},"SOLO_QUEST"=>c with{Gold=V("SoloGold"),HpLoss=V("SoloHp")},_=>Unknown()},
             "LOST_WISP"=>o switch{"CLAIM"=>c with{Benefit=v.Powers*4,Burden=v.Curse()},"SEARCH"=>c with{Gold=V("Gold")},_=>Unknown()},
@@ -58,7 +64,7 @@ public static class EventRules
             "ROOM_FULL_OF_CHEESE"=>o switch{"GORGE"=>c with{Benefit=3,Selection="add"},"SEARCH"=>c with{HpLoss=V("Damage"),Benefit=s.Character=="Defect"?DefectStrategy.CheeseValue(s):8*v.Horizon,Notes=["每场战斗增加1点最大生命；后续战斗数为折扣估计，仍扣除当下14点伤害风险。"]},_=>Unknown()},
             "ROUND_TEA_PARTY"=>o switch{"ENJOY_TEA"=>c with{Heal=s.MaxHp,Burden=10*v.Horizon},"PICK_FIGHT"=>c with{HpLoss=V("Damage"),Benefit=10},"CONTINUE_FIGHT"=>c,_=>Unknown()},
             "SAPPHIRE_SEED"=>o switch{"EAT"=>c with{Heal=V("Heal"),Upgrade=1,Selection="upgrade"},"PLANT"=>Enchant("SOWN"),_=>Unknown()},
-            "SELF_HELP_BOOK"=>o switch{"READ_THE_BACK"=>Enchant("SHARP",2),"READ_PASSAGE"=>Enchant("NIMBLE",2),"READ_ENTIRE_BOOK"=>Enchant("SWIFT",2),"NO_OPTIONS"=>c,_=>Unknown()},
+            "SELF_HELP_BOOK"=>o switch{"READ_THE_BACK"=>Enchant("SHARP",2,type:"Attack"),"READ_PASSAGE"=>Enchant("NIMBLE",2,type:"Skill"),"READ_ENTIRE_BOOK"=>Enchant("SWIFT",2,type:"Power"),"NO_OPTIONS"=>c,_=>Unknown()},
             "SLIPPERY_BRIDGE"=>o=="OVERCOME"?c with{Supported=false,Notes=["需要读取实际待移除卡牌。"]}:o.StartsWith("HOLD_ON")?c with{HpLoss=V("HpLoss"),Benefit=v.RemoveBest(1)*.5}:Unknown(),
             "SPIRALING_WHIRLPOOL"=>o switch{"DRINK"=>c with{Heal=V("Heal")},"OBSERVE"=>Enchant("SPIRAL"),"REACH_IN"=>c with{Benefit=10,Burden=16},_=>Unknown()},
             "SPIRIT_GRAFTER"=>o switch{"LET_IT_IN"=>c with{Heal=V("LetItInHealAmount"),Benefit=2},"REJECTION"=>c with{HpLoss=V("RejectionHpLoss"),Upgrade=1,Selection="upgrade"},_=>Unknown()},

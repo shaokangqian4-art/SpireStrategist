@@ -1,0 +1,2952 @@
+[
+  {
+    "seed": "ADB6573C4F8E",
+    "id": "6d7f03011b0b41ed981d3f2803aecaa6",
+    "kind": "cards",
+    "state": {
+      "character": "Regent",
+      "playerCount": 1,
+      "multiplayerSession": false,
+      "isMultiplayer": false,
+      "hp": 43,
+      "maxHp": 78,
+      "hpAfterPendingAncient": null,
+      "gold": 180,
+      "energy": 3,
+      "combatSolverAvailable": true,
+      "act": 2,
+      "floor": 21,
+      "ascension": 10,
+      "room": "CombatRoom",
+      "deck": [
+        {
+          "id": "CARD.STRIKE_REGENT",
+          "className": "StrikeRegent",
+          "name": "打击",
+          "type": "Attack",
+          "rarity": "Basic",
+          "description": "",
+          "cost": 1,
+          "costsX": false,
+          "starCost": -1,
+          "costsStarX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "multiplayerOnly": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {
+            "Damage": 6
+          }
+        },
+        {
+          "id": "CARD.STRIKE_REGENT",
+          "className": "StrikeRegent",
+          "name": "打击",
+          "type": "Attack",
+          "rarity": "Basic",
+          "description": "",
+          "cost": 1,
+          "costsX": false,
+          "starCost": -1,
+          "costsStarX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "multiplayerOnly": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {
+            "Damage": 6
+          }
+        },
+        {
+          "id": "CARD.DEFEND_REGENT",
+          "className": "DefendRegent",
+          "name": "防御",
+          "type": "Skill",
+          "rarity": "Basic",
+          "description": "",
+          "cost": 1,
+          "costsX": false,
+          "starCost": -1,
+          "costsStarX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "multiplayerOnly": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {
+            "Block": 5
+          }
+        },
+        {
+          "id": "CARD.DEFEND_REGENT",
+          "className": "DefendRegent",
+          "name": "防御",
+          "type": "Skill",
+          "rarity": "Basic",
+          "description": "",
+          "cost": 1,
+          "costsX": false,
+          "starCost": -1,
+          "costsStarX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "multiplayerOnly": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {
+            "Block": 5
+          }
+        },
+        {
+          "id": "CARD.DEFEND_REGENT",
+          "className": "DefendRegent",
+          "name": "防御",
+          "type": "Skill",
+          "rarity": "Basic",
+          "description": "",
+          "cost": 1,
+          "costsX": false,
+          "starCost": -1,
+          "costsStarX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "multiplayerOnly": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {
+            "Block": 5
+          }
+        },
+        {
+          "id": "CARD.DEFEND_REGENT",
+          "className": "DefendRegent",
+          "name": "防御",
+          "type": "Skill",
+          "rarity": "Basic",
+          "description": "",
+          "cost": 1,
+          "costsX": false,
+          "starCost": -1,
+          "costsStarX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "multiplayerOnly": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {
+            "Block": 5
+          }
+        },
+        {
+          "id": "CARD.FALLING_STAR",
+          "className": "FallingStar",
+          "name": "陨星",
+          "type": "Attack",
+          "rarity": "Basic",
+          "description": "",
+          "cost": 0,
+          "costsX": false,
+          "starCost": 2,
+          "costsStarX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "multiplayerOnly": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {
+            "Damage": 8,
+            "VulnerablePower": 1,
+            "WeakPower": 1
+          }
+        },
+        {
+          "id": "CARD.VENERATE",
+          "className": "Venerate",
+          "name": "崇拜",
+          "type": "Skill",
+          "rarity": "Basic",
+          "description": "",
+          "cost": 1,
+          "costsX": false,
+          "starCost": -1,
+          "costsStarX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "multiplayerOnly": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {
+            "Stars": 2
+          }
+        },
+        {
+          "id": "CARD.ASCENDERS_BANE",
+          "className": "AscendersBane",
+          "name": "进阶之灾",
+          "type": "Curse",
+          "rarity": "Curse",
+          "description": "",
+          "cost": -1,
+          "costsX": false,
+          "starCost": -1,
+          "costsStarX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": false,
+          "modified": false,
+          "multiplayerOnly": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [
+            "Eternal",
+            "Ethereal",
+            "Unplayable"
+          ],
+          "variables": {}
+        },
+        {
+          "id": "CARD.BLACK_HOLE",
+          "className": "BlackHole",
+          "name": "黑洞+",
+          "type": "Power",
+          "rarity": "Uncommon",
+          "description": "",
+          "cost": 1,
+          "costsX": false,
+          "starCost": -1,
+          "costsStarX": false,
+          "upgradeLevel": 1,
+          "canUpgrade": false,
+          "modified": false,
+          "multiplayerOnly": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {
+            "BlackHolePower": 4
+          }
+        },
+        {
+          "id": "CARD.SOLAR_STRIKE",
+          "className": "SolarStrike",
+          "name": "太阳打击+",
+          "type": "Attack",
+          "rarity": "Common",
+          "description": "",
+          "cost": 1,
+          "costsX": false,
+          "starCost": -1,
+          "costsStarX": false,
+          "upgradeLevel": 1,
+          "canUpgrade": false,
+          "modified": false,
+          "multiplayerOnly": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {
+            "Damage": 10,
+            "Stars": 2
+          }
+        },
+        {
+          "id": "CARD.CRESCENT_SPEAR",
+          "className": "CrescentSpear",
+          "name": "新月长矛",
+          "type": "Attack",
+          "rarity": "Common",
+          "description": "",
+          "cost": 1,
+          "costsX": false,
+          "starCost": 1,
+          "costsStarX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "multiplayerOnly": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {
+            "CalculatedDamage": 8,
+            "CalculationBase": 8,
+            "ExtraDamage": 2
+          }
+        },
+        {
+          "id": "CARD.WROUGHT_IN_WAR",
+          "className": "WroughtInWar",
+          "name": "战火铸就",
+          "type": "Attack",
+          "rarity": "Common",
+          "description": "",
+          "cost": 1,
+          "costsX": false,
+          "starCost": -1,
+          "costsStarX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "multiplayerOnly": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {
+            "Damage": 7,
+            "Forge": 7
+          }
+        },
+        {
+          "id": "CARD.BEGONE",
+          "className": "Begone",
+          "name": "下去！",
+          "type": "Skill",
+          "rarity": "Common",
+          "description": "",
+          "cost": 1,
+          "costsX": false,
+          "starCost": -1,
+          "costsStarX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "multiplayerOnly": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {}
+        },
+        {
+          "id": "CARD.PILLAR_OF_CREATION",
+          "className": "PillarOfCreation",
+          "name": "创世之柱",
+          "type": "Power",
+          "rarity": "Uncommon",
+          "description": "",
+          "cost": 1,
+          "costsX": false,
+          "starCost": -1,
+          "costsStarX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "multiplayerOnly": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {
+            "Block": 2
+          }
+        },
+        {
+          "id": "CARD.RESONANCE",
+          "className": "Resonance",
+          "name": "共鸣",
+          "type": "Skill",
+          "rarity": "Uncommon",
+          "description": "",
+          "cost": 1,
+          "costsX": false,
+          "starCost": 2,
+          "costsStarX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "multiplayerOnly": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {
+            "StrengthPower": 1
+          }
+        },
+        {
+          "id": "CARD.BIG_BANG",
+          "className": "BigBang",
+          "name": "大爆炸",
+          "type": "Skill",
+          "rarity": "Rare",
+          "description": "",
+          "cost": 0,
+          "costsX": false,
+          "starCost": -1,
+          "costsStarX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "multiplayerOnly": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [
+            "Exhaust"
+          ],
+          "variables": {
+            "Cards": 1,
+            "Energy": 1,
+            "Forge": 5,
+            "Stars": 1
+          }
+        },
+        {
+          "id": "CARD.SUMMON_FORTH",
+          "className": "SummonForth",
+          "name": "征召上前",
+          "type": "Skill",
+          "rarity": "Uncommon",
+          "description": "",
+          "cost": 1,
+          "costsX": false,
+          "starCost": -1,
+          "costsStarX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "multiplayerOnly": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {
+            "Forge": 8
+          }
+        },
+        {
+          "id": "CARD.CONQUEROR",
+          "className": "Conqueror",
+          "name": "征服者",
+          "type": "Skill",
+          "rarity": "Uncommon",
+          "description": "",
+          "cost": 1,
+          "costsX": false,
+          "starCost": -1,
+          "costsStarX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "multiplayerOnly": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {
+            "Forge": 3
+          }
+        },
+        {
+          "id": "CARD.GATHER_LIGHT",
+          "className": "GatherLight",
+          "name": "收集光辉",
+          "type": "Skill",
+          "rarity": "Common",
+          "description": "",
+          "cost": 1,
+          "costsX": false,
+          "starCost": -1,
+          "costsStarX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "multiplayerOnly": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {
+            "Block": 8,
+            "Stars": 1
+          }
+        }
+      ],
+      "relics": [
+        "RELIC.DIVINE_RIGHT",
+        "RELIC.PRECISE_SCISSORS",
+        "RELIC.ODDLY_SMOOTH_STONE",
+        "RELIC.STRIKE_DUMMY",
+        "RELIC.CHOSEN_CHEESE",
+        "RELIC.VERY_HOT_COCOA"
+      ],
+      "giryaLifts": null,
+      "potionSlots": [
+        "POTION.LIQUID_BRONZE",
+        null
+      ],
+      "nextNodeTypes": [
+        "Monster",
+        "Shop",
+        "Unknown"
+      ],
+      "hidden": {
+        "seed": "ADB6573C4F8E",
+        "streams": [
+          {
+            "stream": "run.UpFront",
+            "counter": 409,
+            "s0": 4402368338867948376,
+            "s1": 153905960408717613,
+            "s2": 13396349968942117764,
+            "s3": 4819069867210004802,
+            "preview": [
+              57170,
+              629845,
+              103847,
+              957780
+            ]
+          },
+          {
+            "stream": "run.Shuffle",
+            "counter": 246,
+            "s0": 7541452501803497928,
+            "s1": 16391807903152667028,
+            "s2": 2875098609842939176,
+            "s3": 3515787724906757024,
+            "preview": [
+              345716,
+              712999,
+              553115,
+              266197
+            ]
+          },
+          {
+            "stream": "run.UnknownMapPoint",
+            "counter": 5,
+            "s0": 17564032527047482680,
+            "s1": 4254546048849407582,
+            "s2": 5543691268757508710,
+            "s3": 5929823858639002180,
+            "preview": [
+              482963,
+              80539,
+              751325,
+              363907
+            ]
+          },
+          {
+            "stream": "run.CombatCardGeneration",
+            "counter": 0,
+            "s0": 5014227009905254125,
+            "s1": 17617717475082870346,
+            "s2": 3646872368214825587,
+            "s3": 5500145279216734121,
+            "preview": [
+              136257,
+              773350,
+              475550,
+              925502
+            ]
+          },
+          {
+            "stream": "run.CombatPotionGeneration",
+            "counter": 0,
+            "s0": 5983708712574476355,
+            "s1": 5712843946663389774,
+            "s2": 16677567654856768854,
+            "s3": 1980943983935572241,
+            "preview": [
+              836811,
+              796159,
+              893734,
+              991267
+            ]
+          },
+          {
+            "stream": "run.CombatCardSelection",
+            "counter": 0,
+            "s0": 18407560845245904375,
+            "s1": 8893352767036178148,
+            "s2": 10686902331531214174,
+            "s3": 16095334267997287890,
+            "preview": [
+              951408,
+              98278,
+              13466,
+              41444
+            ]
+          },
+          {
+            "stream": "run.CombatEnergyCosts",
+            "counter": 0,
+            "s0": 16151522282267471423,
+            "s1": 6409658813865299434,
+            "s2": 486898406399426494,
+            "s3": 17927838242092052264,
+            "preview": [
+              417411,
+              96605,
+              537046,
+              102913
+            ]
+          },
+          {
+            "stream": "run.CombatTargets",
+            "counter": 0,
+            "s0": 17313798889392084773,
+            "s1": 11987818401220429392,
+            "s2": 4198912435182657291,
+            "s3": 9208705408712508607,
+            "preview": [
+              199001,
+              281488,
+              160454,
+              748501
+            ]
+          },
+          {
+            "stream": "run.MonsterAi",
+            "counter": 15,
+            "s0": 13352573849751278455,
+            "s1": 7312660095371959315,
+            "s2": 17256713200427069330,
+            "s3": 9960985001847105107,
+            "preview": [
+              379765,
+              25727,
+              415882,
+              352578
+            ]
+          },
+          {
+            "stream": "run.Niche",
+            "counter": 17,
+            "s0": 2729901756784029710,
+            "s1": 11489046354670357650,
+            "s2": 12585082250288679238,
+            "s3": 8034380580249965203,
+            "preview": [
+              457317,
+              654177,
+              741972,
+              114644
+            ]
+          },
+          {
+            "stream": "run.CombatOrbGeneration",
+            "counter": 0,
+            "s0": 18062572922257267433,
+            "s1": 15423078758983889629,
+            "s2": 10077534558163719412,
+            "s3": 6157035514604436915,
+            "preview": [
+              859823,
+              87554,
+              566109,
+              234140
+            ]
+          },
+          {
+            "stream": "run.TreasureRoomRelics",
+            "counter": 2,
+            "s0": 1241336664585227988,
+            "s1": 17201273524817772297,
+            "s2": 7990160295230760948,
+            "s3": 82130241677797433,
+            "preview": [
+              101540,
+              337667,
+              191053,
+              156423
+            ]
+          },
+          {
+            "stream": "player.Rewards",
+            "counter": 136,
+            "s0": 12501249025250323642,
+            "s1": 2802106032670308569,
+            "s2": 16928206549812099168,
+            "s3": 420832413944791505,
+            "preview": [
+              958241,
+              639518,
+              111021,
+              314858
+            ]
+          },
+          {
+            "stream": "player.Shops",
+            "counter": 28,
+            "s0": 6670322908324028682,
+            "s1": 13900084078536423188,
+            "s2": 4770063438277629604,
+            "s3": 7523846873639663080,
+            "preview": [
+              304390,
+              982364,
+              772691,
+              113880
+            ]
+          },
+          {
+            "stream": "player.Transformations",
+            "counter": 0,
+            "s0": 7659738410232184195,
+            "s1": 4642170178146488394,
+            "s2": 9296036518746161624,
+            "s3": 12056808949894280854,
+            "preview": [
+              518685,
+              549168,
+              451487,
+              677521
+            ]
+          }
+        ],
+        "acts": [
+          {
+            "act": 1,
+            "normalEncounters": [
+              "ENCOUNTER.NIBBITS_WEAK",
+              "ENCOUNTER.SLIMES_WEAK",
+              "ENCOUNTER.SHRINKER_BEETLE_WEAK",
+              "ENCOUNTER.NIBBITS_NORMAL",
+              "ENCOUNTER.SLITHERING_STRANGLER_NORMAL",
+              "ENCOUNTER.CUBEX_CONSTRUCT_NORMAL",
+              "ENCOUNTER.VINE_SHAMBLER_NORMAL",
+              "ENCOUNTER.RUBY_RAIDERS_NORMAL",
+              "ENCOUNTER.SLIMES_NORMAL",
+              "ENCOUNTER.INKLETS_NORMAL",
+              "ENCOUNTER.OVERGROWTH_CRAWLERS",
+              "ENCOUNTER.MAWLER_NORMAL",
+              "ENCOUNTER.FOGMOG_NORMAL",
+              "ENCOUNTER.SNAPPING_JAXFRUIT_NORMAL",
+              "ENCOUNTER.FLYCONID_NORMAL"
+            ],
+            "normalVisited": 7,
+            "eliteEncounters": [
+              "ENCOUNTER.BYGONE_EFFIGY_ELITE",
+              "ENCOUNTER.BYRDONIS_ELITE",
+              "ENCOUNTER.PHROG_PARASITE_ELITE",
+              "ENCOUNTER.BYGONE_EFFIGY_ELITE",
+              "ENCOUNTER.BYRDONIS_ELITE",
+              "ENCOUNTER.PHROG_PARASITE_ELITE",
+              "ENCOUNTER.BYRDONIS_ELITE",
+              "ENCOUNTER.PHROG_PARASITE_ELITE",
+              "ENCOUNTER.BYGONE_EFFIGY_ELITE",
+              "ENCOUNTER.PHROG_PARASITE_ELITE",
+              "ENCOUNTER.BYGONE_EFFIGY_ELITE",
+              "ENCOUNTER.BYRDONIS_ELITE",
+              "ENCOUNTER.PHROG_PARASITE_ELITE",
+              "ENCOUNTER.BYGONE_EFFIGY_ELITE",
+              "ENCOUNTER.BYRDONIS_ELITE"
+            ],
+            "eliteVisited": 0,
+            "eventPool": [
+              "EVENT.SLIPPERY_BRIDGE",
+              "EVENT.POTION_COURIER",
+              "EVENT.FAKE_MERCHANT",
+              "EVENT.DENSE_VEGETATION",
+              "EVENT.RELIC_TRADER",
+              "EVENT.RANWID_THE_ELDER",
+              "EVENT.ROOM_FULL_OF_CHEESE",
+              "EVENT.WHISPERING_HOLLOW",
+              "EVENT.UNREST_SITE",
+              "EVENT.AROMA_OF_CHAOS",
+              "EVENT.THE_FUTURE_OF_POTIONS",
+              "EVENT.BYRDONIS_NEST",
+              "EVENT.THE_LEGENDS_WERE_TRUE",
+              "EVENT.TEA_MASTER",
+              "EVENT.MORPHIC_GROVE",
+              "EVENT.WOOD_CARVINGS",
+              "EVENT.DOLL_ROOM",
+              "EVENT.BRAIN_LEECH",
+              "EVENT.SELF_HELP_BOOK",
+              "EVENT.STONE_OF_ALL_TIME",
+              "EVENT.SAPPHIRE_SEED",
+              "EVENT.LUMINOUS_CHOIR",
+              "EVENT.WAR_HISTORIAN_REPY",
+              "EVENT.WELCOME_TO_WONGOS",
+              "EVENT.THIS_OR_THAT",
+              "EVENT.SYMBIOTE",
+              "EVENT.WELLSPRING",
+              "EVENT.JUNGLE_MAZE_ADVENTURE",
+              "EVENT.SUNKEN_STATUE",
+              "EVENT.TABLET_OF_TRUTH",
+              "EVENT.CRYSTAL_SPHERE"
+            ],
+            "eventsVisited": 7,
+            "boss": "ENCOUNTER.CEREMONIAL_BEAST_BOSS",
+            "secondBoss": null,
+            "ancient": "EVENT.NEOW"
+          },
+          {
+            "act": 2,
+            "normalEncounters": [
+              "ENCOUNTER.EXOSKELETONS_WEAK",
+              "ENCOUNTER.TUNNELER_WEAK",
+              "ENCOUNTER.LOUSE_PROGENITOR_NORMAL",
+              "ENCOUNTER.THE_OBSCURA_NORMAL",
+              "ENCOUNTER.BOWLBUGS_NORMAL",
+              "ENCOUNTER.OVICOPTER_NORMAL",
+              "ENCOUNTER.SPINY_TOAD_NORMAL",
+              "ENCOUNTER.CHOMPERS_NORMAL",
+              "ENCOUNTER.EXOSKELETONS_NORMAL",
+              "ENCOUNTER.HUNTER_KILLER_NORMAL",
+              "ENCOUNTER.SLUMBERING_BEETLE_NORMAL",
+              "ENCOUNTER.MYTES_NORMAL",
+              "ENCOUNTER.HUNTER_KILLER_NORMAL",
+              "ENCOUNTER.EXOSKELETONS_NORMAL"
+            ],
+            "normalVisited": 2,
+            "eliteEncounters": [
+              "ENCOUNTER.ENTOMANCER_ELITE",
+              "ENCOUNTER.INFESTED_PRISMS_ELITE",
+              "ENCOUNTER.DECIMILLIPEDE_ELITE",
+              "ENCOUNTER.ENTOMANCER_ELITE",
+              "ENCOUNTER.INFESTED_PRISMS_ELITE",
+              "ENCOUNTER.DECIMILLIPEDE_ELITE",
+              "ENCOUNTER.ENTOMANCER_ELITE",
+              "ENCOUNTER.INFESTED_PRISMS_ELITE",
+              "ENCOUNTER.DECIMILLIPEDE_ELITE",
+              "ENCOUNTER.ENTOMANCER_ELITE",
+              "ENCOUNTER.INFESTED_PRISMS_ELITE",
+              "ENCOUNTER.DECIMILLIPEDE_ELITE",
+              "ENCOUNTER.ENTOMANCER_ELITE",
+              "ENCOUNTER.INFESTED_PRISMS_ELITE",
+              "ENCOUNTER.DECIMILLIPEDE_ELITE"
+            ],
+            "eliteVisited": 0,
+            "eventPool": [
+              "EVENT.ZEN_WEAVER",
+              "EVENT.COLOSSAL_FLOWER",
+              "EVENT.SELF_HELP_BOOK",
+              "EVENT.FAKE_MERCHANT",
+              "EVENT.WAR_HISTORIAN_REPY",
+              "EVENT.THE_FUTURE_OF_POTIONS",
+              "EVENT.TEA_MASTER",
+              "EVENT.SPIRIT_GRAFTER",
+              "EVENT.ROOM_FULL_OF_CHEESE",
+              "EVENT.INFESTED_AUTOMATON",
+              "EVENT.BUGSLAYER",
+              "EVENT.FIELD_OF_MAN_SIZED_HOLES",
+              "EVENT.CRYSTAL_SPHERE",
+              "EVENT.STONE_OF_ALL_TIME",
+              "EVENT.LOST_WISP",
+              "EVENT.BRAIN_LEECH",
+              "EVENT.SLIPPERY_BRIDGE",
+              "EVENT.THE_LANTERN_KEY",
+              "EVENT.SYMBIOTE",
+              "EVENT.DOLL_ROOM",
+              "EVENT.THE_LEGENDS_WERE_TRUE",
+              "EVENT.RANWID_THE_ELDER",
+              "EVENT.COLORFUL_PHILOSOPHERS",
+              "EVENT.POTION_COURIER",
+              "EVENT.THIS_OR_THAT",
+              "EVENT.AMALGAMATOR",
+              "EVENT.WELCOME_TO_WONGOS",
+              "EVENT.RELIC_TRADER"
+            ],
+            "eventsVisited": 1,
+            "boss": "ENCOUNTER.THE_INSATIABLE_BOSS",
+            "secondBoss": null,
+            "ancient": "EVENT.TEZCATARA"
+          },
+          {
+            "act": 3,
+            "normalEncounters": [
+              "ENCOUNTER.TURRET_OPERATOR_WEAK",
+              "ENCOUNTER.SCROLLS_OF_BITING_WEAK",
+              "ENCOUNTER.CONSTRUCT_MENAGERIE_NORMAL",
+              "ENCOUNTER.THE_LOST_AND_FORGOTTEN_NORMAL",
+              "ENCOUNTER.OWL_MAGISTRATE_NORMAL",
+              "ENCOUNTER.FABRICATOR_NORMAL",
+              "ENCOUNTER.FROG_KNIGHT_NORMAL",
+              "ENCOUNTER.GLOBE_HEAD_NORMAL",
+              "ENCOUNTER.SLIMED_BERSERKER_NORMAL",
+              "ENCOUNTER.AXEBOTS_NORMAL",
+              "ENCOUNTER.SCROLLS_OF_BITING_NORMAL",
+              "ENCOUNTER.FABRICATOR_NORMAL",
+              "ENCOUNTER.GLOBE_HEAD_NORMAL"
+            ],
+            "normalVisited": 0,
+            "eliteEncounters": [
+              "ENCOUNTER.MECHA_KNIGHT_ELITE",
+              "ENCOUNTER.SOUL_NEXUS_ELITE",
+              "ENCOUNTER.KNIGHTS_ELITE",
+              "ENCOUNTER.MECHA_KNIGHT_ELITE",
+              "ENCOUNTER.KNIGHTS_ELITE",
+              "ENCOUNTER.SOUL_NEXUS_ELITE",
+              "ENCOUNTER.KNIGHTS_ELITE",
+              "ENCOUNTER.SOUL_NEXUS_ELITE",
+              "ENCOUNTER.MECHA_KNIGHT_ELITE",
+              "ENCOUNTER.KNIGHTS_ELITE",
+              "ENCOUNTER.SOUL_NEXUS_ELITE",
+              "ENCOUNTER.MECHA_KNIGHT_ELITE",
+              "ENCOUNTER.SOUL_NEXUS_ELITE",
+              "ENCOUNTER.MECHA_KNIGHT_ELITE",
+              "ENCOUNTER.KNIGHTS_ELITE"
+            ],
+            "eliteVisited": 0,
+            "eventPool": [
+              "EVENT.DOLL_ROOM",
+              "EVENT.ROOM_FULL_OF_CHEESE",
+              "EVENT.RANWID_THE_ELDER",
+              "EVENT.TEA_MASTER",
+              "EVENT.REFLECTIONS",
+              "EVENT.BRAIN_LEECH",
+              "EVENT.SLIPPERY_BRIDGE",
+              "EVENT.WELCOME_TO_WONGOS",
+              "EVENT.THE_FUTURE_OF_POTIONS",
+              "EVENT.SYMBIOTE",
+              "EVENT.TINKER_TIME",
+              "EVENT.FAKE_MERCHANT",
+              "EVENT.STONE_OF_ALL_TIME",
+              "EVENT.SELF_HELP_BOOK",
+              "EVENT.THIS_OR_THAT",
+              "EVENT.WAR_HISTORIAN_REPY",
+              "EVENT.GRAVE_OF_THE_FORGOTTEN",
+              "EVENT.CRYSTAL_SPHERE",
+              "EVENT.TRIAL",
+              "EVENT.POTION_COURIER",
+              "EVENT.ROUND_TEA_PARTY",
+              "EVENT.RELIC_TRADER",
+              "EVENT.THE_LEGENDS_WERE_TRUE",
+              "EVENT.HUNGRY_FOR_MUSHROOMS",
+              "EVENT.BATTLEWORN_DUMMY"
+            ],
+            "eventsVisited": 0,
+            "boss": "ENCOUNTER.AEONGLASS_BOSS",
+            "secondBoss": "ENCOUNTER.TEST_SUBJECT_BOSS",
+            "ancient": "EVENT.DARV"
+          }
+        ],
+        "drawPile": [],
+        "sourceUnchanged": true,
+        "error": null
+      },
+      "foresight": {
+        "fingerprint": "CDF00847F55D7D4CC9BDD8CB68084D2DB6E7E9764F95DF96F17E3F88A0E37E34",
+        "sourceUnchanged": true,
+        "branches": [],
+        "status": "辉眼：当前幕内没有可预览的后续战斗奖励。"
+      },
+      "map": {
+        "totalActs": 3,
+        "rows": 15,
+        "currentRow": 3,
+        "bossRow": 15,
+        "mapType": "MegaCrit.Sts2.Core.Map.StandardActMap",
+        "longMap": false,
+        "extraLayers": 0,
+        "extraActs": 0,
+        "contentAct": 2,
+        "enemyHpScale": 1,
+        "enemyDamageScale": 1,
+        "combatGoldScale": 1,
+        "error": null
+      },
+      "recentBattles": [
+        {
+          "act": 2,
+          "room": "Monster",
+          "encounter": "ENCOUNTER.EXOSKELETONS_WEAK",
+          "damageTaken": 2,
+          "healing": 1,
+          "potionsUsed": 0,
+          "maxHp": 77
+        }
+      ],
+      "commerce": {
+        "reachableShops": 2,
+        "nearestShopDistance": 1,
+        "reachableUnknowns": 9,
+        "futureActs": 1
+      },
+      "campRouteRisk": {}
+    },
+    "options": [
+      {
+        "key": "card:0",
+        "name": "星星点点",
+        "kind": "card",
+        "enabled": true,
+        "card": {
+          "id": "CARD.PATTER",
+          "className": "Patter",
+          "name": "星星点点",
+          "type": "Skill",
+          "rarity": "Common",
+          "description": "",
+          "cost": 1,
+          "costsX": false,
+          "starCost": -1,
+          "costsStarX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "multiplayerOnly": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {
+            "Block": 8,
+            "VigorPower": 2
+          }
+        },
+        "healAmount": 0,
+        "smithCount": 1,
+        "effectValue": null
+      },
+      {
+        "key": "card:1",
+        "name": "征服者",
+        "kind": "card",
+        "enabled": true,
+        "card": {
+          "id": "CARD.CONQUEROR",
+          "className": "Conqueror",
+          "name": "征服者",
+          "type": "Skill",
+          "rarity": "Uncommon",
+          "description": "",
+          "cost": 1,
+          "costsX": false,
+          "starCost": -1,
+          "costsStarX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "multiplayerOnly": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {
+            "Forge": 3
+          }
+        },
+        "healAmount": 0,
+        "smithCount": 1,
+        "effectValue": null
+      },
+      {
+        "key": "card:2",
+        "name": "何人僭越",
+        "kind": "card",
+        "enabled": true,
+        "card": {
+          "id": "CARD.KNOW_THY_PLACE",
+          "className": "KnowThyPlace",
+          "name": "何人僭越",
+          "type": "Skill",
+          "rarity": "Common",
+          "description": "",
+          "cost": 0,
+          "costsX": false,
+          "starCost": -1,
+          "costsStarX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "multiplayerOnly": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [
+            "Exhaust"
+          ],
+          "variables": {
+            "VulnerablePower": 1,
+            "WeakPower": 1
+          }
+        },
+        "healAmount": 0,
+        "smithCount": 1,
+        "effectValue": null
+      },
+      {
+        "key": "alternative:0",
+        "name": "跳过",
+        "kind": "skip",
+        "enabled": true,
+        "card": null,
+        "healAmount": 0,
+        "smithCount": 1,
+        "effectValue": null
+      }
+    ],
+    "old": {
+      "policyVersion": "regent-draft-0.3",
+      "recommendedKey": "card:1",
+      "options": [
+        {
+          "key": "card:0",
+          "name": "星星点点",
+          "supported": true,
+          "enabled": true,
+          "score": 0.043,
+          "parts": [
+            {
+              "reason": "基础机制先验（未实战校准）",
+              "value": 3.3
+            },
+            {
+              "reason": "同版本单人A10同稀有度统计修正（有限幅度）",
+              "value": -0.098
+            },
+            {
+              "reason": "前／中／后期需求",
+              "value": -0.6
+            },
+            {
+              "reason": "占用一次抽牌的基准成本",
+              "value": -2.5
+            },
+            {
+              "reason": "已有即时输出后少添过渡牌",
+              "value": -0.295
+            },
+            {
+              "reason": "防守缺口",
+              "value": 0.236
+            }
+          ],
+          "notes": [
+            "基础防御附少量活力，不当作成长核心。"
+          ]
+        },
+        {
+          "key": "card:1",
+          "name": "征服者",
+          "supported": true,
+          "enabled": true,
+          "score": 2.557,
+          "parts": [
+            {
+              "reason": "基础机制先验（未实战校准）",
+              "value": 5.2
+            },
+            {
+              "reason": "同版本单人A10同稀有度统计修正（有限幅度）",
+              "value": -0.099
+            },
+            {
+              "reason": "前／中／后期需求",
+              "value": 0.2
+            },
+            {
+              "reason": "占用一次抽牌的基准成本",
+              "value": -2.5
+            },
+            {
+              "reason": "重复份数递减",
+              "value": -4.4
+            },
+            {
+              "reason": "铸造支持已有剑与取剑组件",
+              "value": 2
+            },
+            {
+              "reason": "剑放大需要真实铸造入口",
+              "value": 2.156
+            }
+          ],
+          "notes": [
+            "本回合剑翻倍，需要同回合拿到并打出君王之剑。"
+          ]
+        },
+        {
+          "key": "card:2",
+          "name": "何人僭越",
+          "supported": true,
+          "enabled": true,
+          "score": 1.759,
+          "parts": [
+            {
+              "reason": "基础机制先验（未实战校准）",
+              "value": 3.7
+            },
+            {
+              "reason": "同版本单人A10同稀有度统计修正（有限幅度）",
+              "value": 0.123
+            },
+            {
+              "reason": "前／中／后期需求",
+              "value": 0.2
+            },
+            {
+              "reason": "占用一次抽牌的基准成本",
+              "value": -2.5
+            },
+            {
+              "reason": "防守缺口",
+              "value": 0.236
+            }
+          ],
+          "notes": [
+            "零能量减益仍需星费，升级变免费需实际数据。"
+          ]
+        },
+        {
+          "key": "alternative:0",
+          "name": "跳过",
+          "supported": true,
+          "enabled": true,
+          "score": 0,
+          "parts": [],
+          "notes": []
+        }
+      ],
+      "warnings": [
+        "储君接管：选牌、营火、路线、商店与原生事件；战斗交给 CombatSolver。首版机制权重，尚待实战校准。",
+        "铸剑输出：已有铸造和增长／放大",
+        "星星输出：已有供星与消费出口",
+        "防守薄弱"
+      ]
+    }
+  },
+  {
+    "seed": "ADB6573C4F8E",
+    "id": "621ad359f1634918b56e84346e7174cf",
+    "kind": "cards",
+    "state": {
+      "character": "Regent",
+      "playerCount": 1,
+      "multiplayerSession": false,
+      "isMultiplayer": false,
+      "hp": 48,
+      "maxHp": 91,
+      "hpAfterPendingAncient": null,
+      "gold": 198,
+      "energy": 3,
+      "combatSolverAvailable": true,
+      "act": 3,
+      "floor": 38,
+      "ascension": 10,
+      "room": "CombatRoom",
+      "deck": [
+        {
+          "id": "CARD.STRIKE_REGENT",
+          "className": "StrikeRegent",
+          "name": "打击",
+          "type": "Attack",
+          "rarity": "Basic",
+          "description": "",
+          "cost": 1,
+          "costsX": false,
+          "starCost": -1,
+          "costsStarX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "multiplayerOnly": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {
+            "Damage": 6
+          }
+        },
+        {
+          "id": "CARD.DEFEND_REGENT",
+          "className": "DefendRegent",
+          "name": "防御",
+          "type": "Skill",
+          "rarity": "Basic",
+          "description": "",
+          "cost": 1,
+          "costsX": false,
+          "starCost": -1,
+          "costsStarX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "multiplayerOnly": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {
+            "Block": 5
+          }
+        },
+        {
+          "id": "CARD.DEFEND_REGENT",
+          "className": "DefendRegent",
+          "name": "防御",
+          "type": "Skill",
+          "rarity": "Basic",
+          "description": "",
+          "cost": 1,
+          "costsX": false,
+          "starCost": -1,
+          "costsStarX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "multiplayerOnly": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {
+            "Block": 5
+          }
+        },
+        {
+          "id": "CARD.DEFEND_REGENT",
+          "className": "DefendRegent",
+          "name": "防御",
+          "type": "Skill",
+          "rarity": "Basic",
+          "description": "",
+          "cost": 1,
+          "costsX": false,
+          "starCost": -1,
+          "costsStarX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "multiplayerOnly": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {
+            "Block": 5
+          }
+        },
+        {
+          "id": "CARD.DEFEND_REGENT",
+          "className": "DefendRegent",
+          "name": "防御",
+          "type": "Skill",
+          "rarity": "Basic",
+          "description": "",
+          "cost": 1,
+          "costsX": false,
+          "starCost": -1,
+          "costsStarX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "multiplayerOnly": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {
+            "Block": 5
+          }
+        },
+        {
+          "id": "CARD.FALLING_STAR",
+          "className": "FallingStar",
+          "name": "陨星",
+          "type": "Attack",
+          "rarity": "Basic",
+          "description": "",
+          "cost": 0,
+          "costsX": false,
+          "starCost": 2,
+          "costsStarX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "multiplayerOnly": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {
+            "Damage": 8,
+            "VulnerablePower": 1,
+            "WeakPower": 1
+          }
+        },
+        {
+          "id": "CARD.VENERATE",
+          "className": "Venerate",
+          "name": "崇拜",
+          "type": "Skill",
+          "rarity": "Basic",
+          "description": "",
+          "cost": 1,
+          "costsX": false,
+          "starCost": -1,
+          "costsStarX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "multiplayerOnly": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {
+            "Stars": 2
+          }
+        },
+        {
+          "id": "CARD.ASCENDERS_BANE",
+          "className": "AscendersBane",
+          "name": "进阶之灾",
+          "type": "Curse",
+          "rarity": "Curse",
+          "description": "",
+          "cost": -1,
+          "costsX": false,
+          "starCost": -1,
+          "costsStarX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": false,
+          "modified": false,
+          "multiplayerOnly": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [
+            "Eternal",
+            "Ethereal",
+            "Unplayable"
+          ],
+          "variables": {}
+        },
+        {
+          "id": "CARD.BLACK_HOLE",
+          "className": "BlackHole",
+          "name": "黑洞+",
+          "type": "Power",
+          "rarity": "Uncommon",
+          "description": "",
+          "cost": 1,
+          "costsX": false,
+          "starCost": -1,
+          "costsStarX": false,
+          "upgradeLevel": 1,
+          "canUpgrade": false,
+          "modified": false,
+          "multiplayerOnly": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {
+            "BlackHolePower": 4
+          }
+        },
+        {
+          "id": "CARD.SOLAR_STRIKE",
+          "className": "SolarStrike",
+          "name": "太阳打击+",
+          "type": "Attack",
+          "rarity": "Common",
+          "description": "",
+          "cost": 1,
+          "costsX": false,
+          "starCost": -1,
+          "costsStarX": false,
+          "upgradeLevel": 1,
+          "canUpgrade": false,
+          "modified": false,
+          "multiplayerOnly": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {
+            "Damage": 10,
+            "Stars": 2
+          }
+        },
+        {
+          "id": "CARD.CRESCENT_SPEAR",
+          "className": "CrescentSpear",
+          "name": "新月长矛",
+          "type": "Attack",
+          "rarity": "Common",
+          "description": "",
+          "cost": 1,
+          "costsX": false,
+          "starCost": 1,
+          "costsStarX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "multiplayerOnly": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {
+            "CalculatedDamage": 8,
+            "CalculationBase": 8,
+            "ExtraDamage": 2
+          }
+        },
+        {
+          "id": "CARD.WROUGHT_IN_WAR",
+          "className": "WroughtInWar",
+          "name": "战火铸就",
+          "type": "Attack",
+          "rarity": "Common",
+          "description": "",
+          "cost": 1,
+          "costsX": false,
+          "starCost": -1,
+          "costsStarX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "multiplayerOnly": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {
+            "Damage": 7,
+            "Forge": 7
+          }
+        },
+        {
+          "id": "CARD.BEGONE",
+          "className": "Begone",
+          "name": "下去！",
+          "type": "Skill",
+          "rarity": "Common",
+          "description": "",
+          "cost": 1,
+          "costsX": false,
+          "starCost": -1,
+          "costsStarX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "multiplayerOnly": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {}
+        },
+        {
+          "id": "CARD.PILLAR_OF_CREATION",
+          "className": "PillarOfCreation",
+          "name": "创世之柱",
+          "type": "Power",
+          "rarity": "Uncommon",
+          "description": "",
+          "cost": 1,
+          "costsX": false,
+          "starCost": -1,
+          "costsStarX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": true,
+          "multiplayerOnly": false,
+          "enchantment": "ENCHANTMENT.SWIFT",
+          "enchantmentAmount": 2,
+          "affliction": null,
+          "keywords": [],
+          "variables": {
+            "Block": 2
+          }
+        },
+        {
+          "id": "CARD.RESONANCE",
+          "className": "Resonance",
+          "name": "共鸣",
+          "type": "Skill",
+          "rarity": "Uncommon",
+          "description": "",
+          "cost": 1,
+          "costsX": false,
+          "starCost": 2,
+          "costsStarX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "multiplayerOnly": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {
+            "StrengthPower": 1
+          }
+        },
+        {
+          "id": "CARD.BIG_BANG",
+          "className": "BigBang",
+          "name": "大爆炸+",
+          "type": "Skill",
+          "rarity": "Rare",
+          "description": "",
+          "cost": 0,
+          "costsX": false,
+          "starCost": -1,
+          "costsStarX": false,
+          "upgradeLevel": 1,
+          "canUpgrade": false,
+          "modified": false,
+          "multiplayerOnly": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [
+            "Exhaust",
+            "Innate"
+          ],
+          "variables": {
+            "Cards": 1,
+            "Energy": 1,
+            "Forge": 5,
+            "Stars": 1
+          }
+        },
+        {
+          "id": "CARD.SUMMON_FORTH",
+          "className": "SummonForth",
+          "name": "征召上前",
+          "type": "Skill",
+          "rarity": "Uncommon",
+          "description": "",
+          "cost": 1,
+          "costsX": false,
+          "starCost": -1,
+          "costsStarX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "multiplayerOnly": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {
+            "Forge": 8
+          }
+        },
+        {
+          "id": "CARD.CONQUEROR",
+          "className": "Conqueror",
+          "name": "征服者",
+          "type": "Skill",
+          "rarity": "Uncommon",
+          "description": "",
+          "cost": 1,
+          "costsX": false,
+          "starCost": -1,
+          "costsStarX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "multiplayerOnly": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {
+            "Forge": 3
+          }
+        },
+        {
+          "id": "CARD.GATHER_LIGHT",
+          "className": "GatherLight",
+          "name": "收集光辉",
+          "type": "Skill",
+          "rarity": "Common",
+          "description": "",
+          "cost": 1,
+          "costsX": false,
+          "starCost": -1,
+          "costsStarX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "multiplayerOnly": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {
+            "Block": 8,
+            "Stars": 1
+          }
+        },
+        {
+          "id": "CARD.CONQUEROR",
+          "className": "Conqueror",
+          "name": "征服者",
+          "type": "Skill",
+          "rarity": "Uncommon",
+          "description": "",
+          "cost": 1,
+          "costsX": false,
+          "starCost": -1,
+          "costsStarX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "multiplayerOnly": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {
+            "Forge": 3
+          }
+        },
+        {
+          "id": "CARD.COSMIC_INDIFFERENCE",
+          "className": "CosmicIndifference",
+          "name": "宇宙冷漠",
+          "type": "Skill",
+          "rarity": "Common",
+          "description": "",
+          "cost": 1,
+          "costsX": false,
+          "starCost": -1,
+          "costsStarX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "multiplayerOnly": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {
+            "Block": 6
+          }
+        },
+        {
+          "id": "CARD.REFINE_BLADE",
+          "className": "RefineBlade",
+          "name": "淬炼刀刃+",
+          "type": "Skill",
+          "rarity": "Common",
+          "description": "",
+          "cost": 1,
+          "costsX": false,
+          "starCost": -1,
+          "costsStarX": false,
+          "upgradeLevel": 1,
+          "canUpgrade": false,
+          "modified": false,
+          "multiplayerOnly": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {
+            "Energy": 1,
+            "Forge": 12
+          }
+        },
+        {
+          "id": "CARD.PARRY",
+          "className": "Parry",
+          "name": "招架+",
+          "type": "Power",
+          "rarity": "Uncommon",
+          "description": "",
+          "cost": 1,
+          "costsX": false,
+          "starCost": -1,
+          "costsStarX": false,
+          "upgradeLevel": 1,
+          "canUpgrade": false,
+          "modified": false,
+          "multiplayerOnly": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {
+            "ParryPower": 14
+          }
+        },
+        {
+          "id": "CARD.FOREGONE_CONCLUSION",
+          "className": "ForegoneConclusion",
+          "name": "既定事项",
+          "type": "Skill",
+          "rarity": "Rare",
+          "description": "",
+          "cost": 1,
+          "costsX": false,
+          "starCost": -1,
+          "costsStarX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "multiplayerOnly": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {
+            "Cards": 2
+          }
+        },
+        {
+          "id": "CARD.HEIRLOOM_HAMMER",
+          "className": "HeirloomHammer",
+          "name": "传承之锤",
+          "type": "Attack",
+          "rarity": "Rare",
+          "description": "",
+          "cost": 2,
+          "costsX": false,
+          "starCost": -1,
+          "costsStarX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "multiplayerOnly": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {
+            "Damage": 20,
+            "Repeat": 1
+          }
+        },
+        {
+          "id": "CARD.FURNACE",
+          "className": "Furnace",
+          "name": "熔炉+",
+          "type": "Power",
+          "rarity": "Uncommon",
+          "description": "",
+          "cost": 1,
+          "costsX": false,
+          "starCost": -1,
+          "costsStarX": false,
+          "upgradeLevel": 1,
+          "canUpgrade": false,
+          "modified": false,
+          "multiplayerOnly": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {
+            "Forge": 7
+          }
+        }
+      ],
+      "relics": [
+        "RELIC.DIVINE_RIGHT",
+        "RELIC.PRECISE_SCISSORS",
+        "RELIC.STRIKE_DUMMY",
+        "RELIC.CHOSEN_CHEESE",
+        "RELIC.VERY_HOT_COCOA",
+        "RELIC.PENDULUM",
+        "RELIC.ETERNAL_FEATHER",
+        "RELIC.RUNIC_PYRAMID",
+        "RELIC.STRAWBERRY",
+        "RELIC.BOWLER_HAT"
+      ],
+      "giryaLifts": null,
+      "potionSlots": [
+        null,
+        null
+      ],
+      "nextNodeTypes": [
+        "Monster",
+        "Unknown"
+      ],
+      "hidden": {
+        "seed": "ADB6573C4F8E",
+        "streams": [
+          {
+            "stream": "run.UpFront",
+            "counter": 409,
+            "s0": 4402368338867948376,
+            "s1": 153905960408717613,
+            "s2": 13396349968942117764,
+            "s3": 4819069867210004802,
+            "preview": [
+              57170,
+              629845,
+              103847,
+              957780
+            ]
+          },
+          {
+            "stream": "run.Shuffle",
+            "counter": 466,
+            "s0": 14337237213608155287,
+            "s1": 11580329975930966423,
+            "s2": 13468666877865765965,
+            "s3": 15638536440287373100,
+            "preview": [
+              960648,
+              749361,
+              826030,
+              348008
+            ]
+          },
+          {
+            "stream": "run.UnknownMapPoint",
+            "counter": 12,
+            "s0": 5783766857265050789,
+            "s1": 6427573565889548033,
+            "s2": 8899426696092028405,
+            "s3": 4906067863287197099,
+            "preview": [
+              11296,
+              651359,
+              898573,
+              95904
+            ]
+          },
+          {
+            "stream": "run.CombatCardGeneration",
+            "counter": 0,
+            "s0": 5014227009905254125,
+            "s1": 17617717475082870346,
+            "s2": 3646872368214825587,
+            "s3": 5500145279216734121,
+            "preview": [
+              136257,
+              773350,
+              475550,
+              925502
+            ]
+          },
+          {
+            "stream": "run.CombatPotionGeneration",
+            "counter": 0,
+            "s0": 5983708712574476355,
+            "s1": 5712843946663389774,
+            "s2": 16677567654856768854,
+            "s3": 1980943983935572241,
+            "preview": [
+              836811,
+              796159,
+              893734,
+              991267
+            ]
+          },
+          {
+            "stream": "run.CombatCardSelection",
+            "counter": 0,
+            "s0": 18407560845245904375,
+            "s1": 8893352767036178148,
+            "s2": 10686902331531214174,
+            "s3": 16095334267997287890,
+            "preview": [
+              951408,
+              98278,
+              13466,
+              41444
+            ]
+          },
+          {
+            "stream": "run.CombatEnergyCosts",
+            "counter": 0,
+            "s0": 16151522282267471423,
+            "s1": 6409658813865299434,
+            "s2": 486898406399426494,
+            "s3": 17927838242092052264,
+            "preview": [
+              417411,
+              96605,
+              537046,
+              102913
+            ]
+          },
+          {
+            "stream": "run.CombatTargets",
+            "counter": 0,
+            "s0": 17313798889392084773,
+            "s1": 11987818401220429392,
+            "s2": 4198912435182657291,
+            "s3": 9208705408712508607,
+            "preview": [
+              199001,
+              281488,
+              160454,
+              748501
+            ]
+          },
+          {
+            "stream": "run.MonsterAi",
+            "counter": 15,
+            "s0": 13352573849751278455,
+            "s1": 7312660095371959315,
+            "s2": 17256713200427069330,
+            "s3": 9960985001847105107,
+            "preview": [
+              379765,
+              25727,
+              415882,
+              352578
+            ]
+          },
+          {
+            "stream": "run.Niche",
+            "counter": 28,
+            "s0": 11693443471822631235,
+            "s1": 9276131547486689869,
+            "s2": 3147324215431786830,
+            "s3": 13474272356366551437,
+            "preview": [
+              474169,
+              667954,
+              57857,
+              342024
+            ]
+          },
+          {
+            "stream": "run.CombatOrbGeneration",
+            "counter": 0,
+            "s0": 18062572922257267433,
+            "s1": 15423078758983889629,
+            "s2": 10077534558163719412,
+            "s3": 6157035514604436915,
+            "preview": [
+              859823,
+              87554,
+              566109,
+              234140
+            ]
+          },
+          {
+            "stream": "run.TreasureRoomRelics",
+            "counter": 3,
+            "s0": 18351859767352809956,
+            "s1": 10479856853200508457,
+            "s2": 1845415207380166944,
+            "s3": 12891023911286009715,
+            "preview": [
+              337667,
+              191053,
+              156423,
+              45885
+            ]
+          },
+          {
+            "stream": "player.Rewards",
+            "counter": 232,
+            "s0": 16347444089725699322,
+            "s1": 17229759523347653174,
+            "s2": 9330249258114083545,
+            "s3": 13552497151095199854,
+            "preview": [
+              996299,
+              357079,
+              270994,
+              747443
+            ]
+          },
+          {
+            "stream": "player.Shops",
+            "counter": 56,
+            "s0": 11626136835442959735,
+            "s1": 417211302830452236,
+            "s2": 2780707334680012534,
+            "s3": 5563685220573579880,
+            "preview": [
+              274323,
+              472482,
+              898082,
+              186097
+            ]
+          },
+          {
+            "stream": "player.Transformations",
+            "counter": 0,
+            "s0": 7659738410232184195,
+            "s1": 4642170178146488394,
+            "s2": 9296036518746161624,
+            "s3": 12056808949894280854,
+            "preview": [
+              518685,
+              549168,
+              451487,
+              677521
+            ]
+          }
+        ],
+        "acts": [
+          {
+            "act": 1,
+            "normalEncounters": [
+              "ENCOUNTER.NIBBITS_WEAK",
+              "ENCOUNTER.SLIMES_WEAK",
+              "ENCOUNTER.SHRINKER_BEETLE_WEAK",
+              "ENCOUNTER.NIBBITS_NORMAL",
+              "ENCOUNTER.SLITHERING_STRANGLER_NORMAL",
+              "ENCOUNTER.CUBEX_CONSTRUCT_NORMAL",
+              "ENCOUNTER.VINE_SHAMBLER_NORMAL",
+              "ENCOUNTER.RUBY_RAIDERS_NORMAL",
+              "ENCOUNTER.SLIMES_NORMAL",
+              "ENCOUNTER.INKLETS_NORMAL",
+              "ENCOUNTER.OVERGROWTH_CRAWLERS",
+              "ENCOUNTER.MAWLER_NORMAL",
+              "ENCOUNTER.FOGMOG_NORMAL",
+              "ENCOUNTER.SNAPPING_JAXFRUIT_NORMAL",
+              "ENCOUNTER.FLYCONID_NORMAL"
+            ],
+            "normalVisited": 7,
+            "eliteEncounters": [
+              "ENCOUNTER.BYGONE_EFFIGY_ELITE",
+              "ENCOUNTER.BYRDONIS_ELITE",
+              "ENCOUNTER.PHROG_PARASITE_ELITE",
+              "ENCOUNTER.BYGONE_EFFIGY_ELITE",
+              "ENCOUNTER.BYRDONIS_ELITE",
+              "ENCOUNTER.PHROG_PARASITE_ELITE",
+              "ENCOUNTER.BYRDONIS_ELITE",
+              "ENCOUNTER.PHROG_PARASITE_ELITE",
+              "ENCOUNTER.BYGONE_EFFIGY_ELITE",
+              "ENCOUNTER.PHROG_PARASITE_ELITE",
+              "ENCOUNTER.BYGONE_EFFIGY_ELITE",
+              "ENCOUNTER.BYRDONIS_ELITE",
+              "ENCOUNTER.PHROG_PARASITE_ELITE",
+              "ENCOUNTER.BYGONE_EFFIGY_ELITE",
+              "ENCOUNTER.BYRDONIS_ELITE"
+            ],
+            "eliteVisited": 0,
+            "eventPool": [
+              "EVENT.SLIPPERY_BRIDGE",
+              "EVENT.POTION_COURIER",
+              "EVENT.FAKE_MERCHANT",
+              "EVENT.DENSE_VEGETATION",
+              "EVENT.RELIC_TRADER",
+              "EVENT.RANWID_THE_ELDER",
+              "EVENT.ROOM_FULL_OF_CHEESE",
+              "EVENT.WHISPERING_HOLLOW",
+              "EVENT.UNREST_SITE",
+              "EVENT.AROMA_OF_CHAOS",
+              "EVENT.THE_FUTURE_OF_POTIONS",
+              "EVENT.BYRDONIS_NEST",
+              "EVENT.THE_LEGENDS_WERE_TRUE",
+              "EVENT.TEA_MASTER",
+              "EVENT.MORPHIC_GROVE",
+              "EVENT.WOOD_CARVINGS",
+              "EVENT.DOLL_ROOM",
+              "EVENT.BRAIN_LEECH",
+              "EVENT.SELF_HELP_BOOK",
+              "EVENT.STONE_OF_ALL_TIME",
+              "EVENT.SAPPHIRE_SEED",
+              "EVENT.LUMINOUS_CHOIR",
+              "EVENT.WAR_HISTORIAN_REPY",
+              "EVENT.WELCOME_TO_WONGOS",
+              "EVENT.THIS_OR_THAT",
+              "EVENT.SYMBIOTE",
+              "EVENT.WELLSPRING",
+              "EVENT.JUNGLE_MAZE_ADVENTURE",
+              "EVENT.SUNKEN_STATUE",
+              "EVENT.TABLET_OF_TRUTH",
+              "EVENT.CRYSTAL_SPHERE"
+            ],
+            "eventsVisited": 7,
+            "boss": "ENCOUNTER.CEREMONIAL_BEAST_BOSS",
+            "secondBoss": null,
+            "ancient": "EVENT.NEOW"
+          },
+          {
+            "act": 2,
+            "normalEncounters": [
+              "ENCOUNTER.EXOSKELETONS_WEAK",
+              "ENCOUNTER.TUNNELER_WEAK",
+              "ENCOUNTER.LOUSE_PROGENITOR_NORMAL",
+              "ENCOUNTER.THE_OBSCURA_NORMAL",
+              "ENCOUNTER.BOWLBUGS_NORMAL",
+              "ENCOUNTER.OVICOPTER_NORMAL",
+              "ENCOUNTER.SPINY_TOAD_NORMAL",
+              "ENCOUNTER.CHOMPERS_NORMAL",
+              "ENCOUNTER.EXOSKELETONS_NORMAL",
+              "ENCOUNTER.HUNTER_KILLER_NORMAL",
+              "ENCOUNTER.SLUMBERING_BEETLE_NORMAL",
+              "ENCOUNTER.MYTES_NORMAL",
+              "ENCOUNTER.HUNTER_KILLER_NORMAL",
+              "ENCOUNTER.EXOSKELETONS_NORMAL"
+            ],
+            "normalVisited": 3,
+            "eliteEncounters": [
+              "ENCOUNTER.ENTOMANCER_ELITE",
+              "ENCOUNTER.INFESTED_PRISMS_ELITE",
+              "ENCOUNTER.DECIMILLIPEDE_ELITE",
+              "ENCOUNTER.ENTOMANCER_ELITE",
+              "ENCOUNTER.INFESTED_PRISMS_ELITE",
+              "ENCOUNTER.DECIMILLIPEDE_ELITE",
+              "ENCOUNTER.ENTOMANCER_ELITE",
+              "ENCOUNTER.INFESTED_PRISMS_ELITE",
+              "ENCOUNTER.DECIMILLIPEDE_ELITE",
+              "ENCOUNTER.ENTOMANCER_ELITE",
+              "ENCOUNTER.INFESTED_PRISMS_ELITE",
+              "ENCOUNTER.DECIMILLIPEDE_ELITE",
+              "ENCOUNTER.ENTOMANCER_ELITE",
+              "ENCOUNTER.INFESTED_PRISMS_ELITE",
+              "ENCOUNTER.DECIMILLIPEDE_ELITE"
+            ],
+            "eliteVisited": 1,
+            "eventPool": [
+              "EVENT.ZEN_WEAVER",
+              "EVENT.COLOSSAL_FLOWER",
+              "EVENT.SELF_HELP_BOOK",
+              "EVENT.FAKE_MERCHANT",
+              "EVENT.WAR_HISTORIAN_REPY",
+              "EVENT.THE_FUTURE_OF_POTIONS",
+              "EVENT.TEA_MASTER",
+              "EVENT.SPIRIT_GRAFTER",
+              "EVENT.ROOM_FULL_OF_CHEESE",
+              "EVENT.INFESTED_AUTOMATON",
+              "EVENT.BUGSLAYER",
+              "EVENT.FIELD_OF_MAN_SIZED_HOLES",
+              "EVENT.CRYSTAL_SPHERE",
+              "EVENT.STONE_OF_ALL_TIME",
+              "EVENT.LOST_WISP",
+              "EVENT.BRAIN_LEECH",
+              "EVENT.SLIPPERY_BRIDGE",
+              "EVENT.THE_LANTERN_KEY",
+              "EVENT.SYMBIOTE",
+              "EVENT.DOLL_ROOM",
+              "EVENT.THE_LEGENDS_WERE_TRUE",
+              "EVENT.RANWID_THE_ELDER",
+              "EVENT.COLORFUL_PHILOSOPHERS",
+              "EVENT.POTION_COURIER",
+              "EVENT.THIS_OR_THAT",
+              "EVENT.AMALGAMATOR",
+              "EVENT.WELCOME_TO_WONGOS",
+              "EVENT.RELIC_TRADER"
+            ],
+            "eventsVisited": 6,
+            "boss": "ENCOUNTER.THE_INSATIABLE_BOSS",
+            "secondBoss": null,
+            "ancient": "EVENT.TEZCATARA"
+          },
+          {
+            "act": 3,
+            "normalEncounters": [
+              "ENCOUNTER.TURRET_OPERATOR_WEAK",
+              "ENCOUNTER.SCROLLS_OF_BITING_WEAK",
+              "ENCOUNTER.CONSTRUCT_MENAGERIE_NORMAL",
+              "ENCOUNTER.THE_LOST_AND_FORGOTTEN_NORMAL",
+              "ENCOUNTER.OWL_MAGISTRATE_NORMAL",
+              "ENCOUNTER.FABRICATOR_NORMAL",
+              "ENCOUNTER.FROG_KNIGHT_NORMAL",
+              "ENCOUNTER.GLOBE_HEAD_NORMAL",
+              "ENCOUNTER.SLIMED_BERSERKER_NORMAL",
+              "ENCOUNTER.AXEBOTS_NORMAL",
+              "ENCOUNTER.SCROLLS_OF_BITING_NORMAL",
+              "ENCOUNTER.FABRICATOR_NORMAL",
+              "ENCOUNTER.GLOBE_HEAD_NORMAL"
+            ],
+            "normalVisited": 3,
+            "eliteEncounters": [
+              "ENCOUNTER.MECHA_KNIGHT_ELITE",
+              "ENCOUNTER.SOUL_NEXUS_ELITE",
+              "ENCOUNTER.KNIGHTS_ELITE",
+              "ENCOUNTER.MECHA_KNIGHT_ELITE",
+              "ENCOUNTER.KNIGHTS_ELITE",
+              "ENCOUNTER.SOUL_NEXUS_ELITE",
+              "ENCOUNTER.KNIGHTS_ELITE",
+              "ENCOUNTER.SOUL_NEXUS_ELITE",
+              "ENCOUNTER.MECHA_KNIGHT_ELITE",
+              "ENCOUNTER.KNIGHTS_ELITE",
+              "ENCOUNTER.SOUL_NEXUS_ELITE",
+              "ENCOUNTER.MECHA_KNIGHT_ELITE",
+              "ENCOUNTER.SOUL_NEXUS_ELITE",
+              "ENCOUNTER.MECHA_KNIGHT_ELITE",
+              "ENCOUNTER.KNIGHTS_ELITE"
+            ],
+            "eliteVisited": 0,
+            "eventPool": [
+              "EVENT.DOLL_ROOM",
+              "EVENT.ROOM_FULL_OF_CHEESE",
+              "EVENT.RANWID_THE_ELDER",
+              "EVENT.TEA_MASTER",
+              "EVENT.REFLECTIONS",
+              "EVENT.BRAIN_LEECH",
+              "EVENT.SLIPPERY_BRIDGE",
+              "EVENT.WELCOME_TO_WONGOS",
+              "EVENT.THE_FUTURE_OF_POTIONS",
+              "EVENT.SYMBIOTE",
+              "EVENT.TINKER_TIME",
+              "EVENT.FAKE_MERCHANT",
+              "EVENT.STONE_OF_ALL_TIME",
+              "EVENT.SELF_HELP_BOOK",
+              "EVENT.THIS_OR_THAT",
+              "EVENT.WAR_HISTORIAN_REPY",
+              "EVENT.GRAVE_OF_THE_FORGOTTEN",
+              "EVENT.CRYSTAL_SPHERE",
+              "EVENT.TRIAL",
+              "EVENT.POTION_COURIER",
+              "EVENT.ROUND_TEA_PARTY",
+              "EVENT.RELIC_TRADER",
+              "EVENT.THE_LEGENDS_WERE_TRUE",
+              "EVENT.HUNGRY_FOR_MUSHROOMS",
+              "EVENT.BATTLEWORN_DUMMY"
+            ],
+            "eventsVisited": 3,
+            "boss": "ENCOUNTER.AEONGLASS_BOSS",
+            "secondBoss": "ENCOUNTER.TEST_SUBJECT_BOSS",
+            "ancient": "EVENT.DARV"
+          }
+        ],
+        "drawPile": [],
+        "sourceUnchanged": true,
+        "error": null
+      },
+      "foresight": {
+        "fingerprint": "7C358AB308F7194E6FCB96C641C4B32BE8DD80BFF97402B7C60FEF67943E9EA8",
+        "sourceUnchanged": true,
+        "branches": [
+          {
+            "path": "5,5>6,6>5,7>6,8>6,9>5,10>4,11",
+            "rewards": [
+              {
+                "node": "5,5",
+                "room": "Monster",
+                "distance": 1,
+                "reliability": 0.85,
+                "cards": [
+                  {
+                    "id": "CARD.REFLECT",
+                    "className": "Reflect",
+                    "name": "倒映+",
+                    "type": "Skill",
+                    "rarity": "Uncommon",
+                    "description": "",
+                    "cost": 1,
+                    "costsX": false,
+                    "starCost": 3,
+                    "costsStarX": false,
+                    "upgradeLevel": 1,
+                    "canUpgrade": false,
+                    "modified": false,
+                    "multiplayerOnly": false,
+                    "enchantment": null,
+                    "enchantmentAmount": 0,
+                    "affliction": null,
+                    "keywords": [],
+                    "variables": {
+                      "Block": 20
+                    }
+                  },
+                  {
+                    "id": "CARD.KNOW_THY_PLACE",
+                    "className": "KnowThyPlace",
+                    "name": "何人僭越+",
+                    "type": "Skill",
+                    "rarity": "Common",
+                    "description": "",
+                    "cost": 0,
+                    "costsX": false,
+                    "starCost": -1,
+                    "costsStarX": false,
+                    "upgradeLevel": 1,
+                    "canUpgrade": false,
+                    "modified": false,
+                    "multiplayerOnly": false,
+                    "enchantment": null,
+                    "enchantmentAmount": 0,
+                    "affliction": null,
+                    "keywords": [],
+                    "variables": {
+                      "VulnerablePower": 1,
+                      "WeakPower": 1
+                    }
+                  },
+                  {
+                    "id": "CARD.GLIMMER",
+                    "className": "Glimmer",
+                    "name": "微光",
+                    "type": "Skill",
+                    "rarity": "Uncommon",
+                    "description": "",
+                    "cost": 1,
+                    "costsX": false,
+                    "starCost": -1,
+                    "costsStarX": false,
+                    "upgradeLevel": 0,
+                    "canUpgrade": true,
+                    "modified": false,
+                    "multiplayerOnly": false,
+                    "enchantment": null,
+                    "enchantmentAmount": 0,
+                    "affliction": null,
+                    "keywords": [],
+                    "variables": {
+                      "Cards": 3,
+                      "PutBack": 1
+                    }
+                  }
+                ],
+                "prices": null
+              },
+              {
+                "node": "6,8",
+                "room": "Elite",
+                "distance": 4,
+                "reliability": 0.315,
+                "cards": [
+                  {
+                    "id": "CARD.KINGLY_PUNCH",
+                    "className": "KinglyPunch",
+                    "name": "王者之拳+",
+                    "type": "Attack",
+                    "rarity": "Uncommon",
+                    "description": "",
+                    "cost": 1,
+                    "costsX": false,
+                    "starCost": -1,
+                    "costsStarX": false,
+                    "upgradeLevel": 1,
+                    "canUpgrade": false,
+                    "modified": false,
+                    "multiplayerOnly": false,
+                    "enchantment": null,
+                    "enchantmentAmount": 0,
+                    "affliction": null,
+                    "keywords": [],
+                    "variables": {
+                      "Damage": 10,
+                      "Increase": 6
+                    }
+                  },
+                  {
+                    "id": "CARD.COLLISION_COURSE",
+                    "className": "CollisionCourse",
+                    "name": "碰撞轨迹+",
+                    "type": "Attack",
+                    "rarity": "Common",
+                    "description": "",
+                    "cost": 0,
+                    "costsX": false,
+                    "starCost": -1,
+                    "costsStarX": false,
+                    "upgradeLevel": 1,
+                    "canUpgrade": false,
+                    "modified": false,
+                    "multiplayerOnly": false,
+                    "enchantment": null,
+                    "enchantmentAmount": 0,
+                    "affliction": null,
+                    "keywords": [],
+                    "variables": {
+                      "Damage": 14
+                    }
+                  },
+                  {
+                    "id": "CARD.CELESTIAL_MIGHT",
+                    "className": "CelestialMight",
+                    "name": "天穹之力",
+                    "type": "Attack",
+                    "rarity": "Common",
+                    "description": "",
+                    "cost": 2,
+                    "costsX": false,
+                    "starCost": -1,
+                    "costsStarX": false,
+                    "upgradeLevel": 0,
+                    "canUpgrade": true,
+                    "modified": false,
+                    "multiplayerOnly": false,
+                    "enchantment": null,
+                    "enchantmentAmount": 0,
+                    "affliction": null,
+                    "keywords": [],
+                    "variables": {
+                      "Damage": 6,
+                      "Repeat": 3
+                    }
+                  }
+                ],
+                "prices": null
+              },
+              {
+                "node": "4,11",
+                "room": "Shop",
+                "distance": 7,
+                "reliability": 0.22049999999999997,
+                "cards": [
+                  {
+                    "id": "CARD.KNOCKOUT_BLOW",
+                    "className": "KnockoutBlow",
+                    "name": "决胜一击",
+                    "type": "Attack",
+                    "rarity": "Uncommon",
+                    "description": "",
+                    "cost": 3,
+                    "costsX": false,
+                    "starCost": -1,
+                    "costsStarX": false,
+                    "upgradeLevel": 0,
+                    "canUpgrade": true,
+                    "modified": false,
+                    "multiplayerOnly": false,
+                    "enchantment": null,
+                    "enchantmentAmount": 0,
+                    "affliction": null,
+                    "keywords": [],
+                    "variables": {
+                      "Damage": 30,
+                      "Stars": 5
+                    }
+                  },
+                  {
+                    "id": "CARD.BOMBARDMENT",
+                    "className": "Bombardment",
+                    "name": "轰击",
+                    "type": "Attack",
+                    "rarity": "Rare",
+                    "description": "",
+                    "cost": 3,
+                    "costsX": false,
+                    "starCost": -1,
+                    "costsStarX": false,
+                    "upgradeLevel": 0,
+                    "canUpgrade": true,
+                    "modified": false,
+                    "multiplayerOnly": false,
+                    "enchantment": null,
+                    "enchantmentAmount": 0,
+                    "affliction": null,
+                    "keywords": [
+                      "Exhaust"
+                    ],
+                    "variables": {
+                      "Damage": 18
+                    }
+                  },
+                  {
+                    "id": "CARD.CLOAK_OF_STARS",
+                    "className": "CloakOfStars",
+                    "name": "群星斗篷",
+                    "type": "Skill",
+                    "rarity": "Common",
+                    "description": "",
+                    "cost": 0,
+                    "costsX": false,
+                    "starCost": 1,
+                    "costsStarX": false,
+                    "upgradeLevel": 0,
+                    "canUpgrade": true,
+                    "modified": false,
+                    "multiplayerOnly": false,
+                    "enchantment": null,
+                    "enchantmentAmount": 0,
+                    "affliction": null,
+                    "keywords": [],
+                    "variables": {
+                      "Block": 7
+                    }
+                  },
+                  {
+                    "id": "CARD.HIDDEN_CACHE",
+                    "className": "HiddenCache",
+                    "name": "隐秘藏品",
+                    "type": "Skill",
+                    "rarity": "Common",
+                    "description": "",
+                    "cost": 1,
+                    "costsX": false,
+                    "starCost": -1,
+                    "costsStarX": false,
+                    "upgradeLevel": 0,
+                    "canUpgrade": true,
+                    "modified": false,
+                    "multiplayerOnly": false,
+                    "enchantment": null,
+                    "enchantmentAmount": 0,
+                    "affliction": null,
+                    "keywords": [],
+                    "variables": {
+                      "StarNextTurnPower": 3,
+                      "Stars": 1
+                    }
+                  },
+                  {
+                    "id": "CARD.FURNACE",
+                    "className": "Furnace",
+                    "name": "熔炉",
+                    "type": "Power",
+                    "rarity": "Uncommon",
+                    "description": "",
+                    "cost": 1,
+                    "costsX": false,
+                    "starCost": -1,
+                    "costsStarX": false,
+                    "upgradeLevel": 0,
+                    "canUpgrade": true,
+                    "modified": false,
+                    "multiplayerOnly": false,
+                    "enchantment": null,
+                    "enchantmentAmount": 0,
+                    "affliction": null,
+                    "keywords": [],
+                    "variables": {
+                      "Forge": 5
+                    }
+                  },
+                  {
+                    "id": "CARD.PROLONG",
+                    "className": "Prolong",
+                    "name": "延伸",
+                    "type": "Skill",
+                    "rarity": "Uncommon",
+                    "description": "",
+                    "cost": 0,
+                    "costsX": false,
+                    "starCost": -1,
+                    "costsStarX": false,
+                    "upgradeLevel": 0,
+                    "canUpgrade": true,
+                    "modified": false,
+                    "multiplayerOnly": false,
+                    "enchantment": null,
+                    "enchantmentAmount": 0,
+                    "affliction": null,
+                    "keywords": [
+                      "Exhaust"
+                    ],
+                    "variables": {}
+                  },
+                  {
+                    "id": "CARD.NOSTALGIA",
+                    "className": "Nostalgia",
+                    "name": "怀旧",
+                    "type": "Power",
+                    "rarity": "Rare",
+                    "description": "",
+                    "cost": 1,
+                    "costsX": false,
+                    "starCost": -1,
+                    "costsStarX": false,
+                    "upgradeLevel": 0,
+                    "canUpgrade": true,
+                    "modified": false,
+                    "multiplayerOnly": false,
+                    "enchantment": null,
+                    "enchantmentAmount": 0,
+                    "affliction": null,
+                    "keywords": [],
+                    "variables": {}
+                  }
+                ],
+                "prices": [
+                  78,
+                  72,
+                  50,
+                  48,
+                  75,
+                  88,
+                  173
+                ]
+              }
+            ]
+          }
+        ],
+        "status": "辉眼：沿推荐路线预览至多三次战斗奖励或商店供牌；商店按现款约束。未到达的事件、先古及后续交易尚未模拟，不保证获得。"
+      },
+      "map": {
+        "totalActs": 3,
+        "rows": 14,
+        "currentRow": 4,
+        "bossRow": 14,
+        "mapType": "MegaCrit.Sts2.Core.Map.StandardActMap",
+        "longMap": false,
+        "extraLayers": 0,
+        "extraActs": 0,
+        "contentAct": 3,
+        "enemyHpScale": 1,
+        "enemyDamageScale": 1,
+        "combatGoldScale": 1,
+        "error": null
+      },
+      "recentBattles": [
+        {
+          "act": 3,
+          "room": "Monster",
+          "encounter": "ENCOUNTER.TURRET_OPERATOR_WEAK",
+          "damageTaken": 16,
+          "healing": 1,
+          "potionsUsed": 0,
+          "maxHp": 82
+        },
+        {
+          "act": 3,
+          "room": "Monster",
+          "encounter": "ENCOUNTER.SCROLLS_OF_BITING_WEAK",
+          "damageTaken": 0,
+          "healing": 1,
+          "potionsUsed": 0,
+          "maxHp": 90
+        }
+      ],
+      "commerce": {
+        "reachableShops": 3,
+        "nearestShopDistance": 7,
+        "reachableUnknowns": 8,
+        "futureActs": 0
+      },
+      "campRouteRisk": {}
+    },
+    "options": [
+      {
+        "key": "card:0",
+        "name": "星星点点",
+        "kind": "card",
+        "enabled": true,
+        "card": {
+          "id": "CARD.PATTER",
+          "className": "Patter",
+          "name": "星星点点",
+          "type": "Skill",
+          "rarity": "Common",
+          "description": "",
+          "cost": 1,
+          "costsX": false,
+          "starCost": -1,
+          "costsStarX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "multiplayerOnly": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {
+            "Block": 8,
+            "VigorPower": 2
+          }
+        },
+        "healAmount": 0,
+        "smithCount": 1,
+        "effectValue": null
+      },
+      {
+        "key": "card:1",
+        "name": "宇宙冷漠",
+        "kind": "card",
+        "enabled": true,
+        "card": {
+          "id": "CARD.COSMIC_INDIFFERENCE",
+          "className": "CosmicIndifference",
+          "name": "宇宙冷漠",
+          "type": "Skill",
+          "rarity": "Common",
+          "description": "",
+          "cost": 1,
+          "costsX": false,
+          "starCost": -1,
+          "costsStarX": false,
+          "upgradeLevel": 0,
+          "canUpgrade": true,
+          "modified": false,
+          "multiplayerOnly": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {
+            "Block": 6
+          }
+        },
+        "healAmount": 0,
+        "smithCount": 1,
+        "effectValue": null
+      },
+      {
+        "key": "card:2",
+        "name": "熔炉+",
+        "kind": "card",
+        "enabled": true,
+        "card": {
+          "id": "CARD.FURNACE",
+          "className": "Furnace",
+          "name": "熔炉+",
+          "type": "Power",
+          "rarity": "Uncommon",
+          "description": "",
+          "cost": 1,
+          "costsX": false,
+          "starCost": -1,
+          "costsStarX": false,
+          "upgradeLevel": 1,
+          "canUpgrade": false,
+          "modified": false,
+          "multiplayerOnly": false,
+          "enchantment": null,
+          "enchantmentAmount": 0,
+          "affliction": null,
+          "keywords": [],
+          "variables": {
+            "Forge": 7
+          }
+        },
+        "healAmount": 0,
+        "smithCount": 1,
+        "effectValue": null
+      },
+      {
+        "key": "alternative:0",
+        "name": "跳过",
+        "kind": "skip",
+        "enabled": true,
+        "card": null,
+        "healAmount": 0,
+        "smithCount": 1,
+        "effectValue": null
+      }
+    ],
+    "old": {
+      "policyVersion": "regent-draft-0.3",
+      "recommendedKey": "card:2",
+      "options": [
+        {
+          "key": "card:0",
+          "name": "星星点点",
+          "supported": true,
+          "enabled": true,
+          "score": -2.116,
+          "parts": [
+            {
+              "reason": "基础机制先验（未实战校准）",
+              "value": 3.3
+            },
+            {
+              "reason": "同版本单人A10同稀有度统计修正（有限幅度）",
+              "value": -0.098
+            },
+            {
+              "reason": "前／中／后期需求",
+              "value": -1.2
+            },
+            {
+              "reason": "占用一次抽牌的基准成本",
+              "value": -2.5
+            },
+            {
+              "reason": "已有即时输出后少添过渡牌",
+              "value": -1.618
+            }
+          ],
+          "notes": [
+            "基础防御附少量活力，不当作成长核心。"
+          ]
+        },
+        {
+          "key": "card:1",
+          "name": "宇宙冷漠",
+          "supported": true,
+          "enabled": true,
+          "score": -2.524,
+          "parts": [
+            {
+              "reason": "基础机制先验（未实战校准）",
+              "value": 3.5
+            },
+            {
+              "reason": "同版本单人A10同稀有度统计修正（有限幅度）",
+              "value": 0.076
+            },
+            {
+              "reason": "前／中／后期需求",
+              "value": 0.3
+            },
+            {
+              "reason": "占用一次抽牌的基准成本",
+              "value": -2.5
+            },
+            {
+              "reason": "重复份数递减",
+              "value": -3.9
+            }
+          ],
+          "notes": [
+            "格挡与弃牌顶抽，回收核心但占下次抽牌位。"
+          ]
+        },
+        {
+          "key": "card:2",
+          "name": "熔炉+",
+          "supported": true,
+          "enabled": true,
+          "score": 5.315,
+          "parts": [
+            {
+              "reason": "基础机制先验（未实战校准）",
+              "value": 6
+            },
+            {
+              "reason": "同版本单人A10同稀有度统计修正（有限幅度）",
+              "value": -0.085
+            },
+            {
+              "reason": "前／中／后期需求",
+              "value": 0.3
+            },
+            {
+              "reason": "占用一次抽牌的基准成本",
+              "value": -2.5
+            },
+            {
+              "reason": "重复份数递减",
+              "value": -3.4
+            },
+            {
+              "reason": "已升级的实际收益",
+              "value": 2
+            },
+            {
+              "reason": "铸造支持已有剑与取剑组件",
+              "value": 3
+            }
+          ],
+          "notes": [
+            "每回合铸造，提供独立的剑成长入口。"
+          ]
+        },
+        {
+          "key": "alternative:0",
+          "name": "跳过",
+          "supported": true,
+          "enabled": true,
+          "score": 0,
+          "parts": [],
+          "notes": []
+        }
+      ],
+      "warnings": [
+        "储君接管：选牌、营火、路线、商店与原生事件；战斗交给 CombatSolver。首版机制权重，尚待实战校准。",
+        "铸剑输出：已有铸造和增长／放大",
+        "星星输出：已有供星与消费出口",
+        "铸剑主线已投入：补取剑与放大，星光辅助按实际用途保留。"
+      ]
+    }
+  }
+]

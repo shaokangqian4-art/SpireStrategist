@@ -44,6 +44,8 @@ internal static class SnapshotReader
         Ascension = run.AscensionLevel,
         Room = run.CurrentRoom?.GetType().Name ?? "Transition",
         Deck = player.Deck.Cards.Select(ReadCard).ToArray(),
+        PendingToothCards = player.GetRelic<MegaCrit.Sts2.Core.Models.Relics.PaelsTooth>()?.SerializableCards
+            .Select(c=>ReadCard(CardModel.FromSerializable(c))).ToArray() ?? [],
         Relics = player.Relics.Select(r => r.Id.ToString()).ToArray(),
         GiryaLifts = player.GetRelic<MegaCrit.Sts2.Core.Models.Relics.Girya>()?.TimesLifted,
         PotionSlots = player.PotionSlots.Select(p => p?.Id.ToString()).ToArray(),

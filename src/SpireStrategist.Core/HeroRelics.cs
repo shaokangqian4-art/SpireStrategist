@@ -7,6 +7,7 @@ public static class HeroRelics
     public static RelicAssessment? Evaluate(string id,RunSnapshot s)
     {
         if(!HeroPolicy.Supports(s.Character))return null;id=id.Split('.').Last();
+        if(RegentAttackLinks.Relic(id,s) is {} attackRelic)return attackRelic;
         var a=HeroPolicy.Analyze(s);var v=new StrategicValue(s);bool H(string n)=>v.Has(n);
         int N(string tag)=>s.Deck.Count(c=>HeroPolicy.Tag(c,tag));var playerAttacks=s.Deck.Count(c=>c.Type=="Attack"&&!HeroPolicy.Tag(c,"osty_attack")&&!HeroStrategy.Basic(c));
         var attacks=Math.Min(6,playerAttacks*.6+a.OstyAttacks*.5+a.Draw*.2);

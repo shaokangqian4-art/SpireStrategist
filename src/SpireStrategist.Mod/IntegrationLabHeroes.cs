@@ -61,6 +61,23 @@ internal static partial class AutopilotLab
         var nativeShop=MegaCrit.Sts2.Core.Entities.Merchant.MerchantInventory.CreateForNormalMerchant(shopOther.Players.Single());
         Check(preview.Cards.Select(c=>c.Id).SequenceEqual(nativeShop.CardEntries.Select(c=>c.CreationResult!.Card.Id.ToString())),"Hero shop forecast matches native stock");
         Check(before==RewardForesightReader.Fingerprint(state,p),"forecasts leave live RNG deck and inventory unchanged");
+        if(regent)
+        {
+            // Native card exports and the shipped DLL must obey the same plan guard.
+            CardSnapshot C<T>() where T:CardModel=>SnapshotReader.ReadCard(state.CreateCard<T>(p));
+            var actual=SnapshotReader.Read(state,p);
+            var stars=actual with{Act=3,Deck=[..actual.Deck,C<Genesis>(),C<Comet>(),C<SevenStars>(),C<Stardust>()]};
+            var sight=stars with{Foresight=new("native-constructed",true,[new("sword",[
+                new("1","Monster",1,1,[C<Furnace>()]),new("2","Monster",2,1,[C<SummonForth>(),C<SwordSage>()])])],"constructed fixture")};
+            Check(RegentDirection.Analyze(stars).Committed==RegentDirection.Plan.Stars,"native Regent star output establishes intent");
+            foreach(var c in new[]{C<SummonForth>(),C<SwordSage>(),C<SeekingEdge>(),C<Conqueror>()})
+            {
+                var decision=new Policy().Evaluate(sight,[new("core",c.Name,"card",Card:c),new("skip","skip","skip")]);
+                Check(decision.RecommendedKey=="skip"&&HeroForecast.Evaluate(sight,c).Value==0,"native star plan rejects forecast sword pivot: "+c.ClassName);
+            }
+            Check(new StrategicValue(stars).Add(C<BigBang>())>0,"native Big Bang remains shared support");
+            Check(before==RewardForesightReader.Fingerprint(state,p),"Regent direction checks preserve live deck and RNG");
+        }
         if(regent){await CardPileCmd.Add(state.CreateCard<Furnace>(p),PileType.Deck);await CardPileCmd.Add(state.CreateCard<SpoilsOfBattle>(p),PileType.Deck);await CardPileCmd.Add(state.CreateCard<Bulwark>(p),PileType.Deck);}
         else{await CardPileCmd.Add(state.CreateCard<CaptureSpirit>(p),PileType.Deck);await CardPileCmd.Add(state.CreateCard<Haunt>(p),PileType.Deck);await CardPileCmd.Add(state.CreateCard<Parse>(p),PileType.Deck);}
         await CreatureCmd.SetCurrentHp(p.Creature,p.Creature.MaxHp);

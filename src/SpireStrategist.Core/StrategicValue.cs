@@ -94,4 +94,8 @@ public sealed class StrategicValue(RunSnapshot state)
         };
     }
     public double BestEnchant(string name,double amount=1,int count=1)=>State.Deck.Select(c=>Enchant(c,name,amount)).Where(v=>v>-10).OrderDescending().Take(count).Sum();
+    public (CardSnapshot Card,double Value)[] EnchantTargets(string name,double amount=1,string? type=null,int count=1)=>
+        State.Deck.Where(c=>type==null||c.Type==type).Where(c=>c.Enchantment==null&&!c.Modified&&!MultiplayerAdvice.Ignore(c))
+            .Select(c=>(Card:c,Value:Enchant(c,name,amount))).Where(x=>x.Value> -10)
+            .OrderByDescending(x=>x.Value).Take(count).ToArray();
 }

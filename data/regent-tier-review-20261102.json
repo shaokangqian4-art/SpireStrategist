@@ -1,0 +1,814 @@
+{
+  "version": "0.6.71",
+  "source": "用户提供的储君强度排行榜，2026-11-02；不是官方强度或胜率统计",
+  "imageSha256": "d6395d3580821433e29e624bb2e5b2c030e804a2bbac2b2be7c3559eb9e1dbd2",
+  "identification": "逐行核对原图，并用本地原生卡图、中文卡名、效果和完整卡池交叉检查；武器库、锻打成型、星位序列等本地素材或版本不同，以卡名核对。行列为各档内从上到下、从左到右。",
+  "interpretation": "跨稀有度的牌组无关起始强度。七档数值是本项目的人工校准，不是原图给出的数值。费用、资源、重复、升级、联动和边际收益继续单独计分；同档内不额外推断先后。",
+  "tiers": {
+    "暴哥": {
+      "base": 9.0
+    },
+    "夯爆了": {
+      "base": 7.5
+    },
+    "夯": {
+      "base": 6.2
+    },
+    "顶级": {
+      "base": 4.8
+    },
+    "人上人": {
+      "base": 3.2
+    },
+    "NPC": {
+      "base": 1.5
+    },
+    "拉完了": {
+      "base": 0.5
+    }
+  },
+  "excludedMultiplayer": [
+    "Constellation",
+    "HammerTime",
+    "Largesse",
+    "Plot",
+    "Tutor"
+  ],
+  "unresolved": [],
+  "cards": [
+    {
+      "className": "Tyranny",
+      "name": "暴政",
+      "rarity": "Rare",
+      "tier": "暴哥",
+      "row": 1,
+      "column": 1,
+      "previousBase": 8.4
+    },
+    {
+      "className": "MeteorShower",
+      "name": "流星雨",
+      "rarity": "Ancient",
+      "tier": "夯爆了",
+      "row": 1,
+      "column": 1,
+      "previousBase": 7.2
+    },
+    {
+      "className": "Guards",
+      "name": "护驾！！！",
+      "rarity": "Rare",
+      "tier": "夯爆了",
+      "row": 1,
+      "column": 2,
+      "previousBase": 6.8
+    },
+    {
+      "className": "Convergence",
+      "name": "汇流",
+      "rarity": "Uncommon",
+      "tier": "夯爆了",
+      "row": 1,
+      "column": 3,
+      "previousBase": 6.8
+    },
+    {
+      "className": "BigBang",
+      "name": "大爆炸",
+      "rarity": "Rare",
+      "tier": "夯爆了",
+      "row": 1,
+      "column": 4,
+      "previousBase": 7.2
+    },
+    {
+      "className": "ChildOfTheStars",
+      "name": "群星之子",
+      "rarity": "Uncommon",
+      "tier": "夯爆了",
+      "row": 1,
+      "column": 5,
+      "previousBase": 6.8
+    },
+    {
+      "className": "Orbit",
+      "name": "环绕轨道",
+      "rarity": "Uncommon",
+      "tier": "夯爆了",
+      "row": 1,
+      "column": 6,
+      "previousBase": 6.8
+    },
+    {
+      "className": "Charge",
+      "name": "冲锋！！",
+      "rarity": "Uncommon",
+      "tier": "夯",
+      "row": 1,
+      "column": 1,
+      "previousBase": 3.5
+    },
+    {
+      "className": "GammaBlast",
+      "name": "伽马爆破",
+      "rarity": "Uncommon",
+      "tier": "夯",
+      "row": 1,
+      "column": 2,
+      "previousBase": 4.6
+    },
+    {
+      "className": "Reflect",
+      "name": "倒映",
+      "rarity": "Uncommon",
+      "tier": "夯",
+      "row": 1,
+      "column": 3,
+      "previousBase": 4.7
+    },
+    {
+      "className": "Bulwark",
+      "name": "铸墙",
+      "rarity": "Uncommon",
+      "tier": "夯",
+      "row": 1,
+      "column": 4,
+      "previousBase": 4.7
+    },
+    {
+      "className": "DyingStar",
+      "name": "星灭",
+      "rarity": "Rare",
+      "tier": "夯",
+      "row": 1,
+      "column": 5,
+      "previousBase": 5.3
+    },
+    {
+      "className": "CosmicIndifference",
+      "name": "宇宙冷漠",
+      "rarity": "Common",
+      "tier": "夯",
+      "row": 1,
+      "column": 6,
+      "previousBase": 3.5
+    },
+    {
+      "className": "PaleBlueDot",
+      "name": "暗淡蓝点",
+      "rarity": "Uncommon",
+      "tier": "夯",
+      "row": 1,
+      "column": 7,
+      "previousBase": 4.4
+    },
+    {
+      "className": "VoidForm",
+      "name": "虚空形态",
+      "rarity": "Rare",
+      "tier": "夯",
+      "row": 1,
+      "column": 8,
+      "previousBase": 5.1
+    },
+    {
+      "className": "Quasar",
+      "name": "类星体",
+      "rarity": "Uncommon",
+      "tier": "夯",
+      "row": 1,
+      "column": 9,
+      "previousBase": 4.5
+    },
+    {
+      "className": "SwordSage",
+      "name": "剑圣",
+      "rarity": "Rare",
+      "tier": "夯",
+      "row": 1,
+      "column": 10,
+      "previousBase": 6.0
+    },
+    {
+      "className": "Alignment",
+      "name": "星位序列",
+      "rarity": "Uncommon",
+      "tier": "夯",
+      "row": 1,
+      "column": 11,
+      "previousBase": 4.8
+    },
+    {
+      "className": "ShiningStrike",
+      "name": "明耀打击",
+      "rarity": "Uncommon",
+      "tier": "夯",
+      "row": 2,
+      "column": 1,
+      "previousBase": 4.6
+    },
+    {
+      "className": "GuidingStar",
+      "name": "引导之星",
+      "rarity": "Common",
+      "tier": "夯",
+      "row": 2,
+      "column": 2,
+      "previousBase": 4.5
+    },
+    {
+      "className": "SpectrumShift",
+      "name": "光谱偏移",
+      "rarity": "Uncommon",
+      "tier": "夯",
+      "row": 2,
+      "column": 3,
+      "previousBase": 4.8
+    },
+    {
+      "className": "Stardust",
+      "name": "星尘",
+      "rarity": "Uncommon",
+      "tier": "夯",
+      "row": 2,
+      "column": 4,
+      "previousBase": 5.1
+    },
+    {
+      "className": "ManifestAuthority",
+      "name": "君权自授",
+      "rarity": "Uncommon",
+      "tier": "夯",
+      "row": 2,
+      "column": 5,
+      "previousBase": 4.3
+    },
+    {
+      "className": "Furnace",
+      "name": "熔炉",
+      "rarity": "Uncommon",
+      "tier": "夯",
+      "row": 2,
+      "column": 6,
+      "previousBase": 6.0
+    },
+    {
+      "className": "CollisionCourse",
+      "name": "碰撞轨迹",
+      "rarity": "Common",
+      "tier": "顶级",
+      "row": 1,
+      "column": 1,
+      "previousBase": 3.2
+    },
+    {
+      "className": "KnowThyPlace",
+      "name": "何人僭越",
+      "rarity": "Common",
+      "tier": "顶级",
+      "row": 1,
+      "column": 2,
+      "previousBase": 3.7
+    },
+    {
+      "className": "RefineBlade",
+      "name": "淬炼刀刃",
+      "rarity": "Common",
+      "tier": "顶级",
+      "row": 1,
+      "column": 3,
+      "previousBase": 4.7
+    },
+    {
+      "className": "BlackHole",
+      "name": "黑洞",
+      "rarity": "Uncommon",
+      "tier": "顶级",
+      "row": 1,
+      "column": 4,
+      "previousBase": 5.6
+    },
+    {
+      "className": "MakeItSo",
+      "name": "如此甚好",
+      "rarity": "Rare",
+      "tier": "顶级",
+      "row": 1,
+      "column": 5,
+      "previousBase": 5.2
+    },
+    {
+      "className": "Glow",
+      "name": "辉光",
+      "rarity": "Common",
+      "tier": "顶级",
+      "row": 1,
+      "column": 6,
+      "previousBase": 4.7
+    },
+    {
+      "className": "HiddenCache",
+      "name": "隐秘藏品",
+      "rarity": "Common",
+      "tier": "顶级",
+      "row": 1,
+      "column": 7,
+      "previousBase": 4.2
+    },
+    {
+      "className": "Glimmer",
+      "name": "微光",
+      "rarity": "Uncommon",
+      "tier": "顶级",
+      "row": 1,
+      "column": 8,
+      "previousBase": 5.0
+    },
+    {
+      "className": "DecisionsDecisions",
+      "name": "抉择，抉择",
+      "rarity": "Rare",
+      "tier": "顶级",
+      "row": 1,
+      "column": 9,
+      "previousBase": 6.3
+    },
+    {
+      "className": "SummonForth",
+      "name": "征召上前",
+      "rarity": "Uncommon",
+      "tier": "顶级",
+      "row": 1,
+      "column": 10,
+      "previousBase": 5.7
+    },
+    {
+      "className": "Parry",
+      "name": "招架",
+      "rarity": "Uncommon",
+      "tier": "顶级",
+      "row": 1,
+      "column": 11,
+      "previousBase": 5.0
+    },
+    {
+      "className": "TheSealedThrone",
+      "name": "封印王座",
+      "rarity": "Ancient",
+      "tier": "顶级",
+      "row": 2,
+      "column": 1,
+      "previousBase": 8.0
+    },
+    {
+      "className": "SeekingEdge",
+      "name": "追踪之刃",
+      "rarity": "Rare",
+      "tier": "顶级",
+      "row": 2,
+      "column": 2,
+      "previousBase": 6.0
+    },
+    {
+      "className": "GatherLight",
+      "name": "收集光辉",
+      "rarity": "Common",
+      "tier": "顶级",
+      "row": 2,
+      "column": 3,
+      "previousBase": 4.2
+    },
+    {
+      "className": "CloakOfStars",
+      "name": "群星斗篷",
+      "rarity": "Common",
+      "tier": "顶级",
+      "row": 2,
+      "column": 4,
+      "previousBase": 3.3
+    },
+    {
+      "className": "Glitterstream",
+      "name": "流光溢彩",
+      "rarity": "Common",
+      "tier": "顶级",
+      "row": 2,
+      "column": 5,
+      "previousBase": 2.8
+    },
+    {
+      "className": "CrashLanding",
+      "name": "迫降",
+      "rarity": "Rare",
+      "tier": "顶级",
+      "row": 2,
+      "column": 6,
+      "previousBase": 3.7
+    },
+    {
+      "className": "RoyalGamble",
+      "name": "胜券在王",
+      "rarity": "Uncommon",
+      "tier": "顶级",
+      "row": 2,
+      "column": 7,
+      "previousBase": 4.7
+    },
+    {
+      "className": "Arsenal",
+      "name": "武器库",
+      "rarity": "Rare",
+      "tier": "顶级",
+      "row": 2,
+      "column": 8,
+      "previousBase": 5.8
+    },
+    {
+      "className": "PillarOfCreation",
+      "name": "创世之柱",
+      "rarity": "Uncommon",
+      "tier": "顶级",
+      "row": 2,
+      "column": 9,
+      "previousBase": 4.8
+    },
+    {
+      "className": "Bombardment",
+      "name": "轰击",
+      "rarity": "Rare",
+      "tier": "顶级",
+      "row": 2,
+      "column": 10,
+      "previousBase": 4.2
+    },
+    {
+      "className": "Begone",
+      "name": "下去！",
+      "rarity": "Common",
+      "tier": "顶级",
+      "row": 2,
+      "column": 11,
+      "previousBase": 2.8
+    },
+    {
+      "className": "Genesis",
+      "name": "创世纪",
+      "rarity": "Rare",
+      "tier": "顶级",
+      "row": 3,
+      "column": 1,
+      "previousBase": 6.0
+    },
+    {
+      "className": "FallingStar",
+      "name": "陨星",
+      "rarity": "Basic",
+      "tier": "人上人",
+      "row": 1,
+      "column": 1,
+      "previousBase": 2.5
+    },
+    {
+      "className": "PhotonCut",
+      "name": "光子切割",
+      "rarity": "Common",
+      "tier": "人上人",
+      "row": 1,
+      "column": 2,
+      "previousBase": 3.8
+    },
+    {
+      "className": "CrushUnder",
+      "name": "下砸",
+      "rarity": "Common",
+      "tier": "人上人",
+      "row": 1,
+      "column": 3,
+      "previousBase": 4.1
+    },
+    {
+      "className": "WroughtInWar",
+      "name": "战火铸就",
+      "rarity": "Common",
+      "tier": "人上人",
+      "row": 1,
+      "column": 4,
+      "previousBase": 4.3
+    },
+    {
+      "className": "Radiate",
+      "name": "辐射",
+      "rarity": "Uncommon",
+      "tier": "人上人",
+      "row": 1,
+      "column": 5,
+      "previousBase": 4.1
+    },
+    {
+      "className": "LunarBlast",
+      "name": "月面射击",
+      "rarity": "Uncommon",
+      "tier": "人上人",
+      "row": 1,
+      "column": 6,
+      "previousBase": 4.3
+    },
+    {
+      "className": "KinglyPunch",
+      "name": "王者之拳",
+      "rarity": "Uncommon",
+      "tier": "人上人",
+      "row": 1,
+      "column": 7,
+      "previousBase": 4.4
+    },
+    {
+      "className": "KinglyKick",
+      "name": "王者之踢",
+      "rarity": "Uncommon",
+      "tier": "人上人",
+      "row": 1,
+      "column": 8,
+      "previousBase": 3.6
+    },
+    {
+      "className": "SpoilsOfBattle",
+      "name": "战利品",
+      "rarity": "Common",
+      "tier": "人上人",
+      "row": 1,
+      "column": 9,
+      "previousBase": 5.5
+    },
+    {
+      "className": "Conqueror",
+      "name": "征服者",
+      "rarity": "Uncommon",
+      "tier": "人上人",
+      "row": 1,
+      "column": 10,
+      "previousBase": 5.2
+    },
+    {
+      "className": "TheSmith",
+      "name": "铸剑者",
+      "rarity": "Rare",
+      "tier": "人上人",
+      "row": 1,
+      "column": 11,
+      "previousBase": 6.0
+    },
+    {
+      "className": "BeatIntoShape",
+      "name": "锻打成型",
+      "rarity": "Rare",
+      "tier": "人上人",
+      "row": 2,
+      "column": 1,
+      "previousBase": 5.8
+    },
+    {
+      "className": "ParticleWall",
+      "name": "粒子墙",
+      "rarity": "Uncommon",
+      "tier": "人上人",
+      "row": 2,
+      "column": 2,
+      "previousBase": 4.1
+    },
+    {
+      "className": "MonarchsGaze",
+      "name": "王之凝视",
+      "rarity": "Rare",
+      "tier": "人上人",
+      "row": 2,
+      "column": 3,
+      "previousBase": 5.3
+    },
+    {
+      "className": "Royalties",
+      "name": "王国资产",
+      "rarity": "Rare",
+      "tier": "人上人",
+      "row": 2,
+      "column": 4,
+      "previousBase": 3.8
+    },
+    {
+      "className": "HeirloomHammer",
+      "name": "传承之锤",
+      "rarity": "Rare",
+      "tier": "人上人",
+      "row": 2,
+      "column": 5,
+      "previousBase": 4.8
+    },
+    {
+      "className": "ForegoneConclusion",
+      "name": "既定事项",
+      "rarity": "Rare",
+      "tier": "人上人",
+      "row": 2,
+      "column": 6,
+      "previousBase": 4.5
+    },
+    {
+      "className": "BundleOfJoy",
+      "name": "新生之喜",
+      "rarity": "Rare",
+      "tier": "人上人",
+      "row": 2,
+      "column": 7,
+      "previousBase": 4.4
+    },
+    {
+      "className": "Comet",
+      "name": "彗星",
+      "rarity": "Rare",
+      "tier": "人上人",
+      "row": 2,
+      "column": 8,
+      "previousBase": 6.1
+    },
+    {
+      "className": "HeavenlyDrill",
+      "name": "天际钻头",
+      "rarity": "Rare",
+      "tier": "人上人",
+      "row": 2,
+      "column": 9,
+      "previousBase": 6.2
+    },
+    {
+      "className": "KnockoutBlow",
+      "name": "决胜一击",
+      "rarity": "Uncommon",
+      "tier": "人上人",
+      "row": 2,
+      "column": 10,
+      "previousBase": 3.8
+    },
+    {
+      "className": "Terraforming",
+      "name": "地形改造",
+      "rarity": "Uncommon",
+      "tier": "人上人",
+      "row": 2,
+      "column": 11,
+      "previousBase": 3.2
+    },
+    {
+      "className": "Patter",
+      "name": "星星点点",
+      "rarity": "Common",
+      "tier": "人上人",
+      "row": 3,
+      "column": 1,
+      "previousBase": 3.3
+    },
+    {
+      "className": "NeutronAegis",
+      "name": "中子护盾",
+      "rarity": "Rare",
+      "tier": "人上人",
+      "row": 3,
+      "column": 2,
+      "previousBase": 5.3
+    },
+    {
+      "className": "IAmInvincible",
+      "name": "所向无敌",
+      "rarity": "Rare",
+      "tier": "人上人",
+      "row": 3,
+      "column": 3,
+      "previousBase": 4.3
+    },
+    {
+      "className": "SolarStrike",
+      "name": "太阳打击",
+      "rarity": "Common",
+      "tier": "NPC",
+      "row": 1,
+      "column": 1,
+      "previousBase": 2.3
+    },
+    {
+      "className": "CrescentSpear",
+      "name": "新月长矛",
+      "rarity": "Common",
+      "tier": "NPC",
+      "row": 1,
+      "column": 2,
+      "previousBase": 2.3
+    },
+    {
+      "className": "Hegemony",
+      "name": "霸权",
+      "rarity": "Uncommon",
+      "tier": "NPC",
+      "row": 1,
+      "column": 3,
+      "previousBase": 2.3
+    },
+    {
+      "className": "CelestialMight",
+      "name": "天穹之力",
+      "rarity": "Common",
+      "tier": "NPC",
+      "row": 1,
+      "column": 4,
+      "previousBase": 2.3
+    },
+    {
+      "className": "Venerate",
+      "name": "崇拜",
+      "rarity": "Basic",
+      "tier": "NPC",
+      "row": 1,
+      "column": 5,
+      "previousBase": 0.8
+    },
+    {
+      "className": "Prophesize",
+      "name": "预言",
+      "rarity": "Uncommon",
+      "tier": "NPC",
+      "row": 1,
+      "column": 6,
+      "previousBase": 2.6
+    },
+    {
+      "className": "Monologue",
+      "name": "独白",
+      "rarity": "Uncommon",
+      "tier": "NPC",
+      "row": 1,
+      "column": 7,
+      "previousBase": 2.3
+    },
+    {
+      "className": "Supermassive",
+      "name": "超质量体",
+      "rarity": "Uncommon",
+      "tier": "NPC",
+      "row": 1,
+      "column": 8,
+      "previousBase": 2.3
+    },
+    {
+      "className": "Resonance",
+      "name": "共鸣",
+      "rarity": "Uncommon",
+      "tier": "NPC",
+      "row": 1,
+      "column": 9,
+      "previousBase": 2.3
+    },
+    {
+      "className": "AstralPulse",
+      "name": "星界脉冲",
+      "rarity": "Common",
+      "tier": "NPC",
+      "row": 1,
+      "column": 10,
+      "previousBase": 2.3
+    },
+    {
+      "className": "StrikeRegent",
+      "name": "打击",
+      "rarity": "Basic",
+      "tier": "拉完了",
+      "row": 1,
+      "column": 1,
+      "previousBase": 0.5
+    },
+    {
+      "className": "Devastate",
+      "name": "葬送",
+      "rarity": "Uncommon",
+      "tier": "拉完了",
+      "row": 1,
+      "column": 2,
+      "previousBase": 1.5
+    },
+    {
+      "className": "DefendRegent",
+      "name": "防御",
+      "rarity": "Basic",
+      "tier": "拉完了",
+      "row": 1,
+      "column": 3,
+      "previousBase": 0.5
+    },
+    {
+      "className": "SevenStars",
+      "name": "七星",
+      "rarity": "Rare",
+      "tier": "拉完了",
+      "row": 1,
+      "column": 4,
+      "previousBase": 1.5
+    }
+  ]
+}

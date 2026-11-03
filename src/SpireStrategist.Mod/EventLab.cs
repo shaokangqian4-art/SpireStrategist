@@ -22,6 +22,7 @@ internal static partial class AutopilotLab
     private static async Task CheckEvents(RunState state,AdvisorService service,string mode)
     {
         var player=service.Player;var auto=service.Autopilot;
+        if(mode=="regent-review-0672"){await CheckReview0672(state,service);return;}
         if(mode=="defect-foresight-0642"){await CheckForesight0642(state,service);return;}
         if(mode=="foul-shop-0638"){await CheckFoulShop0638(state,service);return;}
         if(mode=="enchant-0621"){await CheckEnchant0621(state,service);return;}
@@ -97,7 +98,14 @@ internal static partial class AutopilotLab
         }
         if(mode=="selectors")
         {
-            foreach(var id in new[]{"EMPTY_CAGE","ASTROLABE","PAELS_GROWTH","YUMMY_COOKIE","HEFTY_TABLET","SCROLL_BOXES"})
+            await CheckNeow0651(state,service);
+            foreach(var id in NativeEnchantments.Ids){
+                var enchant=ModelDb.GetById<EnchantmentModel>(new ModelId("ENCHANTMENT",id));
+                Check(enchant.GetType().Assembly==typeof(CardModel).Assembly,"native enchantment resolves "+id);
+            }
+            await CardPileCmd.Add(state.CreateCard<Offering>(player),PileType.Deck);
+
+            foreach(var id in new[]{"EMPTY_CAGE","ASTROLABE","PAELS_GROWTH","YUMMY_COOKIE","HEFTY_TABLET","SCROLL_BOXES","LEAD_PAPERWEIGHT","ROYAL_STAMP"})
             {
                 await RunManager.Instance.EnterRoomDebug(RoomType.Event,model:ModelDb.Event<Neow>(),showTransition:false);await Delay(.5);
                 var model=(EventModel)GameActions.Field(NEventRoom.Instance!,"_event")!;
@@ -106,6 +114,7 @@ internal static partial class AutopilotLab
                 AccessTools.Field(typeof(PartialAutopilot),"eventSelection").SetValue(auto,assessment.Selection);
                 var task=RelicCmd.Obtain(ModelDb.GetById<RelicModel>(new ModelId("RELIC",id)).ToMutable(),player);
                 await Until(()=>Screen() is NDeckCardSelectScreen or NDeckEnchantSelectScreen or NDeckTransformSelectScreen or NChooseACardSelectionScreen or NDeckUpgradeSelectScreen or NChooseABundleSelectionScreen,"relic selector "+id);
+                if(id=="LEAD_PAPERWEIGHT")Check(SelectionAdvice.Read(service,(Control)Screen()!,"") is {Evaluation.Options.Length:>0},"paperweight shows advice before takeover");
                 auto.Enable(true);await Until(()=>task.IsCompleted,"relic selector completed "+id,60);await task;auto.Pause("selector fixture");
                 Check(player.Relics.Any(r=>r.Id.Entry==id),"native pickup selectors "+id);
             }

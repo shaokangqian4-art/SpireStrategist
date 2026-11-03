@@ -21,7 +21,7 @@ public static class Entry
         try
         {
             new Harmony("local.SpireStrategist").PatchAll(typeof(Entry).Assembly);
-            GD.Print("[SpireStrategist] 0.6.55 loaded: conditional card mechanisms and opt-in continuous climbs; starts in advice mode.");
+            GD.Print("[SpireStrategist] 0.6.72 loaded: conditional card mechanisms and opt-in continuous climbs; starts in advice mode.");
             if(NGame.Instance!=null){ClimbController.Initialize(NGame.Instance);AutopilotLab.Postfix(NGame.Instance);}
         }
         catch (Exception ex) { GD.PrintErr("[SpireStrategist] Initialization failed: " + ex); }

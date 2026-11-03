@@ -130,9 +130,15 @@ internal static partial class AutopilotLab
         service.Autopilot.Pause("fixture");
         var removed=before.Except(service.Player.Deck.Cards).ToArray();
         Check(removed.Length==5&&relic.SerializableCards.Count==5,"native tooth temporarily stores five");
+        var fingerprint=RewardForesightReader.Fingerprint(state,service.Player);
+        var held=SnapshotReader.Read(state,service.Player);
+        Check(held.PendingToothCards.Length==5&&held.Deck.Length==before.Length-5,"tooth snapshots separate owned pending from combat cards");
+        Check(held.PendingToothCards.Select(c=>c.Id).Order().SequenceEqual(removed.Select(c=>c.Id.ToString()).Order()),"tooth pending snapshots preserve exact stored card identities");
+        Check(fingerprint==RewardForesightReader.Fingerprint(state,service.Player),"reading tooth storage does not mutate live deck or RNG");
         Check(removed.Count(c=>c.Rarity!=MegaCrit.Sts2.Core.Entities.Cards.CardRarity.Basic)>=3,"tooth chooses substantial upgrades rather than only basics");
         // Native after-combat hook, with no battle: mechanics fixture, never a win sample.
         await relic.AfterCombatEnd(null!);
         Check(relic.SerializableCards.Count==4&&service.Player.Deck.Cards.Count==before.Length-4,"one native random upgraded card returns");
+        Check(SnapshotReader.Read(state,service.Player).PendingToothCards.Length==4,"returned tooth card no longer counted as pending");
     }
 }

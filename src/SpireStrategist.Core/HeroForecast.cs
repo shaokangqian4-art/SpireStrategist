@@ -8,12 +8,17 @@ public static class HeroForecast
     public static Investment Evaluate(RunSnapshot s,CardSnapshot candidate)
     {
         if(!HeroPolicy.Supports(s.Character)||s.IsMultiplayer||s.Foresight is not {SourceUnchanged:true,Branches.Length:>0} f)return new(0,"");
-        bool Allowed(CardSnapshot c)=>!MultiplayerAdvice.Ignore(c)&&!CardCatalog.HasUnmodelledModification(c)&&HeroPolicy.Profiles.ContainsKey(c.ClassName);
+        // Freeze intent from the REAL deck. Predicted components may complete the
+        // chosen line, but cannot vote themselves into a new main damage plan.
+        var direction=RegentDirection.Analyze(s);
+        bool Allowed(CardSnapshot c)=>!MultiplayerAdvice.Ignore(c)&&!CardCatalog.HasUnmodelledModification(c)&&HeroPolicy.Profiles.ContainsKey(c.ClassName)
+            &&!RegentDirection.OffPlan(direction,c)&&!NecrobinderDirection.OffPlan(s,c)
+            &&(s.Character!="Regent"||!RegentDirection.SwordOnly(c)||RegentDirection.SwordCore(c)||RegentDirection.SwordOpportunity(s)||RegentDirection.SwordCore(candidate));
         if(!Allowed(candidate)||s.Deck.Any(c=>c.ClassName==candidate.ClassName))return new(0,"");
         double Value(IEnumerable<CardSnapshot> cards)
         {
             var a=HeroPolicy.Analyze(s with{Deck=cards.ToArray(),Foresight=null});
-            return a.DamageEngines*10+Math.Min(5,a.Immediate)+Math.Min(2,a.Defense);
+            return RegentDirection.RelevantEngines(a,direction)*10+Math.Min(5,a.Immediate)+Math.Min(2,a.Defense);
         }
         var now=Value(s.Deck.Append(candidate))-Value(s.Deck);double best=0;var evidence="";
         foreach(var branch in f.Branches.Take(8))

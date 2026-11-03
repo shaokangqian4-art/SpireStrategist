@@ -93,7 +93,7 @@ public static class DefectPolicy
         OptionScore Unsupported(string reason)=>new(o.Key,o.Name,false,o.Enabled,null,[],[reason]);
         if(!prior.Cards.TryGetValue(name,out var p))return DefectNeutral.Score(s,o,c)??Unsupported("尚未建立机器人语境模型；不能用战士权重替代。");
         if(definitions[name].MultiplayerConstraint=="MultiplayerOnly")return Unsupported("多人专用牌，不参与单人建议。");
-        if(CardCatalog.HasUnmodelledModification(c)||!string.IsNullOrEmpty(c.Enchantment)&&c.Enchantment!="ENCHANTMENT.SWIFT")
+        if(CardCatalog.HasUnmodelledModification(c))
             return Unsupported("附魔／异变未建模，不能据此推荐。");
         var deck=s.Deck;var nonbasic=deck.Where(d=>d.Rarity!="Basic").ToArray();
         var tags=deck.Where(d=>!MultiplayerAdvice.Ignore(d)).SelectMany(d=>prior.Cards.TryGetValue(d.ClassName,out var profile)?profile.Tags:[]).ToHashSet();
@@ -325,6 +325,7 @@ public static class DefectPolicy
             var targets=deck.Count(d=>d.Type=="Power"&&d.ClassName!="CreativeAi");
             Add("信号增强按可复制能力数量评估重复份数",targets>n?Math.Min(3,1.5+targets*.4): -3);
         }
+        if(c.Enchantment=="ENCHANTMENT.GLAM")Add("华彩：每场首次打出重放一次",NativeEnchantments.Glam(c));
         if(CopyEngine.Swift(c)&&!CopyEngine.SelfCopies(c))Add("迅捷首次打出抽牌，普通牌不重复触发",Math.Min(4,c.EnchantmentAmount*1.2));
         foreach(var part in CopyEngine.Adjustments(s,c))Add(part.Reason,part.Value);
         foreach(var part in DefectComposition.TransitionAdjustments(s,c))Add(part.Reason,part.Value);

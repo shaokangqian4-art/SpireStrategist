@@ -44,6 +44,17 @@ internal sealed partial class PartialAutopilot
         if(CombatManager.Instance.IsInProgress)return false;
         if(!OwnsPickup){ownedPickup=null;ownedPickupRoom=null;}
         if(!OwnsCurrentEvent){ownedEvent=null;if(ownedRestSelection==null&&!OwnsPickup)eventSelectionTargets=null;}
+        // Resuming takeover after a manually obtained Neow paperweight (also from Bones).
+        if(!CombatManager.Instance.IsInProgress&&!OwnsCurrentEvent&&!OwnsPickup&&screen is NChooseACardSelectionScreen
+            &&service.State.CurrentRoom is EventRoom {CanonicalEvent:MegaCrit.Sts2.Core.Models.Events.Neow}
+            &&service.Player.Relics.OfType<MegaCrit.Sts2.Core.Models.Relics.LeadPaperweight>().FirstOrDefault() is {} paperweight)
+            PrepareRelicSelection(paperweight);
+        // Scroll Boxes may also be obtained manually or rolled by Neow's Bones.
+        // Only adopt its native bundle screen at Neow; never seize arbitrary mod UI.
+        if(!OwnsCurrentEvent&&!OwnsPickup&&screen is NChooseABundleSelectionScreen
+            &&service.State.CurrentRoom is EventRoom {CanonicalEvent:MegaCrit.Sts2.Core.Models.Events.Neow}
+            &&service.Player.Relics.OfType<MegaCrit.Sts2.Core.Models.Relics.ScrollBoxes>().FirstOrDefault() is {} boxes)
+            PrepareRelicSelection(boxes);
         if(TickCustomEvent(screen))return true;
         if((OwnsCurrentEvent || OwnsPickup || ownedRestSelection!=null&&ReferenceEquals(ownedRestSelection,service.RestRoom)) && screen is Control selector && selector is NDeckCardSelectScreen or NDeckUpgradeSelectScreen or NDeckTransformSelectScreen or NDeckEnchantSelectScreen or NSimpleCardSelectScreen)
         {SelectEventCards(selector);return true;}

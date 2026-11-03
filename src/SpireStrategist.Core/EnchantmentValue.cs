@@ -13,20 +13,27 @@ public static class EnchantmentValue
         var once=c.Type=="Power"||c.Keywords.Contains("Exhaust")||c.Keywords.Contains("Ethereal");
         var useful=Math.Clamp(v.Add(c),0,10);
         var keep=basic?.55:.85+useful*.025;
-        var uses=(once?.75:1.25)*(c.Cost<=1?1.15:.85);
-        var hits=Hits(c);
+        var uses=(once?.75:1.25+.35*Math.Clamp(v.State.Act-1,0,2))*(c.Cost<=1?1.15:.85);
+        var hits=RegentAttackLinks.Hits(v.State,c);
         var damage=(double)c.Variables.GetValueOrDefault("Damage");
         if(damage<=0)damage=p.Attack*10/Math.Max(1,hits);
-        var strength=v.State.Character=="Silent"?SilentMechanics.StrengthSupport(v.State,SilentPolicy.Analyze(v.State).Shivs):v.Strength;
+        var strength=v.State.Character=="Silent"?SilentMechanics.StrengthSupport(v.State,SilentPolicy.Analyze(v.State).Shivs):OwnedAttackPlan.Strength(v.State);
         var total=(damage+strength)*hits;
         var opening=basic?.65:1+useful*.025;
-        return name switch
+        var lighter=v.State.Character=="Regent"&&v.Has("MYSTIC_LIGHTER")&&c.Type=="Attack"?Math.Min(12,hits*2)*keep:0;
+        return (name switch
         {
+            "ROYALLY_APPROVED"=>NativeEnchantments.Royal(v,c),
+            "GLAM"=>Math.Max(.5,useful*.5+p.Attack+p.Block+p.Draw+p.Energy),
+            "INKY"=>2*uses*keep,
+            "MOMENTUM"=>amount*hits*uses*keep,
+            "SLUMBERING_ESSENCE"=>c.Cost>0&&!c.CostsX?Math.Min(4,c.Cost)*(c.Keywords.Contains("Retain")?1.5:.5):0,
+            "TEZCATARAS_EMBER"=>Math.Max(0,c.Cost)*2+hits*1.5-(basic?3:0),
             "SHARP"=>c.Type=="Attack"?amount*.8*hits*uses*keep:-10,
             "VIGOROUS"=>c.Type=="Attack"?amount*.8*hits*keep:-10,
             "INSTINCT"=>c.Type=="Attack"?total*.7*uses*keep:-10,
             "CORRUPTED"=>c.Type=="Attack"?(total*.4*keep-v.HpCost(2))*uses:-10,
-            "SWIFT"=>amount*3*(c.Cost<=1?1.2:.8)*opening+(CopyEngine.SelfCopies(c)?8:0),
+            "SWIFT"=>amount*3*(c.Cost<=1?1.2:.8)*opening*DrawNeed(v.State)+(CopyEngine.SelfCopies(c)?8:0),
             "SOWN"=>amount*4*(c.Cost<=1?1.15:.85)*opening+(CopyEngine.SelfCopies(c)?4:0),
             // Replay needs the exhaust/discard pool, Finale an empty draw pile.
             // Automatic pre-play of these cards is not a free useful opening skill.
@@ -34,7 +41,15 @@ public static class EnchantmentValue
                 Math.Max(0,v.Add(c))+Math.Max(0,c.Cost)*2+(c.ClassName=="Apotheosis"?8:0),
             "STEADY"=>c.Keywords.Contains("Retain")?0:
                 Math.Max(0,v.Add(c))*.4+(c.ClassName is "KnifeTrap" or "GrandFinale" or "Nightmare"?5:c.Cost>=2?3:1),
-            _=>null
-        };
+            _=>(double?)null
+        }) is {} value ? value+(value>=0?lighter:0) : null;
+    }
+    public static double DrawNeed(RunSnapshot s)
+    {
+        // Per-card first-play draw, not repeatable draw every time through the deck.
+        var supply=s.Deck.Sum(c=>(CardCatalog.Find(c)?.Draw??0)+
+            (c.Enchantment?.Split('.').Last()=="SWIFT"?c.EnchantmentAmount*.5:0));
+        supply*=15d/Math.Max(10,s.Deck.Length);
+        return .6+.65*Math.Clamp((4-supply)/4,0,1);
     }
 }

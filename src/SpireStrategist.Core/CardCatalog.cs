@@ -84,9 +84,7 @@ public static class CardCatalog
         };
 
     public static bool HasUnmodelledModification(CardSnapshot card)=>
-        card.Affliction!=null || card.Modified && card.Enchantment is not
-            ("ENCHANTMENT.SOWN" or "ENCHANTMENT.SWIFT" or "ENCHANTMENT.ADROIT" or "ENCHANTMENT.NIMBLE" or
-             "ENCHANTMENT.GOOPY" or "ENCHANTMENT.SHARP" or "ENCHANTMENT.VIGOROUS");
+        card.Affliction!=null || (card.Modified || !string.IsNullOrEmpty(card.Enchantment)) && !NativeEnchantments.Known(card.Enchantment);
 
     public static CardProfile? Find(CardSnapshot card)
     {

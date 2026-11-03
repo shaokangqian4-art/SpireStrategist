@@ -10,7 +10,7 @@
   ],
   "cards": {
     "Alignment": {
-      "base": 4.8,
+      "base": 6.2,
       "duplicate": 3.0,
       "upgradeDelta": 1.2,
       "phase": [
@@ -25,7 +25,7 @@
       "evidenceAdjustment": 0.005
     },
     "Arsenal": {
-      "base": 5.8,
+      "base": 4.8,
       "duplicate": 4.0,
       "upgradeDelta": 1.6,
       "phase": [
@@ -42,7 +42,7 @@
       "evidenceAdjustment": 0.211
     },
     "AstralPulse": {
-      "base": 4.0,
+      "base": 1.5,
       "duplicate": 3.0,
       "upgradeDelta": 1.3,
       "phase": [
@@ -60,7 +60,7 @@
       "evidenceAdjustment": -0.143
     },
     "BeatIntoShape": {
-      "base": 5.8,
+      "base": 3.2,
       "duplicate": 3.0,
       "upgradeDelta": 2.0,
       "phase": [
@@ -77,7 +77,7 @@
       "evidenceAdjustment": -0.127
     },
     "Begone": {
-      "base": 2.8,
+      "base": 4.8,
       "duplicate": 4.0,
       "upgradeDelta": 1.5,
       "phase": [
@@ -94,7 +94,7 @@
       "evidenceAdjustment": 0.098
     },
     "BigBang": {
-      "base": 7.0,
+      "base": 7.5,
       "duplicate": 3.0,
       "upgradeDelta": 2.0,
       "phase": [
@@ -113,7 +113,7 @@
       "evidenceAdjustment": 0.493
     },
     "BlackHole": {
-      "base": 5.6,
+      "base": 4.8,
       "duplicate": 3.2,
       "upgradeDelta": 2.0,
       "phase": [
@@ -130,24 +130,23 @@
       "evidenceAdjustment": -0.135
     },
     "Bombardment": {
-      "base": 5.8,
+      "base": 4.8,
       "duplicate": 3.0,
       "upgradeDelta": 1.8,
       "phase": [
         0,
-        0.2,
-        0.3
+        -0.6,
+        -1
       ],
       "tags": [
         "attack",
-        "scaling",
-        "autonomous"
+        "transition"
       ],
-      "note": "三费启动后消耗区每回合自动攻击，独立长战输出。",
+      "note": "三费启动的持续过渡伤害，不单独算作Boss输出引擎。",
       "evidenceAdjustment": 0.209
     },
     "Bulwark": {
-      "base": 4.7,
+      "base": 6.2,
       "duplicate": 3.0,
       "upgradeDelta": 1.5,
       "phase": [
@@ -163,7 +162,7 @@
       "evidenceAdjustment": 0.378
     },
     "BundleOfJoy": {
-      "base": 4.4,
+      "base": 3.2,
       "duplicate": 4.0,
       "upgradeDelta": 1.2,
       "phase": [
@@ -179,7 +178,7 @@
       "evidenceAdjustment": 0.045
     },
     "CelestialMight": {
-      "base": 4.1,
+      "base": 1.5,
       "duplicate": 3.0,
       "upgradeDelta": 1.8,
       "phase": [
@@ -196,7 +195,7 @@
       "evidenceAdjustment": -0.155
     },
     "Charge": {
-      "base": 3.5,
+      "base": 6.2,
       "duplicate": 4.0,
       "upgradeDelta": 1.3,
       "phase": [
@@ -213,7 +212,7 @@
       "evidenceAdjustment": 0.253
     },
     "ChildOfTheStars": {
-      "base": 5.2,
+      "base": 7.5,
       "duplicate": 3.0,
       "upgradeDelta": 2.0,
       "phase": [
@@ -229,7 +228,7 @@
       "evidenceAdjustment": 0.177
     },
     "CloakOfStars": {
-      "base": 3.3,
+      "base": 4.8,
       "duplicate": 3.5,
       "upgradeDelta": 1.4,
       "phase": [
@@ -244,7 +243,7 @@
       "evidenceAdjustment": -0.001
     },
     "CollisionCourse": {
-      "base": 3.2,
+      "base": 4.8,
       "duplicate": 3.5,
       "upgradeDelta": 1.2,
       "phase": [
@@ -261,7 +260,7 @@
       "evidenceAdjustment": 0.049
     },
     "Comet": {
-      "base": 6.1,
+      "base": 3.2,
       "duplicate": 3.6,
       "upgradeDelta": 1.5,
       "phase": [
@@ -279,7 +278,7 @@
       "evidenceAdjustment": 0.104
     },
     "Conqueror": {
-      "base": 5.2,
+      "base": 3.2,
       "duplicate": 4.0,
       "upgradeDelta": 1.0,
       "phase": [
@@ -295,7 +294,7 @@
       "evidenceAdjustment": -0.099
     },
     "Convergence": {
-      "base": 4.2,
+      "base": 7.5,
       "duplicate": 3.0,
       "upgradeDelta": 1.0,
       "phase": [
@@ -312,7 +311,7 @@
       "evidenceAdjustment": 0.188
     },
     "CosmicIndifference": {
-      "base": 3.5,
+      "base": 6.2,
       "duplicate": 3.5,
       "upgradeDelta": 1.0,
       "phase": [
@@ -328,7 +327,7 @@
       "evidenceAdjustment": 0.076
     },
     "CrashLanding": {
-      "base": 3.7,
+      "base": 4.8,
       "duplicate": 5.0,
       "upgradeDelta": 1.0,
       "phase": [
@@ -345,7 +344,7 @@
       "evidenceAdjustment": 0.0
     },
     "CrescentSpear": {
-      "base": 3.1,
+      "base": 1.5,
       "duplicate": 3.5,
       "upgradeDelta": 1.0,
       "phase": [
@@ -361,7 +360,7 @@
       "evidenceAdjustment": -0.172
     },
     "CrushUnder": {
-      "base": 4.1,
+      "base": 3.2,
       "duplicate": 3.0,
       "upgradeDelta": 1.3,
       "phase": [
@@ -372,14 +371,14 @@
       "tags": [
         "attack",
         "aoe",
-        "weak",
+        "strength_down",
         "transition"
       ],
       "note": "早期群伤加当回合降力量，长战成长有限。",
       "evidenceAdjustment": -0.134
     },
     "DecisionsDecisions": {
-      "base": 6.3,
+      "base": 4.8,
       "duplicate": 3.5,
       "upgradeDelta": 1.5,
       "phase": [
@@ -411,7 +410,7 @@
       "evidenceAdjustment": 0
     },
     "Devastate": {
-      "base": 4.3,
+      "base": 0.5,
       "duplicate": 4.0,
       "upgradeDelta": 1.4,
       "phase": [
@@ -428,7 +427,7 @@
       "evidenceAdjustment": -0.171
     },
     "DyingStar": {
-      "base": 5.3,
+      "base": 6.2,
       "duplicate": 3.0,
       "upgradeDelta": 1.4,
       "phase": [
@@ -446,7 +445,7 @@
       "evidenceAdjustment": -0.08
     },
     "FallingStar": {
-      "base": 2.5,
+      "base": 3.2,
       "duplicate": 4.0,
       "upgradeDelta": 0.7,
       "phase": [
@@ -464,7 +463,7 @@
       "evidenceAdjustment": 0
     },
     "ForegoneConclusion": {
-      "base": 4.5,
+      "base": 3.2,
       "duplicate": 3.5,
       "upgradeDelta": 1.4,
       "phase": [
@@ -480,7 +479,7 @@
       "evidenceAdjustment": -0.116
     },
     "Furnace": {
-      "base": 6.0,
+      "base": 6.2,
       "duplicate": 3.0,
       "upgradeDelta": 2.0,
       "phase": [
@@ -497,7 +496,7 @@
       "evidenceAdjustment": -0.085
     },
     "GammaBlast": {
-      "base": 4.6,
+      "base": 6.2,
       "duplicate": 3.0,
       "upgradeDelta": 1.3,
       "phase": [
@@ -515,7 +514,7 @@
       "evidenceAdjustment": 0.21
     },
     "GatherLight": {
-      "base": 4.2,
+      "base": 4.8,
       "duplicate": 2.8,
       "upgradeDelta": 1.2,
       "phase": [
@@ -531,7 +530,7 @@
       "evidenceAdjustment": 0.174
     },
     "Genesis": {
-      "base": 6.0,
+      "base": 4.8,
       "duplicate": 3.5,
       "upgradeDelta": 2.5,
       "phase": [
@@ -547,7 +546,7 @@
       "evidenceAdjustment": -0.106
     },
     "Glimmer": {
-      "base": 5.0,
+      "base": 4.8,
       "duplicate": 2.6,
       "upgradeDelta": 1.6,
       "phase": [
@@ -563,7 +562,7 @@
       "evidenceAdjustment": 0.063
     },
     "Glitterstream": {
-      "base": 2.8,
+      "base": 4.8,
       "duplicate": 3.8,
       "upgradeDelta": 1.0,
       "phase": [
@@ -579,7 +578,7 @@
       "evidenceAdjustment": 0.095
     },
     "Glow": {
-      "base": 4.7,
+      "base": 4.8,
       "duplicate": 2.6,
       "upgradeDelta": 1.7,
       "phase": [
@@ -595,7 +594,7 @@
       "evidenceAdjustment": 0.133
     },
     "Guards": {
-      "base": 4.0,
+      "base": 7.5,
       "duplicate": 5.0,
       "upgradeDelta": 1.3,
       "phase": [
@@ -613,7 +612,7 @@
       "evidenceAdjustment": 0.21
     },
     "GuidingStar": {
-      "base": 4.5,
+      "base": 6.2,
       "duplicate": 3.0,
       "upgradeDelta": 1.4,
       "phase": [
@@ -630,7 +629,7 @@
       "evidenceAdjustment": 0.056
     },
     "HeavenlyDrill": {
-      "base": 6.2,
+      "base": 3.2,
       "duplicate": 3.0,
       "upgradeDelta": 1.5,
       "phase": [
@@ -648,7 +647,7 @@
       "evidenceAdjustment": 0.002
     },
     "Hegemony": {
-      "base": 3.9,
+      "base": 1.5,
       "duplicate": 3.2,
       "upgradeDelta": 1.4,
       "phase": [
@@ -665,7 +664,7 @@
       "evidenceAdjustment": -0.115
     },
     "HeirloomHammer": {
-      "base": 4.8,
+      "base": 3.2,
       "duplicate": 3.5,
       "upgradeDelta": 1.3,
       "phase": [
@@ -682,7 +681,7 @@
       "evidenceAdjustment": -0.071
     },
     "HiddenCache": {
-      "base": 4.2,
+      "base": 4.8,
       "duplicate": 2.6,
       "upgradeDelta": 1.2,
       "phase": [
@@ -698,7 +697,7 @@
       "evidenceAdjustment": 0.012
     },
     "IAmInvincible": {
-      "base": 4.3,
+      "base": 3.2,
       "duplicate": 4.0,
       "upgradeDelta": 1.3,
       "phase": [
@@ -714,7 +713,7 @@
       "evidenceAdjustment": -0.025
     },
     "KinglyKick": {
-      "base": 3.6,
+      "base": 3.2,
       "duplicate": 4.0,
       "upgradeDelta": 1.0,
       "phase": [
@@ -731,7 +730,7 @@
       "evidenceAdjustment": -0.141
     },
     "KinglyPunch": {
-      "base": 4.4,
+      "base": 3.2,
       "duplicate": 3.5,
       "upgradeDelta": 1.8,
       "phase": [
@@ -748,7 +747,7 @@
       "evidenceAdjustment": -0.123
     },
     "KnockoutBlow": {
-      "base": 3.8,
+      "base": 3.2,
       "duplicate": 3.5,
       "upgradeDelta": 1.3,
       "phase": [
@@ -765,7 +764,7 @@
       "evidenceAdjustment": -0.187
     },
     "KnowThyPlace": {
-      "base": 3.7,
+      "base": 4.8,
       "duplicate": 4.0,
       "upgradeDelta": 1.5,
       "phase": [
@@ -781,7 +780,7 @@
       "evidenceAdjustment": 0.123
     },
     "LunarBlast": {
-      "base": 4.3,
+      "base": 3.2,
       "duplicate": 3.5,
       "upgradeDelta": 1.3,
       "phase": [
@@ -798,7 +797,7 @@
       "evidenceAdjustment": -0.159
     },
     "MakeItSo": {
-      "base": 5.2,
+      "base": 4.8,
       "duplicate": 3.5,
       "upgradeDelta": 1.3,
       "phase": [
@@ -815,7 +814,7 @@
       "evidenceAdjustment": 0.024
     },
     "ManifestAuthority": {
-      "base": 4.3,
+      "base": 6.2,
       "duplicate": 3.0,
       "upgradeDelta": 1.3,
       "phase": [
@@ -831,7 +830,7 @@
       "evidenceAdjustment": 0.216
     },
     "MeteorShower": {
-      "base": 6.5,
+      "base": 7.5,
       "duplicate": 3.0,
       "upgradeDelta": 1.6,
       "phase": [
@@ -850,7 +849,7 @@
       "evidenceAdjustment": 0
     },
     "MonarchsGaze": {
-      "base": 5.3,
+      "base": 3.2,
       "duplicate": 4.0,
       "upgradeDelta": 3.0,
       "phase": [
@@ -867,7 +866,7 @@
       "evidenceAdjustment": -0.07
     },
     "Monologue": {
-      "base": 3.9,
+      "base": 1.5,
       "duplicate": 3.5,
       "upgradeDelta": 1.2,
       "phase": [
@@ -883,7 +882,7 @@
       "evidenceAdjustment": -0.221
     },
     "NeutronAegis": {
-      "base": 5.3,
+      "base": 3.2,
       "duplicate": 3.5,
       "upgradeDelta": 1.7,
       "phase": [
@@ -899,9 +898,9 @@
       "evidenceAdjustment": -0.11
     },
     "Orbit": {
-      "base": 4.5,
+      "base": 7.5,
       "duplicate": 4.0,
-      "upgradeDelta": 3.0,
+      "upgradeDelta": 4,
       "phase": [
         0,
         0.2,
@@ -911,11 +910,11 @@
         "energy",
         "engine"
       ],
-      "note": "花能量返能量；已有供能与过牌才提高循环收益。",
+      "note": "每累计花费4能量返1能量，计数跨回合；多张独立触发，按能量支付出口与过牌估值，星费不触发。",
       "evidenceAdjustment": 0.111
     },
     "PaleBlueDot": {
-      "base": 4.4,
+      "base": 6.2,
       "duplicate": 3.0,
       "upgradeDelta": 2.5,
       "phase": [
@@ -931,7 +930,7 @@
       "evidenceAdjustment": 0.086
     },
     "Parry": {
-      "base": 5.0,
+      "base": 4.8,
       "duplicate": 4.0,
       "upgradeDelta": 1.7,
       "phase": [
@@ -947,7 +946,7 @@
       "evidenceAdjustment": 0.036
     },
     "ParticleWall": {
-      "base": 4.1,
+      "base": 3.2,
       "duplicate": 4.0,
       "upgradeDelta": 1.6,
       "phase": [
@@ -963,7 +962,7 @@
       "evidenceAdjustment": 0.11
     },
     "Patter": {
-      "base": 3.3,
+      "base": 3.2,
       "duplicate": 3.5,
       "upgradeDelta": 1.0,
       "phase": [
@@ -980,7 +979,7 @@
       "evidenceAdjustment": -0.098
     },
     "PhotonCut": {
-      "base": 3.8,
+      "base": 3.2,
       "duplicate": 3.0,
       "upgradeDelta": 1.6,
       "phase": [
@@ -1014,7 +1013,7 @@
       "evidenceAdjustment": 0.144
     },
     "Prophesize": {
-      "base": 5.2,
+      "base": 1.5,
       "duplicate": 2.8,
       "upgradeDelta": 1.6,
       "phase": [
@@ -1029,7 +1028,7 @@
       "evidenceAdjustment": -0.052
     },
     "Quasar": {
-      "base": 4.5,
+      "base": 6.2,
       "duplicate": 2.8,
       "upgradeDelta": 1.2,
       "phase": [
@@ -1044,7 +1043,7 @@
       "evidenceAdjustment": 0.019
     },
     "Radiate": {
-      "base": 4.1,
+      "base": 3.2,
       "duplicate": 3.5,
       "upgradeDelta": 1.3,
       "phase": [
@@ -1062,7 +1061,7 @@
       "evidenceAdjustment": -0.118
     },
     "RefineBlade": {
-      "base": 4.7,
+      "base": 4.8,
       "duplicate": 2.6,
       "upgradeDelta": 1.7,
       "phase": [
@@ -1078,7 +1077,7 @@
       "evidenceAdjustment": 0.039
     },
     "Reflect": {
-      "base": 4.7,
+      "base": 6.2,
       "duplicate": 3.0,
       "upgradeDelta": 1.4,
       "phase": [
@@ -1094,7 +1093,7 @@
       "evidenceAdjustment": 0.289
     },
     "Resonance": {
-      "base": 5.2,
+      "base": 1.5,
       "duplicate": 3.0,
       "upgradeDelta": 2.2,
       "phase": [
@@ -1110,7 +1109,7 @@
       "evidenceAdjustment": -0.269
     },
     "RoyalGamble": {
-      "base": 4.7,
+      "base": 4.8,
       "duplicate": 4.0,
       "upgradeDelta": 1.0,
       "phase": [
@@ -1125,7 +1124,7 @@
       "evidenceAdjustment": 0.059
     },
     "Royalties": {
-      "base": 3.8,
+      "base": 3.2,
       "duplicate": 5.0,
       "upgradeDelta": 0.8,
       "phase": [
@@ -1140,7 +1139,7 @@
       "evidenceAdjustment": -0.143
     },
     "SeekingEdge": {
-      "base": 6.0,
+      "base": 4.8,
       "duplicate": 5.0,
       "upgradeDelta": 1.5,
       "phase": [
@@ -1157,7 +1156,7 @@
       "evidenceAdjustment": -0.113
     },
     "SevenStars": {
-      "base": 6.4,
+      "base": 0.5,
       "duplicate": 4.0,
       "upgradeDelta": 3.0,
       "phase": [
@@ -1175,7 +1174,7 @@
       "evidenceAdjustment": -0.196
     },
     "ShiningStrike": {
-      "base": 4.6,
+      "base": 6.2,
       "duplicate": 3.0,
       "upgradeDelta": 1.2,
       "phase": [
@@ -1192,7 +1191,7 @@
       "evidenceAdjustment": -0.122
     },
     "SolarStrike": {
-      "base": 4.1,
+      "base": 1.5,
       "duplicate": 3.0,
       "upgradeDelta": 1.5,
       "phase": [
@@ -1209,7 +1208,7 @@
       "evidenceAdjustment": -0.217
     },
     "SpectrumShift": {
-      "base": 4.8,
+      "base": 6.2,
       "duplicate": 4.0,
       "upgradeDelta": 2.8,
       "phase": [
@@ -1225,7 +1224,7 @@
       "evidenceAdjustment": 0.25
     },
     "SpoilsOfBattle": {
-      "base": 5.5,
+      "base": 3.2,
       "duplicate": 2.5,
       "upgradeDelta": 1.2,
       "phase": [
@@ -1241,7 +1240,7 @@
       "evidenceAdjustment": -0.011
     },
     "Stardust": {
-      "base": 5.1,
+      "base": 6.2,
       "duplicate": 3.4,
       "upgradeDelta": 1.6,
       "phase": [
@@ -1275,7 +1274,7 @@
       "evidenceAdjustment": 0
     },
     "SummonForth": {
-      "base": 5.7,
+      "base": 4.8,
       "duplicate": 2.8,
       "upgradeDelta": 1.3,
       "phase": [
@@ -1291,7 +1290,7 @@
       "evidenceAdjustment": -0.014
     },
     "Supermassive": {
-      "base": 4.9,
+      "base": 1.5,
       "duplicate": 3.5,
       "upgradeDelta": 1.4,
       "phase": [
@@ -1308,7 +1307,7 @@
       "evidenceAdjustment": -0.012
     },
     "SwordSage": {
-      "base": 6.0,
+      "base": 6.2,
       "duplicate": 5.0,
       "upgradeDelta": 3.0,
       "phase": [
@@ -1340,7 +1339,7 @@
       "evidenceAdjustment": -0.199
     },
     "TheSealedThrone": {
-      "base": 8.0,
+      "base": 4.8,
       "duplicate": 5.0,
       "upgradeDelta": 3.0,
       "phase": [
@@ -1357,7 +1356,7 @@
       "evidenceAdjustment": 0
     },
     "TheSmith": {
-      "base": 6.0,
+      "base": 3.2,
       "duplicate": 3.0,
       "upgradeDelta": 1.8,
       "phase": [
@@ -1373,7 +1372,7 @@
       "evidenceAdjustment": -0.124
     },
     "Tyranny": {
-      "base": 5.6,
+      "base": 9.0,
       "duplicate": 4.0,
       "upgradeDelta": 1.5,
       "phase": [
@@ -1390,7 +1389,7 @@
       "evidenceAdjustment": 0.429
     },
     "Venerate": {
-      "base": 2.0,
+      "base": 1.5,
       "duplicate": 4.0,
       "upgradeDelta": 1.0,
       "phase": [
@@ -1406,7 +1405,7 @@
       "evidenceAdjustment": 0
     },
     "VoidForm": {
-      "base": 5.1,
+      "base": 6.2,
       "duplicate": 5.0,
       "upgradeDelta": 2.0,
       "phase": [
@@ -1422,7 +1421,7 @@
       "evidenceAdjustment": 0.208
     },
     "WroughtInWar": {
-      "base": 4.3,
+      "base": 3.2,
       "duplicate": 3.0,
       "upgradeDelta": 1.3,
       "phase": [

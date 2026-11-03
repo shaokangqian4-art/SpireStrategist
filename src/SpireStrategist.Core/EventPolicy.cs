@@ -23,7 +23,7 @@ public static class EventPolicy
                 new("最大生命与剩余路线",v.MaxHp(c.MaxHp)),new("金币与当前预算",v.Gold(c.Gold)),
                 new("删牌边际收益",v.RemoveBest(c.Remove)),new("自选升级",v.UpgradeBest(c.Upgrade)),
                 new("随机升级期望（非确定预测）",v.RandomUpgrade(c.RandomUpgrade)),new("变化低效牌的先验",v.TransformBest(c.Transform)),
-                new("空药水栏收益",v.Potion(c.Potions)),new("已核对机制收益（待校准）",c.Benefit),new("负担及不确定性",-c.Burden),
+                new("空药水栏收益",v.Potion(c.Potions)),new(c.Selection.StartsWith("enchant:")?"当前合法目标的附魔边际收益（详见推荐目标）":"已核对机制收益（待校准）",c.Benefit),new("负担及不确定性",-c.Burden),
                 new(c.PreferenceReason,c.Preference)];
             return new OptionScore(c.Key,c.Name,true,true,Math.Round(parts.Sum(p=>p.Value),3),parts.Where(p=>p.Value!=0).ToArray(),c.Notes??[]);
         }).ToArray();

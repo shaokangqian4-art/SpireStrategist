@@ -70,7 +70,7 @@ internal sealed partial class PartialAutopilot
     {
         var wasEnabled=Enabled;
         gate.Pause(); FullAutomatic=false; WaitingForManual=false; smithTarget=null; smithRoom=null; removalTarget=null; unsupported=null;
-        ownedEvent=null;eventSelectionTargets=null;ownedRestSelection=null;ownedPickup=null;ownedPickupRoom=null;ownsDig=false;
+        ownedEvent=null;eventSelectionTargets=null;ownedRestSelection=null;ownedPickup=null;ownedPickupRoom=null;ownsDig=false;plannedBundle=null;
         Status="已暂停 · "+reason;
         solver.ReleaseAutoStart();
         var owned=ownedCombat; ownedCombat=null;

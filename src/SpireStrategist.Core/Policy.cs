@@ -14,6 +14,26 @@ public sealed class Policy
 
     public Evaluation Evaluate(RunSnapshot state, IReadOnlyList<DecisionOption> options)
     {
+        var actual=EvaluateAvailable(state,options);
+        if(state.PendingToothCards.Length==0||!options.Any(o=>o.Kind=="card"&&o.Card!=null))return actual;
+        // Evaluate returning cards ONLY for acquisition saturation. The actual deck,
+        // combat readiness, smith/removal targets, health and route risk stay intact.
+        var returning=EvaluateAvailable(state with{Deck=[..state.Deck,..state.PendingToothCards],PendingToothCards=[],Foresight=null},options);
+        var scores=actual.Options.Select(o=>{
+            if(options.First(x=>x.Key==o.Key).Kind!="card"||o.Score is not {} value)return o;
+            var future=returning.Options.First(x=>x.Key==o.Key);
+            if(future.Score is not {} full||full>=value)return o;
+            return o with{Score=full,Parts=[..o.Parts,new("佩尔之牙暂存牌仍属已有构筑，避免返还后冗余补牌",Math.Round(full-value,3))]};
+        }).ToArray();
+        var skips=options.Where(o=>o.Kind is "skip" or "reroll").Select(o=>o.Key).ToHashSet();
+        var best=actual.RecommendedKey==null?null:scores.Where(o=>o.Enabled&&o.Supported&&o.Score.HasValue)
+            .OrderByDescending(o=>o.Score).ThenByDescending(o=>skips.Contains(o.Key)).ThenByDescending(o=>o.Key==actual.RecommendedKey).FirstOrDefault()?.Key;
+        return actual with{Options=scores,RecommendedKey=best};
+    }
+    private Evaluation EvaluateAvailable(RunSnapshot state, IReadOnlyList<DecisionOption> options)
+        =>TransitionMargin.Apply(state,options,EvaluateCharacter(state,options));
+    private Evaluation EvaluateCharacter(RunSnapshot state, IReadOnlyList<DecisionOption> options)
+    {
         if (HeroPolicy.Supports(state.Character)) return HeroPolicy.Evaluate(state, options);
         if (state.Character == "Silent") return SilentPolicy.Evaluate(state, options);
         if (state.Character == "Defect") return DefectPolicy.Evaluate(state, options);
@@ -100,6 +120,7 @@ public sealed class Policy
         var parts = new List<ScorePart>
         {
             new("卡牌基础先验", p.Base),
+            new("华彩：每场首次打出重放一次",c.Enchantment=="ENCHANTMENT.GLAM"?NativeEnchantments.Glam(c):0),
             new("补足前期输出", attackNeed * p.Attack * w.DamageNeed),
             new("补足防御", blockNeed * p.Block * w.BlockNeed),
             new("抽牌与运转", p.Draw * w.Draw * (1 + .25 * energySupport)),

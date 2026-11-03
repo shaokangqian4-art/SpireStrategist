@@ -66,13 +66,13 @@ internal sealed class AdvisorPanel
         var header = new HBoxContainer(); box.AddChild(header);
         var title = new Label { Text = "策略助手", SizeFlagsHorizontal = Control.SizeFlags.ExpandFill,
             MouseFilter = Control.MouseFilterEnum.Stop, MouseDefaultCursorShape = Control.CursorShape.Move,
-            TooltipText = "v0.6.55 · 拖动标题可在全屏内移动；双击复位。请自行避开药水等操作区域。" };
+            TooltipText = "v0.6.72 · 拖动标题可在全屏内移动；双击复位。请自行避开药水等操作区域。" };
         title.AddThemeColorOverride("font_color",AdvisorUi.Accent); header.AddChild(title);
         var toggle = AdvisorUi.Button(collapsed ? "展开" : "收起"); header.AddChild(toggle);
         autoButton = AdvisorUi.Button("开始接管");
         autoButton.TooltipText="接管当前单局；常规动作前等待2秒，商店购买等待8秒。停止立即取消待执行动作，不自动开下一局。";
         header.AddChild(autoButton); autoButton.Pressed += toggleAuto;
-        compactStatus=AdvisorUi.Text("建议模式 · v0.6.55"); box.AddChild(compactStatus);
+        compactStatus=AdvisorUi.Text("建议模式 · v0.6.72"); box.AddChild(compactStatus);
         details = new VBoxContainer { Visible = !collapsed }; box.AddChild(details);
         summary=AdvisorUi.Text(""); details.AddChild(summary);
         var pauseRow=new HBoxContainer(); details.AddChild(pauseRow);
@@ -233,7 +233,7 @@ internal sealed class AdvisorPanel
             ? (ReviewPaused?"已暂停 · 查看建议":ClimbController.Enabled?"循环接管中":"单局接管中")
             : character=="Defect"
                 ? (display.DefectShadow?"故障机器人 · 隐藏建议，仅记录":"故障机器人 · 建议与接管")
-                : HeroPolicy.Supports(character)?HeroPolicy.Label(character)+" · 建议与接管":character=="Silent"?"静默猎手 · 建议与接管":"建议模式 · v0.6.55";
+                : HeroPolicy.Supports(character)?HeroPolicy.Label(character)+" · 建议与接管":character=="Silent"?"静默猎手 · 建议与接管":"建议模式 · v0.6.72";
     }
     internal void Automation(bool enabled,bool full,string message)
     {
